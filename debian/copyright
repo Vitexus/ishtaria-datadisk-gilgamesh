@@ -30,6 +30,15 @@ Comment: The goddess Ishtar is a generated mesh: a concept image made with Invok
  shapes are added by that script. The terms of use of Hyper3D (ownership of and rights to generated
  assets under the plan used) must be checked before the model is distributed outside this project.
 
+Files: media/models/architecture/ziggurat_etemenanki.glb media/models/architecture/etemenanki_precinct.glb
+ media/models/architecture/ziggurat_anu.glb models-src/architecture/*
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+Comment: Built by models-src/architecture/ziggurat.py (Blender). The brick, glaze, plaster and paving textures
+ were generated with InvokeAI (Juggernaut XL v9) and made seamless by make_tileable.py. The designs follow the
+ reconstructions described in research/ZIGGURATS.md; no published illustration was copied or used as a reference
+ image.
+
 License: CC-BY-SA-4.0
  This package is free software: you can redistribute it and/or modify it under
  the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.

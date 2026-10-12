@@ -14,3 +14,16 @@ The models are authored in metres, face -Y in Blender (+Z in glTF), stand with t
 `Head_end` bone at the top for the client's name plate. A model must stay below 4 MiB (they are about 1 MiB).
 `Idle` loops in 3 s, `Walk` in 1 s. Check a model in Godot (skeleton, clips, blend shapes) or render it with
 `tools/blender/render_preview.py`.
+
+## Architecture
+
+`architecture/ziggurat.py` builds the buildings in `media/models/architecture/` procedurally (no rig): the Etemenanki
+(`etemenanki`, `etemenanki_precinct`, `etemenanki_complete` for a preview with both) and the Anu ziggurat with the White
+Temple (`anu`):
+
+    blender -b --python models-src/architecture/ziggurat.py -- etemenanki media/models/architecture/ziggurat_etemenanki.glb
+
+Walls are battered prisms with pilasters and recessed panels, the stairs are sawtooth prisms, the UVs are in metres per
+texture tile (one brick size on every wall), vertex colours add weathering. `architecture/textures/*.jpg` are
+InvokeAI textures (Juggernaut XL v9) made seamless by `architecture/make_tileable.py`. Renders are in
+`architecture/renders/`. The datadisk format cannot place such a model yet: see `research/ZIGGURATS.md`.

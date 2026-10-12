@@ -1,6 +1,6 @@
 """Renders a character GLB: full body views for checking a model, or a bust for a portrait.
 
-    blender -b --python tools/blender/render_preview.py -- model.glb out.png [full|bust] [action] [frame] [size] [bg] [mult] [x,y,z,dist,lens]
+    blender -b --python tools/blender/render_preview.py -- model.glb out.png [full|bust] [action] [frame] [size] [bg] [mult] [x,y,z,dist,lens[,azimuth_deg[,height]]]
 
 `full` renders front, three-quarter and side views side by side. `bust` renders one head-and-shoulders
 view (the portrait). `action` is Idle or Walk, `frame` the frame of that action.
@@ -89,8 +89,11 @@ def render(path, w, h):
 
 if mode == "bust" and len(args) > 8:
     # explicit camera: target x,y,z then distance (m) and lens (mm), for figures whose head bone is not a good guide
-    tx, ty, tz, dist, lens = (float(v) for v in args[8].split(","))
-    aim(Vector((tx, ty - dist, tz + 0.02)), Vector((tx, ty, tz)), lens)
+    vals = [float(v) for v in args[8].split(",")]
+    tx, ty, tz, dist, lens = vals[:5]
+    az = math.radians(vals[5]) if len(vals) > 5 else 0.0
+    elev = vals[6] if len(vals) > 6 else 0.02  # extra camera height in metres
+    aim(Vector((tx + math.sin(az) * dist, ty - math.cos(az) * dist, tz + elev)), Vector((tx, ty, tz)), lens)
     scene.cycles.samples = 192
     render(out, size, size)
 elif mode == "bust":

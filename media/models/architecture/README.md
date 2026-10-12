@@ -10,11 +10,13 @@ This directory contains 3D models of Mesopotamian architecture created for the G
    - Basic mud brick material
    - Size: ~10m x 10m base
 
-2. **ziggurat_etemenanki.glb** (11 KB)
-   - Great Ziggurat of Babylon (Etemenanki)
-   - 7 tiers with celestial-colored levels
-   - Historically inspired design
-   - Size: ~20m x 20m base
+2. **ziggurat_etemenanki.glb** (2.4 MB)
+   - Great Ziggurat of Babylon (Etemenanki), rebuilt by `models-src/architecture/ziggurat.py`
+   - 6 stages and the glazed temple of Marduk on top, three stairways, textured mud and baked brick
+   - Size: ~91 m base, ~96 m high, stairs reach 33 m in front
+   - `etemenanki_precinct.glb`: paved court, enclosure wall with glazed band and gate, palms (203 m)
+
+   `ziggurat_anu.glb` (1.1 MB): Early Dynastic ziggurat of Anu with the White Temple (Uruk), ~52 m
 
 3. **ziggurat_complex.glb** (9.8 KB)
    - Complete ziggurat complex with:
