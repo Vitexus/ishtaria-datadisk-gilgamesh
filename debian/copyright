@@ -21,6 +21,15 @@ Comment: Character models are built by models-src/build_models.py (Blender); the
  the backdrops were generated with InvokeAI (RealVisXL_V4.0). The portraits are renders of the models
  (tools/render_portraits.py). Design after research/CHARACTER_DESIGN.md.
 
+Files: media/models/ishtar.glb media/portraits/ishtar.jpg models-src/ishtar/* models-src/pilot/*
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+Comment: The goddess Ishtar is a generated mesh: a concept image made with InvokeAI (Juggernaut XL v9) was turned
+ into a 3D model by Hyper3D Rodin (Gen-2.5-High), then retopologised, rigged and animated by
+ models-src/rodin_rig.py (settings in models-src/rodin/ishtar.json). The star disc, the quiver and the blend
+ shapes are added by that script. The terms of use of Hyper3D (ownership of and rights to generated
+ assets under the plan used) must be checked before the model is distributed outside this project.
+
 License: CC-BY-SA-4.0
  This package is free software: you can redistribute it and/or modify it under
  the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.

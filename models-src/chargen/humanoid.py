@@ -759,10 +759,11 @@ def local_rot(arm, bone, *turns):
     return tuple((basis.inverted() @ total @ basis).to_euler('XYZ'))
 
 
-def humanoid_animations(h, arm, bobbing=1.0, extra_walk=None, extra_idle=None):
+def humanoid_animations(h, arm, bobbing=1.0, extra_walk=None, extra_idle=None, stride=None):
     H = h.H
     swing = h.arm_swing
-    stride = 0.52 if H < 2.6 else 0.4
+    if stride is None:
+        stride = 0.52 if H < 2.6 else 0.4
     two_pi = 2 * math.pi
 
     def walk(t):
@@ -831,4 +832,4 @@ def export_glb(path):
         filepath=path, export_format="GLB", use_selection=True, export_animations=True,
         export_animation_mode="NLA_TRACKS", export_morph=True, export_skins=True, export_image_format="JPEG",
         export_jpeg_quality=85, export_yup=True, export_apply=False, export_lights=False, export_cameras=False,
-        export_extras=False, export_force_sampling=True, export_frame_range=False)
+        export_extras=False, export_force_sampling=True, export_frame_range=False, export_all_influences=True)

@@ -140,6 +140,13 @@ fallback while a model loads. Rebuild and re-render:
     python3 tools/render_portraits.py                                       # media/portraits/*.jpg from the models
     blender -b --python tools/blender/render_preview.py -- media/models/gilgamesh.glb /tmp/g.png full Walk 7
 
+Ishtar is the exception: her model is a Hyper3D Rodin mesh (concept image from InvokeAI), made game-ready by
+`models-src/rodin_rig.py`. Her settings are in `models-src/rodin/ishtar.json`; `models-src/rodin/gilgamesh.json`
+holds a Rodin Gilgamesh that is not installed (`models-src/pilot/`). The source meshes are the Rodin results
+(`models-src/ishtar/`), the model is rebuilt with
+
+    blender -b --python models-src/rodin_rig.py -- models-src/ishtar/ishtar_rodin_source.glb media/models/ishtar.glb models-src/rodin/ishtar.json
+
 The client plays `Idle` on the models. NPCs do not move yet (the server has no NPC paths), so `Walk` is ready
 for when they do.
 
