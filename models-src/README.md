@@ -27,3 +27,9 @@ Walls are battered prisms with pilasters and recessed panels, the stairs are saw
 texture tile (one brick size on every wall), vertex colours add weathering. `architecture/textures/*.jpg` are
 InvokeAI textures (Juggernaut XL v9) made seamless by `architecture/make_tileable.py`. Renders are in
 `architecture/renders/`. The datadisk format cannot place such a model yet: see `research/ZIGGURATS.md`.
+
+`architecture/ishtar_gate.py` builds the Ishtar Gate (`ishtar_gate`, `processional_way`, `ishtar_gate_complete`) with the same
+helpers: `blender -b --python models-src/architecture/ishtar_gate.py -- ishtar_gate media/models/architecture/ishtar_gate.glb`.
+The relief panels (aurochs, mushussu dragon, lion, two drawings of each animal, the rosette border) and the blue glaze, stone
+paving and cedar door textures are InvokeAI images (Juggernaut XL v9); the panels are placed on the walls by explicit
+UVs, the glaze is tiled.

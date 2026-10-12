@@ -519,7 +519,16 @@ def materials_for(model):
             image = bpy.data.images.load(os.path.join(TEXTURES, tex))
             node = nodes.new("ShaderNodeTexImage")
             node.image = image
-            links.new(node.outputs["Color"], bsdf.inputs["Base Color"])
+            if tuple(colour) != (1, 1, 1):  # a tint multiplies the texture (exported as the base colour factor)
+                mix = nodes.new("ShaderNodeMix")
+                mix.data_type = "RGBA"
+                mix.blend_type = "MULTIPLY"
+                mix.inputs[0].default_value = 1.0
+                mix.inputs[7].default_value = (*colour, 1.0)
+                links.new(node.outputs["Color"], mix.inputs[6])
+                links.new(mix.outputs[2], bsdf.inputs["Base Color"])
+            else:
+                links.new(node.outputs["Color"], bsdf.inputs["Base Color"])
         else:
             bsdf.inputs["Base Color"].default_value = (*colour, 1.0)
         out.append(mat)
@@ -565,4 +574,5 @@ def main():
     finish(model, out)
 
 
-main()
+if __name__ == "__main__":
+    main()

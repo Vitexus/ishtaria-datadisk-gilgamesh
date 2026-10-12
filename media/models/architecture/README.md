@@ -16,6 +16,10 @@ This directory contains 3D models of Mesopotamian architecture created for the G
    - Size: ~91 m base, ~96 m high, stairs reach 33 m in front
    - `etemenanki_precinct.glb`: paved court, enclosure wall with glazed band and gate, palms (203 m)
 
+   `ishtar_gate.glb` (2.8 MB): the Ishtar Gate of Babylon, outer gate, courtyard and the higher inner gate with the
+   curtain walls, glazed blue brick with rows of aurochs and mushussu dragons (88 x 56 m, 27 m high with merlons);
+   `processional_way.glb` (1.3 MB): the street, 80 m, with the walls of striding lions. See `research/ISHTAR_GATE.md`.
+
    `ziggurat_anu.glb` (1.1 MB): Early Dynastic ziggurat of Anu with the White Temple (Uruk), ~52 m
 
 3. **ziggurat_complex.glb** (9.8 KB)
