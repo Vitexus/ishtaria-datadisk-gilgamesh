@@ -1,0 +1,32 @@
+# Utnapishtim Dialogue Tree
+# Flood survivor, eternal
+
+id: utnapishtim
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: utnapishtim.greet
+    choices:
+      - {text_key: utnapishtim.ask_flood, goto: tell_flood}
+      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality}
+      - {text_key: utnapishtim.ask_test, goto: offer_test}
+      - {text_key: utnapishtim.leave}
+
+  tell_flood:
+    text_key: utnapishtim.flood
+    choices:
+      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality}
+      - {text_key: utnapishtim.leave}
+
+  tell_immortality:
+    text_key: utnapishtim.immortality
+    choices:
+      - {text_key: utnapishtim.ask_test, goto: offer_test}
+      - {text_key: utnapishtim.leave}
+
+  offer_test:
+    text_key: utnapishtim.test
+    choices:
+      - {text_key: utnapishtim.leave}

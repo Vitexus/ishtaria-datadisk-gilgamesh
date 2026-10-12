@@ -1,0 +1,24 @@
+# Potter Dialogue Tree
+# Wears apron covered in clay
+
+id: potter
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: potter.greet
+    choices:
+      - {text_key: potter.ask_craft, goto: explain_craft}
+      - {text_key: potter.ask_ziggurat, goto: explain_ziggurat_tiles}
+      - {text_key: potter.leave}
+
+  explain_craft:
+    text_key: potter.craft
+    choices:
+      - {text_key: potter.leave}
+
+  explain_ziggurat_tiles:
+    text_key: potter.ziggurat_tiles
+    choices:
+      - {text_key: potter.leave}

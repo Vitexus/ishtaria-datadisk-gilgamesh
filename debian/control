@@ -1,0 +1,26 @@
+Source: ishtaria-datadisk-gilgamesh
+Section: games
+Priority: optional
+Maintainer: Ishtaria Team <ishtaria@vitexsoftware.com>
+Build-Depends: debhelper (>= 13), python3, python3-yaml, piper, ffmpeg
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+
+Package: ishtaria-datadisk-gilgamesh
+Architecture: all
+Depends: ishtaria-server (>= 1), ${misc:Depends}
+Provides: ishtaria-datadisk
+Description: Ishtaria Gilgamesh datadisk - Epic of Gilgamesh story
+ This is the Epic of Gilgamesh datadisk for Ishtaria, bringing the world's
+ oldest surviving epic to life in a game world.
+ .
+ The datadisk features:
+  * The ancient city of Uruk
+  * The Cedar Forest and its guardian Humbaba
+  * Mount Mashu and the Scorpion Gate
+  * The Waters of Death and Utnapishtim's dwelling
+  * All major characters from the epic
+  * A complete questline following the epic narrative
+  * English and Czech translations
+ .
+ Based on the public domain translation by N. K. Sanders.

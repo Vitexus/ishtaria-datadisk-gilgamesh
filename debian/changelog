@@ -1,0 +1,10 @@
+ishtaria-datadisk-gilgamesh (0.1.0-1) unstable; urgency=low
+
+  * Initial release of the Epic of Gilgamesh datadisk
+  * Complete epic questline from Gilgamesh's tyranny to his return
+  * All major characters: Gilgamesh, Enkidu, Ishtar, Shamhat, Humbaba, Utnapishtim
+  * Main locations: Uruk, Cedar Forest, Mount Mashu, Waters of Death
+  * English and Czech translations
+  * Voice synthesis configuration for all NPCs
+
+ -- Ishtaria Team <ishtaria@vitexsoftware.com>  Sat, 10 Oct 2026 00:00:00 +0000

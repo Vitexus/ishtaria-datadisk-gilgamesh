@@ -1,0 +1,122 @@
+# Epic of Gilgamesh - Main Characters
+# Based on the ancient Mesopotamian epic
+
+# Gilgamesh - King of Uruk, two-thirds god, one-third man
+- id: gilgamesh
+  name_key: npc.gilgamesh
+  place: uruk_palace
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/gilgamesh.glb}
+  dialogue: gilgamesh
+  portrait: media/portraits/gilgamesh.jpg
+  bio_key: npc.gilgamesh.bio
+  tags: [king, demigod, hero]
+
+# Enkidu - Wild man created from clay
+- id: enkidu
+  name_key: npc.enkidu
+  place: uruk_market
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/enkidu.glb}
+  dialogue: enkidu
+  portrait: media/portraits/enkidu.jpg
+  bio_key: npc.enkidu.bio
+  tags: [wild_man, companion, hero]
+
+# Enkidu Civilized - After meeting Shamhat
+- id: enkidu_civilized
+  name_key: npc.enkidu_civilized
+  place: uruk_market
+  character: {pack: retro, skin: humanMaleA, model: media/models/enkidu_civilized.glb}
+  dialogue: enkidu
+  portrait: media/portraits/enkidu_civilized.jpg
+  bio_key: npc.enkidu_civilized.bio
+  tags: [companion, hero, civilized]
+
+# Ishtar - Goddess of love and war
+- id: ishtar
+  name_key: npc.ishtar
+  place: ishtar_temple
+  character: {pack: protagonists, skin: skaterFemaleA, model: media/models/ishtar.glb}
+  dialogue: ishtar
+  portrait: media/portraits/ishtar.jpg
+  bio_key: npc.ishtar.bio
+  tags: [goddess, love, war]
+
+# Shamhat - Temple priestess
+- id: shamhat
+  name_key: npc.shamhat
+  place: ishtar_temple
+  character: {pack: retro, skin: humanFemaleA, model: media/models/shamhat.glb}
+  dialogue: shamhat
+  portrait: media/portraits/shamhat.jpg
+  bio_key: npc.shamhat.bio
+  tags: [priestess, temple]
+
+# Humbaba - Guardian of the Cedar Forest
+- id: humbaba
+  name_key: npc.humbaba
+  place: humbaba_lair
+  character: {pack: survivors, skin: zombieA, model: media/models/humbaba.glb}
+  dialogue: humbaba
+  portrait: media/portraits/humbaba.jpg
+  bio_key: npc.humbaba.bio
+  tags: [monster, guardian, boss]
+
+# Utnapishtim - Flood survivor
+- id: utnapishtim
+  name_key: npc.utnapishtim
+  place: utnapishtim_dwelling
+  character: {pack: retro, skin: humanMaleA, model: media/models/utnapishtim.glb}
+  dialogue: utnapishtim
+  portrait: media/portraits/utnapishtim.jpg
+  bio_key: npc.utnapishtim.bio
+  tags: [immortal, wise, flood_survivor]
+
+# Ur-Shanabi - Ferryman
+- id: ur_shanabi
+  name_key: npc.ur_shanabi
+  place: waters_of_death
+  character: {pack: retro, skin: humanMaleA, model: media/models/ur_shanabi.glb}
+  dialogue: ur_shanabi
+  portrait: media/portraits/ur_shanabi.jpg
+  bio_key: npc.ur_shanabi.bio
+  tags: [ferryman, boatman]
+
+# Scorpion Man - Guardian
+- id: scorpion_man
+  name_key: npc.scorpion_man
+  place: scorpion_gate
+  character: {pack: survivors, skin: zombieC, model: media/models/scorpion_man.glb}
+  dialogue: scorpion_man
+  portrait: media/portraits/scorpion_man.jpg
+  bio_key: npc.scorpion_man.bio
+  tags: [guardian, scorpion]
+
+# Ninsun - Mother of Gilgamesh
+- id: ninsun
+  name_key: npc.ninsun
+  place: uruk_palace
+  character: {pack: protagonists, skin: skaterFemaleA, model: media/models/ninsun.glb}
+  dialogue: ninsun
+  portrait: media/portraits/ninsun.jpg
+  bio_key: npc.ninsun.bio
+  tags: [goddess, mother, oracle]
+
+# Anu - Sky god
+- id: anu
+  name_key: npc.anu
+  place: ziggurat_of_anu
+  character: {pack: retro, skin: humanMaleA, model: media/models/anu.glb}
+  dialogue: anu
+  portrait: media/portraits/anu.jpg
+  bio_key: npc.anu.bio
+  tags: [god, sky, father]
+
+# Bull of Heaven - Divine beast
+- id: bull_of_heaven
+  name_key: npc.bull_of_heaven
+  place: uruk
+  character: {pack: survivors, skin: zombieC, model: media/models/bull_of_heaven.glb}
+  dialogue: bull_of_heaven
+  portrait: media/portraits/bull_of_heaven.jpg
+  bio_key: npc.bull_of_heaven.bio
+  tags: [beast, divine, punishment]

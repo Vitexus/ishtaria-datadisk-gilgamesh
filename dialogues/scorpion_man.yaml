@@ -1,0 +1,24 @@
+# Scorpion Man Dialogue Tree
+# Guardian of Mount Mashu
+
+id: scorpion_man
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: scorpion_man.greet
+    choices:
+      - {text_key: scorpion_man.ask_passage, goto: grant_passage}
+      - {text_key: scorpion_man.ask_danger, goto: warn_danger}
+      - {text_key: scorpion_man.leave}
+
+  grant_passage:
+    text_key: scorpion_man.passage
+    choices:
+      - {text_key: scorpion_man.leave}
+
+  warn_danger:
+    text_key: scorpion_man.danger
+    choices:
+      - {text_key: scorpion_man.leave}

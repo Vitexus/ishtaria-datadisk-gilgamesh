@@ -1,0 +1,564 @@
+# Epic of Gilgamesh Datadisk - Český překlad
+
+# Metadata datadisku
+datadisk.gilgamesh.name: Epos o Gilgamešovi
+
+# Místa
+place.uruk: Uruk
+place.uruk_wall: Velká zeď Uruku
+place.eanna_temple: Chrám Eanna
+place.ishtar_temple: Chrám Ištar
+place.uruk_market: Tržiště v Uruku
+place.uruk_palace: Královský palác v Uruku
+place.cedar_forest: Cedrový les
+place.humbaba_lair: Doupě Humbaby
+place.mount_mashu: Hora Mašu
+place.scorpion_gate: Štírí brána
+place.tunnel_of_sun: Tunel Slunce
+place.waters_of_death: Vody smrti
+place.utnapishtim_dwelling: Příbytek Utnapištima
+
+# Mezopotamská architektura
+place.ziggurat_uruk: Velký zikkurat v Uruku
+place.ziggurat_anu: Zikkurat boha Anu
+place.ziggurat_ishtar: Zikkurat bohyně Ištar
+place.white_temple: Bílý chrám
+place.great_wall_uruk: Velká hradba Uruku
+place.hanging_gardens: Visuté zahrady
+place.royal_tombs: Královské hrobky v Uruku
+place.city_gate: Městská brána v Uruku
+
+# Hudba
+music.temple: Chrámová hudba
+music.ishtar_shrine: Svatyně Ištar
+music.cedar_forest: Cedrový les
+music.mountain_echo: horská ozvěna
+music.waters_of_death: Vody smrti
+music.utnapishtim: Utnapištimova melodie
+
+# Jména NPC a jejich popisy
+npc.gilgamesh: Gilgameš
+npc.gilgamesh.bio: Král Uruku, ze dvou třetin bůh a z jedné třetiny člověk. Dokonalý tělem, krásný zjevem, silný jako divoký býk. Stavitel velkých hradeb Uruku.
+npc.enkidu: Enkidu
+npc.enkidu.bio: Divoký muž stvořený bohy z hlíny. Pokrytý zcuchanými chlupy s dlouhými copy jako žena. Kdysi žil s gazelami, nyní věrný druh Gilgamešův.
+npc.enkidu_civilized: Enkidu (Civilizovaný)
+npc.enkidu_civilized.bio: Kdysi divoký, nyní civilizovaný. Krátce ostříhané vlasy, hladce oholený vous, lněná tunika s koženou zbrojí, bronzová sekera u opasku, sandály. Dokonalý rovnocenný a bratr Gilgamešův.
+npc.ishtar: Ištar
+npc.ishtar.bio: Bohyně lásky a války, patronka Uruku. Pyšná a vášnivá, žádá úctu a přináší jak extázi, tak zkázu.
+npc.shamhat: Šamchat
+npc.shamhat.bio: Chrámová kněžka Ištar. Ta, která zkrotila Enkidu pomocí lásky a moudrosti a naučila ho způsobům lidskosti.
+npc.humbaba: Humbaba
+npc.humbaba.bio: Strážce Cedrového lesa. Hrozný obr s děsivou mocí. Jeho řev je jako bouře, jeho dech jako oheň a jeho tlama je sama smrt.
+npc.utnapishtim: Utnapištim
+npc.utnapishtim.bio: Jediný přeživší Velké potopy, kterému bohy udělily věčný život. Moudrý a starobylý, žije za Vodami smrti.
+npc.ur_shanabi: Ur-Šanabi
+npc.ur_shanabi.bio: Převězce, který přepravuje cestovatelé přes Vody smrti k Utnapištimově příbytku.
+npc.scorpion_man: Štírí muž
+npc.scorpion_man.bio: Strážce brány k tunelu skrz Horu Mašu. Hrozná bytost s tělem štíra a člověka.
+npc.ninsun: Ninsun
+npc.ninsun.bio: Matka Gilgameše, moudrá bohyně. Mluví jazykem bohů a nabízí vedení a ochranu.
+npc.anu: Anu
+npc.anu.bio: Nebeský bůh a otec Ištar. Pán nebes, jehož slovo nese váhu vesmíru.
+npc.bull_of_heaven: Nebeský býk
+npc.bull_of_heaven.bio: Božské zvíře vyslané Ištar, aby potrestalo Gilgameše. Obrovský býk přinášející zkázu.
+
+# Historické mezopotamské NPC
+npc.high_priest_anu: Vysoký kněz Anu
+npc.high_priest_anu.bio: Vysoký kněz nebeského boha Anu, nosící tradiční bílé lněné roucho s lapis lazuli korálky v složitých vzorech, vysokou ceremoniální pokrývku hlavy se symboly nebes, nese kadidelnici pro obětní kadidlo, vykonává posvátné rituály na zikkuratu boha Anu.
+npc.high_priestess_ishtar: Vysoká kněžka Ištar
+npc.high_priestess_ishtar.bio: Vysoká kněžka bohyně lásky a války, oblečená do propracovaných červených a zlatých ceremoniálních šatů s lapis lazuli a karneolovými vsadky, vícepatrovou pokrývku hlavy s hvězdnými symboly, nese posvátný dýku a rituální nádoby, vysvětluje vůli Ištar prostřednictvím božských znamení.
+npc.temple_scribe: Chrámový písař
+npc.temple_scribe.bio: Učenec, který zapisuje chrámové oběti a astronomická pozorování na hliněné destičky. Nosí jednoduché bílé lněné roucho s pouzdrem na destičky u opasku, ríso za uchem, nese měřicí tyč pro architektonické výpočty.
+npc.royal_guard: Královský strážce z Uruku
+npc.royal_guard.bio: Elitní voják královské stráže v Uruku, nosící vyleštěné bronzové šupinové brnění, chocholatou přilbu se zlatými akcenty, koženou sukni, nese oštěp a štít zdobený královskými insigniemi, věrný ochránce krále a paláce.
+npc.uruk_noble: Šlechtic z Uruku
+npc.uruk_noble.bio: Bohatý občan Uruku, oblečený do jemného plisovaného lněného roucha se zlatými vyšívanými lemovy, lapis lazuli a zlatými šperky včetně prstenů a amuletů, nese ceremoniální hůl, patron umění a chrámové výstavby.
+npc.uruk_merchant: Obchodník z Uruku
+npc.uruk_merchant.bio: Obchodník se zbožím z celé Mezopotámie a dalekých zemí. Nosí barevné tkané roucho z vzdálených krajin, nese bronzové váhy, kožený váček na mince, přináší exotické zboží a zprávy z cizích měst.
+npc.potter: Hrnčíř
+npc.potter.bio: Zručný řemeslník vytvářející ceremoniální keramiku pro chrámy a šlechtu. Nosí hlínou potřísněnou koženou zástěru přes jednoduchou tuniku, ruce zkušené z let tvarování hlíny, nese dřevěné hrnčířské nářadí.
+npc.weaver: Tkadlena
+npc.weaver.bio: Zručná textilní pracovnice vytvářející jemné oděvy z vlny a lnu. Nosí jednoduché lněné šaty se tkadlênským člunkem u opasku, vlasy svázané látkovým páskem, odbornice na vytváření vzorů a barvení.
+
+# Gilgamešovy dialogy
+gilgamesh.greet: "Já jsem Gilgameš, král Uruku, ze dvou třetin bůh a z jedné třetiny člověk. Co tě přivádí přede mne?"
+gilgamesh.ask_advice: Požádej krále o moudrost
+gilgamesh.ask_friendship: Mluv o Enkidovi
+gilgamesh.ask_quest: Ptej se na jeho dobrodružství
+gilgamesh.leave: Musím jít, můj králi.
+gilgamesh.advice: "Bohové mi dali sílu a moudrost. Tímto městem vládnu spravedlností a stavím jeho hradby, aby stály navěky."
+gilgamesh.friendship: "Enkidu? On je můj brat, můj rovný. Spolu jsme čelili Humbabovi a Nebeskému býkovi. Jeho smrt těžce doléhá na mém srdci."
+gilgamesh.quest: "Cestoval jsem až na konec světa hledaje věčný život. Ale naučil jsem se, že smrtelnost je osudem všech lidí."
+gilgamesh.ask_city: Zeptat se na Uruk
+gilgamesh.ask_mortality: Zeptat se na smrtelnost
+gilgamesh.walls: "Hradby Uruku! Dvě vnější hradby s vnitřní hradbou mezi nimi. Postavené vlastními rukama a s Enkidovou pomocí, stojí jako důkaz naší síly. Žádný nepřítel je nedobude!"
+gilgamesh.enkidu_fate: "Bohové ho potrestali za naši pýchu při zabíjení Humbaby. Šest dní a sedm nocí trpěl, než ho smrt odnesla. Pořád ho oplakávám."
+gilgamesh.cedar_forest: "Cedrový les! Místo strašné síly a velké krásy. Humbaba ho dobře střežil, ale my jsme porazili mohutné cedry a získali vítězství pro Uruk."
+gilgamesh.about_uruk: "Uruk je moje město, největší město ve všechně země. Od svých hradeb po své chrámy, od svého trhu po svůj palác, vše je pod mou ochranou."
+gilgamesh.mortality: "Hledal jsem věčný život, cestoval jsem za Vody smrti, setkal jsem se s Utnapištimem samotným. A přesto... dozvěděl jsem se, že největší pravdou je, že všichni lidé musí zemřít."
+gilgamesh.lesson: "Co to znamená být smrtelný? Znamená to žít plně, stavět, milovat, bojovat, vládnout. Bohové mají své království, ale lidé mají tento svět a tento čas. Využijte ho naplno."
+gilgamesh.enkidu: "Můj bratr... můj rovný... pryč z tohoto světa. Ale jeho památka žije dál v každém kameni hradeb Uruku."
+
+# Gilgamesh choice keys (Czech)
+gilgamesh.ask_walls: Ptej se na velké hradby
+gilgamesh.ask_enkidu_fate: Ptej se na Enkidův osud
+gilgamesh.ask_cedar_forest: Ptej se na Cedrový les
+gilgamesh.ask_immortality: Ptej se na hledání nesmrtelnosti
+gilgamesh.ask_lesson: Ptej se na poučení o smrtelnosti
+
+# Gilgameš v chrámu
+gilgamesh_temple.greet: "Zde v chrámu Eanna nalézám klid. Bohové mluví prostřednictvím ticha těchto kamenů."
+gilgamesh_temple.pray: Modli se s králem
+gilgamesh_temple.leave: Nechám tě s tvými myšlenkami.
+gilgamesh_temple.prayer: "Modleme se k Anovi a velkým bohům za jejich požehnání Uruku a jeho lidu."
+
+# Enkidův dialog
+enkidu.greet: "Já jsem Enkidu, kdysi divoký, nyní přítel Gilgamešův. Zvířata lesa mě znala jako bratra."
+enkidu.ask_wild_days: Ptej se na jeho divoké dny
+enkidu.ask_gilgamesh: Ptej se na Gilgameše
+enkidu.ask_civilization: Ptej se na civilizaci
+enkidu.ask_shamhat: Ptej se na Šamchat
+enkidu.ask_humbaba: Ptej se na Humbabu
+enkidu.ask_death: Ptej se na jeho smrt
+enkidu.leave: Musím jít.
+enkidu.wild_days: "Kdysi jsem běhal s gazelami a pil s divokými zvířaty u vodního zdroje. Nic jsem nevěděl o lidech či městech. Byl jsem jedno se přírodou, silný a svobodný."
+enkidu.animals: "Gazely jedly z mé ruky a vlci spali vedle mě. Dokonce i lvi respektovali moji sílu. Byli jsme všichni divokou přírodou spojeni."
+enkidu.gilgamesh: "Gilgameš! Král pyšný a silný, ale krutý ke svému lidu. Bohové mě poslali, abych se mu vyrovnal, abych jeho pýchu zmírnil svou silou."
+enkidu.equality: "Zápasili jsme, Gilgameš a já, a já mu vyrovnal úder za úderem. V ten okamžik nalezl svého rovného, svého bratra. Od toho dne nás nikdo nemohl porazit."
+enkidu.civilization: "Šamchat mě změnila. Šest dní a sedm nocí se mnou zdržela, učila mě způsobům lidí. Zvířata ode měla prchala, neboť jsem se stal civilizovaným."
+enkidu.changes: "Nyní nosím šaty lidí a jím jejich chléb. Piju jejich víno a rozumím jejich slovům. Ale ve svém srdci si stále pamatuji na divočin."
+enkidu.shamhat: "Šamchat... ona byla první, kdo ve mně uviděla muže. Bez ní bych stále běhal se zvířaty a Gilgameš by neměl svého rovného."
+
+# Enkidu choice keys (Czech)
+enkidu.ask_animals: Ptej se na zvířata
+enkidu.ask_equality: Ptej se na rovnost s Gilgamešem
+enkidu.ask_changes: Ptej se, jak se změnil
+enkidu.humbaba: "Humbaba! Strážce Cedrového lesa byl hrozný na pohled. Jeho řev otřásal zemí a jeho dech byl oheň. Ale spolu s Gilgamešem jsme ho čelili a vyhráli."
+enkidu.death: "Já... cítím ruku bohů na sobě. Trestají mě za zabití Humbaby, za to, že jsem se vzepřel vůli nebes. Ale nelituji toho. Žil jsem jako muž, bojoval jsem jako válečník, zemřu jako Gilgamešův bratr."
+enkidu.ask_gilgamesh: Ptej se na Gilgameše
+enkidu.ask_civilization: Ptej se na to, jak se stal člověkem
+enkidu.leave: Musím pokračovat v cestě.
+enkidu.wild_days: "Běhal jsem s gazelami, pil jsem s divokými zvířaty u vodních děr. Moje tělo bylo pokryté chlupy a já jsem nic nevěděl o městech či lidech."
+enkidu.gilgamesh: "Gilgameš? On je můj bratr. Potkali jsme se v Uruku, změřili naše síly a zjistili jsme, že jsme si rovni. Nyní jsme jedno."
+enkidu.civilization: "Šamchat mě to naučila. Ukázala mi chléb a víno, oblékla mé tělo a přivedla mě k Gilgamešovi. Nyní jsem člověk."
+
+# Ištariny dialogy
+ishtar.greet: "Já jsem Ištar, bohyně lásky a války, královna Uruku. Nikdo nesmí ignorovat mou přítomnost."
+ishtar.ask_love: Nabídni se bohyni
+ishtar.ask_war: Ptej se na její válečnickou stránku
+ishtar.ask_gilgamesh: Ptej se na Gilgamešovo odmítnutí
+ishtar.leave: Nechci si znášet hněv bohyně.
+ishtar.love: "Jsi odvážný, že se ke mně přibližuješ. Ale věz, že moje láska přináší jak radost, tak bolest. Moji milenci dlouho nevydrží."
+ishtar.war: "Já jsem také nositelka bitev. Když je mé srdce pohněno, nikdo nestojí před mou silou. Nebeský býk poslechl mého rozkazu."
+ishtar.gilgamesh: "Odvážil se mě odmítnout! Ten drzý král! Porovnal mě se špatnými dveřmi a rozbitou obuví. Za to pozná můj hněv."
+
+# Šamchatiny dialogy
+shamhat.greet: "Já jsem Šamchat, kněžka Ištar. Bohové působí prostřednictvím smrtelných rukou."
+shamhat.ask_enkidu: Ptej se na Enkidu
+shamhat.ask_gilgamesh: Ptej se na krále
+shamhat.ask_love: Ptej se na moc lásky
+shamhat.leave: Musím se věnovat svým povinnostem.
+shamhat.enkidu: "Enkidu? Našla jsem ho u vodní díry, divokého a chlupatého jako zvíře. Po šest dní a sedm nocí jsem ho milovala, a když jsem skončila, stal se z něj muž."
+shamhat.gilgamesh: "Gilgameš vládne Uruku silou, ale jeho lid trpěl, dokud nepřišel Enkidu, aby ho vyzval."
+shamhat.love: "Láska je největší moc bohů. Dokáže zkrotit i to nejdivočejší srdce a udělat z bestie člověka."
+
+# Humbabovy dialogy
+humbaba.greet: "Kdo se odvažuje vstoupit do mého lesa? Já jsem Humbaba a nikdo nesmí projít bez mého souhlasu!"
+humbaba.ask_mercy: Pros o život
+humbaba.ask_fight: Vyraž strážce
+humbaba.leave: Uteč rychle, dokud můžeš.
+humbaba.mercy: "Milost? Ha! Bohové mě ustanovili strážcem tohoto lesa. Odejdi nyní a já ti neroztrhám údy!"
+humbaba.fight: "Pošetilí smrtelníci! Můj řev je bouře, můj dech je oheň a mé čelisti jsou smrt! Zde zemřeš!"
+
+# Utnapištimovy dialogy
+utnapishtim.greet: "Já jsem Utnapištim, přeživší potopy. Bohové mi darovali věčný život. Co zde hledáš?"
+utnapishtim.ask_flood: Ptej se na Velkou potopu
+utnapishtim.ask_immortality: Ptej se na věčný život
+utnapishtim.ask_test: Ptej se, jak prokázat svou hodnotu
+utnapishtim.leave: Nechám tě s tvou moudrostí.
+utnapishtim.flood: "Bohové vyslali potopu, aby zničili veškerý život. Ale Ea mě varoval a já jsem postavil velkou loď. Po sedm dní a nocí zuřily vody, dokud vše nezmlklo. Pak jsem otevřel dveře a život se vrátil."
+utnapishtim.immortality: "Bohové rozhodli, že smrt je osudem všech lidí. Pouze já, díky jejich daru, žiji navěky. Nehledej ji, neb nebude nalezena."
+utnapishtim.test: "Pokud chceš věčný život, nejprve prokaž, že dokážeš zůstat vzhůru sedm dní a nocí. Ale buď varován: nikomu se to ještě nepovedlo."
+
+# Ur-Šanabiho dialogy
+ur_shanabi.greet: "Já jsem Ur-Šanabi, převozník přes Vody smrti. Nikdo nesmí přejít bez mého člunu."
+ur_shanabi.ask_cross: Požádej o přepravu přes vody
+ur_shanabi.ask_cost: Ptej se na cenu za převoz
+ur_shanabi.leave: Musím najít jiný způsob.
+ur_shanabi.cross: "Vody jsou smrtelné na dotek. Pouze kamenné věci mohou přejít bezpečně. Odhod svouv smrtelnou schránku a já tě převezu."
+ur_shanabi.cost: "Cena je tvé smrtelné tělo. Nech ho zde a můžeš přejít, aby ses setkal s Utnapištimem."
+
+# Štířího muže dialogy
+scorpion_man.greet: "Zastav! Nikdo nesmí projít touto branou bez mého souhlasu. Já jsem Štírí muž, strážce hory."
+scorpion_man.ask_passage: Požádej o průchod
+scorpion_man.ask_danger: Ptej se na nebezpečí tunelu
+scorpion_man.leave: Vrať se od brány.
+scorpion_man.passage: "Jsi vysoký postavením a tvá tvář je jako tvář toho, kdo hledá život. Vejdi, pokud se odvážíš. Ale tunel je temný a dlouhý."
+scorpion_man.danger: "Tunel skrz Horu Mašu se táhne po dvanáct dvojitých hodinách. Nikdo nesmí projít, kdo nemá odvahu samotných bohů."
+
+# Ninsuniny dialogy
+ninsun.greet: "Já jsem Ninsun, matka Gilgameše. Moudrost bohů proudí mými žilami."
+ninsun.ask_gilgamesh: Ptej se na jejího syna
+ninsun.ask_dreams: Ptej se na sny a znamení
+ninsun.ask_blessing: Požádej o požehnání
+ninsun.leave: Nechám tě v klidu, moudrá matko.
+ninsun.gilgamesh: "Můj syn je králem mezi muži, silný jako divoký býk. Ale jeho srdce je neklidné a hledá to, co nalezeno být nemůže."
+ninsun.dreams: "Bohové mluví prostřednictvím snů. Gilgamešovy sny předpověděly příchod Enkidu, jeho rovného a bratra."
+ninsun.blessing: "Nechť tě bohové chrání na tvé cestě. Nechť Šamaš vede tvé kroky a nechť se vrátíš zpět v bezpečí do Uruku."
+
+# Anův dialog
+anu.greet: "Já jsem Anu, otec bohů, vládce nebes. Co tě přivádí přede mne?"
+anu.ask_ishtar: Ptej se na Ištarinou žádost
+anu.ask_justice: Ptej se na spravedlnost pro lid
+anu.leave: Nesmím obtěžovat nebeského boha.
+anu.ishtar: "Ištar? Ta je moje dcera, pyšná a vášnivá. Požádala o Nebeského býka, aby potrestala Gilgameše za jeho odmítnutí."
+anu.justice: "Spravedlnost proudí z nebes. Bohové vidí vše a jejich soud je pravdivý. Ale smrtelné záležitosti jsou často mimo naše chápání."
+
+# Nebeský býk dialogy
+bull_of_heaven.greet: "ŘÍÍÍÍÍÍ! Přichází Nebeský býk! Nikdo nestojí před hněvem Ištar!"
+bull_of_heaven.attack: "Odvažuješ se vyzvat božské zvíře? Budeš ušlapán pod mými kopyty!"
+bull_of_heaven.defeated: "Hrrr... bohové... zrada..."
+
+# Vysoký kněz Anu dialogy
+high_priest_anu.greet: "Já jsem Vysoký kněz Anu, strážce nebeských rituálů. Vítejte na zikkuratu boha nebes."
+high_priest_anu.ask_ziggurat: Ptej se na zikkurat
+high_priest_anu.ask_anu: Ptej se na Anu
+high_priest_anu.ask_rituals: Ptej se na rituály
+high_priest_anu.leave: Nechám tě u tvých povinností.
+high_priest_anu.ziggurat: "Tento zikkurat je schodištěm do nebe, kde vykonáváme rituály na počest Anu, otce bohů. Každá úroveň nás přibližuje božskému."
+high_priest_anu.anu: "Anu je bůh nebes, otec všech božstev. Vládne z nejvyšších nebes, jeho výnosy utvářejí osud králů i obyčejných lidí."
+high_priest_anu.rituals: "Modlíme se při úsvitu a soumraku, kdy je závoj mezi světy nejtenčí. Oběti potěší Anu a přinesou jeho požehnání Uruku."
+
+# Vysoká kněžka Ištar dialogy
+high_priestess_ishtar.greet: "Já jsem Vysoká kněžka Ištar, hlas bohyně lásky a války. Přistupuj s úctou."
+high_priestess_ishtar.ask_goddess: Ptej se na bohyni
+high_priestess_ishtar.ask_temple: Ptej se na chrám
+high_priestess_ishtar.ask_rituals: Ptej se na rituály
+high_priestess_ishtar.leave: Nebudu tě rušit, svatá.
+high_priestess_ishtar.goddess: "Ištar je jak něžná milenka, tak i zuřivá válečnice. Jednou rukou přináší život, druhou ho bere. Její srdce je tak rozlehlé jako nebesa."
+high_priestess_ishtar.temple: "Tento zikkurat je ozdoben lapis lazuli a karneolem, dary od těch, kteří hledají její přízeň. Zde vykonáváme posvátné obřady svatebního sňatku, které obnovují zemi."
+high_priestess_ishtar.rituals: "Rituály Ištar zahrnují hudbu, tanec a oběti. Vyžaduje od svých následovníků jak vášeň, tak i sílu."
+
+# Písařův dialog
+temple_scribe.greet: "Já jsem písař chrámu. Slova bohů jsou zaznamenána na hliněných destičkách."
+temple_scribe.ask_work: Ptej se na svou práci
+temple_scribe.ask_tablets: Ptej se na hliněné destičky
+temple_scribe.leave: Nebudu tě dále rušit.
+temple_scribe.work: "Zaznamenávám všechny oběti věnované bohům, každou šepotající modlitbu, každou hořící oběť. Hlína si pamatuje všechno."
+temple_scribe.tablets: "Tyto destičky obsahují moudrost věků. Když se vypálí na slunci, vydrží navěky. Píšu klínovým písmem, darem bohů."
+
+# Královský strážce dialog
+royal_guard.greet: "Já jsem strážce královského paláce. Nikdo nesmí projít bez králevova souhlasu."
+royal_guard.ask_duties: Ptej se na své povinnosti
+royal_guard.ask_armor: Ptej se na svůj brnění
+royal_guard.leave: Půjdu svou cestou.
+royal_guard.duties: "Stojím na stráži u palácových bran a chráním našeho krále Gilgameše. Hradby Uruku nebyly pod mým dohledem nikdy proraženy."
+royal_guard.armor: "Toto bronzové brnění vykovali nejlepší kováři Uruku. Chocholatá přilba mě označuje jako jednoho z elitní stráže. Odrazila již mnohé šípy a meče."
+
+# Uruk šlechtic dialog
+uruk_noble.greet: "Vítám tě, cestovateli. Já jsem šlechtic velkého Uruku."
+uruk_noble.ask_wealth: Ptej se na své bohatství
+uruk_noble.ask_temples: Ptej se na stavbu chrámů
+uruk_noble.leave: Nechám tě u tvých záležitostí.
+uruk_noble.wealth: "Moje bohatství pochází z moudrých investic a požehnání bohů. Obchoduju s lapis lazuli, cedrovým dřevem a jemnými textiliemi z dalekých zemí."
+uruk_noble.temples: "Chrámy Uruku jsou pýchou našeho města. Přispěl jsem štědře na zikkuraty Anu a Ištar. Silný chrám znamená silnou božskou přízeň."
+
+# Obchodník z Uruku dialog
+uruk_merchant.greet: "Vítej u mého stánku, příteli. Mám zboží z celé Mezopotámie."
+uruk_merchant.ask_goods: Ptej se na své zboží
+uruk_merchant.ask_trade: Ptej se na obchod
+uruk_merchant.leave: Podívám se jinam.
+uruk_merchant.goods: "Mám jemné lněné tkaniny z Ur, lapis lazuli z Maganu, cedrové dřevo z lesa a koření z Meluhhy. Vše nejlepší zboží známého světa."
+uruk_merchant.trade: "Obchod je životadní silou Uruku. Přijímám obilí, vlnu, kov a jakékoli jemné řemeslné výrobky. Váha musí být vždy spravedlivá, neboť bohové dohlíží na poctivé obchodování."
+
+# Hrnčířův dialog
+potter.greet: "Pojď, podívej se na mé nejlepší keramiku. Každý kus je vytvořen s péčí."
+potter.ask_craft: Ptej se na svoje řemeslo
+potter.ask_ziggurat: Ptej se na dlaždičky zikkuratu
+potter.leave: Podívám se na tvé zboží později.
+potter.craft: "Tvaruju hlínu z řek do nádob pro bohy. Každý hrnec, každá mísa, každá destička nese značku mých rukou a požehnání řemesla."
+potter.ziggurat_tiles: "Glazura na těchto dlaždicích se třpytí jako samo slunce. Jsou určeny pro zikkuraty, aby ozdobily příbytky bohů. Modré jsou pro Anu, červené pro Ištar."
+
+# Tkadlena dialog
+weaver.greet: "Dobrý den. Moje tkalcovské stavy produkují nejjemnější látky v Uruku."
+weaver.ask_fabrics: Ptej se na své látky
+weaver.ask_priestly_robes: Ptej se na kněžská roucha
+weaver.leave: Podívám se na tvé práce později.
+weaver.fabrics: "Tku látku tak jemnou, že je jako měsíční světlo na vodě. Barvivo pochází z rostlin a mušlí, vytvářející barvy, které potěší bohy."
+weaver.priestly_robes: "Roucha pro kněze musí být dokonalá. Bílá pro Anu, červená pro Ištar, zlatá pro krále. Každý steh musí ctít postavení nositele."
+
+# Úkoly
+quest.gilgamesh_tyranny: Gilgamešova tyranie
+quest.gilgamesh_tyranny.observe: Pozoruj město Uruk a jeho obyvatele
+quest.gilgamesh_tyranny.meet_citizens: Promluv si s obyvateli Uruku
+quest.gilgamesh_tyranny.learn_oppression: Zjisti, jak Gilgameš utiskoval svůj lid
+
+quest.enkidu_creation: Stvoření Enkidu
+quest.enkidu_creation.hear_lament: Slyš nářek obyvatel Uruku
+quest.enkidu_creation.gods_create: Zjisti, jak bohy stvořili Enkidu
+quest.enkidu_creation.enkidu_wild: Najdi Enkidu žijícího divoce v horách
+
+quest.enkidu_civilized: Zkrocení Enkidu
+quest.enkidu_civilized.meet_trapper: Potkaj lovce, který objevil Enkidu
+quest.enkidu_civilized.shamhat_sent: Zjisti, jak byla Šamchat vyslána, aby zkrotila Enkidu
+quest.enkidu_civilized.six_days_nights: Zjisti o šesti dnech a sedmi nocích se Šamchat
+quest.enkidu_civilized.enkidu_human: Uvidíš, jak se Enkidu stává člověkem
+
+quest.gilgamesh_enkidu_meet: Setkání Gilgameše a Enkidu
+quest.gilgamesh_enkidu_meet.hear_of_gilgamesh: Slyš Enkidu mluvit o výzvě Gilgamešovi
+quest.gilgamesh_enkidu_meet.travel_to_uruk: Cestuj do Uruku s Enkidum
+quest.gilgamesh_enkidu_meet.challenge_gilgamesh: Sleduj souboj mezi Gilgamešem a Enkidum
+quest.gilgamesh_enkidu_meet.become_friends: Uvidíš, jak se Gilgameš a Enkidu stanou přáteli
+
+quest.journey_to_cedar_forest: Cesta do Cedrového lesa
+quest.journey_to_cedar_forest.decide_to_go: Zjisti, proč se Gilgameš a Enkidu rozhodli cestovat do Cedrového lesa
+quest.journey_to_cedar_forest.prepare_journey: Připrav se na cestu do Cedrového lesa
+quest.journey_to_cedar_forest.travel_to_forest: Cestuj divočinou do Cedrového lesa
+quest.journey_to_cedar_forest.arrive_at_forest: Přijď do Cedrového lesa
+
+quest.defeat_humbaba: Poraz Humbabu
+quest.defeat_humbaba.enter_forest: Vstup do Cedrového lesa
+quest.defeat_humbaba.find_humbaba: Najdi Humbabu v jeho doupěti
+quest.defeat_humbaba.battle_humbaba: Boj proti Humbabovi
+quest.defeat_humbaba.humbaba_defeated: Poraz Humbabu a dosáhni vítězství
+
+quest.ishtar_proposition: Ištarina nabídka
+quest.ishtar_proposition.bath_after_battle: Gilgameš se koupe po porážce Humbaby
+quest.ishtar_proposition.ishtar_approaches: Ištar se přibližuje k Gilgamešovi
+quest.ishtar_proposition.reject_ishtar: Gilgameš odmítne Ištarinu nabídku
+quest.ishtar_proposition.ishtar_angry: Ištar se rozzlobí kvůli odmítnutí
+
+quest.bull_of_heaven: Nebeský býk
+quest.bull_of_heaven.bull_sent: Ištar pošle Nebeského býka
+quest.bull_of_heaven.bull_attacks: Nebeský býk útočí na Uruk
+quest.bull_of_heaven.defeat_bull: Gilgameš a Enkidu porážejí býka
+quest.bull_of_heaven.ishtar_curses: Ištar proklíná Gilgameše a Enkidu
+
+quest.enkidu_death: Enkidova smrt
+quest.enkidu_death.enkidu_sickens: Enkidu onemocní boží trest
+quest.enkidu_death.enkidu_dream: Enkidu má sen o podsvětí
+quest.enkidu_death.enkidu_dies: Enkidu umírá
+quest.enkidu_death.gilgamesh_mourns: Gilgameš truchlí pro svého přítele
+
+quest.journey_to_utnapishtim: Cesta k Utnapištimovi
+quest.journey_to_utnapishtim.decide_to_leave: Gilgameš se rozhodne hledat věčný život
+quest.journey_to_utnapishtim.travel_to_mountain: Cestuj k Hoře Mašu
+quest.journey_to_utnapishtim.meet_scorpion_man: Potkej Štířího muže
+quest.journey_to_utnapishtim.pass_through_tunnel: Projdi Tunlem Slunce
+quest.journey_to_utnapishtim.cross_waters_of_death: Překroč Vody smrti
+quest.journey_to_utnapishtim.meet_utnapishtim: Potkej Utnapištima
+
+quest.search_for_immortality: Hledání nesmrtelnosti
+quest.search_for_immortality.ask_about_immortality: Gilgameš se ptá Utnapištima na věčný život
+quest.search_for_immortality.utnapishtim_test: Utnapištim postaví Gilgameše před zkoušku
+quest.search_for_immortality.fail_test: Gilgameš selže v testu
+quest.search_for_immortality.learn_truth: Gilgameš pozná pravdu o smrtelnosti
+
+quest.return_to_uruk: Návrat do Uruku
+quest.return_to_uruk.accept_mortality: Gilgameš přijímá svou smrtelnost
+quest.return_to_uruk.return_journey: Gilgameš se vrací do Uruku
+quest.return_to_uruk.view_uruk: Gilgameš obdivuje slávu Uruku
+
+# Lore položky
+lore.uruk.title: Uruk
+lore.uruk: >
+  Velké město Uruk, kterému vládne Gilgameš. Jeho mohutné hradby postavil sám král,
+  přičemž chrám Eanna pro Anu a chrám Ištar jsou jeho korunní klenoty. Město, které
+  Gilgameš vybudoval, stojí jako svědectví jeho moci a vize.
+
+lore.gilgamesh.title: Gilgameš
+lore.gilgamesh: >
+  Gilgameš, král Uruku, ze dvou třetin bůh a z jedné třetiny člověk. Stvořený bohy
+  s dokonalou krásou a silou. Postavil hradby Uruku a po smrti svého milovaného přítele
+  Enkidu hledal věčný život. První hrdina světa.
+
+lore.enkidu.title: Enkidu
+lore.enkidu: >
+  Enkidu, divoký muž stvořený z hlíny bohyní Aruru. Žil mezi zvířaty, dokud ho
+  nezkrotila chrámová kněžka Šamchat. Stal se Gilgamešovým rovným a věrným druhem,
+  a spolu čelili největším výzvám své doby.
+
+lore.humbaba.title: Humbaba
+lore.humbaba: >
+  Humbaba, strážce Cedrového lesa. Pověřený Enlilem, aby chránil posvátné stromy,
+  byl hroznou postavou se sedminásobnými terory. Jeho řev byl jako bouře, jeho dech
+  jako oheň a jeho tlama byla samotná smrt. Porazen Gilgamešem a Enkidem.
+
+lore.ishtar.title: Ištar
+lore.ishtar: >
+  Ištar, bohyně lásky a války, patronka Uruku. Pyšná a vášnivá, nabízí jak extázi,
+  tak zkázu. Když Gilgameš odmítl její námluvy, vyslala Nebeského býka, aby ho potrestala.
+
+lore.bull_of_heaven.title: Nebeský býk
+lore.bull_of_heaven: >
+  Božské zvíře vyslané Ištar, aby potrestalo Gilgameše za odmítnutí. Obrovský býk
+  přinášející zkázu Uruku. Byl poražen Gilgamešem a Enkidem, ale jeho smrt přinesla
+  hněv bohů.
+
+lore.great_flood.title: Velká potopa
+lore.great_flood: >
+  Velká potopa vyslaná bohy, aby zničila veškerý život. Utnapištim, varovaný Eou,
+  postavil velkou loď a přežil se svou rodinou a zvířaty. Za to mu bohy udělily věčný život.
+  Jeho příběh je vyprávěn Gilgamešovi v eposu.
+
+lore.utnapishtim.title: Utnapištim
+lore.utnapishtim: >
+  Utnapištim, jediný přeživší Velké potopy. On a jeho manželka obdrželi od bohů věčný
+  život a nyní žijí za Vodami smrti. Učí Gilgameše tvrdé pravdě: že smrt je osudem všech lidí.
+
+lore.mount_mashu.title: Hora Mašu
+lore.mount_mashu: >
+  Hora Mašu, velká hora, kterou každou noc prochází slunce. Štírí muž střeží její bránu,
+  a tunelem lze dospět do zahrady bohů.
+
+lore.cedar_forest.title: Cedrový les
+lore.cedar_forest: >
+  Cedrový les, rozlehlý a prastarý les sahající se na deset tisíc lig v každém směru.
+  Domov Humbaby, strážce ustanoveného Enlilem. Stromy jsou posvátné a nikdo je nesmí
+  pokáčet, aniž by čelil strážcově hněvu.
+
+# Mezopotamská architektura - Lore
+lore.ziggurat_uruk.title: Zikkurat v Uruku
+lore.ziggurat_uruk: >
+  Velký zikkurat v Uruku, masivní stupňovitý chrám věnovaný hlavnímu bohu.
+  Postavený z hliněných cihel, jeho několik úrovní představuje spojení mezi nebem a zemí.
+  Z nejvyššího bodu je výhled na celé město a okolní země.
+
+lore.ziggurat_anu.title: Zikkurat boha Anu
+lore.ziggurat_anu: >
+  Zikkurat boha Anu, boha nebes a otce Ištar. Tato posvátná stavba stoupá
+  k nebesům, symbolizující Anuovu doménu. Kněží zde vykonávají rituály, aby
+  komunikovali s bohy a pozorovali pohyby nebeských těles.
+
+lore.ziggurat_ishtar.title: Zikkurat bohyně Ištar
+lore.ziggurat_ishtar: >
+  Zikkurat bohyně Ištar, bohyně lásky a války. Na rozdíl od ostatních zikkuratů
+  je tento ozdoben lapis lazuli a karneolem, dary od milenců a válečníků hledajících
+  přízeň bohyně. Chrám na jeho vrcholu je místo, kde Ištar přijímá oběti.
+
+lore.white_temple.title: Bílý chrám
+lore.white_temple: >
+  Bílý chrám v Uruku, jehož zbělené zdi se třpytí na slunci. Postavený na
+  zikkuratu, tento chrám byl jedním z nejposvátnějších míst v starověké Mezopotámii.
+  Jeho bílá barva symbolizuje čistotu a božské světlo bohů.
+
+lore.great_wall_uruk.title: Velká hradba Uruku
+lore.great_wall_uruk: >
+  Mohutné hradby Uruku, postavené samotným Gilgamešem. Dvě vnější hradby s
+  vnitřními hradbami mezi nimi, vytvářející téměř nedobytnou pevnost. Hradby
+  mají věže, vstupní budovy a masivní brány, které odolají jakémukoli útoku.
+
+lore.hanging_gardens.title: Visuté zahrady v Uruku
+lore.hanging_gardens: >
+  Legendární visuté zahrady, o kterých se říká, že je postavil Gilgameš pro svou manželku.
+  Terasovité zahrady stoupající jako zelená hora, s exotickými rostlinami a stromy
+  dovezenými z dalekých zemí. Inženýrský zázrak starověkého světa.
+
+# Předměty
+item.cedar_wood: Cedrové dřevo
+item.cedar_wood.desc: Posvátné dřevo z Cedrového lesa, střežené Humbabou.
+
+# Nové epické úkoly
+quest.tyranny.title: Gilgamešova tyranie
+quest.tyranny.hear_complaints: Slyš stížnosti obyvatel Uruku
+quest.tyranny.learn_oppression: Zjisti o Gilgamešově útlaku
+quest.tyranny.gods_create_enkidu: Bohové stvořili Enkidu, aby vyzval Gilgameše
+
+quest.enkidu_awakening.title: Enkidovo probuzení
+quest.enkidu_awakening.meet_trapper: Potkej lovce, který objevil Enkidu
+quest.enkidu_awakening.shamhat_arrives: Šamchat přijíždí, aby zkrotila divočáka
+quest.enkidu_awakening.six_days_and_nights: Šest dní a sedm nocí se Šamchat
+quest.enkidu_awakening.enkidu_civilized: Enkidu se stává civilizovaným
+
+quest.meeting_equals.title: Setkání rovných
+quest.meeting_equals.enkidu_hears: Enkidu slyší o Gilgamešově tyranii
+quest.meeting_equals.travel_to_uruk: Cestuj do Uruku, aby vyzval Gilgameše
+quest.meeting_equals.challenge: Enkidu vyzývá Gilgameše u svatby
+quest.meeting_equals.become_brothers: Gilgameš a Enkidu se stanou bratrov
+
+quest.cedar_forest.title: Cesta do Cedrového lesa
+quest.cedar_forest.decide: Gilgameš a Enkidu se rozhodnou cestovat do Cedrového lesa
+quest.cedar_forest.prepare: Připrav zbraň a zásoby na cestu
+quest.cedar_forest.travel: Cestuj divočinou do Cedrového lesa
+quest.cedar_forest.enter: Vstup do posvátného Cedrového lesa
+quest.cedar_forest.find_humbaba: Najdi Humbabu v jeho doupěti
+quest.cedar_forest.face_guardian: Postav se strážci lesa
+quest.cedar_forest.defeat_humbaba: Poraz Humbabu a získej cedrové dřevo
+
+quest.ishtars_wrath.title: Ištarina zlost
+quest.ishtars_wrath.bath: Gilgameš se koupe po porážce Humbaby
+quest.ishtars_wrath.approaches: Ištar přichází k Gilgamešovi s nabídkou
+quest.ishtars_wrath.reject: Gilgameš odmítne Ištarinu nabídku
+quest.ishtars_wrath.bull_sent: Ištar pošle Nebeského býka, aby potrestala Gilgameše
+quest.ishtars_wrath.defeat_bull: Poraz Nebeského býka
+
+quest.enkidu_death.title: Enkidova smrt
+quest.enkidu_death.punishment: Bohové potrestají Enkidu za zabití Humbaby
+quest.enkidu_death.sickens: Enkidu onemocní boží nemocí
+quest.enkidu_death.dream: Enkidu sní o podsvětí
+quest.enkidu_death.dies: Enkidu umírá po dvanácti dnech utrpení
+quest.enkidu_death.mourns: Gilgameš truchlí pro svého milovaného přítele
+
+quest.immortality.title: Hledání nesmrtelnosti
+quest.immortality.decide: Gilgameš se rozhodne hledat věčný život
+quest.immortality.journey_mountain: Cesta k Hoře Mašu
+quest.immortality.meet_scorpion: Setkání se Štířímu mužem u brány
+quest.immortality.pass_tunnel: Projdi Tunelm Slunce
+quest.immortality.cross_waters: Překroč Vody smrti
+quest.immortality.meet_ferryman: Setkání s Ur-Šanabim, převozníkem
+quest.immortality.reach_utnapishtim: Dosáhni Utnapištimova příbytku
+quest.immortality.learn_truth: Poznej pravdu o smrtelnosti
+
+quest.return_uruk.title: Návrat do Uruku
+quest.return_uruk.accept: Přijmi nevyhnutelnost smrti
+quest.return_uruk.begin_journey: Zahaj cestu zpět do Uruku
+quest.return_uruk.cross_back: Vrať se zpět přes Vody smrti
+quest.return_uruk.exit_tunnel: Opuści Tunel Slunce
+quest.return_uruk.descend: Sestup z Hory Mašu
+quest.return_uruk.view_uruk: Obdivuj mohutné hradby Uruku
+quest.return_uruk.final_reflection: Zamysli se nad cestou a smyslem života
+
+# Ninsun Dialogues (Czech)
+ninsun.greet: "Jsem Ninsun, matka Gilgameše a moudrá bohyně Uruku. Co hledá přítel mého syna?"
+ninsun.ask_son: Zeptat se na Gilgameše
+ninsun.ask_dream: Zeptat se na výklad snů
+ninsun.ask_enkidu: Zeptat se na Enkidu
+ninsun.ask_wisdom: Hledat moudrost
+ninsun.leave: Musím jít, moudrá matko.
+ninsun.son: "Můj syn Gilgameš je silný a pyšný. Dvě třetiny boha a jedna třetina člověka, narodil se, aby byl velkým králem. Ale i králové potřebují vedení svých matek."
+ninsun.protection: "Požádám bohy, aby vás ochránili na vaší cestě. Ať vás Šamaš, bůh slunce, opatruje, až budete cestovat nebezpečnými zeměmi."
+ninsun.dream: "Sny jsou hlas bohů, kteří mluví k smrtelníkům. Přineste mi svůj sen a já vám odhalím jeho význam."
+ninsun.enkidu_dream: "Ach, sníte o Enkidovi? On je opravdu rovnocenný mému synovi, ten, který může zmírnit Gilgamešovo pyšné srdce."
+ninsun.about_enkidu: "Enkidu je ten, kterého bohové stvořili, aby se vyrovnal mému synovi. Spolu vykonali velké činy a vykonají ještě více."
+ninsun.wisdom: "Moudrost přichází z pochopení síly bohů i křehkosti lidí. Zapamatujte si to na svých cestách."
+
+# Ninsun choice keys (Czech)
+ninsun.ask_protection: Požádej o božskou ochranu
+ninsun.ask_enkidu_dream: Ptej se na Enkidův sen
+
+# Bull of Heaven Dialogues (Czech)
+bull_of_heaven.roar: "ŘEV! Nebeský býk přichází potrestat pyšné!"
+bull_of_heaven.flee: Uteč před šelmou
+bull_of_heaven.fight: Postav se a bojuj
+bull_of_heaven.flee_text: Otočíš se a utíkáš před božským zvířetem.
+bull_of_heaven.fight_text: Postavíš se proti Nebeskému býkovi!
+
+# Anu Dialogues (Czech)
+anu.greet: "Já jsem Anu, pán nebes, otec velkých bohů. Co tě přivádí přede mne, do mé božské přítomnosti?"
+anu.ask_heavens: Ptej se na nebesa
+anu.ask_judgment: Ptej se na božský soud
+anu.ask_ishtar: Ptej se na Ištar
+anu.leave: Musím jít, velký pane.
+anu.heavens: "Nebesa jsou nekonečná a věčná, kde hvězdy zapisují osudy lidí. Z mého trůnu výše vidím vše, co bylo, je a bude."
+anu.judgment: "Můj soud je konečný, neboť jsem otcem bohů. Rovnováha spravedlnosti je udržována mou vůlí samotnou."
+anu.ishtar: "Ištar... moje dcera. Pyšná a prudká, je zároveň přinositelkou lásky i mzdou války. Hodná dědička mého království."
+
+# Enhanced Search for Immortality Quest (Czech)
+quest.immortality.prepare: Připrav se na dlouhou a nebezpečnou cestu za odhalením tajemství věčného života
+quest.immortality.scorpion_test: Štíří muž zkouší tvou hodnost projít Horou Mašu
+quest.immortality.tunnel_test: Projdí temnotou Tunelu Slunce bez strachu
+quest.immortality.ferryman_test: Převozník Ur-Šanabi zkouší tvou odhodlanost před překročením Vod smrti
+quest.immortality.learn_of_plant: Utnapištim odhalí umístění rostliny, která obnovuje mládí
+quest.immortality.obtain_plant: Vyzvedni rostlinu z hlubin Vod smrti
+quest.immortality.return_with_plant: Vrať se do Uruku s vzácnou rostlinou věčného mládí
+quest.immortality.lose_plant: Had ukradne rostlinu, zatímco se koupáš, a přijdáš o šanci na nesmrtelnost

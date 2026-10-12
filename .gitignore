@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+
+# Voice output
+media/voice/
+
+# Package build files
+*.deb
+*.dsc
+*.tar.*
+.deb-split/
+
+# Editor/IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

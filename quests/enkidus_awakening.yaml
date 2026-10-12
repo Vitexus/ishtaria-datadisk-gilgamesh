@@ -1,0 +1,18 @@
+id: enkidus_awakening
+title_key: quest.enkidu_awakening.title
+start_stage: meet_trapper
+start_place: cedar_forest
+stages:
+  meet_trapper:
+    text_key: quest.enkidu_awakening.meet_trapper
+    guide: cedar_forest
+    final: false
+  shamhat_arrives:
+    text_key: quest.enkidu_awakening.shamhat_arrives
+    final: false
+  six_days_and_nights:
+    text_key: quest.enkidu_awakening.six_days_and_nights
+    final: false
+  enkidu_civilized:
+    text_key: quest.enkidu_awakening.enkidu_civilized
+    final: true

@@ -1,0 +1,20 @@
+id: the_death_of_enkidu
+title_key: quest.enkidu_death.title
+start_stage: divine_punishment
+start_place: uruk_palace
+stages:
+  divine_punishment:
+    text_key: quest.enkidu_death.punishment
+    final: false
+  enkidu_sickens:
+    text_key: quest.enkidu_death.sickens
+    final: false
+  dream_of_underworld:
+    text_key: quest.enkidu_death.dream
+    final: false
+  enkidu_dies:
+    text_key: quest.enkidu_death.dies
+    final: false
+  gilgamesh_mourns:
+    text_key: quest.enkidu_death.mourns
+    final: true

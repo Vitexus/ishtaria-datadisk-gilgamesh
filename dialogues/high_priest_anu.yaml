@@ -1,0 +1,30 @@
+# High Priest of Anu Dialogue Tree
+# Wears traditional Mesopotamian priestly robes
+
+id: high_priest_anu
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: high_priest_anu.greet
+    choices:
+      - {text_key: high_priest_anu.ask_ziggurat, goto: explain_ziggurat}
+      - {text_key: high_priest_anu.ask_anu, goto: explain_anu}
+      - {text_key: high_priest_anu.ask_rituals, goto: explain_rituals}
+      - {text_key: high_priest_anu.leave}
+
+  explain_ziggurat:
+    text_key: high_priest_anu.ziggurat
+    choices:
+      - {text_key: high_priest_anu.leave}
+
+  explain_anu:
+    text_key: high_priest_anu.anu
+    choices:
+      - {text_key: high_priest_anu.leave}
+
+  explain_rituals:
+    text_key: high_priest_anu.rituals
+    choices:
+      - {text_key: high_priest_anu.leave}

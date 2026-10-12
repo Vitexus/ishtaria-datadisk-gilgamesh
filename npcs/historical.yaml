@@ -1,0 +1,82 @@
+# Historical Mesopotamian Figures
+# Priests, nobles, and citizens of Uruk in authentic period costumes
+
+# High Priest of Anu
+- id: high_priest_anu
+  name_key: npc.high_priest_anu
+  place: eanna_temple
+  character: {pack: retro, skin: humanMaleA, model: media/models/high_priest_anu.glb}
+  dialogue: high_priest_anu
+  portrait: media/portraits/high_priest_anu.jpg
+  bio_key: npc.high_priest_anu.bio
+  tags: [priest, anu, noble]
+
+# High Priestess of Ishtar
+- id: high_priestess_ishtar
+  name_key: npc.high_priestess_ishtar
+  place: ishtar_temple
+  character: {pack: retro, skin: humanFemaleA, model: media/models/high_priestess_ishtar.glb}
+  dialogue: high_priestess_ishtar
+  portrait: media/portraits/high_priestess_ishtar.jpg
+  bio_key: npc.high_priestess_ishtar.bio
+  tags: [priestess, ishtar, noble]
+
+# Temple Scribe
+- id: temple_scribe
+  name_key: npc.temple_scribe
+  place: white_temple
+  character: {pack: retro, skin: humanMaleA, model: media/models/temple_scribe.glb}
+  dialogue: temple_scribe
+  portrait: media/portraits/temple_scribe.jpg
+  bio_key: npc.temple_scribe.bio
+  tags: [scribe, temple, scholar]
+
+# Royal Guard of Uruk
+- id: royal_guard
+  name_key: npc.royal_guard
+  place: city_gate
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/royal_guard.glb}
+  dialogue: royal_guard
+  portrait: media/portraits/royal_guard.jpg
+  bio_key: npc.royal_guard.bio
+  tags: [guard, soldier, uruk]
+
+# Noble of Uruk
+- id: uruk_noble
+  name_key: npc.uruk_noble
+  place: uruk_palace
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/uruk_noble.glb}
+  dialogue: uruk_noble
+  portrait: media/portraits/uruk_noble.jpg
+  bio_key: npc.uruk_noble.bio
+  tags: [noble, wealthy, citizen]
+
+# Merchant of Uruk
+- id: uruk_merchant
+  name_key: npc.uruk_merchant
+  place: uruk_market
+  character: {pack: retro, skin: humanMaleA, model: media/models/uruk_merchant.glb}
+  dialogue: uruk_merchant
+  portrait: media/portraits/uruk_merchant.jpg
+  bio_key: npc.uruk_merchant.bio
+  tags: [merchant, trader, citizen]
+
+# Potter
+- id: potter
+  name_key: npc.potter
+  place: uruk_market
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/potter.glb}
+  dialogue: potter
+  portrait: media/portraits/potter.jpg
+  bio_key: npc.potter.bio
+  tags: [craftsman, potter, artisan]
+
+# Weaver
+- id: weaver
+  name_key: npc.weaver
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/weaver.glb}
+  dialogue: weaver
+  portrait: media/portraits/weaver.jpg
+  bio_key: npc.weaver.bio
+  tags: [craftsman, weaver, artisan]

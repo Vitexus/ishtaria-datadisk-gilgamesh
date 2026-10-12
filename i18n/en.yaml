@@ -1,0 +1,579 @@
+# Epic of Gilgamesh Datadisk - English Translation
+
+# Datadisk metadata
+datadisk.gilgamesh.name: Epic of Gilgamesh
+
+# Places
+place.uruk: Uruk
+place.uruk_wall: Great Wall of Uruk
+place.eanna_temple: Temple of Eanna
+place.ishtar_temple: Temple of Ishtar
+place.uruk_market: Uruk Market
+place.uruk_palace: Royal Palace of Uruk
+place.cedar_forest: Cedar Forest
+place.humbaba_lair: Lair of Humbaba
+place.mount_mashu: Mount Mashu
+place.scorpion_gate: Scorpion Gate
+place.tunnel_of_sun: Tunnel of the Sun
+place.waters_of_death: Waters of Death
+place.utnapishtim_dwelling: Dwelling of Utnapishtim
+
+# Mesopotamian Architecture
+place.ziggurat_uruk: Great Ziggurat of Uruk
+place.ziggurat_anu: Ziggurat of Anu
+place.ziggurat_ishtar: Ziggurat of Ishtar
+place.white_temple: White Temple
+place.great_wall_uruk: Great Wall of Uruk
+place.hanging_gardens: Hanging Gardens
+place.royal_tombs: Royal Tombs of Uruk
+place.city_gate: City Gate of Uruk
+
+# Music
+music.temple: Temple Music
+music.ishtar_shrine: Ishtar's Shrine
+music.cedar_forest: Cedar Forest
+music.mountain_echo: Mountain Echo
+music.waters_of_death: Waters of Death
+music.utnapishtim: Utnapishtim's Theme
+
+# NPC Names and Bios
+npc.gilgamesh: Gilgamesh
+npc.gilgamesh.bio: King of Uruk, two-thirds god and one-third man. Perfect in body, beautiful in appearance, strong as a wild bull. Builder of Uruk's great walls. Wears a golden diadem crown with lapis lazuli inlays, white linen kaunakes skirt with gold embroidery, wide leather belt with gold buckle, gold-decorated sandals, and carries a ceremonial sword at his side.
+npc.enkidu: Enkidu
+npc.enkidu.bio: Wild man created by the gods from clay. Once covered in long matted hair like a wild beast, living with gazelles. Now civilized, he wears a simple linen tunic with leather belt and sandals, carrying a wooden club. Strong muscular build with wild eyes and long tresses.
+npc.enkidu_civilized: Enkidu (Civilized)
+npc.enkidu_civilized.bio: Once wild, now civilized. Short-cropped hair, clean-shaven beard, linen tunic with leather armor, bronze axe at belt, sandals. The perfect equal and brother to Gilgamesh.
+npc.ishtar: Ishtar
+npc.ishtar.bio: Goddess of love and war, patron of Uruk. Proud and tempestuous, she demands respect and offers both passion and destruction. Wears a multi-tiered horned headdress with star symbols, red and gold ceremonial robes with lapis lazuli and carnelian jewelry, carrying a bow as symbol of her warrior aspect.
+npc.shamhat: Shamhat
+npc.shamhat.bio: Temple priestess of Ishtar. The one who civilized Enkidu through love and wisdom, teaching him the ways of humanity. Wears a gold headdress with lappets, white ceremonial linen robes with embroidered symbols of Ishtar, lapis lazuli and gold jewelry, carrying a ritual staff, perfumed with temple incense.
+npc.humbaba: Humbaba
+npc.humbaba.bio: "Guardian of the Cedar Forest. A monstrous ogre with terrifying power. His roar is like the storm, his breath like fire, and his jaws are death itself. Appears with sevenfold terrors - face with exaggerated features, body covered in scales, arms ending in claws, wearing a garment of animal hides, crowned with a terror-inducing headdress."
+npc.utnapishtim: Utnapishtim
+npc.utnapishtim.bio: The only survivor of the Great Flood, granted eternal life by the gods. Wise and ancient, he lives across the Waters of Death. Wears a simple white headband, plain linen robe of immortal wisdom, carrying the signet of eternal life, with long white beard.
+npc.ur_shanabi: Ur-Shanabi
+npc.ur_shanabi.bio: Ferryman who transports travelers across the Waters of Death to Utnapishtim's dwelling. Wears a simple cloth turban, plain linen loincloth, carrying a long oar for his boat.
+npc.scorpion_man: Scorpion Man
+npc.scorpion_man.bio: Guardian of the gate to the tunnel through Mount Mashu. A terrifying creature with the body of a scorpion and a man. Half-man half-scorpion hybrid with scorpion tail and claws, wearing ceremonial guard armor with scorpion-themed headdress.
+npc.ninsun: Ninsun
+npc.ninsun.bio: Mother of Gilgamesh, a wise goddess. She interprets her son's dreams and offers guidance and protection. Wears divine mother's white robes with gold and lapis lazuli jewelry, simple headband with mother-of-pearl inlays, carrying a sacred scepter.
+npc.anu: Anu
+npc.anu.bio: Sky god and father of Ishtar. Ruler of the heavens, his word carries the weight of the cosmos. Wears a tall horned crown symbolizing heavenly authority, long flowing beard, blue robes representing the sky, gold and lapis lazuli adornments, carrying the tablet of destinies.
+npc.bull_of_heaven: Bull of Heaven
+npc.bull_of_heaven.bio: Divine beast sent by Ishtar to punish Gilgamesh. A monstrous bull that brings destruction in its wake. Appears as a divine beast form with golden hide, massive horns, hooves that shake the earth, celestial aura, embodying the wrath of Ishtar.
+npc.ninsun: Ninsun
+npc.ninsun.bio: Mother of Gilgamesh, a wise goddess. She interprets her son's dreams and offers guidance and protection.
+npc.anu: Anu
+npc.anu.bio: Sky god and father of Ishtar. Ruler of the heavens, his word carries the weight of the cosmos.
+npc.bull_of_heaven: Bull of Heaven
+npc.bull_of_heaven.bio: Divine beast sent by Ishtar to punish Gilgamesh. A monstrous bull that brings destruction in its wake.
+
+# Historical Mesopotamian NPCs
+npc.high_priest_anu: High Priest of Anu
+npc.high_priest_anu.bio: High priest of the sky god Anu, wearing traditional white linen robes with lapis lazuli beads in intricate patterns, tall ceremonial headdress with symbolic representations of the heavens, carries a ritual censer for incense offerings, performs sacred rituals at the ziggurat of Anu.
+npc.high_priestess_ishtar: High Priestess of Ishtar
+npc.high_priestess_ishtar.bio: High priestess of the goddess of love and war, dressed in elaborate red and gold ceremonial garments with lapis lazuli and carnelian inlays, multi-tiered headdress with star symbols, carries a sacred dagger and ritual vessels, interprets the will of Ishtar through divine omens.
+npc.temple_scribe: Temple Scribe
+npc.temple_scribe.bio: Scholar who records temple offerings and astronomical observations on clay tablets. Wears a simple white linen robe with a clay tablet case at his belt, stylus tucked behind his ear, carries a measuring rod for architectural calculations.
+npc.royal_guard: Royal Guard of Uruk
+npc.royal_guard.bio: Elite soldier of Uruk's royal guard, wearing polished bronze scale armor, plumed helmet with gold accents, leather kilt, carries a spear and shield decorated with the royal insignia, loyal protector of the king and the palace.
+npc.uruk_noble: Noble of Uruk
+npc.uruk_noble.bio: Wealthy citizen of Uruk, dressed in fine pleated linen robe with gold embroidered trim, lapis lazuli and gold jewelry including rings and amulets, carries a ceremonial staff, patron of the arts and temple construction.
+npc.uruk_merchant: Merchant of Uruk
+npc.uruk_merchant.bio: Trader of goods from across Mesopotamia and beyond. Wears a colorful woven robe from distant lands, carries a bronze balance scale, leather pouch for coins, brings exotic goods and news from foreign cities.
+npc.potter: Potter
+npc.potter.bio: Master craftsman who creates ceremonial pottery for temples and nobility. Wears a clay-smeared leather apron over a simple tunic, hands skilled from years of shaping clay, carries a wooden potter's wheel tool.
+npc.weaver: Weaver
+npc.weaver.bio: Skilled textile worker who creates fine garments from wool and flax. Wears a simple linen dress with a weaving shuttle in her belt, hair tied back with a cloth band, expert in creating patterns and dyes.
+
+# Gilgamesh Dialogues
+gilgamesh.greet: "I am Gilgamesh, king of Uruk, two-thirds god and one-third man. What brings you before me?"
+gilgamesh.ask_advice: Ask the king for wisdom
+gilgamesh.ask_friendship: Speak of Enkidu
+gilgamesh.ask_quest: Ask about his adventures
+gilgamesh.leave: I must go, my king.
+gilgamesh.advice: "The gods have given me strength and wisdom. I rule this city with justice and build its walls to stand forever."
+gilgamesh.friendship: "Enkidu? He is my brother, my equal. Together we faced Humbaba and the Bull of Heaven. His death weighs heavy on my heart."
+gilgamesh.greet: "I am Gilgamesh, king of Uruk, two-thirds god and one-third man. What brings you before me?"
+gilgamesh.ask_advice: Ask the king for wisdom
+gilgamesh.ask_friendship: Speak of Enkidu
+gilgamesh.ask_quest: Ask about his adventures
+gilgamesh.ask_city: Ask about Uruk
+gilgamesh.ask_mortality: Ask about mortality
+gilgamesh.leave: I must go, my king.
+gilgamesh.advice: "The gods have given me strength and wisdom. I rule this city with justice and build its walls to stand forever."
+gilgamesh.walls: "The walls of Uruk! Two outer walls with an inner wall between them. Built with my own hands and the help of Enkidu, they stand as a testament to our power. No enemy may breach them!"
+gilgamesh.friendship: "Enkidu? He is my brother, my equal. Together we faced Humbaba and the Bull of Heaven. His death weighs heavy on my heart."
+gilgamesh.enkidu_fate: "The gods punished him for our hubris in slaying Humbaba. Six days and seven nights he suffered before death took him. I mourn him still."
+gilgamesh.quest: "I have journeyed to the ends of the earth seeking eternal life. But I have learned that mortality is the fate of all men."
+gilgamesh.cedar_forest: "The Cedar Forest! A place of terrible power and great beauty. Humbaba guarded it well, but we felled the mighty cedars and claimed victory for Uruk."
+gilgamesh.about_uruk: "Uruk is my city, the greatest city in all the land. From its walls to its temples, from its market to its palace, all is under my protection."
+gilgamesh.mortality: "I sought eternal life, traveled beyond the Waters of Death, met Utnapishtim himself. And yet... I learned that the greatest truth is that all men must die."
+gilgamesh.lesson: "What does it mean to be mortal? It means to live fully, to build, to love, to fight, to rule. The gods have their domain, but men have this world and this time. Make the most of it."
+gilgamesh.enkidu: "My brother... my equal... gone from this world. But his memory lives on in every stone of Uruk's walls."
+
+# Gilgamesh choice keys
+gilgamesh.ask_walls: Ask about the great walls
+gilgamesh.ask_enkidu_fate: Ask about Enkidu's fate
+gilgamesh.ask_cedar_forest: Ask about the Cedar Forest
+gilgamesh.ask_immortality: Ask about the search for immortality
+gilgamesh.ask_lesson: Ask about the lesson of mortality
+
+# Gilgamesh at Temple
+gilgamesh_temple.greet: "Here in the temple of Eanna, I find peace. The gods speak through the silence of these stones."
+gilgamesh_temple.pray: Pray with the king
+gilgamesh_temple.leave: I will leave you to your thoughts.
+gilgamesh_temple.prayer: "Let us pray to Anu and the great gods for their blessing upon Uruk and its people."
+
+# Enkidu Dialogues
+enkidu.greet: "I am Enkidu, once wild, now friend of Gilgamesh. The beasts of the forest knew me as brother."
+enkidu.ask_wild_days: Ask about his wild days
+enkidu.ask_gilgamesh: Ask about Gilgamesh
+enkidu.ask_civilization: Ask about civilization
+enkidu.ask_shamhat: Ask about Shamhat
+enkidu.ask_humbaba: Ask about Humbaba
+enkidu.ask_death: Ask about his death
+enkidu.leave: I must go.
+enkidu.wild_days: "Once I ran with the gazelles and drank with the wild beasts at the watering hole. I knew nothing of men or cities. I was one with nature, strong and free."
+enkidu.animals: "The gazelles would eat from my hand, and the wolves would sleep beside me. Even the lions respected my strength. We were all creatures of the wild together."
+
+# Enkidu choice keys
+enkidu.ask_animals: Ask about the animals
+enkidu.ask_equality: Ask about equality with Gilgamesh
+enkidu.ask_changes: Ask how he changed
+enkidu.gilgamesh: "Gilgamesh! A king proud and strong, but cruel to his people. The gods sent me to match him, to temper his pride with my strength."
+enkidu.equality: "We wrestled, Gilgamesh and I, and I matched him blow for blow. In that moment, he found his equal, his brother. From that day, no man could stand against us."
+enkidu.civilization: "Shamhat changed me. Six days and seven nights she stayed with me, teaching me the ways of men. The beasts fled from me, for I had become civilized."
+enkidu.changes: "Now I wear the clothes of men and eat their bread. I drink their wine and understand their words. But in my heart, I still remember the wild."
+enkidu.shamhat: "Shamhat... she was the first to see the man within me. Without her, I would still be running with the beasts, and Gilgamesh would have no equal."
+enkidu.humbaba: "Humbaba! The guardian of the Cedar Forest was a terror to behold. His roar shook the earth, and his breath was fire. But together with Gilgamesh, we faced him and we won."
+enkidu.death: "I... I feel the hand of the gods upon me. They punish me for slaying Humbaba, for defying the will of heaven. But I do not regret it. I lived as a man, I fought as a warrior, I died as Gilgamesh's brother."
+enkidu.ask_civilization: Ask about becoming human
+enkidu.leave: I must continue my journey.
+enkidu.wild_days: "I ran with gazelles, drank with wild beasts at the water-holes. My body was covered with hair, and I knew nothing of cities or men."
+enkidu.gilgamesh: "Gilgamesh? He is my brother. We met in Uruk, tested our strength, and found we were equal. Now we are as one."
+enkidu.civilization: "Shamhat taught me. She showed me bread and wine, clothed my body, and brought me to Gilgamesh. I am now a man."
+
+# Ishtar Dialogues
+ishtar.greet: "I am Ishtar, goddess of love and war, queen of Uruk. None may ignore my presence."
+ishtar.ask_love: Offer yourself to the goddess
+ishtar.ask_war: Ask about her warrior aspect
+ishtar.ask_gilgamesh: Ask about Gilgamesh's refusal
+ishtar.leave: I will not anger a goddess.
+ishtar.love: "You are bold to approach me. But know this: my love brings both joy and sorrow. My lovers do not long endure."
+ishtar.war: "I am also the bringer of battle. When my heart is stirred, none may stand before me. The Bull of Heaven obeyed my command."
+ishtar.gilgamesh: "He dared refuse me! The insolent king! He compared me to a faulty door and a broken shoe. For this, he will know my wrath."
+
+# Shamhat Dialogues
+shamhat.greet: "I am Shamhat, priestess of Ishtar. The gods work through mortal hands."
+shamhat.ask_enkidu: Ask about Enkidu
+shamhat.ask_gilgamesh: Ask about the king
+shamhat.ask_love: Ask about love's power
+shamhat.leave: I must attend to my duties.
+shamhat.enkidu: "Enkidu? I found him at the water-hole, wild and hairy as a beast. For six days and seven nights I loved him, and when I was done, he was a man."
+shamhat.gilgamesh: "Gilgamesh rules Uruk with strength, but his people suffered until Enkidu came to challenge him."
+shamhat.love: "Love is the greatest power of the gods. It can tame the wildest heart and make a man of a beast."
+
+# Humbaba Dialogues
+humbaba.greet: "Who dares enter my forest? I am Humbaba, and none may pass without my leave!"
+humbaba.ask_mercy: Beg for your life
+humbaba.ask_fight: Challenge the guardian
+humbaba.leave: Leave quickly while you can.
+humbaba.mercy: "Mercy? Ha! The gods appointed me to guard this forest. Leave now, and I will not tear you limb from limb!"
+humbaba.fight: "Foolish mortals! My roar is the storm, my breath is fire, and my jaws are death! You will die here!"
+
+# Utnapishtim Dialogues
+utnapishtim.greet: "I am Utnapishtim, survivor of the flood. The gods granted me eternal life. What seek you here?"
+utnapishtim.ask_flood: Ask about the Great Flood
+utnapishtim.ask_immortality: Ask about eternal life
+utnapishtim.ask_test: Ask to prove your worth
+utnapishtim.leave: I will leave you to your wisdom.
+utnapishtim.flood: "The gods sent the flood to destroy all life. But Ea warned me, and I built a great ship. For seven days and nights the waters raged, until all was silent. Then I opened the door, and life returned."
+utnapishtim.immortality: "The gods decreed that death is the fate of all men. Only I, by their gift, live forever. Seek it not, for it cannot be found."
+utnapishtim.test: "If you would have eternal life, first prove you can stay awake seven days and nights. But be warned: none have succeeded."
+
+# Ur-Shanabi Dialogues
+ur_shanabi.greet: "I am Ur-Shanabi, ferryman across the Waters of Death. None may cross without my boat."
+ur_shanabi.ask_cross: Ask to cross the waters
+ur_shanabi.ask_cost: Ask the price of passage
+ur_shanabi.leave: I must find another way.
+ur_shanabi.cross: "The waters are deadly to touch. Only the stone things may cross safely. Cast off your flesh and I will take you."
+ur_shanabi.cost: "The price is your mortal body. Leave it behind, and you may cross to see Utnapishtim."
+
+# Scorpion Man Dialogues
+scorpion_man.greet: "Halt! None may pass through this gate without my leave. I am the Scorpion Man, guardian of the mountain."
+scorpion_man.ask_passage: Ask for passage
+scorpion_man.ask_danger: Ask about the tunnel
+scorpion_man.leave: Turn back from the gate.
+scorpion_man.passage: "You are tall in stature, and your face is like the face of one who seeks life. Enter, if you dare. But the tunnel is dark and long."
+scorpion_man.danger: "The tunnel through Mount Mashu stretches for twelve double-hours. None may pass who does not have the courage of the gods themselves."
+
+# Ninsun Dialogues
+ninsun.greet: "I am Ninsun, mother of Gilgamesh. The wisdom of the gods flows through my veins."
+ninsun.ask_gilgamesh: Ask about her son
+ninsun.ask_dreams: Ask about dreams and omens
+ninsun.ask_blessing: Ask for a blessing
+ninsun.leave: I will leave you in peace, wise mother.
+ninsun.gilgamesh: "My son is a king among men, strong as a wild bull. But his heart is restless, and he seeks that which cannot be found."
+ninsun.dreams: "The gods speak through dreams. Gilgamesh's dreams foretold the coming of Enkidu, his equal and brother."
+ninsun.blessing: "May the gods protect you on your journey. May Shamash guide your steps, and may you return safely to Uruk."
+
+# Anu Dialogues
+anu.greet: "I am Anu, father of the gods, ruler of the heavens. What brings you before me?"
+anu.ask_ishtar: Ask about Ishtar's request
+anu.ask_justice: Ask about justice for the people
+anu.leave: I must not trouble the sky god.
+anu.ishtar: "Ishtar? She is my daughter, proud and passionate. She requested the Bull of Heaven to punish Gilgamesh for his refusal."
+anu.justice: "Justice flows from the heavens. The gods see all, and their judgments are true. But mortal affairs are often beyond our understanding."
+
+# Bull of Heaven Dialogues
+bull_of_heaven.greet: "ROOOOAR! The Bull of Heaven comes! None may stand before the wrath of Ishtar!"
+bull_of_heaven.attack: "You dare challenge the divine beast? You will be trampled beneath my hooves!"
+bull_of_heaven.defeated: "Ghhh... the gods... betray..."
+
+# High Priest of Anu Dialogues
+high_priest_anu.greet: "I am the High Priest of Anu, keeper of the heavenly rites. Welcome to the ziggurat of the sky god."
+high_priest_anu.ask_ziggurat: Ask about the ziggurat
+high_priest_anu.ask_anu: Ask about Anu
+high_priest_anu.ask_rituals: Ask about the rituals
+high_priest_anu.leave: I will leave you to your duties.
+high_priest_anu.ziggurat: "This ziggurat is the stairway to heaven, where we perform rituals to honor Anu, father of the gods. Each level brings us closer to the divine."
+high_priest_anu.anu: "Anu is the sky god, father of all deities. He rules from the highest heavens, his decrees shaping the fate of kings and commoners alike."
+high_priest_anu.rituals: "We offer prayers at dawn and dusk, when the veil between worlds is thinnest. The sacrifices please Anu and bring his blessings upon Uruk."
+
+# High Priestess of Ishtar Dialogues
+high_priestess_ishtar.greet: "I am the High Priestess of Ishtar, voice of the goddess of love and war. Approach with respect."
+high_priestess_ishtar.ask_goddess: Ask about the goddess
+high_priestess_ishtar.ask_temple: Ask about the temple
+high_priestess_ishtar.ask_rituals: Ask about the rituals
+high_priestess_ishtar.leave: I will not disturb you, holy one.
+high_priestess_ishtar.goddess: "Ishtar is both the gentle lover and the fierce warrior. She brings life with one hand and takes it with the other. Her heart is as vast as the heavens."
+high_priestess_ishtar.temple: "This ziggurat is adorned with lapis and carnelian, gifts from those who seek her favor. Here we perform the sacred marriage rites that renew the land."
+high_priestess_ishtar.rituals: "The rituals of Ishtar involve music, dance, and offerings. She demands both passion and strength from her followers."
+
+# Temple Scribe Dialogues
+temple_scribe.greet: "I am a scribe of the temple. The words of the gods are recorded upon clay."
+temple_scribe.ask_work: Ask about your work
+temple_scribe.ask_tablets: Ask about the clay tablets
+temple_scribe.leave: I will not disturb you further.
+temple_scribe.work: "I record all offerings made to the gods, every prayer whispered, every sacrifice burned. The clay remembers all."
+temple_scribe.tablets: "These tablets contain the wisdom of the ages. When baked in the sun, they last forever. I write in cuneiform, the gift of the gods."
+
+# Royal Guard Dialogues
+royal_guard.greet: "I am a guard of the king's palace. None may pass without the king's leave."
+royal_guard.ask_duties: Ask about your duties
+royal_guard.ask_armor: Ask about your armor
+royal_guard.leave: I will go on my way.
+royal_guard.duties: "I stand watch at the palace gates, protecting our king Gilgamesh. The walls of Uruk have never been breached under my watch."
+royal_guard.armor: "This bronze armor was forged by the finest smiths of Uruk. The plumed helmet marks me as one of the elite guard. It has turned aside many arrows and blades."
+
+# Uruk Noble Dialogues
+uruk_noble.greet: "Greetings, traveler. I am a noble of great Uruk."
+uruk_noble.ask_wealth: Ask about your wealth
+uruk_noble.ask_temples: Ask about temple construction
+uruk_noble.leave: I will leave you to your business.
+uruk_noble.wealth: "My wealth comes from wise investments and the blessings of the gods. I trade in lapis lazuli, cedar wood, and fine textiles from distant lands."
+uruk_noble.temples: "The temples of Uruk are the pride of our city. I have contributed generously to the ziggurats of Anu and Ishtar. A strong temple means strong divine favor."
+
+# Uruk Merchant Dialogues
+uruk_merchant.greet: "Welcome to my stall, friend. I have wares from across Mesopotamia."
+uruk_merchant.ask_goods: Ask about your goods
+uruk_merchant.ask_trade: Ask about trading
+uruk_merchant.leave: I will browse elsewhere.
+uruk_merchant.goods: "I have fine linens from Ur, lapis lazuli from Magan, cedar wood from the forest, and spices from Meluhha. All the finest goods of the known world."
+uruk_merchant.trade: "Trade is the lifeblood of Uruk. I accept grain, wool, metal, and any fine craftsmanship. The balance must always be fair, for the gods watch over honest dealings."
+
+# Potter Dialogues
+potter.greet: "Come, see my finest ceramics. Each piece is crafted with care."
+potter.ask_craft: Ask about your craft
+potter.ask_ziggurat: Ask about ziggurat tiles
+potter.leave: I will look at your wares another time.
+potter.craft: "I shape the clay from the riverbanks into vessels for the gods. Each pot, each bowl, each tablet bears the mark of my hands and the blessings of the craft."
+potter.ziggurat_tiles: "The glaze on these tiles shines like the sun itself. They are made for the ziggurats, to adorn the houses of the gods. The blue ones are for Anu, the red for Ishtar."
+
+# Weaver Dialogues
+weaver.greet: "Good day. My looms produce the finest cloth in Uruk."
+weaver.ask_fabrics: Ask about your fabrics
+weaver.ask_priestly_robes: Ask about priestly robes
+weaver.leave: I will see your work later.
+weaver.fabrics: "I weave linen so fine it is like moonlight on water. The dye comes from plants and shells, creating colors that please the gods."
+weaver.priestly_robes: "The robes for the priests must be perfect. White for Anu, red for Ishtar, gold for the king. Each stitch must honor the wearer's station."
+
+# Quests
+quest.gilgamesh_tyranny: Gilgamesh's Tyranny
+quest.gilgamesh_tyranny.observe: Observe the city of Uruk and its people
+quest.gilgamesh_tyranny.meet_citizens: Speak with the citizens of Uruk
+quest.gilgamesh_tyranny.learn_oppression: Learn of Gilgamesh's oppression of his people
+
+quest.enkidu_creation: The Creation of Enkidu
+quest.enkidu_creation.hear_lament: Hear the lament of Uruk's people
+quest.enkidu_creation.gods_create: Learn how the gods created Enkidu
+quest.enkidu_creation.enkidu_wild: Find Enkidu living wild in the hills
+
+quest.enkidu_civilized: The Civilizing of Enkidu
+quest.enkidu_civilized.meet_trapper: Meet the trapper who discovered Enkidu
+quest.enkidu_civilized.shamhat_sent: Learn how Shamhat was sent to civilize Enkidu
+quest.enkidu_civilized.six_days_nights: Learn of the six days and seven nights with Shamhat
+quest.enkidu_civilized.enkidu_human: See Enkidu become a man
+
+quest.gilgamesh_enkidu_meet: Gilgamesh and Enkidu Meet
+quest.gilgamesh_enkidu_meet.hear_of_gilgamesh: Hear Enkidu speak of challenging Gilgamesh
+quest.gilgamesh_enkidu_meet.travel_to_uruk: Travel to Uruk with Enkidu
+quest.gilgamesh_enkidu_meet.challenge_gilgamesh: Witness the contest between Gilgamesh and Enkidu
+quest.gilgamesh_enkidu_meet.become_friends: See Gilgamesh and Enkidu become friends
+
+quest.journey_to_cedar_forest: Journey to the Cedar Forest
+quest.journey_to_cedar_forest.decide_to_go: Learn why Gilgamesh and Enkidu decided to journey to the Cedar Forest
+quest.journey_to_cedar_forest.prepare_journey: Prepare for the journey to the Cedar Forest
+quest.journey_to_cedar_forest.travel_to_forest: Travel through the wilderness to the Cedar Forest
+quest.journey_to_cedar_forest.arrive_at_forest: Arrive at the Cedar Forest
+
+quest.defeat_humbaba: Defeat Humbaba
+quest.defeat_humbaba.enter_forest: Enter the Cedar Forest
+quest.defeat_humbaba.find_humbaba: Find Humbaba in his lair
+quest.defeat_humbaba.battle_humbaba: Battle Humbaba
+quest.defeat_humbaba.humbaba_defeated: Defeat Humbaba and claim victory
+
+quest.ishtar_proposition: Ishtar's Proposition
+quest.ishtar_proposition.bath_after_battle: Gilgamesh bathes after defeating Humbaba
+quest.ishtar_proposition.ishtar_approaches: Ishtar approaches Gilgamesh
+quest.ishtar_proposition.reject_ishtar: Gilgamesh rejects Ishtar's offer
+quest.ishtar_proposition.ishtar_angry: Ishtar grows angry at the rejection
+
+quest.bull_of_heaven: The Bull of Heaven
+quest.bull_of_heaven.bull_sent: Ishtar sends the Bull of Heaven
+quest.bull_of_heaven.bull_attacks: The Bull of Heaven attacks Uruk
+quest.bull_of_heaven.defeat_bull: Gilgamesh and Enkidu defeat the Bull
+quest.bull_of_heaven.ishtar_curses: Ishtar curses Gilgamesh and Enkidu
+
+quest.enkidu_death: The Death of Enkidu
+quest.enkidu_death.enkidu_sickens: Enkidu sickens with a divine punishment
+quest.enkidu_death.enkidu_dream: Enkidu has a dream of the underworld
+quest.enkidu_death.enkidu_dies: Enkidu dies
+quest.enkidu_death.gilgamesh_mourns: Gilgamesh mourns for his friend
+
+quest.journey_to_utnapishtim: Journey to Utnapishtim
+quest.journey_to_utnapishtim.decide_to_leave: Gilgamesh decides to seek eternal life
+quest.journey_to_utnapishtim.travel_to_mountain: Travel to Mount Mashu
+quest.journey_to_utnapishtim.meet_scorpion_man: Meet the Scorpion Man
+quest.journey_to_utnapishtim.pass_through_tunnel: Pass through the Tunnel of the Sun
+quest.journey_to_utnapishtim.cross_waters_of_death: Cross the Waters of Death
+quest.journey_to_utnapishtim.meet_utnapishtim: Meet Utnapishtim
+
+quest.search_for_immortality: The Search for Immortality
+quest.search_for_immortality.ask_about_immortality: Gilgamesh asks Utnapishtim about eternal life
+quest.search_for_immortality.utnapishtim_test: Utnapishtim sets Gilgamesh a test
+quest.search_for_immortality.fail_test: Gilgamesh fails the test
+quest.search_for_immortality.learn_truth: Gilgamesh learns the truth about mortality
+
+quest.return_to_uruk: Return to Uruk
+quest.return_to_uruk.accept_mortality: Gilgamesh accepts his mortality
+quest.return_to_uruk.return_journey: Gilgamesh returns to Uruk
+quest.return_to_uruk.view_uruk: Gilgamesh views the glory of Uruk
+
+# Lore entries
+lore.uruk.title: Uruk
+lore.uruk: >
+  The great city of Uruk, ruled by Gilgamesh. Its massive walls were built by the king himself,
+  with the temple of Eanna for Anu and the temple of Ishtar as its crown jewels. The city
+  that Gilgamesh built stands as a testament to his power and vision.
+
+lore.gilgamesh.title: Gilgamesh
+lore.gilgamesh: >
+  Gilgamesh, king of Uruk, two-thirds god and one-third man. Created by the gods with perfect
+  beauty and strength. He built the walls of Uruk and sought eternal life after the death of his
+  beloved friend Enkidu. The world's first epic hero.
+
+lore.enkidu.title: Enkidu
+lore.enkidu: >
+  Enkidu, the wild man created from clay by the goddess Aruru. He lived among beasts until
+  civilized by the temple priestess Shamhat. He became Gilgamesh's equal and loyal companion,
+  and together they faced the greatest challenges of the age.
+
+lore.humbaba.title: Humbaba
+lore.humbaba: >
+  Humbaba, the guardian of the Cedar Forest. Appointed by Enlil to protect the sacred trees,
+  he was a monstrous figure with sevenfold terrors. His roar was like the storm, his breath
+  like fire, and his jaws were death itself. Defeated by Gilgamesh and Enkidu.
+
+lore.ishtar.title: Ishtar
+lore.ishtar: >
+  Ishtar, goddess of love and war, patron of Uruk. Proud and passionate, she offers both
+  ecstasy and destruction. When Gilgamesh refused her advances, she sent the Bull of Heaven
+  to punish him, leading to tragic consequences.
+
+lore.bull_of_heaven.title: Bull of Heaven
+lore.bull_of_heaven: >
+  The divine bull sent by Ishtar to punish Gilgamesh for rejecting her. A monstrous beast
+  that brought destruction to Uruk. It was defeated by Gilgamesh and Enkidu, but its death
+  brought the wrath of the gods upon them.
+
+lore.great_flood.title: The Great Flood
+lore.great_flood: >
+  The great flood sent by the gods to destroy all life. Utnapishtim, warned by Ea, built
+  a great ship and survived with his family and the animals. For this, the gods granted
+  him eternal life. His story is told to Gilgamesh in the epic.
+
+lore.utnapishtim.title: Utnapishtim
+lore.utnapishtim: >
+  Utnapishtim, the only survivor of the Great Flood. He and his wife were granted eternal
+  life by the gods and now live across the Waters of Death. He teaches Gilgamesh the
+  hard truth: that death is the fate of all men.
+
+lore.mount_mashu.title: Mount Mashu
+lore.mount_mashu: >
+  Mount Mashu, the great mountain through which the sun passes each night. The Scorpion
+  Man guards its gate, and through the tunnel one may reach the garden of the gods.
+
+lore.cedar_forest.title: The Cedar Forest
+lore.cedar_forest: >
+  The Cedar Forest, a vast and ancient woodland stretching for ten thousand leagues in
+  every direction. Home of Humbaba, the guardian appointed by Enlil. The trees
+  are sacred, and none may cut them without facing the guardian's wrath.
+
+# Mesopotamian Architecture Lore
+lore.ziggurat_uruk.title: Ziggurat of Uruk
+lore.ziggurat_uruk: >
+  The Great Ziggurat of Uruk, a massive stepped temple tower dedicated to the chief god.
+  Built with mud bricks, its multiple levels represent the connection between heaven and earth.
+  The highest point offers a view of the entire city and surrounding lands.
+
+lore.ziggurat_anu.title: Ziggurat of Anu
+lore.ziggurat_anu: >
+  The Ziggurat of Anu, sky god and father of Ishtar. This sacred structure rises
+  towards the heavens, symbolizing Anu's domain. Priests perform rituals here to
+  communicate with the gods and observe the movements of celestial bodies.
+
+lore.ziggurat_ishtar.title: Ziggurat of Ishtar
+lore.ziggurat_ishtar: >
+  The Ziggurat of Ishtar, dedicated to the goddess of love and war. Unlike other
+  ziggurats, this one is adorned with lapis lazuli and carnelian, gifts from lovers
+  and warriors seeking the goddess's favor. The temple at its summit is where Ishtar
+  receives offerings and makes her judgments.
+
+lore.white_temple.title: White Temple
+lore.white_temple: >
+  The White Temple of Uruk, its whitewashed walls gleaming in the sun. Built upon
+  the ziggurat platform, this temple was one of the most sacred sites in ancient
+  Mesopotamia. Its white color symbolizes purity and the divine light of the gods.
+
+lore.great_wall_uruk.title: Great Wall of Uruk
+lore.great_wall_uruk: >
+  The mighty walls of Uruk, built by Gilgamesh himself. Two outer walls with
+  inner walls between them, creating a nearly impregnable fortress. The walls
+  feature towers, gatehouses, and massive gates that can withstand any assault.
+
+lore.hanging_gardens.title: Hanging Gardens of Uruk
+lore.hanging_gardens: >
+  The legendary Hanging Gardens, said to have been built by Gilgamesh for his wife.
+  Terraced gardens rising like a green mountain, with exotic plants and trees
+  brought from distant lands. An engineering marvel of the ancient world.
+
+# Items
+item.cedar_wood: Cedar Wood
+item.cedar_wood.desc: Sacred wood from the Cedar Forest, guarded by Humbaba.
+
+# New Epic Quests
+quest.tyranny.title: The Tyranny of Gilgamesh
+quest.tyranny.hear_complaints: Hear the complaints of Uruk's citizens
+quest.tyranny.learn_oppression: Learn of Gilgamesh's oppression
+quest.tyranny.gods_create_enkidu: The gods create Enkidu to challenge Gilgamesh
+
+quest.enkidu_awakening.title: Enkidu's Awakening
+quest.enkidu_awakening.meet_trapper: Meet the trapper who discovered Enkidu
+quest.enkidu_awakening.shamhat_arrives: Shamhat arrives to civilize the wild man
+quest.enkidu_awakening.six_days_and_nights: Six days and seven nights with Shamhat
+quest.enkidu_awakening.enkidu_civilized: Enkidu becomes civilized
+
+quest.meeting_equals.title: The Meeting of Equals
+quest.meeting_equals.enkidu_hears: Enkidu hears of Gilgamesh's tyranny
+quest.meeting_equals.travel_to_uruk: Travel to Uruk to challenge Gilgamesh
+quest.meeting_equals.challenge: Enkidu challenges Gilgamesh at the wedding
+quest.meeting_equals.become_brothers: Gilgamesh and Enkidu become brothers
+
+quest.cedar_forest.title: The Cedar Forest Journey
+quest.cedar_forest.decide: Gilgamesh and Enkidu decide to journey to the Cedar Forest
+quest.cedar_forest.prepare: Prepare weapons and supplies for the journey
+quest.cedar_forest.travel: Travel through the wilderness to the Cedar Forest
+quest.cedar_forest.enter: Enter the sacred Cedar Forest
+quest.cedar_forest.find_humbaba: Find Humbaba in his lair
+quest.cedar_forest.face_guardian: Face the guardian of the forest
+quest.cedar_forest.defeat_humbaba: Defeat Humbaba and claim the cedar
+
+quest.ishtars_wrath.title: Ishtar's Wrath
+quest.ishtars_wrath.bath: Gilgamesh bathes after defeating Humbaba
+quest.ishtars_wrath.approaches: Ishtar approaches Gilgamesh with a proposition
+quest.ishtars_wrath.reject: Gilgamesh rejects Ishtar's advances
+quest.ishtars_wrath.bull_sent: Ishtar sends the Bull of Heaven to punish Gilgamesh
+quest.ishtars_wrath.defeat_bull: Defeat the Bull of Heaven
+
+quest.enkidu_death.title: The Death of Enkidu
+quest.enkidu_death.punishment: The gods punish Enkidu for slaying Humbaba
+quest.enkidu_death.sickens: Enkidu sickens with a divine illness
+quest.enkidu_death.dream: Enkidu dreams of the underworld
+quest.enkidu_death.dies: Enkidu dies after twelve days of suffering
+quest.enkidu_death.mourns: Gilgamesh mourns for his beloved friend
+
+quest.immortality.title: The Search for Immortality
+quest.immortality.decide: Gilgamesh decides to seek eternal life
+quest.immortality.journey_mountain: Journey to Mount Mashu
+quest.immortality.meet_scorpion: Meet the Scorpion Man at the gate
+quest.immortality.pass_tunnel: Pass through the Tunnel of the Sun
+quest.immortality.cross_waters: Cross the Waters of Death
+quest.immortality.meet_ferryman: Meet Ur-Shanabi, the ferryman
+quest.immortality.reach_utnapishtim: Reach Utnapishtim's dwelling
+quest.immortality.learn_truth: Learn the truth about mortality
+
+quest.return_uruk.title: The Return to Uruk
+quest.return_uruk.accept: Accept the inevitability of mortality
+quest.return_uruk.begin_journey: Begin the journey back to Uruk
+quest.return_uruk.cross_back: Cross back over the Waters of Death
+quest.return_uruk.exit_tunnel: Exit the Tunnel of the Sun
+quest.return_uruk.descend: Descend from Mount Mashu
+quest.return_uruk.view_uruk: View the mighty walls of Uruk
+quest.return_uruk.final_reflection: Reflect on the journey and the meaning of life
+
+# Ninsun Dialogues
+ninsun.greet: "I am Ninsun, mother of Gilgamesh and wise goddess of Uruk. What seeks my son's friend?"
+ninsun.ask_son: Ask about Gilgamesh
+ninsun.ask_dream: Ask about the interpretation of dreams
+ninsun.ask_enkidu: Ask about Enkidu
+ninsun.ask_wisdom: Seek wisdom
+ninsun.leave: I must go, wise mother.
+ninsun.son: "My son Gilgamesh is strong and proud. Two-thirds god and one-third man, he was born to be a great king. But even kings need guidance from their mothers."
+ninsun.protection: "I will ask the gods to protect you on your journey. May Shamash, the sun god, watch over you as you travel through dangerous lands."
+ninsun.dream: "Dreams are the voice of the gods speaking to mortals. Bring me your dream, and I will reveal its meaning."
+ninsun.enkidu_dream: "Ah, you dream of Enkidu? He is truly the equal of my son, the one who can temper Gilgamesh's proud heart."
+ninsun.about_enkidu: "Enkidu is the one the gods created to match my son. Together, they have done great deeds and will do more."
+ninsun.wisdom: "Wisdom comes from understanding both the strength of the gods and the fragility of men. Remember this on your travels."
+
+# Ninsun choice keys
+ninsun.ask_protection: Ask for divine protection
+ninsun.ask_enkidu_dream: Ask about Enkidu's dream
+
+# Bull of Heaven Dialogues
+bull_of_heaven.roar: "ROOOOAR! The Bull of Heaven has come to punish the arrogant!"
+bull_of_heaven.flee: Flee from the beast
+bull_of_heaven.fight: Stand and fight
+bull_of_heaven.flee_text: You turn and run from the divine beast's wrath.
+bull_of_heaven.fight_text: You stand your ground against the Bull of Heaven!
+
+# Anu Dialogues
+anu.greet: "I am Anu, lord of the heavens, father of the great gods. What brings you before my divine presence?"
+anu.ask_heavens: Ask about the heavens
+anu.ask_judgment: Ask about divine judgment
+anu.ask_ishtar: Ask about Ishtar
+anu.leave: I must go, great lord.
+anu.heavens: "The heavens are vast and eternal, where the stars trace the fates of men. From my throne above, I see all that was, is, and shall be."
+anu.judgment: "My judgment is final, for I am the father of the gods. The balance of justice is maintained by my will alone."
+anu.ishtar: "Ishtar... my daughter. Proud and tempestuous, she is both the bringer of love and the wage of war. A fitting heir to my domain."
+
+# Enhanced Search for Immortality Quest
+quest.immortality.prepare: Prepare for the long and perilous journey to find the secret of eternal life
+quest.immortality.scorpion_test: The Scorpion Man tests your worthiness to pass through Mount Mashu
+quest.immortality.tunnel_test: Navigate the darkness of the Tunnel of the Sun without fear
+quest.immortality.ferryman_test: Ur-Shanabi the ferryman challenges your resolve before crossing the Waters of Death
+quest.immortality.learn_of_plant: Utnapishtim reveals the location of the plant that restores youth
+quest.immortality.obtain_plant: Retrieve the plant from the bottom of the Waters of Death
+quest.immortality.return_with_plant: Return to Uruk with the precious plant of eternal youth
+quest.immortality.lose_plant: A serpent steals the plant while you bathe, losing your chance at immortality

@@ -1,0 +1,118 @@
+# Uruk and surrounding locations from the Epic of Gilgamesh
+
+- id: uruk
+  kind: city
+  name_key: place.uruk
+  radius_m: 200
+  scenery: {preset: town, size: town}
+  spawn: false
+  requires:
+    biome: [grassland]
+    height_m: {min: 0, max: 200}
+    max_slope_deg: 5
+
+- id: uruk_wall
+  kind: landmark
+  name_key: place.uruk_wall
+  parent: uruk
+  radius_m: 50
+  requires:
+    biome: [grassland]
+    max_slope_deg: 5
+
+- id: eanna_temple
+  kind: building
+  name_key: place.eanna_temple
+  parent: uruk
+  radius_m: 40
+  requires:
+    max_slope_deg: 5
+
+- id: ishtar_temple
+  kind: building
+  name_key: place.ishtar_temple
+  parent: uruk
+  radius_m: 35
+  requires:
+    max_slope_deg: 5
+
+- id: uruk_market
+  kind: landmark
+  name_key: place.uruk_market
+  parent: uruk
+  radius_m: 30
+  requires:
+    max_slope_deg: 5
+
+- id: uruk_palace
+  kind: building
+  name_key: place.uruk_palace
+  parent: uruk
+  radius_m: 45
+  requires:
+    max_slope_deg: 5
+
+- id: cedar_forest
+  kind: landmark
+  name_key: place.cedar_forest
+  radius_m: 150
+  scenery: {preset: town}
+  requires:
+    height_m: {min: 50, max: 500}
+    max_slope_deg: 20
+    near:
+      - {place: uruk, min_m: 1000, max_m: 5000}
+
+- id: humbaba_lair
+  kind: building
+  name_key: place.humbaba_lair
+  parent: cedar_forest
+  radius_m: 30
+  requires:
+    max_slope_deg: 25
+
+- id: mount_mashu
+  kind: landmark
+  name_key: place.mount_mashu
+  radius_m: 60
+  scenery: {preset: town}
+  requires:
+    height_m: {min: 0, max: 3000}
+    max_slope_deg: 30
+    near:
+      - {place: cedar_forest, min_m: 200, max_m: 1000}
+
+- id: scorpion_gate
+  kind: landmark
+  name_key: place.scorpion_gate
+  parent: mount_mashu
+  radius_m: 20
+  requires:
+    max_slope_deg: 25
+
+- id: tunnel_of_sun
+  kind: building
+  name_key: place.tunnel_of_sun
+  parent: mount_mashu
+  radius_m: 40
+  requires:
+    max_slope_deg: 15
+
+- id: waters_of_death
+  kind: landmark
+  name_key: place.waters_of_death
+  radius_m: 80
+  requires:
+    biome: [grassland]
+    near:
+      - {place: mount_mashu, min_m: 200, max_m: 1000}
+
+- id: utnapishtim_dwelling
+  kind: building
+  name_key: place.utnapishtim_dwelling
+  radius_m: 35
+  requires:
+    biome: [grassland]
+    max_slope_deg: 5
+    near:
+      - {place: waters_of_death, min_m: 100, max_m: 500}

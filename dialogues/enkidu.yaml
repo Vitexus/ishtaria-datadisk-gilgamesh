@@ -1,0 +1,72 @@
+# Enkidu Dialogue Tree
+# Wild man, companion of Gilgamesh
+
+id: enkidu
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: enkidu.greet
+    choices:
+      - {text_key: enkidu.ask_wild_days, goto: tell_wild_days}
+      - {text_key: enkidu.ask_gilgamesh, goto: tell_gilgamesh}
+      - {text_key: enkidu.ask_civilization, goto: tell_civilization}
+      - {text_key: enkidu.ask_shamhat, goto: tell_shamhat}
+      - {text_key: enkidu.ask_humbaba, goto: tell_humbaba}
+      - {text_key: enkidu.ask_death, goto: tell_death}
+      - {text_key: enkidu.leave}
+
+  tell_wild_days:
+    text_key: enkidu.wild_days
+    effects:
+      - {set_flag: heard_wild_tale}
+    choices:
+      - {text_key: enkidu.ask_animals, goto: tell_animals}
+      - {text_key: enkidu.leave}
+
+  tell_animals:
+    text_key: enkidu.animals
+    choices:
+      - {text_key: enkidu.leave}
+
+  tell_gilgamesh:
+    text_key: enkidu.gilgamesh
+    choices:
+      - {text_key: enkidu.ask_equality, goto: tell_equality}
+      - {text_key: enkidu.leave}
+
+  tell_equality:
+    text_key: enkidu.equality
+    effects:
+      - {set_flag: knows_equality}
+    choices:
+      - {text_key: enkidu.leave}
+
+  tell_civilization:
+    text_key: enkidu.civilization
+    choices:
+      - {text_key: enkidu.ask_changes, goto: tell_changes}
+      - {text_key: enkidu.leave}
+
+  tell_changes:
+    text_key: enkidu.changes
+    choices:
+      - {text_key: enkidu.leave}
+
+  tell_shamhat:
+    text_key: enkidu.shamhat
+    effects:
+      - {set_flag: heard_shamhat_story}
+    choices:
+      - {text_key: enkidu.leave}
+
+  tell_humbaba:
+    text_key: enkidu.humbaba
+    choices:
+      - {text_key: enkidu.leave}
+
+  tell_death:
+    text_key: enkidu.death
+    choices:
+      - {text_key: enkidu.leave}

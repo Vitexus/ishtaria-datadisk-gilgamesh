@@ -1,0 +1,24 @@
+# Royal Guard Dialogue Tree
+# Wears bronze armor and plumed helmet
+
+id: royal_guard
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: royal_guard.greet
+    choices:
+      - {text_key: royal_guard.ask_duties, goto: explain_duties}
+      - {text_key: royal_guard.ask_armor, goto: explain_armor}
+      - {text_key: royal_guard.leave}
+
+  explain_duties:
+    text_key: royal_guard.duties
+    choices:
+      - {text_key: royal_guard.leave}
+
+  explain_armor:
+    text_key: royal_guard.armor
+    choices:
+      - {text_key: royal_guard.leave}

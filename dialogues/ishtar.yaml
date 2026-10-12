@@ -1,0 +1,30 @@
+# Ishtar Dialogue Tree
+# Goddess of love and war
+
+id: ishtar
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: ishtar.greet
+    choices:
+      - {text_key: ishtar.ask_love, goto: speak_love}
+      - {text_key: ishtar.ask_war, goto: speak_war}
+      - {text_key: ishtar.ask_gilgamesh, goto: speak_gilgamesh}
+      - {text_key: ishtar.leave}
+
+  speak_love:
+    text_key: ishtar.love
+    choices:
+      - {text_key: ishtar.leave}
+
+  speak_war:
+    text_key: ishtar.war
+    choices:
+      - {text_key: ishtar.leave}
+
+  speak_gilgamesh:
+    text_key: ishtar.gilgamesh
+    choices:
+      - {text_key: ishtar.leave}

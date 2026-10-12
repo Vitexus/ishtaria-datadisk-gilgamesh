@@ -1,0 +1,32 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ishtaria-datadisk-gilgamesh
+Upstream-Contact: Ishtaria Team <ishtaria@vitexsoftware.com>
+
+Files: *
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+ This datadisk is licensed under Creative Commons Attribution-ShareAlike 4.0
+ International License. See /usr/share/common-licenses/CC-BY-SA-4.0 for full text.
+
+Files: i18n/en.yaml i18n/cs.yaml dialogues/*.yaml quests/*.yaml lore/*.yaml places/*.yaml
+Copyright: Based on the Epic of Gilgamesh, public domain translation by N. K. Sanders
+ (Assyrian International News Agency, www.aina.org)
+License: Public-Domain
+ The text of the Epic of Gilgamesh is in the public domain.
+
+Files: media/models/*.glb media/portraits/*.jpg models-src/*
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+Comment: Character models are built by models-src/build_models.py (Blender); their fabric and fur textures and
+ the backdrops were generated with InvokeAI (RealVisXL_V4.0). The portraits are renders of the models
+ (tools/render_portraits.py). Design after research/CHARACTER_DESIGN.md.
+
+License: CC-BY-SA-4.0
+ This package is free software: you can redistribute it and/or modify it under
+ the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.
+ .
+ On Debian systems, the complete text of the Creative Commons Attribution-ShareAlike
+ 4.0 International License can be found in /usr/share/common-licenses/CC-BY-SA-4.0.
+
+The Epic of Gilgamesh source text is available at:
+https://archive.org/stream/TheEpicofGilgamesh_201606/eog_djvu.txt

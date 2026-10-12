@@ -1,0 +1,19 @@
+# Bull of Heaven Dialogue Tree
+# Divine beast sent by Ishtar
+
+id: bull_of_heaven
+status: reviewed
+start: roar
+
+nodes:
+  roar:
+    text_key: bull_of_heaven.roar
+    choices:
+      - {text_key: bull_of_heaven.flee, goto: flee}
+      - {text_key: bull_of_heaven.fight, goto: fight}
+
+  flee:
+    text_key: bull_of_heaven.flee_text
+
+  fight:
+    text_key: bull_of_heaven.fight_text

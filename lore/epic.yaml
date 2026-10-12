@@ -1,0 +1,82 @@
+# Epic of Gilgamesh - Lore Entries
+
+- id: uruk
+  title_key: lore.uruk.title
+  text_key: lore.uruk
+  category: place
+
+- id: gilgamesh
+  title_key: lore.gilgamesh.title
+  text_key: lore.gilgamesh
+  category: history
+
+- id: enkidu
+  title_key: lore.enkidu.title
+  text_key: lore.enkidu
+  category: history
+
+- id: humbaba
+  title_key: lore.humbaba.title
+  text_key: lore.humbaba
+  category: history
+
+- id: ishtar
+  title_key: lore.ishtar.title
+  text_key: lore.ishtar
+  category: god
+
+- id: bull_of_heaven
+  title_key: lore.bull_of_heaven.title
+  text_key: lore.bull_of_heaven
+  category: history
+
+- id: great_flood
+  title_key: lore.great_flood.title
+  text_key: lore.great_flood
+  category: history
+
+- id: utnapishtim
+  title_key: lore.utnapishtim.title
+  text_key: lore.utnapishtim
+  category: history
+
+- id: mount_mashu
+  title_key: lore.mount_mashu.title
+  text_key: lore.mount_mashu
+  category: place
+
+- id: cedar_forest
+  title_key: lore.cedar_forest.title
+  text_key: lore.cedar_forest
+  category: place
+
+# Mesopotamian Architecture
+- id: ziggurat_uruk
+  title_key: lore.ziggurat_uruk.title
+  text_key: lore.ziggurat_uruk
+  category: place
+
+- id: ziggurat_anu
+  title_key: lore.ziggurat_anu.title
+  text_key: lore.ziggurat_anu
+  category: place
+
+- id: ziggurat_ishtar
+  title_key: lore.ziggurat_ishtar.title
+  text_key: lore.ziggurat_ishtar
+  category: place
+
+- id: white_temple
+  title_key: lore.white_temple.title
+  text_key: lore.white_temple
+  category: place
+
+- id: great_wall_uruk
+  title_key: lore.great_wall_uruk.title
+  text_key: lore.great_wall_uruk
+  category: place
+
+- id: hanging_gardens
+  title_key: lore.hanging_gardens.title
+  text_key: lore.hanging_gardens
+  category: place

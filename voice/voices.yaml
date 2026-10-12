@@ -1,0 +1,73 @@
+# Voice configuration for Gilgamesh datadisk
+# Specifies Piper models and voice settings for each NPC
+
+models:
+  en: en_US-libritts_r-medium
+  cs: cs_CZ-jirka-medium
+
+default:
+  pitch: 0
+
+npcs:
+  # Gilgamesh - Regal, authoritative
+  gilgamesh:
+    pitch: -0.5
+    tempo: 0.95
+  
+  # Enkidu - Wild, rough
+  enkidu:
+    pitch: -0.8
+    tempo: 0.9
+    noise_scale: 0.1
+  
+  # Ishtar - Proud, commanding
+  ishtar:
+    pitch: 0.5
+    tempo: 1.05
+  
+  # Shamhat - Wise, gentle
+  shamhat:
+    pitch: 0.2
+    tempo: 0.95
+  
+  # Humbaba - Deep, monstrous
+  humbaba:
+    pitch: -1.2
+    tempo: 0.85
+    noise_scale: 0.15
+  
+  # Utnapishtim - Ancient, wise
+  utnapishtim:
+    pitch: -0.7
+    tempo: 0.85
+  
+  # Ur-Shanabi - Ferryman, mystical
+  ur_shanabi:
+    pitch: -0.2
+    tempo: 0.9
+  
+  # Scorpion Man - Terrible
+  scorpion_man:
+    pitch: -1.0
+    tempo: 0.8
+
+  # Ninsun - Motherly, wise
+  ninsun:
+    pitch: -0.3
+    tempo: 0.9
+
+  # Anu - Authoritative, godly
+  anu:
+    pitch: -0.6
+    tempo: 0.85
+
+  # Bull of Heaven - Fierce, beastly
+  bull_of_heaven:
+    pitch: -1.5
+    tempo: 0.75
+    noise_scale: 0.2
+
+  # Enkidu Civilized - Noble, refined
+  enkidu_civilized:
+    pitch: -0.5
+    tempo: 0.95

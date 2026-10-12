@@ -1,0 +1,30 @@
+# High Priestess of Ishtar Dialogue Tree
+# Wears ceremonial robes of the love and war goddess
+
+id: high_priestess_ishtar
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: high_priestess_ishtar.greet
+    choices:
+      - {text_key: high_priestess_ishtar.ask_goddess, goto: explain_goddess}
+      - {text_key: high_priestess_ishtar.ask_temple, goto: explain_temple}
+      - {text_key: high_priestess_ishtar.ask_rituals, goto: explain_rituals}
+      - {text_key: high_priestess_ishtar.leave}
+
+  explain_goddess:
+    text_key: high_priestess_ishtar.goddess
+    choices:
+      - {text_key: high_priestess_ishtar.leave}
+
+  explain_temple:
+    text_key: high_priestess_ishtar.temple
+    choices:
+      - {text_key: high_priestess_ishtar.leave}
+
+  explain_rituals:
+    text_key: high_priestess_ishtar.rituals
+    choices:
+      - {text_key: high_priestess_ishtar.leave}

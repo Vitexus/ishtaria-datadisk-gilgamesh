@@ -1,0 +1,20 @@
+id: ishtars_wrath
+title_key: quest.ishtars_wrath.title
+start_stage: bath_after_victory
+start_place: uruk
+stages:
+  bath_after_victory:
+    text_key: quest.ishtars_wrath.bath
+    final: false
+  ishtar_approaches:
+    text_key: quest.ishtars_wrath.approaches
+    final: false
+  reject_goddess:
+    text_key: quest.ishtars_wrath.reject
+    final: false
+  bull_sent:
+    text_key: quest.ishtars_wrath.bull_sent
+    final: false
+  defeat_bull:
+    text_key: quest.ishtars_wrath.defeat_bull
+    final: true

@@ -1,0 +1,25 @@
+# Ur-Shanabi Dialogue Tree
+# Ferryman across the Waters of Death
+
+id: ur_shanabi
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: ur_shanabi.greet
+    choices:
+      - {text_key: ur_shanabi.ask_cross, goto: explain_crossing}
+      - {text_key: ur_shanabi.ask_cost, goto: explain_cost}
+      - {text_key: ur_shanabi.leave}
+
+  explain_crossing:
+    text_key: ur_shanabi.cross
+    choices:
+      - {text_key: ur_shanabi.ask_cost, goto: explain_cost}
+      - {text_key: ur_shanabi.leave}
+
+  explain_cost:
+    text_key: ur_shanabi.cost
+    choices:
+      - {text_key: ur_shanabi.leave}

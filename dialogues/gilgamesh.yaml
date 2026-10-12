@@ -1,0 +1,73 @@
+# Gilgamesh Dialogue Tree
+# King of Uruk, two-thirds god, one-third man
+
+id: gilgamesh
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: gilgamesh.greet
+    choices:
+      - {text_key: gilgamesh.ask_advice, goto: give_advice}
+      - {text_key: gilgamesh.ask_friendship, goto: speak_friendship}
+      - {text_key: gilgamesh.ask_quest, goto: speak_quest}
+      - {text_key: gilgamesh.ask_city, goto: speak_of_uruk}
+      - {text_key: gilgamesh.ask_mortality, goto: speak_of_mortality}
+      - {text_key: gilgamesh.leave}
+
+  give_advice:
+    text_key: gilgamesh.advice
+    effects:
+      - {set_flag: met_gilgamesh}
+    choices:
+      - {text_key: gilgamesh.ask_walls, goto: speak_of_walls}
+      - {text_key: gilgamesh.leave}
+
+  speak_of_walls:
+    text_key: gilgamesh.walls
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  speak_friendship:
+    text_key: gilgamesh.friendship
+    effects:
+      - {set_flag: heard_enkidu_story}
+    choices:
+      - {text_key: gilgamesh.ask_enkidu_fate, goto: speak_enkidu_fate}
+      - {text_key: gilgamesh.leave}
+
+  speak_enkidu_fate:
+    text_key: gilgamesh.enkidu_fate
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  speak_quest:
+    text_key: gilgamesh.quest
+    choices:
+      - {text_key: gilgamesh.ask_cedar_forest, goto: speak_cedar_forest}
+      - {text_key: gilgamesh.ask_immortality, goto: speak_of_mortality}
+      - {text_key: gilgamesh.leave}
+
+  speak_cedar_forest:
+    text_key: gilgamesh.cedar_forest
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  speak_of_uruk:
+    text_key: gilgamesh.about_uruk
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  speak_of_mortality:
+    text_key: gilgamesh.mortality
+    choices:
+      - {text_key: gilgamesh.ask_lesson, goto: give_lesson}
+      - {text_key: gilgamesh.leave}
+
+  give_lesson:
+    text_key: gilgamesh.lesson
+    effects:
+      - {set_flag: learned_mortality_lesson}
+    choices:
+      - {text_key: gilgamesh.leave}

@@ -1,0 +1,30 @@
+# Shamhat Dialogue Tree
+# Temple priestess who civilized Enkidu
+
+id: shamhat
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: shamhat.greet
+    choices:
+      - {text_key: shamhat.ask_enkidu, goto: tell_enkidu}
+      - {text_key: shamhat.ask_gilgamesh, goto: tell_gilgamesh}
+      - {text_key: shamhat.ask_love, goto: tell_love}
+      - {text_key: shamhat.leave}
+
+  tell_enkidu:
+    text_key: shamhat.enkidu
+    choices:
+      - {text_key: shamhat.leave}
+
+  tell_gilgamesh:
+    text_key: shamhat.gilgamesh
+    choices:
+      - {text_key: shamhat.leave}
+
+  tell_love:
+    text_key: shamhat.love
+    choices:
+      - {text_key: shamhat.leave}

@@ -1,0 +1,35 @@
+id: the_cedar_forest_journey
+title_key: quest.cedar_forest.title
+start_stage: decide_to_go
+start_place: uruk_palace
+stages:
+  decide_to_go:
+    text_key: quest.cedar_forest.decide
+    final: false
+  prepare_for_journey:
+    text_key: quest.cedar_forest.prepare
+    final: false
+  travel_to_forest:
+    text_key: quest.cedar_forest.travel
+    reach:
+      place: cedar_forest
+      radius_m: 500
+      goto: enter_forest
+    final: false
+  enter_forest:
+    text_key: quest.cedar_forest.enter
+    guide: humbaba_lair
+    final: false
+  find_humbaba:
+    text_key: quest.cedar_forest.find_humbaba
+    reach:
+      place: humbaba_lair
+      radius_m: 50
+      goto: face_guardian
+    final: false
+  face_guardian:
+    text_key: quest.cedar_forest.face_guardian
+    final: false
+  defeat_humbaba:
+    text_key: quest.cedar_forest.defeat_humbaba
+    final: true

@@ -1,0 +1,66 @@
+# Mesopotamian Architecture - Ziggurats and Temples
+# Historical structures from ancient Uruk and Sumer
+
+- id: ziggurat_of_uruk
+  kind: building
+  name_key: place.ziggurat_uruk
+  parent: uruk
+  radius_m: 60
+  requires:
+    max_slope_deg: 5
+
+- id: ziggurat_of_anu
+  kind: building
+  name_key: place.ziggurat_anu
+  parent: uruk
+  radius_m: 55
+  requires:
+    max_slope_deg: 5
+
+- id: ziggurat_of_ishtar
+  kind: building
+  name_key: place.ziggurat_ishtar
+  parent: uruk
+  radius_m: 50
+  requires:
+    max_slope_deg: 5
+
+- id: white_temple
+  kind: building
+  name_key: place.white_temple
+  parent: uruk
+  radius_m: 40
+  requires:
+    max_slope_deg: 5
+
+- id: great_wall_uruk
+  kind: landmark
+  name_key: place.great_wall_uruk
+  parent: uruk
+  radius_m: 20
+  requires:
+    max_slope_deg: 5
+
+- id: hanging_gardens
+  kind: landmark
+  name_key: place.hanging_gardens
+  parent: uruk_palace
+  radius_m: 45
+  requires:
+    max_slope_deg: 5
+
+- id: royal_tombs
+  kind: building
+  name_key: place.royal_tombs
+  parent: uruk
+  radius_m: 30
+  requires:
+    max_slope_deg: 5
+
+- id: city_gate
+  kind: building
+  name_key: place.city_gate
+  parent: uruk
+  at: gate
+  spawn: true
+  radius_m: 10

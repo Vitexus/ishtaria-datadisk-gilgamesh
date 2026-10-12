@@ -1,0 +1,24 @@
+# Merchant of Uruk Dialogue Tree
+# Wears colorful robe with balance scale
+
+id: uruk_merchant
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_merchant.greet
+    choices:
+      - {text_key: uruk_merchant.ask_goods, goto: explain_goods}
+      - {text_key: uruk_merchant.ask_trade, goto: explain_trade}
+      - {text_key: uruk_merchant.leave}
+
+  explain_goods:
+    text_key: uruk_merchant.goods
+    choices:
+      - {text_key: uruk_merchant.leave}
+
+  explain_trade:
+    text_key: uruk_merchant.trade
+    choices:
+      - {text_key: uruk_merchant.leave}

@@ -1,0 +1,24 @@
+# Weaver Dialogue Tree
+# Wears simple dress with shuttle at belt
+
+id: weaver
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: weaver.greet
+    choices:
+      - {text_key: weaver.ask_fabrics, goto: explain_fabrics}
+      - {text_key: weaver.ask_priestly_robes, goto: explain_priestly_robes}
+      - {text_key: weaver.leave}
+
+  explain_fabrics:
+    text_key: weaver.fabrics
+    choices:
+      - {text_key: weaver.leave}
+
+  explain_priestly_robes:
+    text_key: weaver.priestly_robes
+    choices:
+      - {text_key: weaver.leave}

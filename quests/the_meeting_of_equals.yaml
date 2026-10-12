@@ -1,0 +1,22 @@
+id: the_meeting_of_equals
+title_key: quest.meeting_equals.title
+start_stage: enkidu_hears_of_gilgamesh
+start_place: uruk
+stages:
+  enkidu_hears_of_gilgamesh:
+    text_key: quest.meeting_equals.enkidu_hears
+    guide: uruk
+    final: false
+  travel_to_uruk:
+    text_key: quest.meeting_equals.travel_to_uruk
+    reach:
+      place: uruk
+      radius_m: 100
+      goto: challenge_gilgamesh
+    final: false
+  challenge_gilgamesh:
+    text_key: quest.meeting_equals.challenge
+    final: false
+  become_brothers:
+    text_key: quest.meeting_equals.become_brothers
+    final: true

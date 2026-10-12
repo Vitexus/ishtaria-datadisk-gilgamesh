@@ -1,0 +1,96 @@
+id: the_search_for_immortality
+title_key: quest.immortality.title
+start_stage: decide_to_seek_eternal_life
+start_place: uruk_palace
+stages:
+  decide_to_seek_eternal_life:
+    text_key: quest.immortality.decide
+    guide: uruk_palace
+    final: false
+
+  # Journey preparation
+  prepare_for_journey:
+    text_key: quest.immortality.prepare
+    guide: uruk_palace
+    final: false
+
+  # Journey to Mount Mashu
+  journey_to_mount_mashu:
+    text_key: quest.immortality.journey_mountain
+    reach:
+      place: mount_mashu
+      radius_m: 200
+      goto: meet_scorpion_guardian
+    guide: mount_mashu
+    final: false
+
+  # First trial - Scorpion Gate
+  meet_scorpion_guardian:
+    text_key: quest.immortality.meet_scorpion
+    guide: scorpion_gate
+    final: false
+
+  scorpion_guardian_test:
+    text_key: quest.immortality.scorpion_test
+    guide: scorpion_gate
+    final: false
+
+  # Third trial - Waters of Death
+  cross_waters:
+    text_key: quest.immortality.cross_waters
+    reach:
+      place: waters_of_death
+      radius_m: 100
+      goto: meet_ferryman
+    guide: waters_of_death
+    final: false
+
+  meet_ferryman:
+    text_key: quest.immortality.meet_ferryman
+    guide: waters_of_death
+    final: false
+
+  ferryman_test:
+    text_key: quest.immortality.ferryman_test
+    guide: waters_of_death
+    final: false
+
+  # Final meeting with Utnapishtim
+  reach_utnapishtim:
+    text_key: quest.immortality.reach_utnapishtim
+    reach:
+      place: utnapishtim_dwelling
+      radius_m: 50
+      goto: learn_truth
+    guide: utnapishtim_dwelling
+    final: false
+
+  learn_truth:
+    text_key: quest.immortality.learn_truth
+    guide: utnapishtim_dwelling
+    final: true
+
+  # Secret: The plant of eternal youth
+  learn_of_plant:
+    text_key: quest.immortality.learn_of_plant
+    guide: utnapishtim_dwelling
+    final: false
+
+  obtain_plant:
+    text_key: quest.immortality.obtain_plant
+    guide: utnapishtim_dwelling
+    final: false
+
+  return_with_plant:
+    text_key: quest.immortality.return_with_plant
+    reach:
+      place: uruk
+      radius_m: 100
+      goto: lose_plant
+    guide: uruk
+    final: false
+
+  lose_plant:
+    text_key: quest.immortality.lose_plant
+    guide: uruk
+    final: true

@@ -1,0 +1,48 @@
+# Ninsun Dialogue Tree
+# Mother of Gilgamesh, wise goddess
+
+id: ninsun
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: ninsun.greet
+    choices:
+      - {text_key: ninsun.ask_son, goto: speak_of_gilgamesh}
+      - {text_key: ninsun.ask_dream, goto: interpret_dream}
+      - {text_key: ninsun.ask_enkidu, goto: speak_of_enkidu}
+      - {text_key: ninsun.ask_wisdom, goto: give_wisdom}
+      - {text_key: ninsun.leave}
+
+  speak_of_gilgamesh:
+    text_key: ninsun.son
+    choices:
+      - {text_key: ninsun.ask_protection, goto: offer_protection}
+      - {text_key: ninsun.leave}
+
+  offer_protection:
+    text_key: ninsun.protection
+    choices:
+      - {text_key: ninsun.leave}
+
+  interpret_dream:
+    text_key: ninsun.dream
+    choices:
+      - {text_key: ninsun.ask_enkidu_dream, goto: interpret_enkidu_dream}
+      - {text_key: ninsun.leave}
+
+  interpret_enkidu_dream:
+    text_key: ninsun.enkidu_dream
+    choices:
+      - {text_key: ninsun.leave}
+
+  speak_of_enkidu:
+    text_key: ninsun.about_enkidu
+    choices:
+      - {text_key: ninsun.leave}
+
+  give_wisdom:
+    text_key: ninsun.wisdom
+    choices:
+      - {text_key: ninsun.leave}

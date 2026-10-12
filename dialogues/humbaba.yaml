@@ -1,0 +1,24 @@
+# Humbaba Dialogue Tree
+# Guardian of the Cedar Forest
+
+id: humbaba
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: humbaba.greet
+    choices:
+      - {text_key: humbaba.ask_mercy, goto: offer_mercy}
+      - {text_key: humbaba.ask_fight, goto: accept_fight}
+      - {text_key: humbaba.leave}
+
+  offer_mercy:
+    text_key: humbaba.mercy
+    choices:
+      - {text_key: humbaba.leave}
+
+  accept_fight:
+    text_key: humbaba.fight
+    choices:
+      - {text_key: humbaba.leave}

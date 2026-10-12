@@ -1,0 +1,15 @@
+id: the_tyranny_of_gilgamesh
+title_key: quest.tyranny.title
+start_stage: hear_complaints
+start_place: uruk_market
+stages:
+  hear_complaints:
+    text_key: quest.tyranny.hear_complaints
+    guide: uruk_market
+    final: false
+  learn_oppression:
+    text_key: quest.tyranny.learn_oppression
+    final: false
+  gods_create_enkidu:
+    text_key: quest.tyranny.gods_create_enkidu
+    final: true

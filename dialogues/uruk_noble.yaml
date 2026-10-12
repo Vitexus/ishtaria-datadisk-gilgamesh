@@ -1,0 +1,24 @@
+# Noble of Uruk Dialogue Tree
+# Wears fine linen with gold jewelry
+
+id: uruk_noble
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_noble.greet
+    choices:
+      - {text_key: uruk_noble.ask_wealth, goto: explain_wealth}
+      - {text_key: uruk_noble.ask_temples, goto: explain_temples}
+      - {text_key: uruk_noble.leave}
+
+  explain_wealth:
+    text_key: uruk_noble.wealth
+    choices:
+      - {text_key: uruk_noble.leave}
+
+  explain_temples:
+    text_key: uruk_noble.temples
+    choices:
+      - {text_key: uruk_noble.leave}

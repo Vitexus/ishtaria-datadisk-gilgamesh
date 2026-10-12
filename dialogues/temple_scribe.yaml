@@ -1,0 +1,24 @@
+# Temple Scribe Dialogue Tree
+# Wears traditional scribe's robe with clay tablet
+
+id: temple_scribe
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: temple_scribe.greet
+    choices:
+      - {text_key: temple_scribe.ask_work, goto: explain_work}
+      - {text_key: temple_scribe.ask_tablets, goto: explain_tablets}
+      - {text_key: temple_scribe.leave}
+
+  explain_work:
+    text_key: temple_scribe.work
+    choices:
+      - {text_key: temple_scribe.leave}
+
+  explain_tablets:
+    text_key: temple_scribe.tablets
+    choices:
+      - {text_key: temple_scribe.leave}
