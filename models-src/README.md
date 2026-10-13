@@ -7,7 +7,8 @@ Sources of the NPC models in `media/models/`. They are not installed by the pack
 - `chargen/humanoid.py`: body, hair, beards, garments, jewellery, props, skeleton, `Idle`/`Walk` animations, glTF export.
   The skin parts are fused into one seamless mesh (voxel remesh, smoothed) and take over the weights of the parts.
 - `chargen/npcs.py`: look of the 18 humanoids (heights, dress, attributes) after `research/CHARACTER_DESIGN.md`.
-- `chargen/creatures.py`: Scorpion Man (human torso, eight legs, jointed tail) and the Bull of Heaven.
+- `chargen/creatures.py`: the old procedural Scorpion Man and Bull of Heaven (replaced by the Rodin models below; kept as a fallback).
+- `rodin_rig_creature.py` rigs non-humanoid Rodin meshes (bones, legs and tail from `rodin/<id>.json`, weights by distance to the bones, Idle and Walk); `rodin_scorpion_assemble.py` joins the Rodin scorpion and the Rodin upper body of a man into the Scorpion Man; `rodin/views.py` + `views_grid.py` give metre grids to read the bones off.
 - `textures/*.jpg`: 256 px fabric, fur, leather and skin textures generated with InvokeAI (RealVisXL_V4.0).
 
 The models are authored in metres, face -Y in Blender (+Z in glTF), stand with the feet at the origin and keep a
@@ -33,3 +34,15 @@ helpers: `blender -b --python models-src/architecture/ishtar_gate.py -- ishtar_g
 The relief panels (aurochs, mushussu dragon, lion, two drawings of each animal, the rosette border) and the blue glaze, stone
 paving and cedar door textures are InvokeAI images (Juggernaut XL v9); the panels are placed on the walls by explicit
 UVs, the glaze is tiled.
+
+`architecture/uruk_walls.py` builds the walls of Uruk in the style of the Ishtar Gate, in one model with the gate and the
+Processional Way: `blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls media/models/architecture/uruk_walls.glb`.
+A rectangular circuit (400 x 420 m, 18 m high, 7 m thick) of glazed blue brick with the rows of aurochs and dragons of the gate on
+its outer face, corner and wall towers, four flights of stairs to the wall walk, and the passage of the Ishtar Gate as the
+only entrance. The JPEG textures are saved again at a lower quality so that the model stays below the 4 MiB of a datadisk
+model. `places/uruk.yaml` places it as the `structure` of the city (`offset_m: [0, 232]`: the model's origin is the gate,
+the middle of the city lies 232 m behind it).
+
+`rodin/make_concepts.py` and `rodin/img2img_concept.py` make the concept images for Hyper3D Rodin on the remote InvokeAI
+server; the sources of the Rodin models of the citizens of Uruk are in `uruk_*/` and the images in `concepts/`.
+
