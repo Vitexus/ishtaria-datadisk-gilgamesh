@@ -3,8 +3,8 @@
     blender -b --python models-src/rodin_scorpion_assemble.py -- scorpion_man/scorpion_body_rodin_source.glb \
         scorpion_man/scorpion_torso_rodin_source.glb scorpion_man/scorpion_man_assembled.glb
 
-(a text-to-image model cannot draw the hybrid in one picture). The scorpion is turned so that its ridged abdomen leads, the
-man is cut at the belt and stands on the front of the abdomen with his waist inside the body. Textures stay separate (two materials).
+(a text-to-image model cannot draw the hybrid in one picture). The scorpion already looks along -Y (head and claws at the front,
+the tail rising from the rear end of the abdomen); the man is cut at the belt and stands on the carapace with his waist inside it. Textures stay separate (two materials).
 Metres, the creature looks along -Y, z up, feet on z=0; the rig script (rodin_rig_creature.py) takes the result.
 """
 import math
@@ -15,10 +15,10 @@ import bpy
 from mathutils import Matrix, Vector
 
 BODY, TORSO, OUT = sys.argv[sys.argv.index("--") + 1:][:3]
-BODY_HEIGHT = 1.5         # the scorpion with the tail up, metres
+BODY_HEIGHT = 0.9         # the scorpion with the tail up, metres (carapace top then at 0.7 m)
 TORSO_HEIGHT = 2.7       # the whole standing man, of whom the upper half is kept
 CUT = 0.96 / 2.0          # fraction of the man's height where he is cut (just under the belt)
-WAIST = (0.0, -0.9, 0.7)  # where the cut of the man is put, in the scorpion frame (inside the front of the abdomen)
+WAIST = (0.0, -0.45, 0.62)  # where the cut of the man is put, in the scorpion frame (just inside the top of the carapace)
 
 
 def load(path, name):
@@ -59,7 +59,7 @@ def weld(obj):
 bpy.ops.wm.read_factory_settings(use_empty=True)
 body = load(BODY, "scorpion")
 torso = load(TORSO, "man")
-fit(body, BODY_HEIGHT, 180.0, (0, 0, 0))
+fit(body, BODY_HEIGHT, 0.0, (0, 0, 0))
 fit(torso, TORSO_HEIGHT, 0.0, (0, 0, 0))
 # the man: cut off everything under the belt, then lower the cut to the waist position
 weld(torso)

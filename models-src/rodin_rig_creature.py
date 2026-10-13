@@ -118,6 +118,80 @@ def segment_distance(head, tail, p):
     return (p - (a + ab * t)).length
 
 
+def raise_tail(body):
+    """Bends the tail into a new rest pose before skinning (config `tail_pose`).
+
+    The tail is a tube that is fused with the body at one end. Its axis is measured on the mesh: the geodesic distance u
+    from the tip of the sting (the lowest vertex inside `tip_box`) gives rings whose centres are the axis; the axis from the
+    base (u = `base_u`) to the tip is cut into one piece for each tail bone. The pieces are then laid out again in the Y-Z
+    plane at `angles` (degrees, 0 = +Y, 90 = up, 180 = -Y; the base stays where it was) and every vertex follows its piece
+    with a rigid turn, blended between neighbouring pieces. The Tail bones of BONES are rewritten along the new axis.
+    """
+    import heapq
+    pose = CONFIG.get("tail_pose")
+    if not pose or not TAIL:
+        return
+    n = len(TAIL)
+    base_u = pose["base_u"]
+    bm = bmesh.new()
+    bm.from_mesh(body.data)
+    bm.verts.ensure_lookup_table()
+    (x0, x1), (y0, y1), (z0, z1) = pose["tip_box"]
+    cand = [v for v in bm.verts if x0 <= v.co.x <= x1 and y0 <= v.co.y <= y1 and z0 <= v.co.z <= z1]
+    tip = min(cand, key=lambda v: v.co.z + 0.01 * v.co.y)
+    limit = base_u + 0.5
+    u = {tip.index: 0.0}
+    queue = [(0.0, tip.index)]
+    while queue:
+        d, i = heapq.heappop(queue)
+        if d > u[i] or d > limit:
+            continue
+        for e in bm.verts[i].link_edges:
+            j = e.other_vert(bm.verts[i]).index
+            nd = d + e.calc_length()
+            if nd < u.get(j, 1e9):
+                u[j] = nd
+                heapq.heappush(queue, (nd, j))
+    step = 0.05
+    rings = {}
+    for i, d in u.items():
+        rings.setdefault(int(d / step), []).append(bm.verts[i].co)
+    keys = sorted(k for k in rings if k * step <= base_u)
+    axis = [((k + 0.5) * step, sum(rings[k], Vector()) / len(rings[k])) for k in keys]
+
+    def centre(at):
+        for (ua, pa), (ub, pb) in zip(axis, axis[1:]):
+            if ua <= at <= ub:
+                return pa.lerp(pb, (at - ua) / (ub - ua))
+        return axis[0][1] if at < axis[0][0] else axis[-1][1]
+    joints = [centre(base_u * (1.0 - i / n)) for i in range(n + 1)]   # base ... tip
+    new = [joints[0]]
+    turns = []
+    for i in range(n):
+        old_dir = joints[i + 1] - joints[i]
+        beta = math.radians(pose["angles"][i])
+        new_dir = Vector((0.0, math.cos(beta), math.sin(beta))) * old_dir.length
+        turns.append(old_dir.rotation_difference(new_dir))
+        new.append(new[-1] + new_dir)
+    for v in body.data.vertices:
+        if v.index not in u or u[v.index] > limit:
+            continue
+        t = (base_u - u[v.index]) / base_u * n
+        hats = [max(0.0, 1.0 - abs(min(max(t, 0.5), n - 0.5) - (i + 0.5))) for i in range(n)]
+        total = sum(hats)
+        moved = Vector()
+        for i, w in enumerate(hats):
+            if w > 0:
+                moved += (new[i] + turns[i] @ (v.co - joints[i])) * (w / total)
+        fade = 1.0 if u[v.index] <= base_u else max(0.0, 1.0 - (u[v.index] - base_u) / 0.5)
+        v.co = v.co.lerp(moved, fade)
+    body.data.update()
+    bm.free()
+    for i, name in enumerate(TAIL):
+        BONES[name] = (tuple(new[i]), tuple(new[i + 1]), BONES[name][2])
+    print("tail axis", [tuple(round(c, 2) for c in p) for p in new])
+
+
 def skin(body, arm):
     names = [n for n in BONES if n not in ("Root", "Head_end")]
     groups = {n: body.vertex_groups.new(name=n) for n in BONES}
@@ -163,8 +237,9 @@ def animations(arm):
             else:
                 d[up] = (rot(arm, up, ("Z", 0.28 * sw * s), ("X", -0.35 * lift)), None)
                 d[low] = (rot(arm, low, ("X", 0.4 * lift)), None)
+        # the tail held high and rocking with the gait: a wave runs from the base to the sting, the sting nods
         for k, n in enumerate(TAIL):
-            d[n] = (rot(arm, n, ("Z", 0.22 * math.sin(a + k * 0.5)), ("X", 0.04 * math.sin(a + k * 0.5))), None)
+            d[n] = (rot(arm, n, ("Z", 0.10 * math.sin(a - k * 0.55)), ("X", 0.05 * math.sin(2 * a - k * 0.6))), None)
         if KIND == "quadruped":
             d["Hips"] = ((0, 0, 0), (0, amp.get("bob", 0.03) * math.cos(2 * a), 0))
             d["Spine"] = (rot(arm, "Spine", ("Z", 0.04 * math.sin(a))), None)
@@ -183,8 +258,19 @@ def animations(arm):
         d = {"Hips": ((0, 0, 0), (0, 0.006 * math.sin(a), 0))}
         d["Chest"] = (rot(arm, "Chest", ("X", 0.012 * math.sin(a))), None)
         d["Head"] = (rot(arm, "Head", ("X", 0.05 * math.sin(a - 0.5)), ("Z", 0.08 * math.sin(a))), None)
-        for k, n in enumerate(TAIL):
-            d[n] = (rot(arm, n, ("Z", 0.2 * math.sin(a * 2 + k * 0.7)), ("X", 0.05 * math.sin(a + k * 0.45))), None)
+        if KIND != "quadruped":
+            # a scorpion tail: slow sway with a wave towards the sting, now and then it winds up and strikes forward and down
+            u = (t - 0.55) / 0.3
+            strike = math.sin(math.pi * u) ** 2 if 0.0 <= u <= 1.0 else 0.0
+            wind = math.sin(math.pi * (t - 0.4) / 0.15) ** 2 if 0.4 <= t <= 0.55 else 0.0
+            for k, n in enumerate(TAIL):
+                reach = (k + 1) / len(TAIL)
+                curl = 0.05 * math.sin(a - k * 0.5) + 0.24 * reach * strike - 0.14 * reach * wind
+                yaw = 0.12 * math.sin(a - k * 0.7) + 0.12 * reach * strike
+                d[n] = (rot(arm, n, ("Z", yaw), ("X", curl)), None)
+        else:
+            for k, n in enumerate(TAIL):
+                d[n] = (rot(arm, n, ("Z", 0.2 * math.sin(a * 2 + k * 0.7)), ("X", 0.05 * math.sin(a + k * 0.45))), None)
         if KIND != "quadruped":
             for side, s in (("L", 1), ("R", -1)):
                 d["UpperArm_" + side] = (rot(arm, "UpperArm_" + side, ("X", 0.03 * math.sin(a + s))), None)
@@ -197,6 +283,7 @@ def main():
     body = import_mesh()
     normalise(body)
     decimate(body)
+    raise_tail(body)
     simplify_material(body)
     body.name = NAME
     arm = humanoid.make_armature(NAME + "_Armature", BONES)

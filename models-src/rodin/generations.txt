@@ -24,5 +24,5 @@ ninsun 5a05ee15-fc9b-4187-afca-4c705949066c
 high_priestess_ishtar af9b1fec-c3f8-416d-b505-ffc71bceb9f2
 royal_guard 14d87734-46a9-4b4f-aa11-1839b142eccc
 bull_of_heaven d0e0b080-e785-4d4b-b2b4-44f799d364cd
-scorpion_body 1be27128-a282-403f-887a-5ccd80e4cc13
+scorpion_body 00b68491-d7f8-4c11-a356-c9584905d000
 scorpion_torso f091a3df-858a-4ef9-a3f2-ebb880466ae9

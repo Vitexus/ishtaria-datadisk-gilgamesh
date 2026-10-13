@@ -90,9 +90,10 @@ CREATURE_NEG = ("human legs, human feet, knees, standing man, crouching man, jum
                 "plinth, statue, relief, modern, medieval armour, extra heads")
 CREATURES = {
     # SDXL cannot draw the hybrid in one picture: the scorpion man is assembled from the two parts (models-src/rodin_scorpion.py)
-    "scorpion_body": "a giant dark brown armoured scorpion, huge segmented body, two large pincer claws held out in front, eight jointed "
-                     "legs spread on the ground, a thick segmented tail curved up and forward over its back ending in a sting, "
-                     "the front of the body is a flat armoured plate without a head",
+    "scorpion_body": "a giant dark brown armoured scorpion in strict side view facing left, two large pincer claws held out in front at the left end, "
+                     "eight jointed legs spread on the ground, a broad flat armoured plate at the front of the body instead of a head, "
+                     "a ridged segmented abdomen, the long thick segmented tail grows out of the rear right end of the abdomen, "
+                     "rises in a high arc over the back and curls forward ending in a curved sting above the middle of the body",
     "bull_of_heaven": "the Bull of Heaven, a gigantic mythical aurochs bull, massive muscular body with a high hump, thick dark brown hide, "
                       "long curved heavy cream-coloured horns with gold rings, a braided blue lapis lazuli beard under the chin, "
                       "glowing red eyes, four strong legs with black hooves planted wide apart, head lowered, tail hanging, all four legs clearly visible",
