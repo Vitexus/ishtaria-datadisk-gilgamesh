@@ -33,6 +33,7 @@ CENTRE = CONFIG.get("centre", "median")  # x of the centre line: median of the v
 SKIRT = CONFIG.get("skirt", False)
 STRIDE = CONFIG.get("stride")
 ARM_SWING = CONFIG.get("arm_swing", 1.0)
+ARM_SWING_SIDES = CONFIG.get("arm_swing_sides", {})  # {"L": factor, "R": factor}: a hand fused with the clothing barely swings
 SPATIAL = CONFIG.get("spatial_smooth")  # [radius below the hips, radius above] in metres, or null
 STAR_DISC = CONFIG.get("star_disc")  # {"radius": m, "points": 8, "lift": m above the top of the head}
 SMOOTH = CONFIG.get("smooth_regions")  # [{"x": [lo, hi], "y": ..., "z": ..., "iterations": n, "factor": f}, ...] in metres
@@ -573,7 +574,7 @@ def main():
     add_quiver(body)
     add_face(h, body)
     bpy.context.view_layer.objects.active = arm
-    h.arm_swing = {"L": ARM_SWING, "R": ARM_SWING}
+    h.arm_swing = {"L": ARM_SWING_SIDES.get("L", ARM_SWING), "R": ARM_SWING_SIDES.get("R", ARM_SWING)}
     humanoid.humanoid_animations(h, arm, stride=STRIDE)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     humanoid.export_glb(OUT)
