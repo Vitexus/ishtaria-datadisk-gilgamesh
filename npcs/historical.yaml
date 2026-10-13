@@ -39,6 +39,7 @@
   dialogue: royal_guard
   portrait: media/portraits/royal_guard.jpg
   bio_key: npc.royal_guard.bio
+  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[0, 0], [28, 0], [28, 28], [0, 28]]}
   tags: [guard, soldier, uruk]
 
 # Noble of Uruk
@@ -91,6 +92,7 @@
   dialogue: uruk_farmer
   portrait: media/portraits/uruk_farmer.jpg
   bio_key: npc.uruk_farmer.bio
+  movement: {kind: wander, radius_m: 30, speed_m_s: 0.9, pause_s: 12}
   tags: [villager, farmer, citizen]
 
 # Water Carrier
@@ -101,6 +103,7 @@
   dialogue: uruk_water_carrier
   portrait: media/portraits/uruk_water_carrier.jpg
   bio_key: npc.uruk_water_carrier.bio
+  movement: {kind: wander, radius_m: 60, speed_m_s: 1.1, pause_s: 6}
   tags: [villager, water_carrier, citizen]
 
 # Master Brickmaker
@@ -163,4 +166,5 @@
   dialogue: uruk_plowman
   portrait: media/portraits/uruk_plowman.jpg
   bio_key: npc.uruk_plowman.bio
+  movement: {kind: wander, radius_m: 45, speed_m_s: 0.9, pause_s: 10}
   tags: [villager, farmer, plowman]
