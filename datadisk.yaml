@@ -1,6 +1,8 @@
 id: gilgamesh
 version: 0.2.1
 cover: media/cover/cover.jpg
+# Players are Gilgamesh, king of Uruk (the look of his NPC); they choose only their nickname.
+player_character: protagonists/criminalMaleA
 name: Epic of Gilgamesh
 description: >
   A story datadisk based on the ancient Mesopotamian Epic of Gilgamesh.
