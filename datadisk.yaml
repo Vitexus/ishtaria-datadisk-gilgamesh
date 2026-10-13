@@ -4,6 +4,8 @@ cover: media/cover/cover.jpg
 # Players are Gilgamesh, king of Uruk (the look of his NPC); they choose only their nickname.
 player_character: protagonists/criminalMaleA
 player_model: media/models/gilgamesh.glb
+# Two thirds god: taller than men (an Anunnaki giant) and far harder to hurt by a fall.
+player_body: {height_m: 3.0, toughness: 1.5}
 name: Epic of Gilgamesh
 description: >
   A story datadisk based on the ancient Mesopotamian Epic of Gilgamesh.
