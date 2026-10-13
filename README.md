@@ -1,6 +1,6 @@
 # ishtaria-datadisk-gilgamesh
 
-Epic story datadisk for [Ishtaria](https://github.com/VitexSoftware/ishtaria-docs) based on
+Epic story datadisk for [Ishtaria](https://git.vitexsoftware.com/Ishtaria/ishtaria-docs) based on
 the ancient **Epic of Gilgamesh**, the world's oldest surviving work of literature.
 
 **Open source content** - CC BY-SA 4.0 license. This datadisk brings the epic tale of
