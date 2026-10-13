@@ -4,7 +4,13 @@
   kind: city
   name_key: place.uruk
   radius_m: 200
-  scenery: {preset: town, size: town}
+  # No generated town: its medieval houses and walls (Kenney Fantasy Town, Castle kits) do not belong to Uruk of 2700 BCE.
+  # The walls of glazed blue brick are built to match the Ishtar Gate, which is their entrance (models-src/architecture/
+  # uruk_walls.py). The model's origin is the middle of the gate; the middle of the walled area lies 232 m behind it.
+  structure:
+    model: media/models/architecture/uruk_walls.glb
+    offset_m: [0, 232]
+    visible_m: 1500
   spawn: false
   requires:
     biome: [grassland]

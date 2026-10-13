@@ -1,0 +1,26 @@
+# Sacred Courtesan of Ishtar Dialogue Tree
+# Caste: temple
+
+id: uruk_temple_courtesan
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_temple_courtesan.greet
+    choices:
+      - {text_key: uruk_temple_courtesan.ask_a, goto: explain_a}
+      - {text_key: uruk_temple_courtesan.ask_b, goto: explain_b}
+      - {text_key: uruk_temple_courtesan.leave}
+
+  explain_a:
+    text_key: uruk_temple_courtesan.a
+    choices:
+      - {text_key: uruk_temple_courtesan.ask_b, goto: explain_b}
+      - {text_key: uruk_temple_courtesan.leave}
+
+  explain_b:
+    text_key: uruk_temple_courtesan.b
+    choices:
+      - {text_key: uruk_temple_courtesan.ask_a, goto: explain_a}
+      - {text_key: uruk_temple_courtesan.leave}

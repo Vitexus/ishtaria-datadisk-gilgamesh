@@ -1,0 +1,26 @@
+# Lady of Uruk Dialogue Tree
+# Caste: noble
+
+id: uruk_noblewoman
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_noblewoman.greet
+    choices:
+      - {text_key: uruk_noblewoman.ask_a, goto: explain_a}
+      - {text_key: uruk_noblewoman.ask_b, goto: explain_b}
+      - {text_key: uruk_noblewoman.leave}
+
+  explain_a:
+    text_key: uruk_noblewoman.a
+    choices:
+      - {text_key: uruk_noblewoman.ask_b, goto: explain_b}
+      - {text_key: uruk_noblewoman.leave}
+
+  explain_b:
+    text_key: uruk_noblewoman.b
+    choices:
+      - {text_key: uruk_noblewoman.ask_a, goto: explain_a}
+      - {text_key: uruk_noblewoman.leave}

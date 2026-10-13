@@ -1,0 +1,26 @@
+# Ale-wife of Uruk Dialogue Tree
+# Caste: burgher
+
+id: uruk_alewife
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_alewife.greet
+    choices:
+      - {text_key: uruk_alewife.ask_a, goto: explain_a}
+      - {text_key: uruk_alewife.ask_b, goto: explain_b}
+      - {text_key: uruk_alewife.leave}
+
+  explain_a:
+    text_key: uruk_alewife.a
+    choices:
+      - {text_key: uruk_alewife.ask_b, goto: explain_b}
+      - {text_key: uruk_alewife.leave}
+
+  explain_b:
+    text_key: uruk_alewife.b
+    choices:
+      - {text_key: uruk_alewife.ask_a, goto: explain_a}
+      - {text_key: uruk_alewife.leave}

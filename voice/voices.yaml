@@ -71,3 +71,29 @@ npcs:
   enkidu_civilized:
     pitch: -0.5
     tempo: 0.95
+
+  # Citizens of Uruk
+  uruk_farmer:
+    pitch: -0.3
+    tempo: 0.95
+  uruk_water_carrier:
+    pitch: 0.4
+    tempo: 1.05
+  uruk_mason:
+    pitch: -0.6
+    tempo: 0.95
+  uruk_alewife:
+    pitch: 0.3
+    tempo: 1.0
+  uruk_elder:
+    pitch: -0.8
+    tempo: 0.85
+  uruk_noblewoman:
+    pitch: 0.1
+    tempo: 0.95
+  uruk_temple_courtesan:
+    pitch: 0.3
+    tempo: 0.95
+  uruk_plowman:
+    pitch: -0.5
+    tempo: 0.9

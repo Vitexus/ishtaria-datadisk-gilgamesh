@@ -1,0 +1,26 @@
+# Elder of Uruk Dialogue Tree
+# Caste: noble
+
+id: uruk_elder
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_elder.greet
+    choices:
+      - {text_key: uruk_elder.ask_a, goto: explain_a}
+      - {text_key: uruk_elder.ask_b, goto: explain_b}
+      - {text_key: uruk_elder.leave}
+
+  explain_a:
+    text_key: uruk_elder.a
+    choices:
+      - {text_key: uruk_elder.ask_b, goto: explain_b}
+      - {text_key: uruk_elder.leave}
+
+  explain_b:
+    text_key: uruk_elder.b
+    choices:
+      - {text_key: uruk_elder.ask_a, goto: explain_a}
+      - {text_key: uruk_elder.leave}

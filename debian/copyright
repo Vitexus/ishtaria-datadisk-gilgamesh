@@ -30,7 +30,41 @@ Comment: The goddess Ishtar is a generated mesh: a concept image made with Invok
  shapes are added by that script. The terms of use of Hyper3D (ownership of and rights to generated
  assets under the plan used) must be checked before the model is distributed outside this project.
 
+Files: media/models/gilgamesh.glb media/models/enkidu.glb media/models/enkidu_civilized.glb media/models/shamhat.glb media/models/humbaba.glb media/models/utnapishtim.glb media/models/ur_shanabi.glb media/models/ninsun.glb media/models/anu.glb media/models/high_priest_anu.glb media/models/high_priestess_ishtar.glb media/models/temple_scribe.glb media/models/royal_guard.glb media/models/uruk_noble.glb media/models/uruk_merchant.glb media/models/potter.glb media/models/weaver.glb
+ media/portraits/gilgamesh.jpg media/portraits/enkidu.jpg media/portraits/enkidu_civilized.jpg media/portraits/shamhat.jpg media/portraits/humbaba.jpg media/portraits/utnapishtim.jpg media/portraits/ur_shanabi.jpg media/portraits/ninsun.jpg media/portraits/anu.jpg media/portraits/high_priest_anu.jpg media/portraits/high_priestess_ishtar.jpg media/portraits/temple_scribe.jpg media/portraits/royal_guard.jpg media/portraits/uruk_noble.jpg media/portraits/uruk_merchant.jpg media/portraits/potter.jpg media/portraits/weaver.jpg
+ models-src/gilgamesh/* models-src/enkidu/* models-src/enkidu_civilized/* models-src/shamhat/* models-src/humbaba/* models-src/utnapishtim/* models-src/ur_shanabi/* models-src/ninsun/* models-src/anu/* models-src/high_priest_anu/* models-src/high_priestess_ishtar/* models-src/temple_scribe/* models-src/royal_guard/* models-src/uruk_noble/* models-src/uruk_merchant/* models-src/potter/* models-src/weaver/*
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+Comment: Like Ishtar, these characters are generated meshes: concept images made with InvokeAI (Juggernaut XL v9,
+ models-src/rodin/make_concepts.py) were turned into 3D models by Hyper3D Rodin (Gen-2.5-High; generation ids in
+ models-src/rodin/generations.txt), then retopologised, rigged and animated by models-src/rodin_rig.py (settings in
+ models-src/rodin/<id>.json). Gilgamesh comes from the earlier pilot. The terms of use of Hyper3D must be checked
+ before distribution.
+
+Files: media/models/uruk_farmer.glb media/models/uruk_water_carrier.glb media/models/uruk_mason.glb
+ media/models/uruk_alewife.glb media/models/uruk_elder.glb media/models/uruk_noblewoman.glb
+ media/models/uruk_plowman.glb media/models/uruk_temple_courtesan.glb
+ media/portraits/uruk_farmer.jpg media/portraits/uruk_water_carrier.jpg media/portraits/uruk_mason.jpg
+ media/portraits/uruk_alewife.jpg media/portraits/uruk_elder.jpg media/portraits/uruk_noblewoman.jpg
+ media/portraits/uruk_plowman.jpg media/portraits/uruk_temple_courtesan.jpg
+ models-src/concepts/* models-src/uruk_*/* models-src/rodin/uruk_*.json
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+Comment: The eight citizens of Uruk (villagers, townspeople, nobles) are made like Ishtar: concept images from InvokeAI
+ (Juggernaut XL v9, models-src/rodin/make_concepts.py and img2img_concept.py), turned into 3D models by Hyper3D Rodin (Gen-2.5-High),
+ then rigged by models-src/rodin_rig.py. The terms of use of Hyper3D must be checked before distribution.
+
+Files: media/models/scorpion_man.glb media/models/bull_of_heaven.glb media/portraits/scorpion_man.jpg media/portraits/bull_of_heaven.jpg
+ models-src/scorpion_man/* models-src/bull_of_heaven/* models-src/rodin/scorpion_man.json models-src/rodin/bull_of_heaven.json
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+License: CC-BY-SA-4.0
+Comment: The two creatures are generated meshes: the Bull of Heaven from one InvokeAI concept, the Scorpion Man assembled by
+ models-src/rodin_scorpion_assemble.py from two Rodin meshes (a giant scorpion and the upper body of a bearded man, each from
+ its own InvokeAI concept), all made by Hyper3D Rodin (Gen-2.5-High) and rigged by models-src/rodin_rig_creature.py. The terms
+ of use of Hyper3D must be checked before distribution.
+
 Files: media/models/architecture/ziggurat_etemenanki.glb media/models/architecture/etemenanki_precinct.glb
+ media/models/architecture/uruk_walls.glb
  media/models/architecture/ziggurat_anu.glb media/models/architecture/ishtar_gate.glb
  media/models/architecture/processional_way.glb models-src/architecture/*
 Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>

@@ -26,6 +26,7 @@ place.white_temple: Bílý chrám
 place.great_wall_uruk: Velká hradba Uruku
 place.hanging_gardens: Visuté zahrady
 place.royal_tombs: Královské hrobky v Uruku
+place.etemenanki: Etemenanki, babylonská věž
 place.city_gate: Městská brána v Uruku
 
 # Hudba
@@ -562,3 +563,71 @@ quest.immortality.learn_of_plant: Utnapištim odhalí umístění rostliny, kter
 quest.immortality.obtain_plant: Vyzvedni rostlinu z hlubin Vod smrti
 quest.immortality.return_with_plant: Vrať se do Uruku s vzácnou rostlinou věčného mládí
 quest.immortality.lose_plant: Had ukradne rostlinu, zatímco se koupáš, a přijdáš o šanci na nesmrtelnost
+
+# Obyvatelé Uruku
+npc.uruk_farmer: Pěstitel ječmene
+npc.uruk_farmer.bio: "Vesničan ze zavlažovaných polí kolem Uruku, který přišel prodat ječmen a cibuli. Nosí krátký nebarvený vlněný kaunakés, má osmahlou kůži, oholenou hlavu, na zádech pletený koš a u pasu rákosový srp."
+uruk_farmer.greet: "Ať voda dojde i na tvé pole, cizinče. Jsem pěstitel ječmene od kanálů před hradbami."
+uruk_farmer.ask_a: Zeptat se na sklizeň
+uruk_farmer.ask_b: Zeptat se na městské hradby
+uruk_farmer.leave: Nebudu tě zdržovat od práce.
+uruk_farmer.a: "Kanály byly letos dobře vyhloubené a ječmen stojí vysoko. Jenže polovina jde do chrámového sýpku a královi muži si vezmou svůj díl z toho, co zbyde."
+uruk_farmer.b: "Moji bratři byli povoláni nosit cihly na velkou hradbu. Práce je těžká, ale nikdo neřekne, že Gilgameš nestaví. Když přijdou povodně, spíme za ní v bezpečí."
+npc.uruk_water_carrier: Nosička vody
+npc.uruk_water_carrier.bio: "Mladá žena z vesnice u Eufratu, která roznáší vodu do domů v Uruku. Nosí jednoduché nebarvené vlněné šaty přes jedno rameno, vlasy v prostém copu, na rameni velký hliněný džbán a přes čelo provazový pás."
+uruk_water_carrier.greet: "Čerstvá voda z řeky! Pozor na džbán, pocestný, je těžší, než vypadá."
+uruk_water_carrier.ask_a: Zeptat se, odkud bere vodu
+uruk_water_carrier.ask_b: Zeptat se na život ve městě
+uruk_water_carrier.leave: Nebudu tě zdržovat od práce.
+uruk_water_carrier.a: "Z Eufratu, před úsvitem, když je řeka čistá. V poledne ji barvíři a koželuzi zkalí, a tehdy nosím ze staré studny u chrámu."
+uruk_water_carrier.b: "Chodím každou ulicí, takže slyším všechno. Říká se, že král nespí a že jeho přítel ze stepi přišel do Uruku divoký jako zvíře. Já vím jen to, že žíznivý platí ječmenem."
+npc.uruk_mason: Mistr cihlář
+npc.uruk_mason.bio: "Vážený měšťan, který dohlíží na cihlářské pece a práce na hradbách Uruku. Nosí vlněný kaunakés po kolena s koženou zástěrou, silné hlínou zašpiněné paže, upravený vous, měřicí šňůru s bronzovým hrotem a v ruce vypálenou cihlu s razítkem."
+uruk_mason.greet: "Dávej pozor, kam šlapeš, příteli, malta je čerstvá. Jsem mistr cihlářů v Uruku."
+uruk_mason.ask_a: Zeptat se na hradby
+uruk_mason.ask_b: Zeptat se na jeho řemeslo
+uruk_mason.leave: Nebudu tě zdržovat od práce.
+uruk_mason.a: "Šest tisíc kroků pálených cihel a každá vrstva položená do vodováhy. Jádro je sušená hlína, ale líc se pálí v mých pecích. Tyto hradby přežijí nás všechny."
+uruk_mason.b: "Hlína z řeky, sláma, dřevěná forma, týden na slunci a potom pec. Každá cihla nese královo razítko. Prasklá jde zpátky do jámy, ať ji udělal kdokoli."
+npc.uruk_alewife: Hospodská z Uruku
+npc.uruk_alewife.bio: "Veselá majitelka pivnice u tržiště, kde měšťané pijí ječné pivo přes rákosová brčka. Nosí barvené okrové vlněné šaty, vzorovaný šátek, bronzové náušnice, vlasy vyčesané vzhůru, na boku džbán s pivem a v ruce naběračku."
+uruk_alewife.greet: "Pojď dál, jen pojď! Pivo je studené a drby teplé. Co si dáš?"
+uruk_alewife.ask_a: Zeptat se na pivo
+uruk_alewife.ask_b: Zeptat se, co slyšela
+uruk_alewife.leave: Nebudu tě zdržovat od práce.
+uruk_alewife.a: "Namočený ječný chléb, nechaný kvasit, přecezený rákosem. Pij ho brčkem, cizinče, slupky klesnou ke dnu. Pivo je dar Ninkasi a já ho nekřtím!"
+uruk_alewife.b: "Kolem mých dveří projde každý. Vojáci povídají, že král zápasil na ulici s divochem a stali se z nich bratři. Obchodníci říkají, že cedrová cesta je zavřená. A písaři pijí nejvíc a říkají nejmíň."
+npc.uruk_elder: Starší z Uruku
+npc.uruk_elder.bio: "Vážený šlechtic z rady starších, který radí králi. Nosí dlouhý bílý kaunakés až k zemi s třásnitým přehozem, těžký zlatý nákrčník s lapisovými korálky, dlouhý kudrnatý šedý vous, prsteny a vyřezávanou cedrovou hůl."
+uruk_elder.greet: "Pokoj s tebou. Zasedám v radě Uruku a radil jsem králům, než ses narodil."
+uruk_elder.ask_a: Zeptat se na radu starších
+uruk_elder.ask_b: Zeptat se na krále
+uruk_elder.leave: Nebudu tě zdržovat od práce.
+uruk_elder.a: "Jsme starší velkých rodů. Radíme, pamatujeme a hádáme se. Když chtěl Gilgameš vytáhnout do Cedrového lesa, prosili jsme ho, aby zůstal. Zasmál se a odešel."
+uruk_elder.b: "Je silný a neklidný. Král, který lid nevyčerpává, je dar bohů, ale král, který ho vyčerpává příliš, je břemeno. Enkidu ho zjemnil a za to děkujeme bohům."
+npc.uruk_noblewoman: Paní z Uruku
+npc.uruk_noblewoman.bio: "Šlechtična z jednoho z velkých rodů Uruku, ochránkyně chrámu Ištar. Nosí dlouhé třásnité šaty až k zemi v tmavě modré a krémové barvě, vysokou čelenku ze zlatých lístků s lapisovými a karneolovými korálky, velké půlměsíčité zlaté náušnice a korálový nákrčník, v ruce vyřezávaný vějíř ze slonoviny."
+uruk_noblewoman.greet: "Stojíš před paní velkého rodu v Uruku. Mluv, ale stručně, neboť průvod Ištar začíná za soumraku."
+uruk_noblewoman.ask_a: Zeptat se na bohyni Ištar
+uruk_noblewoman.ask_b: Zeptat se na život ve velkých rodech
+uruk_noblewoman.leave: Nebudu tě zdržovat od práce.
+uruk_noblewoman.a: "Dávám jejímu chrámu zlato a jejím kněžkám látky a ona dává Uruku svou přízeň. Je láskou a je válkou; je dobře mít ji na své straně."
+uruk_noblewoman.b: "Spravujeme statky, sýpky a tkalce, zatímco naši muži se hádají v radě. Ženy z vysokých rodů smějí v Uruku vlastnit půdu a stvrzovat smlouvy pečetí. Nepleť si hedvábí s měkkostí."
+
+# Obyvatelé Uruku
+npc.uruk_temple_courtesan: Chrámová nevěstka Ištar
+npc.uruk_temple_courtesan.bio: "Žena zasvěcená Ištar, která slouží jejímu chrámu jako chrámová nevěstka, v Uruku vážené povolání. Nosí dlouhé červené třásnité vlněné šaty přes jedno rameno, zlatý ozdobný lístek ve vlasech s lapisovými a karneolovými korálky, velké zlaté náušnice, korálový nákrčník, náramky a v ruce malou misku s kadidlem."
+uruk_temple_courtesan.greet: "Ištařino požehnání s tebou, pocestný. Sloužím bohyni v jejím domě. Přicházej v pokoji a mluv svobodně."
+uruk_temple_courtesan.ask_a: Zeptat se na její službu bohyni
+uruk_temple_courtesan.ask_b: Zeptat se na Šamhat a Enkidua
+uruk_temple_courtesan.leave: Nebudu tě zdržovat od práce.
+uruk_temple_courtesan.a: "Bohyně je láska a touha stejně jako válka. My, které jsme jí zasvěceny, přinášíme městu její dary: radost, útěchu a požehnání jejího domu. Chrám nás chrání a město nás ctí."
+uruk_temple_courtesan.b: "Šamhat je naše sestra. Naučila divocha ze stepi slovům, chlebu a pivu a divoká zvěř ho opustila. Moudrá žena dokáže polidštit to, co královo vojsko nezkrotilo."
+npc.uruk_plowman: Oráč
+npc.uruk_plowman.bio: "Ošlehaný starší zemědělec, který orá pole podél Eufratu za párem volů. Nosí krátkou nebarvenou vlněnou zástěru, na slunci vybledlou plstěnou čepici, tvrdé mozolnaté ruce, dlouhý dřevěný bodec a přes rameno dřevěnou motyku, u boku koženou nádobu na vodu."
+uruk_plowman.greet: "Pokoj, příteli. Odpusť to bláto, s voly jsme na brázdě od svítání."
+uruk_plowman.ask_a: Zeptat se na orání
+uruk_plowman.ask_b: Zeptat se na řeku a povodně
+uruk_plowman.leave: Nebudu tě zdržovat od práce.
+uruk_plowman.a: "Secí pluh, dva voli a rovná brázda. Semeno propadá násypkou, zatímco radlice otevírá zem. První orání patří Ninurtovi a s obětí nešetříme."
+uruk_plowman.b: "Eufrat dává a Eufrat bere. Dobrá záplava je nános bahna pro pole, špatná utopený ječmen. Proto žehnám královým hradbám, drží vodu dál od sýpek."

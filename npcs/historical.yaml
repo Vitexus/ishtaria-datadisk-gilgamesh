@@ -80,3 +80,87 @@
   portrait: media/portraits/weaver.jpg
   bio_key: npc.weaver.bio
   tags: [craftsman, weaver, artisan]
+
+# Citizens of Uruk: villagers, burghers and nobles (a man and a woman of each)
+
+# Barley Farmer
+- id: uruk_farmer
+  name_key: npc.uruk_farmer
+  place: uruk_market
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/uruk_farmer.glb}
+  dialogue: uruk_farmer
+  portrait: media/portraits/uruk_farmer.jpg
+  bio_key: npc.uruk_farmer.bio
+  tags: [villager, farmer, citizen]
+
+# Water Carrier
+- id: uruk_water_carrier
+  name_key: npc.uruk_water_carrier
+  place: uruk
+  character: {pack: retro, skin: humanFemaleA, model: media/models/uruk_water_carrier.glb}
+  dialogue: uruk_water_carrier
+  portrait: media/portraits/uruk_water_carrier.jpg
+  bio_key: npc.uruk_water_carrier.bio
+  tags: [villager, water_carrier, citizen]
+
+# Master Brickmaker
+- id: uruk_mason
+  name_key: npc.uruk_mason
+  place: uruk_wall
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/uruk_mason.glb}
+  dialogue: uruk_mason
+  portrait: media/portraits/uruk_mason.jpg
+  bio_key: npc.uruk_mason.bio
+  tags: [burgher, builder, artisan]
+
+# Ale-wife of Uruk
+- id: uruk_alewife
+  name_key: npc.uruk_alewife
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/uruk_alewife.glb}
+  dialogue: uruk_alewife
+  portrait: media/portraits/uruk_alewife.jpg
+  bio_key: npc.uruk_alewife.bio
+  tags: [burgher, tavern, citizen]
+
+# Elder of Uruk
+- id: uruk_elder
+  name_key: npc.uruk_elder
+  place: uruk_palace
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/uruk_elder.glb}
+  dialogue: uruk_elder
+  portrait: media/portraits/uruk_elder.jpg
+  bio_key: npc.uruk_elder.bio
+  tags: [noble, elder, council]
+
+# Lady of Uruk
+- id: uruk_noblewoman
+  name_key: npc.uruk_noblewoman
+  place: uruk_palace
+  character: {pack: protagonists, skin: skaterFemaleA, model: media/models/uruk_noblewoman.glb}
+  dialogue: uruk_noblewoman
+  portrait: media/portraits/uruk_noblewoman.jpg
+  bio_key: npc.uruk_noblewoman.bio
+  tags: [noble, lady, wealthy]
+
+# Citizens of Uruk: villagers, burghers and nobles (a man and a woman of each)
+
+# Sacred Courtesan of Ishtar
+- id: uruk_temple_courtesan
+  name_key: npc.uruk_temple_courtesan
+  place: ishtar_temple
+  character: {pack: retro, skin: humanFemaleA, model: media/models/uruk_temple_courtesan.glb}
+  dialogue: uruk_temple_courtesan
+  portrait: media/portraits/uruk_temple_courtesan.jpg
+  bio_key: npc.uruk_temple_courtesan.bio
+  tags: [temple, courtesan, ishtar, citizen]
+
+# Plowman
+- id: uruk_plowman
+  name_key: npc.uruk_plowman
+  place: uruk
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/uruk_plowman.glb}
+  dialogue: uruk_plowman
+  portrait: media/portraits/uruk_plowman.jpg
+  bio_key: npc.uruk_plowman.bio
+  tags: [villager, farmer, plowman]

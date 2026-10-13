@@ -14,8 +14,14 @@
   name_key: place.ziggurat_anu
   parent: uruk
   radius_m: 55
+  structure:
+    model: media/models/architecture/ziggurat_anu.glb
+    ground_m: [0, 34]   # the foot of the stairs stands on the ground
+    visible_m: 1500
   requires:
     max_slope_deg: 5
+    near:
+      - {place: uruk, min_m: 0, max_m: 140}   # the ziggurat (42 m reach) stays inside the walls
 
 - id: ziggurat_of_ishtar
   kind: building
@@ -61,6 +67,5 @@
   kind: building
   name_key: place.city_gate
   parent: uruk
-  at: gate
   spawn: true
   radius_m: 10

@@ -1,0 +1,26 @@
+# Plowman Dialogue Tree
+# Caste: villager
+
+id: uruk_plowman
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_plowman.greet
+    choices:
+      - {text_key: uruk_plowman.ask_a, goto: explain_a}
+      - {text_key: uruk_plowman.ask_b, goto: explain_b}
+      - {text_key: uruk_plowman.leave}
+
+  explain_a:
+    text_key: uruk_plowman.a
+    choices:
+      - {text_key: uruk_plowman.ask_b, goto: explain_b}
+      - {text_key: uruk_plowman.leave}
+
+  explain_b:
+    text_key: uruk_plowman.b
+    choices:
+      - {text_key: uruk_plowman.ask_a, goto: explain_a}
+      - {text_key: uruk_plowman.leave}

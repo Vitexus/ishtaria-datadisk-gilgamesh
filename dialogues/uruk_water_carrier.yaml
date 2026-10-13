@@ -1,0 +1,26 @@
+# Water Carrier Dialogue Tree
+# Caste: villager
+
+id: uruk_water_carrier
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_water_carrier.greet
+    choices:
+      - {text_key: uruk_water_carrier.ask_a, goto: explain_a}
+      - {text_key: uruk_water_carrier.ask_b, goto: explain_b}
+      - {text_key: uruk_water_carrier.leave}
+
+  explain_a:
+    text_key: uruk_water_carrier.a
+    choices:
+      - {text_key: uruk_water_carrier.ask_b, goto: explain_b}
+      - {text_key: uruk_water_carrier.leave}
+
+  explain_b:
+    text_key: uruk_water_carrier.b
+    choices:
+      - {text_key: uruk_water_carrier.ask_a, goto: explain_a}
+      - {text_key: uruk_water_carrier.leave}

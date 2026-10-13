@@ -1,0 +1,15 @@
+# Babylonian buildings as a fantasy element outside the walls of Uruk (Etemenanki is of c. 575 BCE, not of Gilgamesh's
+# Uruk; see research/ZIGGURATS.md). The Ishtar Gate is the gate of the walls of Uruk itself (places/uruk.yaml).
+
+- id: etemenanki
+  kind: building
+  name_key: place.etemenanki
+  radius_m: 100
+  structure:
+    model: media/models/architecture/ziggurat_etemenanki.glb
+    ground_m: [0, 78]   # the foot of the front stairs
+    visible_m: 3000
+  requires:
+    max_slope_deg: 6
+    near:
+      - {place: uruk, min_m: 380, max_m: 650}

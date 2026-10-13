@@ -1,0 +1,26 @@
+# Master Brickmaker Dialogue Tree
+# Caste: burgher
+
+id: uruk_mason
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: uruk_mason.greet
+    choices:
+      - {text_key: uruk_mason.ask_a, goto: explain_a}
+      - {text_key: uruk_mason.ask_b, goto: explain_b}
+      - {text_key: uruk_mason.leave}
+
+  explain_a:
+    text_key: uruk_mason.a
+    choices:
+      - {text_key: uruk_mason.ask_b, goto: explain_b}
+      - {text_key: uruk_mason.leave}
+
+  explain_b:
+    text_key: uruk_mason.b
+    choices:
+      - {text_key: uruk_mason.ask_a, goto: explain_a}
+      - {text_key: uruk_mason.leave}

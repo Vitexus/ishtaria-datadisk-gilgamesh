@@ -26,6 +26,7 @@ place.white_temple: White Temple
 place.great_wall_uruk: Great Wall of Uruk
 place.hanging_gardens: Hanging Gardens
 place.royal_tombs: Royal Tombs of Uruk
+place.etemenanki: Etemenanki, the Tower of Babylon
 place.city_gate: City Gate of Uruk
 
 # Music
@@ -577,3 +578,71 @@ quest.immortality.learn_of_plant: Utnapishtim reveals the location of the plant 
 quest.immortality.obtain_plant: Retrieve the plant from the bottom of the Waters of Death
 quest.immortality.return_with_plant: Return to Uruk with the precious plant of eternal youth
 quest.immortality.lose_plant: A serpent steals the plant while you bathe, losing your chance at immortality
+
+# Citizens of Uruk
+npc.uruk_farmer: Barley Farmer
+npc.uruk_farmer.bio: "Villager from the irrigated fields around Uruk, here to sell barley and onions. Wears a short undyed wool kaunakes, sun-browned skin, shaved head, a woven basket on his back and a reed sickle at his belt."
+uruk_farmer.greet: "May the waters reach your field, stranger. I am a barley farmer from the canals outside the walls."
+uruk_farmer.ask_a: Ask about the harvest
+uruk_farmer.ask_b: Ask about the city walls
+uruk_farmer.leave: I will not keep you from your work.
+uruk_farmer.a: "The canals were dug well this year and the barley stands high. Yet half of it goes to the temple granary, and the king's men take their share of what is left."
+uruk_farmer.b: "My brothers were called to carry bricks for the great wall. Work is hard, but nobody can say Gilgamesh does not build. When the floods come, we sleep safe behind it."
+npc.uruk_water_carrier: Water Carrier
+npc.uruk_water_carrier.bio: "Young woman from a village by the Euphrates who carries water to the houses of Uruk. Wears a simple undyed wool dress over one shoulder, hair in a plain braid, a large clay jar on her shoulder and a rope band across her forehead."
+uruk_water_carrier.greet: "Fresh water from the river! Mind the jar, traveler, it is heavier than it looks."
+uruk_water_carrier.ask_a: Ask where she gets the water
+uruk_water_carrier.ask_b: Ask about life in the city
+uruk_water_carrier.leave: I will not keep you from your work.
+uruk_water_carrier.a: "From the Euphrates, before dawn, when the river is clean. By noon the dyers and tanners have fouled it, and then I carry from the old well by the temple."
+uruk_water_carrier.b: "I walk every street, so I hear everything. They say the king does not sleep, and that his friend from the steppe came to Uruk wild as a beast. I only know the thirsty pay in barley."
+npc.uruk_mason: Master Brickmaker
+npc.uruk_mason.bio: "Respected townsman who oversees the brick kilns and the wall works of Uruk. Wears a knee-length wool kaunakes with a leather apron, strong clay-stained arms, a trimmed beard, a bronze-tipped measuring cord and a stamped baked brick in his hand."
+uruk_mason.greet: "Careful where you step, friend, the mortar is fresh. I am the master of the brickmakers of Uruk."
+uruk_mason.ask_a: Ask about the wall
+uruk_mason.ask_b: Ask about his craft
+uruk_mason.leave: I will not keep you from your work.
+uruk_mason.a: "Six thousand paces of baked brick, and every course laid true. The core is dried clay, but the face is fired in my kilns. These walls will outlast all of us."
+uruk_mason.b: "Clay from the river, straw, a wooden mould, sun for a week, then the kiln. Each brick bears the king's stamp. A cracked one goes back to the pit, no matter who made it."
+npc.uruk_alewife: Ale-wife of Uruk
+npc.uruk_alewife.bio: "Cheerful keeper of a beer house near the market, where townsfolk drink barley beer through reed straws. Wears a dyed ochre wool dress, a patterned shawl, bronze earrings, hair pinned up, with a beer jar on her hip and a ladle in her hand."
+uruk_alewife.greet: "Come in, come in! The beer is cool and the gossip is warm. What will you have?"
+uruk_alewife.ask_a: Ask about the beer
+uruk_alewife.ask_b: Ask what she has heard
+uruk_alewife.leave: I will not keep you from your work.
+uruk_alewife.a: "Barley bread soaked, left to ferment, strained through reeds. Drink it with a straw, stranger, the husks sink to the bottom. Beer is the gift of Ninkasi, and I do not water it!"
+uruk_alewife.b: "Everyone passes my door. Soldiers say the king wrestled a wild man in the street and they became brothers. Merchants say the cedar road is closed. And the scribes drink most and say least."
+npc.uruk_elder: Elder of Uruk
+npc.uruk_elder.bio: "Respected nobleman of the council of elders who advises the king. Wears a long ankle-length white kaunakes with a fringed shawl, a heavy gold collar with lapis beads, a long curled grey beard, rings and a carved staff of cedar."
+uruk_elder.greet: "Peace upon you. I sit in the council of Uruk and I have counseled kings before you were born."
+uruk_elder.ask_a: Ask about the council
+uruk_elder.ask_b: Ask about the king
+uruk_elder.leave: I will not keep you from your work.
+uruk_elder.a: "We are the elders of the great houses. We advise, we remember, and we argue. When Gilgamesh wished to march on the Cedar Forest, we begged him to stay. He laughed and went."
+uruk_elder.b: "He is strong and he is restless. A king who does not tire his people is a gift of the gods, but a king who tires them too much is a burden. Enkidu has gentled him, and for that we thank the gods."
+npc.uruk_noblewoman: Lady of Uruk
+npc.uruk_noblewoman.bio: "Noblewoman from one of the great houses of Uruk, patron of the temple of Ishtar. Wears a long tufted ankle-length dress in deep blue and cream, a tall headdress of gold leaves with lapis and carnelian beads, large lunate gold earrings and a collar of beads, and carries a carved ivory fan."
+uruk_noblewoman.greet: "You stand before the lady of a great house of Uruk. Speak, but be brief, for the procession of Ishtar begins at dusk."
+uruk_noblewoman.ask_a: Ask about the goddess Ishtar
+uruk_noblewoman.ask_b: Ask about life in the great houses
+uruk_noblewoman.leave: I will not keep you from your work.
+uruk_noblewoman.a: "I give gold to her temple and cloth to her priestesses, and she gives Uruk her favor. She is love and she is war; one does well to be on her good side."
+uruk_noblewoman.b: "We manage the estates, the granaries and the weavers, while our husbands argue in the council. Women of rank may own land and seal contracts in Uruk. Do not mistake silk for softness."
+
+# Citizens of Uruk
+npc.uruk_temple_courtesan: Sacred Courtesan of Ishtar
+npc.uruk_temple_courtesan.bio: "Woman consecrated to Ishtar who serves her temple as a sacred courtesan, a respected calling in Uruk. Wears a long red tufted wool dress draped over one shoulder, a gold-leaf hair ornament with lapis and carnelian beads, large gold earrings, a beaded collar, bracelets, and carries a small incense bowl."
+uruk_temple_courtesan.greet: "Ishtar's blessing upon you, traveler. I serve the goddess in her house. Come in peace and speak freely."
+uruk_temple_courtesan.ask_a: Ask about her service to the goddess
+uruk_temple_courtesan.ask_b: Ask about Shamhat and Enkidu
+uruk_temple_courtesan.leave: I will not keep you from your work.
+uruk_temple_courtesan.a: "The goddess is love and desire as well as war. Those of us consecrated to her bring her gifts to the city: joy, comfort and the blessing of her house. The temple shelters us and the city honors us."
+uruk_temple_courtesan.b: "Shamhat is our sister. She taught the wild man of the steppe words, bread and beer, and the wild beasts forsook him. A wise woman can civilize what a king's army could not tame."
+npc.uruk_plowman: Plowman
+npc.uruk_plowman.bio: "Weathered older farmer who plows the fields along the Euphrates behind a pair of oxen. Wears a short undyed wool wrap, a sun-faded felt cap, thick calloused hands, a long wooden goad and a wooden hoe over his shoulder, a leather water skin at his hip."
+uruk_plowman.greet: "Peace, friend. Forgive the mud, the oxen and I have been at the furrow since dawn."
+uruk_plowman.ask_a: Ask about plowing
+uruk_plowman.ask_b: Ask about the river and the floods
+uruk_plowman.leave: I will not keep you from your work.
+uruk_plowman.a: "A seeder plow, two oxen, and a straight furrow. The seed falls through the funnel as the blade opens the earth. The first plowing is for Ninurta, and we do not skimp on the offering."
+uruk_plowman.b: "The Euphrates gives and the Euphrates takes. A good flood is silt for the fields, a bad one is drowned barley. That is why I bless the king's wall, it keeps the water from the granaries."
