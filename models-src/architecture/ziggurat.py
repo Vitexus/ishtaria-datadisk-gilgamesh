@@ -370,9 +370,14 @@ def anu(model, rng):
         tops.append((z + h, 0.0, cy, t_w, t_front))
         top_front, top_w = t_front, t_w
         z += h
-    stairs(model, 0.0, -26.0 + 0.45 - 7.9, (0, 1), 6.0, 0.0, 7.5, 7.9, rh=0.3)
-    stairs(model, -19.0, -27.5, (1, 0), 3.0, 0.0, 6.0, 12.0, rh=0.3, slab=1.6)
-    stairs(model, 19.0, -27.5, (-1, 0), 3.0, 0.0, 6.0, 12.0, rh=0.3, slab=1.6)
+    # Three flights meet on a solid landing against the front of the first terrace (as at Ur): the middle one climbs
+    # straight at it, the two side flights run along the front towards it. All are solid masonry down to the ground.
+    landing_front, landing_half = -29.0, 6.0
+    wall_top_y = -26.0 + 0.45          # where the batter of the first terrace ends at its top
+    box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front, 0.0, 7.5, "mudbrick", "plaster", rng)
+    stairs(model, 0.0, landing_front - 7.9, (0, 1), 6.0, 0.0, 7.5, 7.9, rh=0.3)
+    stairs(model, -19.0, -27.5, (1, 0), 3.0, 0.0, 7.5, 19.0 - landing_half, rh=0.3)
+    stairs(model, 19.0, -27.5, (-1, 0), 3.0, 0.0, 7.5, 19.0 - landing_half, rh=0.3)
     zt, cx, cy_k, t_w, t_front = tops[1]
     y_front = cy_k - 19.0
     margin = y_front - tops[0][4]
