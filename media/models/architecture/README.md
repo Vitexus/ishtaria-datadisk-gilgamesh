@@ -20,6 +20,11 @@ This directory contains 3D models of Mesopotamian architecture created for the G
    curtain walls, glazed blue brick with rows of aurochs and mushussu dragons (88 x 56 m, 27 m high with merlons);
    `processional_way.glb` (1.3 MB): the street, 80 m, with the walls of striding lions. See `research/ISHTAR_GATE.md`.
 
+   `uruk_walls.glb` (3.9 MB) and `uruk_walls_collision.glb` (1 MB): the wall of Uruk on its surveyed OpenStreetMap
+   outline (8.6 km, 18 m high, towers, stairs), with the Ishtar Gate and Processional Way in the south wall and
+   the Anu ziggurat on its excavated terrace; built by `models-src/architecture/uruk_walls.py` from
+   `tools/data/uruk_outlines.json`, see `research/LANDSCAPE.md`.
+
    `ziggurat_anu.glb` (1.1 MB): Early Dynastic ziggurat of Anu with the White Temple (Uruk), ~52 m
 
 3. **ziggurat_complex.glb** (9.8 KB)

@@ -18,6 +18,10 @@ attribution: >
   (RealVisXL_V4.0); portraits are renders of these models.
   The model of Ishtar was generated with Hyper3D Rodin from a concept image made with InvokeAI.
   3D models created using Blender 4.3.2.
+  The terrain patch of Uruk is built from the Copernicus DEM (GLO-30) distributed under the
+  European Space Agency terms (contains modified Copernicus data, 2026) with hydrography and
+  site outlines from OpenStreetMap (ODbL, openstreetmap.org/copyright); the Early Dynastic
+  course of the Euphrates is a documented reconstruction (research/LANDSCAPE.md).
 rating: teen
 languages: [en, cs]
 

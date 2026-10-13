@@ -23,3 +23,6 @@ Thumbs.db
 # Python caches
 __pycache__/
 *.pyc
+
+# Landscape source cache (Copernicus DEM tiles, Overpass downloads)
+tools/cache/

@@ -18,7 +18,7 @@ quests/                the epic questline as stage machines
 lore/                  codex entries for the epic characters and events
 i18n/en.yaml cs.yaml   English and Czech translations
 voice/voices.yaml      voice synthesizer settings for NPC speech
-tools/                 helper scripts (render_voices.py)
+tools/                 helper scripts (render_voices.py, build_landscape.py: terrain patch of Uruk, see research/LANDSCAPE.md)
 media/                 portraits, character models (media/models/*.glb), architecture models, cover
 models-src/            Blender builder of the character models (not installed)
 ```

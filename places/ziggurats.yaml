@@ -14,14 +14,13 @@
   name_key: place.ziggurat_anu
   parent: uruk
   radius_m: 55
-  structure:
-    model: media/models/architecture/ziggurat_anu.glb
-    ground_m: [0, 34]   # the foot of the stairs stands on the ground
-    visible_m: 1500
+  # The building itself is part of the model of the walls (places/uruk.yaml), on the surveyed terrace 137 m east and 201 m
+  # north of the middle of the site. This place only lies somewhere within 140 m of the middle: a child place cannot be
+  # put at a bearing (a narrower ring leaves no room among its siblings, whose radii exclude each other).
   requires:
     max_slope_deg: 5
     near:
-      - {place: uruk, min_m: 0, max_m: 140}   # the ziggurat (42 m reach) stays inside the walls
+      - {place: uruk, min_m: 0, max_m: 140}
 
 - id: ziggurat_of_ishtar
   kind: building

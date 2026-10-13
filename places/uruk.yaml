@@ -5,12 +5,25 @@
   name_key: place.uruk
   radius_m: 200
   # No generated town: its medieval houses and walls (Kenney Fantasy Town, Castle kits) do not belong to Uruk of 2700 BCE.
-  # The walls of glazed blue brick are built to match the Ishtar Gate, which is their entrance (models-src/architecture/
-  # uruk_walls.py). The model's origin is the middle of the gate; the middle of the walled area lies 232 m behind it.
+  # The wall follows the surveyed outline of the real wall of Uruk (OpenStreetMap, 8.6 km, 520 ha), in glazed blue brick to
+  # match the Ishtar Gate, which is its entrance in the south wall (models-src/architecture/uruk_walls.py). The model's
+  # origin is the middle of the gate, which stands `offset_m` (printed by the builder) from the anchor of the place, in
+  # the middle of the site; the terrain height is taken there and the wall follows the relief from it. The server walks on
+  # the lean collision model.
   structure:
     model: media/models/architecture/uruk_walls.glb
-    offset_m: [0, 232]
-    visible_m: 1500
+    collision: media/models/architecture/uruk_walls_collision.glb
+    offset_m: [41.2, 1263.1]   # the Ishtar Gate: the model's origin, where its height is taken from the terrain
+    visible_m: 3200
+  # The real relief of the floodplain around the tell (Copernicus DEM), with the Euphrates
+  # returned to its Early Dynastic course along the outside of the east wall: the channel has moved away
+  # since, the relief stayed. See research/LANDSCAPE.md; built by tools/build_landscape.py.
+  terrain:
+    heightmap: media/terrain/uruk_height.png
+    water: media/terrain/uruk_water.png
+    extent_m: [6000, 6000]
+    feather_m: 120
+    visible_m: 2000
   spawn: false
   requires:
     biome: [grassland]

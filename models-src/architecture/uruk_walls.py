@@ -1,17 +1,24 @@
-"""The walls of Uruk, built to match the Ishtar Gate (see ishtar_gate.py), in one model with the gate.
+"""The walls of Uruk along their real outline, built to match the Ishtar Gate (see ishtar_gate.py), with the gate.
 
     blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls media/models/architecture/uruk_walls.glb
+    blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls_collision media/models/architecture/uruk_walls_collision.glb
 
-A rectangular circuit of glazed blue brick, 18 m high and 7 m thick like the curtain walls of the inner gate, closes the
-city: the outer face carries the rows of aurochs and mushussu dragons and the stepped battlements of the gate, the inner
-face is plain glaze, and the passage of the Ishtar Gate (with its outer gate, courtyard and 80 m Processional Way) is the
-only entrance. Towers stand at the corners and every ~85 m; four flights of stairs inside climb to the wall walk.
+The circuit follows the OpenStreetMap outline of the wall of Uruk (8.6 km, 520 ha), written to tools/data/uruk_outlines.json
+by tools/build_landscape.py in the client's local frame: 18 m high and 7 m thick, glazed blue brick like the curtain walls of
+the inner gate, with stepped battlements and a tower every ~75 m. The wall follows the relief of the terrain patch (the
+outline in the JSON carries the terrain height at every point); 6 m of foundation lie below the ground. The Ishtar Gate
+(outer gate, courtyard, inner gate and the 80 m Processional Way) stands in the south wall where the wall is straightest
+and the terrain flattest; four flights of stairs inside climb to the wall walk. The Early Dynastic ziggurat of Anu (ziggurat.py)
+is part of the same model, on its excavated terrace: a place can show only one building and the datadisk cannot put a
+child place at a bearing, so the exact spot (OSM footprint, turned like the survey) is kept here.
 
-Metres, ground at z = 0, the street runs along -Y into the gate, the city lies on the +Y side.
-The origin is the middle of the gate, so a datadisk places the model with `offset_m: [0, CENTRE_Y]` (the middle of the
-walled area, in the model's -Z direction in glTF) to put the middle of the city at the anchor of its place.
-Walls are 14 m deep below the ground so that they do not float on uneven terrain.
+Metres. The origin is the middle of the Ishtar Gate on the outline of the wall and z = 0 the terrain height there, so the
+model stands on the terrain wherever the datadisk puts it: `offset_m` is the position of the gate from the anchor of the
+place (the middle of the OSM site), printed at the end. Blender X is east and Y is north, so the glTF z axis points
+south like the client's local z: x_local = X, z_local = -Y.
+The collision model has no battlements, animals or textures; it is what the server walks on.
 """
+import json
 import math
 import os
 import random
@@ -26,94 +33,228 @@ sys.path.insert(0, HERE)
 import ishtar_gate as G  # noqa: E402
 import ziggurat as Z  # noqa: E402
 
+OUTLINES = os.path.join(HERE, "..", "..", "tools", "data", "uruk_outlines.json")
 WALL_H = 18.0       # as the curtain walls of the inner gate
 THICK = 7.0
-Y_OUT = 22.0        # outer face of the south wall: the line of the inner gate's curtain walls
-HALF_W = 200.0      # half of the width of the circuit, to the outer faces
-LENGTH = 420.0      # depth of the circuit, to the outer faces
+Y_OUT = 22.0        # outer face of the gate's curtain walls in the gate's own frame
 STUB = 44.0         # where the curtain walls of the gate end
-TOWER = 11.0
-TOWER_H = WALL_H + 5.0
-DEPTH = 14.0        # the foundation below the ground
-CENTRE_Y = Y_OUT + LENGTH / 2   # the middle of the city, seen from the middle of the gate
+TOWER = 9.0
+TOWER_H = WALL_H + 4.0
+FOUNDATION = 6.0    # the wall reaches this far below the terrain
+TOWER_EVERY = 75.0
+MERLON_EVERY = 6.0
+ANU_YAW_DEG = 41.0       # the terrace is turned like the surveyed footprint; the stairs face the Eanna precinct
+ROWS_NEAR_GATE = 300.0   # animal rows on the wall this far from the gate stubs, plain glaze elsewhere
+PROCESSION = 80.0
 
 
 def v3(x, y, z):
     return Vector((x, y, z))
 
 
-def segment(model, a, b, rng, rows):
-    """A wall from a to b along its outer face (the outer side is to the right of the direction a -> b)."""
-    d = b - a
-    length = d.length
-    t = d / length
-    out = Vector((t.y, -t.x))
-    inn = -out
-    a_in = a + inn * THICK
-    b_in = b + inn * THICK
-    # outer and inner faces, from the foundation up
-    model.jitter = 0.94 + rng.random() * 0.06
-    model.wall([v3(a.x, a.y, -DEPTH), v3(b.x, b.y, -DEPTH), v3(b.x, b.y, WALL_H), v3(a.x, a.y, WALL_H)], "blueglaze", t, rng.random() * 6, v3(out.x, out.y, 0))
-    model.wall([v3(b_in.x, b_in.y, -DEPTH), v3(a_in.x, a_in.y, -DEPTH), v3(a_in.x, a_in.y, WALL_H), v3(b_in.x, b_in.y, WALL_H)], "blueglaze", -t, rng.random() * 6, v3(inn.x, inn.y, 0))
-    model.jitter = 1.0
-    model.top([v3(a.x, a.y, WALL_H), v3(b.x, b.y, WALL_H), v3(b_in.x, b_in.y, WALL_H), v3(a_in.x, a_in.y, WALL_H)], "bakedbrick")
-    # plinth and the rows of animals on the outer face, as on the gate
-    model.wall([v3(a.x + out.x * 0.04, a.y + out.y * 0.04, 0), v3(b.x + out.x * 0.04, b.y + out.y * 0.04, 0),
-                v3(b.x + out.x * 0.04, b.y + out.y * 0.04, G.PLINTH), v3(a.x + out.x * 0.04, a.y + out.y * 0.04, G.PLINTH)],
-               "bakedbrick", t, 0.0, v3(out.x, out.y, 0))
-    G.animal_rows(model, a, t, out, length, G.PLINTH + 0.4, rows, (t.x, t.y), rng, margin=1.2)
-    # stepped battlements along the outer edge only; the inner edge stays open for the wall walk
-    merlons(model, a + out * -0.5 + t * 0.5, b + out * -0.5 - t * 0.5, WALL_H, rng)
+class Ring:
+    """The wall outline: points (Blender X, Y, terrain height) of a closed outline, counter-clockwise seen from above,
+    so that the outside is to the right of the direction of travel."""
+
+    def __init__(self, points):
+        self.p = [Vector((x, -z)) for x, z, _ in points[:-1]]
+        self.h = [h for _, _, h in points[:-1]]
+        self.n = len(self.p)
+        area = sum(self.p[i].x * self.p[(i + 1) % self.n].y - self.p[(i + 1) % self.n].x * self.p[i].y for i in range(self.n))
+        if area < 0:
+            raise SystemExit("the outline must run counter-clockwise (x east, y north)")
+
+    def tangent(self, i, span=3):
+        d = self.p[(i + span) % self.n] - self.p[(i - span) % self.n]
+        return d.normalized()
+
+    @staticmethod
+    def outward(t):
+        return Vector((t.y, -t.x))
 
 
-def merlons(model, a, b, z, rng):
-    """Battlements of the long walls: one block every 3.4 m (the gate keeps its two-step merlons), to save size."""
-    d = b - a
-    t = d / d.length
-    n = max(1, int(d.length / 3.4))
-    for k in range(n):
-        c = a + d * ((k + 0.5) / n)
-        sx, sy = (1.5, 1.0) if abs(t.x) > 0.5 else (1.0, 1.5)
-        Z.box(model, c.x, c.y, sx, sy, z, z + 1.6, "blueglaze", "bakedbrick", rng=rng)
+def pick_gate(ring):
+    """The point of the south wall that is straightest and has the flattest terrain."""
+    best = None
+    for i in range(ring.n):
+        t = ring.tangent(i, 3)
+        out = ring.outward(t)
+        if out.y > -0.6:
+            continue
+        bend = 0.0
+        flat = 0.0
+        for k in range(-4, 5):
+            q = ring.p[(i + k) % ring.n]
+            bend += abs((q - ring.p[i]).dot(out))
+            flat += abs(ring.h[(i + k) % ring.n] - ring.h[i])
+        # the street leads 80 m out of the gate: the terrain there should not rise to the wall top
+        score = bend + 8.0 * flat
+        if best is None or score < best[0]:
+            best = (score, i)
+    return best[1]
 
 
-def tower(model, cx, cy, rng):
-    Z.box(model, cx, cy, TOWER, TOWER, -DEPTH, TOWER_H, "blueglaze", "bakedbrick", rng)
-    G.crenellations(model, Vector((cx - TOWER / 2 + 0.5, cy - TOWER / 2 + 0.5)), Vector((cx + TOWER / 2 - 0.5, cy - TOWER / 2 + 0.5)), TOWER_H, rng)
-    G.crenellations(model, Vector((cx - TOWER / 2 + 0.5, cy + TOWER / 2 - 0.5)), Vector((cx + TOWER / 2 - 0.5, cy + TOWER / 2 - 0.5)), TOWER_H, rng)
-    for sx in (-1, 1):
-        G.crenellations(model, Vector((cx + sx * (TOWER / 2 - 0.5), cy - TOWER / 2 + 0.5)), Vector((cx + sx * (TOWER / 2 - 0.5), cy + TOWER / 2 - 0.5)), TOWER_H, rng)
+def rbox(model, c, t, sl, sw, z0, z1, mat_wall, mat_top, rng=None):
+    """A block without a bottom, sl long along t, sw wide across it, centred at c."""
+    s = Vector((-t.y, t.x))
+    corners = [c - t * sl / 2 - s * sw / 2, c + t * sl / 2 - s * sw / 2, c + t * sl / 2 + s * sw / 2, c - t * sl / 2 + s * sw / 2]
+    for i in range(4):
+        a, b = corners[i], corners[(i + 1) % 4]
+        d = (b - a).normalized()
+        model.wall([v3(a.x, a.y, z0), v3(b.x, b.y, z0), v3(b.x, b.y, z1), v3(a.x, a.y, z1)], mat_wall, d,
+                   rng.random() * 8 if rng else 0.0, v3(d.y, -d.x, 0))
+    model.top([v3(q.x, q.y, z1) for q in corners], mat_top)
 
 
-def circuit(model, rng):
+def move_gate(model, ring, gate, datum):
+    """The gate complex was built in its own frame (street along -Y, wall line at y = Y_OUT); put it into the wall."""
+    t = ring.tangent(gate, 3)
+    out = ring.outward(t)
+    origin = ring.p[gate]
+    for v in model.bm.verts:
+        gx, gy = v.co.x, v.co.y
+        w = origin + t * gx + out * (Y_OUT - gy)
+        v.co = Vector((w.x, w.y, v.co.z))
+    return t, out, origin
+
+
+def chain_around_gate(ring, gate, gap):
+    """Indices of the wall, going from the gate's forward stub round the whole circuit to its backward stub. The cut
+    points are interpolated on the outline `gap` metres from the gate; returns [(position, height)]."""
+    n = ring.n
+    pts = [(ring.p[(gate + k) % n], ring.h[(gate + k) % n]) for k in range(n + 1)]
+    # arc length from the gate going forward
+    arc = [0.0]
+    for a, b in zip(pts, pts[1:]):
+        arc.append(arc[-1] + (b[0] - a[0]).length)
+    total = arc[-1]
+
+    def at(s):
+        for k in range(n):
+            if arc[k] <= s <= arc[k + 1]:
+                f = (s - arc[k]) / (arc[k + 1] - arc[k])
+                return pts[k][0].lerp(pts[k + 1][0], f), pts[k][1] + (pts[k + 1][1] - pts[k][1]) * f
+        raise ValueError(s)
+
+    chain = [at(gap)]
+    chain += [pts[k] for k in range(n) if gap < arc[k] < total - gap]
+    chain.append(at(total - gap))
+    return chain, arc, total
+
+
+def circuit(model, ring, gate, datum, gate_pos, rng, collision):
     rows = ["bull", "dragon", "bull"]
-    x = HALF_W
-    y0, y1 = Y_OUT, Y_OUT + LENGTH
-    corners = [Vector((-x, y0)), Vector((x, y0)), Vector((x, y1)), Vector((-x, y1))]
-    # The outer side is to the right of the direction a -> b. South: east-wards, outer face towards -Y; the gate's own
-    # curtain walls reach STUB. Then east (+Y), north (-X) and west (-Y), the circuit seen from above, clockwise.
-    segment(model, Vector((-x, y0)), Vector((-STUB, y0)), rng, rows)
-    segment(model, Vector((STUB, y0)), Vector((x, y0)), rng, rows)
-    segment(model, Vector((x, y0)), Vector((x, y1)), rng, rows)
-    segment(model, Vector((x, y1)), Vector((-x, y1)), rng, rows)
-    segment(model, Vector((-x, y1)), Vector((-x, y0)), rng, rows)
-    # towers at the corners and along the walls
-    for c in corners:
-        tower(model, c.x - math.copysign(3.5, c.x), c.y + (3.5 if c.y == y0 else -3.5), rng)
-    for k in range(1, 4):
-        tower(model, x - THICK / 2, y0 + LENGTH * k / 4, rng)
-        tower(model, -x + THICK / 2, y0 + LENGTH * k / 4, rng)
-        tower(model, -x + 2 * x * k / 4, y1 - THICK / 2, rng)
-    for sx in (-1, 1):
-        tower(model, sx * (STUB + 40.0), y0 + THICK / 2, rng)
-        tower(model, sx * (STUB + 90.0), y0 + THICK / 2, rng)
-    # stairs from the inside up to the wall walk: flush with the inner face, the top meets the wall top
-    inner = x - THICK
-    z0 = 0.0
-    Z.stairs(model, inner - 1.5, y0 + 112.0, (0, 1), 3.0, z0, WALL_H, 50.0, rh=0.3)
-    Z.stairs(model, -inner + 1.5, y0 + 112.0, (0, 1), 3.0, z0, WALL_H, 50.0, rh=0.3)
-    Z.stairs(model, -76.0, y1 - THICK - 1.5, (1, 0), 3.0, z0, WALL_H, 50.0, rh=0.3)
-    Z.stairs(model, -72.0, y0 + THICK + 1.5, (1, 0), 3.0, z0, WALL_H, 50.0, rh=0.3)
+    chain, _, total = chain_around_gate(ring, gate, STUB)
+    m = len(chain)
+    seg_n = []
+    for k in range(m - 1):
+        d = (chain[k + 1][0] - chain[k][0]).normalized()
+        seg_n.append(Ring.outward(d))
+    # mitred outward normals at the vertices of the chain
+    vert_n = [seg_n[0]]
+    for k in range(1, m - 1):
+        mean = (seg_n[k - 1] + seg_n[k]).normalized()
+        vert_n.append(mean)
+    vert_n.append(seg_n[-1])
+    scale = []
+    for k in range(m):
+        ref = seg_n[min(k, m - 2)]
+        scale.append(min(2.5, 1.0 / max(0.4, vert_n[k].dot(ref))))
+    outer = [chain[k][0] for k in range(m)]
+    inner = [chain[k][0] - vert_n[k] * THICK * scale[k] for k in range(m)]
+    base = [chain[k][1] - datum - FOUNDATION for k in range(m)]
+    top = [chain[k][1] - datum + WALL_H for k in range(m)]
+
+    arc_from_gate = 0.0
+    for k in range(m - 1):
+        a, b = outer[k], outer[k + 1]
+        length = (b - a).length
+        t = (b - a) / length
+        out = seg_n[k]
+        ia, ib = inner[k], inner[k + 1]
+        plain = "blueglaze"
+        model.jitter = 0.92 + rng.random() * 0.08
+        model.wall([v3(a.x, a.y, base[k]), v3(b.x, b.y, base[k + 1]), v3(b.x, b.y, top[k + 1]), v3(a.x, a.y, top[k])],
+                   plain, t, rng.random() * 6, v3(out.x, out.y, 0))
+        model.wall([v3(ib.x, ib.y, base[k + 1]), v3(ia.x, ia.y, base[k]), v3(ia.x, ia.y, top[k]), v3(ib.x, ib.y, top[k + 1])],
+                   plain, -t, rng.random() * 6, v3(-out.x, -out.y, 0))
+        model.jitter = 1.0
+        model.top([v3(a.x, a.y, top[k]), v3(b.x, b.y, top[k + 1]), v3(ib.x, ib.y, top[k + 1]), v3(ia.x, ia.y, top[k])], "bakedbrick")
+        if collision:
+            continue
+        # animal rows on the outer face near the gate, as on the gate itself
+        near_gate = min(arc_from_gate, total - 2 * STUB - arc_from_gate) < ROWS_NEAR_GATE
+        if near_gate and length > 6.0:
+            mid = (chain[k][1] + chain[k + 1][1]) / 2 - datum
+            G.animal_rows(model, a, t, out, length, mid + G.PLINTH + 0.4, rows, (t.x, t.y), rng, margin=1.0)
+        # stepped battlements along the outer edge
+        count = max(1, int(length / MERLON_EVERY))
+        for q in range(count):
+            f = (q + 0.5) / count
+            c = a.lerp(b, f) - out * 0.5
+            z = top[k] + (top[k + 1] - top[k]) * f
+            rbox(model, c, t, 1.6, 1.0, z - 0.5, z + 1.6, "blueglaze", "bakedbrick")
+        arc_from_gate += length
+
+    # towers on the outer edge, every ~TOWER_EVERY metres and at the ends
+    run = 0.0
+    towers = 0
+    for k in range(m):
+        if k > 0:
+            run += (chain[k][0] - chain[k - 1][0]).length
+        if k == 0 or k == m - 1 or run >= TOWER_EVERY:
+            run = 0.0
+            ref = seg_n[min(k, m - 2)]
+            t = Vector((-ref.y, ref.x))
+            c = chain[k][0] - ref * 0.5
+            z = chain[k][1] - datum
+            rbox(model, c, t, TOWER, TOWER, z - FOUNDATION, z + TOWER_H, "blueglaze", "bakedbrick", rng)
+            if not collision:
+                rbox(model, c, t, TOWER - 2.5, TOWER - 2.5, z + TOWER_H, z + TOWER_H + 1.8, "bakedbrick", "bakedbrick")
+            towers += 1
+    print("circuit:", m - 1, "wall pieces,", towers, "towers, wall length", round(total - 2 * STUB), "m")
+
+    # stairs from the inside up to the wall walk, climbing away from the gate on both sides
+    for direction in (1, -1):
+        for start in (90.0, 520.0):
+            s0 = start
+            # find the chain position at arc s0 from the stub, either end
+            arc = 0.0
+            order = range(m - 1) if direction == 1 else range(m - 2, -1, -1)
+            for k in order:
+                a, b = (chain[k][0], chain[k + 1][0]) if direction == 1 else (chain[k + 1][0], chain[k][0])
+                ha, hb = (chain[k][1], chain[k + 1][1]) if direction == 1 else (chain[k + 1][1], chain[k][1])
+                length = (b - a).length
+                if arc + length < s0 + 50.0 + 1e-6:
+                    arc += length
+                    continue
+                break
+            else:
+                continue
+            # straight run of 50 m from the cut: along the chain, flush with the inner face
+            d = (b - a).normalized()
+            out = Ring.outward(d)
+            f = max(0.0, (s0 - arc) / length)
+            origin = a.lerp(b, f) - out * (THICK + 1.5)
+            z_start = (ha + (hb - ha) * f) - datum
+            if f * length + 50.0 > length:
+                continue
+            z_end = (ha + (hb - ha) * ((f * length + 50.0) / length)) - datum
+            Z.stairs(model, origin.x, origin.y, (d.x, d.y), 3.0, z_start, (z_end + WALL_H) - z_start, 50.0, rh=0.3)
+
+
+def anu_ziggurat(model, rng, outlines, datum):
+    """The Anu ziggurat at the centre of its OSM footprint, on the lowest ground under it."""
+    first = len(model.bm.verts)
+    Z.anu(model, rng)
+    angle = math.radians(ANU_YAW_DEG)
+    c, s = math.cos(angle), math.sin(angle)
+    cx, cz = outlines["ziggurat_centre"]
+    lift = outlines["ziggurat_base_h"] - datum
+    for v in list(model.bm.verts)[first:]:
+        x, y = v.co.x, v.co.y
+        v.co = Vector((cx + x * c - y * s, -cz + x * s + y * c, v.co.z + lift))
+    print("Anu ziggurat at local x=%.1f z=%.1f, %.1f m above the gate datum" % (cx, cz, lift))
 
 
 def recompress(quality=70):
@@ -154,17 +295,37 @@ def finish(model, path, quality=70):
 def main():
     args = sys.argv[sys.argv.index("--") + 1:]
     which, out = args[0], args[1]
+    if which not in ("uruk_walls", "uruk_walls_collision"):
+        raise SystemExit("unknown model " + which)
+    collision = which == "uruk_walls_collision"
     rng = random.Random(7)
     bpy.ops.wm.read_factory_settings(use_empty=True)
+    with open(OUTLINES) as handle:
+        outlines = json.load(handle)
+    ring = Ring(outlines["wall"])
+    gate = pick_gate(ring)
+    datum = ring.h[gate]
     model = Z.Model()
-    if which != "uruk_walls":
-        raise SystemExit("unknown model " + which)
     G.gate_complex(model, rng)
-    G.processional_way(model, rng)
-    circuit(model, rng)
-    recompress()
+    G.processional_way(model, rng, PROCESSION)
+    t, outward, origin = move_gate(model, ring, gate, datum)
+    circuit(model, ring, gate, datum, origin, rng, collision)
+    anu_ziggurat(model, rng, outlines, datum)
+    if collision:   # no textures: the colours are all the server needs
+        for name, spec in list(Z.MATERIALS.items()):
+            Z.MATERIALS[name] = (None,) + spec[1:]
+        for name, spec in list(G.Z.MATERIALS.items()):
+            G.Z.MATERIALS[name] = (None,) + spec[1:]
+    else:
+        recompress()
+    # re-centre on the gate: the model's origin is where its height is taken from the terrain
+    for v in model.bm.verts:
+        v.co.x -= origin.x
+        v.co.y -= origin.y
     finish(model, out)
-    print("centre_y", CENTRE_Y)
+    print("gate at local x=%.1f z=%.1f, terrain %.2f m above the anchor" % (origin.x, -origin.y, datum))
+    print("offset_m: [%.1f, %.1f]" % (origin.x, -origin.y))
+    print("gate direction (outward) x=%.3f z=%.3f" % (outward.x, -outward.y))
 
 
 if __name__ == "__main__":
