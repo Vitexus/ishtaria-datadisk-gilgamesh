@@ -26,3 +26,4 @@ royal_guard 14d87734-46a9-4b4f-aa11-1839b142eccc
 bull_of_heaven d0e0b080-e785-4d4b-b2b4-44f799d364cd
 scorpion_body 00b68491-d7f8-4c11-a356-c9584905d000
 scorpion_torso f091a3df-858a-4ef9-a3f2-ebb880466ae9
+mountain_lion 28b0a519-6167-48ce-a351-348d655aa5a5

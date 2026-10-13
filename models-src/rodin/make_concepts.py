@@ -97,6 +97,10 @@ CREATURES = {
     "bull_of_heaven": "the Bull of Heaven, a gigantic mythical aurochs bull, massive muscular body with a high hump, thick dark brown hide, "
                       "long curved heavy cream-coloured horns with gold rings, a braided blue lapis lazuli beard under the chin, "
                       "glowing red eyes, four strong legs with black hooves planted wide apart, head lowered, tail hanging, all four legs clearly visible",
+    # the lions Gilgamesh met in the mountain passes (a stele shows him carrying one): the maned Asiatic lion, a big dangerous cat
+    "mountain_lion": "a huge powerful Asiatic lion of the mountains, thick dark brown mane, heavy muscular body, broad paws with "
+                     "claws, long tail with a tufted tip, tawny golden coat, alert snarling face with bared fangs, standing on all four "
+                     "legs spread apart, all four legs clearly visible, the whole tail visible",
 }
 CHARS.update(CREATURES)
 CHARS["scorpion_torso"] = ("a bearded Sumerian mountain guardian, huge muscular man with long black hair, thick curled black beard, a small golden horned "
