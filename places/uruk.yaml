@@ -43,15 +43,19 @@
   kind: building
   name_key: place.eanna_temple
   parent: uruk
-  radius_m: 40
+  radius_m: 20
+  # The Eanna precinct (OSM way, tools/data/uruk_outlines.json): 147 m east and 159 m north of the middle of the site.
+  locate: {from: uruk, bearing_deg: 43, distance_m: 217, tolerance_m: 12}
   requires:
     max_slope_deg: 5
 
 - id: ishtar_temple
   kind: building
   name_key: place.ishtar_temple
-  parent: uruk
-  radius_m: 35
+  parent: eanna_temple
+  radius_m: 20
+  # In the precinct of Inanna, a little to the south-west of its middle.
+  locate: {from: eanna_temple, bearing_deg: 225, distance_m: 45, tolerance_m: 15}
   requires:
     max_slope_deg: 5
 
@@ -76,11 +80,12 @@
   name_key: place.cedar_forest
   radius_m: 150
   scenery: {preset: town}
+  # The Cedar Forest of the epic is the cedar mountains of Lebanon: 953 km west-north-west of Uruk
+  # (34.24 N 36.05 E against 31.32 N 45.64 E).
+  locate: {from: uruk, bearing_deg: 292, distance_m: 953000, tolerance_m: 250000}
   requires:
-    height_m: {min: 50, max: 500}
+    height_m: {min: 20, max: 1500}
     max_slope_deg: 20
-    near:
-      - {place: uruk, min_m: 1000, max_m: 5000}
 
 - id: humbaba_lair
   kind: building
@@ -95,11 +100,11 @@
   name_key: place.mount_mashu
   radius_m: 60
   scenery: {preset: town}
+  # Mashu, the mountain of the sunset, is taken for the Anti-Lebanon: 68 km south-east of the cedars.
+  locate: {from: cedar_forest, bearing_deg: 137, distance_m: 68000, tolerance_m: 60000}
   requires:
     height_m: {min: 0, max: 3000}
     max_slope_deg: 30
-    near:
-      - {place: cedar_forest, min_m: 200, max_m: 1000}
 
 - id: scorpion_gate
   kind: landmark
@@ -121,17 +126,16 @@
   kind: landmark
   name_key: place.waters_of_death
   radius_m: 80
+  # The waters that Gilgamesh crossed: the head of the Gulf, 333 km south-east of Uruk (29.9 N 48.7 E).
+  locate: {from: uruk, bearing_deg: 118, distance_m: 333000, tolerance_m: 150000}
   requires:
-    biome: [grassland]
-    near:
-      - {place: mount_mashu, min_m: 200, max_m: 1000}
+    max_slope_deg: 10
 
 - id: utnapishtim_dwelling
   kind: building
   name_key: place.utnapishtim_dwelling
   radius_m: 35
+  # Utnapishtim lives in Dilmun, which is taken for Bahrain: 756 km south-east of Uruk (26.07 N 50.56 E).
+  locate: {from: uruk, bearing_deg: 139, distance_m: 756000, tolerance_m: 300000}
   requires:
-    biome: [grassland]
-    max_slope_deg: 5
-    near:
-      - {place: waters_of_death, min_m: 100, max_m: 500}
+    max_slope_deg: 10

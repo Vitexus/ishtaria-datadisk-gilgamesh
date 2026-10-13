@@ -9,7 +9,7 @@
     model: media/models/architecture/ziggurat_etemenanki.glb
     ground_m: [0, 78]   # the foot of the front stairs
     visible_m: 3000
+  # Babylon lies 177 km north-west of Uruk (32.54 N 44.42 E against 31.32 N 45.64 E).
+  locate: {from: uruk, bearing_deg: 320, distance_m: 177000, tolerance_m: 20000}
   requires:
     max_slope_deg: 6
-    near:
-      - {place: uruk, min_m: 380, max_m: 650}

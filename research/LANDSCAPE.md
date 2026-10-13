@@ -80,12 +80,11 @@ and reed/palm banks); it is proposed, not built.
 
 ## Known simplifications (alpha)
 
-- **Child places cannot be put at a bearing.** Eanna temple, Ishtar temple, market, palace and the other
-  places of Uruk still stand wherever the generator finds room within 140 m of the anchor, not on their
-  excavated spots (Eanna precinct, centre 147 m east, 159 m north, 180 × 213 m, is in the outline file). Fixing
-  this needs explicit coordinates for places in the datadisk format (`at_m`, a contract change).
-- **The new players appear in the middle of the city**, within about 160 m of the anchor (`city_gate` is a
-  spawn place that cannot be pinned to the gate of this wall).
+- **Places lie where the excavations and the geography put them** (`locate`, ADR 0016): the Eanna precinct and the
+  Anu ziggurat from the OSM outlines, the White Temple on the ziggurat, the Ishtar temple in Eanna, and far away the
+  Cedar Forest (Lebanon, 953 km WNW), Mashu, Babylon, the Gulf and Dilmun. The market, the palace, the tombs and the
+  other places of the city are still placed at random within the walls: no excavation plan is used for them.
+- **New players appear just inside the Ishtar Gate** (`city_gate` is located at the gate).
 - **The channel is one line, not a braided system.** The ED floodplain had side branches, canals, levees and
   marshes; no field systems are raised or lowered around the channel.
 - The DEM is 30 m data upsampled to a 10 m grid; the tell's outline is smoothed by that.

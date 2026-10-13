@@ -13,14 +13,12 @@
   kind: building
   name_key: place.ziggurat_anu
   parent: uruk
-  radius_m: 55
-  # The building itself is part of the model of the walls (places/uruk.yaml), on the surveyed terrace 137 m east and 201 m
-  # north of the middle of the site. This place only lies somewhere within 140 m of the middle: a child place cannot be
-  # put at a bearing (a narrower ring leaves no room among its siblings, whose radii exclude each other).
+  radius_m: 20
+  # The building itself is part of the model of the walls (places/uruk.yaml), on the surveyed terrace (OSM): 137 m east
+  # and 201 m north of the middle of the site.
+  locate: {from: uruk, bearing_deg: 34, distance_m: 244, tolerance_m: 12}
   requires:
     max_slope_deg: 5
-    near:
-      - {place: uruk, min_m: 0, max_m: 140}
 
 - id: ziggurat_of_ishtar
   kind: building
@@ -33,10 +31,12 @@
 - id: white_temple
   kind: building
   name_key: place.white_temple
-  parent: uruk
-  radius_m: 40
+  # The White Temple crowns the Anu ziggurat.
+  parent: ziggurat_of_anu
+  radius_m: 20
+  locate: {from: ziggurat_of_anu, bearing_deg: 0, distance_m: 5, tolerance_m: 5}
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 25
 
 - id: great_wall_uruk
   kind: landmark
@@ -68,3 +68,6 @@
   parent: uruk
   spawn: true
   radius_m: 10
+  # New characters appear inside the Ishtar Gate, which stands 1263 m south of the middle of the site (the model of the
+  # walls, places/uruk.yaml): 12 m inside it.
+  locate: {from: uruk, bearing_deg: 178, distance_m: 1254, tolerance_m: 8}

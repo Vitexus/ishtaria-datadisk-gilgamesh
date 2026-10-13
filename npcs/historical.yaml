@@ -39,7 +39,7 @@
   dialogue: royal_guard
   portrait: media/portraits/royal_guard.jpg
   bio_key: npc.royal_guard.bio
-  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[0, 0], [28, 0], [28, 28], [0, 28]]}
+  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[-15, -9], [15, 9], [30, -14], [-1, -33]]}
   tags: [guard, soldier, uruk]
 
 # Noble of Uruk
