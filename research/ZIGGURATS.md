@@ -29,7 +29,10 @@ and George, *Babylonian Topographical Texts*, before relying on it):
 
 Early Dynastic Uruk, the world of Gilgamesh (c. 2700 BCE): the Anu ziggurat is a high mud-brick terrace with sloping,
 buttressed sides and the whitewashed White Temple on top (a tripartite plan of about 22 x 17 m with niched walls).
-`ziggurat_anu.glb` shows a two-stage terrace of about 52 m with that temple. Dimensions are approximate.
+`ziggurat_anu.glb` shows a three-stage terrace on a 52 m square (stages 11, 5.5 and 3.5 m high, 52, 40 and 30 m wide, set back
+towards the rear, plain tops) with that temple. Proportions and stair layout (a short steep central flight and two long ramps along
+the front, meeting at a landing on the first stage) follow a reconstruction drawing of the ziggurat of Ur shown by the owner; the
+drawing is a reference only, not a source of geometry or texture. Dimensions are approximate.
 
 ## Sources
 

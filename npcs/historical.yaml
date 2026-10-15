@@ -39,7 +39,8 @@
   dialogue: royal_guard
   portrait: media/portraits/royal_guard.jpg
   bio_key: npc.royal_guard.bio
-  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[-15, -9], [15, 9], [30, -14], [-1, -33]]}
+  # Patrols the open ground before the Ishtar Gate, along the axis of the gate (waypoints in metres east and south of the place).
+  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[15.0, -31.9], [-8.7, 6.4], [-1.9, 10.6], [21.8, -27.7]]}
   tags: [guard, soldier, uruk]
 
 # Noble of Uruk
@@ -92,7 +93,7 @@
   dialogue: uruk_farmer
   portrait: media/portraits/uruk_farmer.jpg
   bio_key: npc.uruk_farmer.bio
-  movement: {kind: wander, radius_m: 30, speed_m_s: 0.9, pause_s: 12}
+  movement: {kind: wander, radius_m: 12, speed_m_s: 0.9, pause_s: 12}    # the free square of the market
   tags: [villager, farmer, citizen]
 
 # Water Carrier
@@ -103,7 +104,7 @@
   dialogue: uruk_water_carrier
   portrait: media/portraits/uruk_water_carrier.jpg
   bio_key: npc.uruk_water_carrier.bio
-  movement: {kind: wander, radius_m: 60, speed_m_s: 1.1, pause_s: 6}
+  movement: {kind: wander, radius_m: 18, speed_m_s: 1.1, pause_s: 6}     # the open square at the middle of the site
   tags: [villager, water_carrier, citizen]
 
 # Master Brickmaker
@@ -166,5 +167,5 @@
   dialogue: uruk_plowman
   portrait: media/portraits/uruk_plowman.jpg
   bio_key: npc.uruk_plowman.bio
-  movement: {kind: wander, radius_m: 45, speed_m_s: 0.9, pause_s: 10}
+  movement: {kind: wander, radius_m: 18, speed_m_s: 0.9, pause_s: 10}
   tags: [villager, farmer, plowman]

@@ -18,10 +18,20 @@ quests/                the epic questline as stage machines
 lore/                  codex entries for the epic characters and events
 i18n/en.yaml cs.yaml   English and Czech translations
 voice/voices.yaml      voice synthesizer settings for NPC speech
-tools/                 helper scripts (render_voices.py, build_landscape.py: terrain patch of Uruk, see research/LANDSCAPE.md)
-media/                 portraits, character models (media/models/*.glb), architecture models, cover
+tools/                 helper scripts (render_voices.py, build_landscape.py: terrain patch of Uruk, see research/LANDSCAPE.md;
+                       build_city.py: plan of the streets, houses, markets, palaces and fields of Uruk, see research/CITY.md;
+                       build_world_map.py: the real planet of the world, see research/WORLD.md)
+media/                 portraits, character models (media/models/*.glb), architecture models, cover,
+                       world rasters (media/world/: the Early Dynastic Earth with the Persian Gulf of the Epic)
 models-src/            Blender builder of the character models (not installed)
 ```
+
+The world this disk generates is the real Early Dynastic Earth, not a procedural
+planet: real continent outlines and heights (ETOPO 2022), with the Persian Gulf
+extended to its 2700 BCE shoreline and both rivers running into it. The rasters
+below `media/world/` are what `ishtaria-server-init` and `ishtaria-admin` render the
+world heightmap from; `make world` rebuilds them and `research/WORLD.md` documents
+what is real data and what is a documented reconstruction.
 
 Format: `ishtaria-protocol/schemas/datadisk.schema.json`. Check the disk (schema, references, media):
 

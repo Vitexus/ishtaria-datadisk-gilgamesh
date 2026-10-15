@@ -7,15 +7,27 @@ SERVER_DIR := ../ishtaria-server
 PROTOCOL_DIR := ../ishtaria-protocol
 DEV_DB ?= ishtaria_gilgamesh_dev
 SEED ?= 43
-PGM := ../ishtaria-worldgen/examples/planet-seed42-256.pgm
+PGM := $(BUILD)/world.pgm
 BUILD := $(CURDIR)/build
 STAGE := $(BUILD)/datadisks
 DB_URL := postgresql:///$(DEV_DB)?host=/var/run/postgresql
+WORLDGEN := $(abspath $(SERVER_DIR)/../ishtaria-worldgen/target/debug/ishtaria-worldgen)
 
-.PHONY: check voices stage server start repin stop logs clean drop-db prompts models
+.PHONY: check voices stage server start repin stop logs clean drop-db prompts models city world world-map
 
 check:
 	python3 $(PROTOCOL_DIR)/tests/validate_datadisk.py .
+
+# The real planet of the disk (media/world/): resample ETOPO 2022 once, then the ED reconstruction.
+world:
+	python3 tools/build_world_map.py
+
+# The world heightmap strip worldgen renders from the disk's rasters (face size 256).
+world-map: media/world/height.pgm media/world/water.pgm
+	mkdir -p $(BUILD)
+	cd ../ishtaria-worldgen && cargo build
+	$(WORLDGEN) --earth $(CURDIR)/media/world/height.pgm --water $(CURDIR)/media/world/water.pgm 256 > $(PGM)
+	@echo "world heightmap: $$(stat -c%s $(PGM)) bytes"
 
 voices:
 	rm -rf $(BUILD)/voices
@@ -40,6 +52,7 @@ start: $(BUILD)/server.toml
 	cd $(SERVER_DIR) && cargo build --locked
 	@first=""; \
 	if [ "$$(psql -tA $(DEV_DB) -c "select to_regclass('worlds') is not null and exists(select 1 from worlds)" 2>/dev/null)" != "t" ]; then \
+	  [ -s "$(PGM)" ] || $(MAKE) world-map; \
 	  first="--import $(abspath $(PGM)) --seed $(SEED) --datadisk gilgamesh"; echo "creating the world in $(DEV_DB)"; fi; \
 	cd $(SERVER_DIR) && ISHTARIA_DATADISK_DIR=$(STAGE) DATABASE_URL='$(DB_URL)' \
 	  nohup ./target/debug/ishtaria-server $(BUILD)/server.toml $$first > $(BUILD)/server.log 2>&1 & echo $$! > $(BUILD)/server.pid
@@ -142,3 +155,12 @@ assets: prompts models-architecture-all portraits-invokeai
 	@echo "  make portraits-fast        # Generate all portraits quickly"
 	@echo "  make models-architecture    # Create ziggurats and gates"
 	@echo "  make models-buildings      # Create palaces and houses"
+
+# The streets, houses, markets, palaces and fields of Uruk: plan, then models (see research/CITY.md)
+city:
+	python3 tools/build_city.py
+	python3 models-src/architecture/make_cone_mosaic.py
+	python3 models-src/architecture/make_field_textures.py
+	blender -b --python models-src/architecture/uruk_city.py -- all media/models/architecture
+	blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls media/models/architecture/uruk_walls.glb
+	blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls_collision media/models/architecture/uruk_walls_collision.glb

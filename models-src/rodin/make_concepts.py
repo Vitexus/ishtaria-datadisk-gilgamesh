@@ -101,6 +101,12 @@ CREATURES = {
     "mountain_lion": "a huge powerful Asiatic lion of the mountains, thick dark brown mane, heavy muscular body, broad paws with "
                      "claws, long tail with a tufted tip, tawny golden coat, alert snarling face with bared fangs, standing on all four "
                      "legs spread apart, all four legs clearly visible, the whole tail visible",
+    # the guardian of palace and city gates (aladlammu, lamassu): https://cs.wikipedia.org/wiki/Aladlammú. Human head, bull body, eagle
+    # wings; the five legs of the gate reliefs are not asked for (Rodin makes a free-standing four-legged statue of it)
+    "lamassu": "a monumental Assyrian lamassu guardian statue in pale limestone, side view facing left, the head is a calm human male face "
+               "with a straight nose, almond eyes, thin lips and a long curled square-cut beard down to the chest, wearing a tall tiara with horns, "
+               "a bull's ears, the body of a massive standing bull with four thick legs and hooves, large eagle wings folded along the back "
+               "with carved feathers, the tail hanging, standing on bare ground",
 }
 CHARS.update(CREATURES)
 CHARS["scorpion_torso"] = ("a bearded Sumerian mountain guardian, huge muscular man with long black hair, thick curled black beard, a small golden horned "
@@ -113,6 +119,8 @@ async def main():
     for npc in sys.argv[1:] or CHARS:
         for n in (1, 2):
             style, neg = (CREATURE_STYLE, CREATURE_NEG) if npc in CREATURES else (STYLE, NEG)
+            if npc == "lamassu":  # a statue is what we want here
+                neg = neg.replace("plinth, statue, ", "") + ", lion head, animal face, muzzle, snout, paws, mane, base slab, pedestal"
             graph = await inv.create_text2img_graph(f"{CHARS[npc]}, {style}", neg, model_key=MODEL, width=1216 if npc in CREATURES else 832, height=832 if npc in CREATURES else 1216,
                                                     steps=35, cfg_scale=6.0, scheduler="dpmpp_2m")
             _, name = await inv._run_graph(graph)

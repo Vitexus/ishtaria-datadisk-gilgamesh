@@ -25,6 +25,13 @@ This directory contains 3D models of Mesopotamian architecture created for the G
    the Anu ziggurat on its excavated terrace; built by `models-src/architecture/uruk_walls.py` from
    `tools/data/uruk_outlines.json`, see `research/LANDSCAPE.md`.
 
+   The city of Uruk (planned by `tools/build_city.py`, built by `uruk_city.py` and `uruk_sites.py`, see `research/CITY.md`):
+   `uruk_quarter_01..17.glb` (+ `_collision`): the streets, houses (three sizes, varied), smithies, small markets, canals and fields
+   of one quarter each (0.3-2 MiB); `uruk_market.glb`: the great market; `uruk_palace.glb` and `uruk_sinkashid.glb`: the palace of
+   Gilgamesh and the palace of Sin-kashid with the farm buildings round them; `uruk_ishtar_ziggurat.glb`: the stepped tower of Ishtar;
+   `uruk_eanna.glb`: the court of the Eanna precinct with the Great Court, pillar hall, stone-cone building and limestone hall.
+   `uruk_walls.glb` now has six gates and a water gate.
+
    `ziggurat_anu.glb` (1.1 MB): Early Dynastic ziggurat of Anu with the White Temple (Uruk), ~52 m
 
 3. **ziggurat_complex.glb** (9.8 KB)

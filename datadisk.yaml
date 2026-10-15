@@ -27,7 +27,18 @@ attribution: >
   European Space Agency terms (contains modified Copernicus data, 2026) with hydrography and
   site outlines from OpenStreetMap (ODbL, openstreetmap.org/copyright); the Early Dynastic
   course of the Euphrates is a documented reconstruction (research/LANDSCAPE.md).
+  The real planet derives from ETOPO 2022 (NOAA, public domain); its ancient Gulf and rivers
+  are documented reconstructions (research/WORLD.md).
 rating: teen
 languages: [en, cs]
+
+# The world this disk generates is the Early Dynastic Earth, not a procedural planet:
+# real continent outlines, real heights, and both rivers running into the Persian Gulf
+# as it was in the time of the Epic. `ishtaria-server-init` and `ishtaria-admin` render the
+# world heightmap from these rasters (`ishtaria-worldgen --earth`) instead of the noise.
+world:
+  terrain:
+    heightmap: media/world/height.pgm
+    water: media/world/water.pgm
 
 

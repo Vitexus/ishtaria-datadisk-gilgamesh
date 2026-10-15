@@ -33,7 +33,7 @@ MATERIALS = {
     "bakedbrick": ("bakedbrick.jpg", (1, 1, 1), 0.9, 0.0, 3.0),
     "glazed": ("glazed.jpg", (1, 1, 1), 0.3, 0.0, 3.0),
     "plaster": ("plaster.jpg", (1, 1, 1), 0.9, 0.0, 5.0),
-    "paving": ("paving.jpg", (1, 1, 1), 0.95, 0.0, 4.0),
+    "paving": ("paving.jpg", (1, 1, 1), 0.95, 0.0, 2.4),   # one repeat = 8 x 8 square tiles of 30 cm (make_paving.py)
     "gold": (None, (0.9, 0.62, 0.12), 0.3, 0.9, 1.0),
     "door": (None, (0.035, 0.028, 0.022), 1.0, 0.0, 1.0),
     "trunk": (None, (0.30, 0.21, 0.12), 0.95, 0.0, 1.0),
@@ -127,6 +127,31 @@ def outline(cx, cy, w, d, spacing, corner, recess, panel_ratio=0.62):
     return pts
 
 
+def weep_holes(model, pts, top, z0, z1, rows=(0.3, 0.52, 0.74), spacing=1.3, size=0.2):
+    """Rows of small dark drainage holes in the face of a battered wall (as in the walls of the ziggurat of Ur)."""
+    n = len(pts)
+    for i in range(n):
+        a, b = pts[i], pts[(i + 1) % n]
+        ta, tb = top[i], top[(i + 1) % n]
+        length = (b - a).length
+        if length < 2.0:
+            continue
+        t = (b - a) / length
+        out = Vector((t.y, -t.x, 0))
+        count = int(length / spacing)
+        for r, f in enumerate(rows):
+            for j in range(count):
+                u = (j + 0.5 + 0.5 * (r % 2)) / count
+                if u >= 1.0 - 0.5 / count:
+                    continue
+                c = a.lerp(b, u).lerp(ta.lerp(tb, u), f)
+                c = Vector((c.x + out.x * 0.03, c.y + out.y * 0.03, z0 + (z1 - z0) * f))
+                h = size / 2
+                model.face([c - Vector((t.x, t.y, 0)) * h - Vector((0, 0, h)), c + Vector((t.x, t.y, 0)) * h - Vector((0, 0, h)),
+                            c + Vector((t.x, t.y, 0)) * h + Vector((0, 0, h)), c - Vector((t.x, t.y, 0)) * h + Vector((0, 0, h))],
+                           "door", [(0, 0), (1, 0), (1, 1), (0, 1)], Vector((out.x, out.y, 0)))
+
+
 def prism(model, pts, z0, z1, centre, scale, mat, rng, cap_mat=None):
     """Walls of a polygon prism whose top is the polygon scaled about `centre`; returns the top polygon."""
     top = [Vector((centre.x + (p.x - centre.x) * scale, centre.y + (p.y - centre.y) * scale)) for p in pts]
@@ -206,6 +231,39 @@ def stairs(model, ox, oy, direction, width, z0, rise, run, rh=0.3, wall_mat="bak
                    wall_mat, left, 0.0, Vector((d.y * 0, 0, -1)) + Vector((-d.x, -d.y, 0)) * 0.0)
         model.wall([P(run, -hw, z0 + rise - slab), P(run, hw, z0 + rise - slab), P(run, hw, z0 + rise), P(run, -hw, z0 + rise)],
                    wall_mat, left, 0.0, Vector((d.x, d.y, 0)))
+
+
+def stair_parapets(model, ox, oy, direction, width, z0, rise, run, height=1.5, thick=1.1, mat="bakedbrick", cap="plaster"):
+    """Walls along both sides of a flight, as on the great stairway of the ziggurat of Ur: they stand `height` above the steps
+    at the top and a little less at the foot, and their brick courses lie parallel to the slope."""
+    d = Vector((direction[0], direction[1]))
+    left = Vector((-d.y, d.x))
+    hw = width / 2
+    slope = rise / run
+    cos_t = 1.0 / math.sqrt(1.0 + slope * slope)
+    t = tile(mat)
+
+    def P(s, lat, z):
+        return Vector((ox + d.x * s + left.x * lat, oy + d.y * s + left.y * lat, z))
+
+    def uv(s, z):  # u along the slope, v at right angles to it
+        return ((s / cos_t) / t, (z - z0 - s * slope) * cos_t / t)
+
+    for sign in (-1, 1):
+        inner, outer = sign * hw, sign * (hw + thick)
+        h0, h1 = height * 0.6, height
+        prof = [(0.0, z0), (run, z0), (run, z0 + rise + h1), (0.0, z0 + h0)]
+        into = left * -sign
+        model.face([P(s, inner, z) for s, z in prof], mat, [uv(s, z) for s, z in prof], Vector((into.x, into.y, 0)))
+        model.face([P(s, outer, z) for s, z in prof], mat, [uv(s, z) for s, z in prof], Vector((-into.x, -into.y, 0)))
+        # sloping top and the foot end
+        model.face([P(0.0, inner, z0 + h0), P(0.0, outer, z0 + h0), P(run, outer, z0 + rise + h1), P(run, inner, z0 + rise + h1)],
+                   cap, [(0, 0), (1, 0), (1, run / t), (0, run / t)], (0, 0, 1))
+        model.face([P(0.0, inner, z0), P(0.0, outer, z0), P(0.0, outer, z0 + h0), P(0.0, inner, z0 + h0)],
+                   mat, [(0, 0), (thick / t, 0), (thick / t, h0 / t), (0, h0 / t)], Vector((-d.x, -d.y, 0)))
+        # the wall end against the landing
+        model.face([P(run, inner, z0 + rise), P(run, outer, z0 + rise), P(run, outer, z0 + rise + h1), P(run, inner, z0 + rise + h1)],
+                   cap, [(0, 0), (thick / t, 0), (thick / t, h1 / t), (0, h1 / t)], Vector((d.x, d.y, 0)))
 
 
 def portal(model, cx, y_front, z0, width, depth, height, door_w, door_h, rng, mat="glazed", trim="plaster", gold=True):
@@ -350,41 +408,60 @@ def etemenanki(model, rng):
     return model
 
 
-def anu(model, rng):
-    """The Anu ziggurat of Early Dynastic Uruk: a high terrace of mud brick with the whitewashed White Temple on it."""
+def anu(model, rng, detail=True):
+    """The Anu ziggurat of Early Dynastic Uruk: a high terrace of mud brick with the whitewashed White Temple on it.
+
+    Proportions and stair layout follow the reconstruction drawing of the ziggurat of Ur (the model the Uruk one is
+    imagined after): a tall first stage, two much smaller stages set well back towards the rear, plain flat tops
+    without parapets, strongly battered smooth walls with groups of narrow vertical grooves, a shrine on the top stage, and three flights
+    meeting at a gate on the first stage: a short steep central one and two long ramps climbing along the front.
+    The footprint (52 m square, stairs reaching 40 m to the front) is the surveyed one and stays as it was.
+    """
     z = 0.0
-    spec = [(52.0, 7.5, 0.06), (38.0, 6.0, 0.05)]
+    spec = [(52.0, 11.0, 0.08), (40.0, 5.5, 0.05), (30.0, 3.5, 0.05)]
     top_front = None
     top_w = None
     tops = []
     for k, (w, h, batter) in enumerate(spec):
         inset = batter * h
-        y_front = -w / 2 if k == 0 else top_front + 0.6 * (top_w - w)
+        y_front = -w / 2 if k == 0 else top_front + 0.8 * (top_w - w)
         cy = y_front + w / 2
-        pts = outline(0.0, cy, w, w, 4.4, 1.8, 0.5)
+        pts = outline(0.0, cy, w, w, 9.5 if k == 0 else 6.0, 2.5, 0.9 if k == 0 else 0.45, 0.16 if k == 0 else 0.22)  # smooth walls, narrow grooves
         scale = (w - 2 * inset) / w
-        prism(model, pts, z, z + h, Vector((0.0, cy)), scale, "mudbrick", rng, cap_mat="plaster")
+        top_pts = prism(model, pts, z, z + h, Vector((0.0, cy)), scale, "mudbrick", rng, cap_mat="plaster")
+        if detail and k == 0:
+            weep_holes(model, pts, top_pts, z, z + h)
         t_w = w - 2 * inset
         t_front = y_front + inset
-        merlons(model, 0.0, cy, t_w / 2, z + h, rng, skip_front=7.0 if k == 0 else 5.0, spacing=2.6, mat="plaster")
         tops.append((z + h, 0.0, cy, t_w, t_front))
         top_front, top_w = t_front, t_w
         z += h
-    # Three flights meet on a solid landing against the front of the first terrace (as at Ur): the middle one climbs
+    rise0 = spec[0][1]
+    # Three flights meet on a solid landing against the front of the first stage (as at Ur): the middle one climbs
     # straight at it, the two side flights run along the front towards it. All are solid masonry down to the ground.
     landing_front, landing_half = -29.0, 6.0
-    wall_top_y = -26.0 + 0.45          # where the batter of the first terrace ends at its top
-    box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front, 0.0, 7.5, "mudbrick", "plaster", rng)
-    stairs(model, 0.0, landing_front - 7.9, (0, 1), 6.0, 0.0, 7.5, 7.9, rh=0.3)
-    stairs(model, -19.0, -27.5, (1, 0), 3.0, 0.0, 7.5, 19.0 - landing_half, rh=0.3)
-    stairs(model, 19.0, -27.5, (-1, 0), 3.0, 0.0, 7.5, 19.0 - landing_half, rh=0.3)
-    zt, cx, cy_k, t_w, t_front = tops[1]
-    y_front = cy_k - 19.0
-    margin = y_front - tops[0][4]
-    run = min(6.0, margin - 1.2)
-    stairs(model, 0.0, y_front + 0.3 - run, (0, 1), 4.5, tops[0][0], 6.0, run, rh=0.3)
+    wall_top_y = -26.0 + spec[0][2] * rise0    # where the batter of the first stage ends at its top
+    box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front, 0.0, rise0, "mudbrick", "plaster", rng)
+    stairs(model, 0.0, landing_front - 11.0, (0, 1), 6.0, 0.0, rise0, 11.0, rh=0.3)
+    stair_parapets(model, 0.0, landing_front - 11.0, (0, 1), 6.0, 0.0, rise0, 11.0)
+    # the gate house on the landing at the head of the central flight, the entrance to the higher stages
+    portal(model, 0.0, -27.6, rise0, 6.0, 2.5, 3.4, 2.2, 2.6, rng, mat="mudbrick", trim="plaster", gold=False)
+    side_x = 25.5
+    stairs(model, -side_x, -27.5, (1, 0), 3.0, 0.0, rise0, side_x - landing_half, rh=0.3)
+    stairs(model, side_x, -27.5, (-1, 0), 3.0, 0.0, rise0, side_x - landing_half, rh=0.3)
+    # a short central flight up each of the higher stages
+    zacc = rise0
+    for k in (1, 2):
+        w, h = spec[k][0], spec[k][1]
+        zt, cx, cy_k, t_w, t_front = tops[k]
+        y_front = cy_k - w / 2
+        margin = y_front - tops[k - 1][4]
+        run = min(h * 1.3, margin - 1.2)
+        stairs(model, 0.0, y_front + 0.3 - run, (0, 1), 4.5 if k == 1 else 3.6, zacc, h, run, rh=0.3)
+        zacc += h
+    zt, cx, cy_k, t_w, t_front = tops[2]
     back = cy_k + t_w / 2
-    temple(model, 0.0, back - 2.5 - 17.5, zt, 22.0, 17.5, 6.5, rng, body="plaster", plinth_mat="plaster", gold=False, upper=False)
+    temple(model, 0.0, back - 2.0 - 16.0, zt, 22.0, 16.0, 6.5, rng, body="plaster", plinth_mat="plaster", gold=False, upper=False)
     return model
 
 

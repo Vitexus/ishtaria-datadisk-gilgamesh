@@ -64,7 +64,9 @@ Comment: The two creatures are generated meshes: the Bull of Heaven from one Inv
  of use of Hyper3D must be checked before distribution.
 
 Files: media/models/architecture/ziggurat_etemenanki.glb media/models/architecture/etemenanki_precinct.glb
- media/models/architecture/uruk_walls.glb
+ media/models/architecture/uruk_walls.glb media/models/architecture/uruk_walls_collision.glb
+ media/models/architecture/uruk_quarter_*.glb media/models/architecture/uruk_market*.glb media/models/architecture/uruk_palace*.glb
+ media/models/architecture/uruk_sinkashid*.glb media/models/architecture/uruk_ishtar_ziggurat.glb media/models/architecture/uruk_eanna*.glb
  media/models/architecture/ziggurat_anu.glb media/models/architecture/ishtar_gate.glb
  media/models/architecture/processional_way.glb models-src/architecture/*
 Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
@@ -73,6 +75,39 @@ Comment: Built by models-src/architecture/ziggurat.py (Blender). The brick, glaz
  were generated with InvokeAI (Juggernaut XL v9) and made seamless by make_tileable.py. The designs follow the
  reconstructions described in research/ZIGGURATS.md and research/ISHTAR_GATE.md; no published illustration was copied or used
  as a reference image. The animal reliefs of the Ishtar Gate are new drawings generated for this datadisk.
+ The streets, houses, markets, palaces and fields of Uruk are planned by tools/build_city.py (tools/data/uruk_city.json) and
+ built by uruk_city.py and uruk_sites.py; the textures of the clay-cone mosaic (make_cone_mosaic.py) and of the furrowed fields
+ (make_field_textures.py) are drawn by those scripts after the descriptions of the patterns, not copied from any picture. The
+ layout follows the excavation as described in research/CITY.md.
+
+Files: media/models/architecture/burney_relief.glb models-src/burney_relief/* models-src/architecture/burney_relief.py models-src/architecture/burney_restore.py
+Copyright: danielpett (https://sketchfab.com/danielpett), photogrammetry scan of the Burney Relief (British Museum)
+License: CC-BY-4.0
+Comment: This work is based on "The Burney Relief"
+ (https://sketchfab.com/3d-models/the-burney-relief-217a01bf2d324ad19a05e54256b2824e) by danielpett, licensed under CC-BY-4.0
+ (http://creativecommons.org/licenses/by/4.0/); the original licence text is models-src/burney_relief/license.txt. Changes: the six
+ pieces are joined, decimated from 500000 to 45000 faces, the textures are scaled down to 2048 px and the model is scaled, moved and
+ turned to stand upright, the broken right half of the head is mirrored from the surviving left half, the slab is removed and the back is closed
+ (models-src/architecture/burney_restore.py, notes in models-src/burney_relief/RESTORATION.md). The adaptation is distributed here under
+ CC-BY-SA-4.0.
+
+Files: media/models/architecture/lamassu_pair.glb media/models/architecture/lamassu_pair_collision.glb media/models/architecture/shedu_pair.glb media/models/architecture/shedu_pair_collision.glb models-src/lamassu/* models-src/architecture/lamassu_models.py models-src/rodin_lamassu_assemble.py models-src/concepts/lamassu_*
+Copyright: Peter Farell (https://www.printables.com/model/665507-persian-lamassu), derived work by the Ishtaria Team 2026
+License: CC-BY-NC-4.0
+Comment: UNRESOLVED LICENCE: the guardian statues are derived from the Printables model "Persian Lamassu" by Peter Farell (CC BY-NC): a render of it was the
+ reference of a Hyper3D Rodin generation, which was decimated and scaled (models-src/lamassu/NOTES.md). CC BY-NC does not fit the CC BY-SA of the rest of the datadisk
+ (non-commercial use only). The owner decided to make the derived work; before a release the author must be asked for permission, the statue remade from other material
+ or these files left out.
+
+Files: media/world/height.pgm media/world/water.pgm
+Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>
+ 2022 National Centers for Environmental Information (NOAA)
+License: public-domain and CC-BY-SA-4.0
+ The rasters derive from ETOPO 2022 (NOAA National Centers for Environmental
+ Information, U.S. government work, public domain); the Early Dynastic shoreline
+ of the Persian Gulf and the ancient courses of the Euphrates and Tigris are
+ documented reconstructions by the Ishtaria Team (research/WORLD.md). The
+ derived rasters are CC-BY-SA-4.0 as the rest of the package.
 
 License: CC-BY-SA-4.0
  This package is free software: you can redistribute it and/or modify it under

@@ -46,6 +46,11 @@ MERLON_EVERY = 6.0
 ANU_YAW_DEG = 41.0       # the terrace is turned like the surveyed footprint; the stairs face the Eanna precinct
 ROWS_NEAR_GATE = 300.0   # animal rows on the wall this far from the gate stubs, plain glaze elsewhere
 PROCESSION = 80.0
+PLAN = os.path.join(HERE, "..", "..", "tools", "data", "uruk_city.json")
+PASS_W = 8.0             # the passage of the other gates
+GATE_TOWER = 12.0        # width of a tower of the other gates
+GATE_GAP = PASS_W / 2 + GATE_TOWER   # the wall is cut this far to each side of the middle of such a gate
+GATE_H = 9.0             # clear height of the passage
 
 
 def v3(x, y, z):
@@ -142,9 +147,78 @@ def chain_around_gate(ring, gate, gap):
     return chain, arc, total
 
 
-def circuit(model, ring, gate, datum, gate_pos, rng, collision):
+def arc_chain(ring, i, j, gap_i, gap_j):
+    """The wall from gate i to the next gate j (going forward), cut `gap_i` and `gap_j` metres from the gates;
+    returns [(position, height)] and the length of the chain."""
+    n = ring.n
+    count = (j - i) % n or n
+    pts = [(ring.p[(i + k) % n], ring.h[(i + k) % n]) for k in range(count + 1)]
+    arc = [0.0]
+    for a, b in zip(pts, pts[1:]):
+        arc.append(arc[-1] + (b[0] - a[0]).length)
+    total = arc[-1]
+
+    def at(s):
+        for k in range(count):
+            if arc[k] <= s <= arc[k + 1]:
+                f = (s - arc[k]) / (arc[k + 1] - arc[k])
+                return pts[k][0].lerp(pts[k + 1][0], f), pts[k][1] + (pts[k + 1][1] - pts[k][1]) * f
+        raise ValueError(s)
+
+    chain = [at(gap_i)]
+    chain += [pts[k] for k in range(count) if gap_i < arc[k] < total - gap_j]
+    chain.append(at(total - gap_j))
+    return chain, total - gap_i - gap_j
+
+
+WATER_PASS = 5.0         # the water gate: the main canal enters under the wall here
+WATER_TOWER = 8.0
+WATER_GAP = WATER_PASS / 2 + WATER_TOWER
+WATER_H = 4.6
+
+
+def minor_gate(model, ring, idx, datum, collision, rng, water=False):
+    """A plain gate of the wall: two towers of glazed brick 12 m wide with a passage of 8 m between them, a lintel bridging it at
+    the height of the wall walk, stepped battlements on top. The wall is cut GATE_GAP metres to each side of the middle."""
+    t = ring.tangent(idx, 3)
+    out = ring.outward(t)
+    origin = ring.p[idx]
+    z = ring.h[idx] - datum
+    centre = origin - out * (THICK / 2)
+    depth = THICK + 6.0
+    pass_w, tower_w, pass_h = (WATER_PASS, WATER_TOWER, WATER_H) if water else (PASS_W, GATE_TOWER, GATE_H)
+    top_h = WALL_H + (3.0 if water else 8.0)
+    for sx in (-1, 1):
+        c = centre + t * (sx * (pass_w / 2 + tower_w / 2))
+        rbox(model, c, t, tower_w, depth, z - FOUNDATION, z + top_h, "blueglaze", "bakedbrick", rng)
+        if not collision:
+            rbox(model, c, t, tower_w - 2.5, depth - 2.5, z + top_h, z + top_h + 1.8, "bakedbrick", "bakedbrick")
+    rbox(model, centre, t, pass_w + 0.2, THICK + 1.0, z + pass_h, z + WALL_H + 2.0, "blueglaze", "bakedbrick", rng)
+    if water:
+        return t, out
+    if not collision:
+        count = 4
+        for q in range(count):
+            f = (q + 0.5) / count - 0.5
+            cc = centre + t * (f * PASS_W) + out * (THICK / 2 - 0.5)
+            rbox(model, cc, t, 1.4, 1.0, z + WALL_H + 2.0 - 0.3, z + WALL_H + 3.6, "blueglaze", "bakedbrick")
+        # the roadway through the passage
+        a = origin + out * 6.0
+        b = origin - out * (THICK + 6.0)
+        p = [a + t * (PASS_W / 2), a - t * (PASS_W / 2), b - t * (PASS_W / 2), b + t * (PASS_W / 2)]
+        model.top([v3(q.x, q.y, z + 0.05) for q in p], "stonepaving")
+    return t, out
+
+
+def circuit(model, ring, gate, datum, gate_pos, rng, collision, chain=None, chain_len=None, rows_start=False, rows_end=False,
+            stair_starts=(90.0,)):
     rows = ["bull", "dragon", "bull"]
-    chain, _, total = chain_around_gate(ring, gate, STUB)
+    if chain is None:
+        chain, _, total = chain_around_gate(ring, gate, STUB)
+        chain_len = total - 2 * STUB
+        rows_start = rows_end = True
+        stair_starts = (90.0, 520.0)
+    total = chain_len + 2 * STUB
     m = len(chain)
     seg_n = []
     for k in range(m - 1):
@@ -183,7 +257,7 @@ def circuit(model, ring, gate, datum, gate_pos, rng, collision):
         if collision:
             continue
         # animal rows on the outer face near the gate, as on the gate itself
-        near_gate = min(arc_from_gate, total - 2 * STUB - arc_from_gate) < ROWS_NEAR_GATE
+        near_gate = (rows_start and arc_from_gate < ROWS_NEAR_GATE) or (rows_end and chain_len - arc_from_gate < ROWS_NEAR_GATE)
         if near_gate and length > 6.0:
             mid = (chain[k][1] + chain[k + 1][1]) / 2 - datum
             G.animal_rows(model, a, t, out, length, mid + G.PLINTH + 0.4, rows, (t.x, t.y), rng, margin=1.0)
@@ -212,11 +286,11 @@ def circuit(model, ring, gate, datum, gate_pos, rng, collision):
             if not collision:
                 rbox(model, c, t, TOWER - 2.5, TOWER - 2.5, z + TOWER_H, z + TOWER_H + 1.8, "bakedbrick", "bakedbrick")
             towers += 1
-    print("circuit:", m - 1, "wall pieces,", towers, "towers, wall length", round(total - 2 * STUB), "m")
+    print("circuit:", m - 1, "wall pieces,", towers, "towers, wall length", round(chain_len), "m")
 
     # stairs from the inside up to the wall walk, climbing away from the gate on both sides
     for direction in (1, -1):
-        for start in (90.0, 520.0):
+        for start in stair_starts:
             s0 = start
             # find the chain position at arc s0 from the stub, either end
             arc = 0.0
@@ -243,10 +317,10 @@ def circuit(model, ring, gate, datum, gate_pos, rng, collision):
             Z.stairs(model, origin.x, origin.y, (d.x, d.y), 3.0, z_start, (z_end + WALL_H) - z_start, 50.0, rh=0.3)
 
 
-def anu_ziggurat(model, rng, outlines, datum):
+def anu_ziggurat(model, rng, outlines, datum, collision=False):
     """The Anu ziggurat at the centre of its OSM footprint, on the lowest ground under it."""
     first = len(model.bm.verts)
-    Z.anu(model, rng)
+    Z.anu(model, rng, detail=not collision)
     angle = math.radians(ANU_YAW_DEG)
     c, s = math.cos(angle), math.sin(angle)
     cx, cz = outlines["ziggurat_centre"]
@@ -305,12 +379,30 @@ def main():
     ring = Ring(outlines["wall"])
     gate = pick_gate(ring)
     datum = ring.h[gate]
+    with open(PLAN) as handle:
+        plan = json.load(handle)
+    gates = sorted(plan["gates"], key=lambda g: g["index"])
+    ishtar = [g for g in gates if g["name"] == "ishtar"][0]
+    if ishtar["index"] != gate:
+        raise SystemExit("the Ishtar Gate of the plan (%d) is not the one chosen here (%d)" % (ishtar["index"], gate))
     model = Z.Model()
     G.gate_complex(model, rng)
     G.processional_way(model, rng, PROCESSION)
     t, outward, origin = move_gate(model, ring, gate, datum)
-    circuit(model, ring, gate, datum, origin, rng, collision)
-    anu_ziggurat(model, rng, outlines, datum)
+    # the wall in pieces from gate to gate
+    for k, g in enumerate(gates):
+        nxt = gates[(k + 1) % len(gates)]
+        def gap_of(gt):
+            return STUB if gt["name"] == "ishtar" else WATER_GAP if gt["name"] == "water" else GATE_GAP
+
+        gap_i, gap_j = gap_of(g), gap_of(nxt)
+        chain, chain_len = arc_chain(ring, g["index"], nxt["index"], gap_i, gap_j)
+        circuit(model, ring, gate, datum, origin, rng, collision, chain, chain_len, g["name"] == "ishtar", nxt["name"] == "ishtar",
+                (90.0, 520.0) if "ishtar" in (g["name"], nxt["name"]) else (60.0,))
+    for g in gates:
+        if g["name"] != "ishtar":
+            minor_gate(model, ring, g["index"], datum, collision, rng, water=g["name"] == "water")
+    anu_ziggurat(model, rng, outlines, datum, collision)
     if collision:   # no textures: the colours are all the server needs
         for name, spec in list(Z.MATERIALS.items()):
             Z.MATERIALS[name] = (None,) + spec[1:]

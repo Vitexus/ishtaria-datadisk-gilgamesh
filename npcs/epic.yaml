@@ -20,7 +20,7 @@
   dialogue: enkidu
   portrait: media/portraits/enkidu.jpg
   bio_key: npc.enkidu.bio
-  movement: {kind: wander, radius_m: 80, speed_m_s: 1.4, pause_s: 5}
+  movement: {kind: wander, radius_m: 12, speed_m_s: 1.4, pause_s: 5}     # the free square of the market
   tags: [wild_man, companion, hero]
 
 # Enkidu Civilized - After meeting Shamhat
@@ -124,5 +124,5 @@
   dialogue: bull_of_heaven
   portrait: media/portraits/bull_of_heaven.jpg
   bio_key: npc.bull_of_heaven.bio
-  movement: {kind: wander, radius_m: 60, speed_m_s: 0.8, pause_s: 15}
+  movement: {kind: wander, radius_m: 18, speed_m_s: 0.8, pause_s: 15}
   tags: [beast, divine, punishment]

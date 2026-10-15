@@ -21,6 +21,9 @@
   terrain:
     heightmap: media/terrain/uruk_height.png
     water: media/terrain/uruk_water.png
+    # Where the city stands and the fields are tilled (streets, houses, squares, canals, the foot of the wall) no wild trees,
+    # rocks, flowers or animals stand (tools/build_city.py writes it with the plan).
+    clear: media/terrain/uruk_clear.png
     extent_m: [6000, 6000]
     feather_m: 120
     visible_m: 2000
@@ -34,10 +37,11 @@
   kind: landmark
   name_key: place.uruk_wall
   parent: uruk
-  radius_m: 50
+  radius_m: 12
+  # Inside the Ishtar Gate, beside the avenue 150 m from the gate.
+  locate: {from: uruk, bearing_deg: 178.458, distance_m: 1084.8, tolerance_m: 2}
   requires:
-    biome: [grassland]
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: eanna_temple
   kind: building
@@ -45,35 +49,63 @@
   parent: uruk
   radius_m: 20
   # The Eanna precinct (OSM way, tools/data/uruk_outlines.json): 147 m east and 159 m north of the middle of the site.
-  locate: {from: uruk, bearing_deg: 43, distance_m: 217, tolerance_m: 12}
+  # Its model (models-src/architecture/uruk_sites.py) is the paved court with the Great Court, an orchard with its channels and
+  # pool, the pillar hall, the stone-cone building with its mosaic of black, white and red clay cones, and a hall of limestone,
+  # as the excavations show them (research/CITY.md). It stands where it was planned, so the place may not drift from its point.
+  locate: {from: uruk, bearing_deg: 43.002, distance_m: 217, tolerance_m: 2}
+  structure:
+    model: media/models/architecture/uruk_eanna.glb
+    collision: media/models/architecture/uruk_eanna_collision.glb
+    visible_m: 3300
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: ishtar_temple
   kind: building
   name_key: place.ishtar_temple
   parent: eanna_temple
   radius_m: 20
-  # In the precinct of Inanna, a little to the south-west of its middle.
-  locate: {from: eanna_temple, bearing_deg: 225, distance_m: 45, tolerance_m: 15}
+  # In the precinct of Inanna, a little to the south-west of its middle: the stepped tower of Ishtar (three stages and a red
+  # temple on top, stairs towards this point) stands west of it, 62 m east and 112 m north of the middle of the site.
+  locate: {from: eanna_temple, bearing_deg: 225, distance_m: 45, tolerance_m: 2}
+  structure:
+    model: media/models/architecture/uruk_ishtar_ziggurat.glb
+    visible_m: 3300
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: uruk_market
   kind: landmark
   name_key: place.uruk_market
   parent: uruk
-  radius_m: 30
+  radius_m: 25
+  # The great market of the city, an open paved square with some 130 stalls under coloured awnings, beside the avenue from the
+  # Ishtar Gate to the sacred precinct (tools/build_city.py); smaller markets stand inside the gates. The place is the middle
+  # of the square, which is kept free for the people who stand there.
+  locate: {from: uruk, bearing_deg: 165.025, distance_m: 315.4, tolerance_m: 2}
+  structure:
+    model: media/models/architecture/uruk_market.glb
+    collision: media/models/architecture/uruk_market_collision.glb
+    visible_m: 3300
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: uruk_palace
   kind: building
   name_key: place.uruk_palace
   parent: uruk
-  radius_m: 45
+  radius_m: 30
+  # The palace of Gilgamesh north-east of the sacred precinct: four wings round a courtyard (the place is its middle), the throne
+  # hall with a portico of six columns, corner towers, and all round it, inside a wall with a gate, the farm buildings of the
+  # court: granaries, storehouses, stables, kitchens, bakeries, breweries, a smithy, pens, a threshing floor and the hanging
+  # garden (tools/build_city.py, models-src/architecture/uruk_sites.py).
+  locate: {from: uruk, bearing_deg: 43.906, distance_m: 442.6, tolerance_m: 2}
+  structure:
+    model: media/models/architecture/uruk_palace.glb
+    collision: media/models/architecture/uruk_palace_collision.glb
+    visible_m: 3300
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: cedar_forest
   kind: landmark

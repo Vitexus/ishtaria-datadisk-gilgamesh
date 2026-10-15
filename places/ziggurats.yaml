@@ -5,9 +5,11 @@
   kind: building
   name_key: place.ziggurat_uruk
   parent: uruk
-  radius_m: 60
+  radius_m: 15
+  # A spot in the court of the precinct between the two stepped towers (no model of its own).
+  locate: {from: uruk, bearing_deg: 20.41, distance_m: 229.4, tolerance_m: 2}
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: ziggurat_of_anu
   kind: building
@@ -24,9 +26,11 @@
   kind: building
   name_key: place.ziggurat_ishtar
   parent: uruk
-  radius_m: 50
+  radius_m: 15
+  # West of the stepped tower of Ishtar (whose model belongs to the place ishtar_temple).
+  locate: {from: uruk, bearing_deg: 10.008, distance_m: 172.6, tolerance_m: 2}
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: white_temple
   kind: building
@@ -42,25 +46,31 @@
   kind: landmark
   name_key: place.great_wall_uruk
   parent: uruk
-  radius_m: 20
+  radius_m: 12
+  # On the road inside the wall near the west gate.
+  locate: {from: uruk, bearing_deg: 267.623, distance_m: 1265.8, tolerance_m: 2}
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: hanging_gardens
   kind: landmark
   name_key: place.hanging_gardens
   parent: uruk_palace
-  radius_m: 45
+  radius_m: 20
+  # The stepped garden terrace at the back of the palace's farm yard, planted with palms.
+  locate: {from: uruk_palace, bearing_deg: 44.96, distance_m: 57.0, tolerance_m: 2}
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: royal_tombs
   kind: building
   name_key: place.royal_tombs
   parent: uruk
-  radius_m: 30
+  radius_m: 15
+  # Behind the palace of Gilgamesh, outside its farm yard.
+  locate: {from: uruk, bearing_deg: 44.132, distance_m: 555.6, tolerance_m: 2}
   requires:
-    max_slope_deg: 5
+    max_slope_deg: 30
 
 - id: city_gate
   kind: building
@@ -68,6 +78,9 @@
   parent: uruk
   spawn: true
   radius_m: 10
-  # New characters appear inside the Ishtar Gate, which stands 1263 m south of the middle of the site (the model of the
-  # walls, places/uruk.yaml): 12 m inside it.
-  locate: {from: uruk, bearing_deg: 178, distance_m: 1254, tolerance_m: 8}
+  # New characters appear in the open 125 m before the Ishtar Gate (23 m beyond the end of its Processional Way), in sight of
+  # the gate and clear of its walls: inside the gate they stood between the walls of the gate complex.
+  locate: {from: uruk, bearing_deg: 181.024, distance_m: 1369.7, tolerance_m: 2}
+  requires:
+    max_slope_deg: 30
+

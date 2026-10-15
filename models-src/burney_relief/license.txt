@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Burney Relief
+* source:	https://sketchfab.com/3d-models/the-burney-relief-217a01bf2d324ad19a05e54256b2824e
+* author:	danielpett (https://sketchfab.com/danielpett)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Burney Relief" (https://sketchfab.com/3d-models/the-burney-relief-217a01bf2d324ad19a05e54256b2824e) by danielpett (https://sketchfab.com/danielpett) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

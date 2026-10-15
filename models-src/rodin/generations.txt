@@ -27,3 +27,6 @@ bull_of_heaven d0e0b080-e785-4d4b-b2b4-44f799d364cd
 scorpion_body 00b68491-d7f8-4c11-a356-c9584905d000
 scorpion_torso f091a3df-858a-4ef9-a3f2-ebb880466ae9
 mountain_lion 28b0a519-6167-48ce-a351-348d655aa5a5
+lamassu_body 6f64a8b5-f3e4-4db3-bd58-44c75e99782d
+lamassu_head 80a39e49-735c-4d91-a8bc-094ad49dfa62
+lamassu_printables_derived 6fcaf893-3f1a-45b0-ac03-10e15029ef18  # reference: render of Printables 665507 (CC BY-NC, Peter Farell)
