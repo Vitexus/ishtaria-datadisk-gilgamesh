@@ -116,7 +116,9 @@ make clean     # clean build artifacts
 
 ## Requirements
 
-- **Piper**: Text-to-speech engine for voice synthesis
+- **Piper**: `python3-piper-tts` for text-to-speech
+- **Voice models**: `piper-voice-cs-cz-jirka-medium`, `piper-voice-en-us-libritts-r-medium`
+  (installed under `/usr/share/piper/voices/`)
 - **ffmpeg**: For audio conversion to OGG Vorbis
 - **Python 3**: With PyYAML installed
 - **Ishtaria Server**: For local testing

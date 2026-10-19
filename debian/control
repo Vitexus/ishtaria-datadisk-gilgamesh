@@ -2,7 +2,9 @@ Source: ishtaria-datadisk-gilgamesh
 Section: games
 Priority: optional
 Maintainer: Ishtaria Team <ishtaria@vitexsoftware.com>
-Build-Depends: debhelper-compat (= 13), python3, python3-yaml, python3-piper-tts, ffmpeg
+Build-Depends: debhelper-compat (= 13), python3, python3-yaml,
+ python3-piper-tts, ffmpeg,
+ piper-voice-cs-cz-jirka-medium, piper-voice-en-us-libritts-r-medium
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 

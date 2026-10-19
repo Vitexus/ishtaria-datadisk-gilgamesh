@@ -137,14 +137,14 @@ This document provides a comprehensive status update on the Gilgamesh datadisk c
 ## 📋 Remaining Tasks (Next Steps)
 
 ### High Priority
-1. **Download Piper voice models** and generate voice lines
+1. **Install Piper voice packages** and generate voice lines
    ```bash
-   # Download English model
-   piper -m en_US-libritts_r-medium -i <(echo "Test line") -f /tmp/test.wav
-   
-   # Download Czech model  
-   piper -m cs_CZ-jirka-medium -i <(echo "Testní řádek") -f /tmp/test.wav
-   
+   sudo apt install python3-piper-tts \
+     piper-voice-cs-cz-jirka-medium piper-voice-en-us-libritts-r-medium
+
+   echo "Test line" | piper -m /usr/share/piper/voices/en_US-libritts_r-medium.onnx -f /tmp/test.wav
+   echo "Testní řádek" | piper -m /usr/share/piper/voices/cs_CZ-jirka-medium.onnx -f /tmp/test.wav
+
    # Generate all voice lines (see Makefile for automation)
    make voices
    ```

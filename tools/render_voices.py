@@ -15,7 +15,7 @@ a language without a model or translation is skipped with a warning. Anything th
 makes the exit status nonzero: a package must not silently ship without its voices.
 
 Voice models (`<model>.onnx` + `.onnx.json`) are looked up in --voices, $ISHTARIA_VOICES and a few
-system directories; nothing is downloaded.
+system directories (preferring packages piper-voice-* under /usr/share/piper/voices/); nothing is downloaded.
 """
 import argparse
 import concurrent.futures
@@ -32,6 +32,7 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SYSTEM_VOICE_DIRS = [
+    "/usr/share/piper/voices",
     "/usr/share/piper-voices",
     "/usr/share/ishtaria/piper-voices",
     "/usr/share/claude-tts-cz/piper-voices",
