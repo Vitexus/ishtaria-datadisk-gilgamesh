@@ -30,3 +30,32 @@ mountain_lion 28b0a519-6167-48ce-a351-348d655aa5a5
 lamassu_body 6f64a8b5-f3e4-4db3-bd58-44c75e99782d
 lamassu_head 80a39e49-735c-4d91-a8bc-094ad49dfa62
 lamassu_printables_derived 6fcaf893-3f1a-45b0-ac03-10e15029ef18  # reference: render of Printables 665507 (CC BY-NC, Peter Farell)
+
+# Crowd of Uruk (Gen-2.5-High, ~40000 faces, via the hyper3d MCP): crowd_ figures for street variety.
+crowd_fisherman 85a41055-9acd-4e28-8724-2cc8a3a7a4b0
+crowd_baker 69829d20-9a1c-4e30-b5d1-53db5446ee6e
+crowd_carpenter 25f131ba-6e42-4df6-bbff-17194f6467d8
+crowd_shepherd ca765b96-a148-4d54-8917-573a1df7e8bb
+crowd_old_man f45a93c7-9a53-4210-b506-74e65d5f811f
+crowd_apprentice_boy bd86464d-b030-404e-a7ef-f2b1c6ef2d5a
+crowd_market_woman 911c40e0-274d-4e2f-a918-c71ba820180d
+crowd_pregnant_woman fce83ac4-54d8-43bd-b560-df42eb7f43de  # clean regeneration (no local repair needed)
+crowd_pregnant_woman_with_child 560b1b7f-634b-43bf-982f-ebe643793273  # separated locally in Blender (no credits): mother -> crowd_pregnant_woman_mother_repaired.glb, child -> crowd_pregnant_woman_child_repaired.glb
+crowd_washwoman 80c60ef9-e5fa-4adb-af75-011cf820d159
+crowd_young_woman fe1599b3-ac1b-4768-aa1b-04748b84133e
+crowd_grandmother cec98e8e-8d55-498e-8f46-b97e6edfe6e6
+crowd_boy_8 2a91bd8e-9dae-4cce-b64f-501694eb3005
+crowd_girl_8 6f00b24e-bd0b-4b97-9eba-a4b22e4bd932
+crowd_toddler_boy 14b1a350-a727-4382-8528-3bf6186a0fa1
+crowd_teen_girl f7b71d4e-24c0-4417-a0a5-8c7f5bfd282b
+crowd_spearman 483e394a-fc1b-4dab-887d-f8f63c06d620
+crowd_archer 31fdbf1b-84a4-4bca-ae51-ac9662222ee0  # regenerated (halucinated bow strings); strings and floating artifacts removed locally in Blender (no credits): crowd_archer_repaired.glb
+crowd_axeman cc1a184a-9ca7-4b2a-8b31-947907cf3ea4
+crowd_slinger 4c4dd856-1f74-4907-b5f4-bd96297d4780
+crowd_textile_merchant 86dea425-65b1-4943-8f3f-910b37176594
+crowd_copper_merchant 106ceb8e-f2c6-4b29-a3a0-6a9199708db8
+crowd_caravaneer cb13f7fc-c37a-4b06-85f3-a5c7673abfeb
+crowd_young_noble 626ca4e8-63a3-4880-bd3b-e2625be80689
+crowd_noble_girl 73cbcd64-b60b-48f0-9f31-24f87f6fa2ef
+crowd_court_official 7e8c9a16-3c15-420c-b785-e9ce8117001e
+crowd_priest_minor 88f1181b-ce99-48c4-9302-9f515bedef9e

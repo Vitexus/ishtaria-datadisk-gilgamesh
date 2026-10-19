@@ -45,7 +45,10 @@ not ours), and the owner's reference illustration of Babylon. Nothing was copied
   from the centre and is lower in lanes.
 - **Markets**: a great market (92 x 62 m, 100+ stalls with coloured awnings, a well) beside the avenue from the Ishtar Gate, and
   smaller markets inside three gates. **Smithies**: a street of workshops in the south-west and a few single ones (open front,
-  forge, tall chimney, anvil, charcoal heap).
+  a furnace for smelting copper, tall chimney, anvil, sword moulds, a charcoal heap, a turf charcoal kiln and a pile of
+  wood). **Potters' yards** stand beside that street (`places/workshops.yaml`, `uruk_pottery.glb`): a kiln, jars, stacks of
+  clay tablets and baskets. Servants patrol from the yards to Eanna and to the great market; scribes, a merchant and a priest
+  write on the tablets.
 - **Density**: the built city covers the middle (up to about 0.4 of the way to the wall) and thins out; the outskirts are fields
   and orchards, as the epic says (a third city, a third orchards, a third clay pits; the clay pits are not made).
 
@@ -84,8 +87,10 @@ Secondary source (cites Charvat, Crusemann, Leick, Crawford); figures to check a
 - **Anu**: the ziggurat is 12 m high (mud brick with a bitumen-like binding), the court on top about 50 x 45 m. The White Temple on
   top is 22 x 17 m, built 3517-3358 BCE, whitewashed, tripartite, three entrances and none faces the access ramp (a visitor has to walk
   round it), pits for sacrifices in the big middle room, two small rooms with a stair; a small terrace north of the temple with a
-  3 x 2 m fire pit. A lower stone temple (layer VI) lay under the north-west part of the ziggurat. The current model is higher
-  (about 20 m without the temple) and has three stages: open question, see the report.
+  3 x 2 m fire pit. A lower stone temple (layer VI) lay under the north-west part of the ziggurat. The current model follows
+  this: a single terrace of 57 x 52 m at the base, 12 m high with a 3.5 m batter, the court 50 x 45 m on top, the White
+  Temple 22.3 x 17.5 m with its roof about 21 m above the plain, and the fire-pit terrace north of it
+  (`ziggurat_anu.glb`, dimensions and sources in `ZIGGURATS.md`).
 - **Eanna**: rebuilt several times. The first stone temple (layer VI, about 3500 BCE, south-west part) had a T-shaped plan, a limestone
   plinth with buttresses and clay-cone mosaic (the plan used for `limestone_hall`). In layer V a limestone temple of 62 x 11 m stood in
   the north-east part about 100 m from it, same plan, with a ramp at the back to the roof, on the site of the old Ubaid temple. In layer

@@ -1,0 +1,26 @@
+# Original soundtrack (tools/compose_music.py): synthesized gish-gudi lute + zurna-style
+# reed drone, with CC0 pads from tools/music-samples/. Not a sample of any recording.
+- id: logo
+  file: media/music/logo.ogg
+  title_key: music.logo
+  loop: false
+- id: plains
+  file: media/music/plains.ogg
+  title_key: music.plains
+  loop: true
+- id: city
+  file: media/music/city.ogg
+  title_key: music.city
+  loop: true
+- id: temple
+  file: media/music/temple.ogg
+  title_key: music.temple
+  loop: true
+- id: cedar_forest
+  file: media/music/cedar_forest.ogg
+  title_key: music.cedar_forest
+  loop: true
+- id: waters
+  file: media/music/waters.ogg
+  title_key: music.waters
+  loop: true

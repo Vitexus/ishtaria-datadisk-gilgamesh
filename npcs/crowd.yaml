@@ -1,0 +1,237 @@
+# Unnamed townsfolk of Early Dynastic Uruk (rigged Rodin crowd). Speeds: elderly slow,
+# adults walk, children run (client plays Run when speed > 1.55 m/s).
+
+- id: crowd_old_man
+  name_key: npc.crowd_old_man
+  place: uruk_market
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_old_man.bio
+  movement: {kind: wander, radius_m: 18, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, elder]
+
+- id: crowd_grandmother
+  name_key: npc.crowd_grandmother
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_grandmother.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, elder]
+
+- id: crowd_boy_8
+  name_key: npc.crowd_boy_8
+  place: uruk_market
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_boy_8.bio
+  movement: {kind: wander, radius_m: 28, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, child]
+
+- id: crowd_girl_8
+  name_key: npc.crowd_girl_8
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_girl_8.bio
+  movement: {kind: wander, radius_m: 26, speed_m_s: 2.0, pause_s: 2}
+  tags: [crowd, child]
+
+- id: crowd_toddler_boy
+  name_key: npc.crowd_toddler_boy
+  place: uruk_market
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_toddler_boy.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_toddler_boy.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 1.65, pause_s: 3}
+  tags: [crowd, child]
+
+- id: crowd_teen_girl
+  name_key: npc.crowd_teen_girl
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_teen_girl.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_teen_girl.bio
+  movement: {kind: wander, radius_m: 22, speed_m_s: 1.9, pause_s: 2}
+  tags: [crowd, child]
+
+- id: crowd_apprentice_boy
+  name_key: npc.crowd_apprentice_boy
+  place: uruk_quarter_02
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_apprentice_boy.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_apprentice_boy.bio
+  movement: {kind: wander, radius_m: 35, speed_m_s: 2.1, pause_s: 2}
+  tags: [crowd, child]
+
+- id: crowd_fisherman
+  name_key: npc.crowd_fisherman
+  place: river_bank
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_fisherman.bio
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 4}
+  tags: [crowd]
+
+- id: crowd_baker
+  name_key: npc.crowd_baker
+  place: uruk_market
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_baker.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_baker.bio
+  movement: {kind: wander, radius_m: 16, speed_m_s: 0.95, pause_s: 5}
+  tags: [crowd]
+
+- id: crowd_carpenter
+  name_key: npc.crowd_carpenter
+  place: uruk_quarter_03
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_carpenter.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_carpenter.bio
+  movement: {kind: wander, radius_m: 30, speed_m_s: 1.05, pause_s: 4}
+  tags: [crowd]
+
+- id: crowd_shepherd
+  name_key: npc.crowd_shepherd
+  place: uruk_pasture
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_shepherd.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_shepherd.bio
+  movement: {kind: wander, radius_m: 50, speed_m_s: 0.9, pause_s: 5}
+  tags: [crowd]
+
+- id: crowd_market_woman
+  name_key: npc.crowd_market_woman
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_market_woman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_market_woman.bio
+  movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4}
+  tags: [crowd]
+
+- id: crowd_washwoman
+  name_key: npc.crowd_washwoman
+  place: river_bank
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_washwoman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_washwoman.bio
+  movement: {kind: wander, radius_m: 25, speed_m_s: 1.05, pause_s: 3}
+  tags: [crowd]
+
+- id: crowd_young_woman
+  name_key: npc.crowd_young_woman
+  place: uruk_quarter_01
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_young_woman.bio
+  movement: {kind: wander, radius_m: 28, speed_m_s: 1.1, pause_s: 3}
+  tags: [crowd]
+
+- id: crowd_pregnant_woman
+  name_key: npc.crowd_pregnant_woman
+  place: uruk_market
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 12, speed_m_s: 0.7, pause_s: 6}
+  tags: [crowd]
+
+# Soldiers walk the wall and other gates — never city_gate (player spawn).
+- id: crowd_spearman
+  name_key: npc.crowd_spearman
+  place: lamassu_gate_ishtar
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_spearman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_spearman.bio
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.15, pause_s: 4}
+  tags: [crowd, soldier]
+
+- id: crowd_archer
+  name_key: npc.crowd_archer
+  place: great_wall_uruk
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_archer.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_archer.bio
+  movement: {kind: wander, radius_m: 45, speed_m_s: 1.1, pause_s: 4}
+  tags: [crowd, soldier]
+
+- id: crowd_axeman
+  name_key: npc.crowd_axeman
+  place: lamassu_gate_west
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_axeman.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_axeman.bio
+  movement: {kind: wander, radius_m: 35, speed_m_s: 1.05, pause_s: 5}
+  tags: [crowd, soldier]
+
+- id: crowd_slinger
+  name_key: npc.crowd_slinger
+  place: lamassu_gate_north
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_slinger.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_slinger.bio
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.25, pause_s: 3}
+  tags: [crowd, soldier]
+
+- id: crowd_textile_merchant
+  name_key: npc.crowd_textile_merchant
+  place: uruk_market
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_textile_merchant.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_textile_merchant.bio
+  movement: {kind: wander, radius_m: 15, speed_m_s: 0.95, pause_s: 5}
+  tags: [crowd, merchant]
+
+- id: crowd_copper_merchant
+  name_key: npc.crowd_copper_merchant
+  place: uruk_market
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_copper_merchant.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_copper_merchant.bio
+  movement: {kind: wander, radius_m: 16, speed_m_s: 1.0, pause_s: 4}
+  tags: [crowd, merchant]
+
+- id: crowd_caravaneer
+  name_key: npc.crowd_caravaneer
+  place: processional_way
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_caravaneer.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_caravaneer.bio
+  movement: {kind: wander, radius_m: 50, speed_m_s: 0.95, pause_s: 5}
+  tags: [crowd]
+
+- id: crowd_young_noble
+  name_key: npc.crowd_young_noble
+  place: uruk_palace
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_young_noble.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_young_noble.bio
+  movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4}
+  tags: [crowd, noble]
+
+- id: crowd_noble_girl
+  name_key: npc.crowd_noble_girl
+  place: uruk_palace
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_noble_girl.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_noble_girl.bio
+  movement: {kind: wander, radius_m: 16, speed_m_s: 1.7, pause_s: 2}
+  tags: [crowd, noble, child]
+
+- id: crowd_court_official
+  name_key: npc.crowd_court_official
+  place: uruk_palace
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_court_official.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_court_official.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.9, pause_s: 5}
+  tags: [crowd, noble]
+
+- id: crowd_priest_minor
+  name_key: npc.crowd_priest_minor
+  place: eanna_temple
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_priest_minor.glb}
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_priest_minor.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 0.95, pause_s: 6}
+  tags: [crowd, priest]

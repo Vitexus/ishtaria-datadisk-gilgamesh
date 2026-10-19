@@ -126,12 +126,19 @@ JOINT_CHANNEL = [
 ]
 # Tells that stood in the marshes and the lagoon, on the water but never in it:
 # their pixels are carved back to land (Forti et al. 2022: cities of the delta on
-# "turtlebacks"; Kissik is a port of the lagoon, 33 km SE of Ur).
-# Tells that stood in the marshes and the lagoon, on the water but never in it:
-# their pixels are carved back to land (Forti et al. 2022: cities of the delta on
-# "turtlebacks"; Kissik is a port of the lagoon, 33 km SE of Ur).
+# "turtlebacks"; Kissik is a port of the lagoon, 33 km SE of Ur). The same list
+# keeps the coastal and riverside tells of the wider world (places/ancient_cities.yaml,
+# research/ANCIENT_CITIES.md) dry: at 0.05 degrees one block can be half sea though
+# the tell itself stood on dry ground (Ugarit, Sidon, Liman Tepe), and the one-line
+# rivers of the reconstruction can cross the block of a city that stood on their
+# bank (Kish, Shuruppak).
 SHORE_SITES = [
     ("Kissik (Tell al-Lahm)", 30.61, 46.36),
+    ("Kish (Tell al-Uhaymir)", 32.5403, 44.6047),
+    ("Shuruppak (Tell Fara)", 31.7775, 45.5097),
+    ("Ugarit (Ras Shamra)", 35.6019, 35.7856),
+    ("Sidon", 33.5607, 35.3683),
+    ("Liman Tepe", 38.3633, 26.7758),
 ]
 # The permanent marshes of Early Dynastic Sumer, water in the mask: the brackish
 # lagoon in front of the Eridu-Ur shoreline (the environment of Abu Tbeirah and
@@ -165,6 +172,10 @@ DRY_DEPRESSIONS = [
     ("Danakil", 12.9, 14.3, 40.1, 41.2),      # salt pans, dry in the Bronze Age
     ("Salton Sink", 33.1, 33.6, -116.1, -115.5),
     ("Laguna del Carbon", -49.6, -49.1, -68.5, -68.2),
+    # The floor of the Jordan valley between the Dead Sea and the Sea of Galilee is
+    # dry land far below sea level (Jericho stands at about -250 m; the two seas
+    # themselves stay water - their blocks lie outside this rectangle).
+    ("Jordan Valley", 31.82, 32.62, 35.30, 35.60),
 ]
 
 
@@ -319,6 +330,64 @@ def main():
         ("Abu Tbeirah", 31.22, 46.29, "land"),
         ("Kissik (Tell al-Lahm)", 30.61, 46.36, "land"),
         ("Nippur", 32.03, 45.13, "land"),
+        # The archaeologically attested cities of the Epic's time, worldwide (c. 2700 BCE):
+        # places/ancient_cities.yaml, research/ANCIENT_CITIES.md.
+        ("Eridu (Tell Abu Shahrain)", 30.8261, 45.9947, "land"),
+        ("Ur (Tell el-Muqayyar)", 30.9626, 46.1030, "land"),
+        ("Kish (Tell al-Uhaymir)", 32.5403, 44.6047, "land"),
+        ("Nippur (Tell Nuffar)", 32.1261, 45.2308, "land"),
+        ("Shuruppak (Tell Fara)", 31.7775, 45.5097, "land"),
+        ("Larsa (Tell Senkereh)", 31.2858, 45.8536, "land"),
+        ("Umma (Tell Jokha)", 31.6672, 45.8875, "land"),
+        ("Lagash (Tell al-Hiba)", 31.4111, 46.4111, "land"),
+        ("Girsu (Tello)", 31.5653, 46.1896, "land"),
+        ("Nigin (Tell Zurghul)", 31.3768, 46.4957, "land"),
+        ("Abu Tbeirah", 30.9700, 46.2680, "land"),
+        ("Adab (Tell Bismaya)", 31.9473, 45.6263, "land"),
+        ("Eshnunna (Tell Asmar)", 33.8106, 44.7667, "land"),
+        ("Nineveh (Kuyunjik)", 36.3586, 43.1539, "land"),
+        ("Tell Brak (Nagar)", 36.6700, 41.0600, "land"),
+        ("Mari (Tell Hariri)", 34.5494, 40.8900, "land"),
+        ("Susa (Shush)", 32.1894, 48.2561, "land"),
+        ("Shahr-e Sukhteh", 30.6500, 61.4000, "land"),
+        ("Ebla (Tell Mardikh)", 35.7981, 36.7986, "land"),
+        ("Byblos", 34.1167, 35.6500, "land"),
+        ("Ugarit (Ras Shamra)", 35.6019, 35.7856, "land"),
+        ("Sidon", 33.5607, 35.3683, "land"),
+        ("Megiddo (Tell el-Mutesellim)", 32.5833, 35.1833, "land"),
+        ("Jericho (Tell es-Sultan)", 31.8717, 35.4446, "land"),
+        ("Arad (Tel Arad)", 31.2808, 35.1250, "land"),
+        ("Hazor (Tell el-Qedah)", 33.0182, 35.5691, "land"),
+        ("Memphis (Mit Rahina)", 29.8447, 31.2509, "land"),
+        ("Heliopolis", 30.1294, 31.2889, "land"),
+        ("Abydos", 26.1852, 31.9189, "land"),
+        ("Hierakonpolis (Nekhen)", 25.0972, 32.7794, "land"),
+        ("Naqada", 25.9017, 32.7242, "land"),
+        ("Koptos (Qift)", 25.9951, 32.8197, "land"),
+        ("Elephantine", 24.0867, 32.8792, "land"),
+        ("Buto (Tell el-Fara'in)", 31.1912, 30.7402, "land"),
+        ("Kerma", 19.6008, 30.4097, "land"),
+        ("Altyn-Depe", 36.8547, 60.4261, "land"),
+        ("Namazga-Depe", 37.3703, 59.5542, "land"),
+        ("Sarazm", 39.5167, 67.5667, "land"),
+        ("Harappa", 30.6333, 72.8667, "land"),
+        ("Kot Diji", 27.3416, 68.7000, "land"),
+        ("Kalibangan", 29.4700, 74.1300, "land"),
+        ("Rehman Dheri", 31.9678, 70.7969, "land"),
+        ("Dholavira", 23.8861, 70.2167, "land"),
+        ("Liangzhu", 30.3967, 119.9853, "land"),
+        ("Troy (Hisarlik)", 39.9575, 26.2389, "land"),
+        ("Poliochni", 39.8537, 25.3430, "land"),
+        ("Kultepe (Kanesh)", 38.8500, 35.6333, "land"),
+        ("Liman Tepe", 38.3633, 26.7758, "land"),
+        ("Alaca Hoyuk", 40.2340, 34.6907, "land"),
+        ("Arslantepe", 38.3819, 38.3611, "land"),
+        ("Knossos", 35.2981, 25.1631, "land"),
+        ("Lerna", 37.5512, 22.7182, "land"),
+        ("Los Millares", 36.9644, -2.4597, "land"),
+        ("Zambujal", 39.0744, -9.2858, "land"),
+        ("Caral", -10.8895, -77.5188, "land"),
+        ("Aspero", -10.8156, -77.7410, "land"),
         ("the Euphrates east of Uruk", 31.33, 45.68, "water"),
         ("the Euphrates east of Larsa", 31.05, 45.95, "water"),
         ("the Euphrates east of Ur", 30.87, 46.18, "water"),

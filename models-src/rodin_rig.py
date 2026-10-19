@@ -575,7 +575,7 @@ def main():
     add_face(h, body)
     bpy.context.view_layer.objects.active = arm
     h.arm_swing = {"L": ARM_SWING_SIDES.get("L", ARM_SWING), "R": ARM_SWING_SIDES.get("R", ARM_SWING)}
-    humanoid.humanoid_animations(h, arm, stride=STRIDE)
+    humanoid.humanoid_animations(h, arm, stride=STRIDE, run=bool(CONFIG.get("run")))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     humanoid.export_glb(OUT)
     print("exported", OUT, os.path.getsize(OUT), "bytes", len(body.data.polygons), "faces")

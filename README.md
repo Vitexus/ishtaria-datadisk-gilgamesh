@@ -166,5 +166,7 @@ This datadisk demonstrates how the Ishtaria engine can be extended to support fu
 story-driven experiences. The epic questline provides a comprehensive gameplay experience
 from character creation through the hero's journey and eventual acceptance of mortality.
 
-For the complete experience, music tracks should be added to the `media/music/` directory. A cover image should
+Music tracks live in `media/music/` (synthesized by `tools/compose_music.py` as gish-gudi lute and
+zurna-style reed with drone, inspired by public descriptions of Sumerian instruments — not a
+sample of any commercial recording; CC0 loops in `tools/music-samples/`). A cover image should
 be added to `media/cover/cover.jpg` (1024x768 recommended).

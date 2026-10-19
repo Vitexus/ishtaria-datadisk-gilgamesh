@@ -5,6 +5,9 @@ datadisk.gilgamesh.name: Epos o Gilgamešovi
 
 # Místa
 place.uruk: Uruk
+place.bridge_wood: Dřevěná lávka
+place.bridge_brick: Cihlový most
+place.bridge_stone: Most bohů
 place.uruk_wall: Velká zeď Uruku
 place.eanna_temple: Chrám Eanna
 place.ishtar_temple: Chrám Ištar
@@ -28,14 +31,26 @@ place.hanging_gardens: Visuté zahrady
 place.royal_tombs: Královské hrobky v Uruku
 place.etemenanki: Etemenanki, babylonská věž
 place.city_gate: Městská brána v Uruku
+place.processional_way: Procesní cesta v Uruku
+place.river_bank: Břeh řeky u Uruku
+place.uruk_pasture: Pastvina za hradbami Uruku
 
 # Hudba
+music.logo: Epos o Gilgamešovi
+music.plains: Aluviální pláně
+music.city: Ulice Uruku
 music.temple: Chrámová hudba
 music.ishtar_shrine: Svatyně Ištar
 music.cedar_forest: Cedrový les
 music.mountain_echo: horská ozvěna
 music.waters_of_death: Vody smrti
 music.utnapishtim: Utnapištimova melodie
+music.waters: Bažinné vody
+
+crowd.greet: Mír města s tebou.
+crowd.reply: Co nového na trhu?
+crowd.busy: Den je krátký a práce dlouhá. Jdi v pokoji.
+crowd.leave: Sbohem.
 
 # Jména NPC a jejich popisy
 npc.gilgamesh: Gilgameš
@@ -699,4 +714,156 @@ place.shedu_house_22: Šédu u dveří domu 22
 place.shedu_house_23: Šédu u dveří domu 23
 place.shedu_house_24: Šédu u dveří domu 24
 place.queen_of_the_night: Královna noci
+place.gilgamesh_statue_palace: Socha Gilgameše na palácovém dvoře
+place.gilgamesh_statue_eanna: Socha Gilgameše na dvoře Eanny
+place.gilgamesh_statue_royal_tombs: Socha Gilgameše u královských hrobek
 # <<< uruk statues
+
+# <<< ancient cities of the world (c. 2700 BCE)
+place.ur: Ur
+place.eridu: Eridu
+place.kish: Kiš
+place.nippur: Nippur
+place.shuruppak: Šuruppak
+place.larsa: Larsa
+place.umma: Umma
+place.lagash: Lagaš
+place.girsu: Girsu
+place.nigin: Nigin
+place.abu_tbeirah: Abú Tbejrah
+place.kissik: Kissik
+place.adab: Adab
+place.eshnunna: Ešnunna
+place.nineveh: Ninive
+place.tell_brak: Tell Brak
+place.mari: Mari
+place.susa: Súsy
+place.shahr_e_sukhteh: Šahr-e Suchte (Spálené město)
+place.ebla: Ebla
+place.byblos: Biblos
+place.ugarit: Ugarit
+place.sidon: Sidón
+place.megiddo: Megido
+place.jericho: Jericho
+place.arad: Arad
+place.hazor: Hacor
+place.memphis: Memfis
+place.heliopolis: Héliopolis
+place.abydos: Abýdos
+place.hierakonpolis: Hierakonpolis
+place.naqada: Nagada
+place.koptos: Koptos
+place.elephantine: Elefantina
+place.buto: Búto
+place.kerma: Kerma
+place.altyndepe: Altyn-Depe
+place.namazga_depe: Namazga-Depe
+place.sarazm: Sarazm
+place.harappa: Harappa
+place.kot_diji: Kot Diji
+place.kalibangan: Kalibangan
+place.rehman_dheri: Rehmán Dherí
+place.dholavira: Dholavíra
+place.liangzhu: Liangzhu
+place.troy: Trója
+place.poliochni: Poliochne
+place.kultepe: Kültepe
+place.liman_tepe: Liman Tepe
+place.alaca_hoyuk: Alaca Höyük
+place.arslantepe: Arslantepe
+place.knossos: Knóssos
+place.lerna: Lerna
+place.los_millares: Los Millares
+place.zambujal: Zambujal
+place.caral: Caral
+place.aspero: Áspero
+
+# Crowd of Uruk
+npc.crowd_old_man: Starý měšťan
+npc.crowd_old_man.bio: "A frail elder of Uruk, walking slowly through the market."
+npc.crowd_grandmother: Babička
+npc.crowd_grandmother.bio: "An elderly grandmother of Uruk with a cream shawl."
+npc.crowd_boy_8: Chlapec
+npc.crowd_boy_8.bio: "A boy of about eight racing through the lanes."
+npc.crowd_girl_8: Dívka
+npc.crowd_girl_8.bio: "A girl of about eight, curious and quick."
+npc.crowd_toddler_boy: Batole
+npc.crowd_toddler_boy.bio: "A small toddler toddling after the market noise."
+npc.crowd_teen_girl: Dospívající dívka
+npc.crowd_teen_girl.bio: "A girl of about fourteen walking the streets."
+npc.crowd_apprentice_boy: Učeň
+npc.crowd_apprentice_boy.bio: "A young apprentice running errands."
+npc.crowd_fisherman: Rybář
+npc.crowd_fisherman.bio: "A marsh fisherman come to sell his catch."
+npc.crowd_baker: Pekař
+npc.crowd_baker.bio: "A baker of Uruk, flour on his skirt."
+npc.crowd_carpenter: Tesař
+npc.crowd_carpenter.bio: "A carpenter with a wide leather belt."
+npc.crowd_shepherd: Pastýř
+npc.crowd_shepherd.bio: "A shepherd come in from the steppe."
+npc.crowd_market_woman: Trhovkyně
+npc.crowd_market_woman.bio: "A sturdy market woman of Uruk."
+npc.crowd_washwoman: Pračka
+npc.crowd_washwoman.bio: "A washerwoman of the city canals."
+npc.crowd_young_woman: Mladá žena
+npc.crowd_young_woman.bio: "A young woman of Uruk."
+npc.crowd_pregnant_woman: Těhotná žena
+npc.crowd_pregnant_woman.bio: "A young woman late in pregnancy."
+npc.crowd_spearman: Kopiník
+npc.crowd_spearman.bio: "A spearman of the city guard."
+npc.crowd_archer: Lukostřelec
+npc.crowd_archer.bio: "An archer of Early Dynastic Uruk."
+npc.crowd_axeman: Bojovník se sekerou
+npc.crowd_axeman.bio: "A stocky soldier with a copper axe."
+npc.crowd_slinger: Prakovník
+npc.crowd_slinger.bio: "A young skirmisher with a sling."
+npc.crowd_textile_merchant: Obchodník s látkami
+npc.crowd_textile_merchant.bio: "A well-dressed textile merchant."
+npc.crowd_copper_merchant: Obchodník s mědí
+npc.crowd_copper_merchant.bio: "A copper trader of the market."
+npc.crowd_caravaneer: Karavanář
+npc.crowd_caravaneer.bio: "A donkey caravan driver."
+npc.crowd_young_noble: Mladý šlechtic
+npc.crowd_young_noble.bio: "A young nobleman of the palace."
+npc.crowd_noble_girl: Šlechtická dívka
+npc.crowd_noble_girl.bio: "A noble girl of about fifteen."
+npc.crowd_court_official: Dvorní úředník
+npc.crowd_court_official.bio: "A palace official of Uruk."
+npc.crowd_priest_minor: Mladší kněz
+npc.crowd_priest_minor.bio: "A young priest of the Eanna precinct."
+
+place.uruk_smithy: Kovářská dílna
+place.uruk_pottery: Hrnčířská dílna
+
+npc.smith: Kovář
+npc.smith.bio: "Kovář z jihozápadní ulice. V peci taví měď, v milíři pálí dřevěné uhlí a do hliněných forem odlévá meče. Na kožené zástěře má saze a v ruce čerstvou čepel."
+npc.potter_tablet: Hrnčíř tabulek
+npc.potter_tablet.bio: "Hrnčíř, který tvaruje nádoby i hliněné tabulky, na které město píše. Hlína až k loktům, v rukou vlhká tabulka a rákosové rydlo."
+npc.tablet_bearer: Sluha
+npc.tablet_bearer.bio: "Sluha z hrnčířské dílny. V koši nosí nepopsané hliněné tabulky do chrámu a na tržiště."
+npc.market_scribe: Písař
+npc.market_scribe.bio: "Písař, který na hliněné tabulky přinesené sluhy od hrnčířů zapisuje účty a oběti."
+npc.tablet_merchant: Kupec
+npc.tablet_merchant.bio: "Kupec z velkého tržiště. Na hliněné tabulky píše, co koupil a co prodal, rydlo v ruce."
+npc.writing_priest: Kněz
+npc.writing_priest.bio: "Kněz z Eanny. Na hliněné tabulky vynesené z hrnčířských dílen zapisuje oběti."
+
+smith.greet: "Pozor na pec. Měď teče a v formě tuhne meč."
+smith.ask_furnace: Zeptej se na pec
+smith.ask_sword: Zeptej se na meče
+smith.leave: Nechám tě u ohně.
+smith.furnace: "Do pece jde ruda a dřevěné uhlí a milíř vedle dvora pálí dřevo na uhlí. Bez toho ohně není měď a bez mědi není čepel."
+smith.sword: "Meče odlévám, nekuju je ze vzduchu. Forma je z hlíny, kov je měď a čepel chladne na lavici, zatímco se lije další."
+
+potter.ask_tablets: Zeptej se na hliněné tabulky
+potter.tablets: "Džbány jsou pro dům a pro chrám. Tabulky jsou pro slova. Řežu je z téže říční hlíny a sluhové je v koších odnášejí do Eanny a na tržiště, kde na ně píší písaři, kupci a kněží."
+
+tablet_bearer.greet: "Ustup. Koš je plný tabulek a ještě jsou měkké."
+tablet_bearer.ask_tablets: Zeptej se, kam je neseš
+tablet_bearer.leave: Jen jdi.
+tablet_bearer.tablets: "Z hrnčířské dílny do chrámu a druhý koš na tržiště. Píší na ně písaři, kupci a kněží. Já je jen nosím."
+
+tablet_writer.greet: "Čerstvá tabulka, ještě teplá z hrnčířské dílny. Dej mi chvíli a slova budou v hlíně."
+tablet_writer.ask_write: Zeptej se, co píšeš
+tablet_writer.leave: Nerozmažu ti hlínu.
+tablet_writer.write: "Písaři píší oběti, kupci píší, co se koupilo a prodalo, a my kněží píšeme, co bylo dáno bohům. Sluhové nosí tabulky v koších. Hlína si pamatuje ruku, která ji stlačila."

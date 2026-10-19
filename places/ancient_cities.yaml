@@ -1,0 +1,513 @@
+# The archaeologically attested cities of the world in the Epic's time (c. 2700 BCE, Early Dynastic II),
+# beyond Uruk and the story places of the Epic: every settlement whose existence around 2700 BCE has
+# archaeological evidence and whose site is known and located, from Sumer to Peru. Sources, dating
+# evidence and coordinate provenance for each city: research/ANCIENT_CITIES.md (web sources, October 2026).
+#
+# Each place is pinned to the historical site itself (`geo`): history has already decided where they
+# stand, so they carry no `requires` advice (the server's biomes and climate are not of 2700 BCE) and
+# no generated town - the medieval Kenney houses and walls of the generated scenery do not belong to
+# the Bronze Age, the same decision places/uruk.yaml makes for Uruk. The base map keeps their tells
+# dry: the block coarseness of the rasters is corrected by tools/build_world_map.py (SHORE_SITES,
+# DRY_DEPRESSIONS), and its checks fail when any of these cities lands in the sea.
+
+# Sumer and its neighbours in the alluvium.
+
+- id: ur
+  kind: city
+  name_key: place.ur
+  radius_m: 200
+  # The royal city of Sumer (Tell el-Muqayyar), the home of the Royal Cemetery a few
+  # generations after the Epic; an Early Dynastic city on the Euphrates bank.
+  geo: {latitude_deg: 30.9626, longitude_deg: 46.1030}
+
+- id: eridu
+  kind: city
+  name_key: place.eridu
+  radius_m: 150
+  # The oldest city of Sumer (Tell Abu Shahrain), on the shore of the Early Dynastic lagoon: the
+  # first king of the Sumerian King List, and the sea in front of it is the one Gilgamesh crossed.
+  geo: {latitude_deg: 30.8261, longitude_deg: 45.9947}
+
+- id: kish
+  kind: city
+  name_key: place.kish
+  radius_m: 200
+  # Kish (Tell al-Uhaymir), the northern rival whose king Enmebaragesi is the first ruler of the
+  # King List confirmed by finds; the drawn Euphrates passes its north-east corner, as the real
+  # one passed the city (its tell is carved back to dry land in the rasters).
+  geo: {latitude_deg: 32.5403, longitude_deg: 44.6047}
+
+- id: nippur
+  kind: city
+  name_key: place.nippur
+  radius_m: 200
+  # The city of Enlil (Tell Nuffar), the religious centre of Sumer, occupied continuously
+  # from the Ubaid period through the whole Early Dynastic.
+  geo: {latitude_deg: 32.1261, longitude_deg: 45.2308}
+
+- id: shuruppak
+  kind: city
+  name_key: place.shuruppak
+  radius_m: 150
+  # Shuruppak (Tell Fara), the city of Utnapishtim's father Ubara-Tutu on the Euphrates;
+  # an Early Dynastic II city, and its excavated flood layers feed the flood of the Epic.
+  geo: {latitude_deg: 31.7775, longitude_deg: 45.5097}
+
+- id: larsa
+  kind: city
+  name_key: place.larsa
+  radius_m: 150
+  # Larsa (Tell Senkereh) on the Euphrates, an Early Dynastic city west of the branch that
+  # the reconstruction runs past its west side.
+  geo: {latitude_deg: 31.2858, longitude_deg: 45.8536}
+
+- id: umma
+  kind: city
+  name_key: place.umma
+  radius_m: 150
+  # Umma, the rival of Lagash in the border wars (traditionally Tell Jokha; some scholars now
+  # place it at nearby Umm al-Aqarib - an Early Dynastic city either way).
+  geo: {latitude_deg: 31.6672, longitude_deg: 45.8875}
+
+- id: lagash
+  kind: city
+  name_key: place.lagash
+  radius_m: 200
+  # Lagash (Tell al-Hiba), one of the largest tells of Sumer, the city of En-hegal the
+  # earliest attested king of its dynasty (c. 2570 BC, a few generations after the Epic).
+  geo: {latitude_deg: 31.4111, longitude_deg: 46.4111}
+
+- id: girsu
+  kind: city
+  name_key: place.girsu
+  radius_m: 150
+  # Girsu (Tello), the religious twin of Lagash: the city of Ningirsu whose Early Dynastic
+  # dedications are the oldest longer Sumerian inscriptions.
+  geo: {latitude_deg: 31.5653, longitude_deg: 46.1896}
+
+- id: nigin
+  kind: city
+  name_key: place.nigin
+  radius_m: 100
+  # Nigin, the third city of the Lagash state (Tell Zurghul), at the edge of the marshes
+  # the reconstructed Tigris runs into.
+  geo: {latitude_deg: 31.3768, longitude_deg: 46.4957}
+
+- id: abu_tbeirah
+  kind: city
+  name_key: place.abu_tbeirah
+  radius_m: 100
+  # Abu Tbeirah, the excavated port city of the lagoon's shore (about 7 km south of Nasiriyah,
+  # 15 km east of Ur): a Early Dynastic to Akkadian town of the delta's turtlebacks.
+  geo: {latitude_deg: 30.9700, longitude_deg: 46.2680}
+  # Marsh fringe of the ED lagoon: reeds dominate; waterfowl and light herds on the turtlebacks.
+  wildlife:
+    radius_m: 2500
+    density: 2.4
+    flora:
+      - {id: nature.reed_clump, weight: 12}
+      - {id: nature.plant_flatTall, weight: 6}
+      - {id: nature.plant_flatShort, weight: 5}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: nature.tree_palmBend, weight: 2}
+      - {id: quaternius.palm_1, weight: 2}
+      - {id: hyper3d.tamarisk, weight: 3}
+      - {id: nature.plant_bushSmall, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 7}
+      - {id: animal.goose, weight: 6}
+      - {id: animal.turtle, weight: 3}
+      - {id: animal.pig, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.fox, weight: 1}
+
+- id: kissik
+  kind: city
+  name_key: place.kissik
+  radius_m: 100
+  # Kissik (Tell al-Lahm), the port of the lagoon 33 km south-east of Ur; its tell is carved
+  # back to dry land in the world rasters.
+  geo: {latitude_deg: 30.6100, longitude_deg: 46.3600}
+
+- id: adab
+  kind: city
+  name_key: place.adab
+  radius_m: 150
+  # Adab (Tell Bismaya) between Nippur and Umma, an Early Dynastic city whose Ninmah temple
+  # Mesilim of Kish is said to have built a few generations after the Epic.
+  geo: {latitude_deg: 31.9473, longitude_deg: 45.6263}
+
+- id: eshnunna
+  kind: city
+  name_key: place.eshnunna
+  radius_m: 150
+  # Eshnunna (Tell Asmar) in the Diyala, whose Square Temple yielded the Early Dynastic I-II
+  # worshipper statues (c. 2900-2550 BC).
+  geo: {latitude_deg: 33.8106, longitude_deg: 44.7667}
+
+- id: nineveh
+  kind: city
+  name_key: place.nineveh
+  radius_m: 150
+  # Nineveh (Kuyunjik, today inside Mosul), occupied without a break; in the Ninevite 5 period
+  # (3000/2900-2600/2500 BC) a centre of the Ishtar cult on the Tigris.
+  geo: {latitude_deg: 36.3586, longitude_deg: 43.1539}
+
+- id: tell_brak
+  kind: city
+  name_key: place.tell_brak
+  radius_m: 200
+  # Nagar (Tell Brak), one of the world's earliest cities in the Khabur headwaters, urban
+  # since the Uruk period and a main city of the Early Dynastic north.
+  geo: {latitude_deg: 36.6700, longitude_deg: 41.0600}
+
+- id: mari
+  kind: city
+  name_key: place.mari
+  radius_m: 200
+  # Mari (Tell Hariri) on the middle Euphrates, founded about 2900 BC as a planned Sumerian
+  # colony and a trade capital - flourishing in the Epic's very generation.
+  geo: {latitude_deg: 34.5494, longitude_deg: 40.8900}
+
+# Elam and the Iranian plateau.
+
+- id: susa
+  kind: city
+  name_key: place.susa
+  radius_m: 200
+  # Susa, the capital of Elam on the Karun plain, founded before 4000 BC and the neighbour
+  # Enmebaragesi of Kish is said to have made war on around 2700 BC.
+  geo: {latitude_deg: 32.1894, longitude_deg: 48.2561}
+
+- id: shahr_e_sukhteh
+  kind: city
+  name_key: place.shahr_e_sukhteh
+  radius_m: 200
+  # The Burnt City (c. 3200-2100 BC) of the Helmand culture in Sistan, one of the largest
+  # cities of its century - around 2700 BC at its height.
+  geo: {latitude_deg: 30.6500, longitude_deg: 61.4000}
+
+# The Levant.
+
+- id: ebla
+  kind: city
+  name_key: place.ebla
+  radius_m: 200
+  # Ebla (Tell Mardikh), occupied from the Early Bronze I and within a century or two of the
+  # Epic the capital of a kingdom that traded with Kish and Mari.
+  geo: {latitude_deg: 35.7981, longitude_deg: 36.7986}
+
+- id: byblos
+  kind: city
+  name_key: place.byblos
+  radius_m: 150
+  # Byblos on the Lebanese coast, a city since the Early Bronze Age whose ships already
+  # carried cedar to Egypt in the Early Dynastic - the cedar of the Epic's forest.
+  geo: {latitude_deg: 34.1167, longitude_deg: 35.6500}
+
+- id: ugarit
+  kind: city
+  name_key: place.ugarit
+  radius_m: 150
+  # Ugarit (Ras Shamra), the harbour city of the Syrian coast, an Early Bronze Age town
+  # already trading beyond the sea (its tell is carved dry in the rasters).
+  geo: {latitude_deg: 35.6019, longitude_deg: 35.7856}
+
+- id: sidon
+  kind: city
+  name_key: place.sidon
+  radius_m: 150
+  # Sidon, whose tell (by the crusader castle of the modern city) shows an uninterrupted
+  # Early Bronze Age sequence from EB I on bedrock.
+  geo: {latitude_deg: 33.5607, longitude_deg: 35.3683}
+
+- id: megiddo
+  kind: city
+  name_key: place.megiddo
+  radius_m: 150
+  # Megiddo (Tell el-Mutesellim), the city of the Jezreel pass, occupied continuously
+  # from about 3000 BC through the whole Early Bronze Age.
+  geo: {latitude_deg: 32.5833, longitude_deg: 35.1833}
+
+- id: jericho
+  kind: city
+  name_key: place.jericho
+  radius_m: 150
+  # Jericho (Tell es-Sultan), the walls of which are older than any city of Sumer; the Early
+  # Bronze Age town stands at the bottom of the Jordan valley, land far below sea level
+  # (kept dry in the rasters).
+  geo: {latitude_deg: 31.8717, longitude_deg: 35.4446}
+
+- id: arad
+  kind: city
+  name_key: place.arad
+  radius_m: 100
+  # Arad in the Negev, a walled Early Bronze II city (c. 2950-2650 BC) - standing, but only
+  # just, at the very end of the Epic's generation.
+  geo: {latitude_deg: 31.2808, longitude_deg: 35.1250}
+
+- id: hazor
+  kind: city
+  name_key: place.hazor
+  radius_m: 150
+  # Hazor (Tell el-Qedah) in the Hula valley, first settled in the Early Bronze Age and within
+  # the Epic's century a town on the road between Byblos and Kadesh.
+  geo: {latitude_deg: 33.0182, longitude_deg: 35.5691}
+
+# Egypt of the first dynasties.
+
+- id: memphis
+  kind: city
+  name_key: place.memphis
+  radius_m: 200
+  # Memphis, the united Egypt's capital at the apex of the delta since about 2900 BC - in
+  # the Epic's time the seat of the Second Dynasty, by then already centuries old.
+  geo: {latitude_deg: 29.8447, longitude_deg: 31.2509}
+
+- id: heliopolis
+  kind: city
+  name_key: place.heliopolis
+  radius_m: 200
+  # Heliopolis (On), the city of the sun: a religious centre of the delta's edge since the
+  # Early Dynastic period, predecessor of the Ra cult the pyramids served.
+  geo: {latitude_deg: 30.1294, longitude_deg: 31.2889}
+
+- id: abydos
+  kind: city
+  name_key: place.abydos
+  radius_m: 150
+  # Abydos, the burial city of the first dynasties: the tombs of Menes and his successors
+  # stand at Umm el-Qa'ab, and the town served the Osiris cult that grew from them.
+  geo: {latitude_deg: 26.1852, longitude_deg: 31.9189}
+
+- id: hierakonpolis
+  kind: city
+  name_key: place.hierakonpolis
+  radius_m: 150
+  # Nekhen (Hierakonpolis), the capital of Upper Egypt before the union and still a great
+  # city of the Early Dynastic south, home of Horus of Nekhen.
+  geo: {latitude_deg: 25.0972, longitude_deg: 32.7794}
+
+- id: naqada
+  kind: city
+  name_key: place.naqada
+  radius_m: 100
+  # Naqada (Nubt), the town of the god Set and centre of the predynastic culture that carries
+  # its name; still occupied when the Epic's Egypt was ruled from Memphis.
+  geo: {latitude_deg: 25.9017, longitude_deg: 32.7242}
+
+- id: koptos
+  kind: city
+  name_key: place.koptos
+  radius_m: 100
+  # Koptos (Qift) at the Wadi Hammamat road to the Red Sea, whose Min colossi predate the
+  # dynasty and whose Early Dynastic town served the desert trade routes.
+  geo: {latitude_deg: 25.9951, longitude_deg: 32.8197}
+
+- id: elephantine
+  kind: city
+  name_key: place.elephantine
+  radius_m: 100
+  # Abu (Elephantine), the southern border town of Egypt at the first cataract, with Early
+  # Dynastic temples and the oldest Nile flood records.
+  geo: {latitude_deg: 24.0867, longitude_deg: 32.8792}
+
+- id: buto
+  kind: city
+  name_key: place.buto
+  radius_m: 150
+  # Buto (Tell el-Fara'in) in the delta, the capital of Lower Egypt before the union, whose
+  # excavated First Dynasty palace stands in the marshes of the north.
+  geo: {latitude_deg: 31.1912, longitude_deg: 30.7402}
+
+# Nubia.
+
+- id: kerma
+  kind: city
+  name_key: place.kerma
+  radius_m: 150
+  # Kerma below the third cataract, the capital of pre-Kerma Nubia: a settled centre of the
+  # Early Dynastic period whose Western Deffufa rises a few generations later.
+  geo: {latitude_deg: 19.6008, longitude_deg: 30.4097}
+
+# The Kopet Dag piedmont of Central Asia.
+
+- id: altyndepe
+  kind: city
+  name_key: place.altyndepe
+  radius_m: 150
+  # Altyn-Depe ("the golden hill") in the Karakum, the largest town of the Kopet Dag
+  # piedmont in the Namazga IV period (c. 3000-2500 BC).
+  geo: {latitude_deg: 36.8547, longitude_deg: 60.4261}
+
+- id: namazga_depe
+  kind: city
+  name_key: place.namazga_depe
+  radius_m: 150
+  # Namazga-Depe by the Tejen delta, the site that gave the Bronze Age culture of the
+  # piedmont its name and its chronology, urban by the late Namazga III.
+  geo: {latitude_deg: 37.3703, longitude_deg: 59.5542}
+
+- id: sarazm
+  kind: city
+  name_key: place.sarazm
+  radius_m: 150
+  # Sarazm in the Zeravshan valley, a proto-urban centre of the late fourth and third
+  # millennium BC (a UNESCO site) on the tin and lapis road to the steppe.
+  geo: {latitude_deg: 39.5167, longitude_deg: 67.5667}
+
+# The Indus valley of the Early Harappan towns.
+
+- id: harappa
+  kind: city
+  name_key: place.harappa
+  radius_m: 200
+  # Harappa on the Ravi, occupied from the Ravi phase (c. 3300 BC) and already a town of
+  # crafts and writing by the Epic's time - two centuries before its mature city.
+  geo: {latitude_deg: 30.6333, longitude_deg: 72.8667}
+
+- id: kot_diji
+  kind: city
+  name_key: place.kot_diji
+  radius_m: 100
+  # Kot Diji above the Indus floodplain, the fortified town of the phase that carries its
+  # name (c. 3300-2600 BC), with a citadel and a lower town of mud brick.
+  geo: {latitude_deg: 27.3416, longitude_deg: 68.7000}
+
+- id: kalibangan
+  kind: city
+  name_key: place.kalibangan
+  radius_m: 150
+  # Kalibangan on the Ghaggar, a walled Early Harappan town (KLB-I, c. 3000-2700 BC) with
+  # ploughed fields older than any other known.
+  geo: {latitude_deg: 29.4700, longitude_deg: 74.1300}
+
+- id: rehman_dheri
+  kind: city
+  name_key: place.rehman_dheri
+  radius_m: 150
+  # Rehman Dheri by Dera Ismail Khan, one of the oldest urban centres of South Asia: a
+  # planned, walled town from c. 3300 BC in the Gomal valley.
+  geo: {latitude_deg: 31.9678, longitude_deg: 70.7969}
+
+- id: dholavira
+  kind: city
+  name_key: place.dholavira
+  radius_m: 150
+  # Dholavira on Khadir island in the Rann of Kutch, occupied from c. 2650 BC: its first
+  # stage belongs to the generation just after the Epic.
+  geo: {latitude_deg: 23.8861, longitude_deg: 70.2167}
+
+# China of the Liangzhu city.
+
+- id: liangzhu
+  kind: city
+  name_key: place.liangzhu
+  radius_m: 200
+  # The walled city of the Liangzhu culture at Hangzhou bay (c. 3000-2300 BC): walls, gates
+  # and dams of the earliest known hydraulic city, older than any dynasty of China.
+  geo: {latitude_deg: 30.3967, longitude_deg: 119.9853}
+
+# Anatolia, the Aegean and Helladic Greece.
+
+- id: troy
+  kind: city
+  name_key: place.troy
+  radius_m: 150
+  # Troy (Hisarlik) at the Dardanelles: the walled city of Troy I (c. 2950-2550 BC), the
+  # first bronze-working town of the north-east Aegean.
+  geo: {latitude_deg: 39.9575, longitude_deg: 26.2389}
+
+- id: poliochni
+  kind: city
+  name_key: place.poliochni
+  radius_m: 100
+  # Poliochni on Lemnos, a walled early bronze age town contemporary with Troy I, with
+  # streets, wells and a town hall - urban before any city of Greece.
+  geo: {latitude_deg: 39.8537, longitude_deg: 25.3430}
+
+- id: kultepe
+  kind: city
+  name_key: place.kultepe
+  radius_m: 150
+  # Kanes (Kültepe) on the central Anatolian plateau, a major settlement of the early third
+  # millennium - the city the Assyrian caravans found a thousand years later.
+  geo: {latitude_deg: 38.8500, longitude_deg: 35.6333}
+
+- id: liman_tepe
+  kind: city
+  name_key: place.liman_tepe
+  radius_m: 80
+  # Liman Tepe at Urla, a fortified Early Bronze Age harbour town with one of the earliest
+  # stone fortification systems of the Aegean.
+  geo: {latitude_deg: 38.3633, longitude_deg: 26.7758}
+
+- id: alaca_hoyuk
+  kind: city
+  name_key: place.alaca_hoyuk
+  radius_m: 100
+  # Alaca Höyük in the Kızılırmak bend, occupied through the Early Bronze Age; its royal
+  # tombs a few generations after the Epic are the richest of Anatolia.
+  geo: {latitude_deg: 40.2340, longitude_deg: 34.6907}
+
+- id: arslantepe
+  kind: city
+  name_key: place.arslantepe
+  radius_m: 100
+  # Arslantepe by Malatya, whose palace of c. 3400-2900 BC and Early Bronze I town are the
+  # earliest evidence of state and bureaucracy in the highlands.
+  geo: {latitude_deg: 38.3819, longitude_deg: 38.3611}
+
+- id: knossos
+  kind: city
+  name_key: place.knossos
+  radius_m: 150
+  # Knossos on Crete, occupied from the Neolithic: by the Early Minoan I (c. 2800 BC) a
+  # settlement of farmers and sailors that the first palace would grow from.
+  geo: {latitude_deg: 35.2981, longitude_deg: 25.1631}
+
+- id: lerna
+  kind: city
+  name_key: place.lerna
+  radius_m: 100
+  # Lerna by the Argolic gulf, the walled Early Helladic II settlement (c. 2700-2200 BC)
+  # of the House of the Tiles, urban Hellas' beginning.
+  geo: {latitude_deg: 37.5512, longitude_deg: 22.7182}
+
+# Iberia of the chalcolithic walled settlements.
+
+- id: los_millares
+  kind: city
+  name_key: place.los_millares
+  radius_m: 100
+  # Los Millares in Andalusia, a walled settlement of c. 3200-2300 BC with bastions and
+  # a hundred tombs - one of the earliest urban centres of Europe.
+  geo: {latitude_deg: 36.9644, longitude_deg: -2.4597}
+
+- id: zambujal
+  kind: city
+  name_key: place.zambujal
+  radius_m: 80
+  # The Castro of Zambujal near Torres Vedras, the fortified chalcolithic town of Portugal
+  # (c. 3000-2500 BC) with its four successive walls.
+  geo: {latitude_deg: 39.0744, longitude_deg: -9.2858}
+
+# The Supe valley of Peru.
+
+- id: caral
+  kind: city
+  name_key: place.caral
+  radius_m: 200
+  # Caral in the Supe valley, the oldest known city of the Americas (its main phase
+  # c. 2600-2000 BC): pyramids, plazas and sunken courts older than the Incas by four
+  # thousand years.
+  geo: {latitude_deg: -10.8895, longitude_deg: -77.5188}
+
+- id: aspero
+  kind: city
+  name_key: place.aspero
+  radius_m: 100
+  # Áspero at the mouth of the Supe, Caral's fishing town with platform mounds, part of
+  # the same Norte Chico urban system (from c. 3000 BC).
+  geo: {latitude_deg: -10.8156, longitude_deg: -77.7410}

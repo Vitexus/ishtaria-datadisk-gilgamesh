@@ -69,14 +69,14 @@ at a bearing from its parent (see below), so the building stands in the wall mod
 excavated terrace (OSM footprint centre, turned 41° like the survey, stairs towards the Eanna precinct, on
 the lowest ground under the footprint).
 
-## Climate: not done
+## Climate and wildlife
 
 Mesopotamia of the fourth and third millennia BCE was greener than today (wetter climate, marshes and
-date palms along the channels, fields and orchards watered by canals). The disk can only demand
-`biome: [grassland]` for the anchor; trees, grass, flowers and animals of the scene come from the world's
-biome map, not from the datadisk, and the patch carries height and water only. A lusher, ancient
-vegetation along the river and the canals needs a contract extension (a `terrain` option for vegetation
-and reed/palm banks); it is proposed, not built.
+date palms along the channels, fields and orchards watered by canals). The whole-planet climate strip
+is still seeded moisture, but the `uruk` place now declares a dense `wildlife` overlay (ADR 0018):
+palms, reeds, waterfowl and ED fauna weights inside a few kilometres of the city; Abu Tbeirah adds a
+marsh-fringe overlay. See `research/FLORA.md` and `FAUNA.md`. Cleared streets and fields still
+suppress wild spawn.
 
 ## Known simplifications (alpha)
 

@@ -5,6 +5,9 @@ datadisk.gilgamesh.name: Epic of Gilgamesh
 
 # Places
 place.uruk: Uruk
+place.bridge_wood: Timber Footbridge
+place.bridge_brick: Brick Bridge
+place.bridge_stone: Bridge of the Gods
 place.uruk_wall: Great Wall of Uruk
 place.eanna_temple: Temple of Eanna
 place.ishtar_temple: Temple of Ishtar
@@ -28,14 +31,27 @@ place.hanging_gardens: Hanging Gardens
 place.royal_tombs: Royal Tombs of Uruk
 place.etemenanki: Etemenanki, the Tower of Babylon
 place.city_gate: City Gate of Uruk
+place.processional_way: Processional Way of Uruk
+place.river_bank: River Bank of Uruk
+place.uruk_pasture: Pasture outside Uruk
 
 # Music
+music.logo: Epic of Gilgamesh
+music.plains: Alluvial Plains
+music.city: Streets of Uruk
 music.temple: Temple Music
 music.ishtar_shrine: Ishtar's Shrine
 music.cedar_forest: Cedar Forest
 music.mountain_echo: Mountain Echo
 music.waters_of_death: Waters of Death
 music.utnapishtim: Utnapishtim's Theme
+music.waters: Marsh Waters
+
+# Crowd passers-by
+crowd.greet: Peace of the city to you.
+crowd.reply: What news of the market?
+crowd.busy: The day is short and the work is long. Walk in peace.
+crowd.leave: Farewell.
 
 # NPC Names and Bios
 npc.gilgamesh: Gilgamesh
@@ -714,4 +730,156 @@ place.shedu_house_22: Shedu at a house door 22
 place.shedu_house_23: Shedu at a house door 23
 place.shedu_house_24: Shedu at a house door 24
 place.queen_of_the_night: The Queen of the Night
+place.gilgamesh_statue_palace: Statue of Gilgamesh in the palace courtyard
+place.gilgamesh_statue_eanna: Statue of Gilgamesh in the court of Eanna
+place.gilgamesh_statue_royal_tombs: Statue of Gilgamesh at the royal tombs
 # <<< uruk statues
+
+# <<< ancient cities of the world (c. 2700 BCE)
+place.ur: Ur
+place.eridu: Eridu
+place.kish: Kish
+place.nippur: Nippur
+place.shuruppak: Shuruppak
+place.larsa: Larsa
+place.umma: Umma
+place.lagash: Lagash
+place.girsu: Girsu
+place.nigin: Nigin
+place.abu_tbeirah: Abu Tbeirah
+place.kissik: Kissik
+place.adab: Adab
+place.eshnunna: Eshnunna
+place.nineveh: Nineveh
+place.tell_brak: Tell Brak
+place.mari: Mari
+place.susa: Susa
+place.shahr_e_sukhteh: Shahr-e Sukhteh
+place.ebla: Ebla
+place.byblos: Byblos
+place.ugarit: Ugarit
+place.sidon: Sidon
+place.megiddo: Megiddo
+place.jericho: Jericho
+place.arad: Arad
+place.hazor: Hazor
+place.memphis: Memphis
+place.heliopolis: Heliopolis
+place.abydos: Abydos
+place.hierakonpolis: Hierakonpolis
+place.naqada: Naqada
+place.koptos: Koptos
+place.elephantine: Elephantine
+place.buto: Buto
+place.kerma: Kerma
+place.altyndepe: Altyn-Depe
+place.namazga_depe: Namazga-Depe
+place.sarazm: Sarazm
+place.harappa: Harappa
+place.kot_diji: Kot Diji
+place.kalibangan: Kalibangan
+place.rehman_dheri: Rehman Dheri
+place.dholavira: Dholavira
+place.liangzhu: Liangzhu
+place.troy: Troy
+place.poliochni: Poliochni
+place.kultepe: Kültepe
+place.liman_tepe: Liman Tepe
+place.alaca_hoyuk: Alaca Höyük
+place.arslantepe: Arslantepe
+place.knossos: Knossos
+place.lerna: Lerna
+place.los_millares: Los Millares
+place.zambujal: Zambujal
+place.caral: Caral
+place.aspero: Áspero
+
+# Crowd of Uruk
+npc.crowd_old_man: Elder townsman
+npc.crowd_old_man.bio: "A frail elder of Uruk, walking slowly through the market."
+npc.crowd_grandmother: Grandmother
+npc.crowd_grandmother.bio: "An elderly grandmother of Uruk with a cream shawl."
+npc.crowd_boy_8: Boy
+npc.crowd_boy_8.bio: "A boy of about eight racing through the lanes."
+npc.crowd_girl_8: Girl
+npc.crowd_girl_8.bio: "A girl of about eight, curious and quick."
+npc.crowd_toddler_boy: Toddler
+npc.crowd_toddler_boy.bio: "A small toddler toddling after the market noise."
+npc.crowd_teen_girl: Teen girl
+npc.crowd_teen_girl.bio: "A girl of about fourteen walking the streets."
+npc.crowd_apprentice_boy: Apprentice
+npc.crowd_apprentice_boy.bio: "A young apprentice running errands."
+npc.crowd_fisherman: Fisherman
+npc.crowd_fisherman.bio: "A marsh fisherman come to sell his catch."
+npc.crowd_baker: Baker
+npc.crowd_baker.bio: "A baker of Uruk, flour on his skirt."
+npc.crowd_carpenter: Carpenter
+npc.crowd_carpenter.bio: "A carpenter with a wide leather belt."
+npc.crowd_shepherd: Shepherd
+npc.crowd_shepherd.bio: "A shepherd come in from the steppe."
+npc.crowd_market_woman: Market woman
+npc.crowd_market_woman.bio: "A sturdy market woman of Uruk."
+npc.crowd_washwoman: Washerwoman
+npc.crowd_washwoman.bio: "A washerwoman of the city canals."
+npc.crowd_young_woman: Young woman
+npc.crowd_young_woman.bio: "A young woman of Uruk."
+npc.crowd_pregnant_woman: Expectant mother
+npc.crowd_pregnant_woman.bio: "A young woman late in pregnancy."
+npc.crowd_spearman: Spearman
+npc.crowd_spearman.bio: "A spearman of the city guard."
+npc.crowd_archer: Archer
+npc.crowd_archer.bio: "An archer of Early Dynastic Uruk."
+npc.crowd_axeman: Axeman
+npc.crowd_axeman.bio: "A stocky soldier with a copper axe."
+npc.crowd_slinger: Slinger
+npc.crowd_slinger.bio: "A young skirmisher with a sling."
+npc.crowd_textile_merchant: Cloth merchant
+npc.crowd_textile_merchant.bio: "A well-dressed textile merchant."
+npc.crowd_copper_merchant: Copper trader
+npc.crowd_copper_merchant.bio: "A copper trader of the market."
+npc.crowd_caravaneer: Caravaneer
+npc.crowd_caravaneer.bio: "A donkey caravan driver."
+npc.crowd_young_noble: Young noble
+npc.crowd_young_noble.bio: "A young nobleman of the palace."
+npc.crowd_noble_girl: Noble girl
+npc.crowd_noble_girl.bio: "A noble girl of about fifteen."
+npc.crowd_court_official: Court official
+npc.crowd_court_official.bio: "A palace official of Uruk."
+npc.crowd_priest_minor: Junior priest
+npc.crowd_priest_minor.bio: "A young priest of the Eanna precinct."
+
+place.uruk_smithy: Copper smithy
+place.uruk_pottery: Potter's yard
+
+npc.smith: Smith
+npc.smith.bio: "A smith of the south-west street. He smelts copper in the furnace, burns charcoal in the kiln and casts swords in open clay moulds. Soot on a leather apron, a fresh blade in his hand."
+npc.potter_tablet: Tablet potter
+npc.potter_tablet.bio: "A potter who shapes both jars and the clay tablets the city writes on. Clay to the elbows, a damp tablet and a reed stylus in his hands."
+npc.tablet_bearer: Servant
+npc.tablet_bearer.bio: "A servant of the potters' yard. He carries a basket of unwritten clay tablets to the temple and the market."
+npc.market_scribe: Scribe
+npc.market_scribe.bio: "A scribe who writes accounts and offerings on the clay tablets the servants bring from the potters."
+npc.tablet_merchant: Merchant
+npc.tablet_merchant.bio: "A merchant of the great market. He writes what he has bought and sold on clay tablets, stylus in hand."
+npc.writing_priest: Priest
+npc.writing_priest.bio: "A priest of Eanna. He records offerings on the clay tablets carried up from the potters' yards."
+
+smith.greet: "Mind the furnace. The copper is running, and a sword is setting in the mould."
+smith.ask_furnace: Ask about the furnace
+smith.ask_sword: Ask about the swords
+smith.leave: I will leave you to the fire.
+smith.furnace: "Ore and charcoal go into the furnace, and the kiln beside the yard burns the wood to charcoal. Without that fire there is no copper, and without copper there is no blade."
+smith.sword: "I cast the swords, I do not hammer them from thin air. The mould is clay, the metal is copper, and the blade cools on the bench while the next one is poured."
+
+potter.ask_tablets: Ask about the clay tablets
+potter.tablets: "The jars are for the house and the temple. The tablets are for words. I cut them from the same river clay, and the servants carry them in baskets to Eanna and to the market, where scribes, merchants and priests write on them."
+
+tablet_bearer.greet: "Step aside. This basket is full of tablets, and they are still soft."
+tablet_bearer.ask_tablets: Ask where you are taking them
+tablet_bearer.leave: Go on, then.
+tablet_bearer.tablets: "From the potters' yard to the temple, and the other basket to the market. The scribes, the merchants and the priests write on them. I only carry them."
+
+tablet_writer.greet: "A fresh tablet, still warm from the potter's yard. Give me a moment and the words will be in the clay."
+tablet_writer.ask_write: Ask what you are writing
+tablet_writer.leave: I will not smudge the clay.
+tablet_writer.write: "Scribes write the offerings, merchants write what was bought and sold, and we priests write what was given to the gods. The servants bring the tablets in baskets. The clay remembers the hand that pressed it."

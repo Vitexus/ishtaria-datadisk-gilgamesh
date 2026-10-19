@@ -1,0 +1,23 @@
+# Copper smith of the smiths' street. He casts swords at the furnace.
+id: smith
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: smith.greet
+    choices:
+      - {text_key: smith.ask_furnace, goto: furnace}
+      - {text_key: smith.ask_sword, goto: sword}
+      - {text_key: smith.leave}
+
+  furnace:
+    text_key: smith.furnace
+    choices:
+      - {text_key: smith.ask_sword, goto: sword}
+      - {text_key: smith.leave}
+
+  sword:
+    text_key: smith.sword
+    choices:
+      - {text_key: smith.leave}

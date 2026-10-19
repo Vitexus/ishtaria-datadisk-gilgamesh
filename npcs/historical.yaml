@@ -31,16 +31,16 @@
   bio_key: npc.temple_scribe.bio
   tags: [scribe, temple, scholar]
 
-# Royal Guard of Uruk
+# Royal Guard of Uruk — walks the Processional Way, not the player spawn at city_gate.
 - id: royal_guard
   name_key: npc.royal_guard
-  place: city_gate
+  place: processional_way
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/royal_guard.glb}
   dialogue: royal_guard
   portrait: media/portraits/royal_guard.jpg
   bio_key: npc.royal_guard.bio
-  # Patrols the open ground before the Ishtar Gate, along the axis of the gate (waypoints in metres east and south of the place).
-  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[15.0, -31.9], [-8.7, 6.4], [-1.9, 10.6], [21.8, -27.7]]}
+  # Metres east and south of the Processional Way centre (toward the Ishtar Gate).
+  movement: {kind: patrol, speed_m_s: 1.1, pause_s: 8, waypoints: [[12.0, -40.0], [-10.0, -10.0], [8.0, 15.0], [25.0, -20.0]]}
   tags: [guard, soldier, uruk]
 
 # Noble of Uruk

@@ -14,6 +14,9 @@ anchor of Uruk (as everywhere in this disk). A pair stands on both sides of the 
   - at the six entrances of the Eanna precinct and at the stairs of the Anu terrace and of the Ishtar ziggurat,
   - small guardians (shedu_pair.glb: 2.2 m high) at the door of the richest houses and in the middle of the four market squares.
 The Burney Relief goddess stands in the court by the stairs of the Ishtar ziggurat, looking at the court.
+The statue of Gilgamesh holding the adult lion (models-src/architecture/gilgamesh_statue.py: the demigod king 4.5 m on a limestone
+pedestal, the full-grown lion upright in his left arm, both in their painted colours) stands in the courtyard of his palace, in the
+court of the Eanna precinct and at the royal tombs, each facing the way the people come.
 Yaw: the client turns a model by Quaternion(UP, yaw), so a model looking along +Z (south) at yaw 0 looks along (sin yaw, cos yaw) in (x, z).
 """
 import json
@@ -29,6 +32,8 @@ SHEDU = "media/models/architecture/shedu_pair.glb"
 SHEDU_COLLISION = "media/models/architecture/shedu_pair_collision.glb"
 GODDESS = "media/models/architecture/burney_relief.glb"
 GODDESS_COLLISION = "media/models/architecture/burney_relief_collision.glb"
+GILGAMESH = "media/models/architecture/gilgamesh_statue.glb"
+GILGAMESH_COLLISION = "media/models/architecture/gilgamesh_statue_collision.glb"
 SMALL = 1.0             # (the small guardians have a model of their own, shedu_pair.glb: a pair 2.2 m high and 5.4 m apart)
 HOUSES = 24             # how many of the richest houses near the centre get a pair
 
@@ -108,10 +113,11 @@ def choose_parent(statue, raw, pos):
 
 def build():
     plan = json.load(open(PLAN))
+    raw, pos = load_places()
     out = []       # (id, english, czech, point, facing, scale, note)
 
-    def add(pid, en, cs, pt, face, scale=1.0, note="", model="pair"):
-        out.append(dict(id=pid, en=en, cs=cs, pt=pt, face=unit(face), scale=scale, note=note, model=model))
+    def add(pid, en, cs, pt, face, scale=1.0, note="", model="pair", parent=None):
+        out.append(dict(id=pid, en=en, cs=cs, pt=pt, face=unit(face), scale=scale, note=note, model=model, parent=parent))
 
     # gates of the wall
     cs_gate = {"ishtar": "Ištařiny brány", "river": "říční brány", "north": "severní brány", "west": "západní brány", "northwest": "severozápadní brány",
@@ -178,24 +184,51 @@ def build():
     side = left(f)
     g = (ic[0] + f[0] * 28.0 + side[0] * 12.0, ic[1] + f[1] * 28.0 + side[1] * 12.0)
     add("queen_of_the_night", "The Queen of the Night", "Královna noci", g, f, note="the restored Burney Relief goddess", model="goddess")
-    raw, pos = load_places()
+    # the statue of Gilgamesh holding the lion: in the courtyard of his palace (the compound frame: the front is -n, the courtyard
+    # of the palace item is `court` deep round its middle at v; the statue stands on the gateway axis, 4 m inside the courtyard)
+    pal = next(p for p in plan["palaces"] if p["name"] == "uruk_palace")
+    yaw = math.radians(pal["yaw"])
+    t = (math.cos(yaw), math.sin(yaw))
+    n = left(t)
+    front = (-n[0], -n[1])
+    pit = next(i for i in pal["items"] if i["type"] == "palace")
+    sv = pit["v"] - pit["court"][1] / 2 + 4.0
+    pt = (pal["c"][0] + sv * n[0], pal["c"][1] + sv * n[1])
+    add("gilgamesh_statue_palace", "Statue of Gilgamesh in the palace courtyard", "Socha Gilgameše na palácovém dvoře",
+        pt, front, note="the king holding the lion, in the courtyard of his palace, facing the gateway", model="king", parent="uruk_palace")
+    # in the court of the Eanna precinct: an open spot inside the precinct, clear of the Great Court and the halls, beside the way to Anu
+    south = plan["precinct"][0]
+    ept = (110.0, -70.0)
+    add("gilgamesh_statue_eanna", "Statue of Gilgamesh in the court of Eanna", "Socha Gilgameše na dvoře Eanny",
+        ept, (south[0] - ept[0], south[1] - ept[1]),
+        note="the king holding the lion, in the court of the Eanna precinct, facing its south entrance", model="king", parent="eanna_temple")
+    # at the royal tombs behind the palace: 15 m from the tombs towards the palace, facing it
+    tp, pc = pos["royal_tombs"], pos["uruk_palace"]
+    tow = unit((pc[0] - tp[0], pc[1] - tp[1]))
+    add("gilgamesh_statue_royal_tombs", "Statue of Gilgamesh at the royal tombs", "Socha Gilgameše u královských hrobek",
+        (tp[0] + tow[0] * 15.0, tp[1] + tow[1] * 15.0), tow,
+        note="the king holding the lion, at the royal tombs behind the palace, facing the palace", model="king", parent="royal_tombs")
     for st in out:
-        st["parent"], st["unresolved"] = choose_parent(st, raw, pos)
+        if st["parent"] is None:
+            st["parent"], st["unresolved"] = choose_parent(st, raw, pos)
+        else:
+            st["unresolved"] = []
         if st["unresolved"]:
             print("WARNING: %s still stands inside %s" % (st["id"], ", ".join(st["unresolved"])), file=sys.stderr)
     return out
 
 
 def places_yaml(statues):
-    lines = ["# Generated by tools/build_statues.py from the plan of the city (tools/data/uruk_city.json): the lamassu guardians and the goddess of",
-             "# the Burney Relief. Each place is the middle of a pair (or of the goddess) at an exact spot (`locate` with a tolerance of one metre).",
-             "# Do not edit; change the script and run it again.", ""]
-    models = {"pair": (PAIR, PAIR_COLLISION), "shedu": (SHEDU, SHEDU_COLLISION), "goddess": (GODDESS, GODDESS_COLLISION)}
+    lines = ["# Generated by tools/build_statues.py from the plan of the city (tools/data/uruk_city.json): the lamassu guardians, the goddess of",
+             "# the Burney Relief and the statue of Gilgamesh holding the lion. Each place is the middle of a pair (or of the goddess, or of the",
+             "# statue) at an exact spot (`locate` with no tolerance). Do not edit; change the script and run it again.", ""]
+    models = {"pair": (PAIR, PAIR_COLLISION), "shedu": (SHEDU, SHEDU_COLLISION), "goddess": (GODDESS, GODDESS_COLLISION),
+              "king": (GILGAMESH, GILGAMESH_COLLISION)}
     for s in statues:
         b, d = loc(s["pt"])
         lines += ["- id: %s" % s["id"], "  kind: landmark", "  name_key: place.%s" % s["id"], "  parent: %s" % s["parent"], "  radius_m: 1",
                   "  # %s" % s["note"],
-                  "  locate: {from: uruk, bearing_deg: %s, distance_m: %s, tolerance_m: 1}" % (b, d),
+                  "  locate: {from: uruk, bearing_deg: %s, distance_m: %s, tolerance_m: 0}" % (b, d),
                   "  structure:", "    model: %s" % models[s["model"]][0],
                   "    collision: %s" % models[s["model"]][1]]
         if s["scale"] != 1.0:
@@ -234,7 +267,7 @@ def preview(statues, path):
     for g in plan["gates"]:
         ax.plot(*g["pos"], "ks", ms=4)
     for s in statues:
-        col = {"goddess": "#d0a", "pair": "#07c", "shedu": "#c70"}[s["model"]]
+        col = {"goddess": "#d0a", "pair": "#07c", "shedu": "#c70", "king": "#e43"}[s["model"]]
         ax.plot(*s["pt"], "o", color=col, ms=2.5 if s["model"] == "shedu" else 4)
         k = 12 if s["model"] == "shedu" else 30
         ax.annotate("", xy=(s["pt"][0] + s["face"][0] * k, s["pt"][1] + s["face"][1] * k), xytext=s["pt"],
@@ -256,7 +289,7 @@ def preview(statues, path):
     else:
         ax.invert_yaxis()
     ax.set_aspect("equal")
-    ax.set_title("statues: blue pairs, orange small shedu, magenta the goddess; arrows = looking direction (north up)")
+    ax.set_title("statues: blue pairs, orange small shedu, magenta the goddess, red the statue of Gilgamesh; arrows = looking direction (north up)")
     fig.savefig(path, dpi=110, bbox_inches="tight")
 
 

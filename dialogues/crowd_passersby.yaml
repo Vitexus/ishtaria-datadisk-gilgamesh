@@ -1,0 +1,16 @@
+# Shared short greeting for unnamed townsfolk of Uruk.
+id: crowd_passersby
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: crowd.greet
+    choices:
+      - {text_key: crowd.reply, goto: reply}
+      - {text_key: crowd.leave}
+
+  reply:
+    text_key: crowd.busy
+    choices:
+      - {text_key: crowd.leave}

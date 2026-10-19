@@ -15,11 +15,13 @@ simplified; `tools/build_world_map.py` builds the rasters and checks the geograp
 | Relief and bathymetry | ETOPO 2022, 60 arc-second **bed** grid (NOAA NCEI, public domain) | Downloaded once into `tools/cache/` (never shipped whole). The shipped rasters resample it to 0.05 degrees (7200 x 3600) by block means. The bed grid carries land heights and ocean depths in one signed field, which is exactly the `media/world/height.pgm` encoding (16-bit signed metres, 0 is sea level). |
 | Coastline | The ETOPO data itself (elevation <= 0 is water) | Shallow seas and dry depressions are decided by the mask, not the quantised heights. |
 | Persian Gulf shoreline, the marshes, the rivers | The reconstructions below | The palaeogeography of southern Iraq since Gilgamesh, from the published literature. |
-| Dry depressions | Fixed list in the tool (Qattara, Death Valley, Turfan, Danakil, Salton Sink, Laguna del Carbon) | Land below sea level must stay land; only real water bodies may be water. |
+| Dry depressions | Fixed list in the tool (Qattara, Death Valley, Turfan, Danakil, Salton Sink, Laguna del Carbon, the Jordan valley) | Land below sea level must stay land; only real water bodies may be water. |
 
 Attribution for ETOPO is in `datadisk.yaml`. The tool prints a check for each city of the
 Epic (Uruk, Eridu, Ur, Larsa, Girsu, Lagash, Nigin, Umma, Abu Tbeirah, Kissik, Nippur,
-Dilmun, the Cedar Forest, Mashu) and fails when one of them lands in the sea.
+Dilmun, the Cedar Forest, Mashu) and for every archaeologically attested city of the
+Epic's time worldwide (places/ancient_cities.yaml, research/ANCIENT_CITIES.md), and fails
+when one of them lands in the sea.
 
 ## How Iraq changed since Gilgamesh
 
@@ -60,7 +62,10 @@ marshes. The reconstruction follows the literature (each with its own simplifica
 the sea reaches the Eridu-Ur line, today's delta on the east, today's coast everywhere
 else. Everything between today's shoreline and that curve becomes shallow sea (-5 m).
 `MARSHES` are the two permanent wetlands above, water in the mask at -2 m.
-`SHORE_SITES` carves the tells that stood in the water back to dry land (Kissik).
+`SHORE_SITES` carves the tells that stood in the water back to dry land (Kissik, and the
+coastal and riverside tells of the wider world - Ugarit, Sidon, Liman Tepe, Kish,
+Shuruppak - whose 5.5 km raster blocks are majority sea or crossed by the drawn one-line
+rivers; see research/ANCIENT_CITIES.md).
 
 - **Euphrates** (`EUPHRATES`): from Hit past Kish, Nippur and Shuruppak, east of Uruk
   (where the city's landscape patch, research/LANDSCAPE.md, has its Early Dynastic

@@ -2,13 +2,13 @@ Source: ishtaria-datadisk-gilgamesh
 Section: games
 Priority: optional
 Maintainer: Ishtaria Team <ishtaria@vitexsoftware.com>
-Build-Depends: debhelper (>= 13), python3, python3-yaml, piper, ffmpeg
+Build-Depends: debhelper-compat (= 13), python3, python3-yaml, python3-piper-tts, ffmpeg
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 
 Package: ishtaria-datadisk-gilgamesh
 Architecture: all
-Depends: ishtaria-server (>= 1), ${misc:Depends}
+Depends: ${misc:Depends}, ishtaria-server
 Provides: ishtaria-datadisk
 Description: Ishtaria Gilgamesh datadisk - Epic of Gilgamesh story
  This is the Epic of Gilgamesh datadisk for Ishtaria, bringing the world's

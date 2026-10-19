@@ -147,6 +147,30 @@ def potter(h):
     h.hold("pot", "L")
 
 
+def smith(h):
+    h.hair("short", HAIR_BLACK); h.brow(HAIR_BLACK, 1.15); h.beard("short", HAIR_BLACK)
+    h.kaunakes("short", (0.42, 0.28, 0.16)); h.apron((0.22, 0.14, 0.1)); h.belt("brown", 0.035, False)
+    h.hold("sword", "R")
+
+
+def potter_tablet(h):
+    h.hair("bald"); h.brow(HAIR_BLACK); h.beard("stubble", HAIR_BLACK)
+    h.kaunakes("short", WOOL_BROWN); h.apron((0.55, 0.36, 0.22)); h.belt("brown", 0.03, False)
+    h.hold("tablet", "L")
+
+
+def tablet_bearer(h):
+    h.hair("short", HAIR_BLACK); h.brow(HAIR_BLACK, 0.9); h.beard("stubble", HAIR_BLACK)
+    h.kaunakes("short", WOOL); h.belt("brown", 0.03, False)
+    h.hold("basket", "L"); h.sandals()
+
+
+def tablet_merchant(h):
+    h.hair("short", HAIR_BLACK); h.brow(HAIR_BLACK); h.beard("short", HAIR_BLACK)
+    h.kaunakes("knee", (0.75, 0.5, 0.25)); h.cloak((0.55, 0.28, 0.2), "wool", 0.5)
+    h.belt("brown", 0.035); h.back_item("pouch"); h.hold("tablet", "R"); h.sandals()
+
+
 def weaver(h):
     h.hair("long", HAIR_BLACK); h.brow(HAIR_BLACK, 0.8); h.scarf((0.7, 0.55, 0.35))
     h.dress((0.6, 0.45, 0.28), "ankle", tufted=False, shoulder="R"); h.belt("brown", 0.03, False)
@@ -173,6 +197,10 @@ HUMANOIDS = {
     "uruk_merchant": (uruk_merchant, 1.72, "stocky", False, SKIN_MID),
     "potter": (potter, 1.75, "stocky", False, SKIN_DARK),
     "weaver": (weaver, 1.65, "woman", True, SKIN_MID),
+    "smith": (smith, 1.78, "stocky", False, SKIN_DARK),
+    "potter_tablet": (potter_tablet, 1.72, "stocky", False, SKIN_MID),
+    "tablet_bearer": (tablet_bearer, 1.68, "lean", False, SKIN_MID),
+    "tablet_merchant": (tablet_merchant, 1.7, "stocky", False, SKIN_DARK),
 }
 
 

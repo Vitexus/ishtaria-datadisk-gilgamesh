@@ -1,0 +1,16 @@
+# A servant carrying a basket of clay tablets from the potters to the temple or the market.
+id: tablet_bearer
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: tablet_bearer.greet
+    choices:
+      - {text_key: tablet_bearer.ask_tablets, goto: tablets}
+      - {text_key: tablet_bearer.leave}
+
+  tablets:
+    text_key: tablet_bearer.tablets
+    choices:
+      - {text_key: tablet_bearer.leave}

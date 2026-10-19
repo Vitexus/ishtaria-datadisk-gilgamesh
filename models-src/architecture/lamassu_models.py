@@ -1,11 +1,13 @@
 """Builds the lamassu (aladlammu) guardians for the game: a pair of statues and its simple collision model.
 
-    blender -b --python models-src/architecture/lamassu_models.py -- models-src/lamassu/lamassu_derived_rodin_source.glb media/models/architecture
+    blender -b --python models-src/architecture/lamassu_models.py -- models-src/lamassu/lamassu_colored.glb media/models/architecture
 
 Writes <dir>/lamassu_pair.glb (+ _collision) and <dir>/shedu_pair.glb (+ _collision). The statue is the Rodin model made from a render of the Printables model
-"Persian Lamassu" by Peter Farell (CC BY-NC, see debian/copyright and models-src/lamassu/NOTES.md for the licence question): decimated,
-scaled to HEIGHT_M, standing on z = 0 and looking along -Y (glTF +Z, so with yaw 0 it looks south in the game). The pair stands GAP_M apart (centre
-to centre) on either side of the origin, both looking the same way, as the guardians stand at the jambs of a gate or at the foot of a stair. The small shedu pair (a metre high) guards house doors and markets.
+"Persian Lamassu" by Peter Farell (CC BY-NC, see debian/copyright and models-src/lamassu/NOTES.md for the licence question), recoloured by
+models-src/architecture/paint_lamassu.py after the museum reconstruction of the polychromy (research/lamassu-color.jpg; the coloured source is
+models-src/lamassu/lamassu_colored.glb): decimated, scaled to HEIGHT_M, standing on z = 0 and looking along -Y (glTF +Z, so with yaw 0 it looks south in the
+game). The pair stands GAP_M apart (centre to centre) on either side of the origin, both looking the same way, as the guardians stand at the jambs of a gate
+or at the foot of a stair. The small shedu pair (a metre high) guards house doors and markets.
 """
 import sys
 

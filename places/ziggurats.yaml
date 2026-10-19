@@ -6,8 +6,8 @@
   name_key: place.ziggurat_uruk
   parent: uruk
   radius_m: 15
-  # A spot in the court of the precinct between the two stepped towers (no model of its own).
-  locate: {from: uruk, bearing_deg: 20.41, distance_m: 229.4, tolerance_m: 2}
+  # A spot in the court of the precinct between the terrace of Anu and the stepped tower of Ishtar (no model of its own).
+  locate: {from: uruk, bearing_deg: 20.41, distance_m: 229.4, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 
@@ -18,7 +18,7 @@
   radius_m: 20
   # The building itself is part of the model of the walls (places/uruk.yaml), on the surveyed terrace (OSM): 137 m east
   # and 201 m north of the middle of the site.
-  locate: {from: uruk, bearing_deg: 34, distance_m: 244, tolerance_m: 12}
+  locate: {from: uruk, bearing_deg: 34, distance_m: 244, tolerance_m: 0}
   requires:
     max_slope_deg: 5
 
@@ -28,7 +28,7 @@
   parent: uruk
   radius_m: 15
   # West of the stepped tower of Ishtar (whose model belongs to the place ishtar_temple).
-  locate: {from: uruk, bearing_deg: 10.008, distance_m: 172.6, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 10.008, distance_m: 172.6, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 
@@ -38,7 +38,7 @@
   # The White Temple crowns the Anu ziggurat.
   parent: ziggurat_of_anu
   radius_m: 20
-  locate: {from: ziggurat_of_anu, bearing_deg: 0, distance_m: 5, tolerance_m: 5}
+  locate: {from: ziggurat_of_anu, bearing_deg: 0, distance_m: 5, tolerance_m: 0}
   requires:
     max_slope_deg: 25
 
@@ -48,7 +48,7 @@
   parent: uruk
   radius_m: 12
   # On the road inside the wall near the west gate.
-  locate: {from: uruk, bearing_deg: 267.623, distance_m: 1265.8, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 267.623, distance_m: 1265.8, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 
@@ -58,7 +58,7 @@
   parent: uruk_palace
   radius_m: 20
   # The stepped garden terrace at the back of the palace's farm yard, planted with palms.
-  locate: {from: uruk_palace, bearing_deg: 44.96, distance_m: 57.0, tolerance_m: 2}
+  locate: {from: uruk_palace, bearing_deg: 44.96, distance_m: 57.0, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 
@@ -68,7 +68,7 @@
   parent: uruk
   radius_m: 15
   # Behind the palace of Gilgamesh, outside its farm yard.
-  locate: {from: uruk, bearing_deg: 44.132, distance_m: 555.6, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 44.132, distance_m: 555.6, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 
@@ -80,7 +80,18 @@
   radius_m: 10
   # New characters appear in the open 125 m before the Ishtar Gate (23 m beyond the end of its Processional Way), in sight of
   # the gate and clear of its walls: inside the gate they stood between the walls of the gate complex.
-  locate: {from: uruk, bearing_deg: 181.024, distance_m: 1369.7, tolerance_m: 2}
+  # Keep this place free of crowd NPCs so the spawn is not ringed by townsfolk.
+  locate: {from: uruk, bearing_deg: 181.024, distance_m: 1369.7, tolerance_m: 0}
+  requires:
+    max_slope_deg: 30
+
+# Between spawn and the Ishtar Gate: caravans and the royal guard walk here, not on the spawn disk.
+- id: processional_way
+  kind: landmark
+  name_key: place.processional_way
+  parent: uruk
+  radius_m: 40
+  locate: {from: uruk, bearing_deg: 181.0, distance_m: 1280, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 

@@ -26,13 +26,15 @@ This directory contains 3D models of Mesopotamian architecture created for the G
    `tools/data/uruk_outlines.json`, see `research/LANDSCAPE.md`.
 
    The city of Uruk (planned by `tools/build_city.py`, built by `uruk_city.py` and `uruk_sites.py`, see `research/CITY.md`):
-   `uruk_quarter_01..17.glb` (+ `_collision`): the streets, houses (three sizes, varied), smithies, small markets, canals and fields
+   `uruk_quarter_01..17.glb` (+ `_collision`): the streets, houses (three sizes, varied), smithies (copper furnace, charcoal kiln, wood pile, sword moulds), small markets, canals and fields
+   `uruk_pottery.glb` (+ `_collision`): a potter's yard with a kiln, jars, clay tablets and baskets (`models-src/architecture/workshops.py`)
    of one quarter each (0.3-2 MiB); `uruk_market.glb`: the great market; `uruk_palace.glb` and `uruk_sinkashid.glb`: the palace of
    Gilgamesh and the palace of Sin-kashid with the farm buildings round them; `uruk_ishtar_ziggurat.glb`: the stepped tower of Ishtar;
    `uruk_eanna.glb`: the court of the Eanna precinct with the Great Court, pillar hall, stone-cone building and limestone hall.
    `uruk_walls.glb` now has six gates and a water gate.
 
-   `ziggurat_anu.glb` (1.1 MB): Early Dynastic ziggurat of Anu with the White Temple (Uruk), ~52 m
+   `ziggurat_anu.glb` (1.0 MB): Early Dynastic terrace of the ziggurat of Anu with the White Temple (Uruk), 57 x 52 m
+   base, 12 m high, court 50 x 45 m with the temple and the fire-pit terrace, three flights to a landing in front
 
 3. **ziggurat_complex.glb** (9.8 KB)
    - Complete ziggurat complex with:

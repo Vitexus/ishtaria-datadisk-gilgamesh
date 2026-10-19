@@ -15,11 +15,7 @@ override_dh_auto_install:
 
 override_dh_install:
 	# Generate voices
-	tools/render_voices.py --out debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/
-
-override_dh_gencontrol:
-	# Add version to package name for multiple versions
-	dh_gencontrol -- -V Upstream-Version=$(shell dpkg-parsechangelog -S Version)
+	python3 tools/render_voices.py --out debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/
 
 override_dh_builddeb:
 	# Set permissions
@@ -27,4 +23,4 @@ override_dh_builddeb:
 	find debian/ishtaria-datadisk-gilgamesh -type d -exec chmod 755 {} \;
 	dh_builddeb
 
-.PHONY: override_dh_auto_install override_dh_install override_dh_gencontrol override_dh_builddeb
+.PHONY: override_dh_auto_install override_dh_install override_dh_builddeb

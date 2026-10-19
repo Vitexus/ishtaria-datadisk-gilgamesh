@@ -1,3 +1,26 @@
+ishtaria-datadisk-gilgamesh (0.2.6-1) unstable; urgency=medium
+
+  * Keep player spawn at city_gate clear of crowd NPCs; soldiers and caravans
+    walk the wall, other gates and the Processional Way.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Sun, 18 Oct 2026 23:35:00 +0200
+
+
+ishtaria-datadisk-gilgamesh (0.2.5-1) unstable; urgency=medium
+
+  * Fix uruk_pasture placement so the Gilgamesh story loads after world init.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Sun, 18 Oct 2026 23:25:00 +0200
+
+
+ishtaria-datadisk-gilgamesh (0.2.4-1) unstable; urgency=medium
+
+  * Wildlife overlays, waterfowl, denser Uruk banks, crowd placements.
+  * Soundtrack: gish-gudi / zurna synthesis with CC0 lyre and frame-drum loops.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Sun, 18 Oct 2026 23:10:00 +0200
+
+
 ishtaria-datadisk-gilgamesh (0.1.0-1) unstable; urgency=low
 
   * Initial release of the Epic of Gilgamesh datadisk

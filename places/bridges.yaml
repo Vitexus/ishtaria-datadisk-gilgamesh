@@ -1,0 +1,46 @@
+# The three bridges of Uruk: the water always passes under (research/CITY.md). Every one of
+# them stands at a surveyed point on its canal (tolerance_m: 0), built world-aligned by
+# models-src/architecture/uruk_bridges.py, which prints the bearing and distance below.
+
+- id: bridge_wood
+  kind: landmark
+  name_key: place.bridge_wood
+  parent: uruk
+  radius_m: 8
+  # The main canal beside the wall road, on the poor west edge: a lávka for those on foot.
+  locate: {from: uruk, bearing_deg: 300.996, distance_m: 1241.0, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_bridge_wood.glb
+    collision: media/models/architecture/uruk_bridge_wood_collision.glb
+    visible_m: 900
+  requires:
+    max_slope_deg: 30
+
+- id: bridge_brick
+  kind: landmark
+  name_key: place.bridge_brick
+  parent: uruk
+  radius_m: 10
+  # A burgher canal of the middle quarters: baked brick and bitumen, wide enough for a cart.
+  locate: {from: uruk, bearing_deg: 123.649, distance_m: 580.6, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_bridge_brick.glb
+    collision: media/models/architecture/uruk_bridge_brick_collision.glb
+    visible_m: 1200
+  requires:
+    max_slope_deg: 30
+
+- id: bridge_stone
+  kind: landmark
+  name_key: place.bridge_stone
+  parent: uruk
+  radius_m: 12
+  # The head of the Processional Way, where the temple way meets its canal: stone spent on
+  # the gods alone, glazed in the temple blue, four gods of old Sumer watching the way.
+  locate: {from: uruk, bearing_deg: 178.634, distance_m: 1052.9, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_bridge_stone.glb
+    collision: media/models/architecture/uruk_bridge_stone_collision.glb
+    visible_m: 1600
+  requires:
+    max_slope_deg: 30

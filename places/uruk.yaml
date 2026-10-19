@@ -4,6 +4,10 @@
   kind: city
   name_key: place.uruk
   radius_m: 200
+  # The historical site itself (Wikidata Q168518, the centre of the OSM site polygon): the anchor
+  # the landscape patch below was built around, in the frame of the world rasters. The place stands
+  # exactly there; everything else in this file locates itself from it.
+  geo: {latitude_deg: 31.3228, longitude_deg: 45.6389}
   # No generated town: its medieval houses and walls (Kenney Fantasy Town, Castle kits) do not belong to Uruk of 2700 BCE.
   # The wall follows the surveyed outline of the real wall of Uruk (OpenStreetMap, 8.6 km, 520 ha), in glazed blue brick to
   # match the Ishtar Gate, which is its entrance in the south wall (models-src/architecture/uruk_walls.py). The model's
@@ -28,6 +32,43 @@
     feather_m: 120
     visible_m: 2000
   spawn: false
+  music: city
+  music_radius_m: 1800
+  # Early Dynastic floodplain: dense date palms and reeds along the channel, herds without horses.
+  wildlife:
+    radius_m: 3600
+    density: 2.2
+    flora:
+      - {id: nature.tree_palmTall, weight: 7}
+      - {id: nature.tree_palmDetailedTall, weight: 5}
+      - {id: nature.tree_palmShort, weight: 4}
+      - {id: nature.tree_palmBend, weight: 3}
+      - {id: quaternius.palm_1, weight: 4}
+      - {id: nature.reed_clump, weight: 10}
+      - {id: nature.plant_flatTall, weight: 5}
+      - {id: nature.plant_flatShort, weight: 4}
+      - {id: nature.plant_bushSmall, weight: 2}
+      - {id: hyper3d.tamarisk, weight: 4}
+      - {id: quaternius.bush_1, weight: 1}
+    fauna:
+      - {id: animal.sheep, weight: 5}
+      - {id: animal.goat, weight: 4}
+      - {id: animal.pig, weight: 2}
+      - {id: animal.cow, weight: 2}
+      - {id: animal.bull, weight: 1}
+      - {id: animal.donkey, weight: 3}
+      - {id: animal.gazelle, weight: 4}
+      - {id: animal.onager, weight: 2}
+      - {id: animal.deer, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: animal.turtle, weight: 2}
+      - {id: animal.duck, weight: 5}
+      - {id: animal.goose, weight: 4}
+      - {id: animal.pigeon, weight: 2}
+      - {id: animal.falcon, weight: 1}
+      - {id: animal.fox, weight: 2}
+      - {id: animal.wolf, weight: 1}
+      - {id: animal.chicken, weight: 1}
   requires:
     biome: [grassland]
     height_m: {min: 0, max: 200}
@@ -39,7 +80,7 @@
   parent: uruk
   radius_m: 12
   # Inside the Ishtar Gate, beside the avenue 150 m from the gate.
-  locate: {from: uruk, bearing_deg: 178.458, distance_m: 1084.8, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 178.458, distance_m: 1084.8, tolerance_m: 0}
   requires:
     max_slope_deg: 30
 
@@ -52,11 +93,13 @@
   # Its model (models-src/architecture/uruk_sites.py) is the paved court with the Great Court, an orchard with its channels and
   # pool, the pillar hall, the stone-cone building with its mosaic of black, white and red clay cones, and a hall of limestone,
   # as the excavations show them (research/CITY.md). It stands where it was planned, so the place may not drift from its point.
-  locate: {from: uruk, bearing_deg: 43.002, distance_m: 217, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 43.002, distance_m: 217, tolerance_m: 0}
   structure:
     model: media/models/architecture/uruk_eanna.glb
     collision: media/models/architecture/uruk_eanna_collision.glb
     visible_m: 3300
+  music: temple
+  music_radius_m: 120
   requires:
     max_slope_deg: 30
 
@@ -67,10 +110,12 @@
   radius_m: 20
   # In the precinct of Inanna, a little to the south-west of its middle: the stepped tower of Ishtar (three stages and a red
   # temple on top, stairs towards this point) stands west of it, 62 m east and 112 m north of the middle of the site.
-  locate: {from: eanna_temple, bearing_deg: 225, distance_m: 45, tolerance_m: 2}
+  locate: {from: eanna_temple, bearing_deg: 225, distance_m: 45, tolerance_m: 0}
   structure:
     model: media/models/architecture/uruk_ishtar_ziggurat.glb
     visible_m: 3300
+  music: temple
+  music_radius_m: 80
   requires:
     max_slope_deg: 30
 
@@ -82,7 +127,7 @@
   # The great market of the city, an open paved square with some 130 stalls under coloured awnings, beside the avenue from the
   # Ishtar Gate to the sacred precinct (tools/build_city.py); smaller markets stand inside the gates. The place is the middle
   # of the square, which is kept free for the people who stand there.
-  locate: {from: uruk, bearing_deg: 165.025, distance_m: 315.4, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 165.025, distance_m: 315.4, tolerance_m: 0}
   structure:
     model: media/models/architecture/uruk_market.glb
     collision: media/models/architecture/uruk_market_collision.glb
@@ -99,7 +144,7 @@
   # hall with a portico of six columns, corner towers, and all round it, inside a wall with a gate, the farm buildings of the
   # court: granaries, storehouses, stables, kitchens, bakeries, breweries, a smithy, pens, a threshing floor and the hanging
   # garden (tools/build_city.py, models-src/architecture/uruk_sites.py).
-  locate: {from: uruk, bearing_deg: 43.906, distance_m: 442.6, tolerance_m: 2}
+  locate: {from: uruk, bearing_deg: 43.906, distance_m: 442.6, tolerance_m: 0}
   structure:
     model: media/models/architecture/uruk_palace.glb
     collision: media/models/architecture/uruk_palace_collision.glb
@@ -107,11 +152,47 @@
   requires:
     max_slope_deg: 30
 
+# Open bank outside the river gate: fishers and washerwomen, beside the Early Dynastic channel.
+- id: river_bank
+  kind: landmark
+  name_key: place.river_bank
+  parent: uruk
+  radius_m: 45
+  locate: {from: uruk, bearing_deg: 56.8, distance_m: 1320, tolerance_m: 0}
+  requires:
+    max_slope_deg: 30
+
+# Pasture outside the west wall: shepherds and light herds away from the avenue.
+- id: uruk_pasture
+  kind: landmark
+  name_key: place.uruk_pasture
+  parent: uruk
+  radius_m: 55
+  # Surveyed point: a slope search on the plain rejected every sample (same pattern as city_gate).
+  locate: {from: uruk, bearing_deg: 260, distance_m: 1550, tolerance_m: 0}
+  requires:
+    max_slope_deg: 30
+
 - id: cedar_forest
   kind: landmark
   name_key: place.cedar_forest
   radius_m: 150
-  scenery: {preset: town}
+  # No Kenney town: the Cedar Forest is wilderness of the Epic, not a settlement.
+  music: cedar_forest
+  music_radius_m: 400
+  wildlife:
+    radius_m: 900
+    density: 2.0
+    flora:
+      - {id: nature.tree_pineTallA, weight: 6}
+      - {id: nature.tree_pineTallB, weight: 5}
+      - {id: nature.tree_pineTallC, weight: 5}
+      - {id: nature.tree_pineRoundA, weight: 3}
+    fauna:
+      - {id: animal.deer, weight: 4}
+      - {id: animal.stag, weight: 3}
+      - {id: animal.wolf, weight: 2}
+      - {id: animal.fox, weight: 2}
   # The Cedar Forest of the epic is the cedar mountains of Lebanon: 953 km west-north-west of Uruk
   # (34.24 N 36.05 E against 31.32 N 45.64 E).
   locate: {from: uruk, bearing_deg: 292, distance_m: 953000, tolerance_m: 250000}
@@ -124,6 +205,8 @@
   name_key: place.humbaba_lair
   parent: cedar_forest
   radius_m: 30
+  # Surveyed, so the slope of the cedars cannot reject the lair and stop the story.
+  locate: {from: cedar_forest, bearing_deg: 0, distance_m: 40, tolerance_m: 0}
   requires:
     max_slope_deg: 25
 
@@ -131,7 +214,6 @@
   kind: landmark
   name_key: place.mount_mashu
   radius_m: 60
-  scenery: {preset: town}
   # Mashu, the mountain of the sunset, is taken for the Anti-Lebanon: 68 km south-east of the cedars.
   locate: {from: cedar_forest, bearing_deg: 137, distance_m: 68000, tolerance_m: 60000}
   requires:
@@ -143,6 +225,8 @@
   name_key: place.scorpion_gate
   parent: mount_mashu
   radius_m: 20
+  # Surveyed on the mountain: a slope search inside Mashu's radius finds no ground flat enough.
+  locate: {from: mount_mashu, bearing_deg: 0, distance_m: 15, tolerance_m: 0}
   requires:
     max_slope_deg: 25
 
@@ -151,17 +235,22 @@
   name_key: place.tunnel_of_sun
   parent: mount_mashu
   radius_m: 40
+  # Surveyed on the far side of the gate. Searching this disk for a slope under 30 degrees
+  # rejected every sample and the story never loaded.
+  locate: {from: mount_mashu, bearing_deg: 180, distance_m: 25, tolerance_m: 0}
   requires:
-    max_slope_deg: 15
+    max_slope_deg: 30
 
 - id: waters_of_death
   kind: landmark
   name_key: place.waters_of_death
   radius_m: 80
+  music: waters
+  music_radius_m: 250
   # The waters that Gilgamesh crossed: the head of the Gulf, 333 km south-east of Uruk (29.9 N 48.7 E).
   locate: {from: uruk, bearing_deg: 118, distance_m: 333000, tolerance_m: 150000}
   requires:
-    max_slope_deg: 10
+    max_slope_deg: 25
 
 - id: utnapishtim_dwelling
   kind: building
@@ -170,4 +259,4 @@
   # Utnapishtim lives in Dilmun, which is taken for Bahrain: 756 km south-east of Uruk (26.07 N 50.56 E).
   locate: {from: uruk, bearing_deg: 139, distance_m: 756000, tolerance_m: 300000}
   requires:
-    max_slope_deg: 10
+    max_slope_deg: 25

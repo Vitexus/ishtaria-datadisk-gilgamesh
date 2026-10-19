@@ -29,10 +29,27 @@ and George, *Babylonian Topographical Texts*, before relying on it):
 
 Early Dynastic Uruk, the world of Gilgamesh (c. 2700 BCE): the Anu ziggurat is a high mud-brick terrace with sloping,
 buttressed sides and the whitewashed White Temple on top (a tripartite plan of about 22 x 17 m with niched walls).
-`ziggurat_anu.glb` shows a three-stage terrace on a 52 m square (stages 11, 5.5 and 3.5 m high, 52, 40 and 30 m wide, set back
-towards the rear, plain tops) with that temple. Proportions and stair layout (a short steep central flight and two long ramps along
-the front, meeting at a landing on the first stage) follow a reconstruction drawing of the ziggurat of Ur shown by the owner; the
-drawing is a reference only, not a source of geometry or texture. Dimensions are approximate.
+
+What the sources agree on (searched 2026-10, see the links below and the notes from the Sebek thesis in `CITY.md`):
+
+- One massive terrace, not a tower of stages: about 12 m high, raised over many building phases (artefacts-berlin.de,
+  the Sebek thesis). The excavated mound body is 56 x 49 m, the surveyed footprint 49 x 63 m (see `LANDSCAPE.md`).
+- A court of about 50 x 45 m on top, behind sloped outer walls (artefacts-berlin.de: a surface of about 45 x 50 m at a
+  height of about 12 m; the Sebek thesis: 12 m high, the court on top about 50 x 45 m).
+- The White Temple on the court: 22 x 17 m (the model: 22.3 x 17.5 m), built 3517-3358 BCE, whitewashed, tripartite,
+  three entrances and none faces the access ramp (a visitor has to walk round it), pits for sacrifices in the big
+  middle room; its roof about 21 m above the plain. A small terrace north of the temple with a 3 x 2 m fire pit.
+
+What the model assumes (`ziggurat_anu.glb`, rebuilt 2026-10):
+
+- The base 57 x 52 m with a 3.5 m batter on every side (the court 50 x 45 m) reconciles the surveyed footprint with the
+  published court; the walls are smoothed and grooved, the weep holes decorative. The remaining proportions are
+  approximate.
+- The access keeps the layout of the reconstruction drawing of the ziggurat of Ur shown by the owner: three flights
+  meeting on a solid landing against the front of the terrace — a steep central flight at 43 degrees (0.3 m risers,
+  0.316 m treads, the slope the server's walking tests climb) between parapets, and two ramps running along the front
+  from the sides — with a gate house on the landing at the head of the central flight. The drawing is a reference for
+  the layout only, not a source of geometry or texture.
 
 ## Sources
 
@@ -42,3 +59,7 @@ drawing is a reference only, not a source of geometry or texture. Dimensions are
 - Montero Fenollós et al., Etemenanki: <https://revistas.uam.es/isimu/article/download/3374/3591/6748>
 - <https://archeologie.culture.gouv.fr/orient-cuneiforme/en/architecture-ziggurat>
 - <https://worldhistory.org/image/11755> (recreation of the Etemenanki)
+- Anu ziggurat and White Temple, Uruk (Warka): artefacts-berlin.de (reconstructions; looked at for dimensions only,
+  nothing is copied from them), <https://en.wikipedia.org/wiki/White_Temple_(Uruk)>, <https://en.wikipedia.org/wiki/Anu_Ziggurat>
+- Petr Sebek, *Uruk and its hinterland* (bachelor thesis, Plzen 2021), `Sebek_BP.pdf` in this directory; the notes are in
+  `CITY.md`. The surveyed footprint: OSM ways 1311535414, 1311535415, see `LANDSCAPE.md`.

@@ -45,6 +45,7 @@ Z.MATERIALS.update({
     "clay": (None, (0.60, 0.33, 0.20), 0.9, 0.0, 1.0),
     "wood": (None, (0.34, 0.23, 0.13), 0.95, 0.0, 1.0),
     "charcoal": (None, (0.04, 0.04, 0.045), 1.0, 0.0, 1.0),
+    "copper": (None, (0.72, 0.40, 0.22), 0.45, 0.85, 1.0),
     "iron": (None, (0.16, 0.16, 0.18), 0.5, 0.7, 1.0),
     "embers": (None, (0.95, 0.32, 0.06), 0.6, 0.0, 1.0),
     "water": (None, (0.10, 0.20, 0.25), 0.2, 0.0, 1.0),
@@ -424,9 +425,20 @@ def house(ctx, col, rec):
     col.prism(corners, zb - 0.3, ceiling)
 
 
+def mound(ctx, centre, radius, z0, z1, mat, sides=8):
+    """A cone, used for a charcoal kiln: the base sits on the ground, the tip is the flue."""
+    for i in range(sides):
+        a0 = 2 * math.pi * i / sides
+        a1 = 2 * math.pi * (i + 1) / sides
+        p0 = (centre[0] + math.cos(a0) * radius, centre[1] + math.sin(a0) * radius, z0)
+        p1 = (centre[0] + math.cos(a1) * radius, centre[1] + math.sin(a1) * radius, z0)
+        outward = ((p0[0] + p1[0]) / 2 - centre[0], (p0[1] + p1[1]) / 2 - centre[1])
+        ctx.quad(mat, [p0, p1, (centre[0], centre[1], z1)], outward, ((0, 0), (1, 0), (0.5, 1)))
+
+
 def smithy(ctx, col, rec):
-    """A smith's workshop: three walls and a roof that reaches over the open front, a forge with a tall chimney, an anvil,
-    a trough and a heap of charcoal."""
+    """A smith's workshop: three walls and a roof over the open front, a furnace for smelting copper, an anvil,
+    sword moulds, a trough, a heap of charcoal, a charcoal kiln and a pile of wood."""
     x, z, fx, fz, w, d, cls, floors, h0, seed, smith = rec
     rng = random.Random(seed)
     f = (fx, fz)
@@ -467,6 +479,14 @@ def smithy(ctx, col, rec):
     ctx.box("iron", None, P(-fa * 0.3, 0.2), e, f, 0.5, 0.35, zf + 0.5, zf + 0.78)
     ctx.box("wood", None, P(-fa * 0.3, 0.2), e, f, 0.45, 0.4, zf, zf + 0.5)
     ctx.box("wood", "water", P(-fa * 0.6, 1.5), e, f, 1.4, 0.7, zf, zf + 0.55)
+    # crucible of copper on the hearth, and blades cooling in open moulds
+    ctx.m.tint = (1.0, 0.85, 0.7)
+    ctx.box("copper", "embers", P(fa, -d / 2 + 1.35), e, f, 0.55, 0.42, zf + 1.02, zf + 1.32)
+    ctx.m.tint = (1.0, 1.0, 1.0)
+    ctx.box("wood", None, P(0.2, 0.9), e, f, 1.8, 0.55, zf, zf + 0.7)
+    for along in (-0.5, 0.05, 0.55):
+        ctx.box("clay", None, P(along, 0.9), e, f, 0.22, 0.7, zf + 0.7, zf + 0.78)
+        ctx.box("copper", None, P(along, 0.9), e, f, 0.06, 0.62, zf + 0.78, zf + 0.86)
     # charcoal heap and a yard in front
     hp = P(rng.uniform(-w / 2, w / 2) * 0.7, d / 2 + 2.6)
     r = rng.uniform(0.9, 1.4)
@@ -475,6 +495,18 @@ def smithy(ctx, col, rec):
     for i in range(4):
         a, b = ring[i], ring[(i + 1) % 4]
         ctx.quad("charcoal", [(a[0], a[1], zg), (b[0], b[1], zg), (hp[0], hp[1], zg + 0.9)], ((a[0] + b[0]) / 2 - hp[0], (a[1] + b[1]) / 2 - hp[1]))
+    # a charcoal kiln (a turf mound with a flue) and a stack of cordwood, in the yard in front of the open side
+    side = 1 if fa < 0 else -1
+    kiln = P(side * (w / 2 - 1.7), d / 2 + 2.3)
+    kg = ctx.H(*kiln)
+    ctx.m.tint = (0.85, 0.75, 0.6)
+    mound(ctx, kiln, 1.15, kg, kg + 1.55, "earth")
+    ctx.m.tint = (1.0, 1.0, 1.0)
+    ctx.box("bakedbrick", "charcoal", kiln, e, f, 0.32, 0.32, kg + 1.4, kg + 1.95)
+    woodp = P(-side * (w / 2 - 1.7), d / 2 + 2.1)
+    wg = ctx.H(*woodp)
+    for layer in range(4):
+        ctx.box("wood", "wood", woodp, e, f, 2.1 - layer * 0.15, 0.85, wg + layer * 0.28, wg + (layer + 1) * 0.28)
     ctx.m.jitter = 1.0
     col.prism(corners, zb - 0.3, zr + 3.7 if False else zr + 0.5)
     col.box(P(fa, -d / 2 + 0.7), e, f, 1.1, 1.0, zr, zr + 3.2)

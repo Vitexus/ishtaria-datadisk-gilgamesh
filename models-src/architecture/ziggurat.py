@@ -152,9 +152,11 @@ def weep_holes(model, pts, top, z0, z1, rows=(0.3, 0.52, 0.74), spacing=1.3, siz
                            "door", [(0, 0), (1, 0), (1, 1), (0, 1)], Vector((out.x, out.y, 0)))
 
 
-def prism(model, pts, z0, z1, centre, scale, mat, rng, cap_mat=None):
-    """Walls of a polygon prism whose top is the polygon scaled about `centre`; returns the top polygon."""
-    top = [Vector((centre.x + (p.x - centre.x) * scale, centre.y + (p.y - centre.y) * scale)) for p in pts]
+def prism(model, pts, z0, z1, centre, scale, mat, rng, cap_mat=None, scale_y=None):
+    """Walls of a polygon prism whose top is the polygon scaled about `centre`; returns the top polygon.
+    `scale_y` scales the top along y only, for a rectangular terrace whose two axes batter differently."""
+    sy = scale if scale_y is None else scale_y
+    top = [Vector((centre.x + (p.x - centre.x) * scale, centre.y + (p.y - centre.y) * sy)) for p in pts]
     run = 0.0
     for i in range(len(pts)):
         a, b = pts[i], pts[(i + 1) % len(pts)]
@@ -347,8 +349,10 @@ def temple(model, cx, y_front, z0, w, d, h, rng, body="glazed", plinth_mat="plas
             box(model, tx, ty, 1.7, 1.7, z0 + h, z0 + h + 2.4, body, plinth_mat, rng)
             if gold:
                 box(model, tx, ty, 1.0, 1.0, z0 + h + 2.4, z0 + h + 3.8, "gold")
-    # doorway on the front face
-    portal(model, cx, y_front - 0.55, z0 + plinth_h - 0.1, 6.2, 1.0, h - plinth_h * 0.8, 3.6, 7.2, rng, mat=body, trim=plinth_mat, gold=gold)
+    # doorway on the front face (of a low shrine the door stays below the lintel of the gate block)
+    gate_h = h - plinth_h * 0.8
+    portal(model, cx, y_front - 0.55, z0 + plinth_h - 0.1, 6.2, 1.0, gate_h, 3.6, min(7.2, gate_h - 1.5), rng,
+           mat=body, trim=plinth_mat, gold=gold)
 
 
 def etemenanki(model, rng):
@@ -409,59 +413,44 @@ def etemenanki(model, rng):
 
 
 def anu(model, rng, detail=True):
-    """The Anu ziggurat of Early Dynastic Uruk: a high terrace of mud brick with the whitewashed White Temple on it.
+    """The Anu ziggurat of Early Dynastic Uruk: a single high terrace of mud brick with the whitewashed White
+    Temple on its broad court (the dimensions and sources in research/ZIGGURATS.md).
 
-    Proportions and stair layout follow the reconstruction drawing of the ziggurat of Ur (the model the Uruk one is
-    imagined after): a tall first stage, two much smaller stages set well back towards the rear, plain flat tops
-    without parapets, strongly battered smooth walls with groups of narrow vertical grooves, a shrine on the top stage, and three flights
-    meeting at a gate on the first stage: a short steep central one and two long ramps climbing along the front.
-    The footprint (52 m square, stairs reaching 40 m to the front) is the surveyed one and stays as it was.
+    The excavations show one massive terrace, raised over many building phases to about 12 m, with sloping,
+    buttressed sides and a surface of about 50 x 45 m; its base (57 x 52 m, the stairs reaching 42 m to the
+    front) follows the surveyed OSM footprint (tools/data/uruk_outlines.json). The White Temple on the court is
+    the documented 22.3 x 17.5 m, whitewashed, its roof about 21 m above the plain, and a small terrace with a
+    fire pit stands north of it. Three flights meet on a solid landing against the front of the terrace (the
+    layout of the reconstruction drawing of the ziggurat of Ur shown by the owner): a steep central one and two
+    long ramps climbing along the front. The central flight is 43 degrees (0.3 m risers, 0.316 m treads), the
+    slope the server's walking tests climb.
     """
-    z = 0.0
-    spec = [(52.0, 11.0, 0.08), (40.0, 5.5, 0.05), (30.0, 3.5, 0.05)]
-    top_front = None
-    top_w = None
-    tops = []
-    for k, (w, h, batter) in enumerate(spec):
-        inset = batter * h
-        y_front = -w / 2 if k == 0 else top_front + 0.8 * (top_w - w)
-        cy = y_front + w / 2
-        pts = outline(0.0, cy, w, w, 9.5 if k == 0 else 6.0, 2.5, 0.9 if k == 0 else 0.45, 0.16 if k == 0 else 0.22)  # smooth walls, narrow grooves
-        scale = (w - 2 * inset) / w
-        top_pts = prism(model, pts, z, z + h, Vector((0.0, cy)), scale, "mudbrick", rng, cap_mat="plaster")
-        if detail and k == 0:
-            weep_holes(model, pts, top_pts, z, z + h)
-        t_w = w - 2 * inset
-        t_front = y_front + inset
-        tops.append((z + h, 0.0, cy, t_w, t_front))
-        top_front, top_w = t_front, t_w
-        z += h
-    rise0 = spec[0][1]
-    # Three flights meet on a solid landing against the front of the first stage (as at Ur): the middle one climbs
-    # straight at it, the two side flights run along the front towards it. All are solid masonry down to the ground.
-    landing_front, landing_half = -29.0, 6.0
-    wall_top_y = -26.0 + spec[0][2] * rise0    # where the batter of the first stage ends at its top
-    box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front, 0.0, rise0, "mudbrick", "plaster", rng)
-    stairs(model, 0.0, landing_front - 11.0, (0, 1), 6.0, 0.0, rise0, 11.0, rh=0.3)
-    stair_parapets(model, 0.0, landing_front - 11.0, (0, 1), 6.0, 0.0, rise0, 11.0)
-    # the gate house on the landing at the head of the central flight, the entrance to the higher stages
-    portal(model, 0.0, -27.6, rise0, 6.0, 2.5, 3.4, 2.2, 2.6, rng, mat="mudbrick", trim="plaster", gold=False)
-    side_x = 25.5
-    stairs(model, -side_x, -27.5, (1, 0), 3.0, 0.0, rise0, side_x - landing_half, rh=0.3)
-    stairs(model, side_x, -27.5, (-1, 0), 3.0, 0.0, rise0, side_x - landing_half, rh=0.3)
-    # a short central flight up each of the higher stages
-    zacc = rise0
-    for k in (1, 2):
-        w, h = spec[k][0], spec[k][1]
-        zt, cx, cy_k, t_w, t_front = tops[k]
-        y_front = cy_k - w / 2
-        margin = y_front - tops[k - 1][4]
-        run = min(h * 1.3, margin - 1.2)
-        stairs(model, 0.0, y_front + 0.3 - run, (0, 1), 4.5 if k == 1 else 3.6, zacc, h, run, rh=0.3)
-        zacc += h
-    zt, cx, cy_k, t_w, t_front = tops[2]
-    back = cy_k + t_w / 2
-    temple(model, 0.0, back - 2.0 - 16.0, zt, 22.0, 16.0, 6.5, rng, body="plaster", plinth_mat="plaster", gold=False, upper=False)
+    h = 12.0                        # the terrace, raised to about 12 m (artefacts-berlin.de, the Sebek thesis)
+    w, d = 57.0, 52.0               # the base on the surveyed footprint (the mound is 56 x 49 m)
+    inset = 3.5                     # the batter of the sides, 3.5 m in over the 12 m of height
+    pts = outline(0.0, 0.0, w, d, 9.5, 2.5, 0.9, 0.16)   # smooth walls, narrow grooves
+    top_pts = prism(model, pts, 0.0, h, Vector((0.0, 0.0)), (w - 2 * inset) / w, "mudbrick", rng,
+                    cap_mat="plaster", scale_y=(d - 2 * inset) / d)
+    if detail:
+        weep_holes(model, pts, top_pts, 0.0, h)
+    court_front = -d / 2 + inset    # the front edge of the 50 x 45 m court
+    # the landing against the front of the court, and the three flights meeting on it (as at Ur): the middle one
+    # climbs straight at it, the two side flights run along the front towards it, all solid masonry to the ground
+    landing_front, landing_half = -29.0, 7.0
+    box(model, 0.0, (landing_front + court_front) / 2, 2 * landing_half, court_front - landing_front,
+        0.0, h, "mudbrick", "plaster", rng)
+    run = h * 0.316 / 0.3           # 43 degrees: 0.3 m risers, 0.316 m treads
+    stairs(model, 0.0, landing_front - run, (0, 1), 7.0, 0.0, h, run, rh=0.3)
+    stair_parapets(model, 0.0, landing_front - run, (0, 1), 7.0, 0.0, h, run)
+    # the gate house on the landing at the head of the central flight, the entrance to the court
+    portal(model, 0.0, court_front - 2.5, h, 7.0, 2.5, 3.6, 2.4, 2.8, rng, mat="mudbrick", trim="plaster", gold=False)
+    side_x = w / 2
+    stairs(model, -side_x, -27.5, (1, 0), 3.0, 0.0, h, side_x - landing_half, rh=0.3)
+    stairs(model, side_x, -27.5, (-1, 0), 3.0, 0.0, h, side_x - landing_half, rh=0.3)
+    # the White Temple on the court, towards its back, and the small terrace with the fire pit north of it
+    temple(model, 0.0, 1.0, h, 22.3, 17.5, 8.0, rng, body="plaster", plinth_mat="plaster", gold=False, upper=False)
+    box(model, 0.0, 20.75, 8.0, 3.5, h, h + 0.6, "plaster", "plaster", rng)
+    box(model, 0.0, 20.75, 3.0, 2.0, h + 0.6, h + 0.9, "door", "door", rng)
     return model
 
 

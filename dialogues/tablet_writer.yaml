@@ -1,0 +1,16 @@
+# Scribes, merchants and priests write on the clay tablets the servants bring.
+id: tablet_writer
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: tablet_writer.greet
+    choices:
+      - {text_key: tablet_writer.ask_write, goto: write}
+      - {text_key: tablet_writer.leave}
+
+  write:
+    text_key: tablet_writer.write
+    choices:
+      - {text_key: tablet_writer.leave}

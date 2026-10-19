@@ -461,6 +461,16 @@ class Humanoid:
             self.add(cyl("spindle", (hx, hy, 0.4 * H), (hx, hy - 0.02 * H, 0.62 * H), 0.004 * H, 0.004 * H, wood, 5), bone)
             self.add(cyl("whorl", (hx, hy - 0.005 * H, 0.45 * H), (hx, hy - 0.005 * H, 0.46 * H), 0.025 * H, 0.025 * H, clay, 10), bone)
             self.arm_swing[side] = 0.4
+        elif kind == "sword":
+            self.add(box("blade", (hx, hy - 0.02 * H, 0.58 * H), (0.01 * H, 0.004 * H, 0.18 * H), copper), bone)
+            self.add(box("hilt", (hx, hy - 0.02 * H, 0.40 * H), (0.028 * H, 0.01 * H, 0.035 * H), wood), bone)
+            self.arm_swing[side] = 0.25
+        elif kind == "basket":
+            straw = material("basket", (0.72, 0.55, 0.28), None, 0.95)
+            self.add(cyl("basket", (hx, hy - 0.05 * H, 0.40 * H), (hx, hy - 0.05 * H, 0.50 * H), 0.075 * H, 0.055 * H, straw, 10), bone)
+            for k in range(3):
+                self.add(box("tablet", (hx, hy - 0.05 * H, 0.50 * H + k * 0.012 * H), (0.04 * H, 0.028 * H, 0.008 * H), clay), bone)
+            self.arm_swing[side] = 0.2
 
     def back_item(self, kind):
         H = self.H
@@ -759,34 +769,40 @@ def local_rot(arm, bone, *turns):
     return tuple((basis.inverted() @ total @ basis).to_euler('XYZ'))
 
 
-def humanoid_animations(h, arm, bobbing=1.0, extra_walk=None, extra_idle=None, stride=None):
+def humanoid_animations(h, arm, bobbing=1.0, extra_walk=None, extra_idle=None, stride=None, run=False):
     H = h.H
     swing = h.arm_swing
     if stride is None:
         stride = 0.52 if H < 2.6 else 0.4
     two_pi = 2 * math.pi
 
-    def walk(t):
+    def gait(t, stride_amp, arm_amp, bob, lean):
         a = two_pi * t
         d = {}
         for side, ph in (("L", 0.0), ("R", 0.5)):
             tt = t + ph
             sw = math.sin(two_pi * tt)
             flex = max(0.0, math.cos(two_pi * tt)) ** 1.5
-            d["Thigh_" + side] = ((-stride * sw, 0, 0), None)
+            d["Thigh_" + side] = ((-stride_amp * sw, 0, 0), None)
             d["Shin_" + side] = ((0.08 + 0.95 * flex, 0, 0), None)
             d["Foot_" + side] = ((0.15 * sw - 0.15 * flex, 0, 0), None)
             arm_side = "R" if side == "L" else "L"
-            amp = 0.42 * swing[arm_side]
+            amp = arm_amp * swing[arm_side]
             d["UpperArm_" + arm_side] = ((amp * math.sin(two_pi * tt), 0, 0), None)
             d["Forearm_" + arm_side] = ((-0.15 - 0.25 * swing[arm_side] * max(0.0, -math.sin(two_pi * tt)), 0, 0), None)
-        d["Hips"] = ((0, 0.09 * math.sin(a), 0.03 * math.sin(a * 2)), (0, bobbing * 0.014 * H * math.cos(2 * a), 0))
-        d["Spine"] = ((-0.05, -0.05 * math.sin(a), 0), None)
-        d["Chest"] = ((0, -0.07 * math.sin(a), 0), None)
+        d["Hips"] = ((0, 0.09 * math.sin(a), 0.03 * math.sin(a * 2)), (0, bob * H * math.cos(2 * a), 0))
+        d["Spine"] = ((lean, -0.05 * math.sin(a), 0), None)
+        d["Chest"] = ((lean * 0.6, -0.07 * math.sin(a), 0), None)
         d["Head"] = ((0.04, 0.0, 0), None)
         if extra_walk:
             d.update(extra_walk(t))
         return d
+
+    def walk(t):
+        return gait(t, stride, 0.42, bobbing * 0.014, -0.05)
+
+    def run_cycle(t):
+        return gait(t, stride * 1.35, 0.72, bobbing * 0.022, -0.12)
 
     def idle(t):
         a = two_pi * t
@@ -803,6 +819,8 @@ def humanoid_animations(h, arm, bobbing=1.0, extra_walk=None, extra_idle=None, s
         return d
     make_action(arm, "Idle", 72, idle)
     make_action(arm, "Walk", 24, walk)
+    if run:
+        make_action(arm, "Run", 18, run_cycle)
 
 
 def finish_rig(h, output_path, anim_arm_swing=True, extra_bones=None, post_join=None, anim=None):
