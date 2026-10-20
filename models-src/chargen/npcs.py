@@ -177,6 +177,13 @@ def weaver(h):
     h.earrings(); h.hold("spindle", "R"); h.sandals()
 
 
+def hunter(h):
+    # ṣayyādu of Tablet I: a lean steppe trapper, not a king — short wool, cloak, pouch, spear.
+    h.hair("short", HAIR_BLACK); h.brow(HAIR_BLACK, 1.1); h.beard("stubble", HAIR_BLACK)
+    h.kaunakes("knee", WOOL_BROWN); h.cloak((0.35, 0.22, 0.12), "leather", 0.48)
+    h.belt("brown", 0.035); h.back_item("pouch"); h.hold("spear", "R"); h.sandals()
+
+
 # id -> (builder, height, build, female, skin)
 HUMANOIDS = {
     "gilgamesh": (gilgamesh, 2.0, "hero", False, SKIN_MID),
@@ -201,6 +208,7 @@ HUMANOIDS = {
     "potter_tablet": (potter_tablet, 1.72, "stocky", False, SKIN_MID),
     "tablet_bearer": (tablet_bearer, 1.68, "lean", False, SKIN_MID),
     "tablet_merchant": (tablet_merchant, 1.7, "stocky", False, SKIN_DARK),
+    "hunter": (hunter, 1.74, "lean", False, SKIN_DARK),
 }
 
 

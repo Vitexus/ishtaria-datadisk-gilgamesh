@@ -9,16 +9,61 @@ nodes:
   greet:
     text_key: ninsun.greet
     choices:
+      - text_key: ninsun.ask_cedar_blessing
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: prepare_for_journey}}
+        goto: bless_cedar
+      - text_key: ninsun.ask_immortality_road
+        if: {quest_stage: {quest: the_search_for_immortality, stage: decide_to_seek_eternal_life}}
+        goto: bless_immortality
+      - text_key: ninsun.ask_immortality_road
+        if: {quest_stage: {quest: the_search_for_immortality, stage: prepare_for_journey}}
+        goto: send_to_mashu
+      - text_key: ninsun.ask_walls
+        if: {quest_stage: {quest: the_return_to_uruk, stage: view_uruk}}
+        goto: show_walls
       - {text_key: ninsun.ask_son, goto: speak_of_gilgamesh}
       - {text_key: ninsun.ask_dream, goto: interpret_dream}
       - {text_key: ninsun.ask_enkidu, goto: speak_of_enkidu}
-      - {text_key: ninsun.ask_wisdom, goto: give_wisdom}
+      - {text_key: ninsun.leave}
+
+  bless_cedar:
+    text_key: ninsun.cedar_blessing
+    effects:
+      - {set_stage: {quest: the_cedar_forest_journey, stage: travel_to_forest}}
+      - {set_flag: ninsun_blessed_cedar}
+    choices:
+      - {text_key: ninsun.leave}
+
+  bless_immortality:
+    text_key: ninsun.immortality_counsel
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: prepare_for_journey}}
+      - {set_flag: seeking_eternal_life}
+    choices:
+      - {text_key: ninsun.depart_mashu, goto: send_to_mashu}
+      - {text_key: ninsun.leave}
+
+  send_to_mashu:
+    text_key: ninsun.send_mashu
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: meet_scorpion_guardian}}
+      - {teleport_place: scorpion_gate}
+    choices:
+      - {text_key: ninsun.leave}
+
+  show_walls:
+    text_key: ninsun.walls_epilog
+    effects:
+      - {set_stage: {quest: the_return_to_uruk, stage: final_reflection}}
+      - {set_flag: surveyed_uruk_walls}
+    choices:
       - {text_key: ninsun.leave}
 
   speak_of_gilgamesh:
     text_key: ninsun.son
     choices:
       - {text_key: ninsun.ask_protection, goto: offer_protection}
+      - {text_key: ninsun.ask_wisdom, goto: give_wisdom}
       - {text_key: ninsun.leave}
 
   offer_protection:

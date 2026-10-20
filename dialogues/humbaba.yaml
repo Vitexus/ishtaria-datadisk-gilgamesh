@@ -1,6 +1,4 @@
-# Humbaba Dialogue Tree
-# Guardian of the Cedar Forest
-
+# Humbaba — guardian of the Cedar Forest. Multi-phase story fight (flourish).
 id: humbaba
 status: reviewed
 start: greet
@@ -9,8 +7,21 @@ nodes:
   greet:
     text_key: humbaba.greet
     choices:
-      - {text_key: humbaba.ask_mercy, goto: offer_mercy}
-      - {text_key: humbaba.ask_fight, goto: accept_fight}
+      - text_key: humbaba.ask_fight
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: face_guardian}}
+        goto: fight_start
+      - text_key: humbaba.continue_fight
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: battle_round_1}}
+        goto: fight_round_2
+      - text_key: humbaba.finish_fight
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: battle_round_2}}
+        goto: fight_finish
+      - text_key: humbaba.ask_already_dead
+        if: {flag: humbaba_defeated}
+        goto: already_dead
+      - text_key: humbaba.ask_mercy
+        if: {not: {flag: humbaba_defeated}}
+        goto: offer_mercy
       - {text_key: humbaba.leave}
 
   offer_mercy:
@@ -18,7 +29,48 @@ nodes:
     choices:
       - {text_key: humbaba.leave}
 
-  accept_fight:
+  already_dead:
+    text_key: humbaba.defeated
+    choices:
+      - {text_key: humbaba.leave}
+
+  fight_start:
     text_key: humbaba.fight
+    effects:
+      - flourish:
+          - {actor: npc, clip: kick}
+          - {actor: player, clip: box}
+          - {actor: npc, clip: sweep}
+          - {actor: player, clip: kick}
+      - {set_stage: {quest: the_cedar_forest_journey, stage: battle_round_1}}
+      - {set_flag: humbaba_round_1}
+    choices:
+      - {text_key: humbaba.press_on, goto: fight_round_2}
+
+  fight_round_2:
+    text_key: humbaba.round_2
+    effects:
+      - flourish:
+          - {actor: player, clip: box}
+          - {actor: npc, clip: kick}
+          - {actor: player, clip: kick}
+          - {actor: npc, clip: box}
+          - {actor: player, clip: sweep}
+      - {set_stage: {quest: the_cedar_forest_journey, stage: battle_round_2}}
+      - {set_flag: humbaba_round_2}
+    choices:
+      - {text_key: humbaba.press_on, goto: fight_finish}
+
+  fight_finish:
+    text_key: humbaba.defeat
+    effects:
+      - flourish:
+          - {actor: player, clip: kick}
+          - {actor: npc, clip: sweep}
+          - {actor: player, clip: box}
+      - {set_stage: {quest: the_cedar_forest_journey, stage: defeat_humbaba}}
+      - {set_flag: humbaba_defeated}
+      - {set_stage: {quest: ishtars_wrath, stage: bath_after_victory}}
+      - {teleport_place: ishtar_temple}
     choices:
       - {text_key: humbaba.leave}

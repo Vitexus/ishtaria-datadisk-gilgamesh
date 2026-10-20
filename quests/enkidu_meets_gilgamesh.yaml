@@ -1,0 +1,21 @@
+# Tablet II: the player is Enkidu. Hear of the king, challenge him, become brothers.
+# Starts when Šamḫat presents Enkidu in Uruk (set_playable + set_stage).
+id: enkidu_meets_gilgamesh
+title_key: quest.enkidu_meets.title
+start_stage: face_the_king
+start_place: uruk_market
+excerpt:
+  paraphrase_key: quest.enkidu_meets.excerpt
+  akkadian_key: quest.enkidu_meets.excerpt.akkadian
+stages:
+  face_the_king:
+    text_key: quest.enkidu_meets.face_the_king
+    guide: uruk_market
+    final: false
+  wrestle:
+    text_key: quest.enkidu_meets.wrestle
+    guide: uruk_market
+    final: false
+  become_brothers:
+    text_key: quest.enkidu_meets.become_brothers
+    final: true

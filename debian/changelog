@@ -1,3 +1,115 @@
+ishtaria-datadisk-gilgamesh (0.2.22-1) unstable; urgency=medium
+
+  * Complete spoken coverage for all NPC dialogue nodes (workshops + tablets).
+  * Ready for staged playthrough of the immortality arc.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 19:25:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.21-1) unstable; urgency=medium
+
+  * Utnapishtim: resume plant vigil after leaving dialogue; return-quest tablet epilog.
+  * Mid-epic spoken lines (Humbaba, Ištar, Bull, Enkidu death / cedar).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 19:20:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.20-1) unstable; urgency=medium
+
+  * Return-to-Uruk epilogue after the snake; Ninsun walls beat; win teleports home.
+  * Spoken lines for plant / ferry / Mashu counsel (EN+CS).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 19:15:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.19-1) unstable; urgency=medium
+
+  * Immortality quest: Mashu → ferry → Utnapishtim; dual ending (keep plant / snake).
+  * Eternal-life flag; clay-tablet epilog on the client.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 19:00:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.18-1) unstable; urgency=medium
+
+  * Mid-epic: Humbaba multi-phase fight, Ištar rejection, Bull of Heaven, Enkidu's death.
+  * Chains into the search for immortality after mourning.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 18:50:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.17-1) unstable; urgency=medium
+
+  * Gilgameš PC after friendship; Cedar Forest quest chain with story teleport.
+  * Quest fail_restart checkpoints (escort death returns to Uruk).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 18:30:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.16-1) unstable; urgency=medium
+
+  * Player look is the hunter (ṣayyādu): fixed model, nickname only — no character picker.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 15:00:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.15-1) unstable; urgency=medium
+
+  * Surveyed hunter_waterhole/village so Early Dynastic floodplain cells load the story.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 14:26:26 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.14-1) unstable; urgency=medium
+
+  * Love minigame: throw hearts at Enkidu before bread and beer (see_the_savage).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 13:45:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.13-1) unstable; urgency=medium
+
+  * Šamḫat patrol: temple ↔ city circuit after escort ends (Ishtar ziggurat station).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 13:20:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.12-1) unstable; urgency=medium
+
+  * Quest B: bread, ale, clothing; present Enkidu to Gilgameš; swap to Enkidu.
+  * Quest C stub: enkidu_meets_gilgamesh (wrestle, become brothers).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 12:30:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.11-1) unstable; urgency=medium
+
+  * Three snares and the hunter quest at character creation (not from Enkidu talk).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 10:20:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.10-1) unstable; urgency=medium
+
+  * set_playable: hunter handover becomes Šamḫat (model + hide NPC).
+  * Quest shamhat_and_the_wild_man (civilize Enkidu, walk to Uruk).
+  * Quest excerpt tablet (paraphrase + Akkadian) for hunter and Šamḫat.
+  * Hunter places: require grassland/lowland (valid biomes).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 10:15:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.9-1) unstable; urgency=medium
+
+  * Hunter quest: place real snares, stand clear, wait for wildlife; wild
+    Enkidu destroys each trap three times (server hunting tick).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 10:00:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.8-1) unstable; urgency=medium
+
+  * Tablet I opening: spawn as the hunter at the steppe water-hole; quest
+    the_hunter_and_the_wild_man (snares, father, Gilgameš, Šamḫat, return).
+  * Wild Enkidu at the water-hole; Gilgameš wanders Uruk market.
+  * Epic research corpus under research/EPIC.md (eBL + Thompson).
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 20 Oct 2026 09:30:00 +0200
+
+ishtaria-datadisk-gilgamesh (0.2.7-1) unstable; urgency=medium
+
+  * Denser Uruk wildlife and crowds, composed city music, bridges and workshops.
+  * Rebuild for deployment with current living-city content.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Mon, 19 Oct 2026 15:20:00 +0200
+
+
 ishtaria-datadisk-gilgamesh (0.2.6-1) unstable; urgency=medium
 
   * Keep player spawn at city_gate clear of crowd NPCs; soldiers and caravans

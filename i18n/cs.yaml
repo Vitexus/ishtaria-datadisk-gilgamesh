@@ -136,6 +136,8 @@ enkidu.ask_civilization: Ptej se na civilizaci
 enkidu.ask_shamhat: Ptej se na Šamchat
 enkidu.ask_humbaba: Ptej se na Humbabu
 enkidu.ask_death: Ptej se na jeho smrt
+enkidu.challenge_duel: Vyzvi ho k přátelskému zápasu
+enkidu.duel_done: "Ha! Úder za úder — jsi můj rovný. Od tohoto dne jsme bratři ve zbrani."
 enkidu.leave: Musím jít.
 enkidu.wild_days: "Kdysi jsem běhal s gazelami a pil s divokými zvířaty u vodního zdroje. Nic jsem nevěděl o lidech či městech. Byl jsem jedno se přírodou, silný a svobodný."
 enkidu.animals: "Gazely jedly z mé ruky a vlci spali vedle mě. Dokonce i lvi respektovali moji sílu. Byli jsme všichni divokou přírodou spojeni."
@@ -160,7 +162,15 @@ enkidu.civilization: "Šamchat mě to naučila. Ukázala mi chléb a víno, obl�
 
 # Ištariny dialogy
 ishtar.greet: "Já jsem Ištar, bohyně lásky a války, královna Uruku. Nikdo nesmí ignorovat mou přítomnost."
-ishtar.ask_love: Nabídni se bohyni
+ishtar.ask_love: Zeptat se na lásku
+ishtar.offer_self: Vyslechnout nabídku bohyně
+ishtar.reject_harsh: Odmítnout ji s výsměchem jejím milencům
+ishtar.reject_firm: Odmítnout pevně, bez urážky
+ishtar.hear_wrath: Vyslechnout její odpověď
+ishtar.proposition: "Pojď ke mně, Gilgameši — buď mým manželem. Zapřáhnu ti vůz z lapisu a zlata."
+ishtar.rejected_harsh: "Vyjmenováváš osudy mých milenců? Pak slyš mou kletbu — pošlu na tebe Nebeského býka!"
+ishtar.rejected_firm: "Odmítáš královnu nebes? Pak ať Anu pošle Nebeského býka potrestat tvou pýchu!"
+ishtar.wrath: "Nebeský býk přijde do Uruku. Trh se zatřese. Postav se mu, odvážíš-li se."
 ishtar.ask_war: Ptej se na její válečnickou stránku
 ishtar.ask_gilgamesh: Ptej se na Gilgamešovo odmítnutí
 ishtar.leave: Nechci si znášet hněv bohyně.
@@ -182,27 +192,44 @@ shamhat.love: "Láska je největší moc bohů. Dokáže zkrotit i to nejdivoče
 humbaba.greet: "Kdo se odvažuje vstoupit do mého lesa? Já jsem Humbaba a nikdo nesmí projít bez mého souhlasu!"
 humbaba.ask_mercy: Pros o život
 humbaba.ask_fight: Vyraž strážce
+humbaba.continue_fight: Pokračuj v útoku
+humbaba.finish_fight: Zasaď poslední ránu
+humbaba.ask_already_dead: Pohleď na padlého strážce
+humbaba.press_on: (Udeř znovu.)
 humbaba.leave: Uteč rychle, dokud můžeš.
 humbaba.mercy: "Milost? Ha! Bohové mě ustanovili strážcem tohoto lesa. Odejdi nyní a já ti neroztrhám údy!"
 humbaba.fight: "Pošetilí smrtelníci! Můj řev je bouře, můj dech je oheň a mé čelisti jsou smrt! Zde zemřeš!"
+humbaba.round_2: "Enkidu po tvém boku — cedr se třese! Humbaba klopýtá, ale nepadá!"
+humbaba.defeat: "Strážce padá. Les cedrů je otevřený. Tvá sláva dosáhne vzdálených břehů."
+humbaba.defeated: "Strážce cedrů leží tiše. Boj je u konce."
 
 # Utnapištimovy dialogy
 utnapishtim.greet: "Já jsem Utnapištim, přeživší potopy. Bohové mi darovali věčný život. Co zde hledáš?"
 utnapishtim.ask_flood: Ptej se na Velkou potopu
 utnapishtim.ask_immortality: Ptej se na věčný život
+utnapishtim.ask_plant: Ptej se na rostlinu mládí
+utnapishtim.dive_for_plant: Ponoř se pro rostlinu
+utnapishtim.keep_vigil: Střež rostlinu bez odpočinku
+utnapishtim.bathe_rest: Vykoupej se a odpočiň u tůně
 utnapishtim.ask_test: Ptej se, jak prokázat svou hodnotu
 utnapishtim.leave: Nechám tě s tvou moudrostí.
 utnapishtim.flood: "Bohové vyslali potopu, aby zničili veškerý život. Ale Ea mě varoval a já jsem postavil velkou loď. Po sedm dní a nocí zuřily vody, dokud vše nezmlklo. Pak jsem otevřel dveře a život se vrátil."
-utnapishtim.immortality: "Bohové rozhodli, že smrt je osudem všech lidí. Pouze já, díky jejich daru, žiji navěky. Nehledej ji, neb nebude nalezena."
+utnapishtim.immortality: "Smrt je osudem všech lidí — přesto existuje rostlina, která vrací mládí. Ponoříš-li se hluboko a uchopíš ji, můžeš vyhrát to, co bohové odepřeli."
+utnapishtim.plant: "Roste v hlubinách Vod smrti. Ponoř se, uřízni ji a nespě — had číhá na neopatrné."
+utnapishtim.dive: "Ponoříš se do temné vody a vynoříš se s rostlinou mládí v ruce."
+utnapishtim.win_eternal: "Bděl jsi. Rostlina je tvá. Mládí a život bez konce jsou tvé — epos končí a ty jsi získal, co Gilgameš hledal."
+utnapishtim.lose_snake: "Zatímco ses koupal, had ucítil rostlinu, ukradl ji a svlékl kůži. Cesta domů do Uruku čeká — smrtelnost zůstává."
 utnapishtim.test: "Pokud chceš věčný život, nejprve prokaž, že dokážeš zůstat vzhůru sedm dní a nocí. Ale buď varován: nikomu se to ještě nepovedlo."
 
 # Ur-Šanabiho dialogy
 ur_shanabi.greet: "Já jsem Ur-Šanabi, převozník přes Vody smrti. Nikdo nesmí přejít bez mého člunu."
 ur_shanabi.ask_cross: Požádej o přepravu přes vody
 ur_shanabi.ask_cost: Ptej se na cenu za převoz
+ur_shanabi.set_sail: Vypluj k Utnapištimovi
 ur_shanabi.leave: Musím najít jiný způsob.
-ur_shanabi.cross: "Vody jsou smrtelné na dotek. Pouze kamenné věci mohou přejít bezpečně. Odhod svouv smrtelnou schránku a já tě převezu."
-ur_shanabi.cost: "Cena je tvé smrtelné tělo. Nech ho zde a můžeš přejít, aby ses setkal s Utnapištimem."
+ur_shanabi.cross: "Vody jsou smrtelné na dotek. Přesto toho, kdo prošel horou, převezu."
+ur_shanabi.sail: "Člun řeže Vody smrti. Vpředu leží příbytek Utnapištima."
+ur_shanabi.cost: "Cena je odvaha. Nech strach za sebou a můžeš přejít k Utnapištimovi."
 
 # Štířího muže dialogy
 scorpion_man.greet: "Zastav! Nikdo nesmí projít touto branou bez mého souhlasu. Já jsem Štírí muž, strážce hory."
@@ -493,46 +520,66 @@ quest.meeting_equals.challenge: Enkidu vyzývá Gilgameše u svatby
 quest.meeting_equals.become_brothers: Gilgameš a Enkidu se stanou bratrov
 
 quest.cedar_forest.title: Cesta do Cedrového lesa
-quest.cedar_forest.decide: Gilgameš a Enkidu se rozhodnou cestovat do Cedrového lesa
-quest.cedar_forest.prepare: Připrav zbraň a zásoby na cestu
-quest.cedar_forest.travel: Cestuj divočinou do Cedrového lesa
+quest.cedar_forest.decide: Promluv s Enkiduem o Cedrovém lese
+quest.cedar_forest.prepare: Požádej Ninsun o požehnání před cestou
+quest.cedar_forest.travel: Řekni Enkiduovi, že jsi připraven vyrazit
 quest.cedar_forest.enter: Vstup do posvátného Cedrového lesa
 quest.cedar_forest.find_humbaba: Najdi Humbabu v jeho doupěti
 quest.cedar_forest.face_guardian: Postav se strážci lesa
+quest.cedar_forest.battle_1: Vydrž Humbabův první nápor
+quest.cedar_forest.battle_2: Útoč s Enkiduem, dokud Humbaba neochabne
 quest.cedar_forest.defeat_humbaba: Poraz Humbabu a získej cedrové dřevo
+quest.cedar_forest.excerpt: Obrátili tváře k Lesu cedrů, aby skáceli cedr a zabili Humbabu.
+quest.cedar_forest.excerpt.akkadian: ana qišti erēni — ana dâki Ḫumbaba
 
 quest.ishtars_wrath.title: Ištarina zlost
-quest.ishtars_wrath.bath: Gilgameš se koupe po porážce Humbaby
-quest.ishtars_wrath.approaches: Ištar přichází k Gilgamešovi s nabídkou
-quest.ishtars_wrath.reject: Gilgameš odmítne Ištarinu nabídku
-quest.ishtars_wrath.bull_sent: Ištar pošle Nebeského býka, aby potrestala Gilgameše
+quest.ishtars_wrath.bath: Promluv s Ištar v jejím chrámu po vítězství nad cedry
+quest.ishtars_wrath.approaches: Vyslechni Ištarinu nabídku
+quest.ishtars_wrath.reject: Odmítni bohyni
+quest.ishtars_wrath.bull_sent: Postav se Nebeskému býku na trhu Uruku
+quest.ishtars_wrath.bull_round_1: Vydrž první útok Býka
+quest.ishtars_wrath.bull_round_2: S Enkiduem chyť Býka a udeř
 quest.ishtars_wrath.defeat_bull: Poraz Nebeského býka
+quest.ishtars_wrath.excerpt: Ištar pozvedla oči ke kráse Gilgameše — Pojď ke mně, buď mým manželem.
+quest.ishtars_wrath.excerpt.akkadian: ana dumqi ša Gilgāmeš — alkam lu ḫāmirī atta
 
 quest.enkidu_death.title: Enkidova smrt
-quest.enkidu_death.punishment: Bohové potrestají Enkidu za zabití Humbaby
-quest.enkidu_death.sickens: Enkidu onemocní boží nemocí
-quest.enkidu_death.dream: Enkidu sní o podsvětí
-quest.enkidu_death.dies: Enkidu umírá po dvanácti dnech utrpení
-quest.enkidu_death.mourns: Gilgameš truchlí pro svého milovaného přítele
+quest.enkidu_death.punishment: Vyslechni, proč bohové trestají Enkidu
+quest.enkidu_death.sickens: Zůstaň s Enkiduem, když ho nemoc bere
+quest.enkidu_death.dream: Poslouchej Enkidův sen o podsvětí
+quest.enkidu_death.dies: Rozluč se s Enkiduem
+quest.enkidu_death.mourns: Gilgameš truchlí — pak hledá věčný život
+quest.enkidu_death.excerpt: Enkidu ulehl a po dvanáct dní na něm nemoc těžkla.
+quest.enkidu_death.excerpt.akkadian: ittatīl Enkidu — 12 ūmī murṣu ikabbitšu
 
 quest.immortality.title: Hledání nesmrtelnosti
-quest.immortality.decide: Gilgameš se rozhodne hledat věčný život
-quest.immortality.journey_mountain: Cesta k Hoře Mašu
-quest.immortality.meet_scorpion: Setkání se Štířímu mužem u brány
-quest.immortality.pass_tunnel: Projdi Tunelm Slunce
-quest.immortality.cross_waters: Překroč Vody smrti
-quest.immortality.meet_ferryman: Setkání s Ur-Šanabim, převozníkem
-quest.immortality.reach_utnapishtim: Dosáhni Utnapištimova příbytku
-quest.immortality.learn_truth: Poznej pravdu o smrtelnosti
+quest.immortality.decide: Zeptej se Ninsun, jak hledat věčný život
+quest.immortality.prepare: Připrav se opustit Uruk k Hoře Mašu
+quest.immortality.meet_scorpion: Setkání se Štířím mužem u brány
+quest.immortality.pass_tunnel: Projdi Tunel Slunce k Vodám smrti
+quest.immortality.meet_ferryman: Přejeď s Ur-Šanabim, převozníkem
+quest.immortality.reach_utnapishtim: Promluv s Utnapištimem
+quest.immortality.learn_of_plant: Poznej rostlinu mládí
+quest.immortality.obtain_plant: Ponoř se pro rostlinu
+quest.immortality.choose_vigilance: Střež rostlinu — nebo odpočiň a riskuj hada
+quest.immortality.eternal_life: Získal jsi věčný život
+quest.immortality.lose_plant: Had ukradl rostlinu — vrať se jako smrtelník
+quest.immortality.excerpt: Gilgameš obrátil tvář k Utnapištimovi, Vzdálenému, aby se ptal na život a smrt.
+quest.immortality.excerpt.akkadian: ana Uta-napišti rūqi — ša balāṭi u mūti
+quest.immortality.epilog.eternal: Bděl jsi u rostliny mládí. Věčný život je tvůj — epos končí vítězstvím, jaké hliněné tablety neznají.
+quest.immortality.epilog.lose: Had ukradl rostlinu, zatímco ses koupal. Vracíš se do Uruku smrtelný — a to je konec, který tablety vyprávějí.
 
 quest.return_uruk.title: Návrat do Uruku
 quest.return_uruk.accept: Přijmi nevyhnutelnost smrti
 quest.return_uruk.begin_journey: Zahaj cestu zpět do Uruku
 quest.return_uruk.cross_back: Vrať se zpět přes Vody smrti
-quest.return_uruk.exit_tunnel: Opuści Tunel Slunce
+quest.return_uruk.exit_tunnel: Opusť Tunel Slunce
 quest.return_uruk.descend: Sestup z Hory Mašu
-quest.return_uruk.view_uruk: Obdivuj mohutné hradby Uruku
-quest.return_uruk.final_reflection: Zamysli se nad cestou a smyslem života
+quest.return_uruk.view_uruk: Pohleď s Ninsun na mohutné hradby Uruku
+quest.return_uruk.final_reflection: Hradby zůstávají — a s nimi příběh
+quest.return_uruk.epilog: "Pohlédl jsi na hradby Uruku. Rostlina je ztracena, ale město stojí — a to je konec, který tablety vyprávějí."
+quest.return_uruk.excerpt: "Prohlédni hradby Uruku — terasu základů a pálenou cihlu: to je dílo Gilgameše."
+quest.return_uruk.excerpt.akkadian: "ūru ša Uruk — šupšuqat ušši — šipir Gilgāmeš"
 
 # Ninsun Dialogues (Czech)
 ninsun.greet: "Jsem Ninsun, matka Gilgameše a moudrá bohyně Uruku. Co hledá přítel mého syna?"
@@ -554,10 +601,18 @@ ninsun.ask_enkidu_dream: Ptej se na Enkidův sen
 
 # Bull of Heaven Dialogues (Czech)
 bull_of_heaven.roar: "ŘEV! Nebeský býk přichází potrestat pyšné!"
-bull_of_heaven.flee: Uteč před šelmou
-bull_of_heaven.fight: Postav se a bojuj
-bull_of_heaven.flee_text: Otočíš se a utíkáš před božským zvířetem.
-bull_of_heaven.fight_text: Postavíš se proti Nebeskému býkovi!
+bull_of_heaven.flee: Utéct před šelmou
+bull_of_heaven.fight: Stát a bojovat
+bull_of_heaven.continue_fight: Čelit dalšímu útoku
+bull_of_heaven.finish_fight: Chyť Býka a udeř
+bull_of_heaven.already_dead: Pohleď na padlou šelmu
+bull_of_heaven.press_on: (Drž se.)
+bull_of_heaven.leave: Ustoupit z trhu.
+bull_of_heaven.flee_text: Obrátíš se a utíkáš před hněvem božské šelmy.
+bull_of_heaven.charge_1: "Býk útočí — prach a rohy! Enkidu křičí: chyť ho za ocas!"
+bull_of_heaven.charge_2: "Znovu duní. Společně ho strhnete k zemi!"
+bull_of_heaven.fight_text: "Nebeský býk padá. Ištar ječí z hradeb. Bohové odpoví."
+bull_of_heaven.defeated: "Božská šelma leží mrtvá v prachu trhu."
 
 # Anu Dialogues (Czech)
 anu.greet: "Já jsem Anu, pán nebes, otec velkých bohů. Co tě přivádí přede mne, do mé božské přítomnosti?"
@@ -568,16 +623,6 @@ anu.leave: Musím jít, velký pane.
 anu.heavens: "Nebesa jsou nekonečná a věčná, kde hvězdy zapisují osudy lidí. Z mého trůnu výše vidím vše, co bylo, je a bude."
 anu.judgment: "Můj soud je konečný, neboť jsem otcem bohů. Rovnováha spravedlnosti je udržována mou vůlí samotnou."
 anu.ishtar: "Ištar... moje dcera. Pyšná a prudká, je zároveň přinositelkou lásky i mzdou války. Hodná dědička mého království."
-
-# Enhanced Search for Immortality Quest (Czech)
-quest.immortality.prepare: Připrav se na dlouhou a nebezpečnou cestu za odhalením tajemství věčného života
-quest.immortality.scorpion_test: Štíří muž zkouší tvou hodnost projít Horou Mašu
-quest.immortality.tunnel_test: Projdí temnotou Tunelu Slunce bez strachu
-quest.immortality.ferryman_test: Převozník Ur-Šanabi zkouší tvou odhodlanost před překročením Vod smrti
-quest.immortality.learn_of_plant: Utnapištim odhalí umístění rostliny, která obnovuje mládí
-quest.immortality.obtain_plant: Vyzvedni rostlinu z hlubin Vod smrti
-quest.immortality.return_with_plant: Vrať se do Uruku s vzácnou rostlinou věčného mládí
-quest.immortality.lose_plant: Had ukradne rostlinu, zatímco se koupáš, a přijdáš o šanci na nesmrtelnost
 
 # Obyvatelé Uruku
 npc.uruk_farmer: Pěstitel ječmene
@@ -718,6 +763,67 @@ place.gilgamesh_statue_palace: Socha Gilgameše na palácovém dvoře
 place.gilgamesh_statue_eanna: Socha Gilgameše na dvoře Eanny
 place.gilgamesh_statue_royal_tombs: Socha Gilgameše u královských hrobek
 # <<< uruk statues
+
+# >>> city statues (generated by tools/build_city_statues.py)
+place.gilgamesh_statue_ur: Socha Gilgameše
+place.gilgamesh_statue_eridu: Socha Gilgameše
+place.gilgamesh_statue_kish: Socha Gilgameše
+place.gilgamesh_statue_nippur: Socha Gilgameše
+place.gilgamesh_statue_shuruppak: Socha Gilgameše
+place.gilgamesh_statue_larsa: Socha Gilgameše
+place.gilgamesh_statue_umma: Socha Gilgameše
+place.gilgamesh_statue_lagash: Socha Gilgameše
+place.gilgamesh_statue_girsu: Socha Gilgameše
+place.gilgamesh_statue_nigin: Socha Gilgameše
+place.gilgamesh_statue_abu_tbeirah: Socha Gilgameše
+place.gilgamesh_statue_kissik: Socha Gilgameše
+place.gilgamesh_statue_adab: Socha Gilgameše
+place.gilgamesh_statue_eshnunna: Socha Gilgameše
+place.gilgamesh_statue_nineveh: Socha Gilgameše
+place.gilgamesh_statue_tell_brak: Socha Gilgameše
+place.gilgamesh_statue_mari: Socha Gilgameše
+place.gilgamesh_statue_susa: Socha Gilgameše
+place.gilgamesh_statue_shahr_e_sukhteh: Socha Gilgameše
+place.gilgamesh_statue_ebla: Socha Gilgameše
+place.gilgamesh_statue_byblos: Socha Gilgameše
+place.gilgamesh_statue_ugarit: Socha Gilgameše
+place.gilgamesh_statue_sidon: Socha Gilgameše
+place.gilgamesh_statue_megiddo: Socha Gilgameše
+place.gilgamesh_statue_jericho: Socha Gilgameše
+place.gilgamesh_statue_arad: Socha Gilgameše
+place.gilgamesh_statue_hazor: Socha Gilgameše
+place.gilgamesh_statue_memphis: Socha Gilgameše
+place.gilgamesh_statue_heliopolis: Socha Gilgameše
+place.gilgamesh_statue_abydos: Socha Gilgameše
+place.gilgamesh_statue_hierakonpolis: Socha Gilgameše
+place.gilgamesh_statue_naqada: Socha Gilgameše
+place.gilgamesh_statue_koptos: Socha Gilgameše
+place.gilgamesh_statue_elephantine: Socha Gilgameše
+place.gilgamesh_statue_buto: Socha Gilgameše
+place.gilgamesh_statue_kerma: Socha Gilgameše
+place.gilgamesh_statue_altyndepe: Socha Gilgameše
+place.gilgamesh_statue_namazga_depe: Socha Gilgameše
+place.gilgamesh_statue_sarazm: Socha Gilgameše
+place.gilgamesh_statue_harappa: Socha Gilgameše
+place.gilgamesh_statue_kot_diji: Socha Gilgameše
+place.gilgamesh_statue_kalibangan: Socha Gilgameše
+place.gilgamesh_statue_rehman_dheri: Socha Gilgameše
+place.gilgamesh_statue_dholavira: Socha Gilgameše
+place.gilgamesh_statue_liangzhu: Socha Gilgameše
+place.gilgamesh_statue_troy: Socha Gilgameše
+place.gilgamesh_statue_poliochni: Socha Gilgameše
+place.gilgamesh_statue_kultepe: Socha Gilgameše
+place.gilgamesh_statue_liman_tepe: Socha Gilgameše
+place.gilgamesh_statue_alaca_hoyuk: Socha Gilgameše
+place.gilgamesh_statue_arslantepe: Socha Gilgameše
+place.gilgamesh_statue_knossos: Socha Gilgameše
+place.gilgamesh_statue_lerna: Socha Gilgameše
+place.gilgamesh_statue_los_millares: Socha Gilgameše
+place.gilgamesh_statue_zambujal: Socha Gilgameše
+place.gilgamesh_statue_caral: Socha Gilgameše
+place.gilgamesh_statue_aspero: Socha Gilgameše
+place.gilgamesh_statue_babylon: Socha Gilgameše v Babylonu
+# <<< city statues
 
 # <<< ancient cities of the world (c. 2700 BCE)
 place.ur: Ur
@@ -867,3 +973,104 @@ tablet_writer.greet: "Čerstvá tabulka, ještě teplá z hrnčířské dílny. 
 tablet_writer.ask_write: Zeptej se, co píšeš
 tablet_writer.leave: Nerozmažu ti hlínu.
 tablet_writer.write: "Písaři píší oběti, kupci píší, co se koupilo a prodalo, a my kněží píšeme, co bylo dáno bohům. Sluhové nosí tabulky v koších. Hlína si pamatuje ruku, která ji stlačila."
+
+# Quest lovce (tabulka I)
+place.hunter_waterhole: Napajedlo lovců
+place.hunter_village: Tábor starého lovce
+npc.hunter_father: Starý otec
+npc.hunter_father.bio: Starý lovec, který syna učil klást jámy a sítě ve stepi. Zná divočinu i krále Uruku.
+quest.hunter.title: Lovec a divoký muž
+quest.hunter.lay_snares: Polož past u napajedla, pak se vzdal a čekej. Když zůstaneš blízko, zvěř nepřijde.
+quest.hunter.snare_ruined_1: Divoký muž strhl první past a zvíře uniklo. Polož další a čekej dál od ní.
+quest.hunter.snare_ruined_2: Znovu zasypal jámy a vytrhl sítě. Ještě jedna past — a drž se dál.
+quest.hunter.snare_ruined_3: Potřetí zničil tvou práci. Jdi se poradit se starým otcem.
+quest.hunter.ask_father: Promluv si s otcem v táboře lovců.
+quest.hunter.seek_gilgamesh: Jdi do Uruku a řekni králi Gilgamešovi o divokém muži.
+quest.hunter.seek_shamhat: Najdi Šamḫat u chrámu Innany a vysvětli svůj záměr.
+quest.hunter.journey_with_shamhat: Putuj se Šamḫat zpět k napajedlu (cesta třetího dne).
+quest.hunter.find_enkidu: Najdi s Šamḫat divokého muže u napajedla.
+quest.hunter.done: Úloha lovce končí. Šamḫat udělá z Enkidua člověka.
+enkidu_wild.greet: Divoký muž hlídá stádo. Má oči zvířete, které nezná město.
+enkidu_wild.after_snares: (Divoký muž zničil každou past — zeptat se, co dál.)
+enkidu_wild.send_father: Opusť napajedlo. Starý muž v táboře zná cestu do Uruku.
+enkidu_wild.with_shamhat: (Přijít se Šamḫat.)
+enkidu_wild.found_with_shamhat: Zde je divoký muž. Šamḫat vystupuje vpřed — tvůj lov končí, začíná její dílo.
+enkidu_wild.leave: (Ustoupit.)
+hunter_father.greet: Můj synu. Step ti ošlehala tvář.
+hunter_father.tell_wild_man: Otče — muž z hor ničí každou past, kterou položím.
+hunter_father.ask_who: Kdo jsi mezi lovci?
+hunter_father.who: Jsem tvůj otec. Jámy jsem kopal, než jsi uměl chodit.
+hunter_father.counsel: Jdi do Uruku. Řekni Gilgamešovi. Pošle ženu z chrámu — Šamḫat — a divoký muž opustí stádo.
+hunter_father.leave: (Uklonit se a odejít.)
+gilgamesh.hunter_plea: Králí — divoký muž zasypává mé jámy a osvobozuje gazely. Otec mě k tobě poslal.
+gilgamesh.send_shamhat: Vezmi Šamḫat z domu Innany. Až stádo přijde pít, ona ho odvede od zvířat. Jdi.
+shamhat.hunter_plan: Král mě posílá. Půjdeš se mnou tři dny k napajedlu?
+shamhat.accept_journey: Tak pojďme. Veď mě k divokému muži, lovče.
+quest.shamhat.title: Šamḫat a divoký muž
+quest.shamhat.see_the_savage: Získej srdce divokého muže — házej srdíčka lásky, dokud v něm nezmizí zvíře.
+quest.shamhat.return_to_uruk: Veď Enkidua na tržiště Uruku.
+enkidu_wild.become_shamhat: (Vystoupit jako Šamḫat.)
+enkidu_wild.handover_shamhat: Cesta lovce končí. Jsi Šamḫat z chrámu — divoký muž čeká na tvé slovo.
+enkidu_civilize.offer_bread: Vezmi chléb lidí.
+enkidu_civilize.walk_to_uruk: Pojď — jdeme do Uruku, ke králi Gilgamešovi.
+enkidu_civilize.ready_for_uruk: Vstává jako muž města. Cesta do Uruku je otevřená.
+enkidu_civilize.leave: (Ustoupit.)
+enkidu_civilize.greet: Divoký muž na tebe hledí novýma očima.
+quest.hunter.excerpt: Jakoukoli past položíš, divoký muž ji strhne a stádo zachrání.
+quest.hunter.excerpt.akkadian: ša ištakanu šubarrû ḫabālu — nīšu ušēṣi
+quest.shamhat.excerpt: Vrhala lásku jako síť; divoký muž se stal člověkem — pak chléb a pivo země.
+quest.shamhat.excerpt.akkadian: aklī ša nišī akul — šikar māti šiti
+quest.shamhat.teach_bread: Snědl chléb lidí. Nabídni mu pivo země.
+quest.shamhat.teach_ale: Napil se. Obleč ho jako muže města.
+quest.shamhat.teach_clothing: Stádo před ním prchá. Putuj s ním do Uruku ke králi Gilgamešovi.
+quest.shamhat.present_enkidu: Představ civilizovaného divokého muže králi Gilgamešovi na tržišti.
+quest.shamhat.done: Dílo Šamḫat je hotovo. Enkidu stojí před králem.
+enkidu_civilize.offer_ale: Pij pivo země — sedm džbánů, jako pastýři.
+enkidu_civilize.offer_clothing: Oblékni šat lidí. Opusť srst hor.
+enkidu_civilize.ate_bread: Bere chléb. Oči má jiné — už ne jen zvířecí.
+enkidu_civilize.drank_ale: Pije. Zpívá. Veselí se jako muž ovčích ohrad.
+enkidu_civilize.wore_clothing: Nosí plátno. Gazely, s nimiž běhal, prchají do hor.
+quest.enkidu_meets.title: Enkidu a král
+quest.enkidu_meets.face_the_king: Vyzvi Gilgameše — zataras dveře svatebního domu.
+quest.enkidu_meets.wrestle: Zápas s králem v ulici Uruku.
+quest.enkidu_meets.become_brothers: Ty a Gilgameš jste rovni. Přátelství je zpečetěno.
+quest.enkidu_meets.excerpt: Zápasili jako býci; sloup dveří se chvěl — pak se políbili a stali se přáteli.
+quest.enkidu_meets.excerpt.akkadian: iṣṣabtūma kīma lītī — ina sūqi ša Uruk
+gilgamesh.receive_shamhat: Ó králi — zde je divoký muž, oděný a sytý. Šamḫat vykonala své dílo.
+gilgamesh.accept_enkidu: Dobře. Ať stane přede mnou. Soupeř Uruku přišel.
+gilgamesh.become_enkidu: (Stát se Enkiduem — čelit králi.)
+gilgamesh.become_king: (Stát se Gilgamešem — epos pokračuje.)
+gilgamesh.king_handover: "Jsi Gilgameš, král Uruku. Enkidu stojí po tvém boku jako bratr. Cedrový les čeká."
+enkidu.propose_cedar: Promluv o Cedrovém lese
+enkidu.propose_cedar_speech: "Bratře — sláva, která zůstane, se řeže z cedru. Pojďme do Lesa a postavme se Humbabovi. Nejdřív hledej požehnání své matky."
+enkidu.depart_cedar: Vyrazit do Cedrového lesa
+enkidu.depart_cedar_speech: "Cesta je dlouhá. Zavři oči — až je otevřeš, budou kolem nás cedry."
+enkidu.ask_more: Zeptat se na jiné věci
+enkidu.back: Zpět
+enkidu.speak_illness: Zeptat se, co ho trápí
+enkidu.speak_sickness: Zůstat u něj v horečce
+enkidu.speak_dream: Zeptat se na jeho sen
+enkidu.farewell: Rozloučit se s ním
+enkidu.illness: "Bratře — bohové rozsoudili. Za Humbabu a Býka musí jeden z nás zemřít. To jsem já."
+enkidu.sickness: "Nemoc těžkne. Neodcházej. Mluv o divočině… o Šamḫat… o tobě."
+enkidu.underworld_dream: "Snil jsem o Domě prachu, kde králové sedí s korunami z hlíny. Bojím se."
+enkidu.farewell_speech: "Příteli… nezapomeň na mě. Tvé hradby Uruku nás přežijí — hledej život, musíš-li."
+ninsun.ask_cedar_blessing: Požádat o požehnání na cedrovou cestu
+ninsun.cedar_blessing: "Synu, postavila jsem tě pod ochranu bohů. Jdi s Enkiduem; cedrová cesta je otevřená. Až budeš připraven vyrazit, promluv se svým bratrem."
+ninsun.ask_immortality_road: Zeptat se na cestu k Utnapištimovi
+ninsun.immortality_counsel: "Enkidu je pryč. Chceš-li život bez konce, cesta vede k Hoře Mašu a za Vody smrti."
+ninsun.depart_mashu: Vyrazit k Hoře Mašu
+ninsun.send_mashu: "Jdi. Štíří muži střeží bránu. Projdi je a Ur-Šanabi tě najde."
+ninsun.ask_walls: Pohleď na hradby Uruku
+ninsun.walls_epilog: "Vystup se mnou, synu. Terasa základů a pálená cihla — to je tvé dílo. Rostlina je pryč, ale Uruk stojí. To stačí."
+gilgamesh.enkidu_handover: Jsi Enkidu. Ulice čeká. Zataras mu cestu a dokaž sílu.
+gilgamesh.enkidu_challenge: Jsem Enkidu. Zatarasím ti cestu, králi Uruku.
+gilgamesh.enkidu_again: Znovu — dokonči, co jsme začali.
+gilgamesh.wrestle_begin: Chytí se. Sloupy dveří se chvějí, zdi se třesou.
+gilgamesh.wrestle_continue: (Drž se.)
+gilgamesh.wrestle_end: Políbí se. Enkidu a Gilgameš jsou bratři. Hněv je zapomenut.
+enkidu_wild.already_self: Pamatoješ toto napajedlo — ale už nejsi zvíře, jež zde pilo.
+gilgamesh.ask_more: Zeptat se na jiné věci.
+gilgamesh.back: (Zpět.)
+quest.shamhat.teach_love: Jeho srdce měkne. Nabídni mu chléb lidí.
+enkidu_civilize.love_chase: Prchá jako gazela. Házej srdíčka lásky — naplň zem zónami, dokud divočina neustoupí.

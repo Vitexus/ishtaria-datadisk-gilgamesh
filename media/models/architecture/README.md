@@ -88,6 +88,19 @@ This directory contains 3D models of Mesopotamian architecture created for the G
     - Blue lapis lazuli glaze material
     - Size: ~15m x 3m
 
+### Statues
+11. **gilgamesh_statue.glb** (1.5 MB)
+    - Statue of Gilgamesh holding a rearing adult male lion, on a limestone pedestal
+    - After the Neo-Assyrian "king mastering a lion" statues (`research/gilgamesh-lion-statue.jpg`)
+    - The king is 4.5 m tall (Gilgamesh was a demigod giant), the lion a full adult; painted (polychrome)
+      textures, as the ancient statues were
+    - Composed by `models-src/architecture/gilgamesh_statue.py` from the rigged `gilgamesh.glb` and
+      `mountain_lion.glb` models
+    - Size: 5.7 m high, 2.8 x 1.8 m base
+    - `gilgamesh_statue_collision.glb`: collision from three boxes (pedestal, king, lion)
+    - Placed in Uruk (palace courtyard, court of Eanna, royal tombs), in every city of the disk
+      (`places/city_statues.yaml`) and in front of the Etemenanki ziggurat in Babylon
+
 ## Technical Details
 
 - **Format**: GLTF Binary (.glb)

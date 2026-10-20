@@ -600,6 +600,7 @@ def ishtar_ziggurat_model(model, rng):
     wall_top_y = front + 0.06 * rise
     Z.box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front, 0.0, rise, "mudbrick", "plaster", rng)
     Z.stairs(model, 0.0, landing_front - rise, (0, 1), 5.5, 0.0, rise, rise, rh=0.3)
+    Z.stair_parapets(model, 0.0, landing_front - rise, (0, 1), 5.5, 0.0, rise, rise)
     side_y = front - 1.5
     Z.stairs(model, -15.0, side_y, (1, 0), 3.0, 0.0, rise, 15.0 - landing_half, rh=0.3)
     Z.stairs(model, 15.0, side_y, (-1, 0), 3.0, 0.0, rise, 15.0 - landing_half, rh=0.3)

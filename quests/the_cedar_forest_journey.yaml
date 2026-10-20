@@ -1,24 +1,28 @@
+# Tablet III–V: Gilgameš and Enkidu face Humbaba in the Cedar Forest.
 id: the_cedar_forest_journey
 title_key: quest.cedar_forest.title
 start_stage: decide_to_go
-start_place: uruk_palace
+start_place: uruk_market
+excerpt:
+  paraphrase_key: quest.cedar_forest.excerpt
+  akkadian_key: quest.cedar_forest.excerpt.akkadian
 stages:
   decide_to_go:
     text_key: quest.cedar_forest.decide
+    guide: uruk_market
     final: false
   prepare_for_journey:
     text_key: quest.cedar_forest.prepare
+    guide: uruk_palace
     final: false
   travel_to_forest:
     text_key: quest.cedar_forest.travel
-    reach:
-      place: cedar_forest
-      radius_m: 500
-      goto: enter_forest
+    guide: uruk_market
     final: false
   enter_forest:
     text_key: quest.cedar_forest.enter
     guide: humbaba_lair
+    fail_restart: {stage: prepare_for_journey, place: uruk_palace}
     final: false
   find_humbaba:
     text_key: quest.cedar_forest.find_humbaba
@@ -26,9 +30,23 @@ stages:
       place: humbaba_lair
       radius_m: 50
       goto: face_guardian
+    guide: humbaba_lair
+    fail_restart: {stage: prepare_for_journey, place: uruk_palace}
     final: false
   face_guardian:
     text_key: quest.cedar_forest.face_guardian
+    guide: humbaba_lair
+    fail_restart: {stage: prepare_for_journey, place: uruk_palace}
+    final: false
+  battle_round_1:
+    text_key: quest.cedar_forest.battle_1
+    guide: humbaba_lair
+    fail_restart: {stage: prepare_for_journey, place: uruk_palace}
+    final: false
+  battle_round_2:
+    text_key: quest.cedar_forest.battle_2
+    guide: humbaba_lair
+    fail_restart: {stage: prepare_for_journey, place: uruk_palace}
     final: false
   defeat_humbaba:
     text_key: quest.cedar_forest.defeat_humbaba

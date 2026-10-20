@@ -1,0 +1,10 @@
+{
+  "HumanHappyIdle": ["Happy", false],
+  "HumanDrunkIdle": ["Drunk", false],
+  "HumanPointingForward": ["Point", false],
+  "HumanFlair": ["Flair", false],
+  "HumanJoyfulJump": ["JoyJump", true],
+  "HumanDancingTwerk": ["Twerk", false],
+  "HumanDancingMaraschinoStep": ["Maraschino", false],
+  "HumanDying": ["Die", true]
+}

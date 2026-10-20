@@ -1,0 +1,53 @@
+# Tablet I: the player is the hunter. Traps ruined thrice by wild Enkidu, then
+# father → Uruk / Gilgameš → Šamḫat → return to the water-hole. See research/QUESTLINE.md.
+id: the_hunter_and_the_wild_man
+title_key: quest.hunter.title
+start_stage: lay_snares
+start_place: hunter_waterhole
+excerpt:
+  paraphrase_key: quest.hunter.excerpt
+  akkadian_key: quest.hunter.excerpt.akkadian
+stages:
+  lay_snares:
+    text_key: quest.hunter.lay_snares
+    guide: hunter_waterhole
+    final: false
+  snare_ruined_1:
+    text_key: quest.hunter.snare_ruined_1
+    guide: hunter_waterhole
+    final: false
+  snare_ruined_2:
+    text_key: quest.hunter.snare_ruined_2
+    guide: hunter_waterhole
+    final: false
+  snare_ruined_3:
+    text_key: quest.hunter.snare_ruined_3
+    guide: hunter_village
+    final: false
+  ask_father:
+    text_key: quest.hunter.ask_father
+    guide: hunter_village
+    reach: {place: hunter_village, radius_m: 40, goto: seek_gilgamesh}
+    final: false
+  seek_gilgamesh:
+    text_key: quest.hunter.seek_gilgamesh
+    guide: uruk_market
+    final: false
+  seek_shamhat:
+    text_key: quest.hunter.seek_shamhat
+    guide: ishtar_temple
+    final: false
+  journey_with_shamhat:
+    text_key: quest.hunter.journey_with_shamhat
+    guide: hunter_waterhole
+    reach: {place: hunter_waterhole, radius_m: 100, goto: find_enkidu}
+    # Death of the hunter or Šamḫat on the road returns to Uruk, not the water-hole.
+    fail_restart: {stage: seek_shamhat, place: ishtar_temple}
+    final: false
+  find_enkidu:
+    text_key: quest.hunter.find_enkidu
+    guide: hunter_waterhole
+    final: false
+  hunter_done:
+    text_key: quest.hunter.done
+    final: true

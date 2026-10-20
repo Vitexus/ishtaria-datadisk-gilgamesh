@@ -1,34 +1,13 @@
+# Tablet XI close: after the snake, Gilgameš returns and looks on the walls of Uruk.
+# Travel is abstracted (already teleported home with the plant ending).
 id: the_return_to_uruk
 title_key: quest.return_uruk.title
-start_stage: accept_mortality
-start_place: utnapishtim_dwelling
+start_stage: view_uruk
+start_place: uruk
 stages:
-  accept_mortality:
-    text_key: quest.return_uruk.accept
-    final: false
-  begin_return_journey:
-    text_key: quest.return_uruk.begin_journey
-    final: false
-  cross_back_waters:
-    text_key: quest.return_uruk.cross_back
-    reach:
-      place: waters_of_death
-      radius_m: 100
-      goto: descend_mountain
-    final: false
-  descend_mountain:
-    text_key: quest.return_uruk.descend
-    reach:
-      place: mount_mashu
-      radius_m: 200
-      goto: view_uruk
-    final: false
   view_uruk:
     text_key: quest.return_uruk.view_uruk
-    reach:
-      place: uruk
-      radius_m: 100
-      goto: final_reflection
+    guide: uruk
     final: false
   final_reflection:
     text_key: quest.return_uruk.final_reflection

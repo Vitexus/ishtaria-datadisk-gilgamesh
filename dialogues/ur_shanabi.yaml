@@ -1,6 +1,4 @@
-# Ur-Shanabi Dialogue Tree
-# Ferryman across the Waters of Death
-
+# Ur-Shanabi — ferryman across the Waters of Death.
 id: ur_shanabi
 status: reviewed
 start: greet
@@ -9,14 +7,30 @@ nodes:
   greet:
     text_key: ur_shanabi.greet
     choices:
-      - {text_key: ur_shanabi.ask_cross, goto: explain_crossing}
+      - text_key: ur_shanabi.ask_cross
+        if: {quest_stage: {quest: the_search_for_immortality, stage: pass_tunnel}}
+        goto: ferry
+      - text_key: ur_shanabi.ask_cross
+        if: {quest_stage: {quest: the_search_for_immortality, stage: meet_ferryman}}
+        goto: ferry
       - {text_key: ur_shanabi.ask_cost, goto: explain_cost}
       - {text_key: ur_shanabi.leave}
 
-  explain_crossing:
+  ferry:
     text_key: ur_shanabi.cross
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: meet_ferryman}}
+      - {set_flag: met_ur_shanabi}
     choices:
-      - {text_key: ur_shanabi.ask_cost, goto: explain_cost}
+      - {text_key: ur_shanabi.set_sail, goto: sail}
+
+  sail:
+    text_key: ur_shanabi.sail
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: reach_utnapishtim}}
+      - {set_flag: crossed_waters}
+      - {teleport_place: utnapishtim_dwelling}
+    choices:
       - {text_key: ur_shanabi.leave}
 
   explain_cost:

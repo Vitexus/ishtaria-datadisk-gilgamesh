@@ -9,9 +9,20 @@ nodes:
   greet:
     text_key: shamhat.greet
     choices:
+      - text_key: shamhat.hunter_plan
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_shamhat}}
+        goto: accept_journey
       - {text_key: shamhat.ask_enkidu, goto: tell_enkidu}
       - {text_key: shamhat.ask_gilgamesh, goto: tell_gilgamesh}
       - {text_key: shamhat.ask_love, goto: tell_love}
+      - {text_key: shamhat.leave}
+
+  accept_journey:
+    text_key: shamhat.accept_journey
+    effects:
+      - {set_flag: shamhat_joins_hunter}
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: journey_with_shamhat}}
+    choices:
       - {text_key: shamhat.leave}
 
   tell_enkidu:

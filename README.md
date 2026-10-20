@@ -33,6 +33,11 @@ below `media/world/` are what `ishtaria-server-init` and `ishtaria-admin` render
 world heightmap from; `make world` rebuilds them and `research/WORLD.md` documents
 what is real data and what is a documented reconstruction.
 
+Epic text research (eBL Standard Babylonian I–XII + OB/MB witnesses, Thompson 1928 PD,
+planned multi-protagonist questline Hunter → Šamḫat → Enkidu → Gilgameš): see
+[`research/EPIC.md`](research/EPIC.md) and [`research/QUESTLINE.md`](research/QUESTLINE.md).
+
+
 Format: `ishtaria-protocol/schemas/datadisk.schema.json`. Check the disk (schema, references, media):
 
 ```sh
@@ -47,20 +52,24 @@ In `ishtaria-admin`, *World maps → Generate map* then shows a checkbox for thi
 
 ### The Epic Storyline
 
-The Gilgamesh datadisk follows the ancient Mesopotamian epic through a game-like experience:
+A **finite indie narrative** for players interested in ancient Iraq: live the Epic of
+Gilgamesh in a short playable arc (not dozens of hours of grind). You begin as the
+hunter, then Šamḫat, Enkidu and finally Gilgameš. Long journeys (Cedar Forest, Dilmun)
+use story travel, not real-distance walking. If you die or a quest fails (for example
+Šamḫat on the road), the active quest **restarts at its checkpoint** instead of ending
+in a permanent memorial.
 
-1. **Gilgamesh's Tyranny**: The mighty king of Uruk oppresses his people, taking brides and abusing his power
-2. **Creation of Enkidu**: The gods create a wild man to challenge Gilgamesh
-3. **Civilization of Enkidu**: The temple priestess Shamhat civilizes Enkidu through love
-4. **Meeting of Equals**: Gilgamesh and Enkidu meet and become brothers
-5. **Journey to Cedar Forest**: The heroes travel to face Humbaba, guardian of the sacred forest
-6. **Defeat of Humbaba**: Gilgamesh and Enkidu defeat the monstrous guardian
-7. **Ishtar's Proposition**: The goddess offers herself to Gilgamesh, who rejects her
-8. **Bull of Heaven**: Ishtar sends the divine bull to punish the heroes
-9. **Death of Enkidu**: Enkidu dies from divine punishment, devastating Gilgamesh
-10. **Journey to Utnapishtim**: Gilgamesh seeks eternal life from the flood survivor
-11. **Search for Immortality**: Gilgamesh learns the truth about mortality
-12. **Return to Uruk**: Gilgamesh returns, accepting his mortal fate
+Story beats:
+
+1. **Hunter and the wild man**: snares at the water-hole, father, Gilgameš, Šamḫat
+2. **Civilization of Enkidu**: Šamḫat teaches love, bread, ale and clothing
+3. **Meeting of equals**: Enkidu wrestles Gilgameš; they become brothers; you become the king
+4. **Cedar Forest**: prepare in Uruk, travel, face Humbaba
+5. **Ishtar and the Bull of Heaven**: rejection, divine punishment
+6. **Death of Enkidu**: grief and the decision to seek eternal life
+7. **Journey to Utnapishtim**: Mashu, the Tunnel of the Sun, the Waters of Death
+8. **Eternal life**: unlike the epic, you **can** win immortality (epilogue ends the game);
+   losing the plant / accepting mortality is the secondary ending
 
 ### Main Locations
 
@@ -153,13 +162,15 @@ fallback while a model loads. Rebuild and re-render:
     blender -b --python tools/blender/render_preview.py -- media/models/gilgamesh.glb /tmp/g.png full Walk 7
 
 Ishtar is the exception: her model is a Hyper3D Rodin mesh (concept image from InvokeAI), made game-ready by
-`models-src/rodin_rig.py`. Her settings are in `models-src/rodin/ishtar.json`; `models-src/rodin/gilgamesh.json`
-holds a Rodin Gilgamesh that is not installed (`models-src/pilot/`). The source meshes are the Rodin results
-(`models-src/ishtar/`), the model is rebuilt with
+`models-src/rodin_rig.py`. Her settings are in `models-src/rodin/ishtar.json`. Gilgamesh uses the same
+pipeline plus `models-src/gilgamesh/retarget_clips.py`, which bakes Run, Jump, Sit and Die from the
+Hyper3D Mixamo export onto the game armature (see `models-src/gilgamesh/README.md`). The source meshes
+are under `models-src/ishtar/` and `models-src/gilgamesh/`. Rebuild Ishtar with
 
     blender -b --python models-src/rodin_rig.py -- models-src/ishtar/ishtar_rodin_source.glb media/models/ishtar.glb models-src/rodin/ishtar.json
 
-The client plays `Idle` on the models. NPCs do not move yet (the server has no NPC paths), so `Walk` is ready
+The client plays `Idle` on NPC models. Player Gilgamesh also uses `Walk` / `Run` / `Jump` / `Sit` / `Die`
+when those clips exist. Other NPCs do not move yet (the server has no NPC paths), so `Walk` is ready
 for when they do.
 
 ## Notes
@@ -169,6 +180,8 @@ story-driven experiences. The epic questline provides a comprehensive gameplay e
 from character creation through the hero's journey and eventual acceptance of mortality.
 
 Music tracks live in `media/music/` (synthesized by `tools/compose_music.py` as gish-gudi lute and
-zurna-style reed with drone, inspired by public descriptions of Sumerian instruments — not a
-sample of any commercial recording; CC0 loops in `tools/music-samples/`). A cover image should
-be added to `media/cover/cover.jpg` (1024x768 recommended).
+zurna-style reed with drone, a shared Gilgamesh leitmotif, sectioned verse/rest timelines and
+heterophony — inspired by public descriptions of Sumerian instruments, not a sample of any
+commercial recording; CC0 loops in `tools/music-samples/`). Regenerate with
+`python3 tools/compose_music.py`. A cover image should be added to `media/cover/cover.jpg`
+(1024x768 recommended).

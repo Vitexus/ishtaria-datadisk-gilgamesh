@@ -194,8 +194,7 @@ def main():
             continue
         model, config = find_model(model_name, dirs)
         if model is None and not args.dry_run:
-            warn(f"voice model {model_name} not found, skipping {language}")
-            continue
+            sys.exit(f"render_voices: voice model {model_name} not found for {language}")
         strings = load_yaml(strings_path)
         for npc, key in lines:
             if args.only and npc != args.only:
@@ -204,18 +203,24 @@ def main():
                 warn(f"{language}: no text for {key}")
                 continue
             human = ROOT / "media" / "voice" / language / f"{key}.ogg"
+            target = out / "media" / "voice" / language / f"{key}.ogg"
             if human.is_file():
+                # Keep a community / pre-rendered dub: copy into the package tree.
+                if human.resolve() != target.resolve():
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(human, target)
                 continue
             settings = profile(voices, npc, language)
             speaker = settings.get("speaker")
-            target = out / "media" / "voice" / language / f"{key}.ogg"
             jobs.append((spoken_text(strings, key, voices, language), model, config, settings, speaker, target,
                          float(levels.get(language, levels.get("default", DEFAULT_LUFS)))))
-    print(f"render_voices: {len(jobs)} lines")
+    print(f"render_voices: {len(jobs)} lines to synthesize")
     if args.dry_run:
         for _, _, _, settings, speaker, target, lufs in jobs:
             print(f"  {target.relative_to(out)} {settings} speaker={speaker} {lufs} LUFS")
         return
+    if lines and not any((out / "media" / "voice").glob("*/*.ogg")) and not jobs:
+        sys.exit("render_voices: dialogues have spoken lines but no voice jobs were queued")
     failed = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, args.jobs)) as pool:
         futures = {pool.submit(render, job): job for job in jobs}
@@ -227,6 +232,16 @@ def main():
                 print(f"render_voices: {futures[future][5].name} failed: {error.stderr.decode(errors='replace')[-300:]}", file=sys.stderr)
     if failed:
         sys.exit(f"render_voices: {failed} lines failed")
+    expected = {key for _, key in lines}
+    for language in voices["models"]:
+        if args.lang and language not in args.lang:
+            continue
+        folder = out / "media" / "voice" / language
+        have = {path.stem for path in folder.glob("*.ogg")} if folder.is_dir() else set()
+        missing = sorted(expected - have)
+        if missing:
+            sys.exit(f"render_voices: {language}: missing {len(missing)} spoken lines (e.g. {missing[0]})")
+    print(f"render_voices: ok ({sum(1 for _ in (out / 'media' / 'voice').glob('*/*.ogg'))} files)")
 
 
 if __name__ == "__main__":

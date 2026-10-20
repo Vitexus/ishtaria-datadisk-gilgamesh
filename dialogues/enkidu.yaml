@@ -1,6 +1,4 @@
-# Enkidu Dialogue Tree
-# Wild man, companion of Gilgamesh
-
+# Enkidu — companion of Gilgameš. Cedar journey, then illness and death (Tablet VII).
 id: enkidu
 status: reviewed
 start: greet
@@ -9,12 +7,88 @@ nodes:
   greet:
     text_key: enkidu.greet
     choices:
+      - text_key: enkidu.speak_illness
+        if: {quest_stage: {quest: the_death_of_enkidu, stage: divine_punishment}}
+        goto: illness
+      - text_key: enkidu.speak_sickness
+        if: {quest_stage: {quest: the_death_of_enkidu, stage: enkidu_sickens}}
+        goto: sickness
+      - text_key: enkidu.speak_dream
+        if: {quest_stage: {quest: the_death_of_enkidu, stage: dream_of_underworld}}
+        goto: underworld_dream
+      - text_key: enkidu.farewell
+        if: {quest_stage: {quest: the_death_of_enkidu, stage: enkidu_dies}}
+        goto: farewell
+      - text_key: enkidu.propose_cedar
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: decide_to_go}}
+        goto: propose_cedar
+      - text_key: enkidu.depart_cedar
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: travel_to_forest}}
+        goto: depart_cedar
+      - text_key: enkidu.ask_more
+        if: {not: {flag: enkidu_dead}}
+        goto: more_topics
+      - {text_key: enkidu.leave}
+
+  more_topics:
+    text_key: enkidu.greet
+    choices:
       - {text_key: enkidu.ask_wild_days, goto: tell_wild_days}
       - {text_key: enkidu.ask_gilgamesh, goto: tell_gilgamesh}
       - {text_key: enkidu.ask_civilization, goto: tell_civilization}
       - {text_key: enkidu.ask_shamhat, goto: tell_shamhat}
       - {text_key: enkidu.ask_humbaba, goto: tell_humbaba}
       - {text_key: enkidu.ask_death, goto: tell_death}
+      - {text_key: enkidu.back, goto: greet}
+      - {text_key: enkidu.leave}
+
+  propose_cedar:
+    text_key: enkidu.propose_cedar_speech
+    effects:
+      - {set_stage: {quest: the_cedar_forest_journey, stage: prepare_for_journey}}
+      - {set_flag: decided_cedar_journey}
+    choices:
+      - {text_key: enkidu.leave}
+
+  depart_cedar:
+    text_key: enkidu.depart_cedar_speech
+    effects:
+      - {teleport_place: cedar_forest}
+      - {set_stage: {quest: the_cedar_forest_journey, stage: find_humbaba}}
+      - {set_flag: arrived_cedar_forest}
+    choices:
+      - {text_key: enkidu.leave}
+
+  illness:
+    text_key: enkidu.illness
+    effects:
+      - {set_stage: {quest: the_death_of_enkidu, stage: enkidu_sickens}}
+      - {set_flag: enkidu_cursed}
+    choices:
+      - {text_key: enkidu.leave}
+
+  sickness:
+    text_key: enkidu.sickness
+    effects:
+      - {set_stage: {quest: the_death_of_enkidu, stage: dream_of_underworld}}
+    choices:
+      - {text_key: enkidu.leave}
+
+  underworld_dream:
+    text_key: enkidu.underworld_dream
+    effects:
+      - {set_stage: {quest: the_death_of_enkidu, stage: enkidu_dies}}
+      - {set_flag: enkidu_dreamed}
+    choices:
+      - {text_key: enkidu.leave}
+
+  farewell:
+    text_key: enkidu.farewell_speech
+    effects:
+      - {set_stage: {quest: the_death_of_enkidu, stage: gilgamesh_mourns}}
+      - {set_flag: enkidu_dead}
+      - {set_stage: {quest: the_search_for_immortality, stage: decide_to_seek_eternal_life}}
+    choices:
       - {text_key: enkidu.leave}
 
   tell_wild_days:

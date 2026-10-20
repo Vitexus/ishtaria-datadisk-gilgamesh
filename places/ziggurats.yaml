@@ -76,11 +76,11 @@
   kind: building
   name_key: place.city_gate
   parent: uruk
-  spawn: true
+  # Spawn moved to hunter_waterhole (Epic Tablet I): new players begin as the trapper.
+  spawn: false
   radius_m: 10
-  # New characters appear in the open 125 m before the Ishtar Gate (23 m beyond the end of its Processional Way), in sight of
-  # the gate and clear of its walls: inside the gate they stood between the walls of the gate complex.
-  # Keep this place free of crowd NPCs so the spawn is not ringed by townsfolk.
+  # Open ground 125 m before the Ishtar Gate (23 m beyond the end of its Processional Way).
+  # Keep this place free of crowd NPCs so the approach is not ringed by townsfolk.
   locate: {from: uruk, bearing_deg: 181.024, distance_m: 1369.7, tolerance_m: 0}
   requires:
     max_slope_deg: 30

@@ -1,6 +1,4 @@
-# Ishtar Dialogue Tree
-# Goddess of love and war
-
+# Ishtar — goddess of love and war. Social conflict after Humbaba; rejection summons the Bull.
 id: ishtar
 status: reviewed
 start: greet
@@ -9,9 +7,50 @@ nodes:
   greet:
     text_key: ishtar.greet
     choices:
+      - text_key: ishtar.offer_self
+        if: {quest_stage: {quest: ishtars_wrath, stage: bath_after_victory}}
+        goto: proposition
+      - text_key: ishtar.offer_self
+        if: {quest_stage: {quest: ishtars_wrath, stage: ishtar_approaches}}
+        goto: proposition
+      - text_key: ishtar.hear_wrath
+        if: {quest_stage: {quest: ishtars_wrath, stage: reject_goddess}}
+        goto: wrath
       - {text_key: ishtar.ask_love, goto: speak_love}
       - {text_key: ishtar.ask_war, goto: speak_war}
       - {text_key: ishtar.ask_gilgamesh, goto: speak_gilgamesh}
+      - {text_key: ishtar.leave}
+
+  proposition:
+    text_key: ishtar.proposition
+    effects:
+      - {set_stage: {quest: ishtars_wrath, stage: ishtar_approaches}}
+    choices:
+      - {text_key: ishtar.reject_harsh, goto: reject_harsh}
+      - {text_key: ishtar.reject_firm, goto: reject_firm}
+
+  reject_harsh:
+    text_key: ishtar.rejected_harsh
+    effects:
+      - {set_stage: {quest: ishtars_wrath, stage: reject_goddess}}
+      - {set_flag: ishtar_rejected_harsh}
+    choices:
+      - {text_key: ishtar.hear_wrath, goto: wrath}
+
+  reject_firm:
+    text_key: ishtar.rejected_firm
+    effects:
+      - {set_stage: {quest: ishtars_wrath, stage: reject_goddess}}
+      - {set_flag: ishtar_rejected_firm}
+    choices:
+      - {text_key: ishtar.hear_wrath, goto: wrath}
+
+  wrath:
+    text_key: ishtar.wrath
+    effects:
+      - {set_stage: {quest: ishtars_wrath, stage: bull_sent}}
+      - {set_flag: bull_of_heaven_sent}
+    choices:
       - {text_key: ishtar.leave}
 
   speak_love:

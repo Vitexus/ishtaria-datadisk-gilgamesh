@@ -1,0 +1,10 @@
+{
+  "HumanBoxing": ["Box", false],
+  "HumanStandingMeleeKick": ["Kick", false],
+  "HumanReceivingAnUppercut": ["Hit", false],
+  "HumanKidneyHit": ["Hit2", false],
+  "HumanDying": ["Die", true],
+  "HumanStandingReactDeathLeft": ["DieLeft", true],
+  "HumanDrunkIdle": ["Drunk", false],
+  "HumanRun2": ["Run", false]
+}

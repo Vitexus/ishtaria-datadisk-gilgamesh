@@ -1,0 +1,42 @@
+# Rare NPC clips. The server unlocks them; the client may play one on a wander pause.
+# Spoilers only here — never shown in the UI.
+
+- id: anu.dance
+  npc: anu
+  clip: Twerk
+  if:
+    all:
+      - {night: true}
+      - any:
+          - {knows_spell: night}
+          - {has_item: {item: scroll_night}}
+
+- id: anu.dwarf
+  npc: anu
+  clip: Dwarf
+  if: {flag: knows_equality}
+
+- id: potter.dance
+  npc: potter
+  clip: Dance
+  if: {gold_at_least: 200}
+
+- id: potter.drunk
+  npc: potter
+  clip: Drunk
+  if: {flag: heard_shamhat_story}
+
+- id: enkidu_civilized.drunk
+  npc: enkidu_civilized
+  clip: Drunk
+  if: {flag: heard_shamhat_story}
+
+- id: ninsun.hiphop
+  npc: ninsun
+  clip: HipHop
+  if: {flag: heard_wild_tale}
+
+- id: shamhat.flair
+  npc: shamhat
+  clip: Flair
+  if: {flag: heard_shamhat_story}

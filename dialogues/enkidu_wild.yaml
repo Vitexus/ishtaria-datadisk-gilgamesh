@@ -1,0 +1,125 @@
+# Wild Enkidu at the water-hole. Snare ruin is a placed-trap sequence (server hunting tick).
+# After the hunter brings Šamḫat, set_playable makes the player Šamḫat and this dialogue
+# continues as her civilizing of Enkidu (SB I–II): bread, ale, clothing, then the road to Uruk.
+id: enkidu_wild
+status: reviewed
+start: entry
+
+nodes:
+  entry:
+    branch:
+      - if: {flag: playing_as_enkidu}
+        goto: already_enkidu
+      - if: {flag: playing_as_shamhat}
+        goto: shamhat_greet
+      - goto: greet
+
+  already_enkidu:
+    text_key: enkidu_wild.already_self
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  greet:
+    text_key: enkidu_wild.greet
+    effects:
+      - once:
+          key: start_hunter_quest
+          effects:
+            - {set_flag: met_wild_enkidu}
+    choices:
+      - text_key: enkidu_wild.after_snares
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: snare_ruined_3}}
+        goto: send_father
+      - text_key: enkidu_wild.with_shamhat
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: find_enkidu}}
+        goto: found
+      - text_key: enkidu_wild.with_shamhat
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: journey_with_shamhat}}
+        effects:
+          - {set_stage: {quest: the_hunter_and_the_wild_man, stage: find_enkidu}}
+        goto: found
+      - {text_key: enkidu_wild.leave}
+
+  shamhat_greet:
+    branch:
+      - if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: see_the_savage}}
+        goto: love_chase
+      - goto: civilize_greet
+
+  love_chase:
+    text_key: enkidu_civilize.love_chase
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  civilize_greet:
+    text_key: enkidu_civilize.greet
+    choices:
+      - text_key: enkidu_civilize.offer_bread
+        if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: teach_love}}
+        goto: give_bread
+      - text_key: enkidu_civilize.offer_ale
+        if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: teach_bread}}
+        goto: give_ale
+      - text_key: enkidu_civilize.offer_clothing
+        if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: teach_ale}}
+        goto: give_clothing
+      - text_key: enkidu_civilize.walk_to_uruk
+        if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: teach_clothing}}
+        effects:
+          - {set_stage: {quest: shamhat_and_the_wild_man, stage: return_to_uruk}}
+          - {set_flag: enkidu_civilized}
+        goto: ready
+      - {text_key: enkidu_wild.leave}
+
+  send_father:
+    text_key: enkidu_wild.send_father
+    effects:
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: ask_father}}
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  found:
+    text_key: enkidu_wild.found_with_shamhat
+    effects:
+      - {set_flag: hunter_found_enkidu}
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: hunter_done}}
+      - {set_playable: {character: retro/humanFemaleA, model: media/models/shamhat.glb, hide_npc: shamhat}}
+      - {set_stage: {quest: shamhat_and_the_wild_man, stage: see_the_savage}}
+      - {set_flag: playing_as_shamhat}
+    choices:
+      - {text_key: enkidu_wild.become_shamhat, goto: handover}
+
+  handover:
+    text_key: enkidu_wild.handover_shamhat
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  give_bread:
+    text_key: enkidu_civilize.ate_bread
+    effects:
+      - {set_stage: {quest: shamhat_and_the_wild_man, stage: teach_bread}}
+      - {set_flag: enkidu_tastes_bread}
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  give_ale:
+    text_key: enkidu_civilize.drank_ale
+    effects:
+      - {set_stage: {quest: shamhat_and_the_wild_man, stage: teach_ale}}
+      - {set_flag: enkidu_drinks_ale}
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  give_clothing:
+    text_key: enkidu_civilize.wore_clothing
+    effects:
+      - {set_stage: {quest: shamhat_and_the_wild_man, stage: teach_clothing}}
+      - {set_flag: enkidu_wears_cloth}
+      - {set_flag: enkidu_animals_fled}
+    choices:
+      - {text_key: enkidu_wild.leave}
+
+  ready:
+    text_key: enkidu_civilize.ready_for_uruk
+    choices:
+      - {text_key: enkidu_wild.leave}

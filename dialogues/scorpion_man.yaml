@@ -1,6 +1,4 @@
-# Scorpion Man Dialogue Tree
-# Guardian of Mount Mashu
-
+# Scorpion Man — guardian of Mount Mashu / the Tunnel of the Sun.
 id: scorpion_man
 status: reviewed
 start: greet
@@ -9,12 +7,18 @@ nodes:
   greet:
     text_key: scorpion_man.greet
     choices:
-      - {text_key: scorpion_man.ask_passage, goto: grant_passage}
+      - text_key: scorpion_man.ask_passage
+        if: {quest_stage: {quest: the_search_for_immortality, stage: meet_scorpion_guardian}}
+        goto: grant_passage
       - {text_key: scorpion_man.ask_danger, goto: warn_danger}
       - {text_key: scorpion_man.leave}
 
   grant_passage:
     text_key: scorpion_man.passage
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: pass_tunnel}}
+      - {set_flag: passed_scorpion_gate}
+      - {teleport_place: waters_of_death}
     choices:
       - {text_key: scorpion_man.leave}
 

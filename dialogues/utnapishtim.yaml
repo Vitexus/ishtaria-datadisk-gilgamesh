@@ -1,32 +1,125 @@
-# Utnapishtim Dialogue Tree
-# Flood survivor, eternal
-
+# Utnapishtim — flood survivor. Test, plant of youth, dual ending (keep vs lose).
 id: utnapishtim
 status: reviewed
-start: greet
+start: entry
 
 nodes:
+  entry:
+    branch:
+      - if: {quest_stage: {quest: the_search_for_immortality, stage: choose_vigilance}}
+        goto: plant_in_hand
+      - if: {quest_stage: {quest: the_search_for_immortality, stage: obtain_plant}}
+        goto: ready_to_dive
+      - if: {quest_stage: {quest: the_search_for_immortality, stage: learn_of_plant}}
+        goto: know_plant
+      - if: {quest_stage: {quest: the_search_for_immortality, stage: reach_utnapishtim}}
+        goto: seeker
+      - goto: greet
+
   greet:
     text_key: utnapishtim.greet
     choices:
       - {text_key: utnapishtim.ask_flood, goto: tell_flood}
-      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality}
-      - {text_key: utnapishtim.ask_test, goto: offer_test}
+      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_lore}
+      - {text_key: utnapishtim.ask_test, goto: tell_test}
+      - {text_key: utnapishtim.leave}
+
+  seeker:
+    text_key: utnapishtim.greet
+    choices:
+      - {text_key: utnapishtim.ask_flood, goto: tell_flood_quest}
+      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_quest}
+      - {text_key: utnapishtim.ask_test, goto: tell_test}
+      - {text_key: utnapishtim.leave}
+
+  know_plant:
+    text_key: utnapishtim.greet
+    choices:
+      - {text_key: utnapishtim.ask_plant, goto: reveal_plant}
+      - {text_key: utnapishtim.ask_flood, goto: tell_flood}
+      - {text_key: utnapishtim.leave}
+
+  ready_to_dive:
+    text_key: utnapishtim.plant
+    choices:
+      - {text_key: utnapishtim.dive_for_plant, goto: dive}
+      - {text_key: utnapishtim.leave}
+
+  plant_in_hand:
+    text_key: utnapishtim.dive
+    choices:
+      - {text_key: utnapishtim.keep_vigil, goto: win_eternal}
+      - {text_key: utnapishtim.bathe_rest, goto: lose_to_snake}
+      - {text_key: utnapishtim.leave}
+
+  tell_test:
+    text_key: utnapishtim.test
+    choices:
       - {text_key: utnapishtim.leave}
 
   tell_flood:
     text_key: utnapishtim.flood
     choices:
-      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality}
+      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_lore}
       - {text_key: utnapishtim.leave}
 
-  tell_immortality:
+  tell_flood_quest:
+    text_key: utnapishtim.flood
+    choices:
+      - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_quest}
+      - {text_key: utnapishtim.leave}
+
+  tell_immortality_quest:
+    text_key: utnapishtim.immortality
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: learn_of_plant}}
+      - {set_flag: heard_immortality_truth}
+    choices:
+      - {text_key: utnapishtim.ask_plant, goto: reveal_plant}
+      - {text_key: utnapishtim.leave}
+
+  tell_immortality_lore:
     text_key: utnapishtim.immortality
     choices:
-      - {text_key: utnapishtim.ask_test, goto: offer_test}
       - {text_key: utnapishtim.leave}
 
-  offer_test:
-    text_key: utnapishtim.test
+  reveal_plant:
+    text_key: utnapishtim.plant
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: obtain_plant}}
+      - {set_flag: know_plant_of_youth}
+    choices:
+      - {text_key: utnapishtim.dive_for_plant, goto: dive}
+      - {text_key: utnapishtim.leave}
+
+  dive:
+    text_key: utnapishtim.dive
+    effects:
+      - flourish:
+          - {actor: player, clip: kick}
+          - {actor: player, clip: sweep}
+          - {actor: player, clip: box}
+      - {set_stage: {quest: the_search_for_immortality, stage: choose_vigilance}}
+      - {set_flag: obtained_plant}
+    choices:
+      - {text_key: utnapishtim.keep_vigil, goto: win_eternal}
+      - {text_key: utnapishtim.bathe_rest, goto: lose_to_snake}
+
+  win_eternal:
+    text_key: utnapishtim.win_eternal
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: eternal_life}}
+      - {set_flag: eternal_life}
+      - {teleport_place: uruk_palace}
+    choices:
+      - {text_key: utnapishtim.leave}
+
+  lose_to_snake:
+    text_key: utnapishtim.lose_snake
+    effects:
+      - {set_stage: {quest: the_search_for_immortality, stage: lose_plant}}
+      - {set_flag: plant_stolen}
+      - {set_stage: {quest: the_return_to_uruk, stage: view_uruk}}
+      - {teleport_place: uruk}
     choices:
       - {text_key: utnapishtim.leave}

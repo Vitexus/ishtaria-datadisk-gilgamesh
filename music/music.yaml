@@ -1,5 +1,6 @@
 # Original soundtrack (tools/compose_music.py): synthesized gish-gudi lute + zurna-style
-# reed drone, with CC0 pads from tools/music-samples/. Not a sample of any recording.
+# reed with shared Gilgamesh leitmotif, sectioned verse/rest/answer timelines, heterophony
+# and crossfaded ambient loops; CC0 pads from tools/music-samples/. Not a sample of any recording.
 - id: logo
   file: media/music/logo.ogg
   title_key: music.logo

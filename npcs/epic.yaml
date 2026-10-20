@@ -1,26 +1,28 @@
 # Epic of Gilgamesh - Main Characters
 # Based on the ancient Mesopotamian epic
 
-# Gilgamesh - King of Uruk, two-thirds god, one-third man
+# Gilgamesh - King of Uruk (NPC until the player later becomes him)
 - id: gilgamesh
   name_key: npc.gilgamesh
-  place: uruk_palace
+  place: uruk_market
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/gilgamesh.glb}
   dialogue: gilgamesh
   portrait: media/portraits/gilgamesh.jpg
   bio_key: npc.gilgamesh.bio
   size: 1.5
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 10}
   tags: [king, demigod, hero]
 
-# Enkidu - Wild man created from clay
+# Wild Enkidu at the hunter's water-hole (Tablet I); civilized Enkidu stays in the city later.
+# After the hunter handover the player is Šamḫat: this NPC switches to the civilize dialogue.
 - id: enkidu
   name_key: npc.enkidu
-  place: uruk_market
+  place: hunter_waterhole
   character: {pack: survivors, skin: survivorMaleB, model: media/models/enkidu.glb}
-  dialogue: enkidu
+  dialogue: enkidu_wild
   portrait: media/portraits/enkidu.jpg
   bio_key: npc.enkidu.bio
-  movement: {kind: wander, radius_m: 12, speed_m_s: 1.4, pause_s: 5}     # the free square of the market
+  movement: {kind: wander, radius_m: 35, speed_m_s: 1.6, pause_s: 4}
   tags: [wild_man, companion, hero]
 
 # Enkidu Civilized - After meeting Shamhat
@@ -31,6 +33,7 @@
   dialogue: enkidu
   portrait: media/portraits/enkidu_civilized.jpg
   bio_key: npc.enkidu_civilized.bio
+  movement: {kind: wander, radius_m: 10, speed_m_s: 1.2, pause_s: 8}
   tags: [companion, hero, civilized]
 
 # Ishtar - Goddess of love and war
@@ -44,7 +47,10 @@
   size: 1.5
   tags: [goddess, love, war]
 
-# Shamhat - Temple priestess
+# Shamhat - Temple priestess of Inanna. After she brings Enkidu into Uruk she returns to
+# the Ishtar ziggurat and walks a city circuit (temple → Eanna court → toward the market → back).
+# During the road escort she follows the player instead (server override); this patrol resumes
+# once the escort ends and the player is no longer hiding her as story_role.
 - id: shamhat
   name_key: npc.shamhat
   place: ishtar_temple
@@ -52,6 +58,20 @@
   dialogue: shamhat
   portrait: media/portraits/shamhat.jpg
   bio_key: npc.shamhat.bio
+  # Metres east and south of ishtar_temple: linger at the ziggurat, cross the Eanna court,
+  # stroll toward the great market, then return home.
+  movement:
+    kind: patrol
+    speed_m_s: 0.85
+    pause_s: 14
+    waypoints:
+      - [0.0, 0.0]
+      - [32.0, -32.0]
+      - [-10.0, 130.0]
+      - [-21.0, 260.0]
+      - [-35.0, 400.0]
+      - [20.0, 200.0]
+      - [40.0, 60.0]
   tags: [priestess, temple]
 
 # Humbaba - Guardian of the Cedar Forest
@@ -103,6 +123,7 @@
   portrait: media/portraits/ninsun.jpg
   bio_key: npc.ninsun.bio
   size: 1.5
+  movement: {kind: wander, radius_m: 7, speed_m_s: 0.7, pause_s: 13}
   tags: [goddess, mother, oracle]
 
 # Anu - Sky god
@@ -114,15 +135,26 @@
   portrait: media/portraits/anu.jpg
   bio_key: npc.anu.bio
   size: 1.7
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.7, pause_s: 14}
   tags: [god, sky, father]
 
-# Bull of Heaven - Divine beast
+# Bull of Heaven - Divine beast (appears in the great market when Ištar sends it)
 - id: bull_of_heaven
   name_key: npc.bull_of_heaven
-  place: uruk
+  place: uruk_market
   character: {pack: survivors, skin: zombieC, model: media/models/bull_of_heaven.glb}
   dialogue: bull_of_heaven
   portrait: media/portraits/bull_of_heaven.jpg
   bio_key: npc.bull_of_heaven.bio
-  movement: {kind: wander, radius_m: 18, speed_m_s: 0.8, pause_s: 15}
+  size: 1.8
+  movement: {kind: wander, radius_m: 22, speed_m_s: 1.1, pause_s: 8}
   tags: [beast, divine, punishment]
+
+# Old father of the hunter (Tablet I)
+- id: hunter_father
+  name_key: npc.hunter_father
+  place: hunter_village
+  character: {pack: retro, skin: humanMaleA}
+  dialogue: hunter_father
+  bio_key: npc.hunter_father.bio
+  tags: [elder, hunter]

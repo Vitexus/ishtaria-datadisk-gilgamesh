@@ -1,6 +1,4 @@
-# Bull of Heaven Dialogue Tree
-# Divine beast sent by Ishtar
-
+# Bull of Heaven — divine beast. Charge-focused flourish phases (different rhythm from Humbaba).
 id: bull_of_heaven
 status: reviewed
 start: roar
@@ -9,11 +7,68 @@ nodes:
   roar:
     text_key: bull_of_heaven.roar
     choices:
-      - {text_key: bull_of_heaven.flee, goto: flee}
-      - {text_key: bull_of_heaven.fight, goto: fight}
+      - text_key: bull_of_heaven.fight
+        if: {quest_stage: {quest: ishtars_wrath, stage: bull_sent}}
+        goto: charge_1
+      - text_key: bull_of_heaven.continue_fight
+        if: {quest_stage: {quest: ishtars_wrath, stage: bull_round_1}}
+        goto: charge_2
+      - text_key: bull_of_heaven.finish_fight
+        if: {quest_stage: {quest: ishtars_wrath, stage: bull_round_2}}
+        goto: finish
+      - text_key: bull_of_heaven.already_dead
+        if: {flag: bull_defeated}
+        goto: defeated
+      - text_key: bull_of_heaven.flee
+        if: {not: {flag: bull_defeated}}
+        goto: flee
 
   flee:
     text_key: bull_of_heaven.flee_text
+    choices:
+      - {text_key: bull_of_heaven.leave}
 
-  fight:
+  defeated:
+    text_key: bull_of_heaven.defeated
+    choices:
+      - {text_key: bull_of_heaven.leave}
+
+  charge_1:
+    text_key: bull_of_heaven.charge_1
+    effects:
+      - flourish:
+          - {actor: npc, clip: kick}
+          - {actor: npc, clip: sweep}
+          - {actor: player, clip: kick}
+          - {actor: player, clip: box}
+      - {set_stage: {quest: ishtars_wrath, stage: bull_round_1}}
+      - {set_flag: bull_round_1}
+    choices:
+      - {text_key: bull_of_heaven.press_on, goto: charge_2}
+
+  charge_2:
+    text_key: bull_of_heaven.charge_2
+    effects:
+      - flourish:
+          - {actor: npc, clip: sweep}
+          - {actor: player, clip: sweep}
+          - {actor: npc, clip: kick}
+          - {actor: player, clip: kick}
+          - {actor: player, clip: box}
+      - {set_stage: {quest: ishtars_wrath, stage: bull_round_2}}
+      - {set_flag: bull_round_2}
+    choices:
+      - {text_key: bull_of_heaven.press_on, goto: finish}
+
+  finish:
     text_key: bull_of_heaven.fight_text
+    effects:
+      - flourish:
+          - {actor: player, clip: kick}
+          - {actor: npc, clip: kick}
+          - {actor: player, clip: sweep}
+      - {set_stage: {quest: ishtars_wrath, stage: defeat_bull}}
+      - {set_flag: bull_defeated}
+      - {set_stage: {quest: the_death_of_enkidu, stage: divine_punishment}}
+    choices:
+      - {text_key: bull_of_heaven.leave}

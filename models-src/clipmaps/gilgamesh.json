@@ -1,0 +1,9 @@
+{
+  "HumanBoxing": ["Box", false],
+  "HumanKicking": ["Kick", false],
+  "HumanLegSweep": ["Sweep", false],
+  "HumanRunning": ["Run", false],
+  "HumanForwardJump": ["Jump", true],
+  "HumanSitting2": ["Sit", true],
+  "HumanDying": ["Die", true]
+}

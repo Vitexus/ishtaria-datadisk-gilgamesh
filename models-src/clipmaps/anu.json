@@ -1,0 +1,9 @@
+{
+  "HumanPointingForward": ["Point", false],
+  "HumanSadIdle": ["Sad", false],
+  "HumanDrunkIdle": ["Drunk", false],
+  "HumanDwarfIdle": ["Dwarf", false],
+  "HumanSitting3": ["Sit", true],
+  "HumanDancingTwerk": ["Twerk", false],
+  "HumanDying2": [["Die", true], ["Die2", true]]
+}

@@ -43,6 +43,24 @@ only entrance. The JPEG textures are saved again at a lower quality so that the 
 model. `places/uruk.yaml` places it as the `structure` of the city (`offset_m: [0, 232]`: the model's origin is the gate,
 the middle of the city lies 232 m behind it).
 
+`architecture/gilgamesh_statue.py` composes the statue of Gilgamesh holding the lion, after the Neo-Assyrian "king
+mastering a lion" statues (`research/gilgamesh-lion-statue.jpg`): the rigged king `media/models/gilgamesh.glb` scaled to
+4.5 m (Gilgamesh was a demigod giant) on a limestone pedestal, with the rigged adult male lion
+`media/models/mountain_lion.glb` rearing upright in his arms - an adult lion, not a cub; the size difference is the
+king's. The poses are baked from the `Idle` clips (the king's left arm into a cradle, the lion on its hind legs) and
+the painted character textures are kept, as the ancient statues were polychrome (cf. `architecture/paint_lamassu.py`).
+One static mesh:
+
+    blender -b --python models-src/architecture/gilgamesh_statue.py -- media/models media/models/architecture
+
+writes `gilgamesh_statue.glb` (1.5 MiB) and `gilgamesh_statue_collision.glb` (three boxes) into
+`media/models/architecture/`; `--preview` renders `architecture/renders/gilgamesh_statue_*.png`. `tools/build_statues.py`
+places the statue three times in Uruk (palace courtyard, court of Eanna, royal tombs) and `tools/build_city_statues.py`
+in every city of the disk and in front of the Etemenanki ziggurat.
+
 `rodin/make_concepts.py` and `rodin/img2img_concept.py` make the concept images for Hyper3D Rodin on the remote InvokeAI
 server; the sources of the Rodin models of the citizens of Uruk are in `uruk_*/` and the images in `concepts/`.
+Gilgamesh's Hyper3D export (concept, raw GLB with combat clips, welded source) lives in `gilgamesh/`.
+After `rodin_rig.py`, `gilgamesh/retarget_clips.py` bakes Run, Jump, Sit and Die from the raw Mixamo
+clips onto `media/models/gilgamesh.glb` for the client's pose contract.
 

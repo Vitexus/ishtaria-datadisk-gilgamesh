@@ -1,29 +1,34 @@
 id: gilgamesh
-version: 0.2.6
+version: 0.2.22
 cover: media/cover/cover.jpg
 cover_music: logo
 ambient_music: plains
-# Players are Gilgamesh, king of Uruk (the look of his NPC); they choose only their nickname.
-player_character: protagonists/criminalMaleA
-player_model: media/models/gilgamesh.glb
-# Two thirds god: taller than men (an Anunnaki giant) and far harder to hurt by a fall.
-player_body: {height_m: 3.0, toughness: 1.5}
+# New players begin as the hunter/trapper of Tablet I (not yet Gilgameš). Later quests
+# hand control to Šamḫat, Enkidu and Gilgameš (research/QUESTLINE.md). Nickname only —
+# the look is fixed to the hunter model; the pack id is only the animation fallback.
+player_character: survivors/survivorMaleB
+player_model: media/models/hunter.glb
+# Three snares in the pack from creation; the hunter quest opens immediately at the water-hole.
+starting_items:
+  - {item: snare, qty: 3}
+auto_start_quests:
+  - the_hunter_and_the_wild_man
 name: Epic of Gilgamesh
 description: >
   A story datadisk based on the ancient Mesopotamian Epic of Gilgamesh.
-  Explore the legendary city of Uruk, journey to the Cedar Forest to face Humbaba,
-  and seek the secret of eternal life. Experience the world's oldest surviving epic
-  in a living Ishtaria world. Features 20 historically accurate character portraits
-  and 10 Mesopotamian architecture 3D models.
+  Begin as the hunter by the steppe water-hole, then live the epic through Šamḫat,
+  Enkidu and Gilgameš. Explore Uruk, the Cedar Forest and the road to Utnapishtim
+  in a living Ishtaria world.
 requires_ruleset: "1"
 license: CC BY-SA 4.0
 attribution: >
   Epic of Gilgamesh datadisk for Ishtaria (CC BY-SA 4.0). Epic text: public-domain
   N. K. Sanders translation (AINA). Models in Blender; fabrics/portraits via InvokeAI;
-  Ishtar via Hyper3D Rodin. Uruk terrain: Copernicus DEM GLO-30 (ESA; modified Copernicus
+  Gilgamesh and Ishtar via Hyper3D Rodin. Uruk terrain: Copernicus DEM GLO-30 (ESA; modified Copernicus
   data 2026) and OpenStreetMap (ODbL); ED Euphrates and planet rasters: research/LANDSCAPE.md
   and WORLD.md (ETOPO 2022, NOAA, public domain). Soundtrack: original gish-gudi/zurna
-  synthesis (tools/compose_music.py) plus CC0 loops in tools/music-samples/.
+  synthesis with Gilgamesh leitmotif and sectioned timelines (tools/compose_music.py)
+  plus CC0 loops in tools/music-samples/.
 rating: teen
 languages: [en, cs]
 

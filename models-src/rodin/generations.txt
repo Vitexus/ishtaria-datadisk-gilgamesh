@@ -59,3 +59,8 @@ crowd_young_noble 626ca4e8-63a3-4880-bd3b-e2625be80689
 crowd_noble_girl 73cbcd64-b60b-48f0-9f31-24f87f6fa2ef
 crowd_court_official 7e8c9a16-3c15-420c-b785-e9ce8117001e
 crowd_priest_minor 88f1181b-ce99-48c4-9302-9f515bedef9e
+gilgamesh faf4343a-6e21-477b-83d9-dd9bbd37e5cd  # A-pose concept, Gen from Hyper3D web; Idle/Walk via rodin_rig.py
+
+# Player hunter (Gen-2.5-High, ~40000 faces, via the hyper3d MCP, concept models-src/concepts/hunter_1.png); rigged separately by the project owner
+hunter_arms_at_sides 6ce60bd0-ad78-452f-ac1e-330d2ee340c6  # superseded: arms stuck to the hips in animation
+hunter 85b93290-bfc4-4962-ac05-b44c6cdd4f30  # shipped: rigged export by the project owner (A-pose, ~500k faces + Mixamo clips); static A-pose attempt 76c018f2-d34f-4103-b3f8-ec183fcea049

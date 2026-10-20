@@ -71,6 +71,7 @@
   dialogue: potter
   portrait: media/portraits/potter.jpg
   bio_key: npc.potter.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.7, pause_s: 14}
   tags: [craftsman, potter, artisan]
 
 # Weaver

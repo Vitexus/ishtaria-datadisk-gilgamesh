@@ -1,0 +1,32 @@
+# Old father of the hunter (SB I 120–144): send the son to Uruk.
+id: hunter_father
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: hunter_father.greet
+    choices:
+      - text_key: hunter_father.tell_wild_man
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: ask_father}}
+        goto: counsel
+      - text_key: hunter_father.tell_wild_man
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: snare_ruined_3}}
+        effects:
+          - {set_stage: {quest: the_hunter_and_the_wild_man, stage: ask_father}}
+        goto: counsel
+      - {text_key: hunter_father.ask_who, goto: who}
+      - {text_key: hunter_father.leave}
+
+  who:
+    text_key: hunter_father.who
+    choices:
+      - {text_key: hunter_father.leave}
+
+  counsel:
+    text_key: hunter_father.counsel
+    effects:
+      - {set_flag: father_sent_to_uruk}
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}
+    choices:
+      - {text_key: hunter_father.leave}

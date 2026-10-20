@@ -1,0 +1,42 @@
+# Tablet I/II: the player is Šamḫat. Win Enkidu's heart with thrown love (minigame), then
+# bread, ale, clothing; walk to Uruk and present him to Gilgameš.
+id: shamhat_and_the_wild_man
+title_key: quest.shamhat.title
+start_stage: see_the_savage
+start_place: hunter_waterhole
+excerpt:
+  paraphrase_key: quest.shamhat.excerpt
+  akkadian_key: quest.shamhat.excerpt.akkadian
+stages:
+  see_the_savage:
+    text_key: quest.shamhat.see_the_savage
+    guide: hunter_waterhole
+    final: false
+  teach_love:
+    text_key: quest.shamhat.teach_love
+    guide: hunter_waterhole
+    final: false
+  teach_bread:
+    text_key: quest.shamhat.teach_bread
+    guide: hunter_waterhole
+    final: false
+  teach_ale:
+    text_key: quest.shamhat.teach_ale
+    guide: hunter_waterhole
+    final: false
+  teach_clothing:
+    text_key: quest.shamhat.teach_clothing
+    guide: hunter_waterhole
+    final: false
+  return_to_uruk:
+    text_key: quest.shamhat.return_to_uruk
+    guide: uruk_market
+    reach: {place: uruk_market, radius_m: 80, goto: present_enkidu}
+    final: false
+  present_enkidu:
+    text_key: quest.shamhat.present_enkidu
+    guide: uruk_market
+    final: false
+  shamhat_done:
+    text_key: quest.shamhat.done
+    final: true

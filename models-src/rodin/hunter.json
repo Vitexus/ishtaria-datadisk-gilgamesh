@@ -1,0 +1,49 @@
+{
+ "name": "hunter",
+ "height": 1.8,
+ "tris": 30000,
+ "tex": 2048,
+ "centre": "bbox",
+ "skirt": true,
+ "stride": 0.42,
+ "arm_swing": 0.7,
+ "influences": 6,
+ "spatial_smooth": [
+  0.05,
+  0.015
+ ],
+ "joints": {
+  "shoulder": [
+   0.11,
+   0.769
+  ],
+  "elbow": [
+   0.152,
+   0.658
+  ],
+  "wrist": [
+   0.217,
+   0.523
+  ],
+  "hand": [
+   0.263,
+   0.438
+  ],
+  "hip": [
+   0.067,
+   0.507
+  ],
+  "knee": [
+   0.072,
+   0.293
+  ],
+  "ankle": [
+   0.082,
+   0.068
+  ],
+  "toe": [
+   0.087,
+   0.024
+  ]
+ }
+}

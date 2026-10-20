@@ -1,19 +1,37 @@
+# Tablet VI: Ištar propositions Gilgameš; rejection brings the Bull of Heaven.
 id: ishtars_wrath
 title_key: quest.ishtars_wrath.title
 start_stage: bath_after_victory
-start_place: uruk
+start_place: ishtar_temple
+excerpt:
+  paraphrase_key: quest.ishtars_wrath.excerpt
+  akkadian_key: quest.ishtars_wrath.excerpt.akkadian
 stages:
   bath_after_victory:
     text_key: quest.ishtars_wrath.bath
+    guide: ishtar_temple
     final: false
   ishtar_approaches:
     text_key: quest.ishtars_wrath.approaches
+    guide: ishtar_temple
     final: false
   reject_goddess:
     text_key: quest.ishtars_wrath.reject
+    guide: ishtar_temple
     final: false
   bull_sent:
     text_key: quest.ishtars_wrath.bull_sent
+    guide: uruk_market
+    final: false
+  bull_round_1:
+    text_key: quest.ishtars_wrath.bull_round_1
+    guide: uruk_market
+    fail_restart: {stage: bull_sent, place: uruk_market}
+    final: false
+  bull_round_2:
+    text_key: quest.ishtars_wrath.bull_round_2
+    guide: uruk_market
+    fail_restart: {stage: bull_sent, place: uruk_market}
     final: false
   defeat_bull:
     text_key: quest.ishtars_wrath.defeat_bull

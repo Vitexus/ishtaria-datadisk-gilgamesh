@@ -1,6 +1,5 @@
-# Gilgamesh Dialogue Tree
-# King of Uruk, two-thirds god, one-third man
-
+# Gilgamesh — king of Uruk. Hunter plea (Tablet I), receives Šamḫat with civilized Enkidu,
+# then wrestles Enkidu when the player has become him (Tablet II).
 id: gilgamesh
 status: reviewed
 start: greet
@@ -9,11 +8,93 @@ nodes:
   greet:
     text_key: gilgamesh.greet
     choices:
+      - text_key: gilgamesh.hunter_plea
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}
+        goto: send_shamhat
+      - text_key: gilgamesh.receive_shamhat
+        if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}
+        goto: accept_enkidu
+      - text_key: gilgamesh.enkidu_challenge
+        if: {quest_stage: {quest: enkidu_meets_gilgamesh, stage: face_the_king}}
+        goto: wrestle_start
+      - text_key: gilgamesh.enkidu_again
+        if: {quest_stage: {quest: enkidu_meets_gilgamesh, stage: wrestle}}
+        goto: wrestle_finish
+      - {text_key: gilgamesh.ask_more, goto: more_topics}
+      - {text_key: gilgamesh.leave}
+
+  more_topics:
+    text_key: gilgamesh.greet
+    choices:
       - {text_key: gilgamesh.ask_advice, goto: give_advice}
       - {text_key: gilgamesh.ask_friendship, goto: speak_friendship}
       - {text_key: gilgamesh.ask_quest, goto: speak_quest}
       - {text_key: gilgamesh.ask_city, goto: speak_of_uruk}
       - {text_key: gilgamesh.ask_mortality, goto: speak_of_mortality}
+      - {text_key: gilgamesh.back, goto: greet}
+      - {text_key: gilgamesh.leave}
+
+  send_shamhat:
+    text_key: gilgamesh.send_shamhat
+    effects:
+      - {set_flag: gilgamesh_sent_shamhat}
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: seek_shamhat}}
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  accept_enkidu:
+    text_key: gilgamesh.accept_enkidu
+    effects:
+      - {set_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}
+      - {set_flag: shamhat_presented_enkidu}
+    choices:
+      # Šamḫat's work ends: the player becomes Enkidu and faces the king.
+      - text_key: gilgamesh.become_enkidu
+        effects:
+          - {set_playable: {character: survivors/survivorMaleB, model: media/models/enkidu_civilized.glb, hide_npc: enkidu_civilized}}
+          - {set_flag: playing_as_enkidu}
+          - {set_stage: {quest: enkidu_meets_gilgamesh, stage: face_the_king}}
+        goto: enkidu_handover
+
+  enkidu_handover:
+    text_key: gilgamesh.enkidu_handover
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  wrestle_start:
+    text_key: gilgamesh.wrestle_begin
+    effects:
+      - flourish:
+          - {actor: player, clip: box}
+          - {actor: npc, clip: kick}
+          - {actor: player, clip: kick}
+          - {actor: npc, clip: box}
+          - {actor: player, clip: sweep}
+      - {set_stage: {quest: enkidu_meets_gilgamesh, stage: wrestle}}
+      - {set_flag: enkidu_wrestled_gilgamesh}
+    choices:
+      - {text_key: gilgamesh.wrestle_continue, goto: wrestle_finish}
+
+  wrestle_finish:
+    text_key: gilgamesh.wrestle_end
+    effects:
+      - {set_stage: {quest: enkidu_meets_gilgamesh, stage: become_brothers}}
+      - {set_flag: enkidu_gilgamesh_brothers}
+      - flourish:
+          - {actor: npc, clip: box}
+          - {actor: player, clip: box}
+    choices:
+      # Friendship sealed: the player becomes Gilgameš; Enkidu returns as companion NPC.
+      - text_key: gilgamesh.become_king
+        effects:
+          - {set_playable: {character: protagonists/criminalMaleA, model: media/models/gilgamesh.glb, hide_npc: gilgamesh}}
+          - {set_flag: playing_as_gilgamesh}
+          - {set_stage: {quest: the_cedar_forest_journey, stage: decide_to_go}}
+        goto: gilgamesh_handover
+
+  gilgamesh_handover:
+    text_key: gilgamesh.king_handover
+    choices:
       - {text_key: gilgamesh.leave}
 
   give_advice:

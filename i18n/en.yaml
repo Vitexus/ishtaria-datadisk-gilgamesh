@@ -150,6 +150,8 @@ enkidu.ask_civilization: Ask about civilization
 enkidu.ask_shamhat: Ask about Shamhat
 enkidu.ask_humbaba: Ask about Humbaba
 enkidu.ask_death: Ask about his death
+enkidu.challenge_duel: Challenge him to a friendly wrestle
+enkidu.duel_done: "Ha! Blow for blow — you are my equal. From this day we are brothers in arms."
 enkidu.leave: I must go.
 enkidu.wild_days: "Once I ran with the gazelles and drank with the wild beasts at the watering hole. I knew nothing of men or cities. I was one with nature, strong and free."
 enkidu.animals: "The gazelles would eat from my hand, and the wolves would sleep beside me. Even the lions respected my strength. We were all creatures of the wild together."
@@ -173,11 +175,19 @@ enkidu.civilization: "Shamhat taught me. She showed me bread and wine, clothed m
 
 # Ishtar Dialogues
 ishtar.greet: "I am Ishtar, goddess of love and war, queen of Uruk. None may ignore my presence."
-ishtar.ask_love: Offer yourself to the goddess
+ishtar.ask_love: Ask about love
 ishtar.ask_war: Ask about her warrior aspect
 ishtar.ask_gilgamesh: Ask about Gilgamesh's refusal
+ishtar.offer_self: Hear the goddess's offer
+ishtar.reject_harsh: Reject her with scorn for her past lovers
+ishtar.reject_firm: Refuse her firmly but without insult
+ishtar.hear_wrath: Hear her answer
 ishtar.leave: I will not anger a goddess.
 ishtar.love: "You are bold to approach me. But know this: my love brings both joy and sorrow. My lovers do not long endure."
+ishtar.proposition: "Come to me, Gilgamesh — be my husband. I will harness for you a chariot of lapis and gold."
+ishtar.rejected_harsh: "You list the fates of my lovers? Then hear my curse — I will send the Bull of Heaven against you!"
+ishtar.rejected_firm: "You refuse the queen of heaven? Then let Anu send the Bull of Heaven to punish your pride!"
+ishtar.wrath: "The Bull of Heaven shall come to Uruk. The market will shake. Stand against it if you dare."
 ishtar.war: "I am also the bringer of battle. When my heart is stirred, none may stand before me. The Bull of Heaven obeyed my command."
 ishtar.gilgamesh: "He dared refuse me! The insolent king! He compared me to a faulty door and a broken shoe. For this, he will know my wrath."
 
@@ -195,27 +205,44 @@ shamhat.love: "Love is the greatest power of the gods. It can tame the wildest h
 humbaba.greet: "Who dares enter my forest? I am Humbaba, and none may pass without my leave!"
 humbaba.ask_mercy: Beg for your life
 humbaba.ask_fight: Challenge the guardian
+humbaba.continue_fight: Press the attack
+humbaba.finish_fight: Deal the final blow
+humbaba.ask_already_dead: Look upon the fallen guardian
+humbaba.press_on: (Strike again.)
 humbaba.leave: Leave quickly while you can.
 humbaba.mercy: "Mercy? Ha! The gods appointed me to guard this forest. Leave now, and I will not tear you limb from limb!"
 humbaba.fight: "Foolish mortals! My roar is the storm, my breath is fire, and my jaws are death! You will die here!"
+humbaba.round_2: "Enkidu at your side — the cedar shakes! Humbaba staggers but does not fall!"
+humbaba.defeat: "The guardian falls. The Forest of Cedars is open. Your fame will reach distant shores."
+humbaba.defeated: "The guardian of the cedars lies still. The fight is over."
 
 # Utnapishtim Dialogues
 utnapishtim.greet: "I am Utnapishtim, survivor of the flood. The gods granted me eternal life. What seek you here?"
 utnapishtim.ask_flood: Ask about the Great Flood
 utnapishtim.ask_immortality: Ask about eternal life
+utnapishtim.ask_plant: Ask about the plant of youth
+utnapishtim.dive_for_plant: Dive for the plant
+utnapishtim.keep_vigil: Guard the plant without resting
+utnapishtim.bathe_rest: Bathe and rest beside the pool
 utnapishtim.ask_test: Ask to prove your worth
 utnapishtim.leave: I will leave you to your wisdom.
 utnapishtim.flood: "The gods sent the flood to destroy all life. But Ea warned me, and I built a great ship. For seven days and nights the waters raged, until all was silent. Then I opened the door, and life returned."
-utnapishtim.immortality: "The gods decreed that death is the fate of all men. Only I, by their gift, live forever. Seek it not, for it cannot be found."
+utnapishtim.immortality: "Death is the fate of all men — yet there is a plant that restores youth. If you dive deep and seize it, you may yet win what the gods denied."
+utnapishtim.plant: "It grows in the deep of the Waters of Death. Dive, cut it, and do not sleep — a snake watches for the careless."
+utnapishtim.dive: "You plunge into the dark water and rise with the plant of youth in your hand."
+utnapishtim.win_eternal: "You kept vigil. The plant is yours. Youth and life without end are yours — the epic ends, and you have won what Gilgamesh sought."
+utnapishtim.lose_snake: "While you bathed, a snake smelled the plant, stole it, and shed its skin. The road home to Uruk awaits — mortality remains."
 utnapishtim.test: "If you would have eternal life, first prove you can stay awake seven days and nights. But be warned: none have succeeded."
 
 # Ur-Shanabi Dialogues
 ur_shanabi.greet: "I am Ur-Shanabi, ferryman across the Waters of Death. None may cross without my boat."
 ur_shanabi.ask_cross: Ask to cross the waters
 ur_shanabi.ask_cost: Ask the price of passage
+ur_shanabi.set_sail: Cast off for Utnapishtim
 ur_shanabi.leave: I must find another way.
-ur_shanabi.cross: "The waters are deadly to touch. Only the stone things may cross safely. Cast off your flesh and I will take you."
-ur_shanabi.cost: "The price is your mortal body. Leave it behind, and you may cross to see Utnapishtim."
+ur_shanabi.cross: "The waters are deadly to touch. Yet for one who has passed the mountain, I will take you."
+ur_shanabi.sail: "The boat cuts the Waters of Death. Ahead lies the dwelling of Utnapishtim."
+ur_shanabi.cost: "The price is courage. Leave fear behind, and you may cross to see Utnapishtim."
 
 # Scorpion Man Dialogues
 scorpion_man.greet: "Halt! None may pass through this gate without my leave. I am the Scorpion Man, guardian of the mountain."
@@ -509,37 +536,54 @@ quest.meeting_equals.challenge: Enkidu challenges Gilgamesh at the wedding
 quest.meeting_equals.become_brothers: Gilgamesh and Enkidu become brothers
 
 quest.cedar_forest.title: The Cedar Forest Journey
-quest.cedar_forest.decide: Gilgamesh and Enkidu decide to journey to the Cedar Forest
-quest.cedar_forest.prepare: Prepare weapons and supplies for the journey
-quest.cedar_forest.travel: Travel through the wilderness to the Cedar Forest
+quest.cedar_forest.decide: Speak with Enkidu about the Cedar Forest
+quest.cedar_forest.prepare: Ask Ninsun for her blessing before the road
+quest.cedar_forest.travel: Tell Enkidu you are ready to set out
 quest.cedar_forest.enter: Enter the sacred Cedar Forest
 quest.cedar_forest.find_humbaba: Find Humbaba in his lair
 quest.cedar_forest.face_guardian: Face the guardian of the forest
+quest.cedar_forest.battle_1: Weather Humbaba's first onslaught
+quest.cedar_forest.battle_2: Strike with Enkidu until Humbaba falters
 quest.cedar_forest.defeat_humbaba: Defeat Humbaba and claim the cedar
+quest.cedar_forest.excerpt: They set their faces toward the Forest of Cedars, to fell the cedar and kill Humbaba.
+quest.cedar_forest.excerpt.akkadian: ana qišti erēni — ana dâki Ḫumbaba
 
 quest.ishtars_wrath.title: Ishtar's Wrath
-quest.ishtars_wrath.bath: Gilgamesh bathes after defeating Humbaba
-quest.ishtars_wrath.approaches: Ishtar approaches Gilgamesh with a proposition
-quest.ishtars_wrath.reject: Gilgamesh rejects Ishtar's advances
-quest.ishtars_wrath.bull_sent: Ishtar sends the Bull of Heaven to punish Gilgamesh
+quest.ishtars_wrath.bath: Speak with Ishtar at her temple after the cedar victory
+quest.ishtars_wrath.approaches: Hear Ishtar's proposition
+quest.ishtars_wrath.reject: Reject the goddess
+quest.ishtars_wrath.bull_sent: Face the Bull of Heaven in the market of Uruk
+quest.ishtars_wrath.bull_round_1: Withstand the Bull's first charge
+quest.ishtars_wrath.bull_round_2: Seize the Bull with Enkidu and strike
 quest.ishtars_wrath.defeat_bull: Defeat the Bull of Heaven
+quest.ishtars_wrath.excerpt: Ishtar raised her eyes to the beauty of Gilgamesh — Come to me, be my husband.
+quest.ishtars_wrath.excerpt.akkadian: ana dumqi ša Gilgāmeš — alkam lu ḫāmirī atta
 
 quest.enkidu_death.title: The Death of Enkidu
-quest.enkidu_death.punishment: The gods punish Enkidu for slaying Humbaba
-quest.enkidu_death.sickens: Enkidu sickens with a divine illness
-quest.enkidu_death.dream: Enkidu dreams of the underworld
-quest.enkidu_death.dies: Enkidu dies after twelve days of suffering
-quest.enkidu_death.mourns: Gilgamesh mourns for his beloved friend
+quest.enkidu_death.punishment: Hear why the gods punish Enkidu
+quest.enkidu_death.sickens: Stay with Enkidu as the illness takes him
+quest.enkidu_death.dream: Listen to Enkidu's dream of the underworld
+quest.enkidu_death.dies: Bid Enkidu farewell
+quest.enkidu_death.mourns: Gilgamesh mourns — then seeks eternal life
+quest.enkidu_death.excerpt: Enkidu lay down, and for twelve days the illness grew heavy upon him.
+quest.enkidu_death.excerpt.akkadian: ittatīl Enkidu — 12 ūmī murṣu ikabbitšu
 
 quest.immortality.title: The Search for Immortality
-quest.immortality.decide: Gilgamesh decides to seek eternal life
-quest.immortality.journey_mountain: Journey to Mount Mashu
+quest.immortality.decide: Ask Ninsun how to seek eternal life
+quest.immortality.prepare: Prepare to leave Uruk for Mount Mashu
 quest.immortality.meet_scorpion: Meet the Scorpion Man at the gate
-quest.immortality.pass_tunnel: Pass through the Tunnel of the Sun
-quest.immortality.cross_waters: Cross the Waters of Death
-quest.immortality.meet_ferryman: Meet Ur-Shanabi, the ferryman
-quest.immortality.reach_utnapishtim: Reach Utnapishtim's dwelling
-quest.immortality.learn_truth: Learn the truth about mortality
+quest.immortality.pass_tunnel: Pass through the Tunnel of the Sun to the Waters
+quest.immortality.meet_ferryman: Cross with Ur-Shanabi, the ferryman
+quest.immortality.reach_utnapishtim: Speak with Utnapishtim
+quest.immortality.learn_of_plant: Learn of the plant of youth
+quest.immortality.obtain_plant: Dive for the plant
+quest.immortality.choose_vigilance: Guard the plant — or rest and risk the snake
+quest.immortality.eternal_life: You have won eternal life
+quest.immortality.lose_plant: The snake stole the plant — return as a mortal
+quest.immortality.excerpt: Gilgamesh set his face toward Utnapishtim, the Distant One, to ask of life and death.
+quest.immortality.excerpt.akkadian: ana Uta-napišti rūqi — ša balāṭi u mūti
+quest.immortality.epilog.eternal: You kept vigil over the plant of youth. Eternal life is yours — the epic ends in a victory the clay tablets never told.
+quest.immortality.epilog.lose: The snake stole the plant while you bathed. You return to Uruk mortal — and that is the ending the tablets tell.
 
 quest.return_uruk.title: The Return to Uruk
 quest.return_uruk.accept: Accept the inevitability of mortality
@@ -547,8 +591,11 @@ quest.return_uruk.begin_journey: Begin the journey back to Uruk
 quest.return_uruk.cross_back: Cross back over the Waters of Death
 quest.return_uruk.exit_tunnel: Exit the Tunnel of the Sun
 quest.return_uruk.descend: Descend from Mount Mashu
-quest.return_uruk.view_uruk: View the mighty walls of Uruk
-quest.return_uruk.final_reflection: Reflect on the journey and the meaning of life
+quest.return_uruk.view_uruk: Look upon the mighty walls of Uruk with Ninsun
+quest.return_uruk.final_reflection: The walls remain — and so does the story
+quest.return_uruk.epilog: "You have looked on the walls of Uruk. The plant is lost, yet the city stands — and that is the ending the tablets tell."
+quest.return_uruk.excerpt: "Survey the walls of Uruk — foundation terrace and burnt brick: that is the work of Gilgamesh."
+quest.return_uruk.excerpt.akkadian: "ūru ša Uruk — šupšuqat ušši — šipir Gilgāmeš"
 
 # Ninsun Dialogues
 ninsun.greet: "I am Ninsun, mother of Gilgamesh and wise goddess of Uruk. What seeks my son's friend?"
@@ -572,8 +619,16 @@ ninsun.ask_enkidu_dream: Ask about Enkidu's dream
 bull_of_heaven.roar: "ROOOOAR! The Bull of Heaven has come to punish the arrogant!"
 bull_of_heaven.flee: Flee from the beast
 bull_of_heaven.fight: Stand and fight
+bull_of_heaven.continue_fight: Meet the next charge
+bull_of_heaven.finish_fight: Seize the Bull and strike
+bull_of_heaven.already_dead: Look upon the fallen beast
+bull_of_heaven.press_on: (Hold fast.)
+bull_of_heaven.leave: Step back from the market.
 bull_of_heaven.flee_text: You turn and run from the divine beast's wrath.
-bull_of_heaven.fight_text: You stand your ground against the Bull of Heaven!
+bull_of_heaven.charge_1: "The Bull charges — dust and horns! Enkidu shouts: seize its tail!"
+bull_of_heaven.charge_2: "Again it thunders. Together you wrench it down!"
+bull_of_heaven.fight_text: "The Bull of Heaven falls. Ištar screams from the walls. The gods will answer."
+bull_of_heaven.defeated: "The divine beast lies dead in the market dust."
 
 # Anu Dialogues
 anu.greet: "I am Anu, lord of the heavens, father of the great gods. What brings you before my divine presence?"
@@ -584,16 +639,6 @@ anu.leave: I must go, great lord.
 anu.heavens: "The heavens are vast and eternal, where the stars trace the fates of men. From my throne above, I see all that was, is, and shall be."
 anu.judgment: "My judgment is final, for I am the father of the gods. The balance of justice is maintained by my will alone."
 anu.ishtar: "Ishtar... my daughter. Proud and tempestuous, she is both the bringer of love and the wage of war. A fitting heir to my domain."
-
-# Enhanced Search for Immortality Quest
-quest.immortality.prepare: Prepare for the long and perilous journey to find the secret of eternal life
-quest.immortality.scorpion_test: The Scorpion Man tests your worthiness to pass through Mount Mashu
-quest.immortality.tunnel_test: Navigate the darkness of the Tunnel of the Sun without fear
-quest.immortality.ferryman_test: Ur-Shanabi the ferryman challenges your resolve before crossing the Waters of Death
-quest.immortality.learn_of_plant: Utnapishtim reveals the location of the plant that restores youth
-quest.immortality.obtain_plant: Retrieve the plant from the bottom of the Waters of Death
-quest.immortality.return_with_plant: Return to Uruk with the precious plant of eternal youth
-quest.immortality.lose_plant: A serpent steals the plant while you bathe, losing your chance at immortality
 
 # Citizens of Uruk
 npc.uruk_farmer: Barley Farmer
@@ -734,6 +779,67 @@ place.gilgamesh_statue_palace: Statue of Gilgamesh in the palace courtyard
 place.gilgamesh_statue_eanna: Statue of Gilgamesh in the court of Eanna
 place.gilgamesh_statue_royal_tombs: Statue of Gilgamesh at the royal tombs
 # <<< uruk statues
+
+# >>> city statues (generated by tools/build_city_statues.py)
+place.gilgamesh_statue_ur: Statue of Gilgamesh
+place.gilgamesh_statue_eridu: Statue of Gilgamesh
+place.gilgamesh_statue_kish: Statue of Gilgamesh
+place.gilgamesh_statue_nippur: Statue of Gilgamesh
+place.gilgamesh_statue_shuruppak: Statue of Gilgamesh
+place.gilgamesh_statue_larsa: Statue of Gilgamesh
+place.gilgamesh_statue_umma: Statue of Gilgamesh
+place.gilgamesh_statue_lagash: Statue of Gilgamesh
+place.gilgamesh_statue_girsu: Statue of Gilgamesh
+place.gilgamesh_statue_nigin: Statue of Gilgamesh
+place.gilgamesh_statue_abu_tbeirah: Statue of Gilgamesh
+place.gilgamesh_statue_kissik: Statue of Gilgamesh
+place.gilgamesh_statue_adab: Statue of Gilgamesh
+place.gilgamesh_statue_eshnunna: Statue of Gilgamesh
+place.gilgamesh_statue_nineveh: Statue of Gilgamesh
+place.gilgamesh_statue_tell_brak: Statue of Gilgamesh
+place.gilgamesh_statue_mari: Statue of Gilgamesh
+place.gilgamesh_statue_susa: Statue of Gilgamesh
+place.gilgamesh_statue_shahr_e_sukhteh: Statue of Gilgamesh
+place.gilgamesh_statue_ebla: Statue of Gilgamesh
+place.gilgamesh_statue_byblos: Statue of Gilgamesh
+place.gilgamesh_statue_ugarit: Statue of Gilgamesh
+place.gilgamesh_statue_sidon: Statue of Gilgamesh
+place.gilgamesh_statue_megiddo: Statue of Gilgamesh
+place.gilgamesh_statue_jericho: Statue of Gilgamesh
+place.gilgamesh_statue_arad: Statue of Gilgamesh
+place.gilgamesh_statue_hazor: Statue of Gilgamesh
+place.gilgamesh_statue_memphis: Statue of Gilgamesh
+place.gilgamesh_statue_heliopolis: Statue of Gilgamesh
+place.gilgamesh_statue_abydos: Statue of Gilgamesh
+place.gilgamesh_statue_hierakonpolis: Statue of Gilgamesh
+place.gilgamesh_statue_naqada: Statue of Gilgamesh
+place.gilgamesh_statue_koptos: Statue of Gilgamesh
+place.gilgamesh_statue_elephantine: Statue of Gilgamesh
+place.gilgamesh_statue_buto: Statue of Gilgamesh
+place.gilgamesh_statue_kerma: Statue of Gilgamesh
+place.gilgamesh_statue_altyndepe: Statue of Gilgamesh
+place.gilgamesh_statue_namazga_depe: Statue of Gilgamesh
+place.gilgamesh_statue_sarazm: Statue of Gilgamesh
+place.gilgamesh_statue_harappa: Statue of Gilgamesh
+place.gilgamesh_statue_kot_diji: Statue of Gilgamesh
+place.gilgamesh_statue_kalibangan: Statue of Gilgamesh
+place.gilgamesh_statue_rehman_dheri: Statue of Gilgamesh
+place.gilgamesh_statue_dholavira: Statue of Gilgamesh
+place.gilgamesh_statue_liangzhu: Statue of Gilgamesh
+place.gilgamesh_statue_troy: Statue of Gilgamesh
+place.gilgamesh_statue_poliochni: Statue of Gilgamesh
+place.gilgamesh_statue_kultepe: Statue of Gilgamesh
+place.gilgamesh_statue_liman_tepe: Statue of Gilgamesh
+place.gilgamesh_statue_alaca_hoyuk: Statue of Gilgamesh
+place.gilgamesh_statue_arslantepe: Statue of Gilgamesh
+place.gilgamesh_statue_knossos: Statue of Gilgamesh
+place.gilgamesh_statue_lerna: Statue of Gilgamesh
+place.gilgamesh_statue_los_millares: Statue of Gilgamesh
+place.gilgamesh_statue_zambujal: Statue of Gilgamesh
+place.gilgamesh_statue_caral: Statue of Gilgamesh
+place.gilgamesh_statue_aspero: Statue of Gilgamesh
+place.gilgamesh_statue_babylon: Statue of Gilgamesh in Babylon
+# <<< city statues
 
 # <<< ancient cities of the world (c. 2700 BCE)
 place.ur: Ur
@@ -883,3 +989,104 @@ tablet_writer.greet: "A fresh tablet, still warm from the potter's yard. Give me
 tablet_writer.ask_write: Ask what you are writing
 tablet_writer.leave: I will not smudge the clay.
 tablet_writer.write: "Scribes write the offerings, merchants write what was bought and sold, and we priests write what was given to the gods. The servants bring the tablets in baskets. The clay remembers the hand that pressed it."
+
+# Hunter quest (Tablet I) — player is the trapper
+place.hunter_waterhole: Water-Hole of the Hunters
+place.hunter_village: Camp of the Old Hunter
+npc.hunter_father: Old Father
+npc.hunter_father.bio: Aged trapper who taught his son the pits and snares of the steppe. Wise in the ways of the wild and of Uruk's king.
+quest.hunter.title: The Hunter and the Wild Man
+quest.hunter.lay_snares: Place a snare by the water-hole, then stand far back and wait. If you stay too close, the herd will not come.
+quest.hunter.snare_ruined_1: The wild man tore your first snare and freed the catch. Place another and wait farther away.
+quest.hunter.snare_ruined_2: Again he fills your pits and uproots the nets. One more snare — then stand clear.
+quest.hunter.snare_ruined_3: Thrice he has ruined your work. Seek counsel from your old father.
+quest.hunter.ask_father: Speak with your father at the hunters' camp.
+quest.hunter.seek_gilgamesh: Go to Uruk and tell King Gilgamesh of the wild man.
+quest.hunter.seek_shamhat: Find Šamḫat by the temple of Inanna and explain your plan.
+quest.hunter.journey_with_shamhat: Journey with Šamḫat back to the water-hole (the third day's road).
+quest.hunter.find_enkidu: Find the wild man with Šamḫat at the water-hole.
+quest.hunter.done: The hunter's part is done. Šamḫat will make a human of Enkidu.
+enkidu_wild.greet: The wild man watches the herd. His eyes are those of a beast that knows no city.
+enkidu_wild.after_snares: (The wild man has ruined every snare — ask what to do.)
+enkidu_wild.send_father: Leave this water-hole. The old man at the camp will know the road to Uruk.
+enkidu_wild.with_shamhat: (Arrive with Šamḫat.)
+enkidu_wild.found_with_shamhat: Here is the wild man. Šamḫat steps forward — your hunt ends; her work begins.
+enkidu_wild.leave: (Step back.)
+hunter_father.greet: My son. The steppe has worn your face.
+hunter_father.tell_wild_man: Father — a man of the hills ruins every snare I set.
+hunter_father.ask_who: Who are you to the hunters?
+hunter_father.who: I am your father. I dug pits before you could walk.
+hunter_father.counsel: Go to Uruk. Tell Gilgamesh. He will send a woman of the temple — Šamḫat — and the wild man will leave the herd.
+hunter_father.leave: (Bow and leave.)
+gilgamesh.hunter_plea: O king — a wild man fills my pits and frees the gazelles. My father sent me to you.
+gilgamesh.send_shamhat: Take Šamḫat from the house of Inanna. When the herd comes to drink, she will draw him from the animals. Go.
+shamhat.hunter_plan: The king sends me. Will you walk three days to the water-hole with me?
+shamhat.accept_journey: Then we walk. Lead me to the wild man, trapper.
+quest.shamhat.title: Šamḫat and the Wild Man
+quest.shamhat.see_the_savage: Win the wild man's heart — throw hearts of love until the beast in him yields.
+quest.shamhat.return_to_uruk: Lead Enkidu to the market of Uruk.
+enkidu_wild.become_shamhat: (Step forward as Šamḫat.)
+enkidu_wild.handover_shamhat: The trapper's road ends. You are Šamḫat of the temple — the wild man waits for your word.
+enkidu_civilize.offer_bread: Take this bread of people.
+enkidu_civilize.walk_to_uruk: Come — we walk to Uruk, to Gilgamesh the king.
+enkidu_civilize.ready_for_uruk: He rises like a man of the city. The road to Uruk is open.
+enkidu_civilize.leave: (Step back.)
+enkidu_civilize.greet: The wild man watches you with new eyes.
+quest.hunter.excerpt: Whatever snare you set, the wild man tears it out and frees the herd.
+quest.hunter.excerpt.akkadian: ša ištakanu šubarrû ḫabālu — nīšu ušēṣi
+quest.shamhat.excerpt: She cast love like a net; the wild man became a man — then bread and beer of the land.
+quest.shamhat.excerpt.akkadian: aklī ša nišī akul — šikar māti šiti
+quest.shamhat.teach_bread: He has eaten the bread of people. Offer him the beer of the land.
+quest.shamhat.teach_ale: He has drunk. Clothe him as a man of the city.
+quest.shamhat.teach_clothing: The herd flees him. Walk with him to Uruk and Gilgamesh the king.
+quest.shamhat.present_enkidu: Present the civilized wild man to King Gilgamesh in the market.
+quest.shamhat.done: Šamḫat's work is done. Enkidu stands before the king.
+enkidu_civilize.offer_ale: Drink the beer of the land — seven jars, as the shepherds do.
+enkidu_civilize.offer_clothing: Put on the garment of men. Leave the hair of the hills.
+enkidu_civilize.ate_bread: He takes the bread. His eyes are strange — no longer only a beast's.
+enkidu_civilize.drank_ale: He drinks. He sings. He is merry as a man of the sheepfolds.
+enkidu_civilize.wore_clothing: He wears linen. The gazelles that ran with him flee into the hills.
+quest.enkidu_meets.title: Enkidu and the King
+quest.enkidu_meets.face_the_king: Challenge Gilgamesh — block the door of the wedding house.
+quest.enkidu_meets.wrestle: Wrestle the king in the street of Uruk.
+quest.enkidu_meets.become_brothers: You and Gilgamesh are equals. Friendship is sealed.
+quest.enkidu_meets.excerpt: They grappled like bulls; the doorpost shook — then they kissed and became friends.
+quest.enkidu_meets.excerpt.akkadian: iṣṣabtūma kīma lītī — ina sūqi ša Uruk
+gilgamesh.receive_shamhat: O king — here is the wild man, clothed and fed. Šamḫat has done her work.
+gilgamesh.accept_enkidu: Good. Let him stand before me. The match of Uruk has come.
+gilgamesh.become_enkidu: (Become Enkidu — face the king.)
+gilgamesh.become_king: (Become Gilgamesh — the epic continues.)
+gilgamesh.king_handover: "You are Gilgamesh, king of Uruk. Enkidu stands beside you as brother. The Cedar Forest waits."
+enkidu.propose_cedar: Speak of the Cedar Forest
+enkidu.propose_cedar_speech: "Brother — fame that lasts is cut from cedar. Let us go to the Forest and face Humbaba. First seek your mother's blessing."
+enkidu.depart_cedar: Set out for the Cedar Forest
+enkidu.depart_cedar_speech: "The road is long. Close your eyes — when you open them, the cedars stand around us."
+enkidu.ask_more: Ask about other things
+enkidu.back: Back
+enkidu.speak_illness: Ask what ails him
+enkidu.speak_sickness: Stay beside him in his fever
+enkidu.speak_dream: Ask about his dream
+enkidu.farewell: Bid him farewell
+enkidu.illness: "Brother — the gods have judged. For Humbaba and the Bull, one of us must die. It is me."
+enkidu.sickness: "The illness grows heavy. Do not leave me. Speak of the wild days… of Šamḫat… of you."
+enkidu.underworld_dream: "I dreamed of the House of Dust, where kings sit with crowns of clay. I fear it."
+enkidu.farewell_speech: "My friend… do not forget me. Your walls of Uruk will outlast us both — seek life if you must."
+ninsun.ask_cedar_blessing: Ask for a blessing for the Cedar road
+ninsun.cedar_blessing: "My son, I have placed you under the gods. Go with Enkidu; the road of cedars is open. Speak to your brother when you are ready to depart."
+ninsun.ask_immortality_road: Ask the road to Utnapishtim
+ninsun.immortality_counsel: "Enkidu is gone. If you would chase life without end, the road runs to Mount Mashu and beyond the Waters of Death."
+ninsun.depart_mashu: Set out for Mount Mashu
+ninsun.send_mashu: "Go. The Scorpion Men guard the gate. Pass them, and Ur-Shanabi will find you."
+ninsun.ask_walls: Look upon the walls of Uruk
+ninsun.walls_epilog: "Climb with me, my son. Foundation terrace and burnt brick — this is your work. The plant is gone, yet Uruk stands. That is enough."
+gilgamesh.enkidu_handover: You are Enkidu. The street waits. Block his path and prove your strength.
+gilgamesh.enkidu_challenge: I am Enkidu. I will block your road, king of Uruk.
+gilgamesh.enkidu_again: Again — finish what we began.
+gilgamesh.wrestle_begin: They seize each other. Doorposts tremble; walls shake.
+gilgamesh.wrestle_continue: (Hold fast.)
+gilgamesh.wrestle_end: They kiss. Enkidu and Gilgamesh are brothers. Anger is forgotten.
+enkidu_wild.already_self: You remember this water-hole — but you are no longer the beast that drank here.
+gilgamesh.ask_more: Ask about other things.
+gilgamesh.back: (Back.)
+quest.shamhat.teach_love: His heart softens. Offer him the bread of people.
+enkidu_civilize.love_chase: He flees like a gazelle. Throw hearts of love — fill the ground with your zone until the wildness fades.

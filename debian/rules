@@ -14,8 +14,14 @@ override_dh_auto_install:
 	cp -a voice/voices.yaml debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/voice/
 
 override_dh_install:
-	# Generate voices
+	# Generate spoken lines (Piper). Must not ship a silent disk.
 	python3 tools/render_voices.py --out debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/
+	@voices=$$(find debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/media/voice -name '*.ogg' 2>/dev/null | wc -l); \
+	if [ "$$voices" -lt 1 ]; then \
+		echo "debian/rules: no spoken lines under media/voice/ — refusing to package" >&2; \
+		exit 1; \
+	fi; \
+	echo "debian/rules: $$voices spoken line files"
 
 override_dh_builddeb:
 	# Set permissions

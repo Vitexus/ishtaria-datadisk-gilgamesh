@@ -1,0 +1,8 @@
+{
+  "HumanBoxing": ["Box", false],
+  "HumanLegSweep": ["Sweep", false],
+  "HumanKidneyHit": ["Hit", false],
+  "HumanBigStomachHit": ["Hit2", false],
+  "HumanKipUp": ["KipUp", false],
+  "HumanScaryClownWalk": ["ClownWalk", false]
+}

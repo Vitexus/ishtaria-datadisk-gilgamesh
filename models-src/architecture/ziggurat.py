@@ -237,19 +237,17 @@ def stairs(model, ox, oy, direction, width, z0, rise, run, rh=0.3, wall_mat="bak
 
 def stair_parapets(model, ox, oy, direction, width, z0, rise, run, height=1.5, thick=1.1, mat="bakedbrick", cap="plaster"):
     """Walls along both sides of a flight, as on the great stairway of the ziggurat of Ur: they stand `height` above the steps
-    at the top and a little less at the foot, and their brick courses lie parallel to the slope."""
+    at the top and a little less at the foot. Brick courses stay world-horizontal (V = height), not parallel to the slope."""
     d = Vector((direction[0], direction[1]))
     left = Vector((-d.y, d.x))
     hw = width / 2
-    slope = rise / run
-    cos_t = 1.0 / math.sqrt(1.0 + slope * slope)
     t = tile(mat)
 
     def P(s, lat, z):
         return Vector((ox + d.x * s + left.x * lat, oy + d.y * s + left.y * lat, z))
 
-    def uv(s, z):  # u along the slope, v at right angles to it
-        return ((s / cos_t) / t, (z - z0 - s * slope) * cos_t / t)
+    def uv(s, z):  # u along the run, v = world height so mortar lines stay level
+        return (s / t, z / t)
 
     for sign in (-1, 1):
         inner, outer = sign * hw, sign * (hw + thick)

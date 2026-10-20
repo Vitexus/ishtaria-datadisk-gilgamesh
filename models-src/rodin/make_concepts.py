@@ -21,7 +21,7 @@ OUT = pathlib.Path(__file__).resolve().parent.parent / "concepts"
 STYLE = ("wide shot of the entire figure from the top of the head to the soles of the feet, full body photograph, small figure in the frame with empty space around, standing straight, front view, arms slightly away from the body, both hands open and visible, "
          "feet visible, plain light grey studio background, soft even lighting, Sumerian Early Dynastic period 2700 BCE, "
          "historically accurate, realistic, highly detailed, sharp focus")
-NEG = ("medieval, knight, chainmail, plate armour, black clothing, trousers, boots, hands together, hands clasped, arms raised, hands on head, nude, naked, loincloth, fur skirt, half-naked, bare chest, short skirt, dark skin, statue, relief, plinth, cropped, legs only, torso only, headless, face not visible, out of frame, cut off, close-up, hands in pockets, hands touching clothes, crossed arms, holding objects, modern clothing, "
+NEG = ("arms close to the body, arms touching the torso, hands on hips, hands at sides touching the tunic, long sleeves, wide sleeves, trousers, pants, breeches, leggings, buckle, kimono, hands on hips, medieval, knight, chainmail, plate armour, black clothing, trousers, boots, hands together, hands clasped, arms raised, hands on head, nude, naked, loincloth, fur skirt, half-naked, bare chest, short skirt, dark skin, statue, relief, plinth, cropped, legs only, torso only, headless, face not visible, out of frame, cut off, close-up, hands in pockets, hands touching clothes, crossed arms, holding objects, modern clothing, "
        "cartoon, anime, text, watermark, blurry, extra limbs, deformed hands, multiple people, busy background")
 CHARS = {
     "uruk_farmer": "a sun-browned Sumerian farmer, man of about 40, shaved head, short beard, lean muscular, short undyed sheepskin "
@@ -45,6 +45,18 @@ CHARS = {
                     "undyed linen and wool tunic with a rope belt, bare arms, bare feet, calloused hands hanging at his sides away from the body, "
                     "leather water skin at the hip, humble, fully clothed",
     # the characters of the epic (hands free: Rodin merges what a hand holds into the body)
+    # Gilgamesh: between Early Dynastic Uruk dress (CHARACTER_DESIGN.md) and the Louvre / Dur-Sharrukin
+    # Master-of-Animals hero (tiered curled beard, medallion bracelets). No lion and no mace in the walking
+    # mesh — the statue keeps that motif. Hands empty so Rodin does not fuse a prop into the arm.
+    "gilgamesh": "Gilgamesh, king of Early Dynastic Uruk, tall heroic Sumerian man about 30, fair olive skin, "
+                 "powerful athletic build not a bodybuilder, long black hair gathered in a bun at the nape with "
+                 "corkscrew curls falling beside the face, long black beard in neat horizontal tiers of tight curls "
+                 "ending in a squared tip like Neo-Assyrian Master of Animals reliefs but as living hair not stone, "
+                 "large calm almond eyes, stern noble face, thin gold diadem with a lapis lazuli band across the brow, "
+                 "bare chest, ankle-length white tufted wool kaunakes skirt covering the legs to the ankles, "
+                 "wide ornate gold belt with a round engraved medallion, thick gold wrist bracelets each with a "
+                 "circular flower medallion, beaded red and lapis armbands on the upper arms, leather sandals, "
+                 "empty hands hanging slightly away from the body, no weapons, no lion, no staff",
     "enkidu": "Enkidu the wild man of the steppe, huge muscular body, long matted dark brown hair and long beard, body hair, "
               "tattered animal hide loincloth, bare chest, bare feet, mud-brown sun-weathered skin, fierce calm face",
     "enkidu_civilized": "Enkidu after civilization, stocky muscular Sumerian man, long dark brown hair tied back, trimmed beard, "
@@ -78,6 +90,9 @@ CHARS = {
                      "cloak over the shoulders, leather belt with a pouch, sandals, shrewd friendly face",
     "potter": "a strong Sumerian potter, shaved head, short stubble beard, short brown wool skirt, clay-stained brown leather apron, "
               "leather belt, bare feet, muscular forearms",
+    "hunter": "a lean sun-weathered Sumerian steppe hunter and trapper of about 30, short black hair, short black stubble beard, sharp "
+              "alert face, plain undyed wool kaunakes tunic ending at the knee, a brown leather strap over one "
+              "shoulder, a simple rope belt with a small leather pouch, a coil of rope over one shoulder, leather sandals, wiry strong build, A-pose, both arms held out clearly away from the body at about forty degrees with a wide gap between the arms and the torso, elbows slightly bent, open palms facing forward, fingers spread, short sleeves ending above the elbow, tunic hanging straight and narrow",
     "weaver": "a Sumerian weaver woman, long black hair under a cream head scarf, long brown wool dress draped over one shoulder, "
               "leather belt, bronze earrings, sandals, kind face",
 }

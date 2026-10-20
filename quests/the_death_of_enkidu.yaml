@@ -1,19 +1,27 @@
+# Tablet VII: Enkidu sickens, dreams, dies; Gilgameš mourns and seeks eternal life.
 id: the_death_of_enkidu
 title_key: quest.enkidu_death.title
 start_stage: divine_punishment
-start_place: uruk_palace
+start_place: uruk_market
+excerpt:
+  paraphrase_key: quest.enkidu_death.excerpt
+  akkadian_key: quest.enkidu_death.excerpt.akkadian
 stages:
   divine_punishment:
     text_key: quest.enkidu_death.punishment
+    guide: uruk_market
     final: false
   enkidu_sickens:
     text_key: quest.enkidu_death.sickens
+    guide: uruk_market
     final: false
   dream_of_underworld:
     text_key: quest.enkidu_death.dream
+    guide: uruk_market
     final: false
   enkidu_dies:
     text_key: quest.enkidu_death.dies
+    guide: uruk_palace
     final: false
   gilgamesh_mourns:
     text_key: quest.enkidu_death.mourns
