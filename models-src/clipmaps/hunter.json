@@ -1,0 +1,4 @@
+{
+  "HumanForwardJump": ["Jump", true],
+  "HumanDying": ["Die", true]
+}

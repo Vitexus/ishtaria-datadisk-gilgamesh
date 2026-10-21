@@ -13,6 +13,15 @@
   locate: {from: uruk, bearing_deg: 310, distance_m: 12000, tolerance_m: 0}
   music: plains
   music_radius_m: 500
+  # The water-hole is real water: a pond a few metres from the spawn (tools/build_waterhole.py). The coarse planet map
+  # calls this floodplain "river" and let the hunter drink from dry ground; the patch makes the server and the client
+  # agree on where the water is, so a hunter who steps in swims instead of walking on a dry-looking steppe.
+  terrain:
+    heightmap: media/terrain/hunter_waterhole_height.png
+    water: media/terrain/hunter_waterhole_water.png
+    extent_m: [400, 400]
+    feather_m: 60
+    visible_m: 600
   wildlife:
     radius_m: 900
     density: 3.0

@@ -19,6 +19,7 @@ lore/                  codex entries for the epic characters and events
 i18n/en.yaml cs.yaml   English and Czech translations
 voice/voices.yaml      voice synthesizer settings for NPC speech
 tools/                 helper scripts (render_voices.py, build_landscape.py: terrain patch of Uruk, see research/LANDSCAPE.md;
+                        build_waterhole.py: the pond beside the hunter's spawn, places/hunter.yaml;
                        build_city.py: plan of the streets, houses, markets, palaces and fields of Uruk, see research/CITY.md;
                        build_world_map.py: the real planet of the world, see research/WORLD.md)
 media/                 portraits, character models (media/models/*.glb), architecture models, cover,

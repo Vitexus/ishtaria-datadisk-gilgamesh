@@ -22,3 +22,17 @@ The joint positions in `models-src/rodin/hunter.json` were read from the Mixamo 
 
 The export has no running or sitting clip (only the limping `HumanInjuredRun`), so the model has `Idle`, `Walk`,
 `Jump` and `Die`; the client skips the clips that are missing.
+
+## Clips from the Mixamo export
+
+`retarget_clips.py` and `../retarget_ambient.py` (the clips of every other Rodin figure, `../clipmaps/<npc>.json`) turn each game bone
+as its Mixamo bone turns in the world (`world`, the fifth argument of `retarget_ambient.py`). The first versions copied the local
+rotation of each bone, which is only right near the rest pose: the bones of the two rigs are rolled differently, so a lying
+swimmer or a falling man came out as a tangle. `../audit_clips.py` measures it (0 degrees = the clip moves like its source; the old
+clips were 20 to 86 degrees off on average):
+
+    blender -b --python models-src/audit_clips.py -- models-src/<npc>/<npc>_rodin_raw.glb media/models/<npc>.glb models-src/clipmaps/<npc>.json
+    blender -b --python models-src/hunter/preview_clip.py -- MODEL.glb ACTION OUT_PREFIX 0 36 72    # renders frames to look at
+
+Re-run a figure's clips: `blender -b --python models-src/retarget_ambient.py -- models-src/<npc>/<npc>_rodin_raw.glb media/models/<npc>.glb
+media/models/<npc>.glb models-src/clipmaps/<npc>.json world` (replaces the clips of the clipmap, keeps the others).

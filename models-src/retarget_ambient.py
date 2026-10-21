@@ -9,6 +9,10 @@
 Keeps Idle/Walk (and other existing NLA tracks not replaced by the clipmap).
 Clipmap JSON: { "HumanBoxing_Armature": ["Box", false], ... }
   second value = vertical hip offset (Jump/Sit/Die).
+
+With a fifth argument `world` the local rotations are not copied but the turn of each bone away from its rest pose in the world
+(models-src/audit_clips.py measures the difference): the Mixamo bones and the game bones are rolled differently, and a local copy
+only agrees with the source for clips that stay near the rest pose.
 """
 import json
 import os
@@ -19,6 +23,8 @@ from mathutils import Matrix, Vector
 
 ARGS = sys.argv[sys.argv.index("--") + 1 :]
 RAW, GAME, OUT, CLIPMAP = ARGS[0], ARGS[1], ARGS[2], ARGS[3]
+# `world` as a fifth argument: turn every bone as its Mixamo bone turns in the world (see apply_frame_world)
+WORLD = len(ARGS) > 4 and ARGS[4] == "world"
 
 BONE_MAP = [
     ("Hips", "Hips"),
@@ -90,6 +96,30 @@ def apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
     bpy.context.view_layer.update()
 
 
+def apply_frame_world(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
+    """Pose each game bone so that it turns in the world exactly as its Mixamo bone does (parents come first in BONE_MAP)."""
+    for src_name, tgt_name in BONE_MAP:
+        if src_name not in src_arm.pose.bones or tgt_name not in tgt_arm.pose.bones:
+            continue
+        src = src_arm.pose.bones[src_name]
+        tgt = tgt_arm.pose.bones[tgt_name]
+        tgt.rotation_mode = "QUATERNION"
+        pose = (src_arm.matrix_world @ src.matrix).to_3x3()
+        rest = (src_arm.matrix_world @ src.bone.matrix_local).to_3x3()
+        delta = pose @ rest.inverted()
+        tgt_rest = (tgt_arm.matrix_world @ tgt.bone.matrix_local).to_3x3()
+        bpy.context.view_layer.update()
+        head = (tgt_arm.matrix_world @ tgt.matrix).translation
+        world = (delta @ tgt_rest).to_4x4()
+        world.translation = head
+        tgt.matrix = tgt_arm.matrix_world.inverted() @ world
+        if src_name == "Hips" and vertical_hips:
+            # Chargen Hips: local +Y is world up.
+            src_z = (src_arm.matrix_world @ src.head).z
+            tgt.location = Vector((0.0, src_z - src_hips_rest_z, 0.0))
+        bpy.context.view_layer.update()
+
+
 def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips):
     action = resolve_action(src_action_name)
     if action is None:
@@ -130,7 +160,7 @@ def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips):
 
     for frame in range(start, end + 1):
         bpy.context.scene.frame_set(frame)
-        apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z)
+        (apply_frame_world if WORLD else apply_frame)(src_arm, tgt_arm, vertical_hips, src_hips_rest_z)
         for _src, tgt_name in BONE_MAP:
             if tgt_name not in tgt_arm.pose.bones:
                 continue

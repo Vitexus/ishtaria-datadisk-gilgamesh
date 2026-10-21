@@ -5,7 +5,14 @@
         media/models/hunter.glb \
         media/models/hunter.glb
 
-Adds Jump and Die (keeps existing Idle/Walk). This export has no running or sitting clip
+Adds Jump and Die (keeps existing Idle/Walk). An optional fourth argument is the skeleton and action of the swimming
+export (`extract_clip.py`, `hunter_swim_clip.glb`), baked as Swim; with `-` as the first argument only that clip is added
+to a model that already has the others:
+
+    blender -b --python models-src/hunter/retarget_clips.py -- - media/models/hunter.glb media/models/hunter.glb \
+        models-src/hunter/hunter_swim_clip.glb
+
+This export has no running or sitting clip
 (only the limping HumanInjuredRun), so the client falls back for Run and Sit.
 
 Copies each mapped bone's `matrix_basis` rotation (and for Hips on Jump/Sit/Die a
@@ -21,6 +28,7 @@ from mathutils import Matrix, Vector
 
 ARGS = sys.argv[sys.argv.index("--") + 1 :]
 RAW, GAME, OUT = ARGS[0], ARGS[1], ARGS[2]
+SWIM = ARGS[3] if len(ARGS) > 3 else ""
 
 BONE_MAP = [
     ("Hips", "Hips"),
@@ -85,7 +93,33 @@ def apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
     bpy.context.view_layer.update()
 
 
-def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips):
+def apply_frame_world(src_arm, tgt_arm):
+    """Pose the game bones so that each one turns in the world exactly as its Mixamo bone does.
+
+    Both rigs stand in the same rest pose, facing the same way, but their bones are not rolled alike (the game Hips run along
+    +Z with another roll), so copying the local rotation is only right for clips that stay near the rest pose. A swimmer lies
+    down: the rotation of every bone away from its rest pose is taken in the world and put on the game bone's own rest
+    orientation instead. Parents come before children in BONE_MAP, so each bone is posed on top of its parent.
+    """
+    for src_name, tgt_name in BONE_MAP:
+        if src_name not in src_arm.pose.bones or tgt_name not in tgt_arm.pose.bones:
+            continue
+        src = src_arm.pose.bones[src_name]
+        tgt = tgt_arm.pose.bones[tgt_name]
+        tgt.rotation_mode = "QUATERNION"
+        pose = (src_arm.matrix_world @ src.matrix).to_3x3()
+        rest = (src_arm.matrix_world @ src.bone.matrix_local).to_3x3()
+        delta = pose @ rest.inverted()
+        tgt_rest = (tgt_arm.matrix_world @ tgt.bone.matrix_local).to_3x3()
+        bpy.context.view_layer.update()
+        head = (tgt_arm.matrix_world @ tgt.matrix).translation
+        world = (delta @ tgt_rest).to_4x4()
+        world.translation = head
+        tgt.matrix = tgt_arm.matrix_world.inverted() @ world
+        bpy.context.view_layer.update()
+
+
+def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips, world=False):
     action = bpy.data.actions.get(src_action_name)
     if action is None:
         print("missing action", src_action_name, flush=True)
@@ -109,7 +143,10 @@ def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips):
 
     for frame in range(start, end + 1):
         bpy.context.scene.frame_set(frame)
-        apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z)
+        if world:
+            apply_frame_world(src_arm, tgt_arm)
+        else:
+            apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z)
         for _src, tgt_name in BONE_MAP:
             if tgt_name not in tgt_arm.pose.bones:
                 continue
@@ -130,19 +167,26 @@ def main():
     game_objs = import_gltf(GAME)
     game_arm = largest_armature(game_objs)
     game_mesh = largest_mesh(game_objs)
-    raw_objs = import_gltf(RAW)
-    src_arm = largest_armature(raw_objs)
-    for o in raw_objs:
-        if o.type == "MESH":
-            o.hide_render = True
-            o.hide_viewport = True
-
-    src_arm.location = game_arm.location.copy()
-    src_arm.rotation_mode = "XYZ"
     game_arm.rotation_mode = "XYZ"
+    if RAW != "-":
+        raw_objs = import_gltf(RAW)
+        src_arm = largest_armature(raw_objs)
+        for o in raw_objs:
+            if o.type == "MESH":
+                o.hide_render = True
+                o.hide_viewport = True
 
-    for src_name, (out_name, vertical_hips) in CLIPS.items():
-        bake_clip(src_arm, game_arm, src_name, out_name, vertical_hips)
+        src_arm.location = game_arm.location.copy()
+        src_arm.rotation_mode = "XYZ"
+
+        for src_name, (out_name, vertical_hips) in CLIPS.items():
+            bake_clip(src_arm, game_arm, src_name, out_name, vertical_hips)
+    if SWIM:
+        swim_arm = largest_armature(import_gltf(SWIM))
+        swim_arm.location = game_arm.location.copy()
+        swim_arm.rotation_mode = "XYZ"
+        # The swimmer lies on the water: the body's pose is in the Hips rotation, its height is the client's to set.
+        bake_clip(swim_arm, game_arm, "HumanSwimming_Armature", "Swim", False, world=True)
 
     bpy.ops.object.select_all(action="DESELECT")
     game_arm.select_set(True)
