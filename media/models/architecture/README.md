@@ -33,8 +33,13 @@ This directory contains 3D models of Mesopotamian architecture created for the G
    `uruk_eanna.glb`: the court of the Eanna precinct with the Great Court, pillar hall, stone-cone building and limestone hall.
    `uruk_walls.glb` now has six gates and a water gate.
 
-   `ziggurat_anu.glb` (1.0 MB): Early Dynastic terrace of the ziggurat of Anu with the White Temple (Uruk), 57 x 52 m
+   `ziggurat_anu.glb` (1.0 MB): Early Dynastic terrace of the ziggurat of Anu with the White Temple (Uruk), 57 x 52 m,
+   bitumen court under the whitewashed temple (also baked into `uruk_walls.glb`)
    base, 12 m high, court 50 x 45 m with the temple and the fire-pit terrace, three flights to a landing in front
+   `ziggurat_ur.glb`: Etemenniguru at Ur (Woolley 64 × 45 m, three stages, ~30 m); also reused as a **clone** at
+   Kish, Larsa, Girsu, Susa, Nineveh (`places/city_ziggurats.yaml`; see `research/ZIGGURATS.md`)
+   `ziggurat_eridu.glb`: low Enki platform at Eridu (distinct)
+   `ziggurat_nippur.glb`: Ekur at Nippur, ~25 m square three-stage tower (distinct)
 
 3. **ziggurat_complex.glb** (9.8 KB)
    - Complete ziggurat complex with:

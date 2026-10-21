@@ -1,0 +1,160 @@
+# Ziggurats at cities outside the Uruk precinct and Babylon.
+# Catalog, attestation and clone policy: research/ZIGGURATS.md.
+# Distinct models: ur, eridu, nippur. Clones reuse an existing glb with a different yaw.
+
+# --- Distinct (documented plan or published dimensions) ---
+
+- id: ziggurat_of_ur
+  kind: building
+  name_key: place.ziggurat_ur
+  parent: ur
+  radius_m: 40
+  # Etemenniguru (Nanna): Woolley 64 x 45 m, three stages; stairs face -Y in the model.
+  locate: {from: ur, bearing_deg: 0, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_ur.glb
+    ground_m: [0, 38]
+    yaw_deg: 35
+    visible_m: 4000
+  music: temple
+  music_radius_m: 100
+  requires:
+    max_slope_deg: 8
+
+- id: ziggurat_of_eridu
+  kind: building
+  name_key: place.ziggurat_eridu
+  parent: eridu
+  radius_m: 30
+  # Enki platform: low single terrace (distinct from Anu).
+  locate: {from: eridu, bearing_deg: 20, distance_m: 35, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_eridu.glb
+    ground_m: [0, 28]
+    yaw_deg: 12
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10
+
+- id: ziggurat_of_nippur
+  kind: building
+  name_key: place.ziggurat_nippur
+  parent: nippur
+  radius_m: 35
+  # Ekur (Enlil): ~25 m stepped tower; stage plan approximate.
+  locate: {from: nippur, bearing_deg: 350, distance_m: 45, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_nippur.glb
+    ground_m: [0, 40]
+    yaw_deg: -18
+    visible_m: 4000
+  music: temple
+  music_radius_m: 100
+  requires:
+    max_slope_deg: 8
+
+# --- Clones (attested existence, appearance unknown) ---
+
+- id: ziggurat_of_kish
+  kind: building
+  name_key: place.ziggurat_kish
+  parent: kish
+  radius_m: 35
+  # Tell Ingharra ziggurat remains; form unknown → clone Ur.
+  locate: {from: kish, bearing_deg: 40, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_ur.glb
+    ground_m: [0, 38]
+    yaw_deg: 72
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10
+
+- id: ziggurat_of_larsa
+  kind: building
+  name_key: place.ziggurat_larsa
+  parent: larsa
+  radius_m: 35
+  # Ebabbar (Šamaš) ziggurat; form unknown → clone Ur.
+  locate: {from: larsa, bearing_deg: 15, distance_m: 38, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_ur.glb
+    ground_m: [0, 38]
+    yaw_deg: -55
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10
+
+- id: ziggurat_of_girsu
+  kind: building
+  name_key: place.ziggurat_girsu
+  parent: girsu
+  radius_m: 35
+  # Ningirsu / Eninnu temple tower; form unknown → clone Ur.
+  locate: {from: girsu, bearing_deg: 25, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_ur.glb
+    ground_m: [0, 38]
+    yaw_deg: 110
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10
+
+- id: ziggurat_of_adab
+  kind: building
+  name_key: place.ziggurat_adab
+  parent: adab
+  radius_m: 30
+  # Ninmah temple platform; form unknown → clone Anu (platform style).
+  locate: {from: adab, bearing_deg: 5, distance_m: 35, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_anu.glb
+    ground_m: [0, 42]
+    yaw_deg: -88
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10
+
+- id: ziggurat_of_susa
+  kind: building
+  name_key: place.ziggurat_susa
+  parent: susa
+  radius_m: 35
+  # Inšušinak ziggurat (texts; physical remains lost) → clone Ur.
+  locate: {from: susa, bearing_deg: 30, distance_m: 42, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_ur.glb
+    ground_m: [0, 38]
+    yaw_deg: 48
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10
+
+- id: ziggurat_of_nineveh
+  kind: building
+  name_key: place.ziggurat_nineveh
+  parent: nineveh
+  radius_m: 35
+  # Later Assyrian temple towers of Ištar/Nabû → clone Ur (anachronism on an ED pin).
+  locate: {from: nineveh, bearing_deg: 200, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/ziggurat_ur.glb
+    ground_m: [0, 38]
+    yaw_deg: -140
+    visible_m: 3500
+  music: temple
+  music_radius_m: 80
+  requires:
+    max_slope_deg: 10

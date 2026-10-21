@@ -61,54 +61,31 @@ This document compiles accurate historical references for creating authentic Mes
 
 ### Ziggurats
 
-#### 1. Ziggurat of Ur (Tell al-Muqayyar)
-- **Date**: 2100 BCE (built by Ur-Nammu)
-- **Location**: Near Nasiriyah, Iraq
-- **Dimensions**: 64m x 46m base, 21m height (originally ~30m)
-- **Levels**: 3 tiered platforms
-- **Materials**: Mud brick core, bitumen waterproofing, white plaster exterior
-- **Features**:
-  - Central staircase
-  - Temple of Nanna at summit
-  - Buttresses on lower level
-  - Recessed niches
-- **Current State**: Partially restored by Leonard Woolley (1920s)
-- **References**:
-  - Woolley, L. (1939). *Ur of the Chaldees*
-  - Heinrich, E. (1982). *The Temple of Nanna at Ur*
+**Living catalog for the disk:** `research/ZIGGURATS.md` (which cities get a tower, distinct vs
+clone models, Ur ≠ Uruk Anu, Woolley / Schmid dimensions). Prefer that file over the short notes
+below; they are kept as a quick index.
 
-#### 2. Ziggurat of Nanna (Ur)
-- **Date**: 2100 BCE
-- **Relation to Ziggurat of Ur**: Part of the same complex
-- **Features**:
-  - White Temple on platform
-  - Dedicated to moon god Nanna
-  - Rectangular shape
-  - Multiple courtyards
+#### 1. Ziggurat of Ur / Etemenniguru (Tell el-Muqayyar) — Nanna/Sîn
+- **Date**: c. 2100 BCE (Ur-Nammu / Šulgi); Nabonidus restored later
+- **Dimensions**: 64 × 45 m base, originally ~30 m; **3** Neo-Sumerian stages
+- **Disk**: `ziggurat_ur.glb` at place `ur` (distinct). Not the White Temple of Uruk.
+- **References**: Woolley, *Ur Excavations* V; Heinrich 1982; https://en.wikipedia.org/wiki/Great_Ziggurat_of_Ur
+
+#### 2. Ziggurat of Anu + White Temple (Uruk / Warka)
+- **Date**: terrace raised over many phases; White Temple c. 3500 BCE
+- **Form**: **one** terrace ~12 m, court ~50 × 45 m, temple 22 × 17 m
+- **Disk**: `ziggurat_anu.glb` / baked into `uruk_walls.glb`
+- See also Ishtar's stepped tower in Eanna (`uruk_ishtar_ziggurat.glb`) — story addition
 
 #### 3. Ziggurat of Aqar Quf (Dur-Kurigalzu)
-- **Date**: 14th century BCE (Parthian period)
-- **Location**: Near Baghdad, Iraq
-- **Dimensions**: 69m x 67m base, 57m height
-- **Levels**: 4 tiered platforms
-- **Current State**: Best preserved ziggurat in Iraq
-- **Features**:
-  - Square base
-  - Three staircases
-  - Mud brick construction
-  - Well-preserved buttresses
+- **Date**: Kassite (2nd millennium BCE); often cited as among the best-preserved in Iraq
+- **Dimensions** (published summaries): ~69 × 67 m base, tall core
+- **Disk**: city not pinned; do not confuse with Ur or Nippur
 
-#### 4. Ziggurat of Etemenanki (Babylon)
-- **Date**: 6th century BCE (Neo-Babylonian)
-- **Location**: Babylon, Iraq
-- **Dimensions**: ~91m x 91m base, ~91m height
-- **Levels**: 7 tiered platforms (according to Herodotus)
-- **Biblical Reference**: Tower of Babel
-- **Features**:
-  - Blue glazed brick exterior
-  - Dedicated to Marduk
-  - Central spiral staircase (disputed)
-  - Temple at summit
+#### 4. Etemenanki (Babylon)
+- **Date**: Neo-Babylonian (c. 6th century BCE); anachronism on the Epic map (owner decision)
+- **Dimensions**: ~91 m square, usual reconstr. ~90 m / 7 stages (Schmid/George; not the ~54 m travel estimate)
+- **Disk**: `ziggurat_etemenanki.glb` (`places/babylon.yaml`)
 
 ### Architectural Features
 
@@ -266,38 +243,20 @@ This document compiles accurate historical references for creating authentic Mes
   - **Ishtar Gate**: Southern gate
 
 #### Ziggurat of Anu (Uruk)
-- **Date**: c. 3400-3000 BCE
-- **Location**: Eanna District
-- **Dimensions**: ~50m x 50m base
-- **Height**: ~20-25 meters
-- **Levels**: 3-4 tiers
-- **Dedication**: Sky god Anu
-- **Features**:
-  - Temple of Anu at summit
-  - White plaster exterior
-  - Central staircase
-  - Multiple courtyards at base
+- **Form**: **one** terrace (~12 m), not 3–4 tiers (that was a Ur/Uruk mix-up; see `ZIGGURATS.md`)
+- **Location**: Anu district (Kullaba), beside Eanna; OSM footprint in `LANDSCAPE.md`
+- **Dedication**: Sky god Anu; White Temple on the bitumen court
+- **Disk**: `ziggurat_anu.glb` / `uruk_walls.glb`
 
 #### Ziggurat of Ishtar (Uruk)
-- **Date**: Later period
-- **Location**: Near city center
-- **Dedication**: Goddess Ishtar
-- **Features**:
-  - Red plaster exterior
-  - Multiple staircases
-  - Larger temple complex
+- **Note**: Stepped tower at `ishtar_temple` is a story addition in Eanna, not a Woolley plan of Ur
+- **Disk**: `uruk_ishtar_ziggurat.glb`
 
 #### White Temple
-- **Date**: c. 3500-3000 BCE
-- **Location**: On Anu ziggurat platform
-- **Dimensions**: 22m x 17m
-- **Height**: ~12 meters
-- **Features**:
-  - Whitewashed exterior
-  - Rectangular shape
-  - Niche decorations
-  - Flat roof with parapet
-  - Multiple rooms inside
+- **Date**: c. 3500-3000 BCE (built 3517–3358 BCE in published ranges)
+- **Location**: On Anu terrace court
+- **Dimensions**: ~22 × 17 m; roof ~21 m above the plain
+- **Features**: whitewashed, tripartite, entrances do not face the access stairs
 
 #### Royal Palace
 - **Location**: Near city center

@@ -16,6 +16,7 @@ not ours), and the owner's reference illustration of Babylon. Nothing was copied
 - **The centre**: the Eanna precinct and the Anu district form the religious and administrative heart, in the topographical middle
   of the city. All avenues run from the gates to the sacred ring road round the precinct and on into the court to the feet of
   the ziggurats (Anu, exact in the wall model; the stepped tower of Ishtar is an addition for the place `ishtar_temple`).
+  Other Mesopotamian cities with attested towers: `places/city_ziggurats.yaml` and the catalog in `research/ZIGGURATS.md`.
 - **Eanna**: a walled square orchard (the Great Court) with rows of trees, channels and a pool; the pillar hall with close
   pilasters, tall doorways under triangular niches and a band of clay-cone mosaic (black, white and red cones, 8-10 cm long);
   the stone-cone building on a terrace with a basin and reed standards (flagpoles); the temple of Eanna of the Late Uruk period

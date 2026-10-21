@@ -30,6 +30,15 @@ place.great_wall_uruk: Velká hradba Uruku
 place.hanging_gardens: Visuté zahrady
 place.royal_tombs: Královské hrobky v Uruku
 place.etemenanki: Etemenanki, babylonská věž
+place.ziggurat_ur: Velký zikkurat v Uru
+place.ziggurat_eridu: Zikkurat v Eridu
+place.ziggurat_nippur: Zikkurat v Nippuru
+place.ziggurat_kish: Zikkurat v Kiši
+place.ziggurat_larsa: Zikkurat v Larse
+place.ziggurat_girsu: Zikkurat v Girsu
+place.ziggurat_adab: Zikkurat v Adabu
+place.ziggurat_susa: Zikkurat v Súsách
+place.ziggurat_nineveh: Zikkurat v Ninive
 place.city_gate: Městská brána v Uruku
 place.processional_way: Procesní cesta v Uruku
 place.river_bank: Břeh řeky u Uruku
@@ -268,7 +277,7 @@ high_priest_anu.ask_ziggurat: Ptej se na zikkurat
 high_priest_anu.ask_anu: Ptej se na Anu
 high_priest_anu.ask_rituals: Ptej se na rituály
 high_priest_anu.leave: Nechám tě u tvých povinností.
-high_priest_anu.ziggurat: "Tento zikkurat je schodištěm do nebe, kde vykonáváme rituály na počest Anu, otce bohů. Každá úroveň nás přibližuje božskému."
+high_priest_anu.ziggurat: "Tato terasa je schodištěm do nebe, kde vykonáváme rituály na počest Anu, otce bohů. Z jejího bitumenového nádvoří se Bílý chrám zvedá k jeho nebi."
 high_priest_anu.anu: "Anu je bůh nebes, otec všech božstev. Vládne z nejvyšších nebes, jeho výnosy utvářejí osud králů i obyčejných lidí."
 high_priest_anu.rituals: "Modlíme se při úsvitu a soumraku, kdy je závoj mezi světy nejtenčí. Oběti potěší Anu a přinesou jeho požehnání Uruku."
 
@@ -463,27 +472,44 @@ lore.cedar_forest: >
 # Mezopotamská architektura - Lore
 lore.ziggurat_uruk.title: Zikkurat v Uruku
 lore.ziggurat_uruk: >
-  Velký zikkurat v Uruku, masivní stupňovitý chrám věnovaný hlavnímu bohu.
-  Postavený z hliněných cihel, jeho několik úrovní představuje spojení mezi nebem a zemí.
-  Z nejvyššího bodu je výhled na celé město a okolní země.
+  Velká terasa Uruku věnovaná Anuovi, bohu nebes — jedna vysoká plošina z hliněných
+  cihel a nabíjené zeminy, ne věž mnoha stupňů jako pozdější zikkurat v Uru. Z jejího
+  nádvoří korunuje město Bílý chrám; samotná výška z něj činí orientační bod za hradbami.
 
 lore.ziggurat_anu.title: Zikkurat boha Anu
 lore.ziggurat_anu: >
-  Zikkurat boha Anu, boha nebes a otce Ištar. Tato posvátná stavba stoupá
-  k nebesům, symbolizující Anuovu doménu. Kněží zde vykonávají rituály, aby
-  komunikovali s bohy a pozorovali pohyby nebeských těles.
+  Zikkurat boha Anu se zvedá asi dvanáct metrů nad plán: jedna masivní terasa s
+  vodotěsným bitumenovým nádvořím a schodišti k Bílému chrámu. Kněží zde vykonávají
+  rituály na počest otce bohů a z jeho výšky sledují nebesa.
 
 lore.ziggurat_ishtar.title: Zikkurat bohyně Ištar
 lore.ziggurat_ishtar: >
-  Zikkurat bohyně Ištar, bohyně lásky a války. Na rozdíl od ostatních zikkuratů
-  je tento ozdoben lapis lazuli a karneolem, dary od milenců a válečníků hledajících
-  přízeň bohyně. Chrám na jeho vrcholu je místo, kde Ištar přijímá oběti.
+  Zikkurat bohyně Ištar, bohyně lásky a války. Na rozdíl od jediné terasy Anu je tato
+  stupňovitá věž ozdobena lapis lazuli a karneolem, dary od milenců a válečníků
+  hledajících přízeň bohyně. Chrám na jeho vrcholu je místo, kde Ištar přijímá oběti.
+
+lore.ziggurat_ur.title: Velký zikkurat v Uru
+lore.ziggurat_ur: >
+  Etemenniguru, dům, jehož základ budí hrůzu — třístupňová věž Nanny v Uru, u paty
+  čtyřiašedesát krát pětačtyřicet metrů. Hliněné jádro v pálených cihlách a bitumenu;
+  tři schodiště stoupají po dlouhé straně k chrámu boha měsíce.
+
+lore.ziggurat_eridu.title: Zikkurat v Eridu
+lore.ziggurat_eridu: >
+  Vyvýšený dům Enkiho v Eridu, nejstarším městě Královského seznamu. Nízká terasa
+  z hliněných cihel s bitumenovým nádvořím, starší duchem než vysoké stupňovité věže pozdějších králů.
+
+lore.ziggurat_nippur.title: Zikkurat v Nippuru
+lore.ziggurat_nippur: >
+  Ekur Enlila v Nippuru, náboženském středisku Sumeru. Jeho stupňovitá hmota se zvedá
+  asi pětadvacet metrů nad plán — horský dům, kde se scházejí velcí bohové.
 
 lore.white_temple.title: Bílý chrám
 lore.white_temple: >
-  Bílý chrám v Uruku, jehož zbělené zdi se třpytí na slunci. Postavený na
-  zikkuratu, tento chrám byl jedním z nejposvátnějších míst v starověké Mezopotámii.
-  Jeho bílá barva symbolizuje čistotu a božské světlo bohů.
+  Bílý chrám v Uruku, asi dvaadvacet krát sedmnáct metrů, jehož zbělené zdi se třpytí
+  na bitumenovém nádvoří Anuovy terasy. Postavený podle kardinálních os této plošiny
+  byl jedním z nejposvátnějších míst starověké Mezopotámie; bílá barva symbolizuje
+  čistotu a božské světlo boha nebes.
 
 lore.great_wall_uruk.title: Velká hradba Uruku
 lore.great_wall_uruk: >

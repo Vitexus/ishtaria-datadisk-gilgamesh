@@ -30,6 +30,15 @@ place.great_wall_uruk: Great Wall of Uruk
 place.hanging_gardens: Hanging Gardens
 place.royal_tombs: Royal Tombs of Uruk
 place.etemenanki: Etemenanki, the Tower of Babylon
+place.ziggurat_ur: Great Ziggurat of Ur
+place.ziggurat_eridu: Ziggurat of Eridu
+place.ziggurat_nippur: Ziggurat of Nippur
+place.ziggurat_kish: Ziggurat of Kish
+place.ziggurat_larsa: Ziggurat of Larsa
+place.ziggurat_girsu: Ziggurat of Girsu
+place.ziggurat_adab: Ziggurat of Adab
+place.ziggurat_susa: Ziggurat of Susa
+place.ziggurat_nineveh: Ziggurat of Nineveh
 place.city_gate: City Gate of Uruk
 place.processional_way: Processional Way of Uruk
 place.river_bank: River Bank of Uruk
@@ -281,7 +290,7 @@ high_priest_anu.ask_ziggurat: Ask about the ziggurat
 high_priest_anu.ask_anu: Ask about Anu
 high_priest_anu.ask_rituals: Ask about the rituals
 high_priest_anu.leave: I will leave you to your duties.
-high_priest_anu.ziggurat: "This ziggurat is the stairway to heaven, where we perform rituals to honor Anu, father of the gods. Each level brings us closer to the divine."
+high_priest_anu.ziggurat: "This terrace is the stairway to heaven, where we perform rituals to honor Anu, father of the gods. From its bitumen court the White Temple rises toward his sky."
 high_priest_anu.anu: "Anu is the sky god, father of all deities. He rules from the highest heavens, his decrees shaping the fate of kings and commoners alike."
 high_priest_anu.rituals: "We offer prayers at dawn and dusk, when the veil between worlds is thinnest. The sacrifices please Anu and bring his blessings upon Uruk."
 
@@ -478,28 +487,46 @@ lore.cedar_forest: >
 # Mesopotamian Architecture Lore
 lore.ziggurat_uruk.title: Ziggurat of Uruk
 lore.ziggurat_uruk: >
-  The Great Ziggurat of Uruk, a massive stepped temple tower dedicated to the chief god.
-  Built with mud bricks, its multiple levels represent the connection between heaven and earth.
-  The highest point offers a view of the entire city and surrounding lands.
+  The great terrace of Uruk dedicated to Anu, sky god — a single high platform of mud
+  brick and rammed earth, not a tower of many stages like the later ziggurat of Ur.
+  From its court the White Temple crowns the city; the height alone makes it a landmark
+  beyond the walls.
 
 lore.ziggurat_anu.title: Ziggurat of Anu
 lore.ziggurat_anu: >
-  The Ziggurat of Anu, sky god and father of Ishtar. This sacred structure rises
-  towards the heavens, symbolizing Anu's domain. Priests perform rituals here to
-  communicate with the gods and observe the movements of celestial bodies.
+  The Ziggurat of Anu rises about twelve metres above the plain: one massive terrace with
+  a waterproof bitumen court and stairs climbing to the White Temple. Priests perform
+  rituals here to honor the father of the gods and to watch the heavens from his height.
 
 lore.ziggurat_ishtar.title: Ziggurat of Ishtar
 lore.ziggurat_ishtar: >
-  The Ziggurat of Ishtar, dedicated to the goddess of love and war. Unlike other
-  ziggurats, this one is adorned with lapis lazuli and carnelian, gifts from lovers
-  and warriors seeking the goddess's favor. The temple at its summit is where Ishtar
-  receives offerings and makes her judgments.
+  The Ziggurat of Ishtar, dedicated to the goddess of love and war. Unlike the single
+  terrace of Anu, this stepped tower is adorned with lapis lazuli and carnelian, gifts
+  from lovers and warriors seeking the goddess's favor. The temple at its summit is where
+  Ishtar receives offerings and makes her judgments.
+
+lore.ziggurat_ur.title: Great Ziggurat of Ur
+lore.ziggurat_ur: >
+  Etemenniguru, the house whose foundation creates terror — the three-stage tower of Nanna
+  at Ur, sixty-four by forty-five metres at the base. Mud brick faced with baked brick in
+  bitumen; three stairways climb the long front to the moon god's shrine.
+
+lore.ziggurat_eridu.title: Ziggurat of Eridu
+lore.ziggurat_eridu: >
+  The raised house of Enki at Eridu, oldest of the cities of the King List. A low terrace
+  of mud brick with a bitumen court, older in spirit than the tall stepped towers of later kings.
+
+lore.ziggurat_nippur.title: Ziggurat of Nippur
+lore.ziggurat_nippur: >
+  The Ekur of Enlil at Nippur, the religious centre of Sumer. Its stepped mass rises about
+  twenty-five metres above the plain — the mountain house where the great gods assemble.
 
 lore.white_temple.title: White Temple
 lore.white_temple: >
-  The White Temple of Uruk, its whitewashed walls gleaming in the sun. Built upon
-  the ziggurat platform, this temple was one of the most sacred sites in ancient
-  Mesopotamia. Its white color symbolizes purity and the divine light of the gods.
+  The White Temple of Uruk, about twenty-two by seventeen metres, its whitewashed walls
+  gleaming on the bitumen court of Anu's terrace. Built toward the cardinal axes of that
+  platform, it was one of the most sacred sites in ancient Mesopotamia; its white colour
+  symbolizes purity and the divine light of the sky god.
 
 lore.great_wall_uruk.title: Great Wall of Uruk
 lore.great_wall_uruk: >

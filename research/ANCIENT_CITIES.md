@@ -33,11 +33,17 @@ checked against the Wikipedia article and other gazetteers (gps-coordinates.org,
 where sources disagreed, the more specific one won and the choice is noted below.
 `tools/build_world_map.py` fails its build when any of these pins lands in the sea.
 
+## Temple towers (ziggurats)
+
+Which of these pins carry a ziggurat in the game, which model is distinct vs a clone, and which
+cities are intentionally left without one: **`research/ZIGGURATS.md`**. Later Neo-Sumerian /
+Babylonian towers on Early Dynastic pins are deliberate anachronisms (same class as Etemenanki).
+
 ## Sumer and neighbours
 
 | City | Site and pin | Evidence for c. 2700 BCE | Sources |
 | --- | --- | --- | --- |
-| Ur | Tell el-Muqayyar, 30.9626 N 46.1030 E | Early Dynastic city, royal cemetery within a few generations (c. 2600 BC) | https://en.wikipedia.org/wiki/Ur |
+| Ur | Tell el-Muqayyar, 30.9626 N 46.1030 E | Early Dynastic city, royal cemetery within a few generations (c. 2600 BC); Great Ziggurat of Nanna is Ur III (~2100 BC) | https://en.wikipedia.org/wiki/Ur |
 | Eridu | Tell Abu Shahrain, 30.8261 N 45.9947 E | the oldest city of the King List, occupied from the Ubaid; ED shore site | https://en.wikipedia.org/wiki/Eridu |
 | Kish | Tell al-Uhaymir, 32.5403 N 44.6047 E | Enmebaragesi (c. 2700 BC) is the first King List ruler confirmed by finds | https://en.wikipedia.org/wiki/Kish_(Sumer) |
 | Nippur | Tell Nuffar, 32.1261 N 45.2308 E | occupied from Ubaid through the Early Dynastic | https://en.wikipedia.org/wiki/Nippur |

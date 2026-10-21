@@ -6,6 +6,10 @@ models:  etemenanki          the great tower of Babylon (seven stages), tower on
          etemenanki_precinct courtyard, enclosure wall with a glazed gate, palms
          etemenanki_complete both in one file
          anu                 the Early Dynastic ziggurat of Anu in Uruk with the White Temple on top
+         ur                  Etemenniguru at Ur (Nanna): 64 x 45 m, three stages (~30 m)
+         eridu               Enki platform at Eridu: low single terrace (distinct from Anu)
+         nippur              Ekur at Nippur: square three-stage tower (~25 m)
+         ur                  the Great Ziggurat of Ur (Nanna): 64 x 45 m, three terraces (Woolley)
 
 Metres, ground at z = 0, the front (stairs) faces -Y like the character models. Every wall is a prism with the
 sloping sides ("batter") and the pilaster and recess pattern of Mesopotamian mud-brick architecture; the stairs are
@@ -34,6 +38,8 @@ MATERIALS = {
     "glazed": ("glazed.jpg", (1, 1, 1), 0.3, 0.0, 3.0),
     "plaster": ("plaster.jpg", (1, 1, 1), 0.9, 0.0, 5.0),
     "paving": ("paving.jpg", (1, 1, 1), 0.95, 0.0, 2.4),   # one repeat = 8 x 8 square tiles of 30 cm (make_paving.py)
+    # Waterproof bitumen layer on terrace courts (Anu and Mesopotamian practice generally).
+    "bitumen": (None, (0.10, 0.09, 0.08), 0.7, 0.05, 1.0),
     "gold": (None, (0.9, 0.62, 0.12), 0.3, 0.9, 1.0),
     "door": (None, (0.035, 0.028, 0.022), 1.0, 0.0, 1.0),
     "trunk": (None, (0.30, 0.21, 0.12), 0.95, 0.0, 1.0),
@@ -410,25 +416,125 @@ def etemenanki(model, rng):
     return model
 
 
+def stepped_rect(model, rng, stages, temple_size=(15.0, 10.0, 5.0), body="mudbrick", cap="bitumen",
+                 shrine_body="plaster", detail=True):
+    """A rectangular multi-stage ziggurat. Each stage is (length_x, depth_y, height). Stairs face -Y on the
+    long front of the first stage (three flights meeting on a landing), then a central flight per upper stage.
+    Dimensions and sources: research/ZIGGURATS.md."""
+    from mathutils import Vector
+    z = 0.0
+    tops = []
+    top_front = top_w = top_d = None
+    for k, (sx, sy, h) in enumerate(stages):
+        inset = 0.04 * h
+        if k == 0:
+            y_front = -sy / 2
+        else:
+            y_front = top_front + 0.7 * (top_d - sy)
+        cy = y_front + sy / 2
+        spacing = 7.0 if k == 0 else max(3.2, min(sx, sy) / 10)
+        pts = outline(0.0, cy, sx, sy, spacing, 2.4 if k == 0 else 1.6, 0.7 if k == 0 else 0.4)
+        scale_x = (sx - 2 * inset) / sx
+        scale_y = (sy - 2 * inset) / sy
+        top_pts = prism(model, pts, z, z + h, Vector((0.0, cy)), scale_x, body, rng, cap_mat=cap, scale_y=scale_y)
+        if detail and k == 0:
+            weep_holes(model, pts, top_pts, z, z + h)
+        t_w, t_d = sx - 2 * inset, sy - 2 * inset
+        t_front = y_front + inset
+        # merlons helper is square; only ring near-square stages (Nippur), skip Ur's long rectangle
+        if abs(sx - sy) < 4.0:
+            merlons(model, 0.0, cy, t_w / 2, z + h, rng, skip_front=6.5 if k == 0 else 5.0, spacing=2.4, mat="plaster")
+        tops.append((z + h, 0.0, cy, t_w, t_d, t_front))
+        top_front, top_w, top_d = t_front, t_w, t_d
+        z += h
+    # three flights on the first stage
+    sx0, sy0, h0 = stages[0]
+    front = -sy0 / 2
+    landing_front, landing_half = front - 3.2, 6.0
+    wall_top_y = front + 0.04 * h0
+    box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front,
+        0.0, h0, body, cap, rng)
+    run = h0 * 0.316 / 0.3
+    stairs(model, 0.0, landing_front - run, (0, 1), 6.5, 0.0, h0, run, rh=0.3)
+    stair_parapets(model, 0.0, landing_front - run, (0, 1), 6.5, 0.0, h0, run)
+    side_run = sx0 / 2 - landing_half
+    stairs(model, -sx0 / 2, front - 1.5, (1, 0), 3.0, 0.0, h0, side_run, rh=0.3)
+    stairs(model, sx0 / 2, front - 1.5, (-1, 0), 3.0, 0.0, h0, side_run, rh=0.3)
+    zacc = h0
+    for k in range(1, len(stages)):
+        sx, sy, h = stages[k]
+        zt, cx, cy_k, t_w, t_d, t_front = tops[k]
+        y_front = cy_k - sy / 2
+        margin = y_front - tops[k - 1][5]
+        run_u = min(h, max(2.0, margin - 1.0))
+        stairs(model, 0.0, y_front + 0.2 - run_u, (0, 1), 4.8, zacc, h, run_u, rh=0.3)
+        zacc += h
+    zt, cx, cy_k, t_w, t_d, t_front = tops[-1]
+    tw, td, th = temple_size
+    back = cy_k + t_d / 2
+    yf = back - 1.5 - td
+    temple(model, 0.0, yf, zt, tw, td, th, rng, body=shrine_body, plinth_mat="plaster", gold=False, upper=False)
+    return model
+
+
+def ur(model, rng, detail=True):
+    """Etemenniguru at Ur: Woolley's 64 x 45 m base, three stages, about 30 m with the shrine
+    (research/ZIGGURATS.md)."""
+    return stepped_rect(model, rng, [(64.0, 45.0, 11.5), (46.0, 33.0, 8.0), (33.0, 22.0, 5.5)],
+                        temple_size=(15.0, 10.0, 5.0), detail=detail)
+
+
+def nippur(model, rng, detail=True):
+    """Ekur at Nippur: square three-stage tower about 25 m high (UNESCO / published summaries;
+    stage plan approximate — research/ZIGGURATS.md)."""
+    return stepped_rect(model, rng, [(52.0, 52.0, 12.0), (38.0, 38.0, 7.0), (26.0, 26.0, 4.0)],
+                        temple_size=(14.0, 11.0, 2.0), shrine_body="bakedbrick", detail=detail)
+
+
+def eridu(model, rng, detail=True):
+    """Enki's raised platform at Eridu: a low single terrace distinct from Anu's White Temple mass
+    (research/ZIGGURATS.md)."""
+    h = 8.0
+    w, d = 40.0, 36.0
+    inset = 2.4
+    pts = outline(0.0, 0.0, w, d, 8.0, 2.0, 0.7, 0.20)
+    top_pts = prism(model, pts, 0.0, h, Vector((0.0, 0.0)), (w - 2 * inset) / w, "mudbrick", rng,
+                    cap_mat="bitumen", scale_y=(d - 2 * inset) / d)
+    if detail:
+        weep_holes(model, pts, top_pts, 0.0, h)
+    court_front = -d / 2 + inset
+    landing_front, landing_half = -22.0, 5.5
+    box(model, 0.0, (landing_front + court_front) / 2, 2 * landing_half, court_front - landing_front,
+        0.0, h, "mudbrick", "bitumen", rng)
+    run = h * 0.316 / 0.3
+    stairs(model, 0.0, landing_front - run, (0, 1), 5.5, 0.0, h, run, rh=0.3)
+    stair_parapets(model, 0.0, landing_front - run, (0, 1), 5.5, 0.0, h, run)
+    side_x = w / 2
+    stairs(model, -side_x, -19.0, (1, 0), 2.8, 0.0, h, side_x - landing_half, rh=0.3)
+    stairs(model, side_x, -19.0, (-1, 0), 2.8, 0.0, h, side_x - landing_half, rh=0.3)
+    temple(model, 0.0, 0.5, h, 16.0, 12.0, 5.5, rng, body="plaster", plinth_mat="plaster", gold=False, upper=False)
+    return model
+
+
 def anu(model, rng, detail=True):
     """The Anu ziggurat of Early Dynastic Uruk: a single high terrace of mud brick with the whitewashed White
     Temple on its broad court (the dimensions and sources in research/ZIGGURATS.md).
 
     The excavations show one massive terrace, raised over many building phases to about 12 m, with sloping,
     buttressed sides and a surface of about 50 x 45 m; its base (57 x 52 m, the stairs reaching 42 m to the
-    front) follows the surveyed OSM footprint (tools/data/uruk_outlines.json). The White Temple on the court is
-    the documented 22.3 x 17.5 m, whitewashed, its roof about 21 m above the plain, and a small terrace with a
-    fire pit stands north of it. Three flights meet on a solid landing against the front of the terrace (the
-    layout of the reconstruction drawing of the ziggurat of Ur shown by the owner): a steep central one and two
-    long ramps climbing along the front. The central flight is 43 degrees (0.3 m risers, 0.316 m treads), the
-    slope the server's walking tests climb.
+    front) follows the surveyed OSM footprint (tools/data/uruk_outlines.json). The court is capped with a
+    waterproof bitumen layer; the White Temple on it is the documented 22.3 x 17.5 m, whitewashed, its roof
+    about 21 m above the plain, and a small terrace with a fire pit stands north of it. Three flights meet on
+    a solid landing against the front of the terrace (the layout of the reconstruction drawing of the ziggurat
+    of Ur shown by the owner): a steep central one and two long ramps climbing along the front. The central
+    flight is 43 degrees (0.3 m risers, 0.316 m treads), the slope the server's walking tests climb.
     """
     h = 12.0                        # the terrace, raised to about 12 m (artefacts-berlin.de, the Sebek thesis)
     w, d = 57.0, 52.0               # the base on the surveyed footprint (the mound is 56 x 49 m)
     inset = 3.5                     # the batter of the sides, 3.5 m in over the 12 m of height
     pts = outline(0.0, 0.0, w, d, 9.5, 2.5, 0.9, 0.16)   # smooth walls, narrow grooves
     top_pts = prism(model, pts, 0.0, h, Vector((0.0, 0.0)), (w - 2 * inset) / w, "mudbrick", rng,
-                    cap_mat="plaster", scale_y=(d - 2 * inset) / d)
+                    cap_mat="bitumen", scale_y=(d - 2 * inset) / d)
     if detail:
         weep_holes(model, pts, top_pts, 0.0, h)
     court_front = -d / 2 + inset    # the front edge of the 50 x 45 m court
@@ -436,7 +542,7 @@ def anu(model, rng, detail=True):
     # climbs straight at it, the two side flights run along the front towards it, all solid masonry to the ground
     landing_front, landing_half = -29.0, 7.0
     box(model, 0.0, (landing_front + court_front) / 2, 2 * landing_half, court_front - landing_front,
-        0.0, h, "mudbrick", "plaster", rng)
+        0.0, h, "mudbrick", "bitumen", rng)
     run = h * 0.316 / 0.3           # 43 degrees: 0.3 m risers, 0.316 m treads
     stairs(model, 0.0, landing_front - run, (0, 1), 7.0, 0.0, h, run, rh=0.3)
     stair_parapets(model, 0.0, landing_front - run, (0, 1), 7.0, 0.0, h, run)
@@ -445,7 +551,7 @@ def anu(model, rng, detail=True):
     side_x = w / 2
     stairs(model, -side_x, -27.5, (1, 0), 3.0, 0.0, h, side_x - landing_half, rh=0.3)
     stairs(model, side_x, -27.5, (-1, 0), 3.0, 0.0, h, side_x - landing_half, rh=0.3)
-    # the White Temple on the court, towards its back, and the small terrace with the fire pit north of it
+    # the White Temple on the bitumen court, towards its back, and the small terrace with the fire pit north of it
     temple(model, 0.0, 1.0, h, 22.3, 17.5, 8.0, rng, body="plaster", plinth_mat="plaster", gold=False, upper=False)
     box(model, 0.0, 20.75, 8.0, 3.5, h, h + 0.6, "plaster", "plaster", rng)
     box(model, 0.0, 20.75, 3.0, 2.0, h + 0.6, h + 0.9, "door", "door", rng)
@@ -638,6 +744,12 @@ def main():
         precinct(model, rng)
     elif which == "anu":
         anu(model, rng)
+    elif which == "ur":
+        ur(model, rng)
+    elif which == "eridu":
+        eridu(model, rng)
+    elif which == "nippur":
+        nippur(model, rng)
     else:
         raise SystemExit("unknown model " + which)
     finish(model, out)
