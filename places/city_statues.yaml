@@ -8,11 +8,11 @@
   parent: ur
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: ur, bearing_deg: 3.781, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: ur, bearing_deg: 176.219, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 176.22
+    yaw_deg: 3.78
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -23,11 +23,11 @@
   parent: eridu
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: eridu, bearing_deg: 347.434, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: eridu, bearing_deg: 192.566, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 192.57
+    yaw_deg: 347.43
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -38,11 +38,11 @@
   parent: kish
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: kish, bearing_deg: 170.668, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: kish, bearing_deg: 9.332, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 9.33
+    yaw_deg: 170.67
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -53,11 +53,11 @@
   parent: nippur
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: nippur, bearing_deg: 158.709, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: nippur, bearing_deg: 21.291, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 21.29
+    yaw_deg: 158.71
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -68,11 +68,11 @@
   parent: shuruppak
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: shuruppak, bearing_deg: 149.155, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: shuruppak, bearing_deg: 30.845, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 30.84
+    yaw_deg: 149.16
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -83,11 +83,11 @@
   parent: larsa
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: larsa, bearing_deg: 34.394, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: larsa, bearing_deg: 145.606, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 145.61
+    yaw_deg: 34.39
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -98,11 +98,11 @@
   parent: umma
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: umma, bearing_deg: 104.21, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: umma, bearing_deg: 75.79, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 75.79
+    yaw_deg: 104.21
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -113,11 +113,11 @@
   parent: lagash
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: lagash, bearing_deg: 53.838, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: lagash, bearing_deg: 126.162, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 126.16
+    yaw_deg: 53.84
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -128,11 +128,11 @@
   parent: girsu
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: girsu, bearing_deg: 73.346, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: girsu, bearing_deg: 106.654, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 106.65
+    yaw_deg: 73.35
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -143,11 +143,11 @@
   parent: nigin
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: nigin, bearing_deg: 50.493, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: nigin, bearing_deg: 129.507, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 129.51
+    yaw_deg: 50.49
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -158,11 +158,11 @@
   parent: abu_tbeirah
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: abu_tbeirah, bearing_deg: 12.87, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: abu_tbeirah, bearing_deg: 167.13, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 167.13
+    yaw_deg: 12.87
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -173,11 +173,11 @@
   parent: kissik
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: kissik, bearing_deg: 357.115, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: kissik, bearing_deg: 182.885, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 182.88
+    yaw_deg: 357.12
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -188,11 +188,11 @@
   parent: adab
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: adab, bearing_deg: 136.614, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: adab, bearing_deg: 43.386, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 43.39
+    yaw_deg: 136.61
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -203,11 +203,11 @@
   parent: eshnunna
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: eshnunna, bearing_deg: 151.464, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: eshnunna, bearing_deg: 28.536, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 28.54
+    yaw_deg: 151.46
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -218,11 +218,11 @@
   parent: nineveh
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: nineveh, bearing_deg: 156.143, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: nineveh, bearing_deg: 23.857, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 23.86
+    yaw_deg: 156.14
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -233,11 +233,11 @@
   parent: tell_brak
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: tell_brak, bearing_deg: 167.739, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: tell_brak, bearing_deg: 12.261, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 12.26
+    yaw_deg: 167.74
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -248,11 +248,11 @@
   parent: mari
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: mari, bearing_deg: 183.21, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: mari, bearing_deg: 356.79, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 356.79
+    yaw_deg: 183.21
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -263,11 +263,11 @@
   parent: susa
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: susa, bearing_deg: 68.84, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: susa, bearing_deg: 111.16, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 111.16
+    yaw_deg: 68.84
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -278,11 +278,11 @@
   parent: shahr_e_sukhteh
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: shahr_e_sukhteh, bearing_deg: 54.491, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: shahr_e_sukhteh, bearing_deg: 125.509, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 125.51
+    yaw_deg: 54.49
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -293,11 +293,11 @@
   parent: ebla
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: ebla, bearing_deg: 188.025, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: ebla, bearing_deg: 351.975, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 351.97
+    yaw_deg: 188.03
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -308,11 +308,11 @@
   parent: byblos
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: byblos, bearing_deg: 200.011, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: byblos, bearing_deg: 339.989, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 339.99
+    yaw_deg: 200.01
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -323,11 +323,11 @@
   parent: ugarit
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: ugarit, bearing_deg: 191.072, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: ugarit, bearing_deg: 348.928, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 348.93
+    yaw_deg: 191.07
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -338,11 +338,11 @@
   parent: sidon
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: sidon, bearing_deg: 203.69, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: sidon, bearing_deg: 336.31, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 336.31
+    yaw_deg: 203.69
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -353,11 +353,11 @@
   parent: megiddo
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: megiddo, bearing_deg: 209.891, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: megiddo, bearing_deg: 330.109, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 330.11
+    yaw_deg: 209.89
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -368,11 +368,11 @@
   parent: jericho
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: jericho, bearing_deg: 214.513, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: jericho, bearing_deg: 325.487, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 325.49
+    yaw_deg: 214.51
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -383,11 +383,11 @@
   parent: arad
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: arad, bearing_deg: 218.129, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: arad, bearing_deg: 321.871, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 321.87
+    yaw_deg: 218.13
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -398,11 +398,11 @@
   parent: hazor
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: hazor, bearing_deg: 207.034, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: hazor, bearing_deg: 332.966, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 332.97
+    yaw_deg: 207.03
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -413,11 +413,11 @@
   parent: memphis
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: memphis, bearing_deg: 221.695, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: memphis, bearing_deg: 318.305, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 318.3
+    yaw_deg: 221.7
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -428,11 +428,11 @@
   parent: heliopolis
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: heliopolis, bearing_deg: 220.466, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: heliopolis, bearing_deg: 319.534, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 319.53
+    yaw_deg: 220.47
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -443,11 +443,11 @@
   parent: abydos
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: abydos, bearing_deg: 238.257, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: abydos, bearing_deg: 301.743, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 301.74
+    yaw_deg: 238.26
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -458,11 +458,11 @@
   parent: hierakonpolis
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: hierakonpolis, bearing_deg: 244.503, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: hierakonpolis, bearing_deg: 295.497, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 295.5
+    yaw_deg: 244.5
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -473,11 +473,11 @@
   parent: naqada
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: naqada, bearing_deg: 241.282, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: naqada, bearing_deg: 298.718, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 298.72
+    yaw_deg: 241.28
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -488,11 +488,11 @@
   parent: koptos
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: koptos, bearing_deg: 241.15, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: koptos, bearing_deg: 298.85, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 298.85
+    yaw_deg: 241.15
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -503,11 +503,11 @@
   parent: elephantine
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: elephantine, bearing_deg: 248.377, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: elephantine, bearing_deg: 291.623, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 291.62
+    yaw_deg: 248.38
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -518,11 +518,11 @@
   parent: buto
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: buto, bearing_deg: 215.21, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: buto, bearing_deg: 324.79, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 324.79
+    yaw_deg: 215.21
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -533,11 +533,11 @@
   parent: kerma
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: kerma, bearing_deg: 253.948, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: kerma, bearing_deg: 286.052, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 286.05
+    yaw_deg: 253.95
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -548,11 +548,11 @@
   parent: altyndepe
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: altyndepe, bearing_deg: 80.443, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: altyndepe, bearing_deg: 99.557, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 99.56
+    yaw_deg: 80.44
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -563,11 +563,11 @@
   parent: namazga_depe
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: namazga_depe, bearing_deg: 83.244, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: namazga_depe, bearing_deg: 96.756, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 96.76
+    yaw_deg: 83.24
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -578,11 +578,11 @@
   parent: sarazm
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: sarazm, bearing_deg: 85.493, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: sarazm, bearing_deg: 94.507, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 94.51
+    yaw_deg: 85.49
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -593,11 +593,11 @@
   parent: harappa
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: harappa, bearing_deg: 64.101, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: harappa, bearing_deg: 115.899, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 115.9
+    yaw_deg: 64.1
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -608,11 +608,11 @@
   parent: kot_diji
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: kot_diji, bearing_deg: 51.938, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: kot_diji, bearing_deg: 128.062, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 128.06
+    yaw_deg: 51.94
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -623,11 +623,11 @@
   parent: kalibangan
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: kalibangan, bearing_deg: 62.586, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: kalibangan, bearing_deg: 117.414, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 117.41
+    yaw_deg: 62.59
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -638,11 +638,11 @@
   parent: rehman_dheri
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: rehman_dheri, bearing_deg: 65.817, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: rehman_dheri, bearing_deg: 114.183, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 114.18
+    yaw_deg: 65.82
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -653,11 +653,11 @@
   parent: dholavira
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: dholavira, bearing_deg: 45.871, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: dholavira, bearing_deg: 134.129, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 134.13
+    yaw_deg: 45.87
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -668,11 +668,11 @@
   parent: liangzhu
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: liangzhu, bearing_deg: 98.019, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: liangzhu, bearing_deg: 81.981, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 81.98
+    yaw_deg: 98.02
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -683,11 +683,11 @@
   parent: troy
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: troy, bearing_deg: 183.489, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: troy, bearing_deg: 356.511, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 356.51
+    yaw_deg: 183.49
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -698,11 +698,11 @@
   parent: poliochni
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: poliochni, bearing_deg: 184.24, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: poliochni, bearing_deg: 355.76, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 355.76
+    yaw_deg: 184.24
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -713,11 +713,11 @@
   parent: kultepe
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: kultepe, bearing_deg: 176.019, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: kultepe, bearing_deg: 3.981, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 3.98
+    yaw_deg: 176.02
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -728,11 +728,11 @@
   parent: liman_tepe
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: liman_tepe, bearing_deg: 187.962, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: liman_tepe, bearing_deg: 352.038, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 352.04
+    yaw_deg: 187.96
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -743,11 +743,11 @@
   parent: alaca_hoyuk
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: alaca_hoyuk, bearing_deg: 172.93, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: alaca_hoyuk, bearing_deg: 7.07, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 7.07
+    yaw_deg: 172.93
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -758,11 +758,11 @@
   parent: arslantepe
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: arslantepe, bearing_deg: 170.735, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: arslantepe, bearing_deg: 9.265, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 9.26
+    yaw_deg: 170.74
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -773,11 +773,11 @@
   parent: knossos
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: knossos, bearing_deg: 197.89, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: knossos, bearing_deg: 342.11, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 342.11
+    yaw_deg: 197.89
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -788,11 +788,11 @@
   parent: lerna
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: lerna, bearing_deg: 191.268, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: lerna, bearing_deg: 348.732, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 348.73
+    yaw_deg: 191.27
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -803,11 +803,11 @@
   parent: los_millares
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: los_millares, bearing_deg: 184.029, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: los_millares, bearing_deg: 355.971, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 355.97
+    yaw_deg: 184.03
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -818,11 +818,11 @@
   parent: zambujal
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: zambujal, bearing_deg: 178.384, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: zambujal, bearing_deg: 1.616, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 1.62
+    yaw_deg: 178.38
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -833,11 +833,11 @@
   parent: caral
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: caral, bearing_deg: 133.039, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: caral, bearing_deg: 46.961, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 46.96
+    yaw_deg: 133.04
     visible_m: 500
   requires:
     max_slope_deg: 60
@@ -848,11 +848,11 @@
   parent: aspero
   radius_m: 1
   # the king holding the lion, 25 m from the middle of the city towards Uruk, facing Uruk
-  locate: {from: aspero, bearing_deg: 132.893, distance_m: 25.0, tolerance_m: 0}
+  locate: {from: aspero, bearing_deg: 47.107, distance_m: 25.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_statue.glb
     collision: media/models/architecture/gilgamesh_statue_collision.glb
-    yaw_deg: 47.11
+    yaw_deg: 132.89
     visible_m: 500
   requires:
     max_slope_deg: 60

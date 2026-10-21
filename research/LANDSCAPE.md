@@ -78,6 +78,31 @@ palms, reeds, waterfowl and ED fauna weights inside a few kilometres of the city
 marsh-fringe overlay. See `research/FLORA.md` and `FAUNA.md`. Cleared streets and fields still
 suppress wild spawn.
 
+### 0 A.D. Persian structures (place models)
+
+Converted with `ishtaria-client/tools/zeroad-structures.py` (CC BY-SA 3.0) into
+`media/models/architecture/zeroad/` and mirrored under the client
+`assets/zeroad/structures/` (49 GLBs: civic, military, walls, houses, lamassu, gardens,
+ships, siege ram, ice houses, elephant stable, Ishtar Gate, chariots…).
+Place wiring (anachronistic silhouettes, not Kenney town fabric): every pin in
+`places/ancient_cities.yaml` now carries a structure; Susa also has lamassu guardians
+and an ice-house landmark; harbour ship landmarks (`places/harbour_ships.yaml`) use
+`structure.at_sea` so biremes and fishboats sit at mean sea level off Byblos, Ugarit,
+Sidon, Abu Tbeirah, Kissik, Liman Tepe, Buto and Áspero; siege rams flank Megiddo and
+Troy; Ishtar Gate ornaments stand at Uruk’s city_gate and beside Etemenanki; chariots
+at Susa, Nineveh and Kish. Elephantine uses the elephant stable mesh. Wetland fauna
+entries may set `waterside: true` (crocodiles, gulls, waterfowl).
+
+### 0 A.D. terrain textures (optional surface variety)
+
+The Earth strip heightmap and water mask stay authoritative. Albedos are exported with
+`ishtaria-client/tools/zeroad-terrain.py` into `assets/zeroad/terrain/` (PNG ≤ 1024 px,
+CC BY-SA 3.0). The detail shader (`planet_surface.gdshader`) keeps Poly Haven as the base
+and blends Persia dirt into sand/soil and cliff into rock when `use_persia_textures` is on
+(`persia_blend` ≈ 0.35, set from `main.gd`). Extra maps (farmland, city tile, more cliffs)
+remain available for further tuning. Source trees under `art/textures/terrain/types/`.
+Flora and fauna mesh checklists: `research/FLORA.md`, `research/FAUNA.md`.
+
 ## Known simplifications (alpha)
 
 - **Places lie where the excavations and the geography put them** (`locate`, ADR 0016): the Eanna precinct and the

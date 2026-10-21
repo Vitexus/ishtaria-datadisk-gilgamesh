@@ -51,10 +51,18 @@ music.city: Streets of Uruk
 music.temple: Temple Music
 music.ishtar_shrine: Ishtar's Shrine
 music.cedar_forest: Cedar Forest
-music.mountain_echo: Mountain Echo
-music.waters_of_death: Waters of Death
-music.utnapishtim: Utnapishtim's Theme
+music.mountain_echo: Peaks of Atlas
+music.waters_of_death: Dried Tears
+music.utnapishtim: Elysian Fields
 music.waters: Marsh Waters
+music.land_between_rivers: Land Between Rivers
+music.cradle: Cradle of Civilization
+music.nile: Along the Nile
+music.mediterranean: Mediterranean Waves
+music.eastern_dreams: Eastern Dreams
+music.beyond_indus: Beyond the Indus
+music.waters_edge: Water's Edge
+music.sands: Sands of Time
 
 # Crowd passers-by
 crowd.greet: Peace of the city to you.
@@ -887,6 +895,15 @@ place.nineveh: Nineveh
 place.tell_brak: Tell Brak
 place.mari: Mari
 place.susa: Susa
+place.susa_lamassu: Lamassu of Susa
+place.ice_house: Ice house
+place.harbour_bireme: Harbour bireme
+place.harbour_trireme: Harbour trireme
+place.harbour_merchant: Merchant ship
+place.harbour_fishship: Fishing boat
+place.siege_ram: Siege ram
+place.ishtar_gate_ornament: Ishtar Gate
+place.persian_chariot: Persian chariot
 place.shahr_e_sukhteh: Shahr-e Sukhteh
 place.ebla: Ebla
 place.byblos: Byblos
@@ -1117,3 +1134,38 @@ gilgamesh.ask_more: Ask about other things.
 gilgamesh.back: (Back.)
 quest.shamhat.teach_love: His heart softens. Offer him the bread of people.
 enkidu_civilize.love_chase: He flees like a gazelle. Throw hearts of love — fill the ground with your zone until the wildness fades.
+
+# Namesake ancestors of the later Achaemenid kings (other cities than Uruk)
+npc.cyrus: Kuruš
+npc.cyrus.bio: "Ruler of Susa in the age of the Epic. A namesake ancestor of the later Achaemenid kings — not Cyrus the Great himself. Ask him about himself for the historical note and a link to the famous conqueror."
+npc.darius: Dārayavahuš
+npc.darius.bio: "Ruler of Nineveh in the age of the Epic. A namesake ancestor of the later Achaemenid kings — not Darius the Great himself. Ask him about himself for the historical note and a link to the famous king."
+npc.xerxes: Xšayāršā
+npc.xerxes.bio: "Ruler of Mari in the age of the Epic. A namesake ancestor of the later Achaemenid kings — not Xerxes I himself. Ask him about himself for the historical note and a link to the famous king."
+
+knowledge.cyrus.title: Kuruš of Susa
+knowledge.cyrus.text: "This Kuruš rules Susa in the Early Dynastic age of the Epic. He is a namesake ancestor of the famous Achaemenid line, not Cyrus the Great of the sixth century BCE — the likeness and the name are a deliberate anachronism. The Wikipedia article below is about that later conqueror."
+knowledge.cyrus.credit: "Relief of Cyrus the Great, illustration from Illustrerad verldshistoria (E. Wallis), volume I. Public domain, via Wikimedia Commons."
+
+knowledge.darius.title: Dārayavahuš of Nineveh
+knowledge.darius.text: "This Dārayavahuš rules Nineveh in the age of Gilgamesh. He is a namesake ancestor of the later Achaemenid kings, not Darius the Great himself — the shared name bridges two eras on purpose. The Wikipedia article below is about the historical Darius the Great."
+knowledge.darius.credit: "A king of Persia, illustration from Illustrerad verldshistoria (E. Wallis), volume I. Public domain, via Wikimedia Commons."
+
+knowledge.xerxes.title: Xšayāršā of Mari
+knowledge.xerxes.text: "This Xšayāršā rules Mari in the age of the Epic. He is a namesake ancestor of the later Achaemenid kings, not Xerxes I of the fifth century BCE — the resemblance is intentional game lore. The Wikipedia article below is about the historical Xerxes I."
+knowledge.xerxes.credit: "Xerxes, illustration by A. Yakovlev (1911) for The General History Edited by Satyricon. Public domain, via Wikimedia Commons."
+
+cyrus.greet: "I am Kuruš, lord of Susa. Uruk has Gilgamesh; here the plain answers to me."
+cyrus.ask_city: Ask about Susa
+cyrus.city: "Susa stands between the rivers of Elam and the road to the highlands. Bring trade, not war, and you will be welcome."
+cyrus.leave: Farewell
+
+darius.greet: "I am Dārayavahuš of Nineveh. The north watches while Uruk builds its walls."
+darius.ask_city: Ask about Nineveh
+darius.city: "Nineveh guards the upper Tigris. Messengers and merchants pass; armies that do not ask leave their bones."
+darius.leave: Farewell
+
+xerxes.greet: "I am Xšayāršā, who holds Mari on the Euphrates road. Gilgamesh's city is not the only crown."
+xerxes.ask_city: Ask about Mari
+xerxes.city: "Mari lives by the river trade. Cedar, copper and news of distant kings all stop at our quays."
+xerxes.leave: Farewell

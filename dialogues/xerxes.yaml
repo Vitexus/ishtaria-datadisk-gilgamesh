@@ -1,0 +1,15 @@
+id: xerxes
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: xerxes.greet
+    choices:
+      - {text_key: xerxes.ask_city, goto: city}
+      - {text_key: xerxes.leave}
+
+  city:
+    text_key: xerxes.city
+    choices:
+      - {text_key: xerxes.leave}

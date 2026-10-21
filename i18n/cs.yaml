@@ -51,10 +51,18 @@ music.city: Ulice Uruku
 music.temple: Chrámová hudba
 music.ishtar_shrine: Svatyně Ištar
 music.cedar_forest: Cedrový les
-music.mountain_echo: horská ozvěna
-music.waters_of_death: Vody smrti
-music.utnapishtim: Utnapištimova melodie
+music.mountain_echo: Vrcholky Atlasu
+music.waters_of_death: Usušené slzy
+music.utnapishtim: Elysejská pole
 music.waters: Bažinné vody
+music.land_between_rivers: Země mezi řekami
+music.cradle: Kolébka civilizace
+music.nile: Podél Nilu
+music.mediterranean: Středomořské vlny
+music.eastern_dreams: Východní sny
+music.beyond_indus: Za Indem
+music.waters_edge: Na břehu
+music.sands: Písky času
 
 crowd.greet: Mír města s tebou.
 crowd.reply: Co nového na trhu?
@@ -870,6 +878,15 @@ place.nineveh: Ninive
 place.tell_brak: Tell Brak
 place.mari: Mari
 place.susa: Súsy
+place.susa_lamassu: Lamassu ze Sús
+place.ice_house: Ledárna
+place.harbour_bireme: Přístavní biréma
+place.harbour_trireme: Přístavní triéra
+place.harbour_merchant: Obchodní loď
+place.harbour_fishship: Rybářský člun
+place.siege_ram: Obléhací beranidlo
+place.ishtar_gate_ornament: Ištařina brána
+place.persian_chariot: Perský vůz
 place.shahr_e_sukhteh: Šahr-e Suchte (Spálené město)
 place.ebla: Ebla
 place.byblos: Biblos
@@ -1100,3 +1117,38 @@ gilgamesh.ask_more: Zeptat se na jiné věci.
 gilgamesh.back: (Zpět.)
 quest.shamhat.teach_love: Jeho srdce měkne. Nabídni mu chléb lidí.
 enkidu_civilize.love_chase: Prchá jako gazela. Házej srdíčka lásky — naplň zem zónami, dokud divočina neustoupí.
+
+# Stejnojmenní předkové pozdějších achajmenovských vládců (jiná města než Uruk)
+npc.cyrus: Kuruš
+npc.cyrus.bio: "Vládce Sús v době Eposu. Stejnojmenný předek pozdějších achajmenovských králů — ne sám Kýros Veliký. Zeptej se ho na něj samotného: poznámka k anachronismu a odkaz na slavného dobyvače."
+npc.darius: Dārayavahuš
+npc.darius.bio: "Vládce Ninive v době Eposu. Stejnojmenný předek pozdějších achajmenovských králů — ne sám Dareios Veliký. Zeptej se ho na něj samotného: poznámka k anachronismu a odkaz na slavného krále."
+npc.xerxes: Xšayāršā
+npc.xerxes.bio: "Vládce Mari v době Eposu. Stejnojmenný předek pozdějších achajmenovských králů — ne sám Xerxés I. Zeptej se ho na něj samotného: poznámka k anachronismu a odkaz na slavného krále."
+
+knowledge.cyrus.title: Kuruš ze Sús
+knowledge.cyrus.text: "Tento Kuruš vládne Súsám v raně dynastické době Eposu. Je stejnojmenným předkem slavné achajmenovské linie, ne Kýrem Velikým z 6. století př. n. l. — podoba a jméno jsou záměrný anachronismus. Článek na Wikipedii níže je o tom pozdějším dobyvači."
+knowledge.cyrus.credit: "Reliéf Kýra Velikého, ilustrace z Illustrerad verldshistoria (E. Wallis), díl I. Volné dílo, přes Wikimedia Commons."
+
+knowledge.darius.title: Dārayavahuš z Ninive
+knowledge.darius.text: "Tento Dārayavahuš vládne Ninive v době Gilgameše. Je stejnojmenným předkem pozdějších achajmenovských králů, ne samotným Dareiém Velikým — společné jméno záměrně spojuje dvě epochy. Článek na Wikipedii níže je o historickém Dareiovi Velikém."
+knowledge.darius.credit: "Perský král, ilustrace z Illustrerad verldshistoria (E. Wallis), díl I. Volné dílo, přes Wikimedia Commons."
+
+knowledge.xerxes.title: Xšayāršā z Mari
+knowledge.xerxes.text: "Tento Xšayāršā vládne Mari v době Eposu. Je stejnojmenným předkem pozdějších achajmenovských králů, ne Xerxem I. z 5. století př. n. l. — podobnost je záměrná herní legenda. Článek na Wikipedii níže je o historickém Xerxovi I."
+knowledge.xerxes.credit: "Xerxés, ilustrace A. Jakovleva (1911) pro The General History Edited by Satyricon. Volné dílo, přes Wikimedia Commons."
+
+cyrus.greet: "Jsem Kuruš, pán Sús. Uruk má Gilgameše; tady mi odpovídá rovina."
+cyrus.ask_city: Zeptat se na Súsy
+cyrus.city: "Súsy stojí mezi řekami Elamu a cestou do vysočiny. Přines obchod, ne válku, a budeš vítán."
+cyrus.leave: Sbohem
+
+darius.greet: "Jsem Dārayavahuš z Ninive. Sever bdí, zatímco Uruk staví hradby."
+darius.ask_city: Zeptat se na Ninive
+darius.city: "Ninive střeží horní Tigris. Poslové a kupci procházejí; vojska, která se nezeptají, nechávají kosti."
+darius.leave: Sbohem
+
+xerxes.greet: "Jsem Xšayāršā, který drží Mari na eufratské cestě. Gilgamešovo město není jediná koruna."
+xerxes.ask_city: Zeptat se na Mari
+xerxes.city: "Mari žije říčním obchodem. Cedr, měď i zprávy o vzdálených králích se zastavují u našich přístavišť."
+xerxes.leave: Sbohem

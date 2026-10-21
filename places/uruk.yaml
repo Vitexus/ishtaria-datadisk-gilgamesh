@@ -44,31 +44,75 @@
       - {id: nature.tree_palmShort, weight: 4}
       - {id: nature.tree_palmBend, weight: 3}
       - {id: quaternius.palm_1, weight: 4}
+      - {id: zeroad.palm_date_a, weight: 3}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_new_3, weight: 2}
+      - {id: zeroad.palm_date_new_4, weight: 2}
+      - {id: zeroad.palm_date_d, weight: 2}
+      - {id: zeroad.palm_date_e, weight: 2}
+      - {id: zeroad.cretan_date_01, weight: 1}
+      - {id: zeroad.cretan_date_02, weight: 1}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+      - {id: zeroad.palm_date_fruit_2, weight: 2}
+      - {id: zeroad.palm_dead_1, weight: 1}
+      - {id: zeroad.palm_dead_2, weight: 1}
+      - {id: zeroad.poplar_lombardy_dead, weight: 1}
       - {id: nature.reed_clump, weight: 10}
+      - {id: zeroad.reed_pond_lush, weight: 5}
+      - {id: zeroad.reed_giant, weight: 3}
+      - {id: zeroad.reed_beach_a, weight: 4}
+      - {id: zeroad.reed_beach_b, weight: 4}
+      - {id: zeroad.papyrus_1, weight: 3}
+      - {id: zeroad.papyrus_2, weight: 3}
+      - {id: zeroad.cattails, weight: 3}
       - {id: nature.plant_flatTall, weight: 5}
       - {id: nature.plant_flatShort, weight: 4}
       - {id: nature.plant_bushSmall, weight: 2}
       - {id: hyper3d.tamarisk, weight: 4}
+      - {id: zeroad.tamarix_a, weight: 2}
+      - {id: zeroad.poplar_lombardy, weight: 3}
+      - {id: zeroad.willow_a, weight: 2}
+      - {id: zeroad.fig_a, weight: 3}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: zeroad.fig_top_a, weight: 1}
+      - {id: zeroad.fig_top_b, weight: 1}
+      - {id: zeroad.bush_desert_a, weight: 2}
       - {id: quaternius.bush_1, weight: 1}
     fauna:
       - {id: animal.sheep, weight: 5}
+      - {id: zeroad.sheep, weight: 2}
       - {id: animal.goat, weight: 4}
+      - {id: zeroad.goat, weight: 2}
       - {id: animal.pig, weight: 2}
+      - {id: zeroad.pig, weight: 1}
       - {id: animal.cow, weight: 2}
+      - {id: zeroad.cow, weight: 1}
       - {id: animal.bull, weight: 1}
+      - {id: zeroad.bull, weight: 1}
       - {id: animal.donkey, weight: 3}
+      - {id: zeroad.donkey, weight: 1}
       - {id: animal.gazelle, weight: 4}
+      - {id: zeroad.gazelle, weight: 3}
       - {id: animal.onager, weight: 2}
       - {id: animal.deer, weight: 1}
+      - {id: zeroad.deer, weight: 1}
       - {id: animal.lizard, weight: 2}
-      - {id: animal.turtle, weight: 2}
-      - {id: animal.duck, weight: 5}
-      - {id: animal.goose, weight: 4}
+      - {id: animal.turtle, weight: 2, waterside: true}
+      - {id: animal.duck, weight: 5, waterside: true}
+      - {id: animal.goose, weight: 4, waterside: true}
       - {id: animal.pigeon, weight: 2}
       - {id: animal.falcon, weight: 1}
+      - {id: zeroad.hawk, weight: 1}
+      - {id: zeroad.crow, weight: 1}
       - {id: animal.fox, weight: 2}
+      - {id: zeroad.fox, weight: 1}
       - {id: animal.wolf, weight: 1}
+      - {id: zeroad.wolf, weight: 1}
       - {id: animal.chicken, weight: 1}
+      - {id: zeroad.chicken, weight: 1}
   requires:
     biome: [grassland]
     height_m: {min: 0, max: 200}
@@ -158,6 +202,8 @@
   name_key: place.river_bank
   parent: uruk
   radius_m: 45
+  music: waters_edge
+  music_radius_m: 120
   locate: {from: uruk, bearing_deg: 56.8, distance_m: 1320, tolerance_m: 0}
   requires:
     max_slope_deg: 30
@@ -184,15 +230,35 @@
     radius_m: 900
     density: 2.0
     flora:
-      - {id: nature.tree_pineTallA, weight: 6}
-      - {id: nature.tree_pineTallB, weight: 5}
-      - {id: nature.tree_pineTallC, weight: 5}
-      - {id: nature.tree_pineRoundA, weight: 3}
+      - {id: zeroad.cedar_atlas_1, weight: 8}
+      - {id: zeroad.cedar_atlas_2, weight: 7}
+      - {id: zeroad.cedar_atlas_3, weight: 6}
+      - {id: zeroad.cedar_atlas_dead_1, weight: 2}
+      - {id: zeroad.cedar_atlas_dead_2, weight: 2}
+      - {id: zeroad.aleppo_pine_1, weight: 4}
+      - {id: zeroad.aleppo_pine_2, weight: 3}
+      - {id: zeroad.aleppo_pine_3, weight: 3}
+      - {id: zeroad.aleppo_pine_4, weight: 2}
+      - {id: zeroad.aleppo_pine_5, weight: 2}
+      - {id: zeroad.aleppo_pine_6, weight: 2}
+      - {id: zeroad.aleppo_pine_7, weight: 1}
+      - {id: zeroad.aleppo_pine_8, weight: 1}
+      - {id: nature.tree_pineTallA, weight: 1}
+      - {id: nature.tree_pineTallB, weight: 1}
+      - {id: zeroad.cypress_med, weight: 2}
+      - {id: zeroad.cypress_tall, weight: 2}
+      - {id: zeroad.bush_desert_a, weight: 2}
     fauna:
       - {id: animal.deer, weight: 4}
+      - {id: zeroad.deer, weight: 3}
       - {id: animal.stag, weight: 3}
       - {id: animal.wolf, weight: 2}
+      - {id: zeroad.wolf, weight: 2}
       - {id: animal.fox, weight: 2}
+      - {id: zeroad.fox, weight: 1}
+      - {id: zeroad.boar, weight: 2}
+      - {id: zeroad.lion, weight: 1}
+      - {id: zeroad.lioness, weight: 1}
   # The Cedar Forest of the epic is the cedar mountains of Lebanon: 953 km west-north-west of Uruk
   # (34.24 N 36.05 E against 31.32 N 45.64 E).
   locate: {from: uruk, bearing_deg: 292, distance_m: 953000, tolerance_m: 250000}
@@ -214,6 +280,8 @@
   kind: landmark
   name_key: place.mount_mashu
   radius_m: 60
+  music: mountain_echo
+  music_radius_m: 350
   # Mashu, the mountain of the sunset, is taken for the Anti-Lebanon: 68 km south-east of the cedars.
   locate: {from: cedar_forest, bearing_deg: 137, distance_m: 68000, tolerance_m: 60000}
   requires:
@@ -245,7 +313,7 @@
   kind: landmark
   name_key: place.waters_of_death
   radius_m: 80
-  music: waters
+  music: waters_of_death
   music_radius_m: 250
   # The waters that Gilgamesh crossed: the head of the Gulf, 333 km south-east of Uruk (29.9 N 48.7 E).
   locate: {from: uruk, bearing_deg: 118, distance_m: 333000, tolerance_m: 150000}
@@ -256,6 +324,8 @@
   kind: building
   name_key: place.utnapishtim_dwelling
   radius_m: 35
+  music: utnapishtim
+  music_radius_m: 200
   # Utnapishtim lives in Dilmun, which is taken for Bahrain: 756 km south-east of Uruk (26.07 N 50.56 E).
   locate: {from: uruk, bearing_deg: 139, distance_m: 756000, tolerance_m: 300000}
   requires:

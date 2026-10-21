@@ -1,0 +1,15 @@
+id: cyrus
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: cyrus.greet
+    choices:
+      - {text_key: cyrus.ask_city, goto: city}
+      - {text_key: cyrus.leave}
+
+  city:
+    text_key: cyrus.city
+    choices:
+      - {text_key: cyrus.leave}

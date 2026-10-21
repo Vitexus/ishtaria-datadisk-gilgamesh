@@ -25,3 +25,50 @@
   file: media/music/waters.ogg
   title_key: music.waters
   loop: true
+
+# 0 A.D. public music (Wildfire Games, CC BY-SA 3.0) — place-specific colour.
+# See media/music/License-zeroad.txt.
+- id: land_between_rivers
+  file: media/music/land_between_rivers.ogg
+  title_key: music.land_between_rivers
+  loop: true
+- id: cradle
+  file: media/music/cradle.ogg
+  title_key: music.cradle
+  loop: true
+- id: nile
+  file: media/music/nile.ogg
+  title_key: music.nile
+  loop: true
+- id: mediterranean
+  file: media/music/mediterranean.ogg
+  title_key: music.mediterranean
+  loop: true
+- id: eastern_dreams
+  file: media/music/eastern_dreams.ogg
+  title_key: music.eastern_dreams
+  loop: true
+- id: beyond_indus
+  file: media/music/beyond_indus.ogg
+  title_key: music.beyond_indus
+  loop: true
+- id: mountain_echo
+  file: media/music/mountain_echo.ogg
+  title_key: music.mountain_echo
+  loop: true
+- id: utnapishtim
+  file: media/music/utnapishtim.ogg
+  title_key: music.utnapishtim
+  loop: true
+- id: waters_of_death
+  file: media/music/waters_of_death.ogg
+  title_key: music.waters_of_death
+  loop: true
+- id: waters_edge
+  file: media/music/waters_edge.ogg
+  title_key: music.waters_edge
+  loop: true
+- id: sands
+  file: media/music/sands.ogg
+  title_key: music.sands
+  loop: true

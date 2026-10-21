@@ -67,9 +67,72 @@ Avoid reef ornamentals (`clownfish`, `tang`, `lionfish`, …) in the Uruk overla
 | Gazelle / onager / goat mesh | Shipped: `animal.gazelle`, `animal.onager`, `animal.goat` (Hyper3D Rodin, client `assets/hyper3d/ed/`). Poly Pizza had no gazelle or onager. |
 | Falcon / pigeon | Shipped: `animal.falcon`, `animal.pigeon` (Hyper3D). The Poly Pizza pigeon is a cartoon character and was not used. |
 | Waterfowl | Shipped: `animal.duck` (Quaternius Bird, CC0), `animal.goose` (polarvoid on Sketchfab, CC BY). |
-| Lion (Epic) | Mountain lion already in disk models-src; wild spawn optional later |
+| Lion (Epic) | Mountain lion already in disk models-src; wild spawn optional later; 0ad lion below as scenery variant |
+| Extra herd / predator / bird silhouettes | Import from 0 A.D. (below) — diversity beside existing IDs |
+
+## 0 A.D. import checklist (fauna)
+
+Source: Wildfire Games `public` mod, **CC BY-SA 3.0**. Actors under `art/actors/fauna/`;
+templates under `simulation/templates/gaia/fauna_*.xml`. Same pipeline as flora: source `.dae` →
+`.glb`, catalog prefix **`zeroad.`**, register in `ishtaria-server/etc/world_fauna.json`, weight in
+`wildlife.fauna`. Passable scenery with **Idle/Walk** clips from `tools/zeroad-fauna-anim.py`
+(do not overwrite with the flora-only `zeroad-scenery.py`). Existing `animal.*` / Hyper3D IDs
+stay; 0ad entries are **additional variants**.
+
+Note: `gazelle.xml` uses `skeletal/deer_mesh.dae` with a gazelle skin — still a useful second look.
+
+### Priority 1 — Uruk plain / Epic game
+
+| ID | Status | Beside existing | Overlay hint |
+| --- | --- | --- | --- |
+| `zeroad.gazelle` | **shipped** (Idle/Walk) | `animal.gazelle` | Uruk / hunter water-hole |
+| `zeroad.goat` | **shipped** (Idle/Walk) | `animal.goat` | Settlements |
+| `zeroad.sheep` | **shipped** (Idle/Walk) | `animal.sheep` | Pasture fringe |
+| `zeroad.cow` / `zeroad.bull` | **shipped** (Idle/Walk) | `animal.cow` / `animal.bull` | Herds |
+| `zeroad.donkey` | **shipped** (Idle/Walk) | `animal.donkey` | Paths |
+| `zeroad.pig` | **shipped** (Idle/Walk) | `animal.pig` | Village edge |
+| `zeroad.chicken` | **shipped** (Idle/Walk) | `animal.chicken` | Settlement |
+| `zeroad.fox` | **shipped** (Idle/Walk) | `animal.fox` | Steppe |
+| `zeroad.wolf` | **shipped** (Idle/Walk) | `animal.wolf` | Cedar Forest / wild |
+| `zeroad.lion` / `zeroad.lioness` | **shipped** Idle/Walk (rare) | story mountain lion | Cedar Forest fringe |
+| `zeroad.deer` | **shipped** (Idle/Walk) | `animal.deer` | Cedar Forest |
+| `zeroad.boar` | **shipped** (Idle/Walk) | — | Forest edge |
+| `zeroad.mastiff` | **shipped** (Idle/Walk=run) | settlement dog | Hunter water-hole, Byblos, Memphis |
+| `zeroad.hawk` / `crow` / `seagull` | **shipped** (`flying`, altitude 14–22 m; Idle=glide, Walk=flight) | aerial wander | Uruk, hunter, lagoon |
+
+### Priority 2 — marshes, rivers, distant pins
+
+| ID | Status | Notes |
+| --- | --- | --- |
+| `zeroad.crocodile` | **shipped** (Idle/Walk) | Abu Tbeirah, Memphis — rare weight |
+| `zeroad.camel` | **shipped** (Idle/Walk) | Susa / Iranian fringe only |
+| `zeroad.horse_persian` | **shipped** (Idle/Walk) | Susa rare — not ED Uruk flocks |
+| `zeroad.zebu` | **shipped** (Idle/Walk) | Memphis / southern cattle |
+| `zeroad.fish_generic` | **shipped** (aquatic; overlay YAML weight is ignored — global water layer only) | Marsh / Memphis water |
+
+### Priority 3 — skip for this disk
+
+| 0ad actor | Why |
+| --- | --- |
+| Polar / arctic wolf, polar bear, walrus, whale, shark | Wrong climate |
+| Giraffe, zebra, rhino, wildebeest, tiger, hippo (except maybe far African pins) | Wrong fauna province for Gilgamesh Earth focus |
+| Asian/African war elephants | Military / later; not ED Uruk scenery |
+| `dragon.xml`, `pig_flaming.xml` | Fantasy / joke |
+| Peacock | Anachronistic palace vanity — optional garden prop only, not wild overlay |
+
+### Onager gap
+
+0ad has **no dedicated onager**. Keep `animal.onager` (Hyper3D). Do not remap donkey/horse to onager.
+
+### Import order (fauna)
+
+1. `zeroad.gazelle`, `zeroad.goat`, `zeroad.sheep`, cattle, `zeroad.donkey`, `zeroad.pig`
+2. `zeroad.fox`, `zeroad.wolf`, `zeroad.deer`, `zeroad.boar`
+3. `zeroad.lion` / `zeroad.lioness` (rare), birds (`hawk`, `crow`, chicken)
+4. Marsh / pin-specific (`crocodile`, seagull, fish) and Iranian fringe (`camel`, `horse_persian`) only where places ask for them
 
 ## Cedar Forest / wilderness of the Epic
 
 Higher density of deer/stag and wolf; no sheep flocks. Lions as story NPCs / creatures remain
-separate from passable scenery fauna.
+separate from passable scenery fauna; `zeroad.lion` may later feed a rare wild overlay or Mashu
+approach without replacing the Epic fight creature.

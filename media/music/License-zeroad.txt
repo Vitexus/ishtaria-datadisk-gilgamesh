@@ -1,0 +1,15 @@
+0 A.D. music tracks (Wildfire Games)
+====================================
+
+Bundled as: land_between_rivers.ogg (Land_Between_Rivers), cradle.ogg
+(Cradle_of_Civilization), nile.ogg (Along_the_Nile), mediterranean.ogg
+(Mediterranean_Waves), eastern_dreams.ogg (Eastern_Dreams), beyond_indus.ogg
+(Beyond_The_Indus), mountain_echo.ogg (Peaks_of_Atlas), utnapishtim.ogg
+(Elysian_Fields), waters_of_death.ogg (Dried_Tears), waters_edge.ogg
+(Water's_Edge), sands.ogg (Sands_of_Time).
+
+Source: 0 A.D. public.zip audio/music/ (CC BY-SA 3.0).
+Author and copyright: Wildfire Games (http://www.wildfiregames.com/).
+Licence: http://creativecommons.org/licenses/by-sa/3.0/
+
+Attribution required when distributing these files.

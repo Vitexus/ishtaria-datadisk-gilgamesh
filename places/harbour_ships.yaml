@@ -1,0 +1,155 @@
+# Harbour ship and siege landmarks (0 A.D. Persian CC BY-SA meshes) — anachronistic
+# silhouettes at coastal pins and a few military seats. Ships use structure.at_sea so
+# they sit at mean sea level; siege rams and ice houses stay on terrain. Parent cities
+# keep their dock or gate on the tell.
+
+- id: byblos_bireme
+  kind: landmark
+  name_key: place.harbour_bireme
+  parent: byblos
+  radius_m: 8
+  locate: {from: byblos, bearing_deg: 270, distance_m: 55, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_bireme.glb
+    yaw_deg: 0
+    visible_m: 900
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: ugarit_trireme
+  kind: landmark
+  name_key: place.harbour_trireme
+  parent: ugarit
+  radius_m: 8
+  locate: {from: ugarit, bearing_deg: 270, distance_m: 60, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_trireme.glb
+    yaw_deg: 10
+    visible_m: 900
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: sidon_merchant
+  kind: landmark
+  name_key: place.harbour_merchant
+  parent: sidon
+  radius_m: 6
+  locate: {from: sidon, bearing_deg: 280, distance_m: 50, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_merchant.glb
+    yaw_deg: 5
+    visible_m: 700
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: abu_tbeirah_fishship
+  kind: landmark
+  name_key: place.harbour_fishship
+  parent: abu_tbeirah
+  radius_m: 5
+  locate: {from: abu_tbeirah, bearing_deg: 135, distance_m: 45, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    yaw_deg: 45
+    visible_m: 600
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: kissik_fishship
+  kind: landmark
+  name_key: place.harbour_fishship
+  parent: kissik
+  radius_m: 5
+  locate: {from: kissik, bearing_deg: 120, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    yaw_deg: 30
+    visible_m: 500
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: liman_tepe_merchant
+  kind: landmark
+  name_key: place.harbour_merchant
+  parent: liman_tepe
+  radius_m: 6
+  locate: {from: liman_tepe, bearing_deg: 250, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_merchant.glb
+    yaw_deg: 20
+    visible_m: 600
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: buto_fishship
+  kind: landmark
+  name_key: place.harbour_fishship
+  parent: buto
+  radius_m: 5
+  locate: {from: buto, bearing_deg: 0, distance_m: 45, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    yaw_deg: 90
+    visible_m: 500
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: aspero_fishship
+  kind: landmark
+  name_key: place.harbour_fishship
+  parent: aspero
+  radius_m: 5
+  locate: {from: aspero, bearing_deg: 270, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    yaw_deg: 0
+    visible_m: 500
+    at_sea: true
+  requires:
+    max_slope_deg: 45
+
+- id: megiddo_siege_ram
+  kind: landmark
+  name_key: place.siege_ram
+  parent: megiddo
+  radius_m: 4
+  locate: {from: megiddo, bearing_deg: 180, distance_m: 35, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_siege_ram.glb
+    yaw_deg: 0
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: troy_siege_ram
+  kind: landmark
+  name_key: place.siege_ram
+  parent: troy
+  radius_m: 4
+  locate: {from: troy, bearing_deg: 90, distance_m: 30, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_siege_ram.glb
+    yaw_deg: 270
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: susa_ice_house
+  kind: landmark
+  name_key: place.ice_house
+  parent: susa
+  radius_m: 6
+  locate: {from: susa, bearing_deg: 45, distance_m: 40, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_ice_house.glb
+    yaw_deg: 200
+    visible_m: 500
+  requires:
+    max_slope_deg: 45

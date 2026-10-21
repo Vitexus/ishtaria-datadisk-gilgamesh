@@ -1,3 +1,10 @@
+ishtaria-datadisk-gilgamesh (0.2.24-1) unstable; urgency=medium
+
+  * 0 A.D. scenery/fauna/structures/music; place music; wildlife
+    waterside; ships at sea.
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 21 Oct 2026 19:40:54 +0200
+
 ishtaria-datadisk-gilgamesh (0.2.22-1) unstable; urgency=medium
 
   * Complete spoken coverage for all NPC dialogue nodes (workshops + tablets).

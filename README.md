@@ -180,9 +180,11 @@ This datadisk demonstrates how the Ishtaria engine can be extended to support fu
 story-driven experiences. The epic questline provides a comprehensive gameplay experience
 from character creation through the hero's journey and eventual acceptance of mortality.
 
-Music tracks live in `media/music/` (synthesized by `tools/compose_music.py` as gish-gudi lute and
-zurna-style reed with drone, a shared Gilgamesh leitmotif, sectioned verse/rest timelines and
-heterophony — inspired by public descriptions of Sumerian instruments, not a sample of any
-commercial recording; CC0 loops in `tools/music-samples/`). Regenerate with
-`python3 tools/compose_music.py`. A cover image should be added to `media/cover/cover.jpg`
+Music tracks live in `media/music/`. The core Gilgamesh themes (logo, plains, city, temple,
+cedar forest, marsh waters) are synthesized by `tools/compose_music.py` (gish-gudi lute and
+zurna-style reed; CC0 loops in `tools/music-samples/`). Regenerate with
+`python3 tools/compose_music.py`. Place-specific colour (Sumerian rivers, Nile, harbours,
+Susa, Indus, Mashu, Waters of Death, Dilmun) comes from 0 A.D. (Wildfire Games, CC BY-SA 3.0;
+see `media/music/License-zeroad.txt`) and is selected on each place via `music` /
+`music_radius_m`. A cover image should be added to `media/cover/cover.jpg`
 (1024x768 recommended).

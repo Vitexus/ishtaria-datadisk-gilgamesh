@@ -1,5 +1,5 @@
 id: gilgamesh
-version: 0.2.22
+version: 0.2.24
 cover: media/cover/cover.jpg
 cover_music: logo
 ambient_music: plains
@@ -28,7 +28,8 @@ attribution: >
   data 2026) and OpenStreetMap (ODbL); ED Euphrates and planet rasters: research/LANDSCAPE.md
   and WORLD.md (ETOPO 2022, NOAA, public domain). Soundtrack: original gish-gudi/zurna
   synthesis with Gilgamesh leitmotif and sectioned timelines (tools/compose_music.py)
-  plus CC0 loops in tools/music-samples/.
+  plus CC0 loops in tools/music-samples/; place themes from 0 A.D. (Wildfire Games,
+  CC BY-SA 3.0 — media/music/License-zeroad.txt).
 rating: teen
 languages: [en, cs]
 

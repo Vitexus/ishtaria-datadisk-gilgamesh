@@ -1,0 +1,15 @@
+id: darius
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: darius.greet
+    choices:
+      - {text_key: darius.ask_city, goto: city}
+      - {text_key: darius.leave}
+
+  city:
+    text_key: darius.city
+    choices:
+      - {text_key: darius.leave}

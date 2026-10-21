@@ -47,9 +47,9 @@ def unit(v):
 
 
 def up_vector(lat, lon):
-    """The unit direction of a point of the planet (latitude = asin(y), longitude = atan2(z, x))."""
+    """The unit direction of a point of the planet (latitude = asin(y), longitude = atan2(-z, x))."""
     la, lo = math.radians(lat), math.radians(lon)
-    return (math.cos(la) * math.cos(lo), math.sin(la), math.cos(la) * math.sin(lo))
+    return (math.cos(la) * math.cos(lo), math.sin(la), -math.cos(la) * math.sin(lo))
 
 
 def client_axes(up):
@@ -84,8 +84,8 @@ def map_frame_towards(lat, lon, target):
     site at (lat, lon): the tangent towards the target read in the client's local axes at the site."""
     up = up_vector(lat, lon)
     b = math.radians(bearing_to_uruk(lat, lon) if target == "uruk" else great_circle(lat, lon, target))
-    east = unit(cross(up, (0.0, 1.0, 0.0)))
-    north = unit(cross(east, up))
+    east = unit(cross((0.0, 1.0, 0.0), up))
+    north = unit(cross(up, east))
     tangent = tuple(math.cos(b) * north[i] + math.sin(b) * east[i] for i in range(3))
     axis_x, axis_z = client_axes(up)
     lx, lz = dot(tangent, axis_x), dot(tangent, axis_z)
@@ -176,8 +176,8 @@ def check(statues):
         axis_x, axis_z = client_axes(up)
         yaw = math.radians(s["yaw"])
         forward = tuple(math.sin(yaw) * axis_x[i] + math.cos(yaw) * axis_z[i] for i in range(3))
-        east = unit(cross(up, (0.0, 1.0, 0.0)))
-        north = unit(cross(east, up))
+        east = unit(cross((0.0, 1.0, 0.0), up))
+        north = unit(cross(up, east))
         faced = math.degrees(math.atan2(dot(forward, east), dot(forward, north))) % 360.0
         wanted = bearing_to_uruk(lat, lon)
         error = abs((faced - wanted + 180.0) % 360.0 - 180.0)

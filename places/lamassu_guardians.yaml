@@ -1,0 +1,28 @@
+# Lamassu gate guardians at Susa (0 A.D. CC BY-SA meshes) — anachronistic Achaemenid
+# ornaments for the seat of Kuruš (see knowledge.yaml). Small statues flanking the palace.
+
+- id: susa_lamassu_east
+  kind: landmark
+  name_key: place.susa_lamassu
+  parent: susa
+  radius_m: 2
+  locate: {from: susa, bearing_deg: 90, distance_m: 18, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_lamassu.glb
+    yaw_deg: 270
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: susa_lamassu_west
+  kind: landmark
+  name_key: place.susa_lamassu
+  parent: susa
+  radius_m: 2
+  locate: {from: susa, bearing_deg: 270, distance_m: 18, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_lamassu_small.glb
+    yaw_deg: 90
+    visible_m: 400
+  requires:
+    max_slope_deg: 45

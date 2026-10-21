@@ -27,22 +27,35 @@
     density: 3.0
     flora:
       - {id: nature.reed_clump, weight: 8}
+      - {id: zeroad.reed_pond_lush, weight: 5}
+      - {id: zeroad.reed_beach_a, weight: 4}
+      - {id: zeroad.cattails, weight: 3}
       - {id: nature.plant_flatTall, weight: 5}
       - {id: nature.plant_flatShort, weight: 4}
       - {id: nature.plant_bushSmall, weight: 3}
       - {id: hyper3d.tamarisk, weight: 5}
+      - {id: zeroad.tamarix_a, weight: 2}
       - {id: quaternius.bush_1, weight: 2}
     fauna:
       - {id: animal.gazelle, weight: 8}
+      - {id: zeroad.gazelle, weight: 5}
       - {id: animal.onager, weight: 5}
       - {id: animal.deer, weight: 3}
+      - {id: zeroad.deer, weight: 2}
       - {id: animal.goat, weight: 4}
+      - {id: zeroad.goat, weight: 2}
       - {id: animal.sheep, weight: 3}
+      - {id: zeroad.sheep, weight: 2}
       - {id: animal.fox, weight: 2}
+      - {id: zeroad.fox, weight: 1}
       - {id: animal.wolf, weight: 2}
+      - {id: zeroad.wolf, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: animal.pigeon, weight: 2}
       - {id: animal.falcon, weight: 1}
+      - {id: zeroad.hawk, weight: 1}
+      - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.mastiff, weight: 1}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}

@@ -1,0 +1,23 @@
+# Knowledge cards ("Tell me about yourself"): picture, short text, Wikipedia of the
+# later historical namesake. These three rulers are Early Dynastic namesake ancestors
+# of the famous Achaemenid kings — the article link is to the later rulers on purpose.
+- id: cyrus
+  title_key: knowledge.cyrus.title
+  text_key: knowledge.cyrus.text
+  image: media/knowledge/cyrus.jpg
+  credit_key: knowledge.cyrus.credit
+  wikipedia: {en: Cyrus_the_Great, cs: Kýros_II.}
+
+- id: darius
+  title_key: knowledge.darius.title
+  text_key: knowledge.darius.text
+  image: media/knowledge/darius.jpg
+  credit_key: knowledge.darius.credit
+  wikipedia: {en: Darius_the_Great, cs: Dareios_I.}
+
+- id: xerxes
+  title_key: knowledge.xerxes.title
+  text_key: knowledge.xerxes.text
+  image: media/knowledge/xerxes.jpg
+  credit_key: knowledge.xerxes.credit
+  wikipedia: {en: Xerxes_I, cs: Xerxés_I.}

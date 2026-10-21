@@ -5,6 +5,8 @@
   kind: building
   name_key: place.etemenanki
   radius_m: 100
+  music: cradle
+  music_radius_m: 500
   structure:
     model: media/models/architecture/ziggurat_etemenanki.glb
     ground_m: [0, 78]   # the foot of the front stairs

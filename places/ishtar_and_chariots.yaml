@@ -1,0 +1,81 @@
+# 0 A.D. Ishtar Gate mesh and Persian chariots (CC BY-SA) — anachronistic ornaments.
+# Uruk already has its own wall/gate geometry; the Ishtar mesh stands as a second silhouette
+# at the surveyed city_gate and again beside Etemenanki at Babylon.
+
+- id: uruk_ishtar_gate_ornament
+  kind: landmark
+  name_key: place.ishtar_gate_ornament
+  parent: city_gate
+  radius_m: 10
+  locate: {from: city_gate, bearing_deg: 180, distance_m: 25, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_ishtar.glb
+    yaw_deg: 0
+    visible_m: 1200
+  requires:
+    max_slope_deg: 45
+
+- id: babylon_ishtar_gate
+  kind: landmark
+  name_key: place.ishtar_gate_ornament
+  parent: etemenanki
+  radius_m: 10
+  locate: {from: etemenanki, bearing_deg: 160, distance_m: 80, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_ishtar.glb
+    yaw_deg: 20
+    visible_m: 1500
+  requires:
+    max_slope_deg: 45
+
+- id: susa_chariot
+  kind: landmark
+  name_key: place.persian_chariot
+  parent: susa
+  radius_m: 4
+  locate: {from: susa, bearing_deg: 135, distance_m: 28, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_chariot_a.glb
+    yaw_deg: 300
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: nineveh_chariot
+  kind: landmark
+  name_key: place.persian_chariot
+  parent: nineveh
+  radius_m: 4
+  locate: {from: nineveh, bearing_deg: 220, distance_m: 30, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_chariot_b.glb
+    yaw_deg: 40
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: kish_chariot
+  kind: landmark
+  name_key: place.persian_chariot
+  parent: kish
+  radius_m: 4
+  locate: {from: kish, bearing_deg: 90, distance_m: 25, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_chariot_e.glb
+    yaw_deg: 180
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: nineveh_ice_house
+  kind: landmark
+  name_key: place.ice_house
+  parent: nineveh
+  radius_m: 6
+  locate: {from: nineveh, bearing_deg: 45, distance_m: 45, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_ice_house_b.glb
+    yaw_deg: 120
+    visible_m: 500
+  requires:
+    max_slope_deg: 45

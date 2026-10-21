@@ -109,6 +109,18 @@ License: public-domain and CC-BY-SA-4.0
  documented reconstructions by the Ishtaria Team (research/WORLD.md). The
  derived rasters are CC-BY-SA-4.0 as the rest of the package.
 
+Files: media/music/land_between_rivers.ogg media/music/cradle.ogg
+ media/music/nile.ogg media/music/mediterranean.ogg
+ media/music/eastern_dreams.ogg media/music/beyond_indus.ogg
+ media/music/mountain_echo.ogg media/music/utnapishtim.ogg
+ media/music/waters_of_death.ogg media/music/waters_edge.ogg
+ media/music/sands.ogg media/music/License-zeroad.txt
+Copyright: Wildfire Games (http://www.wildfiregames.com/)
+License: CC-BY-SA-3.0
+ 0 A.D. soundtrack excerpts from public.zip audio/music/, used as place themes.
+ Attribution: Wildfire Games; http://creativecommons.org/licenses/by-sa/3.0/
+ See media/music/License-zeroad.txt.
+
 License: CC-BY-SA-4.0
  This package is free software: you can redistribute it and/or modify it under
  the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.
