@@ -1,0 +1,34 @@
+# Namesake ancestors of the later Achaemenid kings — rulers of other cities than Uruk.
+# Models will come from the 0 A.D. Persian heroes (CC BY-SA); pack skins are the fallback.
+# Knowledge cards (about) explain the deliberate anachronism and link Wikipedia to the
+# famous later rulers.
+
+- id: cyrus
+  name_key: npc.cyrus
+  place: susa
+  character: {pack: protagonists, skin: criminalMaleA}
+  dialogue: cyrus
+  portrait: media/portraits/cyrus.jpg
+  bio_key: npc.cyrus.bio
+  about: cyrus
+  tags: [king, ruler, elam, ancestor]
+
+- id: darius
+  name_key: npc.darius
+  place: nineveh
+  character: {pack: protagonists, skin: criminalMaleA}
+  dialogue: darius
+  portrait: media/portraits/darius.jpg
+  bio_key: npc.darius.bio
+  about: darius
+  tags: [king, ruler, assyria, ancestor]
+
+- id: xerxes
+  name_key: npc.xerxes
+  place: mari
+  character: {pack: protagonists, skin: criminalMaleA}
+  dialogue: xerxes
+  portrait: media/portraits/xerxes.jpg
+  bio_key: npc.xerxes.bio
+  about: xerxes
+  tags: [king, ruler, mari, ancestor]
