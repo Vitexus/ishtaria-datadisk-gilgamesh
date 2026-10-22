@@ -1,4 +1,5 @@
 {
+  "HumanWalking": ["Walk", false],
   "HumanForwardJump": ["Jump", true],
   "HumanDying": ["Die", true]
 }

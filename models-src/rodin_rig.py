@@ -269,15 +269,32 @@ def joint_x(key):
     return (JOINTS[key][0] * HEIGHT, -JOINTS[key][0] * HEIGHT)
 
 
-def leg_weights(body):
+def _arm_bone_names(table):
+    return [n for n in table if n.startswith(("UpperArm_", "Forearm_", "Hand_"))]
+
+
+def _leg_bone_names(table):
+    return [n for n in table if n.startswith(("Thigh_", "Shin_", "Foot_"))] + ["Hips"]
+
+
+def leg_weights(body, table):
     """Heat weights smear the two legs and the skirt into each other, so below the hips weights follow the
     side and the height (thigh, shin, foot) instead; they fade into the heat weights at the hips.
     With a skirt the two sides blend over a wide band and part of the weight stays on the hips, so the
-    cloth does not tear between the legs and does not swing as far as they do."""
+    cloth does not tear between the legs and does not swing as far as they do.
+
+    A-pose hands often hang at hip height: those vertices must stay on the arms, not become skirt."""
     hip, knee, ankle = (JOINTS[k][1] * HEIGHT for k in ("hip", "knee", "ankle"))
     names = {g.index: g.name for g in body.vertex_groups}
     band = 0.22 if SKIRT else 0.04
+    arms = _arm_bone_names(table)
+    legs = _leg_bone_names(table)
     for v in body.data.vertices:
+        if arms and legs:
+            d_arm = min(bone_distance(table, n, v.co) for n in arms)
+            d_leg = min(bone_distance(table, n, v.co) for n in legs)
+            if d_arm <= d_leg:
+                continue
         u = smooth(v.co.z, hip - 0.10, hip + 0.06)  # 1: heat weights
         if u >= 1.0:
             continue
@@ -308,13 +325,59 @@ def leg_weights(body):
                 body.vertex_groups[bone].add([v.index], w, "REPLACE")
 
 
-def spatial_smooth(body, radius_below, radius_above, split_z, iterations=3, blend=0.7, keep=6):
+def arm_weights(body, table):
+    """Put A-pose hands back on the arm chain when the skirt pass stole them.
+
+    Only vertices that still carry mostly hip/leg weight while sitting nearer an arm than a leg are
+    rewritten: a blanket rebind of every arm-near vertex pulled the tunic and shoulders onto the
+    arms and collapsed the swim pose."""
+    arms = _arm_bone_names(table)
+    legs = _leg_bone_names(table)
+    if not arms or not legs:
+        return
+    names = {g.index: g.name for g in body.vertex_groups}
+    fixed = 0
+    for v in body.data.vertices:
+        current = {names[g.group]: g.weight for g in v.groups}
+        leg_w = sum(current.get(n, 0.0) for n in legs)
+        arm_w = sum(current.get(n, 0.0) for n in arms)
+        if arm_w >= leg_w:
+            continue
+        d_arm = min(bone_distance(table, n, v.co) for n in arms)
+        d_leg = min(bone_distance(table, n, v.co) for n in legs)
+        if d_arm > d_leg or d_arm > 0.20:
+            continue
+        side = "L" if v.co.x >= 0.0 else "R"
+        chain = [f"UpperArm_{side}", f"Forearm_{side}", f"Hand_{side}"]
+        dists = [max(bone_distance(table, b, v.co), 1e-4) for b in chain]
+        inv = [1.0 / d for d in dists]
+        total = sum(inv) or 1.0
+        for g in list(v.groups):
+            body.vertex_groups[g.group].remove([v.index])
+        for bone, w in zip(chain, inv):
+            body.vertex_groups[bone].add([v.index], w / total, "REPLACE")
+        fixed += 1
+    print("arm_weights vertices", fixed)
+
+
+def spatial_smooth(body, radius_below, radius_above, split_z, iterations=3, blend=0.7, keep=6, table=None):
     """Layered cloth (overlapping skirt flounces) and arms close to the torso get unrelated weights from the
     heat solver, so the layers drift apart when the body moves. Averaging weights of vertices that are near
-    each other in space, whatever surface they are on, keeps neighbouring layers moving together."""
+    each other in space, whatever surface they are on, keeps neighbouring layers moving together.
+
+    Vertices nearer an arm than a leg are left alone: below the hips they sit next to the skirt, and
+    averaging would glue the hands to Thigh/Hips again."""
     from mathutils.kdtree import KDTree
     verts = body.data.vertices
     names = {g.index: g.name for g in body.vertex_groups}
+    freeze = set()
+    if table is not None:
+        arms = _arm_bone_names(table)
+        legs = _leg_bone_names(table)
+        if arms and legs:
+            for v in verts:
+                if min(bone_distance(table, n, v.co) for n in arms) <= min(bone_distance(table, n, v.co) for n in legs):
+                    freeze.add(v.index)
     tree = KDTree(len(verts))
     for v in verts:
         tree.insert(v.co, v.index)
@@ -327,6 +390,9 @@ def spatial_smooth(body, radius_below, radius_above, split_z, iterations=3, blen
     for _ in range(iterations):
         new = []
         for i, w in enumerate(weights):
+            if i in freeze:
+                new.append(dict(w))
+                continue
             acc = {}
             for j in neighbours[i]:
                 for bone, x in weights[j].items():
@@ -564,10 +630,12 @@ def main():
     h, arm, table = build_rig(body)
     fix_loose_parts(body, table)
     if not os.environ.get("RODIN_NO_LEG_WEIGHTS"):
-        leg_weights(body)
+        leg_weights(body, table)
     humanoid._smooth_weights(body, iterations=2, blend=0.4, keep=INFLUENCES)
     if SPATIAL:
-        spatial_smooth(body, SPATIAL[0], SPATIAL[1], JOINTS["hip"][1] * HEIGHT + 0.05, keep=INFLUENCES)
+        spatial_smooth(body, SPATIAL[0], SPATIAL[1], JOINTS["hip"][1] * HEIGHT + 0.05, keep=INFLUENCES, table=table)
+    # After skirt/leg passes: put any remaining skirt-weighted hands back on the arms.
+    arm_weights(body, table)
     bind_held_item(body)
     unify_seams(body)
     add_star_disc(body)

@@ -5,8 +5,9 @@
         media/models/hunter.glb \
         media/models/hunter.glb
 
-Adds Jump and Die (keeps existing Idle/Walk). An optional fourth argument is the skeleton and action of the swimming
-export (`extract_clip.py`, `hunter_swim_clip.glb`), baked as Swim; with `-` as the first argument only that clip is added
+Adds Walk, Jump and Die (keeps Idle from rodin_rig). Walk replaces the short procedural gait with the Mixamo
+HumanWalking clip. An optional fourth argument is the skeleton and action of the swimming export
+(`extract_clip.py`, `hunter_swim_clip.glb`), baked as Swim; with `-` as the first argument only that clip is added
 to a model that already has the others:
 
     blender -b --python models-src/hunter/retarget_clips.py -- - media/models/hunter.glb media/models/hunter.glb \
@@ -15,11 +16,11 @@ to a model that already has the others:
 This export has no running or sitting clip
 (only the limping HumanInjuredRun), so the client falls back for Run and Sit.
 
-Copies each mapped bone's `matrix_basis` rotation (and for Hips on Jump/Sit/Die a
-vertical location channel). Both figures are Y-forward / Z-up humanoids from the
-same Hyper3D export family, so the local animation channels transfer without a
-WORLD copy that collapses skinned limbs.
+Walk, Jump and Die use world-space bone turns (same as Swim / retarget_ambient.py `world`):
+the Mixamo and chargen bones are rolled differently, so a local `matrix_basis` copy
+twists limbs. Hips still get a vertical location channel on Jump/Die.
 """
+import math
 import os
 import sys
 
@@ -50,9 +51,11 @@ BONE_MAP = [
     ("RightHand", "Hand_R"),
 ]
 
+# (action, out_name, vertical_hips, world)
 CLIPS = {
-    "HumanForwardJump_Armature": ("Jump", True),
-    "HumanDying_Armature": ("Die", True),
+    "HumanWalking_Armature": ("Walk", False, True),
+    "HumanForwardJump_Armature": ("Jump", True, True),
+    "HumanDying_Armature": ("Die", True, True),
 }
 
 
@@ -74,6 +77,16 @@ def largest_mesh(objects):
     return max((o for o in objects if o.type == "MESH"), key=lambda o: len(o.data.polygons))
 
 
+def resolve_action(name):
+    if name in bpy.data.actions:
+        return bpy.data.actions[name]
+    base = name.replace("_Armature", "")
+    for act in bpy.data.actions:
+        if act.name.replace("_Armature", "") == base or act.name.startswith(base):
+            return act
+    return None
+
+
 def apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
     bpy.context.view_layer.update()
     for src_name, tgt_name in BONE_MAP:
@@ -93,14 +106,8 @@ def apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
     bpy.context.view_layer.update()
 
 
-def apply_frame_world(src_arm, tgt_arm):
-    """Pose the game bones so that each one turns in the world exactly as its Mixamo bone does.
-
-    Both rigs stand in the same rest pose, facing the same way, but their bones are not rolled alike (the game Hips run along
-    +Z with another roll), so copying the local rotation is only right for clips that stay near the rest pose. A swimmer lies
-    down: the rotation of every bone away from its rest pose is taken in the world and put on the game bone's own rest
-    orientation instead. Parents come before children in BONE_MAP, so each bone is posed on top of its parent.
-    """
+def apply_frame_world(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
+    """Pose each game bone so it turns in the world as its Mixamo bone does (parents first in BONE_MAP)."""
     for src_name, tgt_name in BONE_MAP:
         if src_name not in src_arm.pose.bones or tgt_name not in tgt_arm.pose.bones:
             continue
@@ -116,17 +123,26 @@ def apply_frame_world(src_arm, tgt_arm):
         world = (delta @ tgt_rest).to_4x4()
         world.translation = head
         tgt.matrix = tgt_arm.matrix_world.inverted() @ world
+        if src_name == "Hips" and vertical_hips:
+            src_z = (src_arm.matrix_world @ src.head).z
+            tgt.location = Vector((0.0, src_z - src_hips_rest_z, 0.0))
         bpy.context.view_layer.update()
 
 
+# Clips that repeat: their last key is the pose of the first, so the loop has no seam.
+LOOPING = {"Walk", "Swim"}
+
+
 def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips, world=False):
-    action = bpy.data.actions.get(src_action_name)
+    action = resolve_action(src_action_name)
     if action is None:
         print("missing action", src_action_name, flush=True)
         return False
     src_arm.animation_data_create()
     src_arm.animation_data.action = action
-    start, end = [int(x) for x in action.frame_range]
+    # The Mixamo clips are 30 fps and the scene 24: HumanWalking ends at frame 24.8. Rounding
+    # down dropped its last 0.8 frame, and the loop jumped by up to 8 degrees at the seam.
+    start, end = int(action.frame_range[0]), math.ceil(action.frame_range[1])
     bpy.context.scene.frame_set(start)
     bpy.context.view_layer.update()
     src_hips_rest_z = (src_arm.matrix_world @ src_arm.pose.bones["Hips"].head).z
@@ -136,15 +152,28 @@ def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips, world=
             tgt_arm.pose.bones[tgt_name].rotation_mode = "QUATERNION"
             tgt_arm.pose.bones[tgt_name].matrix_basis = Matrix.Identity(4)
     if tgt_arm.animation_data:
+        for track in list(tgt_arm.animation_data.nla_tracks):
+            if track.name == out_name or any(
+                s.action and (s.action.name == out_name or s.action.name.startswith(out_name + "_"))
+                for s in track.strips
+            ):
+                tgt_arm.animation_data.nla_tracks.remove(track)
         tgt_arm.animation_data.action = None
+    for act in list(bpy.data.actions):
+        if act.name == out_name or act.name.startswith(out_name + "_"):
+            try:
+                bpy.data.actions.remove(act)
+            except Exception:
+                pass
     baked = bpy.data.actions.new(name=out_name)
     tgt_arm.animation_data_create()
     tgt_arm.animation_data.action = baked
 
     for frame in range(start, end + 1):
-        bpy.context.scene.frame_set(frame)
+        looped = out_name in LOOPING and frame == end
+        bpy.context.scene.frame_set(start if looped else frame)
         if world:
-            apply_frame_world(src_arm, tgt_arm)
+            apply_frame_world(src_arm, tgt_arm, vertical_hips, src_hips_rest_z)
         else:
             apply_frame(src_arm, tgt_arm, vertical_hips, src_hips_rest_z)
         for _src, tgt_name in BONE_MAP:
@@ -158,7 +187,7 @@ def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips, world=
     track.name = out_name
     track.strips.new(out_name, start, baked)
     tgt_arm.animation_data.action = None
-    print("baked", src_action_name, "->", out_name, start, end, flush=True)
+    print("baked", src_action_name, "->", out_name, start, end, "world" if world else "local", flush=True)
     return True
 
 
@@ -179,8 +208,8 @@ def main():
         src_arm.location = game_arm.location.copy()
         src_arm.rotation_mode = "XYZ"
 
-        for src_name, (out_name, vertical_hips) in CLIPS.items():
-            bake_clip(src_arm, game_arm, src_name, out_name, vertical_hips)
+        for src_name, (out_name, vertical_hips, world) in CLIPS.items():
+            bake_clip(src_arm, game_arm, src_name, out_name, vertical_hips, world=world)
     if SWIM:
         swim_arm = largest_armature(import_gltf(SWIM))
         swim_arm.location = game_arm.location.copy()

@@ -1,3 +1,10 @@
+ishtaria-datadisk-gilgamesh (0.3.0-2) unstable; urgency=medium
+
+  * Fix hunter swim/walk skinning: A-pose hands no longer bound to the
+    skirt; Walk from Mixamo.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Thu, 22 Oct 2026 20:02:39 +0200
+
 ishtaria-datadisk-gilgamesh (0.3.0-1) unstable; urgency=medium
 
   * Release 0.3.0 for the production Ishtaria 0.3.0 world.
