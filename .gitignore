@@ -26,3 +26,12 @@ __pycache__/
 
 # Landscape source cache (Copernicus DEM tiles, Overpass downloads)
 tools/cache/
+
+# Debian build output
+/debian/.debhelper/
+/debian/ishtaria-datadisk-gilgamesh/
+/debian/files
+/debian/*.substvars
+/debian/*.debhelper.log
+/debian/debhelper-build-stamp
+/debian/voice-build/

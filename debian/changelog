@@ -1,3 +1,10 @@
+ishtaria-datadisk-gilgamesh (0.3.0-1) unstable; urgency=medium
+
+  * Release 0.3.0 for the production Ishtaria 0.3.0 world.
+  * Add debian/Jenkinsfile so the package is built and published to the repository.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Thu, 22 Oct 2026 12:00:00 +0200
+
 ishtaria-datadisk-gilgamesh (0.2.25-1) unstable; urgency=medium
 
   * Install knowledge.yaml; package fix after 0.2.24.
