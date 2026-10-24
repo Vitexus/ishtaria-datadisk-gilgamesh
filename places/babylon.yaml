@@ -15,3 +15,18 @@
   locate: {from: uruk, bearing_deg: 320, distance_m: 177000, tolerance_m: 20000}
   requires:
     max_slope_deg: 6
+
+# The Hanging Gardens of Babylon, a terraced 0 A.D. model (Wildfire Games, CC BY-SA 3.0), on the west side of the
+# tower, away from the Ishtar Gate (bearing 160 from the tower).
+- id: babylon_hanging_gardens
+  kind: landmark
+  name_key: place.babylon_hanging_gardens
+  parent: etemenanki
+  radius_m: 40
+  structure:
+    model: media/models/architecture/zeroad/pers_gardens.glb
+    yaw_deg: 0
+    visible_m: 1500
+  locate: {from: etemenanki, bearing_deg: 300, distance_m: 160, tolerance_m: 0}
+  requires:
+    max_slope_deg: 6
