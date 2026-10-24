@@ -59,23 +59,26 @@ Modern Penguin/World Classics translations (e.g. George 1999/2003 paperback) are
 
 At the start of each playable quest, show:
 
-1. A short **localized** excerpt (EN/CS) written for the game, paraphrasing the
-   relevant eBL lines (or a short PD Thompson quotation where licence allows).
-2. Decorative **Akkadian** (normalized transliteration from eBL) and, where
-   practical, **Unicode cuneiform** (U+12000+) or a tablet vignette — the original
-   is ornament, not a second full translation.
+1. A **localized** intro (EN/CS) spoken by the narrator, with subtitles — paraphrasing
+   the relevant eBL lines (or a short PD Thompson quotation where licence allows).
+2. **Akkadian** (normalized Latin transliteration) carved sign-by-sign as
+   **Unicode cuneiform** (U+12000+, Noto Sans Cuneiform) on the clay tablet —
+   ornament synced to the voice, not a second full translation.
 
-Suggested opening pair for the Hunter quest (eBL SB I 111–113, cited George 2022):
+### Hunter quest prologue — Aruru creates Enkidu (Tablet I)
 
-| | |
-| --- | --- |
-| Akkadian | `ṣayyādu hābilu amēlu / ina pūt mašqî šâšu uštamhiršu / ištēn ūma šanâ u šalša ina pūt mašqî uštamhiršu` |
-| English (eBL) | A hunter, a trapper-man, came face to face with him by the water-hole. One day, a second and a third… |
-| Game paraphrase (CS draft) | U napajedla v stepi lovec klade pasti. Tři dny se díval zvířeti do očí — a past vždy zničil divoký muž. |
+Shipped keys: `quest.hunter.excerpt` / `quest.hunter.excerpt.akkadian`
+(`the_hunter_and_the_wild_man`). The Czech/English intro retells the gods calling
+Aruru and her fashioning Enkidu from clay (SB I, after the lament over Gilgameš’s
+tyranny). Story authority for the lines remains **George 2022 eBL**
+(`doi.org/10.5282/ebl/l/1/4`); character notes for Aruru as creatrix of clay:
 
-Cuneiform decoration for shipped media should be generated from a sign list (or
-drawn as art) rather than invented glyph soup; until then, display transliteration
-in a tablet-style frame and link `doi.org/10.5282/ebl/l/1/4`.
+- [The Goddess Aruru](http://www.holladaypaganism.com/goddesses/cyclopedia/a/ARURU.HTM)
+  (Holladay Paganism cyclopedia) — Sumerian/Babylonian mother and birth goddess;
+  washes her hands, pinches clay, creates Gilgameš’s double Enkidu after the image
+  of Anu; cross-refs Mami / Ninḫursag and cites Pritchard *ANET*, Monaghan, Gray, etc.
+  Use as a **secondary orientation** for titles and attributes, not as a substitute for
+  the epic edition.
 
 ## Alignment with the planned datadisk story
 

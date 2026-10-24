@@ -7,8 +7,8 @@ SERVER_DIR := ../ishtaria-server
 PROTOCOL_DIR := ../ishtaria-protocol
 DEV_DB ?= ishtaria_gilgamesh_dev
 SEED ?= 43
-PGM := $(BUILD)/world.pgm
 BUILD := $(CURDIR)/build
+PGM := $(BUILD)/world.pgm
 STAGE := $(BUILD)/datadisks
 DB_URL := postgresql:///$(DEV_DB)?host=/var/run/postgresql
 WORLDGEN := $(abspath $(SERVER_DIR)/../ishtaria-worldgen/target/debug/ishtaria-worldgen)
@@ -36,7 +36,7 @@ voices:
 stage: voices
 	rm -rf $(STAGE)/gilgamesh
 	mkdir -p $(STAGE)/gilgamesh
-	cp -a datadisk.yaml places npcs dialogues quests lore music media i18n $(STAGE)/gilgamesh/
+	cp -a datadisk.yaml places npcs dialogues quests lore knowledge.yaml music media i18n $(STAGE)/gilgamesh/
 	cp -a $(BUILD)/voices/media/. $(STAGE)/gilgamesh/media/
 	@echo "staged: $$(find $(STAGE)/gilgamesh/media/voice -name '*.ogg' | wc -l) spoken lines"
 

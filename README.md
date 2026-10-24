@@ -39,6 +39,9 @@ planned multi-protagonist questline Hunter → Šamḫat → Enkidu → Gilgame�
 [`research/EPIC.md`](research/EPIC.md) and [`research/QUESTLINE.md`](research/QUESTLINE.md).
 
 
+**Contributing:** you do not need to program. Scholars and students of Assyriology are especially welcome,
+see [CONTRIBUTING.md](CONTRIBUTING.md) (Czech and English) and [CONTRIBUTORS](CONTRIBUTORS).
+
 Format: `ishtaria-protocol/schemas/datadisk.schema.json`. Check the disk (schema, references, media):
 
 ```sh

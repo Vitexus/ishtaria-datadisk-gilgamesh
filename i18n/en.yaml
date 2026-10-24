@@ -160,7 +160,7 @@ gilgamesh_temple.leave: I will leave you to your thoughts.
 gilgamesh_temple.prayer: "Let us pray to Anu and the great gods for their blessing upon Uruk and its people."
 
 # Enkidu Dialogues
-enkidu.greet: "I am Enkidu, once wild, now friend of Gilgamesh. The beasts of the forest knew me as brother."
+enkidu.greet: "I am Enkidu. The hills made me; Šamḫat led me to bread and beer. Now I stand with Gilgamesh — equal strength, one heart."
 enkidu.ask_wild_days: Ask about his wild days
 enkidu.ask_gilgamesh: Ask about Gilgamesh
 enkidu.ask_civilization: Ask about civilization
@@ -1036,26 +1036,28 @@ tablet_writer.write: "Scribes write the offerings, merchants write what was boug
 
 # Hunter quest (Tablet I) — player is the trapper
 place.hunter_waterhole: Water-Hole of the Hunters
-place.hunter_village: Camp of the Old Hunter
+place.hunter_village: Village of the Old Father
 npc.hunter_father: Old Father
-npc.hunter_father.bio: Aged trapper who taught his son the pits and snares of the steppe. Wise in the ways of the wild and of Uruk's king.
+npc.hunter_father.bio: An old man of the steppe village who taught his son the pits and snares. White-bearded and stooped, wise in the ways of the wild and of Uruk's king.
 quest.hunter.title: The Hunter and the Wild Man
-quest.hunter.lay_snares: Place a snare by the water-hole, then stand far back and wait. If you stay too close, the herd will not come.
-quest.hunter.snare_ruined_1: The wild man tore your first snare and freed the catch. Place another and wait farther away.
-quest.hunter.snare_ruined_2: Again he fills your pits and uproots the nets. One more snare — then stand clear.
-quest.hunter.snare_ruined_3: Thrice he has ruined your work. Seek counsel from your old father.
-quest.hunter.ask_father: Speak with your father at the hunters' camp.
+quest.hunter.lay_snares: Place a snare by the water-hole, stand far back and wait — and watch for lions and wolves. Stay too close and the herd will not come.
+quest.hunter.snare_ruined_1: The wild man tore your first snare and freed the catch. Place another; the predators at the hole do not sleep.
+quest.hunter.snare_ruined_2: Again he fills your pits and uproots the nets. Another snare — and keep the lions and wolves off you.
+quest.hunter.snare_ruined_3: Thrice he has ruined your work. You are not done — set another snare, and mind the beasts.
+quest.hunter.snare_ruined_4: A fourth time he tore the nets. Try once more.
+quest.hunter.snare_ruined_5: Five times he has ruined your work. Seek counsel from your old father.
+quest.hunter.ask_father: Speak with your father in the village.
 quest.hunter.seek_gilgamesh: Go to Uruk and tell King Gilgamesh of the wild man.
 quest.hunter.seek_shamhat: Find Šamḫat by the temple of Inanna and explain your plan.
 quest.hunter.journey_with_shamhat: Journey with Šamḫat back to the water-hole (the third day's road).
 quest.hunter.find_enkidu: Find the wild man with Šamḫat at the water-hole.
 quest.hunter.done: The hunter's part is done. Šamḫat will make a human of Enkidu.
-enkidu_wild.greet: The wild man watches the herd. His eyes are those of a beast that knows no city.
-enkidu_wild.after_snares: (The wild man has ruined every snare — ask what to do.)
-enkidu_wild.send_father: Leave this water-hole. The old man at the camp will know the road to Uruk.
-enkidu_wild.with_shamhat: (Arrive with Šamḫat.)
-enkidu_wild.found_with_shamhat: Here is the wild man. Šamḫat steps forward — your hunt ends; her work begins.
-enkidu_wild.leave: (Step back.)
+enkidu_wild.greet: He stands between you and the drinking herd — hair like a wild bull, no word of men. The gazelles do not flee him.
+enkidu_wild.after_snares: (He has torn every snare. There is nothing more you can do here alone.)
+enkidu_wild.send_father: He stamps and bellows. The herd closes around him. Your pits are ruined; only your father's counsel can help now — back to the village.
+enkidu_wild.with_shamhat: (Bring Šamḫat forward.)
+enkidu_wild.found_with_shamhat: The wild man still guards the water. Šamḫat steps past you — your hunt ends; her work begins.
+enkidu_wild.leave: (Draw back without a sound.)
 hunter_father.greet: My son. The steppe has worn your face.
 hunter_father.tell_wild_man: Father — a man of the hills ruins every snare I set.
 hunter_father.ask_who: Who are you to the hunters?
@@ -1076,8 +1078,29 @@ enkidu_civilize.walk_to_uruk: Come — we walk to Uruk, to Gilgamesh the king.
 enkidu_civilize.ready_for_uruk: He rises like a man of the city. The road to Uruk is open.
 enkidu_civilize.leave: (Step back.)
 enkidu_civilize.greet: The wild man watches you with new eyes.
-quest.hunter.excerpt: Whatever snare you set, the wild man tears it out and frees the herd.
-quest.hunter.excerpt.akkadian: ša ištakanu šubarrû ḫabālu — nīšu ušēṣi
+quest.hunter.excerpt: |
+  They called Aruru, the great goddess:
+  "You created Gilgamesh, Aruru; now create his image! Let him match
+  Gilgamesh in the storm of his heart! Let them contend with each other,
+  and let Uruk recover!"
+
+  No sooner had Aruru heard this than she conceived in her heart an image
+  after Anu; Aruru washed her hands, pinched off clay, spat upon it, and
+  created the hero, mighty Enkidu, offspring of clay, endowed with strength
+  by Ninurta. Hair covers his whole body; on his head the hair grows thick
+  as a woman's, waving locks like barley. He knows neither country nor people;
+  he is clothed like Sumukan, god of the wild. With the gazelles he eats grass,
+  with the wild beasts he jostles at the water-hole, with the herd of the water
+  creatures he delights his heart.
+quest.hunter.excerpt.akkadian: >-
+  izzukūnimma Aruru rabītum atti Aruru tabnî Gilgāmeš eninna binî zikiršu
+  ana idi libbišu lū mašil lištannanūma Uruk lištapšiḫ Aruru annīta ina šemêša
+  zikir Anim ibtani ina libbiša Aruru idiša imsi ṭiṭṭa iktariṣ ittadi ina ṣēri
+  ina ṣēri Enkidu ibtani qurādu ilitti qulti kiṣir Ninurta šūrumma zumuršu šuʾʾuru
+  upazzir kīma sinništi upazzirūšu perētu kīma Nissaba lā īdi nišī mātamma
+  lubušti labiš kīma Sumuqan itti ṣabî ikkala šammī itti būlim mašqâ išatti
+  itti nammaššê mê iṭīb libbašu
+
 quest.shamhat.excerpt: She cast love like a net; the wild man became a man — then bread and beer of the land.
 quest.shamhat.excerpt.akkadian: aklī ša nišī akul — šikar māti šiti
 quest.shamhat.teach_bread: He has eaten the bread of people. Offer him the beer of the land.

@@ -35,3 +35,7 @@ tools/cache/
 /debian/*.debhelper.log
 /debian/debhelper-build-stamp
 /debian/voice-build/
+
+# Local build noise
+build-server*.log
+build-world.log

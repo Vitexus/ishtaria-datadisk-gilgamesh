@@ -1,5 +1,6 @@
-# Tablet I: the player is the hunter. Traps ruined thrice by wild Enkidu, then
-# father → Uruk / Gilgameš → Šamḫat → return to the water-hole. See research/QUESTLINE.md.
+# Tablet I: the player is the hunter. Traps ruined five times by wild Enkidu while
+# lions and wolves press the water-hole, then father → Uruk / Gilgameš → Šamḫat.
+# See research/QUESTLINE.md.
 id: the_hunter_and_the_wild_man
 title_key: quest.hunter.title
 start_stage: lay_snares
@@ -22,6 +23,14 @@ stages:
     final: false
   snare_ruined_3:
     text_key: quest.hunter.snare_ruined_3
+    guide: hunter_waterhole
+    final: false
+  snare_ruined_4:
+    text_key: quest.hunter.snare_ruined_4
+    guide: hunter_waterhole
+    final: false
+  snare_ruined_5:
+    text_key: quest.hunter.snare_ruined_5
     guide: hunter_village
     final: false
   ask_father:

@@ -60,14 +60,14 @@
       - {id: zeroad.palm_dead_1, weight: 1}
       - {id: zeroad.palm_dead_2, weight: 1}
       - {id: zeroad.poplar_lombardy_dead, weight: 1}
-      - {id: nature.reed_clump, weight: 10}
-      - {id: zeroad.reed_pond_lush, weight: 5}
-      - {id: zeroad.reed_giant, weight: 3}
-      - {id: zeroad.reed_beach_a, weight: 4}
-      - {id: zeroad.reed_beach_b, weight: 4}
-      - {id: zeroad.papyrus_1, weight: 3}
-      - {id: zeroad.papyrus_2, weight: 3}
-      - {id: zeroad.cattails, weight: 3}
+      - {id: nature.reed_clump, weight: 10, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 5, waterside: true}
+      - {id: zeroad.reed_giant, weight: 3, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 4, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 4, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 3, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 3, waterside: true}
+      - {id: zeroad.cattails, weight: 3, waterside: true}
       - {id: nature.plant_flatTall, weight: 5}
       - {id: nature.plant_flatShort, weight: 4}
       - {id: nature.plant_bushSmall, weight: 2}

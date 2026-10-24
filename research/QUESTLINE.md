@@ -21,7 +21,9 @@ remains a secondary ending.
 Each body has **one primary quest** (stage machine). Completing it triggers a
 **character swap** (`set_playable`). Story flags carry over.
 
-At **quest start**, show a short EN/CS paraphrase + Akkadian on the clay tablet UI.
+At **quest start**, show a clay-tablet prologue: Latin Akkadian is carved sign-by-sign as
+Unicode cuneiform, the narrator speaks the EN/CS paraphrase, and subtitles run along the
+bottom of the screen.
 
 ## Quest checkpoint (death / fail)
 
@@ -99,3 +101,7 @@ After a content bump, set `world_datadisks.version` to the new version and
 Ship **original** EN/CS quest prose. Cite eBL/George for Akkadian lines shown as
 decoration. Thompson 1928 may be quoted briefly as PD English; prefer fresh
 paraphrase for UI polish.
+
+Hunter tablet intro (Aruru / Enkidu from clay): epic lines → George 2022 eBL; goddess
+background → [Holladay, *The Goddess Aruru*](http://www.holladaypaganism.com/goddesses/cyclopedia/a/ARURU.HTM)
+(see [`EPIC.md`](EPIC.md) § Quest UI).

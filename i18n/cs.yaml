@@ -146,7 +146,7 @@ gilgamesh_temple.leave: Nechám tě s tvými myšlenkami.
 gilgamesh_temple.prayer: "Modleme se k Anovi a velkým bohům za jejich požehnání Uruku a jeho lidu."
 
 # Enkidův dialog
-enkidu.greet: "Já jsem Enkidu, kdysi divoký, nyní přítel Gilgamešův. Zvířata lesa mě znala jako bratra."
+enkidu.greet: "Já jsem Enkidu. Hory mě zrodily; Šamḫat mě přivedla k chlebu a pivu. Teď stojím s Gilgamešem — stejná síla, jedno srdce."
 enkidu.ask_wild_days: Ptej se na jeho divoké dny
 enkidu.ask_gilgamesh: Ptej se na Gilgameše
 enkidu.ask_civilization: Ptej se na civilizaci
@@ -1018,27 +1018,29 @@ tablet_writer.leave: Nerozmažu ti hlínu.
 tablet_writer.write: "Písaři píší oběti, kupci píší, co se koupilo a prodalo, a my kněží píšeme, co bylo dáno bohům. Sluhové nosí tabulky v koších. Hlína si pamatuje ruku, která ji stlačila."
 
 # Quest lovce (tabulka I)
-place.hunter_waterhole: Napajedlo lovců
-place.hunter_village: Tábor starého lovce
+place.hunter_waterhole: Napajedlo zvěře
+place.hunter_village: Vesnice starého otce
 npc.hunter_father: Starý otec
-npc.hunter_father.bio: Starý lovec, který syna učil klást jámy a sítě ve stepi. Zná divočinu i krále Uruku.
+npc.hunter_father.bio: Starý muž ze stepní vesnice, který syna učil klást jámy a sítě. Šedivý a shrbený, zná divočinu i krále Uruku.
 quest.hunter.title: Lovec a divoký muž
-quest.hunter.lay_snares: Polož past u napajedla, pak se vzdal a čekej. Když zůstaneš blízko, zvěř nepřijde.
-quest.hunter.snare_ruined_1: Divoký muž strhl první past a zvíře uniklo. Polož další a čekej dál od ní.
-quest.hunter.snare_ruined_2: Znovu zasypal jámy a vytrhl sítě. Ještě jedna past — a drž se dál.
-quest.hunter.snare_ruined_3: Potřetí zničil tvou práci. Jdi se poradit se starým otcem.
-quest.hunter.ask_father: Promluv si s otcem v táboře lovců.
+quest.hunter.lay_snares: Polož past u napajedla, vzdal se a čekej — a střež se lvů a vlků. Když zůstaneš blízko pasti, zvěř nepřijde.
+quest.hunter.snare_ruined_1: Divoký muž strhl první past a zvíře uniklo. Polož další; šelmy kolem napajedla nespí.
+quest.hunter.snare_ruined_2: Znovu zasypal jámy a vytrhl sítě. Další past — a drž si lvici i vlky od těla.
+quest.hunter.snare_ruined_3: Potřetí zničil tvou práci. Ještě nejsi hotov — past znovu, a pozor na šelmy.
+quest.hunter.snare_ruined_4: Počtvrté strhl sítě. Zkus to ještě jednou.
+quest.hunter.snare_ruined_5: Popáté zničil tvou práci. Jdi se poradit se starým otcem.
+quest.hunter.ask_father: Promluv si s otcem ve vesnici.
 quest.hunter.seek_gilgamesh: Jdi do Uruku a řekni králi Gilgamešovi o divokém muži.
 quest.hunter.seek_shamhat: Najdi Šamḫat u chrámu Innany a vysvětli svůj záměr.
 quest.hunter.journey_with_shamhat: Putuj se Šamḫat zpět k napajedlu (cesta třetího dne).
 quest.hunter.find_enkidu: Najdi s Šamḫat divokého muže u napajedla.
 quest.hunter.done: Úloha lovce končí. Šamḫat udělá z Enkidua člověka.
-enkidu_wild.greet: Divoký muž hlídá stádo. Má oči zvířete, které nezná město.
-enkidu_wild.after_snares: (Divoký muž zničil každou past — zeptat se, co dál.)
-enkidu_wild.send_father: Opusť napajedlo. Starý muž v táboře zná cestu do Uruku.
-enkidu_wild.with_shamhat: (Přijít se Šamḫat.)
-enkidu_wild.found_with_shamhat: Zde je divoký muž. Šamḫat vystupuje vpřed — tvůj lov končí, začíná její dílo.
-enkidu_wild.leave: (Ustoupit.)
+enkidu_wild.greet: Stojí mezi tebou a stádem u vody — srst jako u divokého býka, bez lidského slova. Gazely před ním neutíkají.
+enkidu_wild.after_snares: (Strhl každou past. Sám už tu nic nezmůžeš.)
+enkidu_wild.send_father: Dupá a řve. Stádo se kolem něj uzavírá. Jámy jsou zničené; pomůže jen rada otce — zpět do vesnice.
+enkidu_wild.with_shamhat: (Přivést Šamḫat.)
+enkidu_wild.found_with_shamhat: Divoký muž stále hlídá vodu. Šamḫat jde kolem tebe — tvůj lov končí, začíná její dílo.
+enkidu_wild.leave: (Ustoupit beze slova.)
 hunter_father.greet: Můj synu. Step ti ošlehala tvář.
 hunter_father.tell_wild_man: Otče — muž z hor ničí každou past, kterou položím.
 hunter_father.ask_who: Kdo jsi mezi lovci?
@@ -1059,8 +1061,28 @@ enkidu_civilize.walk_to_uruk: Pojď — jdeme do Uruku, ke králi Gilgamešovi.
 enkidu_civilize.ready_for_uruk: Vstává jako muž města. Cesta do Uruku je otevřená.
 enkidu_civilize.leave: (Ustoupit.)
 enkidu_civilize.greet: Divoký muž na tebe hledí novýma očima.
-quest.hunter.excerpt: Jakoukoli past položíš, divoký muž ji strhne a stádo zachrání.
-quest.hunter.excerpt.akkadian: ša ištakanu šubarrû ḫabālu — nīšu ušēṣi
+quest.hunter.excerpt: |
+  Zavolali Aruru, velkou bohyni:
+  „Ty jsi stvořila, Aruru, Gilgameše; nyní stvoř jeho obraz! Prudkostí
+  srdce nechať se vyrovná Gilgamešovi! Nechať spolu soupeří, a Uruk
+  se zotaví!“
+
+  Sotva to Aruru slyšela, stvořila v srdci obraz podle Anua; ruce si
+  umyla Aruru, utrhla hlíny, naplila na ni, stvořila hrdinu, mocného
+  Engidua, výhonek hlíny, Ninurtou nadaný silou. Srstí je pokryto
+  celé jeho tělo, na hlavě má vlasy zcela jak žena, vlnící se vlasy mu
+  rostou jak obilí. Nezná země a nezná lidí; oděn jest jako bůh zvěře
+  Sumukan. Společně s gazelami pojídá traviny, s divokou zvěří se
+  tlačí k napajedlu, s davem vodního tvorstva si libuje v srdci.
+quest.hunter.excerpt.akkadian: >-
+  izzukūnimma Aruru rabītum atti Aruru tabnî Gilgāmeš eninna binî zikiršu
+  ana idi libbišu lū mašil lištannanūma Uruk lištapšiḫ Aruru annīta ina šemêša
+  zikir Anim ibtani ina libbiša Aruru idiša imsi ṭiṭṭa iktariṣ ittadi ina ṣēri
+  ina ṣēri Enkidu ibtani qurādu ilitti qulti kiṣir Ninurta šūrumma zumuršu šuʾʾuru
+  upazzir kīma sinništi upazzirūšu perētu kīma Nissaba lā īdi nišī mātamma
+  lubušti labiš kīma Sumuqan itti ṣabî ikkala šammī itti būlim mašqâ išatti
+  itti nammaššê mê iṭīb libbašu
+
 quest.shamhat.excerpt: Vrhala lásku jako síť; divoký muž se stal člověkem — pak chléb a pivo země.
 quest.shamhat.excerpt.akkadian: aklī ša nišī akul — šikar māti šiti
 quest.shamhat.teach_bread: Snědl chléb lidí. Nabídni mu pivo země.

@@ -11,7 +11,7 @@ nodes:
         if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: ask_father}}
         goto: counsel
       - text_key: hunter_father.tell_wild_man
-        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: snare_ruined_3}}
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: snare_ruined_5}}
         effects:
           - {set_stage: {quest: the_hunter_and_the_wild_man, stage: ask_father}}
         goto: counsel

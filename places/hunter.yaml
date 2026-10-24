@@ -1,4 +1,4 @@
-# Hunter's steppe: water-hole and village of the old father (Epic SB I).
+# Hunter's steppe: water-hole and village of the old father with houses and a forge (Epic SB I).
 # Distances are playable (~12 km from Uruk ≈ a long trek); the epic's "third day"
 # is the story beat for the return with Šamḫat, not a literal Earth walk time.
 
@@ -24,49 +24,75 @@
     visible_m: 600
   wildlife:
     radius_m: 900
-    density: 3.0
+    # Dense herd at the water: the trapper's Tablet I beat needs pressure and prey, not an empty steppe.
+    # Animals within reach of the pond drink and graze in a cycle (movement::waterhole_route).
+    density: 7.5
     flora:
-      - {id: nature.reed_clump, weight: 8}
-      - {id: zeroad.reed_pond_lush, weight: 5}
-      - {id: zeroad.reed_beach_a, weight: 4}
-      - {id: zeroad.cattails, weight: 3}
+      # Harvestable trees (axe → logs / XP): steppe water-hole shade, not only reeds.
+      - {id: nature.tree_palmTall, weight: 6}
+      - {id: nature.tree_palmDetailedTall, weight: 4}
+      - {id: nature.tree_palmShort, weight: 4}
+      - {id: nature.tree_palmBend, weight: 3}
+      - {id: quaternius.palm_1, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 2}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.poplar_lombardy, weight: 4}
+      - {id: zeroad.willow_a, weight: 3}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.reed_clump, weight: 8, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 5, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 4, waterside: true}
+      - {id: zeroad.cattails, weight: 3, waterside: true}
       - {id: nature.plant_flatTall, weight: 5}
       - {id: nature.plant_flatShort, weight: 4}
       - {id: nature.plant_bushSmall, weight: 3}
+      - {id: nature.grass, weight: 10}
+      - {id: nature.grass_large, weight: 6}
+      - {id: nature.grass_leafs, weight: 4}
       - {id: hyper3d.tamarisk, weight: 5}
       - {id: zeroad.tamarix_a, weight: 2}
       - {id: quaternius.bush_1, weight: 2}
     fauna:
-      - {id: animal.gazelle, weight: 8}
-      - {id: zeroad.gazelle, weight: 5}
-      - {id: animal.onager, weight: 5}
-      - {id: animal.deer, weight: 3}
+      # Prey of Tablet I — enough for the snare beat, not a safe empty steppe.
+      - {id: animal.gazelle, weight: 6}
+      - {id: zeroad.gazelle, weight: 4}
+      - {id: animal.onager, weight: 3}
+      - {id: animal.deer, weight: 2}
       - {id: zeroad.deer, weight: 2}
-      - {id: animal.goat, weight: 4}
+      - {id: animal.goat, weight: 2}
       - {id: zeroad.goat, weight: 2}
-      - {id: animal.sheep, weight: 3}
-      - {id: zeroad.sheep, weight: 2}
-      - {id: animal.fox, weight: 2}
-      - {id: zeroad.fox, weight: 1}
-      - {id: animal.wolf, weight: 2}
-      - {id: zeroad.wolf, weight: 1}
-      - {id: animal.lizard, weight: 2}
-      - {id: animal.pigeon, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: zeroad.sheep, weight: 1}
+      # Predators (combat.json fierce): common at the hole. They ambush while the hunter
+      # lays snares (combat::ambush_tick); husky stands in for the steppe jackal.
+      - {id: zeroad.lion, weight: 8}
+      - {id: zeroad.lioness, weight: 7}
+      - {id: animal.wolf, weight: 9}
+      - {id: zeroad.wolf, weight: 7}
+      - {id: animal.fox, weight: 5}
+      - {id: zeroad.fox, weight: 4}
+      - {id: animal.husky, weight: 6}
+      - {id: zeroad.mastiff, weight: 3}
+      - {id: animal.lizard, weight: 1}
+      - {id: animal.pigeon, weight: 1}
       - {id: animal.falcon, weight: 1}
       - {id: zeroad.hawk, weight: 1}
-      - {id: zeroad.crow, weight: 1}
-      - {id: zeroad.mastiff, weight: 1}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}
     max_slope_deg: 12
 
 - id: hunter_village
-  kind: landmark
+  kind: city
   name_key: place.hunter_village
-  radius_m: 40
-  # Between the water-hole and Uruk: the old father's camp.
+  radius_m: 70
+  # Between the water-hole and Uruk: the old father's village (houses and a forge).
   locate: {from: hunter_waterhole, bearing_deg: 130, distance_m: 3500, tolerance_m: 0}
+  scenery: {preset: town, size: village}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}

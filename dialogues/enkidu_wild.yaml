@@ -28,7 +28,7 @@ nodes:
             - {set_flag: met_wild_enkidu}
     choices:
       - text_key: enkidu_wild.after_snares
-        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: snare_ruined_3}}
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: snare_ruined_5}}
         goto: send_father
       - text_key: enkidu_wild.with_shamhat
         if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: find_enkidu}}

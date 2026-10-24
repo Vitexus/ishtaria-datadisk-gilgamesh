@@ -1,0 +1,47 @@
+Contributors to the Epic of Gilgamesh datadisk for Ishtaria
+===========================================================
+
+Přispěvatelé datadisku Epos o Gilgamešovi
+
+The disk is CC BY-SA 4.0 (see datadisk.yaml). Everyone listed here agreed to be named.
+You choose how: your name, a pseudonym, or only your institution; with or without a link.
+You may ask to be removed or changed at any time. Format of an entry:
+
+    Name (affiliation, optional) - what you did - when
+
+How to be added: see CONTRIBUTING.md, section "Credit". One accepted remark counts.
+Jak se zapsat: viz CONTRIBUTING.md, část "Uvedení jména". Stačí jedna přijatá připomínka.
+
+
+Maintainer / Správce
+--------------------
+
+Vítězslav Dvořák (VitexSoftware) - the datadisk, its tools and the Ishtaria game; 2026-
+
+
+Scholarly review / Odborná kontrola
+-----------------------------------
+
+(waiting for the first contributor / čeká na prvního přispěvatele)
+
+    Epic text and dialogues, lore and codex, Uruk and its buildings, names and
+    transliteration, flora, fauna and everyday life of the Early Dynastic south.
+
+
+Translations / Překlady
+-----------------------
+
+(English and Czech are maintained by the maintainer; other languages are welcome,
+see CONTRIBUTING.md / angličtinu a češtinu udržuje správce, další jazyky jsou vítány)
+
+
+Sources and tools / Zdroje a nástroje
+-------------------------------------
+
+These are not people to thank here but works the disk stands on; their licences are
+listed in the "attribution" field of datadisk.yaml: the translation of N. K. Sanders
+(Epic text, public domain), the Electronic Babylonian Library (eBL), Copernicus DEM GLO-30,
+OpenStreetMap, ETOPO 2022 (NOAA) and the art of 0 A.D. (Wildfire Games, CC BY-SA 3.0).
+Part of the models, portraits and voices was made with AI tools (Blender, InvokeAI,
+Hyper3D Rodin, Piper) and the code with Claude Code; the maintainer is responsible for
+the result, and scholarly errors found by reviewers are corrected, not defended.

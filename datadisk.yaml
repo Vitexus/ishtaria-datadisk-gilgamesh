@@ -8,9 +8,11 @@ ambient_music: plains
 # the look is fixed to the hunter model; the pack id is only the animation fallback.
 player_character: survivors/survivorMaleB
 player_model: media/models/hunter.glb
-# Three snares in the pack from creation; the hunter quest opens immediately at the water-hole.
+# Three snares and an aetherglass (quest compass / minimap guides); the hunter quest opens
+# at the water-hole. Active quest guides also show without the glass (server markers API).
 starting_items:
   - {item: snare, qty: 3}
+  - {item: aetherglass, qty: 1}
 auto_start_quests:
   - the_hunter_and_the_wild_man
 name: Epic of Gilgamesh

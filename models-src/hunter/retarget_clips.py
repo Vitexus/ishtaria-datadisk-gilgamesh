@@ -5,20 +5,23 @@
         media/models/hunter.glb \
         media/models/hunter.glb
 
-Adds Walk, Jump and Die (keeps Idle from rodin_rig). Walk replaces the short procedural gait with the Mixamo
-HumanWalking clip. An optional fourth argument is the skeleton and action of the swimming export
+Keeps Idle and Walk from `rodin_rig` (same smooth procedural gait as Enkidu). Adds Jump, Die, Box
+and Kick from the Mixamo raw export. Do not bake HumanWalking or HumanInjuredRun: those produced
+jerks and hops when paced against the server's walk speed.
+
+An optional fourth argument is the skeleton and action of the swimming export
 (`extract_clip.py`, `hunter_swim_clip.glb`), baked as Swim; with `-` as the first argument only that clip is added
 to a model that already has the others:
 
     blender -b --python models-src/hunter/retarget_clips.py -- - media/models/hunter.glb media/models/hunter.glb \
         models-src/hunter/hunter_swim_clip.glb
 
-This export has no running or sitting clip
-(only the limping HumanInjuredRun), so the client falls back for Run and Sit.
+Boxing and Kicking give the trapper combat clips against water-hole predators. No sitting or clean
+run clip — the client speeds Walk for a sprint and falls back for Sit.
 
-Walk, Jump and Die use world-space bone turns (same as Swim / retarget_ambient.py `world`):
-the Mixamo and chargen bones are rolled differently, so a local `matrix_basis` copy
-twists limbs. Hips still get a vertical location channel on Jump/Die.
+Jump, Die, Box and Kick use world-space bone turns (same as Swim / retarget_ambient.py `world`):
+the Mixamo and chargen bones are rolled differently, so a local `matrix_basis` copy twists limbs.
+Hips still get a vertical location channel on Jump/Die.
 """
 import math
 import os
@@ -52,10 +55,12 @@ BONE_MAP = [
 ]
 
 # (action, out_name, vertical_hips, world)
+# Idle/Walk stay from rodin_rig (Enkidu-quality gait). Only combat and fall clips are Mixamo.
 CLIPS = {
-    "HumanWalking_Armature": ("Walk", False, True),
     "HumanForwardJump_Armature": ("Jump", True, True),
     "HumanDying_Armature": ("Die", True, True),
+    "HumanBoxing_Armature": ("Box", False, True),
+    "HumanKicking_Armature": ("Kick", False, True),
 }
 
 
@@ -130,7 +135,7 @@ def apply_frame_world(src_arm, tgt_arm, vertical_hips, src_hips_rest_z):
 
 
 # Clips that repeat: their last key is the pose of the first, so the loop has no seam.
-LOOPING = {"Walk", "Swim"}
+LOOPING = {"Walk", "Run", "Swim"}
 
 
 def bake_clip(src_arm, tgt_arm, src_action_name, out_name, vertical_hips, world=False):

@@ -161,13 +161,13 @@
     radius_m: 2500
     density: 2.4
     flora:
-      - {id: nature.reed_clump, weight: 12}
-      - {id: zeroad.reed_pond_lush, weight: 6}
-      - {id: zeroad.reed_beach_a, weight: 5}
-      - {id: zeroad.papyrus_1, weight: 4}
-      - {id: zeroad.papyrus_2, weight: 4}
-      - {id: zeroad.cattails, weight: 4}
-      - {id: zeroad.reed_giant, weight: 5}
+      - {id: nature.reed_clump, weight: 12, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 6, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 5, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 4, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 4, waterside: true}
+      - {id: zeroad.cattails, weight: 4, waterside: true}
+      - {id: zeroad.reed_giant, weight: 5, waterside: true}
       - {id: nature.plant_flatTall, weight: 6}
       - {id: nature.plant_flatShort, weight: 5}
       - {id: nature.tree_palmShort, weight: 3}
@@ -474,10 +474,10 @@
       - {id: zeroad.palm_doum_2, weight: 4}
       - {id: zeroad.palm_date_a, weight: 3}
       - {id: zeroad.palm_date_b, weight: 2}
-      - {id: zeroad.papyrus_1, weight: 4}
-      - {id: zeroad.reed_pond_lush, weight: 3}
+      - {id: zeroad.papyrus_1, weight: 4, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 3, waterside: true}
       - {id: nature.tree_palmShort, weight: 2}
-      - {id: nature.reed_clump, weight: 3}
+      - {id: nature.reed_clump, weight: 3, waterside: true}
     fauna:
       - {id: animal.goat, weight: 3}
       - {id: zeroad.goat, weight: 2}

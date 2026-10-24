@@ -79,7 +79,11 @@ def profile(voices, npc, language):
 
 
 def spoken_lines(root):
-    """(npc id, text_key) for every NPC line, in a stable order, first speaker wins."""
+    """(npc id, text_key) for every spoken line, in a stable order, first speaker wins.
+
+    Dialogue nodes are spoken by their NPC. Quest tablet intros (`excerpt.paraphrase_key`)
+    are spoken by the narrator voice profile.
+    """
     dialogue_owner = {}
     for path in sorted((root / "npcs").glob("*.yaml")):
         for npc in load_yaml(path) or []:
@@ -94,6 +98,12 @@ def spoken_lines(root):
             key = node.get("text_key")
             if key:
                 lines.setdefault(key, owner)
+    for path in sorted((root / "quests").glob("*.yaml")):
+        quest = load_yaml(path) or {}
+        excerpt = quest.get("excerpt") or {}
+        key = excerpt.get("paraphrase_key")
+        if key:
+            lines.setdefault(key, "narrator")
     return sorted((owner, key) for key, owner in lines.items())
 
 

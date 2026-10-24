@@ -1,5 +1,6 @@
 {
-  "HumanWalking": ["Walk", false],
   "HumanForwardJump": ["Jump", true],
-  "HumanDying": ["Die", true]
+  "HumanDying": ["Die", true],
+  "HumanBoxing": ["Box", false],
+  "HumanKicking": ["Kick", false]
 }

@@ -21,10 +21,11 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TERRAIN = ROOT / "media" / "terrain"
 SIZE = 400                 # one pixel per metre, the extent_m of the place
-POND_RADIUS_M = 40.0       # where the bowl meets the plain
-POND_DEPTH_M = 2.2         # below the plain, in the middle
-WATER_LEVEL_M = -0.4       # the surface, relative to the plain
-BANK_DISTANCE_M = 4.0      # from the anchor to the water's edge
+POND_RADIUS_M = 48.0       # where the bowl meets the plain (gentle outer lip)
+POND_DEPTH_M = 2.8         # below the plain, in the middle
+WATER_LEVEL_M = -0.15      # surface just under the shore lip (not half a metre above it)
+BANK_WIDTH_M = 14.0        # metres of gradual slope from the lip down to deep water
+BANK_DISTANCE_M = 12.0     # from the anchor to the water's edge (dry camp on the bank)
 BEARING_DEG = 315.0        # the pond lies north-west of the spawn
 
 
@@ -49,7 +50,8 @@ def write_png16(path, grid):
 
 
 def build():
-    # The edge of the water is where the bowl is WATER_LEVEL_M deep: radius * sqrt(1 - level / depth).
+    # Shore lip: where the bowl first reaches WATER_LEVEL_M. Inside it the bed keeps falling
+    # for BANK_WIDTH_M so the bank is a walkable ramp, not a cliff with water floating above it.
     shore = POND_RADIUS_M * math.sqrt(1.0 - WATER_LEVEL_M / -POND_DEPTH_M)
     distance = shore + BANK_DISTANCE_M
     angle = math.radians(BEARING_DEG)
@@ -58,19 +60,23 @@ def build():
     xx, zz = np.meshgrid(np.arange(SIZE) - (SIZE - 1) / 2.0, np.arange(SIZE) - (SIZE - 1) / 2.0)
     wobble = value_noise(SIZE, 24, 7, 0.12 * POND_RADIUS_M)
     radius = np.hypot(xx - centre_x, zz - centre_z) + wobble
-    bowl = -POND_DEPTH_M * np.clip(1.0 - (radius / POND_RADIUS_M) ** 2, 0.0, 1.0)
+    # Smoothstep ramp from the lip (WATER_LEVEL_M) down to the deep bowl, then a flat plain outside.
+    t = np.clip((POND_RADIUS_M - radius) / max(BANK_WIDTH_M, 1.0), 0.0, 1.0)
+    ramp = t * t * (3.0 - 2.0 * t)
+    bowl = WATER_LEVEL_M - (POND_DEPTH_M + WATER_LEVEL_M) * ramp
+    bowl = np.where(radius >= POND_RADIUS_M, 0.0, bowl)
     ground = bowl + value_noise(SIZE, 16, 11, 0.08)          # a little unevenness all over
     # The anchor itself stays at its placed height, so the spawn does not float or sink.
     ground -= ground[SIZE // 2, SIZE // 2]
     heightmap = np.round(ground * 10.0).astype(np.int32) + 32768
     water = np.zeros((SIZE, SIZE), dtype=np.int32)
-    wet = ground < WATER_LEVEL_M
+    wet = ground < WATER_LEVEL_M - 0.02
     water[wet] = round(WATER_LEVEL_M * 10.0) + 32768
     write_png16(TERRAIN / "hunter_waterhole_height.png", heightmap)
     write_png16(TERRAIN / "hunter_waterhole_water.png", water)
-    nearest = np.hypot(xx[wet], zz[wet]).min()
+    nearest = np.hypot(xx[wet], zz[wet]).min() if wet.any() else float("nan")
     print(f"  pond centre ({centre_x:+.0f}, {centre_z:+.0f}) m, {int(wet.sum())} m2 of water, nearest {nearest:.1f} m from the spawn, "
-          f"relief {ground.min():+.1f} to {ground.max():+.1f} m")
+          f"relief {ground.min():+.1f} to {ground.max():+.1f} m, bank {BANK_WIDTH_M:.0f} m")
 
 
 if __name__ == "__main__":

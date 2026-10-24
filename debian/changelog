@@ -1,3 +1,9 @@
+ishtaria-datadisk-gilgamesh (0.3.0-3) unstable; urgency=medium
+
+  * Hunter Walk: keep Mixamo hip bob so the gait does not float/slide.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Thu, 22 Oct 2026 23:37:00 +0200
+
 ishtaria-datadisk-gilgamesh (0.3.0-2) unstable; urgency=medium
 
   * Fix hunter swim/walk skinning: A-pose hands no longer bound to the

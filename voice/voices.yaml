@@ -9,6 +9,12 @@ default:
   pitch: 0
 
 npcs:
+  # Quest tablet intros (clay prologue) — measured, storyteller pace
+  narrator:
+    pitch: -0.4
+    tempo: 0.88
+    length_scale: 1.05
+
   # Gilgamesh - Regal, authoritative
   gilgamesh:
     pitch: -0.5

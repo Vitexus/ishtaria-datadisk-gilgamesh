@@ -150,11 +150,11 @@
   movement: {kind: wander, radius_m: 22, speed_m_s: 1.1, pause_s: 8}
   tags: [beast, divine, punishment]
 
-# Old father of the hunter (Tablet I)
+# Old father of the hunter (Tablet I) — friendly: cannot be struck.
 - id: hunter_father
   name_key: npc.hunter_father
   place: hunter_village
-  character: {pack: retro, skin: humanMaleA}
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   dialogue: hunter_father
   bio_key: npc.hunter_father.bio
-  tags: [elder, hunter]
+  tags: [elder, hunter, friendly]

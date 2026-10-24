@@ -671,6 +671,22 @@ below; they are kept as a quick index.
   - Depictions of goddesses in art
   - Descriptions from epic text (wise, divine)
 
+#### Aruru (Creatrix; Enkidu from clay)
+- **Period**: Mythological (named in Gilgameš, Babylonian cuneiform copies from
+  c. 1750 BCE; tradition older)
+- **Role in the disk**: Tablet I prologue of the Hunter quest — the gods call her to
+  create Gilgameš’s equal; she washes her hands, pinches clay, and forms Enkidu
+  (`quest.hunter.excerpt`). Story wording follows eBL / George 2022; see
+  [`EPIC.md`](EPIC.md).
+- **Attributes** (secondary summary): earth and birth mother; creatrix of humanity
+  from muddy substance; matron of clay work / figure-making; often identified or
+  paired with Mami, Ninḫursag (Nin-Kharsag), and related mother titles.
+- **References**:
+  - [The Goddess Aruru — Holladay Paganism cyclopedia](http://www.holladaypaganism.com/goddesses/cyclopedia/a/ARURU.HTM)
+    (compiles Graves, Gray *NEM*, Kaster, Mackenzie, Monaghan *BGH*, Pritchard *ANET*,
+    Walker *WEMS*, etc.)
+  - Poem of Gilgameš SB I (George 2022 eBL): creation of Enkidu
+
 #### Anu (Sky God)
 - **Period**: All periods
 - **Attire**:

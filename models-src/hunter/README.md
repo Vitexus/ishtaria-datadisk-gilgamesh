@@ -20,13 +20,15 @@ The joint positions in `models-src/rodin/hunter.json` were read from the Mixamo 
     blender -b --python models-src/rodin_rig.py -- models-src/hunter/hunter_rodin_source.glb media/models/hunter.glb models-src/rodin/hunter.json
     blender -b --python models-src/hunter/retarget_clips.py -- models-src/hunter/hunter_rodin_raw.glb media/models/hunter.glb media/models/hunter.glb
 
-The export has no running or sitting clip (only the limping `HumanInjuredRun`), so the model has `Idle`, `Walk`,
-`Jump`, `Die` and `Swim`; the client skips the clips that are missing. `Idle` stays from `rodin_rig`; `Walk` is the
-Mixamo `HumanWalking` clip (the short procedural gait looked like only part of a step).
+`Idle` and `Walk` stay from `rodin_rig` (same procedural gait as Enkidu). Mixamo HumanWalking /
+HumanInjuredRun were tried and looked like jerks and hops when paced to the server's walk speed, so
+they are not baked. Boxing and Kicking become `Box` / `Kick` for predator combat at the water-hole;
+Jump, Die and Swim are Mixamo retargets. The shipped model has `Idle`, `Walk`, `Jump`, `Die`, `Swim`,
+`Box` and `Kick`. Sprint reuses Walk at a higher speed (no Run clip).
 
 ## Clips from the Mixamo export
 
-`retarget_clips.py` bakes Walk, Jump and Die in world space (same idea as Swim and as `../retarget_ambient.py` with a fifth
+`retarget_clips.py` bakes Jump and Die in world space (same idea as Swim and as `../retarget_ambient.py` with a fifth
 argument `world`). The first versions copied the local rotation of each bone, which is only right near the rest pose: the
 bones of the two rigs are rolled differently, so a forward jump or a falling man came out as a tangle. `../audit_clips.py`
 measures it (0 degrees = the clip moves like its source; the old clips were 20 to 86 degrees off on average):

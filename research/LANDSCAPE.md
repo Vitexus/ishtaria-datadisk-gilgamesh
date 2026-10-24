@@ -91,7 +91,9 @@ and an ice-house landmark; harbour ship landmarks (`places/harbour_ships.yaml`) 
 Sidon, Abu Tbeirah, Kissik, Liman Tepe, Buto and Áspero; siege rams flank Megiddo and
 Troy; Ishtar Gate ornaments stand at Uruk’s city_gate and beside Etemenanki; chariots
 at Susa, Nineveh and Kish. Elephantine uses the elephant stable mesh. Wetland fauna
-entries may set `waterside: true` (crocodiles, gulls, waterfowl).
+entries may set `waterside: true` (crocodiles, gulls, waterfowl). Reeds, papyrus and
+cattails are `shallow_water` in the catalog: they stand in wadeable water or within about
+60 m of it (`waterside: true` on the overlay entry), never on dry steppe.
 
 ### 0 A.D. terrain textures (optional surface variety)
 
