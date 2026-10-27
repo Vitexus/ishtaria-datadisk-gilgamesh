@@ -20,7 +20,7 @@ blender -b --python models-src/gilgamesh/rebuild_source.py
 ```
 
 Game model (Idle / Walk via `rodin_rig`, then Run / Jump / Sit / Die retargeted from the raw
-Mixamo clips):
+Hyper3D clips):
 
 ```sh
 blender -b --python models-src/rodin_rig.py -- \

@@ -31,6 +31,12 @@ TRIS = CONFIG.get("tris", 14000)
 TEX = CONFIG.get("tex", 1024)
 CENTRE = CONFIG.get("centre", "median")  # x of the centre line: median of the vertices, or the middle of the bounding box
 SKIRT = CONFIG.get("skirt", False)
+# Height of the skirt's hem in metres. Only cloth above it keeps part of its weight on the hips; bare legs
+# below it follow the legs alone (null: the whole lower leg counts as skirt, as for a long robe).
+SKIRT_HEM = CONFIG.get("skirt_hem")
+# Where the foot's weight fades into the shin, in metres above the ankle joint. A wide band makes the lower
+# shin turn with the foot and bend like rubber; sandal straps need only a few centimetres.
+ANKLE_BLEND = CONFIG.get("ankle_blend", [0.02, 0.13])
 STRIDE = CONFIG.get("stride")
 ARM_SWING = CONFIG.get("arm_swing", 1.0)
 ARM_SWING_SIDES = CONFIG.get("arm_swing_sides", {})  # {"L": factor, "R": factor}: a hand fused with the clothing barely swings
@@ -300,7 +306,7 @@ def leg_weights(body, table):
             continue
         thigh = smooth(v.co.z, knee - 0.06, knee + 0.06)
         rest = 1.0 - thigh
-        foot_w = rest * (1.0 - smooth(v.co.z, ankle + 0.02, ankle + 0.13))
+        foot_w = rest * (1.0 - smooth(v.co.z, ankle + ANKLE_BLEND[0], ankle + ANKLE_BLEND[1]))
         shin = rest - foot_w
         # which leg: the nearer of the two leg axes at this height
         t = max(0.0, min(1.0, (v.co.z - ankle) / (hip - ankle)))
@@ -311,6 +317,8 @@ def leg_weights(body, table):
         hips_share = 0.5 * smooth(v.co.z, ankle + 0.10, ankle + 0.30) if SKIRT else 0.0
         if SKIRT:  # a train dragging behind the feet stays with the hips instead of following the foot
             hips_share = max(hips_share, smooth(v.co.y, 0.10, 0.22))
+        if SKIRT and SKIRT_HEM is not None:  # a short tunic: the bare shin below the hem is all leg
+            hips_share *= smooth(v.co.z, SKIRT_HEM - 0.04, SKIRT_HEM + 0.02)
         for side, sw in (("L", left), ("R", 1.0 - left)):
             for bone, w in (("Thigh_", thigh), ("Shin_", shin), ("Foot_", foot_w)):
                 custom[bone + side] = custom.get(bone + side, 0.0) + w * sw * (1.0 - hips_share)

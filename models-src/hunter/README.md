@@ -8,25 +8,32 @@ Not shipped in the `.deb`; only `media/models/hunter.glb` is.
 | File | Role |
 | --- | --- |
 | `hunter_concept.png` | InvokeAI concept of the first static attempt (`models-src/rodin/make_concepts.py hunter`) |
-| `hunter_rodin_raw.glb` | Full web export (`base_basic_pbr.glb`): 500 k faces, Mixamo rig, clips Walking, Dying, ForwardJump, Boxing, Kicking, ... |
+| `hunter_rodin_raw.glb` | Full web export (`base_basic_pbr.glb`): 500 k faces, Hyper3D auto-rig (Mixamo-style bone names), clips of Hyper3D's animation library: Walking, Dying, ForwardJump, Boxing, Kicking, ... |
 | `hunter_rodin_source.glb` | Welded + decimated static mesh (~90 k faces) for `rodin_rig.py` |
 | `rebuild_source.py` | Rebuilds the source from the raw export |
-| `retarget_clips.py` | Bakes Jump and Die from the raw Mixamo clips onto the game armature |
+| `retarget_clips.py` | Bakes Jump and Die from the raw Hyper3D clips onto the game armature |
 | `previous/` | The chargen model that shipped before, and the earlier static Rodin attempts |
 
-The joint positions in `models-src/rodin/hunter.json` were read from the Mixamo bones of the raw export.
+The joint positions in `models-src/rodin/hunter.json` were read from the (Mixamo-named) bones of the raw export.
 
     blender -b --python models-src/hunter/rebuild_source.py
     blender -b --python models-src/rodin_rig.py -- models-src/hunter/hunter_rodin_source.glb media/models/hunter.glb models-src/rodin/hunter.json
     blender -b --python models-src/hunter/retarget_clips.py -- models-src/hunter/hunter_rodin_raw.glb media/models/hunter.glb media/models/hunter.glb
 
-`Idle` and `Walk` stay from `rodin_rig` (same procedural gait as Enkidu). Mixamo HumanWalking /
+`Idle` and `Walk` stay from `rodin_rig` (same procedural gait as Enkidu). Hyper3D HumanWalking /
 HumanInjuredRun were tried and looked like jerks and hops when paced to the server's walk speed, so
 they are not baked. Boxing and Kicking become `Box` / `Kick` for predator combat at the water-hole;
-Jump, Die and Swim are Mixamo retargets. The shipped model has `Idle`, `Walk`, `Jump`, `Die`, `Swim`,
+Jump, Die and Swim are retargeted from the Hyper3D clips. The shipped model has `Idle`, `Walk`, `Jump`, `Die`, `Swim`,
 `Box` and `Kick`. Sprint reuses Walk at a higher speed (no Run clip).
 
-## Clips from the Mixamo export
+## Leg weights
+
+The hunter's tunic ends just above the knee. `hunter.json` sets `skirt_hem` (0.56 m) so only the cloth above the
+hem keeps half its weight on the hips, and `ankle_blend` ([-0.01, 0.05] m above the ankle) so only the sandal turns
+with the foot. Before, the bare shins carried up to half their weight on the hips and the foot's weight reached 13 cm
+up the shin, so in the walk the shins bent like rubber instead of at the knee.
+
+## Clips from the Hyper3D export
 
 `retarget_clips.py` bakes Jump and Die in world space (same idea as Swim and as `../retarget_ambient.py` with a fifth
 argument `world`). The first versions copied the local rotation of each bone, which is only right near the rest pose: the

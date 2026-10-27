@@ -8,6 +8,10 @@ Sources of the NPC models in `media/models/`. They are not installed by the pack
   The skin parts are fused into one seamless mesh (voxel remesh, smoothed) and take over the weights of the parts.
 - `chargen/npcs.py`: look of the 18 humanoids (heights, dress, attributes) after `research/CHARACTER_DESIGN.md`.
 - `chargen/creatures.py`: the old procedural Scorpion Man and Bull of Heaven (replaced by the Rodin models below; kept as a fallback).
+- `rodin_rig.py` rigs humanoid Rodin meshes from `rodin/<id>.json`. With `"skirt": true` the lower legs keep half their
+  weight on the hips so a long robe does not tear between the legs; a short skirt or tunic sets `skirt_hem` (metres)
+  so bare shins below the hem follow the legs alone, and `ankle_blend` (metres above the ankle, default [0.02, 0.13])
+  narrows where the foot's weight fades into the shin. The hunter and Gilgamesh use both; their shins bent mid-length before.
 - `rodin_rig_creature.py` rigs non-humanoid Rodin meshes (bones, legs and tail from `rodin/<id>.json`, weights by distance to the bones, Idle and Walk); `rodin_scorpion_assemble.py` joins the Rodin scorpion and the Rodin upper body of a man into the Scorpion Man; `rodin/views.py` + `views_grid.py` give metre grids to read the bones off.
 - `textures/*.jpg`: 256 px fabric, fur, leather and skin textures generated with InvokeAI (RealVisXL_V4.0).
 
@@ -61,6 +65,9 @@ in every city of the disk and in front of the Etemenanki ziggurat.
 `rodin/make_concepts.py` and `rodin/img2img_concept.py` make the concept images for Hyper3D Rodin on the remote InvokeAI
 server; the sources of the Rodin models of the citizens of Uruk are in `uruk_*/` and the images in `concepts/`.
 Gilgamesh's Hyper3D export (concept, raw GLB with combat clips, welded source) lives in `gilgamesh/`.
-After `rodin_rig.py`, `gilgamesh/retarget_clips.py` bakes Run, Jump, Sit and Die from the raw Mixamo
+The clips in the raw Hyper3D exports (`*_rodin_raw.glb`) come from Hyper3D's own animation library (Humanoid), not
+from Mixamo; Hyper3D only names the bones of its auto-rig the Mixamo way (`LeftHandThumb3`, ...), which is what
+"Mixamo-style" and "Mixamo bone" mean in these sources and scripts.
+After `rodin_rig.py`, `gilgamesh/retarget_clips.py` bakes Run, Jump, Sit and Die from the raw Hyper3D
 clips onto `media/models/gilgamesh.glb` for the client's pose contract.
 

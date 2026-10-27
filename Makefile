@@ -26,7 +26,7 @@ world:
 world-map: media/world/height.pgm media/world/water.pgm
 	mkdir -p $(BUILD)
 	cd ../ishtaria-worldgen && cargo build
-	$(WORLDGEN) --earth $(CURDIR)/media/world/height.pgm --water $(CURDIR)/media/world/water.pgm 256 > $(PGM)
+	$(WORLDGEN) --seed $(SEED) --earth $(CURDIR)/media/world/height.pgm --water $(CURDIR)/media/world/water.pgm 256 > $(PGM)
 	@echo "world heightmap: $$(stat -c%s $(PGM)) bytes"
 
 voices:

@@ -168,7 +168,7 @@ fallback while a model loads. Rebuild and re-render:
 Ishtar is the exception: her model is a Hyper3D Rodin mesh (concept image from InvokeAI), made game-ready by
 `models-src/rodin_rig.py`. Her settings are in `models-src/rodin/ishtar.json`. Gilgamesh uses the same
 pipeline plus `models-src/gilgamesh/retarget_clips.py`, which bakes Run, Jump, Sit and Die from the
-Hyper3D Mixamo export onto the game armature (see `models-src/gilgamesh/README.md`). The source meshes
+Hyper3D export (clips of Hyper3D's own animation library) onto the game armature (see `models-src/gilgamesh/README.md`). The source meshes
 are under `models-src/ishtar/` and `models-src/gilgamesh/`. Rebuild Ishtar with
 
     blender -b --python models-src/rodin_rig.py -- models-src/ishtar/ishtar_rodin_source.glb media/models/ishtar.glb models-src/rodin/ishtar.json
