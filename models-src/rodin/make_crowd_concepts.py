@@ -12,6 +12,10 @@ Fix pass: crowd_archer (Rodin merged a deformed bow into the body) and
 crowd_pregnant_woman ("visibly with child" was read as holding a baby, plus a
 flesh-coloured blob at her feet) were regenerated as crowd_<id>_2.png with the
 prompts below; use make_crowd_fix_concepts.py for such corrected concepts.
+crowd_carpenter_1.png came out as a clay relief (twice with this style); crowd_carpenter_2.png was made
+on the local InvokeAI with RealVisXL_V4.0, seed 3103, asking for "a full body photograph of a living man ...
+played by an actor in a historical film costume", shirtless, with shirt/tank top/flip-flops/relief/carving
+in the negative prompt.
 """
 import asyncio
 import os

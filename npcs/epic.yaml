@@ -156,5 +156,6 @@
   place: hunter_village
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   dialogue: hunter_father
+  portrait: media/portraits/hunter_father.jpg
   bio_key: npc.hunter_father.bio
   tags: [elder, hunter, friendly]

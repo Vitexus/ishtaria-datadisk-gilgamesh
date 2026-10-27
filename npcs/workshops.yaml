@@ -6,6 +6,7 @@
   name_key: npc.smith
   place: uruk_smithy_1
   character: {pack: survivors, skin: survivorMaleB, model: media/models/smith.glb}
+  portrait: media/portraits/smith.jpg
   dialogue: smith
   bio_key: npc.smith.bio
   movement: {kind: wander, radius_m: 5, speed_m_s: 0.7, pause_s: 12}
@@ -15,6 +16,7 @@
   name_key: npc.smith
   place: uruk_smithy_2
   character: {pack: survivors, skin: survivorMaleB, model: media/models/smith.glb}
+  portrait: media/portraits/smith.jpg
   dialogue: smith
   bio_key: npc.smith.bio
   movement: {kind: wander, radius_m: 5, speed_m_s: 0.7, pause_s: 14}
@@ -24,6 +26,7 @@
   name_key: npc.smith
   place: uruk_smithy_3
   character: {pack: survivors, skin: survivorMaleB, model: media/models/smith.glb}
+  portrait: media/portraits/smith.jpg
   dialogue: smith
   bio_key: npc.smith.bio
   movement: {kind: wander, radius_m: 5, speed_m_s: 0.7, pause_s: 10}
@@ -33,6 +36,7 @@
   name_key: npc.potter
   place: uruk_pottery_1
   character: {pack: survivors, skin: survivorMaleB, model: media/models/potter.glb}
+  portrait: media/portraits/potter.jpg
   dialogue: potter
   bio_key: npc.potter.bio
   movement: {kind: wander, radius_m: 6, speed_m_s: 0.6, pause_s: 16}
@@ -42,6 +46,7 @@
   name_key: npc.potter_tablet
   place: uruk_pottery_2
   character: {pack: survivors, skin: survivorMaleB, model: media/models/potter_tablet.glb}
+  portrait: media/portraits/potter_tablet.jpg
   dialogue: potter
   bio_key: npc.potter_tablet.bio
   movement: {kind: wander, radius_m: 6, speed_m_s: 0.6, pause_s: 16}
@@ -51,6 +56,7 @@
   name_key: npc.market_scribe
   place: uruk_pottery_1
   character: {pack: retro, skin: humanMaleA, model: media/models/temple_scribe.glb}
+  portrait: media/portraits/temple_scribe.jpg
   dialogue: tablet_writer
   bio_key: npc.market_scribe.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.6, pause_s: 18}
@@ -60,6 +66,7 @@
   name_key: npc.tablet_bearer
   place: uruk_pottery_1
   character: {pack: survivors, skin: survivorMaleB, model: media/models/tablet_bearer.glb}
+  portrait: media/portraits/tablet_bearer.jpg
   dialogue: tablet_bearer
   bio_key: npc.tablet_bearer.bio
   movement:
@@ -73,6 +80,7 @@
   name_key: npc.tablet_bearer
   place: uruk_pottery_2
   character: {pack: survivors, skin: survivorMaleB, model: media/models/tablet_bearer.glb}
+  portrait: media/portraits/tablet_bearer.jpg
   dialogue: tablet_bearer
   bio_key: npc.tablet_bearer.bio
   movement:
@@ -86,6 +94,7 @@
   name_key: npc.tablet_bearer
   place: uruk_pottery_2
   character: {pack: survivors, skin: survivorMaleB, model: media/models/tablet_bearer.glb}
+  portrait: media/portraits/tablet_bearer.jpg
   dialogue: tablet_bearer
   bio_key: npc.tablet_bearer.bio
   movement:
@@ -99,6 +108,7 @@
   name_key: npc.market_scribe
   place: uruk_market
   character: {pack: retro, skin: humanMaleA, model: media/models/temple_scribe.glb}
+  portrait: media/portraits/temple_scribe.jpg
   dialogue: tablet_writer
   bio_key: npc.market_scribe.bio
   movement: {kind: wander, radius_m: 16, speed_m_s: 0.55, pause_s: 20}
@@ -108,6 +118,7 @@
   name_key: npc.tablet_merchant
   place: uruk_market
   character: {pack: retro, skin: humanMaleA, model: media/models/tablet_merchant.glb}
+  portrait: media/portraits/tablet_merchant.jpg
   dialogue: tablet_writer
   bio_key: npc.tablet_merchant.bio
   movement: {kind: wander, radius_m: 14, speed_m_s: 0.6, pause_s: 16}
@@ -117,6 +128,7 @@
   name_key: npc.writing_priest
   place: eanna_temple
   character: {pack: retro, skin: humanMaleA, model: media/models/high_priest_anu.glb}
+  portrait: media/portraits/high_priest_anu.jpg
   dialogue: tablet_writer
   bio_key: npc.writing_priest.bio
   movement: {kind: wander, radius_m: 18, speed_m_s: 0.5, pause_s: 22}

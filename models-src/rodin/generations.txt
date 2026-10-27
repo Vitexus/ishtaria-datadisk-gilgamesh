@@ -34,7 +34,7 @@ lamassu_printables_derived 6fcaf893-3f1a-45b0-ac03-10e15029ef18  # reference: re
 # Crowd of Uruk (Gen-2.5-High, ~40000 faces, via the hyper3d MCP): crowd_ figures for street variety.
 crowd_fisherman 85a41055-9acd-4e28-8724-2cc8a3a7a4b0
 crowd_baker 69829d20-9a1c-4e30-b5d1-53db5446ee6e
-crowd_carpenter 25f131ba-6e42-4df6-bbff-17194f6467d8
+crowd_carpenter 413a4691-926a-4a18-822d-5334ecc287f5  # concept crowd_carpenter_2.png (hyper3d MCP); 25f131ba-6e42-4df6-bbff-17194f6467d8 was a clay relief
 crowd_shepherd ca765b96-a148-4d54-8917-573a1df7e8bb
 crowd_old_man f45a93c7-9a53-4210-b506-74e65d5f811f
 crowd_apprentice_boy bd86464d-b030-404e-a7ef-f2b1c6ef2d5a

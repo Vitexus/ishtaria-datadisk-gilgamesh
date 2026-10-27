@@ -26,7 +26,23 @@ BACKDROPS = {
     "uruk_farmer": ("0.30,0.34,0.18", 1.6), "uruk_water_carrier": ("0.20,0.32,0.38", 1.6), "uruk_mason": ("0.40,0.28,0.18", 1.6),
     "uruk_alewife": ("0.44,0.30,0.16", 1.6), "uruk_elder": ("0.30,0.30,0.42", 1.6), "uruk_noblewoman": ("0.20,0.24,0.44", 1.6),
     "uruk_temple_courtesan": ("0.48,0.14,0.12", 1.6), "uruk_plowman": ("0.30,0.34,0.20", 1.6),
+    "hunter_father": ("0.38,0.32,0.20", 1.6),
+    # Workshops: the smith, the tablet makers and sellers (scribes and priests reuse the portraits above).
+    "smith": ("0.40,0.22,0.12", 1.6), "potter_tablet": ("0.42,0.28,0.16", 1.6), "tablet_bearer": ("0.40,0.34,0.22", 1.6),
+    "tablet_merchant": ("0.44,0.30,0.16", 1.6),
+    # The crowd of Uruk.
+    "crowd_old_man": ("0.30,0.30,0.40", 1.6), "crowd_grandmother": ("0.34,0.28,0.38", 1.6), "crowd_boy_8": ("0.30,0.34,0.20", 1.6),
+    "crowd_girl_8": ("0.44,0.32,0.22", 1.6), "crowd_toddler_boy": ("0.40,0.34,0.24", 1.6), "crowd_teen_girl": ("0.42,0.26,0.24", 1.6),
+    "crowd_apprentice_boy": ("0.40,0.28,0.18", 1.6), "crowd_fisherman": ("0.18,0.30,0.36", 1.6), "crowd_baker": ("0.44,0.34,0.20", 1.6),
+    "crowd_carpenter": ("0.38,0.28,0.16", 1.6), "crowd_shepherd": ("0.30,0.34,0.18", 1.6), "crowd_market_woman": ("0.44,0.28,0.14", 1.6),
+    "crowd_washwoman": ("0.20,0.32,0.38", 1.6), "crowd_young_woman": ("0.46,0.30,0.26", 1.6), "crowd_pregnant_woman": ("0.42,0.32,0.30", 1.6),
+    "crowd_spearman": ("0.36,0.24,0.14", 1.6), "crowd_archer": ("0.30,0.26,0.16", 1.6, "0.0,0.0,1.45,1.9,70,30"), "crowd_axeman": ("0.34,0.20,0.14", 1.6),
+    "crowd_slinger": ("0.32,0.30,0.18", 1.6), "crowd_textile_merchant": ("0.34,0.26,0.40", 1.6), "crowd_copper_merchant": ("0.42,0.24,0.12", 1.6),
+    "crowd_caravaneer": ("0.42,0.32,0.18", 1.6), "crowd_young_noble": ("0.34,0.26,0.40", 1.6), "crowd_noble_girl": ("0.20,0.24,0.44", 1.6),
+    "crowd_court_official": ("0.30,0.34,0.44", 1.6), "crowd_priest_minor": ("0.46,0.40,0.28", 1.6),
 }
+# npc id -> model in media/models/ when the NPC wears another character's model
+MODELS = {"hunter_father": "crowd_old_man"}
 
 
 def main():
@@ -38,7 +54,7 @@ def main():
         with tempfile.TemporaryDirectory() as tmp:
             png = pathlib.Path(tmp) / (npc + ".png")
             subprocess.run(["blender", "-b", "--python", str(ROOT / "tools/blender/render_preview.py"), "--",
-                            str(ROOT / "media/models" / (npc + ".glb")), str(png), "bust", "Idle", "14", "512", colour, str(mult), *camera],
+                            str(ROOT / "media/models" / (MODELS.get(npc, npc) + ".glb")), str(png), "bust", "Idle", "14", "512", colour, str(mult), *camera],
                            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             quality = 90
             while True:

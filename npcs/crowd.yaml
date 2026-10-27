@@ -5,6 +5,7 @@
   name_key: npc.crowd_old_man
   place: uruk_market
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_old_man.bio
   movement: {kind: wander, radius_m: 18, speed_m_s: 0.48, pause_s: 6}
@@ -14,6 +15,7 @@
   name_key: npc.crowd_grandmother
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_grandmother.bio
   movement: {kind: wander, radius_m: 14, speed_m_s: 0.42, pause_s: 8}
@@ -23,6 +25,7 @@
   name_key: npc.crowd_boy_8
   place: uruk_market
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_boy_8.bio
   movement: {kind: wander, radius_m: 28, speed_m_s: 2.2, pause_s: 1.5}
@@ -32,6 +35,7 @@
   name_key: npc.crowd_girl_8
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_girl_8.bio
   movement: {kind: wander, radius_m: 26, speed_m_s: 2.0, pause_s: 2}
@@ -41,6 +45,7 @@
   name_key: npc.crowd_toddler_boy
   place: uruk_market
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_toddler_boy.glb}
+  portrait: media/portraits/crowd_toddler_boy.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_toddler_boy.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 1.65, pause_s: 3}
@@ -50,6 +55,7 @@
   name_key: npc.crowd_teen_girl
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_teen_girl.glb}
+  portrait: media/portraits/crowd_teen_girl.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_teen_girl.bio
   movement: {kind: wander, radius_m: 22, speed_m_s: 1.9, pause_s: 2}
@@ -59,6 +65,7 @@
   name_key: npc.crowd_apprentice_boy
   place: uruk_quarter_02
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_apprentice_boy.glb}
+  portrait: media/portraits/crowd_apprentice_boy.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_apprentice_boy.bio
   movement: {kind: wander, radius_m: 35, speed_m_s: 2.1, pause_s: 2}
@@ -68,6 +75,7 @@
   name_key: npc.crowd_fisherman
   place: river_bank
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_fisherman.bio
   movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 4}
@@ -77,6 +85,7 @@
   name_key: npc.crowd_baker
   place: uruk_market
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_baker.glb}
+  portrait: media/portraits/crowd_baker.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_baker.bio
   movement: {kind: wander, radius_m: 16, speed_m_s: 0.95, pause_s: 5}
@@ -86,6 +95,7 @@
   name_key: npc.crowd_carpenter
   place: uruk_quarter_03
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_carpenter.glb}
+  portrait: media/portraits/crowd_carpenter.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_carpenter.bio
   movement: {kind: wander, radius_m: 30, speed_m_s: 1.05, pause_s: 4}
@@ -95,15 +105,18 @@
   name_key: npc.crowd_shepherd
   place: uruk_pasture
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_shepherd.glb}
+  portrait: media/portraits/crowd_shepherd.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_shepherd.bio
   movement: {kind: wander, radius_m: 50, speed_m_s: 0.9, pause_s: 5}
-  tags: [crowd]
+  # Lends his look to the shepherds the server generates for every town (they drive the flocks).
+  tags: [crowd, look_shepherd]
 
 - id: crowd_market_woman
   name_key: npc.crowd_market_woman
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_market_woman.glb}
+  portrait: media/portraits/crowd_market_woman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_market_woman.bio
   movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4}
@@ -113,6 +126,7 @@
   name_key: npc.crowd_washwoman
   place: river_bank
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_washwoman.glb}
+  portrait: media/portraits/crowd_washwoman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_washwoman.bio
   movement: {kind: wander, radius_m: 25, speed_m_s: 1.05, pause_s: 3}
@@ -122,6 +136,7 @@
   name_key: npc.crowd_young_woman
   place: uruk_quarter_01
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_young_woman.bio
   movement: {kind: wander, radius_m: 28, speed_m_s: 1.1, pause_s: 3}
@@ -131,6 +146,7 @@
   name_key: npc.crowd_pregnant_woman
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_pregnant_woman.bio
   movement: {kind: wander, radius_m: 12, speed_m_s: 0.7, pause_s: 6}
@@ -141,6 +157,7 @@
   name_key: npc.crowd_spearman
   place: lamassu_gate_ishtar
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_spearman.glb}
+  portrait: media/portraits/crowd_spearman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_spearman.bio
   movement: {kind: wander, radius_m: 40, speed_m_s: 1.15, pause_s: 4}
@@ -150,6 +167,7 @@
   name_key: npc.crowd_archer
   place: great_wall_uruk
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_archer.glb}
+  portrait: media/portraits/crowd_archer.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_archer.bio
   movement: {kind: wander, radius_m: 45, speed_m_s: 1.1, pause_s: 4}
@@ -159,6 +177,7 @@
   name_key: npc.crowd_axeman
   place: lamassu_gate_west
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_axeman.glb}
+  portrait: media/portraits/crowd_axeman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_axeman.bio
   movement: {kind: wander, radius_m: 35, speed_m_s: 1.05, pause_s: 5}
@@ -168,6 +187,7 @@
   name_key: npc.crowd_slinger
   place: lamassu_gate_north
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_slinger.glb}
+  portrait: media/portraits/crowd_slinger.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_slinger.bio
   movement: {kind: wander, radius_m: 40, speed_m_s: 1.25, pause_s: 3}
@@ -177,6 +197,7 @@
   name_key: npc.crowd_textile_merchant
   place: uruk_market
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_textile_merchant.glb}
+  portrait: media/portraits/crowd_textile_merchant.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_textile_merchant.bio
   movement: {kind: wander, radius_m: 15, speed_m_s: 0.95, pause_s: 5}
@@ -186,6 +207,7 @@
   name_key: npc.crowd_copper_merchant
   place: uruk_market
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_copper_merchant.glb}
+  portrait: media/portraits/crowd_copper_merchant.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_copper_merchant.bio
   movement: {kind: wander, radius_m: 16, speed_m_s: 1.0, pause_s: 4}
@@ -195,6 +217,7 @@
   name_key: npc.crowd_caravaneer
   place: processional_way
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_caravaneer.glb}
+  portrait: media/portraits/crowd_caravaneer.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_caravaneer.bio
   movement: {kind: wander, radius_m: 50, speed_m_s: 0.95, pause_s: 5}
@@ -204,6 +227,7 @@
   name_key: npc.crowd_young_noble
   place: uruk_palace
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_young_noble.glb}
+  portrait: media/portraits/crowd_young_noble.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_young_noble.bio
   movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4}
@@ -213,6 +237,7 @@
   name_key: npc.crowd_noble_girl
   place: uruk_palace
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_noble_girl.glb}
+  portrait: media/portraits/crowd_noble_girl.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_noble_girl.bio
   movement: {kind: wander, radius_m: 16, speed_m_s: 1.7, pause_s: 2}
@@ -222,6 +247,7 @@
   name_key: npc.crowd_court_official
   place: uruk_palace
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_court_official.glb}
+  portrait: media/portraits/crowd_court_official.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_court_official.bio
   movement: {kind: wander, radius_m: 14, speed_m_s: 0.9, pause_s: 5}
@@ -231,6 +257,7 @@
   name_key: npc.crowd_priest_minor
   place: eanna_temple
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_priest_minor.glb}
+  portrait: media/portraits/crowd_priest_minor.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_priest_minor.bio
   movement: {kind: wander, radius_m: 20, speed_m_s: 0.95, pause_s: 6}
