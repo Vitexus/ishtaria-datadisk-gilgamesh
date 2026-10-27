@@ -1,3 +1,18 @@
+ishtaria-datadisk-gilgamesh (0.3.1-1) unstable; urgency=medium
+
+  * Hunter and Gilgameš: shins no longer bend mid-length when walking
+    (skirt hem and ankle blend in the rig).
+  * Every character has a portrait rendered from its own model; the old
+    father of the hunter shows his own face.
+  * The crowd carpenter is a living man again (new Hyper3D model), not a
+    clay relief.
+  * The crowd shepherd lends his look to the generated shepherds (needs
+    ishtaria-server 0.4.1).
+  * Character clips are credited to Hyper3D's animation library, not
+    Mixamo.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Tue, 27 Oct 2026 14:23:37 +0100
+
 ishtaria-datadisk-gilgamesh (0.3.0-3) unstable; urgency=medium
 
   * Hunter Walk: keep Mixamo hip bob so the gait does not float/slide.
