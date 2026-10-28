@@ -91,13 +91,16 @@ Comment: This work is based on "The Burney Relief"
  (models-src/architecture/burney_restore.py, notes in models-src/burney_relief/RESTORATION.md). The adaptation is distributed here under
  CC-BY-SA-4.0.
 
-Files: media/models/architecture/lamassu_pair.glb media/models/architecture/lamassu_pair_collision.glb media/models/architecture/shedu_pair.glb media/models/architecture/shedu_pair_collision.glb models-src/lamassu/* models-src/architecture/lamassu_models.py models-src/rodin_lamassu_assemble.py models-src/concepts/lamassu_*
-Copyright: Peter Farell (https://www.printables.com/model/665507-persian-lamassu), derived work by the Ishtaria Team 2026
-License: CC-BY-NC-4.0
-Comment: UNRESOLVED LICENCE: the guardian statues are derived from the Printables model "Persian Lamassu" by Peter Farell (CC BY-NC): a render of it was the
- reference of a Hyper3D Rodin generation, which was decimated and scaled (models-src/lamassu/NOTES.md). CC BY-NC does not fit the CC BY-SA of the rest of the datadisk
- (non-commercial use only). The owner decided to make the derived work; before a release the author must be asked for permission, the statue remade from other material
- or these files left out.
+Files: media/models/architecture/lamassu_pair.glb media/models/architecture/lamassu_pair_collision.glb media/models/architecture/shedu_pair.glb media/models/architecture/shedu_pair_collision.glb
+Copyright: Wildfire Games (http://www.wildfiregames.com/), 0 A.D. art; derived work by the Ishtaria Team 2026
+License: CC-BY-SA-3.0
+Comment: The lamassu (aladlammu) guardians are the 0 A.D. models pers_lamassu and pers_lamassu_small, mirrored on this disk under
+ media/models/architecture/zeroad/ (converted from 0 A.D.'s public.zip by ishtaria-client/tools/zeroad-structures.py; see
+ media/models/architecture/zeroad/License.txt). models-src/architecture/lamassu_models.py welds, decimates and scales them to 7.6 m
+ (a pair 9.5 m apart) and 2.2 m (5.4 m apart), standing on the ground and looking south at yaw 0, and adds simple collision boxes.
+ Attribution: Wildfire Games; http://creativecommons.org/licenses/by-sa/3.0/. The earlier statues derived from "Persian Lamassu" by
+ Peter Farell (CC BY-NC, Printables 665507) were removed in October 2026: that licence did not fit the CC BY-SA of the disk
+ (models-src/lamassu/NOTES.md).
 
 Files: media/world/height.pgm media/world/water.pgm
 Copyright: 2026 Ishtaria Team <ishtaria@vitexsoftware.com>

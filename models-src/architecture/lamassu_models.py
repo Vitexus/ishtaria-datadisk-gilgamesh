@@ -1,13 +1,16 @@
 """Builds the lamassu (aladlammu) guardians for the game: a pair of statues and its simple collision model.
 
-    blender -b --python models-src/architecture/lamassu_models.py -- models-src/lamassu/lamassu_colored.glb media/models/architecture
+    blender -b --python models-src/architecture/lamassu_models.py -- media/models/architecture
 
-Writes <dir>/lamassu_pair.glb (+ _collision) and <dir>/shedu_pair.glb (+ _collision). The statue is the Rodin model made from a render of the Printables model
-"Persian Lamassu" by Peter Farell (CC BY-NC, see debian/copyright and models-src/lamassu/NOTES.md for the licence question), recoloured by
-models-src/architecture/paint_lamassu.py after the museum reconstruction of the polychromy (research/lamassu-color.jpg; the coloured source is
-models-src/lamassu/lamassu_colored.glb): decimated, scaled to HEIGHT_M, standing on z = 0 and looking along -Y (glTF +Z, so with yaw 0 it looks south in the
-game). The pair stands GAP_M apart (centre to centre) on either side of the origin, both looking the same way, as the guardians stand at the jambs of a gate
-or at the foot of a stair. The small shedu pair (a metre high) guards house doors and markets.
+Writes <dir>/lamassu_pair.glb (+ _collision) and <dir>/shedu_pair.glb (+ _collision). The statues are the 0 A.D.
+models `pers_lamassu` and `pers_lamassu_small` (Wildfire Games, CC BY-SA 3.0; mirrored on this disk under
+media/models/architecture/zeroad/, converted from 0 A.D.'s public.zip by ishtaria-client/tools/zeroad-structures.py,
+see media/models/architecture/zeroad/License.txt and models-src/lamassu/NOTES.md): decimated, scaled to HEIGHT_M,
+standing on z = 0 and looking along -Y (glTF +Z, so with yaw 0 it looks south in the game). The 0 A.D. source faces
+the same way as the previous, licence-problematic Rodin model did, so the places written by tools/build_statues.py
+keep their yaw; the script checks the head side and refuses to write a pair that looks the wrong way. The pair
+stands GAP_M apart (centre to centre) on either side of the origin, both looking the same way, as the guardians stand
+at the jambs of a gate or at the foot of a stair. The small shedu pair (a metre high) guards house doors and markets.
 """
 import sys
 
@@ -16,11 +19,12 @@ import bpy
 import numpy as np
 from mathutils import Vector
 
-SRC, OUTDIR = sys.argv[sys.argv.index("--") + 1:][:2]
+OUTDIR = sys.argv[sys.argv.index("--") + 1]
+ZEROAD = "media/models/architecture/zeroad"
 # the big guardians of gates, palaces and stairs (twice the first 3.8 m: owner, 2026-10-13) and the small ones at house doors and markets
 KINDS = {
-    "lamassu": dict(height=7.6, gap=9.5, faces=24000, tex=1024),
-    "shedu": dict(height=2.2, gap=5.4, faces=8000, tex=512),   # 2.2 m: taller than a man (the first 1.1 m were smaller than one)
+    "lamassu": dict(src=ZEROAD + "/pers_lamassu.glb", height=7.6, gap=9.5, faces=24000, tex=1024),
+    "shedu": dict(src=ZEROAD + "/pers_lamassu_small.glb", height=2.2, gap=5.4, faces=8000, tex=512),   # 2.2 m: taller than a man (the first 1.1 m were smaller than one)
 }
 
 
@@ -40,7 +44,7 @@ def load(path):
 
 def prepare(obj, HEIGHT_M, FACES, TEX):
     bm = bmesh.new(); bm.from_mesh(obj.data)
-    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0005)     # generated meshes are split along the UV seams
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0005)     # the 0 A.D. conversion splits every triangle corner
     bm.to_mesh(obj.data); bm.free()
     mod = obj.modifiers.new("dec", "DECIMATE")
     mod.ratio = FACES / len(obj.data.polygons)
@@ -56,7 +60,14 @@ def prepare(obj, HEIGHT_M, FACES, TEX):
         if img.size[0] > TEX:
             img.scale(TEX, TEX)
     size = (mx - mn) * s
-    print("statue faces", len(obj.data.polygons), "size (x, y, z) m", size.round(2))
+    # the head (the tiara is the highest part) must be at -Y: the game turns a model by yaw about UP, and a model
+    # looking along +Z (south) at yaw 0 must look along (sin yaw, cos yaw) in (x, z) — the places of build_statues.py
+    # were laid out for that convention
+    top = co[co[:, 2] > mn[2] + 0.9 * (mx[2] - mn[2])]
+    head_y = float(top[:, 1].mean()) if len(top) else 0.0
+    if head_y > 0:
+        raise SystemExit("the source model faces +Y (head at +Y); turn it to face -Y before building the pair")
+    print("statue faces", len(obj.data.polygons), "size (x, y, z) m", size.round(2), "head y %.2f (must be < 0)" % head_y)
     return size
 
 
@@ -66,8 +77,8 @@ def export(path):
                               use_selection=True)
 
 
-def build(kind, height, gap, faces, tex):
-    obj = load(SRC)
+def build(kind, src, height, gap, faces, tex):
+    obj = load(src)
     size = prepare(obj, height, faces, tex)
     obj.name = kind + "_L"
     twin = bpy.data.objects.new(kind + "_R", obj.data)       # same mesh: one copy in the file, two nodes

@@ -121,6 +121,9 @@ Z.MATERIALS["cones"] = ("cone_mosaic.jpg", (1, 1, 1), 0.9, 0.0, 2.4)
 Z.MATERIALS["cone_wall"] = ("cone_wall.jpg", (1, 1, 1), 0.95, 0.0, 2.4)
 Z.MATERIALS["leaf"] = (None, (0.22, 0.38, 0.14), 0.9, 0.0, 1.0)
 Z.MATERIALS["limestone"] = ("plaster.jpg", (0.97, 0.95, 0.9), 0.9, 0.0, 5.0)
+# worn, shadowed brick for the ziggurat stair treads: the weathering fade stops darkening above 7 m, so the top
+# side of a flight read as a bright band of plain baked brick
+Z.MATERIALS["tread_shadow"] = ("bakedbrick.jpg", (0.62, 0.55, 0.48), 0.92, 0.0, 3.0)
 
 
 class Frame:
@@ -599,11 +602,11 @@ def ishtar_ziggurat_model(model, rng):
     landing_front, landing_half = front - 3.0, 5.5
     wall_top_y = front + 0.06 * rise
     Z.box(model, 0.0, (landing_front + wall_top_y) / 2, 2 * landing_half, wall_top_y - landing_front, 0.0, rise, "mudbrick", "plaster", rng)
-    Z.stairs(model, 0.0, landing_front - rise, (0, 1), 5.5, 0.0, rise, rise, rh=0.3)
+    Z.stairs(model, 0.0, landing_front - rise, (0, 1), 5.5, 0.0, rise, rise, rh=0.3, tread_mat="tread_shadow")
     Z.stair_parapets(model, 0.0, landing_front - rise, (0, 1), 5.5, 0.0, rise, rise)
     side_y = front - 1.5
-    Z.stairs(model, -15.0, side_y, (1, 0), 3.0, 0.0, rise, 15.0 - landing_half, rh=0.3)
-    Z.stairs(model, 15.0, side_y, (-1, 0), 3.0, 0.0, rise, 15.0 - landing_half, rh=0.3)
+    Z.stairs(model, -15.0, side_y, (1, 0), 3.0, 0.0, rise, 15.0 - landing_half, rh=0.3, tread_mat="tread_shadow")
+    Z.stairs(model, 15.0, side_y, (-1, 0), 3.0, 0.0, rise, 15.0 - landing_half, rh=0.3, tread_mat="tread_shadow")
     zacc = rise
     for k in range(1, 3):
         w, h = spec[k][0], spec[k][1]
@@ -611,7 +614,7 @@ def ishtar_ziggurat_model(model, rng):
         y_front = cy_k - w / 2
         margin = y_front - tops[k - 1][4]
         run = min(h, margin - 1.2)
-        Z.stairs(model, 0.0, y_front + 0.3 - run, (0, 1), 4.5, zacc, h, run, rh=0.3)
+        Z.stairs(model, 0.0, y_front + 0.3 - run, (0, 1), 4.5, zacc, h, run, rh=0.3, tread_mat="tread_shadow")
         zacc += h
     zt, cx, cy_k, t_w, t_front = tops[2]
     back = cy_k + t_w / 2

@@ -52,7 +52,7 @@ mastering a lion" statues (`research/gilgamesh-lion-statue.jpg`): the rigged kin
 4.5 m (Gilgamesh was a demigod giant) on a limestone pedestal, with the rigged adult male lion
 `media/models/mountain_lion.glb` rearing upright in his arms - an adult lion, not a cub; the size difference is the
 king's. The poses are baked from the `Idle` clips (the king's left arm into a cradle, the lion on its hind legs) and
-the painted character textures are kept, as the ancient statues were polychrome (cf. `architecture/paint_lamassu.py`).
+the painted character textures are kept, as the ancient statues were polychrome.
 One static mesh:
 
     blender -b --python models-src/architecture/gilgamesh_statue.py -- media/models media/models/architecture
@@ -61,6 +61,18 @@ writes `gilgamesh_statue.glb` (1.5 MiB) and `gilgamesh_statue_collision.glb` (th
 `media/models/architecture/`; `--preview` renders `architecture/renders/gilgamesh_statue_*.png`. `tools/build_statues.py`
 places the statue three times in Uruk (palace courtyard, court of Eanna, royal tombs) and `tools/build_city_statues.py`
 in every city of the disk and in front of the Etemenanki ziggurat.
+
+`architecture/lamassu_models.py` builds the lamassu (aladlammu) guardians of Uruk from the 0 A.D. statues
+`pers_lamassu` and `pers_lamassu_small` (Wildfire Games, CC BY-SA 3.0; mirrored under `media/models/architecture/zeroad/`):
+welded, decimated, scaled to 7.6 m and 2.2 m, standing on the ground and looking south at yaw 0, as pairs 9.5 m and
+5.4 m apart, with simple collision boxes:
+
+    blender -b --python models-src/architecture/lamassu_models.py -- media/models/architecture
+
+writes `lamassu_pair.glb`, `lamassu_pair_collision.glb`, `shedu_pair.glb` and `shedu_pair_collision.glb`.
+`tools/build_statues.py` places the pairs at the gates, palaces, precinct entrances and stairs of Uruk and the small
+shedu at house doors and markets (`places/uruk_statues.yaml`); `places/lamassu_guardians.yaml` stands the raw 0 A.D.
+statues at Susa. Provenance and the licence history: `models-src/lamassu/NOTES.md`.
 
 `rodin/make_concepts.py` and `rodin/img2img_concept.py` make the concept images for Hyper3D Rodin on the remote InvokeAI
 server; the sources of the Rodin models of the citizens of Uruk are in `uruk_*/` and the images in `concepts/`.
