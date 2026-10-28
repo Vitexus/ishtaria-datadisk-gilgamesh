@@ -11,6 +11,7 @@ place.bridge_stone: Most bohů
 place.uruk_wall: Velká zeď Uruku
 place.eanna_temple: Chrám Eanna
 place.ishtar_temple: Chrám Ištar
+place.foundation_deposit: Základový vklad chrámu Ištar
 place.uruk_market: Tržiště v Uruku
 place.uruk_palace: Královský palác v Uruku
 place.cedar_forest: Cedrový les
@@ -1175,3 +1176,8 @@ xerxes.greet: "Jsem Xšayāršā, který drží Mari na eufratské cestě. Gilga
 xerxes.ask_city: Zeptat se na Mari
 xerxes.city: "Mari žije říčním obchodem. Cedr, měď i zprávy o vzdálených králích se zastavují u našich přístavišť."
 xerxes.leave: Sbohem
+achievement.foundation_reader.title: "Čtenář základů"
+achievement.foundation_reader.description: "Najdi základovou destičku chrámu Ištar a přečti ji."
+knowledge.foundation_tablet.title: "Základová destička chrámu Ištar"
+knowledge.foundation_tablet.text: "„Inanně, své paní, král Uruku postavil její chrám.“ Při založení chrámu dal král vyrýt malou destičku z černého kamene a uložit ji do schránky z pálených cihel pod roh zdí, často s měděným kolíkem. Mluvila k bohům i ke králům, kteří chrám po něm obnoví. Takové destičky známe od raně dynastického Lagaše po krále III. dynastie urské; tato napodobuje steatitové destičky Ur-Nammy (kolem roku 2100 př. n. l.) z Eanny, jen bez jeho jména. Znaky mají pozdější podobu, ne písmo Gilgamešovy doby."
+knowledge.foundation_tablet.credit: "Render vlastního modelu datadisku (CC BY-SA 4.0) podle základové destičky Ur-Nammy. Znaky písmem Noto Sans Cuneiform (SIL Open Font License)."

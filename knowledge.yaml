@@ -21,3 +21,13 @@
   image: media/knowledge/xerxes.jpg
   credit_key: knowledge.xerxes.credit
   wikipedia: {en: Xerxes_I, cs: Xerxés_I.}
+
+# Read at the foundation deposit of the Temple of Ishtar (places/uruk.yaml), not told by a character. The picture
+# is a render of the disk's own model (models-src/foundation_tablet/); the article is about Ur-Namma, whose
+# tablets of this kind the model follows.
+- id: foundation_tablet
+  title_key: knowledge.foundation_tablet.title
+  text_key: knowledge.foundation_tablet.text
+  image: media/knowledge/foundation_tablet.jpg
+  credit_key: knowledge.foundation_tablet.credit
+  wikipedia: {en: Ur-Nammu, cs: Ur-Nammu}

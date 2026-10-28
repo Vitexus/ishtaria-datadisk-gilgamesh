@@ -5,7 +5,7 @@
 override_dh_auto_install:
 	# Install datadisk files to debian/tmp/usr/share/ishtaria/datadisks/gilgamesh/
 	install -d debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh
-	cp -a datadisk.yaml knowledge.yaml places npcs dialogues quests lore music i18n \
+	cp -a datadisk.yaml knowledge.yaml achievements.yaml places npcs dialogues quests lore music i18n \
 		debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/
 	# Copy media but not voice (generated at build time)
 	cp -a media debian/ishtaria-datadisk-gilgamesh/usr/share/ishtaria/datadisks/gilgamesh/

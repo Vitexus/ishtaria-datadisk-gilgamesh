@@ -11,6 +11,7 @@ place.bridge_stone: Bridge of the Gods
 place.uruk_wall: Great Wall of Uruk
 place.eanna_temple: Temple of Eanna
 place.ishtar_temple: Temple of Ishtar
+place.foundation_deposit: Foundation deposit of the Temple of Ishtar
 place.uruk_market: Uruk Market
 place.uruk_palace: Royal Palace of Uruk
 place.cedar_forest: Cedar Forest
@@ -1193,3 +1194,8 @@ xerxes.greet: "I am Xšayāršā, who holds Mari on the Euphrates road. Gilgames
 xerxes.ask_city: Ask about Mari
 xerxes.city: "Mari lives by the river trade. Cedar, copper and news of distant kings all stop at our quays."
 xerxes.leave: Farewell
+achievement.foundation_reader.title: "Reader of Foundations"
+achievement.foundation_reader.description: "Find the foundation tablet of the Temple of Ishtar and read it."
+knowledge.foundation_tablet.title: "Foundation tablet of the Temple of Ishtar"
+knowledge.foundation_tablet.text: "\"For Inanna, his lady, the king of Uruk built her temple.\" When a temple was founded, the king had a small tablet of black stone inscribed and laid in a box of baked bricks under a corner of the walls, often with a copper peg. It spoke to the gods and to the kings who would rebuild the temple after him. Such tablets are known from Early Dynastic Lagash to the Ur III kings; this one follows the steatite tablets of Ur-Namma (about 2100 BCE) from the Eanna, without his name. The signs are a later form, not the writing of Gilgamesh's time."
+knowledge.foundation_tablet.credit: "Render of the datadisk's own model (CC BY-SA 4.0), after a foundation tablet of Ur-Namma. Signs drawn with Noto Sans Cuneiform (SIL Open Font License)."

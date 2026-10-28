@@ -1,0 +1,8 @@
+# Achievements of the disk, shown after the engine's own. Ids are permanent once released: characters keep
+# them and a Steam build names them GILGAMESH__<ID> (no double underscores in an id). Texts are i18n keys.
+- id: foundation_reader
+  title_key: achievement.foundation_reader.title
+  description_key: achievement.foundation_reader.description
+  icon: foundation_tablet
+  category: story
+  hidden: true

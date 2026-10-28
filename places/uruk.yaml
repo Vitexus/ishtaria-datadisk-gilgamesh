@@ -163,6 +163,26 @@
   requires:
     max_slope_deg: 30
 
+- id: foundation_deposit
+  kind: landmark
+  name_key: place.foundation_deposit
+  parent: ishtar_temple
+  radius_m: 1
+  # The foundation deposit of the stepped tower: a box of baked bricks, opened, with the inscribed steatite tablet
+  # "For Inanna, his lady, the king of Uruk built her temple" (models-src/foundation_tablet/, after
+  # research/foundtion-tablet.jpg). Deposits lay under the corners; this one is 1.5 m outside the north-east corner of the
+  # first stage, on the stair side (local (23.2, -23.2) of ishtar_ziggurat_model turned to the plan's front vector, that is
+  # 38.0 m west and 13.6 m north of the temple point).
+  locate: {from: ishtar_temple, bearing_deg: 289.73, distance_m: 40.34, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/foundation_deposit.glb
+    visible_m: 80
+    # Standing at the box, the player reads the tablet (E): its knowledge card and the secret achievement.
+    about: foundation_tablet
+    achievement: foundation_reader
+  requires:
+    max_slope_deg: 30
+
 - id: uruk_market
   kind: landmark
   name_key: place.uruk_market
