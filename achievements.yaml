@@ -6,3 +6,11 @@
   icon: foundation_tablet
   category: story
   hidden: true
+# Earned with the last of the three clay tablets of the Atra-Hasis epic (places/atrahasis_tablets.yaml); the
+# server counts the readings (`read_all`), so the order does not matter.
+- id: three_tablets
+  title_key: achievement.three_tablets.title
+  description_key: achievement.three_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [atrahasis_tablet_1, atrahasis_tablet_2, atrahasis_tablet_3]

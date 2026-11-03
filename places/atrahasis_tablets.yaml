@@ -1,0 +1,46 @@
+# The three clay tablets of the Atra-Hasis epic, "When the gods were man" (research/ATRAHASIS.md): the legend every
+# person of Mesopotamia grew up with. One stands in each of three old cities, 22 m east-south-east of the middle of
+# the city (bearing 110 degrees), on a bench of sun-dried bricks. Standing at one the player presses E and reads
+# its knowledge card; having read all three earns the achievement `three_tablets` (`read_all` in achievements.yaml).
+# They stand on the old trade ways between Uruk and the north: Eridu (Enki's city, where the epic's wise god
+# lives), Shuruppak (the city of the flood hero) and Nippur (Enlil's city). They are surveyed points
+# (`tolerance_m: 0`) on their cities, like the foundation deposit of the Temple of Ishtar.
+
+- id: atrahasis_tablet_1
+  kind: landmark
+  name_key: place.atrahasis_tablet_1
+  parent: eridu
+  radius_m: 1
+  locate: {from: eridu, bearing_deg: 110, distance_m: 22, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/atrahasis_tablet_1.glb
+    visible_m: 80
+    about: atrahasis_tablet_1
+  requires:
+    max_slope_deg: 30
+
+- id: atrahasis_tablet_2
+  kind: landmark
+  name_key: place.atrahasis_tablet_2
+  parent: nippur
+  radius_m: 1
+  locate: {from: nippur, bearing_deg: 110, distance_m: 22, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/atrahasis_tablet_2.glb
+    visible_m: 80
+    about: atrahasis_tablet_2
+  requires:
+    max_slope_deg: 30
+
+- id: atrahasis_tablet_3
+  kind: landmark
+  name_key: place.atrahasis_tablet_3
+  parent: shuruppak
+  radius_m: 1
+  locate: {from: shuruppak, bearing_deg: 110, distance_m: 22, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/atrahasis_tablet_3.glb
+    visible_m: 80
+    about: atrahasis_tablet_3
+  requires:
+    max_slope_deg: 30

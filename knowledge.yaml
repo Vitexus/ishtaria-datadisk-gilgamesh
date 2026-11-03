@@ -31,3 +31,24 @@
   image: media/knowledge/foundation_tablet.jpg
   credit_key: knowledge.foundation_tablet.credit
   wikipedia: {en: Ur-Nammu, cs: Ur-Nammu}
+
+# The three tablets of the Atra-Hasis epic, read at the benches of places/atrahasis_tablets.yaml. The pictures are
+# renders of the disk's own models (models-src/atrahasis_tablets/).
+- id: atrahasis_tablet_1
+  title_key: knowledge.atrahasis_tablet_1.title
+  text_key: knowledge.atrahasis_tablet_1.text
+  image: media/knowledge/atrahasis_tablet_1.jpg
+  credit_key: knowledge.atrahasis_tablet.credit
+  wikipedia: {en: Atra-Hasis, cs: Mýtus_o_Atrachasísovi}
+- id: atrahasis_tablet_2
+  title_key: knowledge.atrahasis_tablet_2.title
+  text_key: knowledge.atrahasis_tablet_2.text
+  image: media/knowledge/atrahasis_tablet_2.jpg
+  credit_key: knowledge.atrahasis_tablet.credit
+  wikipedia: {en: Atra-Hasis, cs: Mýtus_o_Atrachasísovi}
+- id: atrahasis_tablet_3
+  title_key: knowledge.atrahasis_tablet_3.title
+  text_key: knowledge.atrahasis_tablet_3.text
+  image: media/knowledge/atrahasis_tablet_3.jpg
+  credit_key: knowledge.atrahasis_tablet.credit
+  wikipedia: {en: Atra-Hasis, cs: Mýtus_o_Atrachasísovi}

@@ -1224,3 +1224,17 @@ npc.road_wagoner: "Formán"
 npc.road_wagoner.bio: "Formán se spřežením volů vozí náklad mezi vesnicemi a řekou."
 npc.road_camel_driver: "Velbloudář"
 npc.road_camel_driver.bio: "Hnáč, který vede naloženého velblouda po dlouhé cestě k Eufratu."
+
+# Tři tabulky eposu o Atrachasísovi (places/atrahasis_tablets.yaml). Texty epos převyprávějí vlastními slovy.
+place.atrahasis_tablet_1: Hliněná tabulka eposu o Atrachasísovi (I)
+place.atrahasis_tablet_2: Hliněná tabulka eposu o Atrachasísovi (II)
+place.atrahasis_tablet_3: Hliněná tabulka eposu o Atrachasísovi (III)
+achievement.three_tablets.title: "Strážce tří tabulek"
+achievement.three_tablets.description: "Najdi a přečti všechny tři hliněné tabulky eposu o Atrachasísovi v Eridu, Nippuru a Šuruppaku."
+knowledge.atrahasis_tablet.credit: "Render vlastního modelu datadisku (CC BY-SA 4.0). Znaky písmem Noto Sans Cuneiform (SIL Open Font License)."
+knowledge.atrahasis_tablet_1.title: "Atrachasís, tabulka I: bohové a první lidé"
+knowledge.atrahasis_tablet_1.text: "„Když bohové byli člověkem“: tak začíná epos, který zná každý. Nižší bohové, Igigi, kopali kanály pro velké Anunnaki, až odhodili nářadí a obklíčili Enlilův dům. Východisko našel Enki, pán sladkých vod: bohyně rození Mami uhnětla hlínu s tělem a krví zabitého boha a člověk byl stvořen, aby nosil koš místo bohů. Tabulka je první ze tří. Starobabylonský opis je z nich nejzachovalejší; jeden takový opis pochází ze školy v Sipparu."
+knowledge.atrahasis_tablet_2.title: "Atrachasís, tabulka II: hluk lidstva"
+knowledge.atrahasis_tablet_2.text: "Lidé se rozmnožili a jejich hluk nedal Enlilovi spát. Seslal mor a Enki poradil moudrému Atrachasísovi, aby obětoval samotnému Namtarovi, a bůh se zastyděl a lidi nechal. Seslal sucho a hlad a Atrachasís obětoval jen Adadovi a Nisabě, a i ti ustoupili. Pokaždé se hněv boha obrátil zpět proti tomu, kdo ho poslal. Tato tabulka je nejpoškozenější; leží v Nippuru, městě Enlila, protože epos říká, že Igigi obklíčili jeho dům právě tam."
+knowledge.atrahasis_tablet_3.title: "Atrachasís, tabulka III: potopa"
+knowledge.atrahasis_tablet_3.text: "Enlil zavázal bohy mlčením a rozhodl o potopě. Enki přísahu neporušil: promluvil k rákosové stěně Atrachasísova domu, „stěno, slyš mě“, a poručil jí postavit loď stejně dlouhou jako širokou a nastoupit s rodinou a zvířaty. Přišla bouře Adadova, bohové plakali a hladověli bez lidských obětí, a když se rozptýlila, Enki stanovil lidem meze: smrt, neplodné ženy a kněžky bez dětí, aby hluk země už nikdy nevzrostl. Atrachasís byl králem Šuruppaku a tabulka stojí v jeho městě."

@@ -1242,3 +1242,17 @@ npc.road_wagoner: "Carter"
 npc.road_wagoner.bio: "A carter with a yoke of oxen, going between the villages and the river with his load."
 npc.road_camel_driver: "Camel driver"
 npc.road_camel_driver.bio: "A driver leading a laden camel along the long road to the Euphrates."
+
+# The three tablets of the Atra-Hasis epic (places/atrahasis_tablets.yaml). The texts retell the epic in our own words.
+place.atrahasis_tablet_1: Clay tablet of the Atra-Hasis epic (I)
+place.atrahasis_tablet_2: Clay tablet of the Atra-Hasis epic (II)
+place.atrahasis_tablet_3: Clay tablet of the Atra-Hasis epic (III)
+achievement.three_tablets.title: "Keeper of the Three Tablets"
+achievement.three_tablets.description: "Find and read all three clay tablets of the Atra-Hasis epic, in Eridu, Nippur and Shuruppak."
+knowledge.atrahasis_tablet.credit: "Render of the datadisk's own model (CC BY-SA 4.0). Signs drawn with Noto Sans Cuneiform (SIL Open Font License)."
+knowledge.atrahasis_tablet_1.title: "Atra-Hasis, tablet I: the gods and the first men"
+knowledge.atrahasis_tablet_1.text: "\"When the gods were man\": so the epic begins, and it is the tale everyone here knows. The lesser gods, the Igigi, dug the canals for the great Anunnaki until they threw down their tools and surrounded the house of Enlil. Enki, lord of the sweet waters, found the way out: the birth goddess Mami shaped clay with the flesh and blood of a slain god, and man was made to carry the basket in the gods' stead. The tablet is the first of three. Of the Old Babylonian copy it is the best preserved; one such copy comes from the school at Sippar."
+knowledge.atrahasis_tablet_2.title: "Atra-Hasis, tablet II: the noise of mankind"
+knowledge.atrahasis_tablet_2.text: "Men multiplied, and their noise kept Enlil from sleep. He sent plague, and Enki told the wise Atra-Hasis to bring offerings to Namtar alone, so that the god took shame and let the people be. He sent drought and hunger, and Atra-Hasis made offerings only to Adad and Nisaba, and they too gave way. Each time Enlil struck, a god's own anger was turned aside by those he meant to punish. This is the tablet most broken; it is told here in Nippur, the city of Enlil, because the epic says the Igigi surrounded his house there."
+knowledge.atrahasis_tablet_3.title: "Atra-Hasis, tablet III: the flood"
+knowledge.atrahasis_tablet_3.text: "Enlil swore the gods to silence and decreed the flood. Enki broke no oath: he spoke to the reed wall of Atra-Hasis's house, \"wall, listen to me\", and told it to build a boat, as long as it was wide, and to board with his family and the beasts. The storm of Adad came, the gods wept and went hungry without the offerings of men, and when it had passed Enki set the limits of mankind: death, barren women and priestesses who bear no child, so that the noise of the earth would never grow great again. Atra-Hasis was a king of Shuruppak, and the tablet stands in his city."
