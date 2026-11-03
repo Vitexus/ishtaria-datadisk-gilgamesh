@@ -1462,3 +1462,6 @@ uruk_water_carrier.ask_khalziku: "Why does a waterskin matter so much?"
 uruk_water_carrier.khalziku: "Ask the underworld. When the gods sent Asushunamir down, he asked Queen Ereshkigal for the water bag, the khalziku, to drink from it, and she cursed him: such a wish cannot be granted. A waterskin is the first thing a traveller needs and the last thing the dead may have. Fill yours, child."
 uruk_elder.ask_kingship: "Who gave the kings their power?"
 uruk_elder.kingship: "Kingship came down from heaven, first to Eridu, and after the flood to Kish. Etana the shepherd, who had no son, rose to heaven on an eagle to fetch the plant of birth. Remember it, you kings of Uruk: the crown is lent, and Anu's clerks keep the receipt."
+
+# The irrigation scheme (places/irrigation_works.yaml).
+place.irrigation_works: "Irrigation works with a settling reservoir (nagkud)"

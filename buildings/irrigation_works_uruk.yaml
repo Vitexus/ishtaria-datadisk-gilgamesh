@@ -1,0 +1,5 @@
+# The irrigation scheme of the place (written by tools/place_irrigation_works.py; do not edit). Format: ishtaria-protocol
+# schemas/datadisk.schema.json, $defs/buildings (passable: no collision).
+place: irrigation_works_uruk
+items:
+  - {model: media/models/architecture/irrigation_works.glb, x: 0.0, z: 0.0, yaw_deg: 171.9, scale: [1.0, 1.0, 1.0], footprint: [100.0, 94.0], sink_m: 0.3, passable: true}

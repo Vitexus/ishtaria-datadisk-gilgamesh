@@ -1,0 +1,28 @@
+# The irrigation scheme (media/models/architecture/irrigation_works.glb, research/WATER_WORKS.md) laid on documented canals by
+# tools/place_irrigation_works.py (do not edit): near Uruk (the channel network of Jotheri et al. 2018), near Eridu (the primary
+# canals of the Eridu region) and near Larsa (the survey canals between Uruk and Larsa). Other sites: research/IRRIGATION_SITES.md.
+
+- id: irrigation_works_uruk
+  kind: landmark
+  name_key: place.irrigation_works
+  radius_m: 80
+  locate: {from: uruk, bearing_deg: 349.411, distance_m: 1878.5, tolerance_m: 0}
+  parent: uruk
+  # canal jotheri_176 (10 m, jotheri2018), 1878 m from uruk; the scheme lies to the right of the
+  # canal as the model's +X runs, front towards bearing 171.9
+
+- id: irrigation_works_eridu
+  kind: landmark
+  name_key: place.irrigation_works
+  radius_m: 80
+  geo: {latitude_deg: 30.82519, longitude_deg: 45.98964}
+  # canal eridu_canal_105 (10 m, eridu), 492 m from eridu; the scheme lies to the right of the
+  # canal as the model's +X runs, front towards bearing 270.0
+
+- id: irrigation_works_larsa
+  kind: landmark
+  name_key: place.irrigation_works
+  radius_m: 80
+  geo: {latitude_deg: 31.27711, longitude_deg: 45.83747}
+  # canal canal_w2 (14 m, survey), 1810 m from larsa; the scheme lies to the right of the
+  # canal as the model's +X runs, front towards bearing 347.7

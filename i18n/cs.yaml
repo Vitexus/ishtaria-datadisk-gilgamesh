@@ -1444,3 +1444,6 @@ uruk_water_carrier.ask_khalziku: "Proč má vak na vodu takový význam?"
 uruk_water_carrier.khalziku: "Zeptej se podsvětí. Když bohové poslali dolů Asusunamira, požádal královnu Ereškigal o vak na vodu, chalzikku, aby se z něj napil, a ona ho proklela: takové přání nelze splnit. Vak na vodu je první, co poutník potřebuje, a poslední, co smějí mít mrtví. Naplň si ten svůj, dítě."
 uruk_elder.ask_kingship: "Kdo dal králům moc?"
 uruk_elder.kingship: "Královská moc sestoupila z nebe, nejdřív do Eridu a po potopě do Kiše. Pastýř Etana, který neměl syna, vystoupil na nebe na orlu pro rostlinu zrození. Pamatujte na to, králové Uruku: koruna je půjčená a Anovi úředníci mají stvrzenku."
+
+# Zavlažovací schéma (places/irrigation_works.yaml).
+place.irrigation_works: "Zavlažovací stavby se zdrží (nagkud)"

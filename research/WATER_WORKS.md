@@ -27,3 +27,14 @@
 
 Metres, +Y up, origin on the ground in the middle of the main canal at the mouth. The water is a flat translucent plane in
 the model; there is no collision.
+
+## Where they stand
+
+`tools/find_irrigation_sites.py` looks for sites along the **documented** canals only (the primary canals of the Eridu region, the survey
+canals between Uruk and Larsa, the channel network of Jotheri et al. 2018; not the canals of the splay template, which is a modern analogue,
+research/RIVER_NETWORK.md) and `tools/place_irrigation_works.py` lays the scheme at three of them (`places/irrigation_works.yaml`,
+`buildings/irrigation_works_*.yaml`): near Uruk (canal `jotheri_176`, 1.9 km north of the tell), near Eridu (`eridu_canal_105`, 492 m from the
+city) and near Larsa (`canal_w2`, 1.8 km from the city). The other sites (264 in all, at least 1.5 km apart) are in `research/IRRIGATION_SITES.md`.
+The field plots of `buildings/uruk_fields.yaml` that stood in the footprint at Uruk were taken out (5); run `tools/place_irrigation_works.py`
+again after `tools/build_fields.py`, which would put them back. The footprint in the buildings file is 100 m (the schema's limit), the scheme is
+150 m along the canal; it is passable, nothing collides.
