@@ -1,0 +1,16 @@
+# A carter selling water beside the road to the Euphrates.
+id: water_seller
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: water_seller.greet
+    choices:
+      - {text_key: water_seller.ask_river, goto: river}
+      - {text_key: water_seller.leave}
+
+  river:
+    text_key: water_seller.river
+    choices:
+      - {text_key: water_seller.leave}

@@ -1,0 +1,331 @@
+# The wells of Uruk (written by tools/build_uruk_wells.py; do not edit). Drinking and waterskins: see uruk_well.py.
+
+- id: uruk_great_well
+  kind: landmark
+  name_key: place.uruk_great_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 356.94, distance_m: 172.55, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_01
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 279.91, distance_m: 927.05, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_02
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 279.87, distance_m: 516.57, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_03
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 317.98, distance_m: 378.58, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_04
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 243.80, distance_m: 371.27, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_05
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 175.00, distance_m: 259.29, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_06
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 248.83, distance_m: 377.82, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_07
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 327.91, distance_m: 458.52, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_08
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 286.80, distance_m: 887.66, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_09
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 273.78, distance_m: 900.24, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_10
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 277.10, distance_m: 518.80, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_11
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 239.45, distance_m: 756.02, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_12
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 241.40, distance_m: 561.51, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_13
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 241.32, distance_m: 362.41, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_14
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 201.30, distance_m: 309.52, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_15
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 189.85, distance_m: 306.49, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_16
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 267.41, distance_m: 391.15, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_17
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 307.55, distance_m: 454.82, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_18
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 253.82, distance_m: 490.79, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_19
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 220.03, distance_m: 457.29, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_20
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 169.74, distance_m: 703.92, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_21
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 184.05, distance_m: 701.56, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_22
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 343.59, distance_m: 932.93, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_23
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 201.78, distance_m: 666.30, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_24
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 142.53, distance_m: 486.12, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_25
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 176.12, distance_m: 410.59, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_26
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 215.05, distance_m: 742.62, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_27
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 172.16, distance_m: 436.30, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_28
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 185.11, distance_m: 767.52, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_well_29
+  kind: landmark
+  name_key: place.uruk_well
+  radius_m: 4
+  locate: {from: uruk, bearing_deg: 148.40, distance_m: 886.47, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 400
+  requires:
+    max_slope_deg: 45

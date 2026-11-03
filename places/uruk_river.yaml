@@ -1,0 +1,1307 @@
+# The green banks, the harbour and the boats of the Euphrates at Uruk (written by tools/build_river_life.py; do not edit).
+# Reed beds, tamarisk, poplar, willow and date palms along the river; the quay of Uruk with its dock and ships.
+
+- id: uruk_bank_01
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 9.66, distance_m: 3038.1, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_02
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 10.83, distance_m: 2713.4, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_03
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 12.32, distance_m: 2390.0, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_04
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 14.27, distance_m: 2068.8, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_05
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 18.95, distance_m: 1770.9, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_06
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 28.82, distance_m: 1535.1, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_07
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 45.00, distance_m: 1435.4, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_08
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 59.97, distance_m: 1368.7, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_09
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 74.95, distance_m: 1366.9, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_10
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 88.97, distance_m: 1390.2, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_11
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 103.50, distance_m: 1306.1, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_12
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 121.16, distance_m: 1227.1, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_13
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 138.46, distance_m: 1289.3, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_14
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 151.27, distance_m: 1476.9, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_15
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 159.12, distance_m: 1739.3, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_16
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 163.48, distance_m: 2039.2, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_17
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 165.76, distance_m: 2357.5, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_18
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 167.49, distance_m: 2678.5, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_bank_19
+  kind: landmark
+  name_key: place.uruk_riverbank
+  radius_m: 20
+  locate: {from: uruk, bearing_deg: 168.86, distance_m: 3001.6, tolerance_m: 0}
+  wildlife:
+    radius_m: 230
+    density: 6.0
+    flora:
+      - {id: nature.reed_clump, weight: 20, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 14, waterside: true}
+      - {id: zeroad.reed_giant, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 10, waterside: true}
+      - {id: zeroad.reed_beach_b, weight: 10, waterside: true}
+      - {id: zeroad.papyrus_1, weight: 6, waterside: true}
+      - {id: zeroad.papyrus_2, weight: 6, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
+      - {id: hyper3d.tamarisk, weight: 8, waterside: true}
+      - {id: zeroad.tamarix_a, weight: 6, waterside: true}
+      - {id: zeroad.bush_desert_a, weight: 3, waterside: true}
+      - {id: nature.plant_bushSmall, weight: 2, waterside: true}
+      - {id: nature.plant_bushLarge, weight: 2, waterside: true}
+      - {id: quaternius.bush_1, weight: 2, waterside: true}
+      - {id: zeroad.poplar_lombardy, weight: 6}
+      - {id: zeroad.willow_a, weight: 6}
+      - {id: zeroad.fig_a, weight: 2}
+      - {id: zeroad.fig_b, weight: 2}
+      - {id: nature.tree_palmTall, weight: 4}
+      - {id: nature.tree_palmDetailedTall, weight: 3}
+      - {id: nature.tree_palmShort, weight: 3}
+      - {id: zeroad.palm_date_a, weight: 4}
+      - {id: zeroad.palm_date_b, weight: 4}
+      - {id: zeroad.palm_date_c, weight: 3}
+      - {id: zeroad.palm_date_new_1, weight: 3}
+      - {id: zeroad.palm_date_new_2, weight: 2}
+      - {id: zeroad.palm_date_fruit_1, weight: 2}
+    fauna:
+      - {id: animal.duck, weight: 6, waterside: true}
+      - {id: animal.goose, weight: 5, waterside: true}
+      - {id: animal.turtle, weight: 3, waterside: true}
+      - {id: animal.pigeon, weight: 3}
+      - {id: animal.gazelle, weight: 2}
+      - {id: animal.onager, weight: 1}
+      - {id: animal.goat, weight: 2}
+      - {id: animal.sheep, weight: 2}
+      - {id: animal.donkey, weight: 1}
+      - {id: animal.lizard, weight: 2}
+      - {id: zeroad.crow, weight: 1}
+  requires:
+    max_slope_deg: 45
+
+# The quay of Uruk on the Euphrates: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) on the bank nearest to the city,
+# 1151 m from the anchor, its front turned to the river.
+- id: uruk_harbour
+  kind: landmark
+  name_key: place.uruk_harbour
+  radius_m: 14
+  locate: {from: uruk, bearing_deg: 120.74, distance_m: 1143.3, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_dock.glb
+    yaw_deg: 60.6
+    visible_m: 1400
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_harbour_boat_1
+  kind: landmark
+  name_key: place.uruk_boat
+  radius_m: 8
+  locate: {from: uruk, bearing_deg: 120.17, distance_m: 1171.0, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_merchant.glb
+    scale_m: 0.75
+    yaw_deg: 336.0
+    visible_m: 1200
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_harbour_boat_2
+  kind: landmark
+  name_key: place.uruk_boat
+  radius_m: 8
+  locate: {from: uruk, bearing_deg: 121.33, distance_m: 1175.6, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_bireme.glb
+    scale_m: 0.60
+    yaw_deg: 332.9
+    visible_m: 1200
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_harbour_boat_3
+  kind: landmark
+  name_key: place.uruk_boat
+  radius_m: 8
+  locate: {from: uruk, bearing_deg: 119.43, distance_m: 1162.9, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.70
+    yaw_deg: 326.7
+    visible_m: 1200
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_harbour_boat_4
+  kind: landmark
+  name_key: place.uruk_boat
+  radius_m: 8
+  locate: {from: uruk, bearing_deg: 122.05, distance_m: 1162.2, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.70
+    yaw_deg: 328.8
+    visible_m: 1200
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_01
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 9.66, distance_m: 2936.7, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 7.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_02
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 11.46, distance_m: 2658.0, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 348.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_03
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 11.72, distance_m: 2364.2, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 169.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_04
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 14.75, distance_m: 2094.0, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 352.9
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_05
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 16.76, distance_m: 1808.9, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 202.2
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_06
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 24.31, distance_m: 1577.7, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 38.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_07
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 35.73, distance_m: 1440.3, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 46.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_08
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 52.96, distance_m: 1428.7, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 20.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_09
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 64.90, distance_m: 1346.3, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 24.5
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_10
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 78.02, distance_m: 1370.8, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 207.2
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_11
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 90.13, distance_m: 1390.4, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 182.9
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_12
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 103.26, distance_m: 1289.7, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 332.4
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_13
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 132.67, distance_m: 1270.8, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 340.6
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_14
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 145.74, distance_m: 1413.2, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 165.1
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_15
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 156.62, distance_m: 1585.1, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 161.8
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_16
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 161.18, distance_m: 1838.5, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 161.0
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_17
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 164.43, distance_m: 2112.5, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 181.1
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_18
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 166.07, distance_m: 2395.4, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 350.1
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45
+
+- id: uruk_fisher_19
+  kind: landmark
+  name_key: place.uruk_fisher
+  radius_m: 6
+  locate: {from: uruk, bearing_deg: 166.97, distance_m: 2684.1, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.62
+    yaw_deg: 186.0
+    visible_m: 1100
+    on_water: true
+  requires:
+    max_slope_deg: 45

@@ -1,0 +1,73 @@
+# The road of the hunter's village to the Euphrates (trails/hunter_road.yaml lays its stepping stones): two waypoints on the
+# way to Uruk and the landing on the west bank of the river, north of the city, where a fishing boat waits for the hunter
+# to cross over. The legs are at most 3 km long (the server's limit of one trail); the waypoints lie on the straight line
+# from the village (110.6 degrees) and are moved to the nearest suitable ground.
+
+- id: hunter_road_1
+  kind: landmark
+  name_key: place.hunter_road
+  radius_m: 10
+  locate: {from: hunter_village, bearing_deg: 110.6, distance_m: 2470, tolerance_m: 250}
+  requires:
+    biome: [grassland, lowland]
+    height_m: {min: -5, max: 250}
+    max_slope_deg: 15
+
+- id: hunter_road_2
+  kind: landmark
+  name_key: place.hunter_road
+  radius_m: 10
+  locate: {from: hunter_village, bearing_deg: 110.6, distance_m: 4940, tolerance_m: 250}
+  requires:
+    biome: [grassland, lowland]
+    height_m: {min: -5, max: 250}
+    max_slope_deg: 15
+
+# The landing: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) on the west bank of the Euphrates 2.9 km north of Uruk, its
+# front turned east to the river (the water edge there is 435 m east of the city's anchor), and the fishing boat moored
+# 12 m out from the bank.
+- id: hunter_ferry_landing
+  kind: landmark
+  name_key: place.hunter_ferry_landing
+  radius_m: 14
+  locate: {from: uruk, bearing_deg: 8.52, distance_m: 2881.8, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_dock.glb
+    yaw_deg: 90.0
+    visible_m: 1400
+  requires:
+    max_slope_deg: 45
+
+- id: hunter_ferry_boat
+  kind: landmark
+  name_key: place.hunter_ferry_boat
+  radius_m: 8
+  locate: {from: uruk, bearing_deg: 8.91, distance_m: 2884.8, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/zeroad/pers_fishship.glb
+    scale_m: 0.7
+    yaw_deg: 0.0
+    visible_m: 1200
+    on_water: true
+    # The hunter boards it (E) and rows over the Euphrates at 2.5 m/s; the clip is the one the hunter's model plays aboard.
+    vehicle: {speed_m_s: 2.5, clip: Row}
+  requires:
+    max_slope_deg: 45
+
+# The water sellers of the road: a carter with his jars waits beside the way where each leg of it ends (the hunter's
+# water runs out on the 7 km to the river). Each stands a few metres off the track so that it is no obstacle.
+- id: hunter_road_water_1
+  kind: landmark
+  name_key: place.hunter_road_water
+  radius_m: 4
+  locate: {from: hunter_road_1, bearing_deg: 20, distance_m: 10, tolerance_m: 14}
+  requires:
+    max_slope_deg: 25
+
+- id: hunter_road_water_2
+  kind: landmark
+  name_key: place.hunter_road_water
+  radius_m: 4
+  locate: {from: hunter_road_2, bearing_deg: 200, distance_m: 10, tolerance_m: 14}
+  requires:
+    max_slope_deg: 25

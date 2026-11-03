@@ -26,7 +26,7 @@
     radius_m: 900
     # Dense herd at the water: the trapper's Tablet I beat needs pressure and prey, not an empty steppe.
     # Animals within reach of the pond drink and graze in a cycle (movement::waterhole_route).
-    density: 7.5
+    density: 12.0
     flora:
       # Harvestable trees (axe → logs / XP): steppe water-hole shade, not only reeds.
       - {id: nature.tree_palmTall, weight: 6}
@@ -58,11 +58,12 @@
       - {id: quaternius.bush_1, weight: 2}
     fauna:
       # Prey of Tablet I — enough for the snare beat, not a safe empty steppe.
-      - {id: animal.gazelle, weight: 6}
-      - {id: zeroad.gazelle, weight: 4}
+      - {id: animal.gazelle, weight: 8}
+      - {id: zeroad.gazelle, weight: 6}
       - {id: animal.onager, weight: 3}
-      - {id: animal.deer, weight: 2}
-      - {id: zeroad.deer, weight: 2}
+      # The hinds come in herds to the water and drink there (movement::waterhole_route).
+      - {id: animal.deer, weight: 14}
+      - {id: zeroad.deer, weight: 14}
       - {id: animal.goat, weight: 2}
       - {id: zeroad.goat, weight: 2}
       - {id: animal.sheep, weight: 2}
@@ -90,9 +91,10 @@
   kind: city
   name_key: place.hunter_village
   radius_m: 70
-  # Between the water-hole and Uruk: the old father's village (houses and a forge).
+  # Between the water-hole and Uruk: the old father's village (houses and a forge), built of old-Persian 0 A.D. houses
+  # (buildings/hunter_village.yaml, tools/build_village.py) and not a generated medieval town.
   locate: {from: hunter_waterhole, bearing_deg: 130, distance_m: 3500, tolerance_m: 0}
-  scenery: {preset: town, size: village}
+  scenery: {preset: pasture}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}

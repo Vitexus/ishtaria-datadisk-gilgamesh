@@ -101,3 +101,12 @@ Secondary source (cites Charvat, Crusemann, Leick, Crawford); figures to check a
 - **Clay cones**: 8-10 cm long, heads 1.2-1.8 cm wide, white (fired hot) and red (fired low) and dark; set into wet plaster; found on 12
   round columns of the south-east temple of Inanna, more than 70 patterns (stripes, diamonds, lattices, like reed matting).
   `make_cone_mosaic.py` draws 1.6 cm heads (150 across a 2.4 m tile), patterns enlarged 2.5 times to be readable.
+
+## The open well
+
+A brick-lined well is still open on the tell, photographed at 31.3243503 N, 45.6388031 E (172.5 m from the anchor of the
+city on bearing 356.9). `tools/build_city.py` keeps 9 m round it free of houses (`real_well` in `uruk_city.json`),
+`tools/build_uruk_wells.py` puts the place `uruk_great_well` (a surveyed point, `tolerance_m: 0`) there, and the video
+places the same model (`build_scene.py`). The model (`models-src/architecture/uruk_well.py`) follows the photograph: a round
+shaft of pale bricks in rings, a low stepped rim, no curb.
+

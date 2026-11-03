@@ -159,3 +159,53 @@
   portrait: media/portraits/hunter_father.jpg
   bio_key: npc.hunter_father.bio
   tags: [elder, hunter, friendly]
+
+# The trader of the old father's village: stands before one of the houses (places/hunter_village_extras.yaml).
+- id: village_trader
+  name_key: npc.village_trader
+  place: hunter_village_trader
+  character: {pack: retro, skin: humanMaleA, model: media/models/uruk_merchant.glb}
+  dialogue: village_trader
+  bio_key: npc.village_trader.bio
+  tags: [merchant, trader, villager, shop, "shop:general"]
+
+# The water sellers of the road to the Euphrates (places/hunter_road.yaml): they fill a waterskin for two coins.
+- id: road_water_seller_1
+  name_key: npc.road_water_seller
+  place: hunter_road_water_1
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/wagon.glb}
+  portrait: media/portraits/crowd_caravaneer.jpg
+  dialogue: water_seller
+  bio_key: npc.road_water_seller.bio
+  tags: [merchant, trader, shop, "shop:waterseller"]
+
+- id: road_water_seller_2
+  name_key: npc.road_water_seller
+  place: hunter_road_water_2
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/wagon.glb}
+  portrait: media/portraits/crowd_caravaneer.jpg
+  dialogue: water_seller
+  bio_key: npc.road_water_seller.bio
+  tags: [merchant, trader, shop, "shop:waterseller"]
+
+# The traffic of the road (trails/hunter_road.yaml): a carter with his oxen, and a camel led by a driver. They go from the
+# village to the river and back, at a walking pace that the road makes half as fast again, never stopping on the way.
+- id: road_wagoner
+  name_key: npc.road_wagoner
+  place: hunter_road_1
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/wagon.glb}
+  portrait: media/portraits/crowd_caravaneer.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.road_wagoner.bio
+  movement: {kind: patrol, follow: hunter_road, speed_m_s: 1.1, pause_s: 0}
+  tags: [crowd, traveler]
+
+- id: road_camel_driver
+  name_key: npc.road_camel_driver
+  place: hunter_road_2
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/caravan.glb}
+  portrait: media/portraits/crowd_caravaneer.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.road_camel_driver.bio
+  movement: {kind: patrol, follow: hunter_road, speed_m_s: 1.3, pause_s: 0}
+  tags: [crowd, traveler]

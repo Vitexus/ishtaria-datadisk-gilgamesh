@@ -1,0 +1,7 @@
+# The footpath from the hunter's village to the landing on the Euphrates (places/hunter_road.yaml), laid leg by leg by the server.
+id: hunter_road
+places: [hunter_village, hunter_road_1, hunter_road_2, hunter_ferry_landing]
+start_clearance_m: 45
+end_clearance_m: 10
+# A worn field track of ox carts (tools/build_cart_track.py), 4 m of it at every step, instead of stepping stones.
+model: media/models/architecture/cart_track.glb

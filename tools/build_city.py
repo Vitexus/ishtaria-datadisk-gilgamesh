@@ -765,10 +765,13 @@ class Sites(Planner):
 
 # ---------------------------------------------------------------- lanes and houses
 
+# Houses are 0 A.D. buildings drawn at their own proportions (a man is about a tenth of a house's height, a door 2 m): the
+# footprints were enlarged by about 1.35 when the first houses looked squat beside a character, and the streets and
+# plots follow from them (fewer, larger houses along the same lanes).
 SIZES = {  # class: (w range, d range, floors, ground-floor height range)
-    "S": ((5.0, 7.4), (5.5, 8.5), (1,), (3.0, 3.6)),
-    "M": ((7.8, 11.0), (8.5, 12.0), (1, 1, 2), (3.4, 4.0)),
-    "L": ((11.5, 16.5), (12.5, 18.0), (2, 2, 3), (3.8, 4.4)),
+    "S": ((7.0, 9.8), (7.6, 11.0), (1,), (3.4, 4.0)),
+    "M": ((10.2, 14.4), (11.2, 15.6), (1, 1, 2), (3.8, 4.5)),
+    "L": ((15.0, 21.5), (16.0, 23.5), (2, 2, 3), (4.2, 4.9)),
 }
 
 
@@ -1130,7 +1133,7 @@ class Finish(Builder):
         self.fixed["ishtar_temple"] = offset_bearing(self.fixed["eanna_temple"], 225.0, 45.0)
 
     # ---- districts
-    def partition(self, max_houses=700):
+    def partition(self, max_houses=480):
         x0, x1, z0, z1 = -1500.0, 1400.0, -1700.0, 1500.0
         leaves = []
 
@@ -1197,6 +1200,13 @@ class Finish(Builder):
         }
         for k, v in self.marker_places.items():
             self.reserve_circle(v, 16.0, k)
+        # The open brick well of Uruk, where it can still be seen (photographed at 31.3243503 N, 45.6388031 E; the anchor of
+        # the city is 31.3228 N, 45.6389 E): no house is built on it, and tools/build_uruk_wells.py places the well there.
+        self.real_well = (
+            (45.6388031 - 45.6389) * 111319.5 * math.cos(math.radians(31.32355)),
+            -(31.3243503 - 31.3228) * 111132.9,
+        )
+        self.reserve_circle(self.real_well, 9.0, "great_well")
         self.reserve_circle(gp, 16.0, "gate_square")
         tt = tuple(ishtar["out"])
         nn = left(tt)
@@ -1501,6 +1511,7 @@ class Finish(Builder):
                                 "size": self.ishtar_ziggurat["size"]},
             "fixed": {k: r1(v) for k, v in self.fixed.items()},
             "marker_places": {k: r1(v) for k, v in self.marker_places.items()},
+            "real_well": r1(self.real_well),
             "streets": [{"kind": s["kind"], "width": s["width"], "name": s["name"], "pts": [r1(p) for p in s["pts"]]} for s in self.streets],
             "house_fields": ["x", "z", "front_x", "front_z", "w", "d", "class(0 poor,1 middle,2 rich)", "floors", "h0", "seed", "smithy"],
             "houses": [[round(h["c"][0], 2), round(h["c"][1], 2), round(h["front"][0], 3), round(h["front"][1], 3), round(h["w"], 2),

@@ -5,6 +5,8 @@ id: the_hunter_and_the_wild_man
 title_key: quest.hunter.title
 start_stage: lay_snares
 start_place: hunter_waterhole
+# The old father's village lies on the way to Uruk: it is on the map from the first day of the quest, not only when a stage sends the hunter there.
+known_places: [hunter_village]
 excerpt:
   paraphrase_key: quest.hunter.excerpt
   akkadian_key: quest.hunter.excerpt.akkadian

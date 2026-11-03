@@ -36,7 +36,7 @@ voices:
 stage: voices
 	rm -rf $(STAGE)/gilgamesh
 	mkdir -p $(STAGE)/gilgamesh
-	cp -a datadisk.yaml places npcs dialogues quests lore knowledge.yaml music media i18n $(STAGE)/gilgamesh/
+	cp -a datadisk.yaml places buildings trails npcs dialogues quests lore knowledge.yaml achievements.yaml music media i18n $(STAGE)/gilgamesh/
 	cp -a $(BUILD)/voices/media/. $(STAGE)/gilgamesh/media/
 	@echo "staged: $$(find $(STAGE)/gilgamesh/media/voice -name '*.ogg' | wc -l) spoken lines"
 
@@ -49,13 +49,13 @@ server: stage stop start
 
 start: $(BUILD)/server.toml
 	psql -lqt postgres | cut -d'|' -f1 | grep -qw $(DEV_DB) || createdb $(DEV_DB)
-	cd $(SERVER_DIR) && cargo build --locked
+	cd $(SERVER_DIR) && cargo build --release --locked
 	@first=""; \
 	if [ "$$(psql -tA $(DEV_DB) -c "select to_regclass('worlds') is not null and exists(select 1 from worlds)" 2>/dev/null)" != "t" ]; then \
 	  [ -s "$(PGM)" ] || $(MAKE) world-map; \
 	  first="--import $(abspath $(PGM)) --seed $(SEED) --datadisk gilgamesh"; echo "creating the world in $(DEV_DB)"; fi; \
 	cd $(SERVER_DIR) && ISHTARIA_DATADISK_DIR=$(STAGE) DATABASE_URL='$(DB_URL)' \
-	  nohup ./target/debug/ishtaria-server $(BUILD)/server.toml $$first > $(BUILD)/server.log 2>&1 & echo $$! > $(BUILD)/server.pid
+	  nohup ./target/release/ishtaria-server $(BUILD)/server.toml $$first > $(BUILD)/server.log 2>&1 & echo $$! > $(BUILD)/server.pid
 	@for i in $$(seq 1 40); do curl -sf http://127.0.0.1:7400/health >/dev/null && { echo "server up: http://127.0.0.1:7400"; exit 0; }; sleep 0.5; done; \
 	  echo "server did not come up, see $(BUILD)/server.log"; tail -20 $(BUILD)/server.log; exit 1
 
@@ -161,6 +161,10 @@ city:
 	python3 tools/build_city.py
 	python3 models-src/architecture/make_cone_mosaic.py
 	python3 models-src/architecture/make_field_textures.py
+	blender -b --factory-startup -P models-src/architecture/uruk_building_sites.py -- media/models/architecture
+	python3 tools/build_buildings.py
+	python3 tools/build_village.py
+	python3 tools/build_uruk_wells.py
 	blender -b --python models-src/architecture/uruk_city.py -- all media/models/architecture
 	blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls media/models/architecture/uruk_walls.glb
 	blender -b --python models-src/architecture/uruk_walls.py -- uruk_walls_collision media/models/architecture/uruk_walls_collision.glb

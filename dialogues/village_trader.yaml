@@ -1,0 +1,16 @@
+# The trader of the old father's village.
+id: village_trader
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: village_trader.greet
+    choices:
+      - {text_key: village_trader.ask_well, goto: about_well}
+      - {text_key: village_trader.leave}
+
+  about_well:
+    text_key: village_trader.well
+    choices:
+      - {text_key: village_trader.leave}

@@ -1,0 +1,20 @@
+# The trader's spot and the well of the old father's village (written by tools/build_village.py; do not edit).
+
+- id: hunter_village_trader
+  kind: landmark
+  name_key: place.hunter_village_trader
+  radius_m: 4
+  locate: {from: hunter_village, bearing_deg: 79.92, distance_m: 30.82, tolerance_m: 0}
+  requires:
+    max_slope_deg: 45
+
+- id: hunter_village_well
+  kind: landmark
+  name_key: place.hunter_village_well
+  radius_m: 4
+  locate: {from: hunter_village, bearing_deg: 123.69, distance_m: 10.82, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/uruk_well.glb
+    visible_m: 500
+  requires:
+    max_slope_deg: 45

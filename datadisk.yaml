@@ -8,6 +8,11 @@ ambient_music: plains
 # the look is fixed to the hunter model; the pack id is only the animation fallback.
 player_character: survivors/survivorMaleB
 player_model: media/models/hunter.glb
+# The land is drawn with the client's dry silt plain textures (Poly Haven, CC0), not the default green ground.
+ground: alluvial
+# Uruk of 2700 BCE: the sky of that year (the tilt of the axis 24.0 degrees against today's 23.44, and the star field turned
+# 65 degrees by precession: Thuban was the pole star, not Polaris). 2700 BCE is the astronomical year -2699.
+astronomy: {year: -2699}
 # Three snares; the hunter quest opens at the water-hole. No aetherglass: it would put the starts of
 # quests the hunter has not heard of yet on his map and compass. The goals of his begun quests show
 # without it, and the places he was sent to stay on the map as known places (server markers API).
@@ -15,6 +20,14 @@ starting_items:
   - {item: snare, qty: 3}
 auto_start_quests:
   - the_hunter_and_the_wild_man
+# The houses of the towns and villages the generator builds in this world: the old-Persian houses of 0 A.D. like those of the
+# old father's village (buildings/hunter_village.yaml), not the low-poly medieval kit. Native sizes are those of the models;
+# the ranges are the plots of tools/build_village.py (inner ring of homes, larger houses of the outer ring).
+settlement_houses:
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, native_m: [13.54, 16.25, 15.3], width_m: [9.5, 12.0], depth_m: [9.5, 12.0], height_m: [6.5, 8.0], sink_m: 3.0}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, native_m: [13.49, 12.86, 13.54], width_m: [9.5, 12.0], depth_m: [9.5, 12.0], height_m: [6.5, 8.0], sink_m: 3.0}
+  - {model: media/models/architecture/zeroad/pers_house_b.glb, native_m: [15.46, 18.9, 15.72], width_m: [12.0, 15.0], depth_m: [12.5, 15.5], height_m: [8.0, 10.0], sink_m: 3.0}
+  - {model: media/models/architecture/zeroad/pers_house_a.glb, native_m: [16.59, 17.01, 16.05], width_m: [12.0, 15.0], depth_m: [12.5, 15.5], height_m: [8.0, 10.0], sink_m: 3.0}
 name: Epic of Gilgamesh
 description: >
   A story datadisk based on the ancient Mesopotamian Epic of Gilgamesh.

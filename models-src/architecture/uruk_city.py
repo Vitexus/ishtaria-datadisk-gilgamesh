@@ -28,9 +28,11 @@ from mathutils import Vector
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, "..", "..", "tools"))
 
 import ishtar_gate  # noqa: E402,F401  (registers the blue glaze materials)
 import ziggurat as Z  # noqa: E402
+from city_kinds import kind_of  # noqa: E402  (houses drawn as separate buildings, buildings/uruk.yaml, are left out)
 
 ROOT = os.path.join(HERE, "..", "..")
 PLAN = os.path.join(ROOT, "tools", "data", "uruk_city.json")
@@ -39,8 +41,8 @@ EXTENT = 6000.0
 
 Z.MATERIALS.update({
     "cone_wall": ("cone_wall.jpg", (1, 1, 1), 0.95, 0.0, 2.4),
-    "earth": (None, (0.56, 0.43, 0.30), 1.0, 0.0, 1.0),
-    "dust": (None, (0.66, 0.55, 0.40), 1.0, 0.0, 1.0),
+    "earth": (None, (0.20, 0.17, 0.11), 1.0, 0.0, 1.0),   # linear: beaten earth must match the lit steppe, whose textures are about 0.15 linear; 0.56 drew pale patches
+    "dust": (None, (0.23, 0.19, 0.13), 1.0, 0.0, 1.0),
     "straw": (None, (0.76, 0.62, 0.32), 1.0, 0.0, 1.0),
     "clay": (None, (0.60, 0.33, 0.20), 0.9, 0.0, 1.0),
     "wood": (None, (0.34, 0.23, 0.13), 0.95, 0.0, 1.0),
@@ -544,7 +546,9 @@ def subdivide(pts, step):
     return out
 
 
-LIFT = {"canalbank": 0.05, "canal": 0.09, "avenue": 0.16, "ring": 0.14, "way": 0.15, "street": 0.12, "wallroad": 0.12, "road": 0.10, "lane": 0.09, "alley": 0.07}
+# Ribbons lie this far over the ground. It was 7-16 cm, which buried the ankles of every walker on a street (the server walks
+# characters on the ground itself); the drawn ground follows the same height map within a centimetre or two.
+LIFT = {"canalbank": 0.03, "canal": 0.06, "avenue": 0.06, "ring": 0.05, "way": 0.06, "street": 0.04, "wallroad": 0.04, "road": 0.035, "lane": 0.03, "alley": 0.025}
 PAVED = {"avenue", "ring", "way"}
 
 
@@ -755,6 +759,8 @@ def build_district(plan, ground, dist, out_dir):
             S.field(ctx, fl)
             count["stalls"] += 0
     for rec in plan["houses"]:
+        if kind_of(rec) != "orig":
+            continue
         if inside((rec[0], rec[1])):
             house(ctx, col, rec)
             count["smithies" if rec[10] else "houses"] += 1

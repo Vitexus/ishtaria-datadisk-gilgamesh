@@ -10,7 +10,7 @@
   # The palace of Sin-kashid, king of Uruk (about 1865-1833 BC), west of the sacred precinct, as the excavation shows it:
   # 142 by 109 m, a low mud-brick building on a base of baked brick, rooms in the west half and round the sides, the great
   # courtyard in the east half (the place is its middle) and a hall with six columns; farm buildings stand round it.
-  locate: {from: uruk, bearing_deg: 327.668, distance_m: 260.3, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 327.668, distance_m: 260.3, tolerance_m: 2}
   structure:
     model: media/models/architecture/uruk_sinkashid.glb
     collision: media/models/architecture/uruk_sinkashid_collision.glb
@@ -23,7 +23,7 @@
   name_key: place.uruk_quarter_01
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 293.728, distance_m: 1242.5, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 293.728, distance_m: 1242.5, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_01.glb
     collision: media/models/architecture/uruk_quarter_01_collision.glb
@@ -36,7 +36,7 @@
   name_key: place.uruk_quarter_02
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 255.225, distance_m: 1176.4, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 255.225, distance_m: 1176.4, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_02.glb
     collision: media/models/architecture/uruk_quarter_02_collision.glb
@@ -49,7 +49,7 @@
   name_key: place.uruk_quarter_03
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 329.199, distance_m: 1513.5, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 329.199, distance_m: 1513.5, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_03.glb
     collision: media/models/architecture/uruk_quarter_03_collision.glb
@@ -62,7 +62,7 @@
   name_key: place.uruk_quarter_04
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 215.166, distance_m: 1345.6, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 215.166, distance_m: 1345.6, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_04.glb
     collision: media/models/architecture/uruk_quarter_04_collision.glb
@@ -75,7 +75,7 @@
   name_key: place.uruk_quarter_05
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 260.441, distance_m: 602.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 260.441, distance_m: 602.2, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_05.glb
     collision: media/models/architecture/uruk_quarter_05_collision.glb
@@ -88,7 +88,7 @@
   name_key: place.uruk_quarter_06
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 329.49, distance_m: 812.5, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 329.49, distance_m: 812.5, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_06.glb
     collision: media/models/architecture/uruk_quarter_06_collision.glb
@@ -101,7 +101,7 @@
   name_key: place.uruk_quarter_07
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 306.027, distance_m: 510.1, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 306.027, distance_m: 510.1, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_07.glb
     collision: media/models/architecture/uruk_quarter_07_collision.glb
@@ -114,7 +114,7 @@
   name_key: place.uruk_quarter_08
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 219.523, distance_m: 648.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 219.523, distance_m: 648.2, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_08.glb
     collision: media/models/architecture/uruk_quarter_08_collision.glb
@@ -127,7 +127,7 @@
   name_key: place.uruk_quarter_09
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 246.61, distance_m: 251.9, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 246.61, distance_m: 251.9, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_09.glb
     collision: media/models/architecture/uruk_quarter_09_collision.glb
@@ -140,7 +140,7 @@
   name_key: place.uruk_quarter_10
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 24.057, distance_m: 766.6, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 127.314, distance_m: 165.0, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_10.glb
     collision: media/models/architecture/uruk_quarter_10_collision.glb
@@ -153,7 +153,7 @@
   name_key: place.uruk_quarter_11
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 53.03, distance_m: 410.5, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 24.057, distance_m: 766.6, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_11.glb
     collision: media/models/architecture/uruk_quarter_11_collision.glb
@@ -166,7 +166,7 @@
   name_key: place.uruk_quarter_12
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 107.745, distance_m: 328.1, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 53.03, distance_m: 410.5, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_12.glb
     collision: media/models/architecture/uruk_quarter_12_collision.glb
@@ -179,7 +179,7 @@
   name_key: place.uruk_quarter_13
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 147.995, distance_m: 589.6, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 147.995, distance_m: 589.6, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_13.glb
     collision: media/models/architecture/uruk_quarter_13_collision.glb
@@ -192,7 +192,7 @@
   name_key: place.uruk_quarter_14
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 27.44, distance_m: 1464.8, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 27.44, distance_m: 1464.8, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_14.glb
     collision: media/models/architecture/uruk_quarter_14_collision.glb
@@ -205,7 +205,7 @@
   name_key: place.uruk_quarter_15
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 148.465, distance_m: 1290.6, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 148.465, distance_m: 1290.6, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_15.glb
     collision: media/models/architecture/uruk_quarter_15_collision.glb
@@ -218,7 +218,7 @@
   name_key: place.uruk_quarter_16
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 64.269, distance_m: 1151.7, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 101.448, distance_m: 503.8, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_16.glb
     collision: media/models/architecture/uruk_quarter_16_collision.glb
@@ -231,10 +231,23 @@
   name_key: place.uruk_quarter_17
   parent: uruk
   radius_m: 1
-  locate: {from: uruk, bearing_deg: 106.128, distance_m: 1080.0, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 64.269, distance_m: 1151.7, tolerance_m: 1}
   structure:
     model: media/models/architecture/uruk_quarter_17.glb
     collision: media/models/architecture/uruk_quarter_17_collision.glb
+    visible_m: 3300
+  requires:
+    max_slope_deg: 60
+
+- id: uruk_quarter_18
+  kind: landmark
+  name_key: place.uruk_quarter_18
+  parent: uruk
+  radius_m: 1
+  locate: {from: uruk, bearing_deg: 106.128, distance_m: 1080.0, tolerance_m: 1}
+  structure:
+    model: media/models/architecture/uruk_quarter_18.glb
+    collision: media/models/architecture/uruk_quarter_18_collision.glb
     visible_m: 3300
   requires:
     max_slope_deg: 60

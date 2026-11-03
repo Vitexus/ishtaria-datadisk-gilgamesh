@@ -1,0 +1,1023 @@
+# The families of the village: a man, a woman, an old man, an old woman and two children at every home
+# (written by tools/build_village.py; do not edit). Looks and portraits are those of the crowd of Uruk.
+
+- id: hv_h01_man
+  name_key: npc.village_man
+  place: hunter_home_01
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h01_woman
+  name_key: npc.village_woman
+  place: hunter_home_01
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h01_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_01
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h01_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_01
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h01_boy
+  name_key: npc.village_boy
+  place: hunter_home_01
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h01_girl
+  name_key: npc.village_girl
+  place: hunter_home_01
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h02_man
+  name_key: npc.village_man
+  place: hunter_home_02
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h02_woman
+  name_key: npc.village_woman
+  place: hunter_home_02
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h02_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_02
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h02_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_02
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h02_boy
+  name_key: npc.village_boy
+  place: hunter_home_02
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h02_girl
+  name_key: npc.village_girl
+  place: hunter_home_02
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h03_man
+  name_key: npc.village_man
+  place: hunter_home_03
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h03_woman
+  name_key: npc.village_woman
+  place: hunter_home_03
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h03_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_03
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h03_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_03
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h03_boy
+  name_key: npc.village_boy
+  place: hunter_home_03
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h03_girl
+  name_key: npc.village_girl
+  place: hunter_home_03
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h04_man
+  name_key: npc.village_man
+  place: hunter_home_04
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h04_woman
+  name_key: npc.village_woman
+  place: hunter_home_04
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h04_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_04
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h04_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_04
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h04_boy
+  name_key: npc.village_boy
+  place: hunter_home_04
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h04_girl
+  name_key: npc.village_girl
+  place: hunter_home_04
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h05_man
+  name_key: npc.village_man
+  place: hunter_home_05
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h05_woman
+  name_key: npc.village_woman
+  place: hunter_home_05
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h05_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_05
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h05_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_05
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h05_boy
+  name_key: npc.village_boy
+  place: hunter_home_05
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h05_girl
+  name_key: npc.village_girl
+  place: hunter_home_05
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h06_man
+  name_key: npc.village_man
+  place: hunter_home_06
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h06_woman
+  name_key: npc.village_woman
+  place: hunter_home_06
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h06_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_06
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h06_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_06
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h06_boy
+  name_key: npc.village_boy
+  place: hunter_home_06
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h06_girl
+  name_key: npc.village_girl
+  place: hunter_home_06
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h07_man
+  name_key: npc.village_man
+  place: hunter_home_07
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h07_woman
+  name_key: npc.village_woman
+  place: hunter_home_07
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h07_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_07
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h07_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_07
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h07_boy
+  name_key: npc.village_boy
+  place: hunter_home_07
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h07_girl
+  name_key: npc.village_girl
+  place: hunter_home_07
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h08_man
+  name_key: npc.village_man
+  place: hunter_home_08
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h08_woman
+  name_key: npc.village_woman
+  place: hunter_home_08
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h08_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_08
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h08_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_08
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h08_boy
+  name_key: npc.village_boy
+  place: hunter_home_08
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h08_girl
+  name_key: npc.village_girl
+  place: hunter_home_08
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h09_man
+  name_key: npc.village_man
+  place: hunter_home_09
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h09_woman
+  name_key: npc.village_woman
+  place: hunter_home_09
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h09_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_09
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h09_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_09
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h09_boy
+  name_key: npc.village_boy
+  place: hunter_home_09
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h09_girl
+  name_key: npc.village_girl
+  place: hunter_home_09
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h10_man
+  name_key: npc.village_man
+  place: hunter_home_10
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h10_woman
+  name_key: npc.village_woman
+  place: hunter_home_10
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h10_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_10
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h10_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_10
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h10_boy
+  name_key: npc.village_boy
+  place: hunter_home_10
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h10_girl
+  name_key: npc.village_girl
+  place: hunter_home_10
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h11_man
+  name_key: npc.village_man
+  place: hunter_home_11
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h11_woman
+  name_key: npc.village_woman
+  place: hunter_home_11
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h11_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_11
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h11_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_11
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h11_boy
+  name_key: npc.village_boy
+  place: hunter_home_11
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h11_girl
+  name_key: npc.village_girl
+  place: hunter_home_11
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h12_man
+  name_key: npc.village_man
+  place: hunter_home_12
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h12_woman
+  name_key: npc.village_woman
+  place: hunter_home_12
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h12_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_12
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h12_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_12
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h12_boy
+  name_key: npc.village_boy
+  place: hunter_home_12
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h12_girl
+  name_key: npc.village_girl
+  place: hunter_home_12
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h13_man
+  name_key: npc.village_man
+  place: hunter_home_13
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h13_woman
+  name_key: npc.village_woman
+  place: hunter_home_13
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h13_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_13
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h13_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_13
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h13_boy
+  name_key: npc.village_boy
+  place: hunter_home_13
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h13_girl
+  name_key: npc.village_girl
+  place: hunter_home_13
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h14_man
+  name_key: npc.village_man
+  place: hunter_home_14
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h14_woman
+  name_key: npc.village_woman
+  place: hunter_home_14
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_pregnant_woman.glb}
+  portrait: media/portraits/crowd_pregnant_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_pregnant_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h14_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_14
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h14_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_14
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h14_boy
+  name_key: npc.village_boy
+  place: hunter_home_14
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h14_girl
+  name_key: npc.village_girl
+  place: hunter_home_14
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h15_man
+  name_key: npc.village_man
+  place: hunter_home_15
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h15_woman
+  name_key: npc.village_woman
+  place: hunter_home_15
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h15_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_15
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h15_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_15
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h15_boy
+  name_key: npc.village_boy
+  place: hunter_home_15
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h15_girl
+  name_key: npc.village_girl
+  place: hunter_home_15
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h16_man
+  name_key: npc.village_man
+  place: hunter_home_16
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h16_woman
+  name_key: npc.village_woman
+  place: hunter_home_16
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h16_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_16
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h16_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_16
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h16_boy
+  name_key: npc.village_boy
+  place: hunter_home_16
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h16_girl
+  name_key: npc.village_girl
+  place: hunter_home_16
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+
+- id: hv_h17_man
+  name_key: npc.village_man
+  place: hunter_home_17
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_man.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 1, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h17_woman
+  name_key: npc.village_woman
+  place: hunter_home_17
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_young_woman.glb}
+  portrait: media/portraits/crowd_young_woman.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_woman.bio
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.95, pause_s: 4}
+  tags: [crowd, villager]
+
+- id: hv_h17_old_man
+  name_key: npc.village_old_man
+  place: hunter_home_17
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_man.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
+  tags: [crowd, villager, elder]
+
+- id: hv_h17_old_woman
+  name_key: npc.village_old_woman
+  place: hunter_home_17
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
+  portrait: media/portraits/crowd_grandmother.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_old_woman.bio
+  movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
+  tags: [crowd, villager, elder]
+
+- id: hv_h17_boy
+  name_key: npc.village_boy
+  place: hunter_home_17
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
+  portrait: media/portraits/crowd_boy_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_boy.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2.2, pause_s: 1.5}
+  tags: [crowd, villager, child]
+
+- id: hv_h17_girl
+  name_key: npc.village_girl
+  place: hunter_home_17
+  character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
+  portrait: media/portraits/crowd_girl_8.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.village_girl.bio
+  movement: {kind: wander, radius_m: 20, speed_m_s: 2, pause_s: 2}
+  tags: [crowd, villager, child]
+

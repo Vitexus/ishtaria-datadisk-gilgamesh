@@ -9,7 +9,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_old_man.bio
   movement: {kind: wander, radius_m: 18, speed_m_s: 0.48, pause_s: 6}
-  tags: [crowd, elder]
+  tags: [crowd, elder, look_villager_old_man]
 
 - id: crowd_grandmother
   name_key: npc.crowd_grandmother
@@ -19,7 +19,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_grandmother.bio
   movement: {kind: wander, radius_m: 14, speed_m_s: 0.42, pause_s: 8}
-  tags: [crowd, elder]
+  tags: [crowd, elder, look_villager_old_woman]
 
 - id: crowd_boy_8
   name_key: npc.crowd_boy_8
@@ -29,7 +29,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_boy_8.bio
   movement: {kind: wander, radius_m: 28, speed_m_s: 2.2, pause_s: 1.5}
-  tags: [crowd, child]
+  tags: [crowd, child, look_villager_boy]
 
 - id: crowd_girl_8
   name_key: npc.crowd_girl_8
@@ -39,7 +39,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_girl_8.bio
   movement: {kind: wander, radius_m: 26, speed_m_s: 2.0, pause_s: 2}
-  tags: [crowd, child]
+  tags: [crowd, child, look_villager_girl]
 
 - id: crowd_toddler_boy
   name_key: npc.crowd_toddler_boy
@@ -79,7 +79,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_fisherman.bio
   movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 4}
-  tags: [crowd]
+  tags: [crowd, look_villager_man]
 
 - id: crowd_baker
   name_key: npc.crowd_baker
@@ -140,7 +140,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_young_woman.bio
   movement: {kind: wander, radius_m: 28, speed_m_s: 1.1, pause_s: 3}
-  tags: [crowd]
+  tags: [crowd, look_villager_woman]
 
 - id: crowd_pregnant_woman
   name_key: npc.crowd_pregnant_woman
@@ -150,7 +150,7 @@
   dialogue: crowd_passersby
   bio_key: npc.crowd_pregnant_woman.bio
   movement: {kind: wander, radius_m: 12, speed_m_s: 0.7, pause_s: 6}
-  tags: [crowd]
+  tags: [crowd, look_villager_pregnant_woman]
 
 # Soldiers walk the wall and other gates — never city_gate (player spawn).
 - id: crowd_spearman
