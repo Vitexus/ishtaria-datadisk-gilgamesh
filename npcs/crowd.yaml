@@ -6,7 +6,7 @@
   place: uruk_market
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: crowd_passersby
+  dialogue: elder_tales_man
   bio_key: npc.crowd_old_man.bio
   movement: {kind: wander, radius_m: 18, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, elder, look_villager_old_man]
@@ -16,7 +16,7 @@
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: crowd_passersby
+  dialogue: elder_tales_woman
   bio_key: npc.crowd_grandmother.bio
   movement: {kind: wander, radius_m: 14, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, elder, look_villager_old_woman]

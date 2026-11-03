@@ -14,3 +14,57 @@
   icon: foundation_tablet
   category: story
   read_all: [atrahasis_tablet_1, atrahasis_tablet_2, atrahasis_tablet_3]
+# Earned with the last of the seven clay tablets of Enuma Elish (places/enuma_elish_tablets.yaml); the order does not
+# matter. The epic was performed in the temples at the Akitu festival.
+- id: seven_tablets
+  title_key: achievement.seven_tablets.title
+  description_key: achievement.seven_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [enuma_elish_tablet_1, enuma_elish_tablet_2, enuma_elish_tablet_3, enuma_elish_tablet_4, enuma_elish_tablet_5, enuma_elish_tablet_6, enuma_elish_tablet_7]
+# Earned with the last of the six clay tablets of Ishtar's Descent (places/ishtar_descent_tablets.yaml); the order does not
+# matter.
+- id: descent_tablets
+  title_key: achievement.descent_tablets.title
+  description_key: achievement.descent_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [ishtar_descent_tablet_1, ishtar_descent_tablet_2, ishtar_descent_tablet_3, ishtar_descent_tablet_4, ishtar_descent_tablet_5, ishtar_descent_tablet_6]
+# Earned with the last of the tablets of the legends in places/legend_tablets.yaml.
+- id: twelve_tablets
+  title_key: achievement.twelve_tablets.title
+  description_key: achievement.twelve_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [gilgamesh_epic_tablet_1, gilgamesh_epic_tablet_2, gilgamesh_epic_tablet_3, gilgamesh_epic_tablet_4, gilgamesh_epic_tablet_5, gilgamesh_epic_tablet_6, gilgamesh_epic_tablet_7, gilgamesh_epic_tablet_8, gilgamesh_epic_tablet_9, gilgamesh_epic_tablet_10, gilgamesh_epic_tablet_11, gilgamesh_epic_tablet_12]
+- id: etana_tablets
+  title_key: achievement.etana_tablets.title
+  description_key: achievement.etana_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [etana_tablet_1, etana_tablet_2, etana_tablet_3]
+- id: adapa_tablets
+  title_key: achievement.adapa_tablets.title
+  description_key: achievement.adapa_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [adapa_tablet_1, adapa_tablet_2]
+- id: dilmun_tablets
+  title_key: achievement.dilmun_tablets.title
+  description_key: achievement.dilmun_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [dilmun_tablet_1, dilmun_tablet_2]
+- id: nergal_tablets
+  title_key: achievement.nergal_tablets.title
+  description_key: achievement.nergal_tablets.description
+  icon: foundation_tablet
+  category: story
+  read_all: [nergal_tablet_1, nergal_tablet_2]
+# The tablets of every legend of the disk: Atra-Hasis, Enuma Elish, Ishtar's Descent and the five of legend_tablets.yaml.
+- id: keeper_of_legends
+  title_key: achievement.keeper_of_legends.title
+  description_key: achievement.keeper_of_legends.description
+  icon: foundation_tablet
+  category: story
+  read_all: [atrahasis_tablet_1, atrahasis_tablet_2, atrahasis_tablet_3, enuma_elish_tablet_1, enuma_elish_tablet_2, enuma_elish_tablet_3, enuma_elish_tablet_4, enuma_elish_tablet_5, enuma_elish_tablet_6, enuma_elish_tablet_7, ishtar_descent_tablet_1, ishtar_descent_tablet_2, ishtar_descent_tablet_3, ishtar_descent_tablet_4, ishtar_descent_tablet_5, ishtar_descent_tablet_6, gilgamesh_epic_tablet_1, gilgamesh_epic_tablet_2, gilgamesh_epic_tablet_3, gilgamesh_epic_tablet_4, gilgamesh_epic_tablet_5, gilgamesh_epic_tablet_6, gilgamesh_epic_tablet_7, gilgamesh_epic_tablet_8, gilgamesh_epic_tablet_9, gilgamesh_epic_tablet_10, gilgamesh_epic_tablet_11, gilgamesh_epic_tablet_12, etana_tablet_1, etana_tablet_2, etana_tablet_3, adapa_tablet_1, adapa_tablet_2, dilmun_tablet_1, dilmun_tablet_2, nergal_tablet_1, nergal_tablet_2]

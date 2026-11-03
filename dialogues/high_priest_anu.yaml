@@ -12,6 +12,7 @@ nodes:
       - {text_key: high_priest_anu.ask_ziggurat, goto: explain_ziggurat}
       - {text_key: high_priest_anu.ask_anu, goto: explain_anu}
       - {text_key: high_priest_anu.ask_rituals, goto: explain_rituals}
+      - {text_key: high_priest_anu.ask_adapa, goto: say_adapa}
       - {text_key: high_priest_anu.leave}
 
   explain_ziggurat:
@@ -26,5 +27,10 @@ nodes:
 
   explain_rituals:
     text_key: high_priest_anu.rituals
+    choices:
+      - {text_key: high_priest_anu.leave}
+
+  say_adapa:
+    text_key: high_priest_anu.adapa
     choices:
       - {text_key: high_priest_anu.leave}

@@ -8,9 +8,15 @@ nodes:
     text_key: tablet_writer.greet
     choices:
       - {text_key: tablet_writer.ask_write, goto: write}
+      - {text_key: tablet_writer.ask_incipit, goto: say_incipit}
       - {text_key: tablet_writer.leave}
 
   write:
     text_key: tablet_writer.write
+    choices:
+      - {text_key: tablet_writer.leave}
+
+  say_incipit:
+    text_key: tablet_writer.incipit
     choices:
       - {text_key: tablet_writer.leave}

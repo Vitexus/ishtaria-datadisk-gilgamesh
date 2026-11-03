@@ -1,0 +1,96 @@
+# Elders of Uruk and of the hunter's village quote the legends of the disk like a story everyone grew up with: the Atra-Hasis epic,
+# Enuma Elish (the New Year, Akitu), Ishtar's descent, and more (research/ATRAHASIS.md, ENUMA_ELISH.md, ISHTAR_DESCENT.md,
+# LEGENDS.md). They also say where the tablets of the legends lie (places/*tablets.yaml).
+id: elder_tales_man
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_tales_man.greet
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  men:
+    text_key: elder_tales_man.men
+    choices:
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  death:
+    text_key: elder_tales_man.death
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  flood:
+    text_key: elder_tales_man.flood
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  etana:
+    text_key: elder_tales_man.etana
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  adapa:
+    text_key: elder_tales_man.adapa
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  akitu:
+    text_key: elder_tales_man.akitu
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_where, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  where:
+    text_key: elder_tales_man.where
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_man.leave}

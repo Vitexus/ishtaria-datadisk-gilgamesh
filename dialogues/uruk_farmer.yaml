@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: uruk_farmer.ask_a, goto: explain_a}
       - {text_key: uruk_farmer.ask_b, goto: explain_b}
+      - {text_key: uruk_farmer.ask_canals, goto: say_canals}
       - {text_key: uruk_farmer.leave}
 
   explain_a:
@@ -23,4 +24,9 @@ nodes:
     text_key: uruk_farmer.b
     choices:
       - {text_key: uruk_farmer.ask_a, goto: explain_a}
+      - {text_key: uruk_farmer.leave}
+
+  say_canals:
+    text_key: uruk_farmer.canals
+    choices:
       - {text_key: uruk_farmer.leave}

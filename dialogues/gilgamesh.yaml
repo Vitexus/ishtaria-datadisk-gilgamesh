@@ -31,6 +31,7 @@ nodes:
       - {text_key: gilgamesh.ask_quest, goto: speak_quest}
       - {text_key: gilgamesh.ask_city, goto: speak_of_uruk}
       - {text_key: gilgamesh.ask_mortality, goto: speak_of_mortality}
+      - {text_key: gilgamesh.ask_ishtar_below, goto: say_ishtar_below}
       - {text_key: gilgamesh.back, goto: greet}
       - {text_key: gilgamesh.leave}
 
@@ -150,5 +151,10 @@ nodes:
     text_key: gilgamesh.lesson
     effects:
       - {set_flag: learned_mortality_lesson}
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  say_ishtar_below:
+    text_key: gilgamesh.ishtar_below
     choices:
       - {text_key: gilgamesh.leave}

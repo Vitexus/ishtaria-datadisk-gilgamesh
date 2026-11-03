@@ -1,0 +1,16 @@
+# The author's disclaimer, a clay tablet at the foot of Enki's city (research/LEGENDS.md): read it with E at the bench in Eridu.
+# A joke of the datadisk, written in the voice of a humble servant of Enki, who distances himself from the troubles of
+# Ishtar (Inanna) and of her father Anu. Not a legend and no achievement attached.
+
+- id: author_disclaimer
+  kind: landmark
+  name_key: place.author_disclaimer
+  parent: eridu
+  radius_m: 1
+  locate: {from: eridu, bearing_deg: 150, distance_m: 22, tolerance_m: 0}
+  structure:
+    model: media/models/architecture/disclaimer_tablet_1.glb
+    visible_m: 80
+    about: author_disclaimer
+  requires:
+    max_slope_deg: 30

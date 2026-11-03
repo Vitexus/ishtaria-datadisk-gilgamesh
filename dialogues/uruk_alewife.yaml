@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: uruk_alewife.ask_a, goto: explain_a}
       - {text_key: uruk_alewife.ask_b, goto: explain_b}
+      - {text_key: uruk_alewife.ask_siduri, goto: say_siduri}
       - {text_key: uruk_alewife.leave}
 
   explain_a:
@@ -23,4 +24,9 @@ nodes:
     text_key: uruk_alewife.b
     choices:
       - {text_key: uruk_alewife.ask_a, goto: explain_a}
+      - {text_key: uruk_alewife.leave}
+
+  say_siduri:
+    text_key: uruk_alewife.siduri
+    choices:
       - {text_key: uruk_alewife.leave}

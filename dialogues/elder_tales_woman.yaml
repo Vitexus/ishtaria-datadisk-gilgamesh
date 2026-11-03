@@ -1,0 +1,96 @@
+# Elders of Uruk and of the hunter's village quote the legends of the disk like a story everyone grew up with: the Atra-Hasis epic,
+# Enuma Elish (the New Year, Akitu), Ishtar's descent, and more (research/ATRAHASIS.md, ENUMA_ELISH.md, ISHTAR_DESCENT.md,
+# LEGENDS.md). They also say where the tablets of the legends lie (places/*tablets.yaml).
+id: elder_tales_woman
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_tales_woman.greet
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  gates:
+    text_key: elder_tales_woman.gates
+    choices:
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  return:
+    text_key: elder_tales_woman.return
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  dumuzi:
+    text_key: elder_tales_woman.dumuzi
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  dilmun:
+    text_key: elder_tales_woman.dilmun
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  nergal:
+    text_key: elder_tales_woman.nergal
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  akitu:
+    text_key: elder_tales_woman.akitu
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_where, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  where:
+    text_key: elder_tales_woman.where
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu}
+      - {text_key: elder_tales_woman.leave}

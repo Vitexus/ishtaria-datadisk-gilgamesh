@@ -9,6 +9,7 @@ nodes:
     choices:
       - {text_key: smith.ask_furnace, goto: furnace}
       - {text_key: smith.ask_sword, goto: sword}
+      - {text_key: smith.ask_nergal, goto: say_nergal}
       - {text_key: smith.leave}
 
   furnace:
@@ -19,5 +20,10 @@ nodes:
 
   sword:
     text_key: smith.sword
+    choices:
+      - {text_key: smith.leave}
+
+  say_nergal:
+    text_key: smith.nergal
     choices:
       - {text_key: smith.leave}

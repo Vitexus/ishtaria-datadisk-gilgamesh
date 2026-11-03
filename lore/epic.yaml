@@ -80,3 +80,9 @@
   title_key: lore.hanging_gardens.title
   text_key: lore.hanging_gardens
   category: place
+
+# The author's disclaimer (also a tablet in Eridu, places/author_disclaimer.yaml).
+- id: author_disclaimer
+  title_key: lore.author_disclaimer.title
+  text_key: lore.author_disclaimer
+  category: history

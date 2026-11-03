@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: weaver.ask_fabrics, goto: explain_fabrics}
       - {text_key: weaver.ask_priestly_robes, goto: explain_priestly_robes}
+      - {text_key: weaver.ask_uttu, goto: say_uttu}
       - {text_key: weaver.leave}
 
   explain_fabrics:
@@ -20,5 +21,10 @@ nodes:
 
   explain_priestly_robes:
     text_key: weaver.priestly_robes
+    choices:
+      - {text_key: weaver.leave}
+
+  say_uttu:
+    text_key: weaver.uttu
     choices:
       - {text_key: weaver.leave}

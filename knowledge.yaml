@@ -52,3 +52,223 @@
   image: media/knowledge/atrahasis_tablet_3.jpg
   credit_key: knowledge.atrahasis_tablet.credit
   wikipedia: {en: Atra-Hasis, cs: Mýtus_o_Atrachasísovi}
+
+# The seven tablets of Enuma Elish, read at the benches of places/enuma_elish_tablets.yaml. The pictures are renders of
+# the disk's own models (models-src/enuma_elish_tablets/).
+- id: enuma_elish_tablet_1
+  title_key: knowledge.enuma_elish_tablet_1.title
+  text_key: knowledge.enuma_elish_tablet_1.text
+  image: media/knowledge/enuma_elish_tablet_1.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+- id: enuma_elish_tablet_2
+  title_key: knowledge.enuma_elish_tablet_2.title
+  text_key: knowledge.enuma_elish_tablet_2.text
+  image: media/knowledge/enuma_elish_tablet_2.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+- id: enuma_elish_tablet_3
+  title_key: knowledge.enuma_elish_tablet_3.title
+  text_key: knowledge.enuma_elish_tablet_3.text
+  image: media/knowledge/enuma_elish_tablet_3.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+- id: enuma_elish_tablet_4
+  title_key: knowledge.enuma_elish_tablet_4.title
+  text_key: knowledge.enuma_elish_tablet_4.text
+  image: media/knowledge/enuma_elish_tablet_4.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+- id: enuma_elish_tablet_5
+  title_key: knowledge.enuma_elish_tablet_5.title
+  text_key: knowledge.enuma_elish_tablet_5.text
+  image: media/knowledge/enuma_elish_tablet_5.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+- id: enuma_elish_tablet_6
+  title_key: knowledge.enuma_elish_tablet_6.title
+  text_key: knowledge.enuma_elish_tablet_6.text
+  image: media/knowledge/enuma_elish_tablet_6.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+- id: enuma_elish_tablet_7
+  title_key: knowledge.enuma_elish_tablet_7.title
+  text_key: knowledge.enuma_elish_tablet_7.text
+  image: media/knowledge/enuma_elish_tablet_7.jpg
+  credit_key: knowledge.enuma_elish_tablet.credit
+  wikipedia: {en: Enūma_Eliš, cs: Enúma_eliš}
+
+# The six tablets of Ishtar's Descent, read at the benches of places/ishtar_descent_tablets.yaml. The pictures are renders of
+# the disk's own models (models-src/ishtar_descent_tablets/).
+- id: ishtar_descent_tablet_1
+  title_key: knowledge.ishtar_descent_tablet_1.title
+  text_key: knowledge.ishtar_descent_tablet_1.text
+  image: media/knowledge/ishtar_descent_tablet_1.jpg
+  credit_key: knowledge.ishtar_descent_tablet.credit
+  wikipedia: {en: Ancient_Mesopotamian_underworld, cs: Sestup_Ištary_do_podsvětí}
+- id: ishtar_descent_tablet_2
+  title_key: knowledge.ishtar_descent_tablet_2.title
+  text_key: knowledge.ishtar_descent_tablet_2.text
+  image: media/knowledge/ishtar_descent_tablet_2.jpg
+  credit_key: knowledge.ishtar_descent_tablet.credit
+  wikipedia: {en: Ancient_Mesopotamian_underworld, cs: Sestup_Ištary_do_podsvětí}
+- id: ishtar_descent_tablet_3
+  title_key: knowledge.ishtar_descent_tablet_3.title
+  text_key: knowledge.ishtar_descent_tablet_3.text
+  image: media/knowledge/ishtar_descent_tablet_3.jpg
+  credit_key: knowledge.ishtar_descent_tablet.credit
+  wikipedia: {en: Ancient_Mesopotamian_underworld, cs: Sestup_Ištary_do_podsvětí}
+- id: ishtar_descent_tablet_4
+  title_key: knowledge.ishtar_descent_tablet_4.title
+  text_key: knowledge.ishtar_descent_tablet_4.text
+  image: media/knowledge/ishtar_descent_tablet_4.jpg
+  credit_key: knowledge.ishtar_descent_tablet.credit
+  wikipedia: {en: Ancient_Mesopotamian_underworld, cs: Sestup_Ištary_do_podsvětí}
+- id: ishtar_descent_tablet_5
+  title_key: knowledge.ishtar_descent_tablet_5.title
+  text_key: knowledge.ishtar_descent_tablet_5.text
+  image: media/knowledge/ishtar_descent_tablet_5.jpg
+  credit_key: knowledge.ishtar_descent_tablet.credit
+  wikipedia: {en: Ancient_Mesopotamian_underworld, cs: Sestup_Ištary_do_podsvětí}
+- id: ishtar_descent_tablet_6
+  title_key: knowledge.ishtar_descent_tablet_6.title
+  text_key: knowledge.ishtar_descent_tablet_6.text
+  image: media/knowledge/ishtar_descent_tablet_6.jpg
+  credit_key: knowledge.ishtar_descent_tablet.credit
+  wikipedia: {en: Ancient_Mesopotamian_underworld, cs: Sestup_Ištary_do_podsvětí}
+
+# The tablets of the legends in places/legend_tablets.yaml (models-src/legend_tablets/).
+- id: gilgamesh_epic_tablet_1
+  title_key: knowledge.gilgamesh_epic_tablet_1.title
+  text_key: knowledge.gilgamesh_epic_tablet_1.text
+  image: media/knowledge/gilgamesh_epic_tablet_1.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_2
+  title_key: knowledge.gilgamesh_epic_tablet_2.title
+  text_key: knowledge.gilgamesh_epic_tablet_2.text
+  image: media/knowledge/gilgamesh_epic_tablet_2.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_3
+  title_key: knowledge.gilgamesh_epic_tablet_3.title
+  text_key: knowledge.gilgamesh_epic_tablet_3.text
+  image: media/knowledge/gilgamesh_epic_tablet_3.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_4
+  title_key: knowledge.gilgamesh_epic_tablet_4.title
+  text_key: knowledge.gilgamesh_epic_tablet_4.text
+  image: media/knowledge/gilgamesh_epic_tablet_4.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_5
+  title_key: knowledge.gilgamesh_epic_tablet_5.title
+  text_key: knowledge.gilgamesh_epic_tablet_5.text
+  image: media/knowledge/gilgamesh_epic_tablet_5.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_6
+  title_key: knowledge.gilgamesh_epic_tablet_6.title
+  text_key: knowledge.gilgamesh_epic_tablet_6.text
+  image: media/knowledge/gilgamesh_epic_tablet_6.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_7
+  title_key: knowledge.gilgamesh_epic_tablet_7.title
+  text_key: knowledge.gilgamesh_epic_tablet_7.text
+  image: media/knowledge/gilgamesh_epic_tablet_7.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_8
+  title_key: knowledge.gilgamesh_epic_tablet_8.title
+  text_key: knowledge.gilgamesh_epic_tablet_8.text
+  image: media/knowledge/gilgamesh_epic_tablet_8.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_9
+  title_key: knowledge.gilgamesh_epic_tablet_9.title
+  text_key: knowledge.gilgamesh_epic_tablet_9.text
+  image: media/knowledge/gilgamesh_epic_tablet_9.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_10
+  title_key: knowledge.gilgamesh_epic_tablet_10.title
+  text_key: knowledge.gilgamesh_epic_tablet_10.text
+  image: media/knowledge/gilgamesh_epic_tablet_10.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_11
+  title_key: knowledge.gilgamesh_epic_tablet_11.title
+  text_key: knowledge.gilgamesh_epic_tablet_11.text
+  image: media/knowledge/gilgamesh_epic_tablet_11.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: gilgamesh_epic_tablet_12
+  title_key: knowledge.gilgamesh_epic_tablet_12.title
+  text_key: knowledge.gilgamesh_epic_tablet_12.text
+  image: media/knowledge/gilgamesh_epic_tablet_12.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Epic_of_Gilgamesh, cs: Epos_o_Gilgamešovi}
+- id: etana_tablet_1
+  title_key: knowledge.etana_tablet_1.title
+  text_key: knowledge.etana_tablet_1.text
+  image: media/knowledge/etana_tablet_1.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Etana}
+- id: etana_tablet_2
+  title_key: knowledge.etana_tablet_2.title
+  text_key: knowledge.etana_tablet_2.text
+  image: media/knowledge/etana_tablet_2.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Etana}
+- id: etana_tablet_3
+  title_key: knowledge.etana_tablet_3.title
+  text_key: knowledge.etana_tablet_3.text
+  image: media/knowledge/etana_tablet_3.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Etana}
+- id: adapa_tablet_1
+  title_key: knowledge.adapa_tablet_1.title
+  text_key: knowledge.adapa_tablet_1.text
+  image: media/knowledge/adapa_tablet_1.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Adapa}
+- id: adapa_tablet_2
+  title_key: knowledge.adapa_tablet_2.title
+  text_key: knowledge.adapa_tablet_2.text
+  image: media/knowledge/adapa_tablet_2.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Adapa}
+- id: dilmun_tablet_1
+  title_key: knowledge.dilmun_tablet_1.title
+  text_key: knowledge.dilmun_tablet_1.text
+  image: media/knowledge/dilmun_tablet_1.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Enki_and_Ninhursag}
+- id: dilmun_tablet_2
+  title_key: knowledge.dilmun_tablet_2.title
+  text_key: knowledge.dilmun_tablet_2.text
+  image: media/knowledge/dilmun_tablet_2.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Enki_and_Ninhursag}
+- id: nergal_tablet_1
+  title_key: knowledge.nergal_tablet_1.title
+  text_key: knowledge.nergal_tablet_1.text
+  image: media/knowledge/nergal_tablet_1.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Nergal, cs: Nergal}
+- id: nergal_tablet_2
+  title_key: knowledge.nergal_tablet_2.title
+  text_key: knowledge.nergal_tablet_2.text
+  image: media/knowledge/nergal_tablet_2.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Nergal, cs: Nergal}
+
+# The author's disclaimer, read at the tablet in Eridu (places/author_disclaimer.yaml).
+- id: author_disclaimer
+  title_key: knowledge.author_disclaimer.title
+  text_key: knowledge.author_disclaimer.text
+  image: media/knowledge/disclaimer_tablet_1.jpg
+  credit_key: knowledge.legend_tablet.credit
+  wikipedia: {en: Enki, cs: Enki}

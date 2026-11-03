@@ -64,6 +64,7 @@ nodes:
     choices:
       - {text_key: ninsun.ask_protection, goto: offer_protection}
       - {text_key: ninsun.ask_wisdom, goto: give_wisdom}
+      - {text_key: ninsun.ask_clay, goto: say_clay}
       - {text_key: ninsun.leave}
 
   offer_protection:
@@ -89,5 +90,10 @@ nodes:
 
   give_wisdom:
     text_key: ninsun.wisdom
+    choices:
+      - {text_key: ninsun.leave}
+
+  say_clay:
+    text_key: ninsun.clay
     choices:
       - {text_key: ninsun.leave}
