@@ -9,6 +9,15 @@ default:
   pitch: 0
 
 npcs:
+  # The elders who tell the legends (dialogues/elder_tales_man.yaml and elder_tales_woman.yaml, shared by all elders; the
+  # first of them owns the lines): a slow old man and a warm grandmother.
+  crowd_old_man:
+    pitch: -0.7
+    tempo: 0.9
+  crowd_grandmother:
+    pitch: 0.3
+    tempo: 0.92
+
   # Quest tablet intros (clay prologue) — measured, storyteller pace
   narrator:
     pitch: -0.4

@@ -1428,3 +1428,19 @@ uruk_alewife.ask_siduri: "Co říkáš muži, který se bojí smrti?"
 uruk_alewife.siduri: "To, co řekla výčepní u moře Gilgamešovi: když bohové stvořili člověka, dali mu smrt a život si nechali. Naplň si břicho, raduj se dnem i nocí, umyj se a obleč a drž dítě, které tě chytí za ruku. Je to laciná rada a pivo je drahé. Ještě džbán?"
 uruk_farmer.ask_canals: "Je pravda, že kanály kdysi kopali sami bohové?"
 uruk_farmer.canals: "Malí bohové, Igigi, čtyřicet let, než spálili rýče a obklíčili Enlilův dům. Dívám se na svůj příkop a rozumím jim. Ale ječmen nečeká na stávku a kdo by nosil bohům koše, když ne my?"
+
+# What the elders say while the New Year festival is on (the flag festival:akitu of the server).
+elder_tales_man.akitu_now: "Copak neslyšíš bubny, dítě? Je Nový rok: jedenáct dní od prvního novu na jaře. Jdi do chrámu a viz, jak Marduk vychází proti Tiamat, a slyš jeho padesát jmen; pivo je zadarmo, král klečí a já jsem od úsvitu nespal. Vrať se, až zhasnou lampy, a povím ti zbytek."
+elder_tales_woman.akitu_now: "Zapal lampu, dítě, je Nový rok! Jedenáct dní, kdy jsou si všichni příbuzní. Nesu lampu v průvodu boha; pojď s námi do chrámu a slyš píseň o Mardukovi a Tiamat a viz nebe udělané z jejího těla. Zítra se všichni vrátíme k práci, ale dnes ne."
+
+# More allusions to the legends (shamhat, utnapishtim, temple_scribe, uruk_water_carrier, uruk_elder).
+shamhat.ask_ishtar_below: "Co zpíváš o Ištar v podsvětí?"
+shamhat.ishtar_below: "Znám ji nazpaměť: sedm bran a u každé strážce vzal kus její parády, až stanula nahá před sestrou. Myslím na to pokaždé, když si sundávám vlastní ozdoby. A Tammuz: pláčeme pro něj každý rok s lapisovou flétnou a druhý den se smějeme, protože Ištar zase vystoupila."
+utnapishtim.ask_atra_hasis: "Staré příběhy nazývají hrdinu potopy Atrachasís."
+utnapishtim.atra_hasis: "Ano: Atrachasís, Nesmírně Moudrý, král Šuruppaku, ten, kdo slyšel mluvit rákosovou stěnu. Jména jsou jako hlína, berou tvar ruky, která je vypráví. Zeptej se Gilgameše, co slyšel pod jiným jménem: je to táž potopa a táž stěna."
+temple_scribe.ask_new_year: "Co se čte o Novém roce?"
+temple_scribe.new_year: "„Když nahoře“, všech sedm tabulek, zatímco kněží v chrámu hrají a moji žáci drží hlínu. Učím je: opisuj řádek, ne boha. Další král bude chtít v písni jiného boha a písař, který opsal boha, přijde o práci."
+uruk_water_carrier.ask_khalziku: "Proč má vak na vodu takový význam?"
+uruk_water_carrier.khalziku: "Zeptej se podsvětí. Když bohové poslali dolů Asusunamira, požádal královnu Ereškigal o vak na vodu, chalzikku, aby se z něj napil, a ona ho proklela: takové přání nelze splnit. Vak na vodu je první, co poutník potřebuje, a poslední, co smějí mít mrtví. Naplň si ten svůj, dítě."
+uruk_elder.ask_kingship: "Kdo dal králům moc?"
+uruk_elder.kingship: "Královská moc sestoupila z nebe, nejdřív do Eridu a po potopě do Kiše. Pastýř Etana, který neměl syna, vystoupil na nebe na orlu pro rostlinu zrození. Pamatujte na to, králové Uruku: koruna je půjčená a Anovi úředníci mají stvrzenku."

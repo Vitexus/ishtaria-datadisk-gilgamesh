@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: uruk_elder.ask_a, goto: explain_a}
       - {text_key: uruk_elder.ask_b, goto: explain_b}
+      - {text_key: uruk_elder.ask_kingship, goto: say_kingship}
       - {text_key: uruk_elder.leave}
 
   explain_a:
@@ -23,4 +24,9 @@ nodes:
     text_key: uruk_elder.b
     choices:
       - {text_key: uruk_elder.ask_a, goto: explain_a}
+      - {text_key: uruk_elder.leave}
+
+  say_kingship:
+    text_key: uruk_elder.kingship
+    choices:
       - {text_key: uruk_elder.leave}

@@ -1446,3 +1446,19 @@ uruk_alewife.ask_siduri: "What do you say to a man who fears death?"
 uruk_alewife.siduri: "What the alewife by the sea said to Gilgamesh: when the gods made man they gave him death and kept life for themselves. Fill your belly, make merry day and night, wash and dress, and hold the child who takes your hand. It is cheap advice, and the beer is dear. Another cup?"
 uruk_farmer.ask_canals: "Is it true the gods once dug the canals themselves?"
 uruk_farmer.canals: "The little gods, the Igigi, for forty years, until they burned their spades and surrounded Enlil's house. I look at my ditch and I understand them. But the barley does not wait for a strike, and who would carry the baskets of the gods if not us?"
+
+# What the elders say while the New Year festival is on (the flag festival:akitu of the server).
+elder_tales_man.akitu_now: "Do you not hear the drums, child? The New Year is on: eleven days from the first new moon of spring. Go to the temple and see Marduk go out against Tiamat, and hear his fifty names; the beer is free, the king kneels, and I have not slept since the dawn. Come back when the lamps are out and I will tell you the rest."
+elder_tales_woman.akitu_now: "Light a lamp, child, it is the New Year! Eleven days when everyone is kin. I carry the lamp in the procession of the god; walk with us to the temple and hear the song of Marduk and Tiamat, and see the sky made out of her body. Tomorrow we shall all go back to our work, but not today."
+
+# More allusions to the legends (shamhat, utnapishtim, temple_scribe, uruk_water_carrier, uruk_elder).
+shamhat.ask_ishtar_below: "What do you sing of Ishtar below?"
+shamhat.ishtar_below: "I know it by heart: seven gates, and at each the keeper took a piece of her finery, until she stood bare before her sister. I think of it each time I take off my own ornaments. And Tammuz: we weep for him every year with the flute of lapis, and the next day we laugh, because Ishtar came up again."
+utnapishtim.ask_atra_hasis: "The old tales call the flood hero Atra-Hasis."
+utnapishtim.atra_hasis: "They do: Atra-Hasis, the Exceedingly Wise, king of Shuruppak, the one who heard a reed wall speak. Names are like clay, they take the shape of the hand that tells them. Ask Gilgamesh what he heard under the other name: it is the same flood, and the same wall."
+temple_scribe.ask_new_year: "What is read at the New Year?"
+temple_scribe.new_year: "\"When on high\", all seven tablets, with the priests acting it out in the temple while my pupils hold the clay. I teach them: copy the line, not the god. The next king will want another god in the song, and the scribe who copied the god will be out of work."
+uruk_water_carrier.ask_khalziku: "Why does a waterskin matter so much?"
+uruk_water_carrier.khalziku: "Ask the underworld. When the gods sent Asushunamir down, he asked Queen Ereshkigal for the water bag, the khalziku, to drink from it, and she cursed him: such a wish cannot be granted. A waterskin is the first thing a traveller needs and the last thing the dead may have. Fill yours, child."
+uruk_elder.ask_kingship: "Who gave the kings their power?"
+uruk_elder.kingship: "Kingship came down from heaven, first to Eridu, and after the flood to Kish. Etana the shepherd, who had no son, rose to heaven on an eagle to fetch the plant of birth. Remember it, you kings of Uruk: the crown is lent, and Anu's clerks keep the receipt."

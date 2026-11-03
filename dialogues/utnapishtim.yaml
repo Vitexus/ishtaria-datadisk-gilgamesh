@@ -22,6 +22,7 @@ nodes:
       - {text_key: utnapishtim.ask_flood, goto: tell_flood}
       - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_lore}
       - {text_key: utnapishtim.ask_test, goto: tell_test}
+      - {text_key: utnapishtim.ask_atra_hasis, goto: say_atra_hasis}
       - {text_key: utnapishtim.leave}
 
   seeker:
@@ -121,5 +122,10 @@ nodes:
       - {set_flag: plant_stolen}
       - {set_stage: {quest: the_return_to_uruk, stage: view_uruk}}
       - {teleport_place: uruk}
+    choices:
+      - {text_key: utnapishtim.leave}
+
+  say_atra_hasis:
+    text_key: utnapishtim.atra_hasis
     choices:
       - {text_key: utnapishtim.leave}

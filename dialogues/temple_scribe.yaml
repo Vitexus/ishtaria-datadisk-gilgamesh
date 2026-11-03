@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: temple_scribe.ask_work, goto: explain_work}
       - {text_key: temple_scribe.ask_tablets, goto: explain_tablets}
+      - {text_key: temple_scribe.ask_new_year, goto: say_new_year}
       - {text_key: temple_scribe.leave}
 
   explain_work:
@@ -20,5 +21,10 @@ nodes:
 
   explain_tablets:
     text_key: temple_scribe.tablets
+    choices:
+      - {text_key: temple_scribe.leave}
+
+  say_new_year:
+    text_key: temple_scribe.new_year
     choices:
       - {text_key: temple_scribe.leave}

@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: uruk_water_carrier.ask_a, goto: explain_a}
       - {text_key: uruk_water_carrier.ask_b, goto: explain_b}
+      - {text_key: uruk_water_carrier.ask_khalziku, goto: say_khalziku}
       - {text_key: uruk_water_carrier.leave}
 
   explain_a:
@@ -23,4 +24,9 @@ nodes:
     text_key: uruk_water_carrier.b
     choices:
       - {text_key: uruk_water_carrier.ask_a, goto: explain_a}
+      - {text_key: uruk_water_carrier.leave}
+
+  say_khalziku:
+    text_key: uruk_water_carrier.khalziku
+    choices:
       - {text_key: uruk_water_carrier.leave}

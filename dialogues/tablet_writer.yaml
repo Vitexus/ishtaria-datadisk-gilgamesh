@@ -18,5 +18,7 @@ nodes:
 
   say_incipit:
     text_key: tablet_writer.incipit
+    effects:
+      - {reveal_places: [gilgamesh_epic_tablet_1, gilgamesh_epic_tablet_2, gilgamesh_epic_tablet_3, gilgamesh_epic_tablet_4, gilgamesh_epic_tablet_5, gilgamesh_epic_tablet_6, gilgamesh_epic_tablet_7, gilgamesh_epic_tablet_8, gilgamesh_epic_tablet_9, gilgamesh_epic_tablet_10, gilgamesh_epic_tablet_11, gilgamesh_epic_tablet_12]}
     choices:
       - {text_key: tablet_writer.leave}
