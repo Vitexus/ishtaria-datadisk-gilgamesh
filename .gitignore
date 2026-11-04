@@ -39,3 +39,16 @@ tools/cache/
 # Local build noise
 build-server*.log
 build-world.log
+
+# Third-party research material (papers, saved web pages, photographs, source texts and data) stays on the machine
+# of whoever collects it and is never committed; only our own notes (research/**/*.md) are tracked. Where each source
+# comes from is told in the notes and fetched by tools/fetch_*.py.
+research/**
+!research/
+!research/**/
+!research/**/*.md
+
+
+# Third-party source archives (the Burney Relief scan by danielpett, Sketchfab, CC BY 4.0): fetched by hand, not committed. The model
+# derived from it (media/models/architecture/burney_relief.glb) and its credit stay.
+models-src/*.zip
