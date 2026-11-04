@@ -49,6 +49,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -100,6 +101,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -151,6 +153,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -202,6 +205,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -253,6 +257,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -304,6 +309,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -355,6 +361,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -406,6 +413,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -457,6 +465,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -508,6 +517,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -559,6 +569,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -610,6 +621,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -661,6 +673,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -712,6 +725,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -763,6 +777,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -814,6 +829,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -865,6 +881,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -916,6 +933,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 
@@ -967,6 +985,7 @@
       - {id: animal.donkey, weight: 1}
       - {id: animal.lizard, weight: 2}
       - {id: zeroad.crow, weight: 1}
+      - {id: zeroad.crocodile, weight: 2, waterside: true}
   requires:
     max_slope_deg: 45
 

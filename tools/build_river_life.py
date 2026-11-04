@@ -91,7 +91,9 @@ TREES = [("zeroad.poplar_lombardy", 6), ("zeroad.willow_a", 6), ("zeroad.fig_a",
          ("zeroad.palm_date_new_2", 2), ("zeroad.palm_date_fruit_1", 2)]
 FAUNA = [("animal.duck", 6, True), ("animal.goose", 5, True), ("animal.turtle", 3, True), ("animal.pigeon", 3, False),
          ("animal.gazelle", 2, False), ("animal.onager", 1, False), ("animal.goat", 2, False), ("animal.sheep", 2, False),
-         ("animal.donkey", 1, False), ("animal.lizard", 2, False), ("zeroad.crow", 1, False)]
+         ("animal.donkey", 1, False), ("animal.lizard", 2, False), ("zeroad.crow", 1, False),
+         # the Euphrates of the third millennium held crocodiles: they lie in the water beside the bank (and bite)
+         ("zeroad.crocodile", 2, True)]
 
 
 def flora_block():

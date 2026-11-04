@@ -4,11 +4,54 @@
 # there) and are moved to the nearest suitable ground. The old landing on the river north of the city is gone: the boat the
 # hunter rows lies at the quay of Uruk (places/uruk_river.yaml), at the gate the river comes nearest to.
 
+- id: hunter_trail_mid
+  kind: landmark
+  name_key: place.hunter_road
+  radius_m: 10
+  # Halfway from the water-hole to the old father's village.
+  locate: {from: hunter_waterhole, bearing_deg: 130, distance_m: 1750, tolerance_m: 250}
+  # Predators prowl the open steppe along the way: a low-level traveller is wise to go round them (combat.json ambush).
+  wildlife:
+    radius_m: 450
+    density: 3.0
+    fauna:
+      - {id: zeroad.lion, weight: 3}
+      - {id: zeroad.lioness, weight: 3}
+      - {id: animal.wolf, weight: 4}
+      - {id: zeroad.wolf, weight: 3}
+      - {id: animal.husky, weight: 3}
+      - {id: zeroad.mastiff, weight: 1}
+      - {id: animal.fox, weight: 2}
+      - {id: animal.gazelle, weight: 5}
+      - {id: zeroad.gazelle, weight: 4}
+      - {id: animal.deer, weight: 3}
+      - {id: animal.onager, weight: 2}
+  requires:
+    biome: [grassland, lowland]
+    height_m: {min: -5, max: 250}
+    max_slope_deg: 15
+
 - id: hunter_road_1
   kind: landmark
   name_key: place.hunter_road
   radius_m: 10
   locate: {from: hunter_village, bearing_deg: 126.7, distance_m: 2427, tolerance_m: 250}
+  # Predators prowl the open steppe along the way: a low-level traveller is wise to go round them (combat.json ambush).
+  wildlife:
+    radius_m: 450
+    density: 3.0
+    fauna:
+      - {id: zeroad.lion, weight: 3}
+      - {id: zeroad.lioness, weight: 3}
+      - {id: animal.wolf, weight: 4}
+      - {id: zeroad.wolf, weight: 3}
+      - {id: animal.husky, weight: 3}
+      - {id: zeroad.mastiff, weight: 1}
+      - {id: animal.fox, weight: 2}
+      - {id: animal.gazelle, weight: 5}
+      - {id: zeroad.gazelle, weight: 4}
+      - {id: animal.deer, weight: 3}
+      - {id: animal.onager, weight: 2}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}
@@ -19,6 +62,22 @@
   name_key: place.hunter_road
   radius_m: 10
   locate: {from: hunter_village, bearing_deg: 126.7, distance_m: 4855, tolerance_m: 250}
+  # Predators prowl the open steppe along the way: a low-level traveller is wise to go round them (combat.json ambush).
+  wildlife:
+    radius_m: 450
+    density: 3.0
+    fauna:
+      - {id: zeroad.lion, weight: 3}
+      - {id: zeroad.lioness, weight: 3}
+      - {id: animal.wolf, weight: 4}
+      - {id: zeroad.wolf, weight: 3}
+      - {id: animal.husky, weight: 3}
+      - {id: zeroad.mastiff, weight: 1}
+      - {id: animal.fox, weight: 2}
+      - {id: animal.gazelle, weight: 5}
+      - {id: zeroad.gazelle, weight: 4}
+      - {id: animal.deer, weight: 3}
+      - {id: animal.onager, weight: 2}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}
