@@ -1,5 +1,9 @@
 # ishtaria-datadisk-gilgamesh
 
+<!-- source-notice -->
+> **Primary source:** <https://git.vitexsoftware.com/Ishtaria/ishtaria-datadisk-gilgamesh> (development happens there). **GitHub** (<https://github.com/Vitexus/ishtaria-datadisk-gilgamesh>) is a secondary mirror; packages and binaries are **not built from GitHub**.
+<!-- /source-notice -->
+
 Epic story datadisk for [Ishtaria](https://git.vitexsoftware.com/Ishtaria/ishtaria-docs) based on
 the ancient **Epic of Gilgamesh**, the world's oldest surviving work of literature.
 
