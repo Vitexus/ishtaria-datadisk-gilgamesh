@@ -45,5 +45,5 @@ Enki who disclaims all the troubles of Ishtar (Inanna) and of her father Anu (ca
 A joke of the disk, not a legend, no achievement. The father of Inanna differs by tradition: Sin in the Descent, Anu in
 tablet VI of the Gilgamesh epic, which the text alludes to.
 
-It is an easter egg: the last register of the face carries the author's signature in cuneiform, PI TE ISH (wi-te-is), "Vitex" as
+The last register of the face carries the author's signature in cuneiform, PI TE ISH (wi-te-is), "Vitex" as
 near as the syllabary comes (`signature` in `models-src/legend_tablets/legends.py`). Nothing in the card points at it.

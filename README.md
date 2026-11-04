@@ -10,21 +10,26 @@ A datadisk is data, not code: places, characters, dialogue trees and scenarios t
 server evaluates. This disk can be combined with other datadisks in one world.
 
 ```
-datadisk.yaml          manifest (id, version, requires/conflicts, license, rating)
-places/                places the world generator finds sites for (Uruk, Cedar Forest...)
-npcs/                  characters standing at places (Gilgamesh, Enkidu, Ishtar...)
+datadisk.yaml          manifest (id, version, requires/conflicts, license, rating, cover)
+places/                places the world generator finds sites for (Uruk and its districts, Cedar Forest, the cities of
+                       the Early Dynastic world, the clay tablets of the legends, ...)
+npcs/                  characters standing at places (Gilgamesh, Enkidu, Ishtar, the crowd of Uruk, the elders, ...)
 dialogues/             decision trees: character dialogues and story branches
 quests/                the epic questline as stage machines
+buildings/             the houses of Uruk, of the hunter's village and of ancient villages, and the fields (generated)
+trails/                the roads (generated)
+rivers/                the Euphrates, the Tigris and the canals between the cities
+knowledge.yaml         knowledge cards: the clay tablets and inscriptions a player can read
+achievements.yaml      the disk's achievements
 lore/                  codex entries for the epic characters and events
 i18n/en.yaml cs.yaml   English and Czech translations
 voice/voices.yaml      voice synthesizer settings for NPC speech
-tools/                 helper scripts (render_voices.py, build_landscape.py: terrain patch of Uruk, see research/LANDSCAPE.md;
-                        build_waterhole.py: the pond beside the hunter's spawn, places/hunter.yaml;
-                       build_city.py: plan of the streets, houses, markets, palaces and fields of Uruk, see research/CITY.md;
-                       build_world_map.py: the real planet of the world, see research/WORLD.md)
-media/                 portraits, character models (media/models/*.glb), architecture models, cover,
-                       world rasters (media/world/: the Early Dynastic Earth with the Persian Gulf of the Epic)
-models-src/            Blender builder of the character models (not installed)
+tools/                 generators and helper scripts (see "How the world is made" below)
+media/                 portraits, character models (media/models/*.glb), architecture models, terrain rasters and the
+                       map of Uruk (media/terrain/), music, the cover, world rasters (media/world/: the Early Dynastic
+                       Earth with the Persian Gulf of the Epic)
+models-src/            Blender builders of the character and architecture models (not installed)
+research/              the sources behind the story, the city and the landscape (notes, not installed)
 ```
 
 The world this disk generates is the real Early Dynastic Earth, not a procedural
@@ -65,7 +70,7 @@ in a permanent memorial.
 
 Story beats:
 
-1. **Hunter and the wild man**: snares at the water-hole, father, Gilgameš, Šamḫat
+1. **Hunter and the wild man**: snares at the water-hole, the old father, the market of Uruk (where you ask the way to the king), Gilgameš in his palace, Šamḫat
 2. **Civilization of Enkidu**: Šamḫat teaches love, bread, ale and clothing
 3. **Meeting of equals**: Enkidu wrestles Gilgameš; they become brothers; you become the king
 4. **Cedar Forest**: prepare in Uruk, travel, face Humbaba
@@ -77,7 +82,13 @@ Story beats:
 
 ### Main Locations
 
-- **Uruk**: The great city with its mighty walls, temples, and palace
+- **Uruk**: the great city, drawn from a plan of the real one: a wall of 8.6 km with its gates, the sacred precinct with the
+  stepped tower of Ishtar and the terrace of Anu, the palace of Gilgamesh, markets, streets and thousands of houses, canals and
+  fields, and the quay on the Euphrates. The city has a map of its own on the minimap (walls, streets, houses, canals).
+- **The hunter's village and the water-hole**: the old father's village and the pond where the hunter's story begins, a few
+  hours' walk north-west of Uruk
+- **The cities of the world**: Eridu, Nippur, Kish, Ur, Larsa, Babylon, Assur and many more, each at its historical site; their
+  ziggurats and the clay tablets of the legends
 - **Cedar Forest**: Vast forest stretching ten thousand leagues, home of Humbaba
 - **Mount Mashu**: Mountain through which the sun passes, with the Scorpion Gate
 - **Tunnel of the Sun**: Dark passage through Mount Mashu
@@ -86,9 +97,9 @@ Story beats:
 
 ### Main Characters
 
-- **Gilgamesh**: King of Uruk, two-thirds god and one-third man
-- **Enkidu**: Wild man created from clay, Gilgamesh's loyal companion
-- **Ishtar**: Goddess of love and war, patron of Uruk
+- **Gilgamesh**: King of Uruk, two-thirds god and one-third man; he holds court in his palace
+- **Enkidu**: Wild man created from clay, Gilgamesh's loyal companion (in Uruk only once Šamḫat has brought him there)
+- **Ishtar**: Goddess of love and war, patron of Uruk; she stands with her priests on the top platform of her stepped tower
 - **Shamhat**: Temple priestess who civilizes Enkidu
 - **Humbaba**: Guardian of the Cedar Forest
 - **Utnapishtim**: Survivor of the Great Flood, granted eternal life
@@ -96,23 +107,39 @@ Story beats:
 - **Scorpion Man**: Guardian of the gate to Mount Mashu
 - **Ninsun**: Gilgamesh's mother, wise goddess
 - **Anu**: Sky god, father of Ishtar
-- **Bull of Heaven**: Divine beast sent to punish Gilgamesh
+- **Bull of Heaven**: Divine beast sent to punish Gilgamesh; it grazes on the pasture outside the walls
 
-### Elders, roads and the harbour
+### What a character knows
 
-- **Elders** (`tools/build_elders.py`): every elder (an NPC tagged `elder`: one at the market of Uruk and two at each home of
-  the hunter's village) knows ONE tale (men: Atra-Hasis, Etana, Adapa, the New Year song; women: Ishtar's descent, the New Year
-  song, Dilmun, Nergal) and, as a separate choice of the dialogue, says where ONE clay tablet of it lies (`reveal_places` of that
-  tablet alone). To learn the other tales, or where the other tablets lie, the player asks other elders. The tool writes
-  `dialogues/elder_<story>_<n>_<m|w>.yaml`, the texts between `# BEGIN elders` and `# END elders` of `i18n/*.yaml` and points the
-  NPCs at their dialogue; `tools/build_village.py` uses the same assignment.
-- **Roads** (`tools/build_roads.py`): a road leaves the wall by a gate. The hunter's road ends at the gate nearest to the village
-  (north-west), a short road leads from the gate the Euphrates comes nearest to (the river gate, 11 m) to the quay
-  (`tools/build_river_life.py` puts the quay there; the hunter's boat lies at it). There is no distant landing any more. Roads
-  from the other gates to other cities are not laid: Larsa, the only city within 25 km, lies beyond the Euphrates (250 to
-  300 m wide) and the server bridges 36 m at most (`JOIN_CITIES` in the tool).
-- **Houses** (`tools/build_buildings.py`): the buried part of a 0 A.D. house is 3 m of its own height, so it is scaled with the
-  house (`sink_m` = 3 times the vertical scale); the height wanted is the height above the ground.
+The story is told in order, and so is what the people of Uruk say of it. A character speaks of an event only once the player has
+got there (a branch on the quest stages), and before that gives an answer that leaves it out; the civilized Enkidu does not stand
+in Uruk before Šamḫat has brought him (`visible_if` of the character). Nobody tells how Enkidu was made a man before it has
+happened, nor of the Cedar Forest, the Bull of Heaven or the death of Enkidu before the player has lived them.
+
+The people of the world are not all alike. Every **elder** (one at the market of Uruk and two at each home of the hunter's
+village) knows ONE tale (men: Atra-Hasis, Etana, Adapa, the New Year song; women: Ishtar's descent, the New Year song, Dilmun,
+Nergal) and, as a separate choice of the dialogue, says where ONE clay tablet of it lies. To learn the other tales, or where the
+other tablets lie, the player asks other elders. The tablets stand where the legends were kept: in the courts of the temples and
+at the ziggurats of the old cities.
+
+### How the world is made
+
+Most of the content below the line is **generated** by scripts in `tools/` from sources in `tools/data/` and `research/`; the
+generated files say so in their first lines and are rewritten by the script, not edited.
+
+| Script | Writes | What it does |
+| --- | --- | --- |
+| `build_world_map.py` | `media/world/` | the Early Dynastic Earth: relief, shores, the Persian Gulf of 2700 BCE |
+| `build_landscape.py` | `media/terrain/uruk_*.png` | the landscape patch of Uruk: relief, the Euphrates, where the city stands |
+| `build_city.py` | `tools/data/uruk_city.json` | the plan of Uruk: gates, streets, houses, markets, palaces, canals, fields |
+| `build_buildings.py` | `buildings/uruk.yaml` | the houses of the plan that are separate buildings, each fitted to its plot (the buried part of a 0 A.D. house is scaled with the house) |
+| `build_map.py` | `media/terrain/uruk_map.png` | the map of Uruk the minimap draws: wall and gates, streets, houses, canals, fields, the river |
+| `build_river_life.py` | `places/uruk_river.yaml` | the green banks, the quay at the gate where the Euphrates comes nearest to the wall, the boats (the hunter rows the first fishing boat) |
+| `build_roads.py` | `places/uruk_roads.yaml`, `trails/` | the roads leave by the gates: the hunter's road ends at the gate nearest to his village (north-west), a short road leads from the river gate to the quay. Roads to other cities are not laid: Larsa, the only city within 25 km, lies beyond the Euphrates (250 to 300 m wide) and the server bridges 36 m at most (`JOIN_CITIES`) |
+| `build_village.py`, `build_ancient_villages.py` | `buildings/`, `places/`, `npcs/` | the hunter's village and the villages of other cities |
+| `build_elders.py` | `dialogues/elder_*.yaml`, `i18n/` | one tale and one tablet for every elder |
+| `build_waterhole.py` | `media/terrain/hunter_waterhole_*.png` | the pond beside the hunter's spawn |
+| `compose_music.py`, `render_voices.py` | `media/music/`, `media/voice/` | the music and the spoken lines |
 
 ## Spoken Lines
 
@@ -189,9 +216,8 @@ are under `models-src/ishtar/` and `models-src/gilgamesh/`. Rebuild Ishtar with
 
     blender -b --python models-src/rodin_rig.py -- models-src/ishtar/ishtar_rodin_source.glb media/models/ishtar.glb models-src/rodin/ishtar.json
 
-The client plays `Idle` on NPC models. Player Gilgamesh also uses `Walk` / `Run` / `Jump` / `Sit` / `Die`
-when those clips exist. Other NPCs do not move yet (the server has no NPC paths), so `Walk` is ready
-for when they do.
+The client plays `Idle` on NPC models and `Walk` while a character walks (the crowd, the shepherds, the road traffic and the
+companion who follows the player). Player Gilgamesh also uses `Run` / `Jump` / `Sit` / `Die` when those clips exist.
 
 ## Notes
 
