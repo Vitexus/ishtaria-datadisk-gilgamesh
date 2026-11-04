@@ -1,5 +1,31 @@
 # Next Steps for Gilgamesh Datadisk Development
 
+## 🧭 Open items for the next development (noted 2026-11-04)
+
+### The hunter's village (the old father's village)
+
+- **A wooden wall with a wooden gate** round the village, made of 0 A.D. models. The bundled catalogue
+  (`ishtaria-client/assets/zeroad/structures/`) has Persian wall pieces (`pers_wall_long`, `pers_wall_medium`,
+  `pers_wall_short`, `pers_wall_gate`, `pers_wall_tower`, `pers_wooden_tower`), but those are mudbrick and stone, not timber:
+  import palisade pieces with `tools/zeroad-structures.py` if 0 A.D. has them, or recolour these. The village is built by
+  `tools/build_village.py` (`buildings/hunter_village.yaml`). The server gives walls and fences round colliders and leaves
+  gates open, as in the generated towns.
+- **At night the people sleep**, so the village cannot be full of wandering NPCs and children after dark. NPCs have no
+  schedules yet (they stand, wander or patrol), so this needs a mechanism: villagers go home and are out of sight at night
+  and set out about their business at dawn (the world has a solar clock). The player needs a way to sleep too, for
+  example **an inn** where he can wait quickly until the day begins (the Scrolls of Day and Night already turn the clock).
+  To decide: a stateless schedule on the server, like the shepherd's cycle, or visibility decided by the client.
+- **Women's dialogues:** some hint that they are spoken for, others offer marriage. Keep to the spoiler rules of the
+  other dialogues (`visible_if`, quest stages) and see the `love` system of the server (Šamḫat).
+- **Children's dialogues:** allusions to the tales of their time: Huwawa (Sumerian), also written Chuvava, Chumbaba, Huvava,
+  Chuwawa, Humbaba (Akkadian; English and German), Kombabos (Greek), and beings such as Tiamat and Hundun. Cautions:
+  - Hundun is Chinese and has no contact with Sumer around 2700 BCE: keep it only as a conscious cross-cultural wink, or drop it.
+  - Tiamat is told in the Babylonian Enūma eliš, later than the Early Dynastic II of the disk (the Sumerian sea goddess is Nammu).
+  - Huwawa is the guardian of the Cedar Forest, a later part of the Epic: the children must speak of him as a bogeyman of
+    nursery tales and not reveal the story (gate by quest stage).
+  - In this setting prefer the Sumerian form (Huwawa) and let the other names go into the notes (`research/`) and the
+    knowledge cards.
+
 ## ✅ Completed Features
 
 The Gilgamesh datadisk is now **structurally complete** with:
