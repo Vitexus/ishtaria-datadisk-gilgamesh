@@ -1,5 +1,6 @@
 ishtaria-datadisk-gilgamesh (0.4.0-1) unstable; urgency=medium
 
+  [ Vítězslav Dvořák ]
   * Uruk is a living walled city: houses, streets, canals and a quay
     drawn from a plan, a map of the city on the minimap and a loading
     marker (Faravahar).
@@ -12,6 +13,10 @@ ishtaria-datadisk-gilgamesh (0.4.0-1) unstable; urgency=medium
     the king's palace and the market have their own characters.
   * The road from the hunter's village leads to the nearest gate; the
     quay lies where the Euphrates comes nearest to a gate.
+
+  [ vitex ]
+  * Predators prowl the hunter's way to the village and to Uruk;
+    crocodiles lie in the Euphrates beside the banks.
 
  -- Vítězslav Dvořák <cybervitexus@gmail.com>  Wed, 04 Nov 2026 05:44:40 +0100
 
