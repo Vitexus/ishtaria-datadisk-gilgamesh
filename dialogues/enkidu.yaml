@@ -97,6 +97,7 @@ nodes:
       - {set_flag: heard_wild_tale}
     choices:
       - {text_key: enkidu.ask_animals, goto: tell_animals}
+      - {text_key: enkidu.ask_beasts, goto: beasts}
       - {text_key: enkidu.leave}
 
   tell_animals:
@@ -138,9 +139,22 @@ nodes:
   tell_humbaba:
     text_key: enkidu.humbaba
     choices:
+      - {text_key: enkidu.ask_rift, goto: rift}
       - {text_key: enkidu.leave}
 
   tell_death:
     text_key: enkidu.death
     choices:
+      - {text_key: enkidu.leave}
+
+  beasts:
+    text_key: enkidu.beasts
+    choices:
+      - {text_key: enkidu.ask_rift, goto: rift}
+      - {text_key: enkidu.leave}
+
+  rift:
+    text_key: enkidu.rift
+    choices:
+      - {text_key: enkidu.ask_beasts, goto: beasts}
       - {text_key: enkidu.leave}

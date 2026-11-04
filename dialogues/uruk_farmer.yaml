@@ -12,6 +12,7 @@ nodes:
       - {text_key: uruk_farmer.ask_a, goto: explain_a}
       - {text_key: uruk_farmer.ask_b, goto: explain_b}
       - {text_key: uruk_farmer.ask_canals, goto: say_canals}
+      - {text_key: uruk_farmer.ask_lights, goto: say_lights}
       - {text_key: uruk_farmer.leave}
 
   explain_a:
@@ -28,5 +29,11 @@ nodes:
 
   say_canals:
     text_key: uruk_farmer.canals
+    choices:
+      - {text_key: uruk_farmer.leave}
+
+  say_lights:
+    text_key: uruk_farmer.lights
+    effects: [{sky_ship: disc}]
     choices:
       - {text_key: uruk_farmer.leave}

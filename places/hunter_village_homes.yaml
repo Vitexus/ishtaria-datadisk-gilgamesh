@@ -4,101 +4,101 @@
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 2.25, distance_m: 28.87, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 2.25, distance_m: 35.15, tolerance_m: 0}
 
 - id: hunter_home_02
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 39.98, distance_m: 28.22, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 39.98, distance_m: 34.36, tolerance_m: 0}
 
 - id: hunter_home_03
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 79.92, distance_m: 30.72, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 79.92, distance_m: 37.36, tolerance_m: 0}
 
 - id: hunter_home_04
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 114.83, distance_m: 31.36, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 114.83, distance_m: 38.13, tolerance_m: 0}
 
 - id: hunter_home_05
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 164.63, distance_m: 32.56, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 164.63, distance_m: 39.58, tolerance_m: 0}
 
 - id: hunter_home_06
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 204.02, distance_m: 30.64, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 204.02, distance_m: 37.27, tolerance_m: 0}
 
 - id: hunter_home_07
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 238.85, distance_m: 31.40, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 238.85, distance_m: 38.18, tolerance_m: 0}
 
 - id: hunter_home_08
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 282.63, distance_m: 32.58, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 282.63, distance_m: 39.59, tolerance_m: 0}
 
 - id: hunter_home_09
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 314.32, distance_m: 28.16, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 314.32, distance_m: 34.29, tolerance_m: 0}
 
 - id: hunter_home_10
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 20.72, distance_m: 61.00, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 20.72, distance_m: 73.70, tolerance_m: 0}
 
 - id: hunter_home_11
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 64.84, distance_m: 54.20, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 64.84, distance_m: 65.54, tolerance_m: 0}
 
 - id: hunter_home_12
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 117.75, distance_m: 58.08, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 117.75, distance_m: 70.19, tolerance_m: 0}
 
 - id: hunter_home_13
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 147.53, distance_m: 53.66, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 147.53, distance_m: 64.89, tolerance_m: 0}
 
 - id: hunter_home_14
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 194.71, distance_m: 59.57, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 194.71, distance_m: 71.98, tolerance_m: 0}
 
 - id: hunter_home_15
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 243.88, distance_m: 58.48, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 243.88, distance_m: 70.67, tolerance_m: 0}
 
 - id: hunter_home_16
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 291.75, distance_m: 54.25, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 291.75, distance_m: 65.60, tolerance_m: 0}
 
 - id: hunter_home_17
   kind: landmark
   name_key: place.hunter_home
   radius_m: 3
-  locate: {from: hunter_village, bearing_deg: 340.94, distance_m: 53.89, tolerance_m: 0}
+  locate: {from: hunter_village, bearing_deg: 340.94, distance_m: 65.16, tolerance_m: 0}
 

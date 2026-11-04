@@ -3,7 +3,7 @@
 
     tools/build_cart_track.py [preview.png]
 
-A flat 3 x 4 m quad lying along +Z with a painted texture (128 px per metre, embedded): packed dirt with two ruts worn by the
+A flat 4.5 x 4 m quad lying along +Z with a painted texture (128 px per metre, embedded): packed dirt with two ruts worn by the
 wheels of carts (a gauge of 1.5 m), the ridge of earth thrown up outside each, a hoof-trodden strip between them with a few tufts of
 grass, and a ragged edge (alpha mask) that melts into the ground. Every row of the texture repeats at the ends, so stretches laid
 one after another (the engine puts them 4 m apart along the path) run on without a seam. Pure Python with numpy and Pillow; deterministic.
@@ -17,7 +17,7 @@ import numpy as np
 from PIL import Image
 
 PX_PER_M = 128
-WIDTH_M, LENGTH_M = 3.0, 4.0
+WIDTH_M, LENGTH_M = 4.5, 4.0          # 1.5 times the 3 m of the first version; the ruts keep the gauge of the cart
 W, H = int(WIDTH_M * PX_PER_M), int(LENGTH_M * PX_PER_M)
 OUT = "media/models/architecture/cart_track.glb"
 rng = np.random.default_rng(2650)
@@ -64,7 +64,7 @@ ridge = np.exp(-((np.minimum(left, right) - 0.31) / 0.12) ** 2)           # the 
 centre = smooth(0.55, 0.15, np.abs(U - weave))                           # the strip trodden by the oxen
 
 # the edge of the worn ground: ragged, wider where the track is well used
-edge = 1.28 + periodic(5, 5, 0.09) + 0.07 * (blotches(8, 0.35) - 0.5)
+edge = 1.92 + periodic(5, 5, 0.135) + 0.105 * (blotches(8, 0.35) - 0.5)
 coverage = (np.abs(U) < edge)
 
 fine = rng.normal(0, 1, (H, W))
@@ -84,7 +84,7 @@ colour = colour + ridge[..., None] * (dry - dirt) * 0.7
 colour = colour * (1 - 0.35 * centre[..., None]) + dry * 0.35 * centre[..., None]
 colour = np.where(tufts[..., None], colour * 0.25 + grass * 0.75, colour)
 # towards the edge the dirt takes the colour of the dry steppe grass round it
-toward_edge = smooth(edge - 0.45, edge, np.abs(U))
+toward_edge = smooth(edge - 0.68, edge, np.abs(U))
 colour = colour * (1 - 0.6 * toward_edge[..., None]) + verge * 0.6 * toward_edge[..., None]
 colour += fine[..., None] * 5.5
 colour = np.where(pebbles[..., None] > 0, colour * 0.6 + 70, colour)

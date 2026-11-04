@@ -1,0 +1,10 @@
+# The houses of the village Dur-Kurigalzu (written by tools/build_ancient_villages.py; do not edit).
+place: village_dur_kurigalzu
+items:
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 26.13, z: 16.49, yaw_deg: 296.4, scale: [1.0, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -10.91, z: 30.09, yaw_deg: 25.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -32.95, z: -8.6, yaw_deg: 97.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -0.66, z: -32.97, yaw_deg: 182.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 28.7, z: -8.05, yaw_deg: 254.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -4.56, z: 53.86, yaw_deg: 5.7, scale: [1.078, 0.967, 1.199], footprint: [14.6, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: -53.46, z: 25.39, yaw_deg: 64.9, scale: [1.005, 0.917, 1.157], footprint: [12.0, 14.4], sink_m: 3.6}

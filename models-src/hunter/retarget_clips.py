@@ -16,8 +16,8 @@ to a model that already has the others:
     blender -b --python models-src/hunter/retarget_clips.py -- - media/models/hunter.glb media/models/hunter.glb \
         models-src/hunter/hunter_swim_clip.glb
 
-Boxing and Kicking give the trapper combat clips against water-hole predators. No sitting or clean
-run clip — the client speeds Walk for a sprint and falls back for Sit.
+Boxing and Kicking give the trapper combat clips against water-hole predators. The sitting clips (Sit, Sit2, Sit3) come from
+the Rodin export through `retarget_extra.py`; there is no clean run clip — the client speeds Walk for a sprint.
 
 Jump, Die, Box and Kick use world-space bone turns (same as Swim / retarget_ambient.py `world`):
 the Mixamo and chargen bones are rolled differently, so a local `matrix_basis` copy twists limbs.

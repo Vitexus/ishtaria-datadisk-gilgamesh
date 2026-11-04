@@ -877,6 +877,10 @@ place.abu_tbeirah: Abú Tbejrah
 place.kissik: Kissik
 place.adab: Adab
 place.eshnunna: Ešnunna
+place.uruk_fields: Pole Uruku
+place.isin: Isin
+place.assur: Aššur
+place.terqa: Terqa
 place.nineveh: Ninive
 place.tell_brak: Tell Brak
 place.mari: Mari
@@ -1191,6 +1195,7 @@ place.hunter_ferry_boat: Rybářská loďka
 place.uruk_fisher: Rybářský člun
 place.hunter_village_trader: "Obchodník ve vsi"
 place.hunter_village_well: "Studna ve vsi"
+place.hunter_village_stall: "Obchodníkův stánek"
 npc.village_trader: "Vesnický obchodník"
 npc.village_trader.bio: "Obchodník, který vozí z Uruku, co vesnice potřebuje: měchy na vodu, nářadí, osivo a provazy. Obchoduje před svými dveřmi, na cestě k návsi."
 village_trader.greet: "„Pokoj na tvé cestě. Měchy, provazy, osivo a nářadí: co stepi chybí, to mám.“"
@@ -1224,6 +1229,132 @@ npc.road_wagoner: "Formán"
 npc.road_wagoner.bio: "Formán se spřežením volů vozí náklad mezi vesnicemi a řekou."
 npc.road_camel_driver: "Velbloudář"
 npc.road_camel_driver.bio: "Hnáč, který vede naloženého velblouda po dlouhé cestě k Eufratu."
+
+# BEGIN ancient villages (tools/build_ancient_villages.py)
+place.village_babylon: "Babylón"
+npc.mayor_babylon: "Starosta (Babylón)"
+npc.mayor_babylon.bio: "Starosta vesnice Babylón, která bude jednou městem téhož jména."
+knowledge.village_babylon.title: "Babylón"
+knowledge.village_babylon.text: "Vesnice na Eufratu. Její jméno je poprvé zapsáno kolem roku 2300 př. n. l.; o staletí později z ní Chammurapi udělá hlavní město říše a v 6. století př. n. l. tu stojí Ištařina brána a velký ziggurat Etemenanki."
+knowledge.village_babylon.credit: "Obrázek: David Stanley, „Ishtar Gate“, CC BY-SA 3.0, Wikimedia Commons."
+place.village_sippar: "Sippar"
+npc.mayor_sippar: "Starosta (Sippar)"
+npc.mayor_sippar.bio: "Starosta vesnice Sippar, která bude jednou městem téhož jména."
+knowledge.village_sippar.title: "Sippar"
+knowledge.village_sippar.text: "Vesnice ctitelů boha slunce na Eufratu. Později je tu město Utua-Šamaše s chrámem Ebabbar; našla se tu Deska boha slunce a hliněná mapa světa. Zda je tahle lokalita Sippar nejstarších králů, se stále diskutuje."
+knowledge.village_sippar.credit: "Obrázek: Osama Shukir Muhammed Amin FRCP(Glasg), „Detail, Sun God Tablet from Sippar, Iraq, 9th century BCE. British Museum“, CC BY-SA 4.0, Wikimedia Commons."
+place.village_borsippa: "Borsippa"
+npc.mayor_borsippa: "Starosta (Borsippa)"
+npc.mayor_borsippa.bio: "Starosta vesnice Borsippa, která bude jednou městem téhož jména."
+knowledge.village_borsippa.title: "Borsippa"
+knowledge.village_borsippa.text: "Vesnice u Eufratu jihozápadně od Babylonu. Jejím bohem bude Nabu, písař bohů, a zřícený ziggurat jeho chrámu bývá považován za Babylonskou věž. Nejstarší jisté zmínky o městě jsou z doby Ur III."
+knowledge.village_borsippa.credit: "Obrázek: Osama Shukir Muhammed Amin FRCP(Glasg), „Ruins of the ziggurat and temple of god Nabu at Borsippa, Babel Governorate, Iraq“, CC BY-SA 4.0, Wikimedia Commons."
+place.village_dur_kurigalzu: "Dur-Kurigalzu"
+npc.mayor_dur_kurigalzu: "Starosta (Dur-Kurigalzu)"
+npc.mayor_dur_kurigalzu.bio: "Starosta vesnice Dur-Kurigalzu, která bude jednou městem téhož jména."
+knowledge.village_dur_kurigalzu.title: "Dur-Kurigalzu"
+knowledge.village_dur_kurigalzu.text: "Vesnice v rovině západně od pozdějšího Bagdádu. Za více než tisíc let zde kassitský král Kurigalzu I. založí pevnostní město s královským palácem a vysokým ziggurátem; jeho zřícenina u Aqar Qufu je vidět zdaleka."
+knowledge.village_dur_kurigalzu.credit: "Obrázek: Osama Shukir Muhammed Amin FRCP(Glasg), „1. The Kassite era ziggurat at Aqar-Quf (Dur-Kurigalzu), western Baghdad, Iraq. December 29, 2021“, CC BY-SA 4.0, Wikimedia Commons."
+place.village_dur_katlimmu: "Dur-Katlimmu"
+npc.mayor_dur_katlimmu: "Starosta (Dur-Katlimmu)"
+npc.mayor_dur_katlimmu.bio: "Starosta vesnice Dur-Katlimmu, která bude jednou městem téhož jména."
+knowledge.village_dur_katlimmu.title: "Dur-Katlimmu"
+knowledge.village_dur_katlimmu.text: "Zemědělská osada na dolním Chabúru nedaleko jeho ústí. Mnohem později, kolem 13. století př. n. l., z ní asyrský král Salmanasar I. udělá hlavní město provincie a Asyřané zde postaví svůj Červený dům; dnes se lokalita jmenuje Tell Šajch Hamad."
+knowledge.village_dur_katlimmu.credit: "Obrázek: Bertramz, „SchechHamad,RedHouse2“, CC BY 3.0, Wikimedia Commons."
+place.village_arrapha: "Arrapcha"
+npc.mayor_arrapha: "Starosta (Arrapcha)"
+npc.mayor_arrapha.bio: "Starosta vesnice Arrapcha, která bude jednou městem téhož jména."
+knowledge.village_arrapha.title: "Arrapcha"
+knowledge.village_arrapha.text: "Vesnice pod pozdějším citadelovým pahorkem Kirkúku na úpatí Zagrosu. Její jméno je poprvé zapsáno v neosumerské době; později je hlavním městem království a asyrskou provincií. Staré město nebylo nikdy vykopáno, takže o něm víme málo."
+knowledge.village_arrapha.credit: "Obrázek: Chad.r.hill at English Wikipedia, „Kirkuk citadel“, Public domain, Wikimedia Commons."
+place.village_nuzi: "Nuzi"
+npc.mayor_nuzi: "Starosta (Nuzi)"
+npc.mayor_nuzi.bio: "Starosta vesnice Nuzi, která bude jednou městem téhož jména."
+knowledge.village_nuzi.title: "Nuzi"
+knowledge.village_nuzi.text: "Osada na pahorku, kterému Arabové budou říkat Jorgan Tepe, obdělávaném od doby obeidské. V době akkadské se osada jmenuje Gasur; v 15. a 14. století př. n. l. tu hurritské město zanechá tisíce hliněných tabulek s právními a rodinnými dokumenty."
+knowledge.village_nuzi.credit: "Obrázek: Daderot, „Large pottery jar, Nuzi, Yorghan Tepe, Iraq, Stratum IV, mid 2nd millenium BC - Harvard Semitic Museum - Cambridge, MA - DSC06410“, Public domain, Wikimedia Commons."
+place.village_qattara: "Qattara"
+npc.mayor_qattara: "Starosta (Qattara)"
+npc.mayor_qattara.bio: "Starosta vesnice Qattara, která bude jednou městem téhož jména."
+knowledge.village_qattara.title: "Qattara"
+knowledge.village_qattara.text: "Vesnice v rovině sucha pěstujících plodin u Sindžáru, na návrší dnes zvaném Tell ar-Rimáh. Jeho starověké jméno je sporné, Qattara nebo Karana; v době mariských dopisů tu stojí palác a chrám a asyrský král tu postaví vítěznou stélu."
+knowledge.village_qattara.credit: "Obrázek: Osama Shukir Muhammed Amin FRCP(Glasg), „Stele of Adad-nirari III“, CC BY-SA 4.0, Wikimedia Commons."
+place.village_der: "Der"
+npc.mayor_der: "Starosta (Der)"
+npc.mayor_der.bio: "Starosta vesnice Der, která bude jednou městem téhož jména."
+knowledge.village_der.title: "Der"
+knowledge.village_der.text: "Pohraniční vesnice mezi rovinou Sumeru a horami Elamu. Později tu město boha Ištarana bude střežit cestu do Sús; socha bohyně Nin-šubur, kterou tu kolem roku 2400 př. n. l. zasvětili vládce Enzi a jeho syn, je v Britském muzeu."
+knowledge.village_der.credit: "Obrázek: Gary Todd, „BM 22470 Statue dedicated to the goddess Nin-shubur of the city of Der by Enzi and his son Amar-kiku (2400 BCE)“, CC0, Wikimedia Commons."
+village_mayor.greet: "Pokoj tobě, poutníku. Jsem starosta téhle vesnice; máme málo, ale jméno tohoto místa se jednou rozletí do světa."
+village_mayor.ask: "Co bude naše jméno jednou znamenat?"
+village_mayor.answer: "Požádej mě, ať ti o sobě povím: je tu obrázek, krátký příběh a místo, kde si přečteš víc."
+village_mayor.leave: "Sbohem."
+# END ancient villages
+
+# BEGIN academic sources (research/ACADEMIA.md)
+temple_scribe.ask_ball: Zeptat se na míč a kladívko
+temple_scribe.ask_cult: Zeptat se, zda bude Gilgameš po smrti uctíván
+temple_scribe.ball: "Každý písař zná první verše písně: král nemá sobě rovného a jeho druhy drží na nohou míč. Pukku a kladívko jsou hra, ano, ale také žezlo a kruh, které drží král. Píseň jimi začíná a jimi končí, když padnou do podsvětí."
+temple_scribe.cult: "Takový král nezmizí. V domě mrtvých dostávají velcí králové práci: soudí stíny jako Slunce. Budoucí králové budou Gilgameše nazývat bratrem a v Larse mu muž postaví malou svatyni za život svého krále. Nech mu chléb a vodu a bude připomínán."
+uruk_elder.ask_birth: Zeptat se na králův původ
+uruk_elder.birth: "Vypráví se trojí. Většina říká, že ho zplodil Lugalbanda s bohyní Ninsun, a je tedy králem z krve. Někteří tvrdí, že jeho otcem byl duch, vítr, který přišel v noci. A pěvci dodávají, že je ze dvou dílů bůh a z jednoho člověk. Já říkám, že ten jeden díl je těžší."
+high_priestess_ishtar.ask_descent: Zeptat se na cestu bohyně do země bez návratu
+high_priestess_ishtar.ask_gates: Zeptat se na brány
+high_priestess_ishtar.descent: "Sestoupila kdysi do domu temnoty, kde je prach pokrmem a hlína chlebem, kde mrtví jsou oděni peřím jako ptáci. Vrátnému pohrozila, že rozbije dveře a vyvede mrtvé, aby sežrali živé. Její sestra Ereškigal při té zprávě zezelenala jako přeříznutý tamaryšek. Pamatuj: i Ištar se podřizuje zákonu podsvětí."
+high_priestess_ishtar.gates: "Sedm bran. U každé vrátný vzal jednu ozdobu: korunu, náušnice, náhrdelník, náprsní šperky, pás s kameny porodu, náramky z rukou a nohou, nakonec roucho. Proč mi je bereš? volala. Je to obřad domu mrtvých, odpověděl. Teprve když byla oživena vodou života, prošla branami ven a šperky dostávala zpět, jeden po druhém."
+uruk_water_carrier.ask_river: Zeptat se na řeku
+uruk_water_carrier.river: "Eufrat není jedna cesta, cizinče. Dělí se do mnoha ramen, zase se spojují a jednou na jaře se otevře nové rameno tam, kde byla suchá země. Vesnice stojí na vyvýšených březích, protože je řeka sama vystavěla. Když voda protrhne břeh, rolníci vykopou příkop a nechají si záplavu na pole."
+humbaba.ask_forest: Zeptat se, co slyší v lese
+humbaba.forest: "Poslouchejte, drobečkové. Holub hřivnáč vrká a hrdlička odpovídá. Čáp klape, kuropatev kdáká a cedr šíří svůj stín nade vším. Tohle je příbytek bohů a každý hlas v něm patří mně, abych ho střežil."
+lore.gilgamesh_cult.title: Gilgameš, soudce mrtvých
+lore.gilgamesh_cult: >
+  Po smrti byl Gilgameš uctíván jako bůh podsvětí. Sumerské texty ho nechávají spolu s Ur-Nammou
+  vynášet rozsudky podsvětí a králové třetí dynastie z Uru ho nazývali bratrem a přítelem. Oběti
+  jídla a pití udržovaly mrtvé v paměti. Hliněný kužel z Larsy zaznamenává malý chrám, který mu
+  byl postaven za život krále Abí-sarea kolem roku 1890 př. n. l.
+lore.descent_of_ishtar.title: Sestup Ištar
+lore.descent_of_ishtar: >
+  Ištar sestoupila do země bez návratu, kterou vládne její sestra Ereškigal. U každé ze sedmi bran
+  odložila část svého odění, až stanula nahá před soudci mrtvých. Byla přivedena zpět vodou života
+  a odešla týmiž branami, přičemž šperky dostávala v opačném pořadí. Někdo musel zaujmout její místo
+  dole a píseň se obrací k Tammúzovi.
+lore.ball_and_mallet.title: Míč a kladívko
+lore.ball_and_mallet: >
+  Epos začíná i končí hrou s míčem: Gilgamešovy druhy drží na nohou pukku a v poslední tabulce
+  pukku a mekkú padají do podsvětí. Badatelé čtou oba nástroje jako královský kruh a žezlo,
+  symbol smrtelného království.
+lore.gilgamesh_parentage.title: Kdo byl Gilgamešův otec?
+lore.gilgamesh_parentage: >
+  Tradice není jednotná. Sumerské příběhy z něj dělají syna Lugalbandy a bohyně Ninsun; starší
+  linie nazývá jeho otce lillu, duchem nebo větrem; standardní babylonský epos dodává, že je ze
+  dvou třetin bůh a z jedné třetiny člověk, a přesto král podle původu od Lugalbandy.
+# END academic sources
+
+# BEGIN academic sources, part 2 (research/ACADEMIA.md)
+shamhat.ask_growth: Zeptat se, jak se Enkidu změnil
+shamhat.growth: "Ne za jednu noc. Šli jsme k napajedlu a později znovu na cestě k městu a pokaždé víc získal, než ztratil. Gazely před ním utíkaly a on je už nedohnal, ale nabyl rozumu a srdce se mu rozšířilo. Naučila jsem ho chléb, pivo a oděv. Člověka nevytvoří jediný čin, pastýři."
+enkidu.ask_beasts: Zeptat se, jestli se mu stýská po zvířatech
+enkidu.beasts: "Když jsem se vrátil k napajedlu, gazely přede mnou prchly. Nohy mám pomalejší, ale mysl se mi otevřela. Nevím, které z obojího bych vyměnil. Vím jen, že zpátky nemohu a divočina mě už nepoznává."
+enkidu.ask_rift: Zeptat se na souboj s Humbabou
+enkidu.rift: "Země se pod našimi patami roztrhla. Jak jsme kolem sebe kroužili, zachvěly se Sirara a Libanon a půda se rozestoupila. Pěvci řeknou, že ten boj vyryl velké údolí na západě. Já si pamatuji jen řev a strach."
+ishtar.ask_bird: Zeptat se na ptáka se zlomeným křídlem
+ishtar.bird: "Attattu? Hezký pták, kdysi jsem ho milovala, pak mě omrzel a zlomila jsem mu křídlo. Teď sedí v háji a pláče 'moje křídlo, moje křídlo'. Gilgameš mi to předhazuje, jako by každý můj milenec byl hrob. Nemá tak docela nepravdu a já mu to neodpustím."
+utnapishtim.ask_snake: Zeptat se, proč had svléká kůži
+utnapishtim.snake: "Podívej se na hada: vylézá ze staré kůže znovu mladý, kdežto my jen stárneme. Ptej se, proč jen had a ne člověk. Za tím musí být příběh o ztraceném daru. Hledej ten dar a střež ho líp, než jsem střežil spánek já."
+uruk_noblewoman.ask_brides: Zeptat se, co lid králi vyčítal
+uruk_noblewoman.brides: "Že král nepustil žádnou dívku svobodně ke ženichovi. Bojovníkova dcera, mladíkova nevěsta, jejich nářek vystoupal k nebi a bohové ho slyšeli. Slyšel ho Anu, a proto byl stvořen Enkidu. Nezmiňuj se o tom na tržišti."
+lore.why_the_rift.title: Proč se země rozestoupila
+lore.why_the_rift: >
+  Dvojverší Tabulky V popisuje souboj s Humbabou: pod patami obou bojovníků se země rozestoupila
+  a Sirara (hora Hermon) s Libanonem se zachvěly. Badatel A. R. George v tom vidí vysvětlení
+  velkého riftového údolí v Levantě. Epos obsahuje jen málo podobných příběhů, mezi nimi hada
+  svlékajícího kůži a ptáka attattu, který volá „moje křídlo“.
+lore.epic_far_away.title: Píseň putuje
+lore.epic_far_away: >
+  Epos o Gilgamešovi se opisoval daleko od Uruku. Žákovské cvičení z Ugaritu u Středozemního moře je plné
+  chyb a zlomek nalezený v Megiddu byl podle rozboru hlíny napsán místně v jižním Izraeli. Gilgamešovo jméno
+  přežilo klínopis v mandejských spisech a badatelé s eposem srovnávají asyrský ústní epos o Qáťínovi.
+# END academic sources, part 2
 
 # Tři tabulky eposu o Atrachasísovi (places/atrahasis_tablets.yaml). Texty epos převyprávějí vlastními slovy.
 place.atrahasis_tablet_1: Hliněná tabulka eposu o Atrachasísovi (I)
@@ -1447,3 +1578,21 @@ uruk_elder.kingship: "Královská moc sestoupila z nebe, nejdřív do Eridu a po
 
 # Zavlažovací schéma (places/irrigation_works.yaml).
 place.irrigation_works: "Zavlažovací stavby se zdrží (nagkud)"
+
+# Nebeské lodě bohů: okřídlené disky, vzpoura Igigi, padlí (easter egg, sky_flyers.yaml).
+anu.ask_chariots: "Je pravda, že přelétáš nebe v okřídleném disku?"
+anu.chariots: "Neptej se na to, co by písaři vyryli a kněží prodali. Ten disk je dům a cesta v jednom. Šamaš má svůj jasnější, já rychlejší a Enlil si půlí bouře, protože na křídla nemá vkus. Počkáš-li pod nebem na přelom hodiny, můžeš spatřit stříbrný disk letět z města do města rychleji než šíp. Nebe má jízdní řád, smrtelníku. Jen ho nevyvěšuje."
+high_priest_anu.ask_sky_ships: "Cestují bohové skutečně po nebi?"
+high_priest_anu.sky_ships: "Tabulky je nazývají Mu, nebeské vozy: ohnivé šípy a věci, které stoupají k nebi, a okřídlený disk, z něhož Anu a Šamaš hledí na zem. V nich sestoupili Anunnaki, padesát velkých a sedm, kdo určují osudy. Když takový přelétne nad městem, neukazujeme na něj prstem. Hluboce se klaníme a v kuchyni se oznámí, že nebudou hosté."
+uruk_elder.ask_igigi: "Proč se nižší bohové vzbouřili?"
+uruk_elder.igigi: "Igigi kopali řeky a kanály pro velké Anunnaki a čtyřicet let nosili koš. Pak spálili nářadí a v noci obklíčili Enlilův dům v Nippuru. Enki našel řešení: stvořit člověka z hlíny a krve zabitého boha a nechat koš nosit jeho. Až tě tedy bude bolet záda, vzpomeň si, k čemu jsi stvořen. A až přeletí nebeské lodě, pamatuj, že bohové mají dlouhou paměť a svou práci dosud hlídají."
+temple_scribe.ask_nephilim: "Slyšel jsi o padlých, kteří sestoupili z nebe?"
+temple_scribe.nephilim: "Potichu. Obchodník ze západních hor to vyprávěl u mé lampy: synové bohů uviděli, že dcery lidí jsou krásné, sestoupili si pro ženy a jejich děti byli obři, siláci dávných dob. Jeho lid jim říká nefilim, padlí. Zapsal jsem to. Můj mistr mi řekl, abych tabulku spálil. Je za džbány s olejem, ve třetí řadě, a nikdy jsem se o ní nezmínil."
+utnapishtim.ask_sky_gods: "Viděl jsi lodě bohů před potopou?"
+utnapishtim.sky_gods: "Před potopou bylo na nebi rušněji než dnes. Když rada rozhodla, létaly mezi Eridu, Nippurem a Šuruppakem celou noc disky a ohnivé šípy a nikdo mi neřekl proč. Ea nepřijel v lodi. Mluvil k mé rákosové stěně. A když voda stoupla, utekli sami bohové do nebe Anova a krčili se tam jako psi u zdi. Pamatuju si to líp než tu vodu."
+uruk_farmer.ask_lights: "Viděl jsi někdy na nebi něco divného?"
+uruk_farmer.lights: "Zhruba jednou za hodinu přeletí stříbrný disk, rychlý jako myšlenka, z Uruku do Uru. Můj vůl ani nemrkl. Já ano. Chrám říká, že to Šamaš kontroluje pole, žena říká, že Anunnaki, a já říkám, že ať je to kdokoli, ještě mi nikdo nenabídl zaplatit za můj ječmen."
+achievement.sham_a_witness.title: "Pod okřídleným diskem"
+achievement.sham_a_witness.description: "Vyptávej se na okřídlené disky bohů, dokud ti jeden nepřeletí nad hlavou."
+achievement.mu_witness.title: "Pod nebeským vozem"
+achievement.mu_witness.description: "Vyptávej se na nebeské vozy a ohnivé šípy bohů, dokud ti jeden nepřeletí nad hlavou."

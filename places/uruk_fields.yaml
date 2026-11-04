@@ -1,0 +1,8 @@
+# The tilled fields along the irrigation canals of Uruk (buildings/uruk_fields.yaml, written by tools/build_fields.py): they have a
+# place of their own because a place has one buildings file. It stands 1 m north of the tell of Uruk, the anchor of the landscape
+# patch the fields lie in; the fields themselves are `passable` buildings, which block nothing.
+- id: uruk_fields
+  kind: landmark
+  name_key: place.uruk_fields
+  radius_m: 8
+  locate: {from: uruk, bearing_deg: 0, distance_m: 1, tolerance_m: 0}

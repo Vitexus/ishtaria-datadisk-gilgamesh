@@ -32,6 +32,72 @@
   credit_key: knowledge.foundation_tablet.credit
   wikipedia: {en: Ur-Nammu, cs: Ur-Nammu}
 
+# BEGIN ancient villages (tools/build_ancient_villages.py)
+- id: village_babylon
+  title_key: knowledge.village_babylon.title
+  text_key: knowledge.village_babylon.text
+  image: media/knowledge/village_babylon.jpg
+  credit_key: knowledge.village_babylon.credit
+  wikipedia: {en: Babylon, cs: Babylón}
+
+- id: village_sippar
+  title_key: knowledge.village_sippar.title
+  text_key: knowledge.village_sippar.text
+  image: media/knowledge/village_sippar.jpg
+  credit_key: knowledge.village_sippar.credit
+  wikipedia: {en: Sippar, cs: Sippar}
+
+- id: village_borsippa
+  title_key: knowledge.village_borsippa.title
+  text_key: knowledge.village_borsippa.text
+  image: media/knowledge/village_borsippa.jpg
+  credit_key: knowledge.village_borsippa.credit
+  wikipedia: {en: Borsippa, cs: Borsippa}
+
+- id: village_dur_kurigalzu
+  title_key: knowledge.village_dur_kurigalzu.title
+  text_key: knowledge.village_dur_kurigalzu.text
+  image: media/knowledge/village_dur_kurigalzu.jpg
+  credit_key: knowledge.village_dur_kurigalzu.credit
+  wikipedia: {en: Dur-Kurigalzu, cs: Dur-Kurigalzu}
+
+- id: village_dur_katlimmu
+  title_key: knowledge.village_dur_katlimmu.title
+  text_key: knowledge.village_dur_katlimmu.text
+  image: media/knowledge/village_dur_katlimmu.jpg
+  credit_key: knowledge.village_dur_katlimmu.credit
+  wikipedia: {en: Tell_Sheikh_Hamad}
+
+- id: village_arrapha
+  title_key: knowledge.village_arrapha.title
+  text_key: knowledge.village_arrapha.text
+  image: media/knowledge/village_arrapha.jpg
+  credit_key: knowledge.village_arrapha.credit
+  wikipedia: {en: Arrapha, cs: Kirkúk}
+
+- id: village_nuzi
+  title_key: knowledge.village_nuzi.title
+  text_key: knowledge.village_nuzi.text
+  image: media/knowledge/village_nuzi.jpg
+  credit_key: knowledge.village_nuzi.credit
+  wikipedia: {en: Nuzi}
+
+- id: village_qattara
+  title_key: knowledge.village_qattara.title
+  text_key: knowledge.village_qattara.text
+  image: media/knowledge/village_qattara.jpg
+  credit_key: knowledge.village_qattara.credit
+  wikipedia: {en: Tell_al-Rimah}
+
+- id: village_der
+  title_key: knowledge.village_der.title
+  text_key: knowledge.village_der.text
+  image: media/knowledge/village_der.jpg
+  credit_key: knowledge.village_der.credit
+  wikipedia: {en: Der_(Sumer)}
+
+# END ancient villages
+
 # The three tablets of the Atra-Hasis epic, read at the benches of places/atrahasis_tablets.yaml. The pictures are
 # renders of the disk's own models (models-src/atrahasis_tablets/).
 - id: atrahasis_tablet_1

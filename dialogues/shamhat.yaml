@@ -15,6 +15,7 @@ nodes:
       - {text_key: shamhat.ask_enkidu, goto: tell_enkidu}
       - {text_key: shamhat.ask_gilgamesh, goto: tell_gilgamesh}
       - {text_key: shamhat.ask_love, goto: tell_love}
+      - {text_key: shamhat.ask_growth, goto: tell_growth}
       - {text_key: shamhat.ask_ishtar_below, goto: say_ishtar_below}
       - {text_key: shamhat.leave}
 
@@ -39,6 +40,12 @@ nodes:
   tell_love:
     text_key: shamhat.love
     choices:
+      - {text_key: shamhat.leave}
+
+  tell_growth:
+    text_key: shamhat.growth
+    choices:
+      - {text_key: shamhat.ask_enkidu, goto: tell_enkidu}
       - {text_key: shamhat.leave}
 
   say_ishtar_below:

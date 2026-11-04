@@ -1,0 +1,10 @@
+# The houses of the village Nuzi (written by tools/build_ancient_villages.py; do not edit).
+place: village_nuzi
+items:
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -27.34, z: 14.38, yaw_deg: 56.4, scale: [1.0, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -20.61, z: -24.49, yaw_deg: 145.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 23.92, z: -24.24, yaw_deg: 217.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 28.88, z: 15.92, yaw_deg: 302.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -7.37, z: 28.88, yaw_deg: 14.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -44.36, z: -30.88, yaw_deg: 125.7, scale: [1.078, 0.967, 1.199], footprint: [14.6, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: 4.74, z: -58.99, yaw_deg: 184.9, scale: [1.005, 0.917, 1.157], footprint: [12.0, 14.4], sink_m: 3.6}

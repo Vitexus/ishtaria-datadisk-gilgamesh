@@ -12,6 +12,7 @@ nodes:
       - {text_key: anu.ask_heavens, goto: speak_of_heavens}
       - {text_key: anu.ask_judgment, goto: speak_of_judgment}
       - {text_key: anu.ask_ishtar, goto: speak_of_ishtar}
+      - {text_key: anu.ask_chariots, goto: speak_of_chariots}
       - {text_key: anu.leave}
 
   speak_of_heavens:
@@ -26,5 +27,11 @@ nodes:
 
   speak_of_ishtar:
     text_key: anu.ishtar
+    choices:
+      - {text_key: anu.leave}
+
+  speak_of_chariots:
+    text_key: anu.chariots
+    effects: [{sky_ship: disc}]
     choices:
       - {text_key: anu.leave}

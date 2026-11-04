@@ -68,3 +68,15 @@
   icon: foundation_tablet
   category: story
   read_all: [atrahasis_tablet_1, atrahasis_tablet_2, atrahasis_tablet_3, enuma_elish_tablet_1, enuma_elish_tablet_2, enuma_elish_tablet_3, enuma_elish_tablet_4, enuma_elish_tablet_5, enuma_elish_tablet_6, enuma_elish_tablet_7, ishtar_descent_tablet_1, ishtar_descent_tablet_2, ishtar_descent_tablet_3, ishtar_descent_tablet_4, ishtar_descent_tablet_5, ishtar_descent_tablet_6, gilgamesh_epic_tablet_1, gilgamesh_epic_tablet_2, gilgamesh_epic_tablet_3, gilgamesh_epic_tablet_4, gilgamesh_epic_tablet_5, gilgamesh_epic_tablet_6, gilgamesh_epic_tablet_7, gilgamesh_epic_tablet_8, gilgamesh_epic_tablet_9, gilgamesh_epic_tablet_10, gilgamesh_epic_tablet_11, gilgamesh_epic_tablet_12, etana_tablet_1, etana_tablet_2, etana_tablet_3, adapa_tablet_1, adapa_tablet_2, dilmun_tablet_1, dilmun_tablet_2, nergal_tablet_1, nergal_tablet_2]
+# Easter egg: two ships of the gods cross the sky (sky_flyers.yaml). A character who is told of them by the right people
+# sees one fly low over his head; each kind earns its own achievement, and several characters tell of each.
+- id: sham_a_witness
+  title_key: achievement.sham_a_witness.title
+  description_key: achievement.sham_a_witness.description
+  icon: foundation_tablet
+  category: story
+- id: mu_witness
+  title_key: achievement.mu_witness.title
+  description_key: achievement.mu_witness.description
+  icon: foundation_tablet
+  category: story

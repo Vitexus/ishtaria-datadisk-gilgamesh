@@ -1,0 +1,10 @@
+# The houses of the village Sippar (written by tools/build_ancient_villages.py; do not edit).
+place: village_sippar
+items:
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 20.78, z: -22.86, yaw_deg: 216.4, scale: [1.0, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 27.74, z: 15.97, yaw_deg: 305.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -14.19, z: 30.96, yaw_deg: 17.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -32.58, z: -5.08, yaw_deg: 102.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -2.95, z: -29.66, yaw_deg: 174.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 52.25, z: 13.84, yaw_deg: 285.7, scale: [1.078, 0.967, 1.199], footprint: [14.6, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: 15.72, z: 57.06, yaw_deg: 344.9, scale: [1.005, 0.917, 1.157], footprint: [12.0, 14.4], sink_m: 3.6}

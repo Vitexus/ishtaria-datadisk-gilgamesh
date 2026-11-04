@@ -1,0 +1,92 @@
+# BEGIN ancient villages (tools/build_ancient_villages.py)
+- id: mayor_babylon
+  name_key: npc.mayor_babylon
+  place: village_babylon
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_court_official.glb}
+  portrait: media/portraits/crowd_court_official.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_babylon.bio
+  about: village_babylon
+  tags: [village, mayor]
+
+- id: mayor_sippar
+  name_key: npc.mayor_sippar
+  place: village_sippar
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_priest_minor.glb}
+  portrait: media/portraits/crowd_priest_minor.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_sippar.bio
+  about: village_sippar
+  tags: [village, mayor]
+
+- id: mayor_borsippa
+  name_key: npc.mayor_borsippa
+  place: village_borsippa
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_baker.glb}
+  portrait: media/portraits/crowd_baker.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_borsippa.bio
+  about: village_borsippa
+  tags: [village, mayor]
+
+- id: mayor_dur_kurigalzu
+  name_key: npc.mayor_dur_kurigalzu
+  place: village_dur_kurigalzu
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_carpenter.glb}
+  portrait: media/portraits/crowd_carpenter.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_dur_kurigalzu.bio
+  about: village_dur_kurigalzu
+  tags: [village, mayor]
+
+- id: mayor_dur_katlimmu
+  name_key: npc.mayor_dur_katlimmu
+  place: village_dur_katlimmu
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_shepherd.glb}
+  portrait: media/portraits/crowd_shepherd.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_dur_katlimmu.bio
+  about: village_dur_katlimmu
+  tags: [village, mayor]
+
+- id: mayor_arrapha
+  name_key: npc.mayor_arrapha
+  place: village_arrapha
+  character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_axeman.glb}
+  portrait: media/portraits/crowd_axeman.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_arrapha.bio
+  about: village_arrapha
+  tags: [village, mayor]
+
+- id: mayor_nuzi
+  name_key: npc.mayor_nuzi
+  place: village_nuzi
+  character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_fisherman.glb}
+  portrait: media/portraits/crowd_fisherman.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_nuzi.bio
+  about: village_nuzi
+  tags: [village, mayor]
+
+- id: mayor_qattara
+  name_key: npc.mayor_qattara
+  place: village_qattara
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_textile_merchant.glb}
+  portrait: media/portraits/crowd_textile_merchant.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_qattara.bio
+  about: village_qattara
+  tags: [village, mayor]
+
+- id: mayor_der
+  name_key: npc.mayor_der
+  place: village_der
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
+  portrait: media/portraits/crowd_old_man.jpg
+  dialogue: village_mayor
+  bio_key: npc.mayor_der.bio
+  about: village_der
+  tags: [village, mayor]
+
+# END ancient villages

@@ -33,6 +33,10 @@ def extent(name):
     return [hi - lo for lo, hi in zip(box["min"], box["max"])]   # width, height, depth
 
 
+# The houses are 20 % larger than the 0 A.D. proportions the village first used, so that a standing character walks
+# through the gate of a house without stooping: footprints, heights and the rings they stand on grow by this factor.
+HOUSE_SCALE = 1.2
+
 rng = random.Random(2650)
 rows = []
 
@@ -43,6 +47,9 @@ def put(name, x, z, footprint, height, jitter=8.0):
     face = math.atan2(-x, z)                                       # bearing of the direction towards the origin
     bearing = (math.degrees(math.atan2(-x, z)) + rng.uniform(-jitter, jitter)) % 360.0
     w, d = footprint
+    if name != "pers_corral":
+        w, d, height = w * HOUSE_SCALE, d * HOUSE_SCALE, height * HOUSE_SCALE
+        x, z = x * HOUSE_SCALE, z * HOUSE_SCALE
     s_all = math.sqrt((w / dx) * (d / dz))
     scale = [w / dx, min(max(height / dy, 0.85 * s_all), 1.15 * s_all), d / dz]
     rows.append((x, z, ZEROAD + name + ".glb", bearing, scale, (w, d)))
@@ -72,6 +79,10 @@ length = math.hypot(tx, tz)
 step = trader_house[5][1] / 2.0 + 2.4
 trader = (tx - tx / length * step, tz - tz / length * step)
 well = (9.0, 6.0)
+# the trader's stall (tools/../models-src/architecture/village_stall.py) stands beside him, its front towards the square
+tangent = (-trader[1] / math.hypot(*trader), trader[0] / math.hypot(*trader))
+stall = (trader[0] + tangent[0] * 2.8, trader[1] + tangent[1] * 2.8)
+stall_yaw = math.degrees(math.atan2(-stall[0], stall[1])) % 360.0
 
 
 def locate(x, z):
@@ -85,6 +96,9 @@ with open(os.path.join(ROOT, "places", "hunter_village_extras.yaml"), "w") as ex
     extra.write("  locate: %s\n  requires:\n    max_slope_deg: 45\n\n" % locate(*trader))
     extra.write("- id: hunter_village_well\n  kind: landmark\n  name_key: place.hunter_village_well\n  radius_m: 4\n")
     extra.write("  locate: %s\n  structure:\n    model: media/models/architecture/uruk_well.glb\n    visible_m: 500\n" % locate(*well))
+    extra.write("  requires:\n    max_slope_deg: 45\n\n")
+    extra.write("- id: hunter_village_stall\n  kind: landmark\n  name_key: place.hunter_village_stall\n  radius_m: 4\n")
+    extra.write("  locate: %s\n  structure:\n    model: media/models/architecture/village_stall.glb\n    yaw_deg: %.1f\n    visible_m: 500\n" % (locate(*stall), stall_yaw))
     extra.write("  requires:\n    max_slope_deg: 45\n")
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -94,7 +108,7 @@ with open(OUT, "w") as out:
     out.write("place: hunter_village\nitems:\n")
     for x, z, model, bearing, scale, (w, d) in rows:
         out.write(f"  - {{model: {model}, x: {x:.2f}, z: {z:.2f}, yaw_deg: {bearing:.1f}, "
-                  f"scale: [{scale[0]:.3f}, {scale[1]:.3f}, {scale[2]:.3f}], footprint: [{w:.2f}, {d:.2f}]{sink_field(model)}}}\n")
+                  f"scale: [{scale[0]:.3f}, {scale[1]:.3f}, {scale[2]:.3f}], footprint: [{w:.2f}, {d:.2f}]{sink_field(model, 1.0 if model.endswith("pers_corral.glb") else HOUSE_SCALE)}}}\n")
 print(f"{OUT}: {len(rows)} buildings")
 
 # --- the families of the houses: a man, a woman, an old man, an old woman and two children at each of the homes

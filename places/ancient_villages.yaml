@@ -1,0 +1,83 @@
+# BEGIN ancient villages (tools/build_ancient_villages.py)
+- id: village_babylon
+  kind: city
+  name_key: place.village_babylon
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Babylon); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 32.5425, longitude_deg: 44.4211}
+
+- id: village_sippar
+  kind: city
+  name_key: place.village_sippar
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Sippar); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 33.0588, longitude_deg: 44.2522}
+
+- id: village_borsippa
+  kind: city
+  name_key: place.village_borsippa
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Borsippa); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 32.392, longitude_deg: 44.3417}
+
+- id: village_dur_kurigalzu
+  kind: city
+  name_key: place.village_dur_kurigalzu
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Dur-Kurigalzu); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 33.3536, longitude_deg: 44.2022}
+
+- id: village_dur_katlimmu
+  kind: city
+  name_key: place.village_dur_katlimmu
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Dur-Katlimmu); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 35.6433, longitude_deg: 40.7403}
+
+- id: village_arrapha
+  kind: city
+  name_key: place.village_arrapha
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Arrapha); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 35.4694, longitude_deg: 44.3925}
+
+- id: village_nuzi
+  kind: city
+  name_key: place.village_nuzi
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Nuzi); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 35.37, longitude_deg: 44.2549}
+
+- id: village_qattara
+  kind: city
+  name_key: place.village_qattara
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Qattara); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 36.2571, longitude_deg: 42.4493}
+
+- id: village_der
+  kind: city
+  name_key: place.village_der
+  radius_m: 60
+  music: land_between_rivers
+  music_radius_m: 500
+  # The village of the same name on the site of the later city (Der); research/MAP_CITIES_COMPARISON.md says why it is a village.
+  geo: {latitude_deg: 33.1236, longitude_deg: 45.9314}
+
+# END ancient villages

@@ -23,7 +23,8 @@ def sink_for(model):
     return SINK_M.get(os.path.splitext(os.path.basename(model))[0])
 
 
-def sink_field(model):
-    """The `, sink_m: N` part of a buildings line (empty for a model that uses the default)."""
+def sink_field(model, factor=1.0):
+    """The `, sink_m: N` part of a buildings line (empty for a model that uses the default). `factor`: the model is drawn
+    that many times its native height, so its floor lies that many times deeper below the origin."""
     value = sink_for(model)
-    return "" if value is None else ", sink_m: %g" % value
+    return "" if value is None else ", sink_m: %g" % (value * factor)

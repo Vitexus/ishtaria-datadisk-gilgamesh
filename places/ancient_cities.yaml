@@ -231,6 +231,45 @@
     model: media/models/architecture/zeroad/pers_shrine.glb
     visible_m: 600
 
+- id: isin
+  kind: city
+  name_key: place.isin
+  radius_m: 150
+  music: land_between_rivers
+  music_radius_m: 600
+  # Isin (Ishan al-Bahriyat) on a canal between Nippur and Shuruppak: two Early Dynastic I buildings south of the temple
+  # complex and Early Dynastic tablets; a settlement from the Uruk period (research/MAP_CITIES_COMPARISON.md).
+  geo: {latitude_deg: 31.8850, longitude_deg: 45.2686}
+  structure:
+    model: media/models/architecture/zeroad/pers_shrine.glb
+    visible_m: 600
+
+- id: assur
+  kind: city
+  name_key: place.assur
+  radius_m: 150
+  music: land_between_rivers
+  music_radius_m: 600
+  # Assur (Qal'at Sherqat) on the Tigris: charcoal beneath the temple of Ishtar dates the first city to 2896-2702 BC
+  # (Early Dynastic I), the earliest occupation level there (research/MAP_CITIES_COMPARISON.md).
+  geo: {latitude_deg: 35.4567, longitude_deg: 43.2625}
+  structure:
+    model: media/models/architecture/zeroad/pers_shrine.glb
+    visible_m: 600
+
+- id: terqa
+  kind: city
+  name_key: place.terqa
+  radius_m: 150
+  music: land_between_rivers
+  music_radius_m: 600
+  # Terqa (Tell Ashara) on the middle Euphrates by the mouth of the Khabur, a great town from its inner wall of about
+  # 2900 BC; phases Terqa V-IV, 2800-2450 BC (research/MAP_CITIES_COMPARISON.md).
+  geo: {latitude_deg: 34.9233, longitude_deg: 40.5694}
+  structure:
+    model: media/models/architecture/zeroad/pers_shrine.glb
+    visible_m: 600
+
 - id: nineveh
   kind: city
   name_key: place.nineveh

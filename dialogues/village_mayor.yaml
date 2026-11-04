@@ -1,0 +1,16 @@
+# The mayor of a namesake village (tools/build_ancient_villages.py): shared lines; what he knows is on his knowledge card.
+id: village_mayor
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: village_mayor.greet
+    choices:
+      - {text_key: village_mayor.ask, goto: answer}
+      - {text_key: village_mayor.leave}
+
+  answer:
+    text_key: village_mayor.answer
+    choices:
+      - {text_key: village_mayor.leave}

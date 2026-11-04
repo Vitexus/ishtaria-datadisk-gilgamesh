@@ -16,6 +16,7 @@ nodes:
       - text_key: ishtar.hear_wrath
         if: {quest_stage: {quest: ishtars_wrath, stage: reject_goddess}}
         goto: wrath
+      - {text_key: ishtar.ask_bird, goto: speak_bird}
       - {text_key: ishtar.ask_love, goto: speak_love}
       - {text_key: ishtar.ask_war, goto: speak_war}
       - {text_key: ishtar.ask_gilgamesh, goto: speak_gilgamesh}
@@ -65,5 +66,10 @@ nodes:
 
   speak_gilgamesh:
     text_key: ishtar.gilgamesh
+    choices:
+      - {text_key: ishtar.leave}
+
+  speak_bird:
+    text_key: ishtar.bird
     choices:
       - {text_key: ishtar.leave}

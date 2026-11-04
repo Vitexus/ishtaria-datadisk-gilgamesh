@@ -1,0 +1,10 @@
+# The houses of the village Arrapha (written by tools/build_ancient_villages.py; do not edit).
+place: village_arrapha
+items:
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -11.7, z: 28.59, yaw_deg: 16.4, scale: [1.0, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -31.53, z: -5.52, yaw_deg: 105.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 2.75, z: -33.95, yaw_deg: 177.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 32.35, z: -6.37, yaw_deg: 262.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 12.91, z: 26.86, yaw_deg: 334.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -53.83, z: 4.86, yaw_deg: 85.7, scale: [1.078, 0.967, 1.199], footprint: [14.6, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: -34.29, z: -48.24, yaw_deg: 144.9, scale: [1.005, 0.917, 1.157], footprint: [12.0, 14.4], sink_m: 3.6}

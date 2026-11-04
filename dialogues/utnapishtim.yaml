@@ -22,7 +22,9 @@ nodes:
       - {text_key: utnapishtim.ask_flood, goto: tell_flood}
       - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_lore}
       - {text_key: utnapishtim.ask_test, goto: tell_test}
+      - {text_key: utnapishtim.ask_snake, goto: tell_snake}
       - {text_key: utnapishtim.ask_atra_hasis, goto: say_atra_hasis}
+      - {text_key: utnapishtim.ask_sky_gods, goto: say_sky_gods}
       - {text_key: utnapishtim.leave}
 
   seeker:
@@ -31,6 +33,7 @@ nodes:
       - {text_key: utnapishtim.ask_flood, goto: tell_flood_quest}
       - {text_key: utnapishtim.ask_immortality, goto: tell_immortality_quest}
       - {text_key: utnapishtim.ask_test, goto: tell_test}
+      - {text_key: utnapishtim.ask_snake, goto: tell_snake}
       - {text_key: utnapishtim.leave}
 
   know_plant:
@@ -125,7 +128,18 @@ nodes:
     choices:
       - {text_key: utnapishtim.leave}
 
+  tell_snake:
+    text_key: utnapishtim.snake
+    choices:
+      - {text_key: utnapishtim.leave}
+
   say_atra_hasis:
     text_key: utnapishtim.atra_hasis
+    choices:
+      - {text_key: utnapishtim.leave}
+
+  say_sky_gods:
+    text_key: utnapishtim.sky_gods
+    effects: [{sky_ship: gir}]
     choices:
       - {text_key: utnapishtim.leave}

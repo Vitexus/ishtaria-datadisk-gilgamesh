@@ -1,0 +1,10 @@
+# The houses of the village Dur-Katlimmu (written by tools/build_ancient_villages.py; do not edit).
+place: village_dur_katlimmu
+items:
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 9.41, z: 29.42, yaw_deg: 336.4, scale: [1.0, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -27.7, z: 16.04, yaw_deg: 65.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -19.72, z: -27.77, yaw_deg: 137.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 20.69, z: -25.68, yaw_deg: 222.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 27.16, z: 12.28, yaw_deg: 294.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -38.11, z: 38.33, yaw_deg: 45.7, scale: [1.078, 0.967, 1.199], footprint: [14.6, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: -57.27, z: -14.91, yaw_deg: 104.9, scale: [1.005, 0.917, 1.157], footprint: [12.0, 14.4], sink_m: 3.6}

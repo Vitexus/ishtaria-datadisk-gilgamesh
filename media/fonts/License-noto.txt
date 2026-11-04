@@ -1,0 +1,10 @@
+Noto Sans Cuneiform (subset)
+============================
+
+Bundled as: noto-sans-cuneiform-numerals.ttf — the Noto Sans Cuneiform font of the Noto project,
+reduced to the two cuneiform number signs the memorials use (U+12079 DISH, U+1230B U) and a space
+(fontTools subsetter, no other change; see tools/subset_cuneiform_font.sh).
+
+Copyright 2017 Google Inc. All Rights Reserved.
+Licensed under the SIL Open Font License, Version 1.1 (OFL-1.1.txt in this directory).
+Source: https://fonts.google.com/noto/specimen/Noto+Sans+Cuneiform

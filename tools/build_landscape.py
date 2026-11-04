@@ -28,6 +28,8 @@ import urllib.request
 
 from PIL import Image
 import numpy as np
+import cv2
+from scipy import ndimage as ndi
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CACHE = ROOT / "tools" / "cache"
@@ -257,6 +259,88 @@ def river_course(wall, offset, extent):
     return [(max(s, e) + offset, z) for s, e, z in zip(smooth, east, rows)]
 
 
+CANALS = {
+    # Irrigation canals of the Euphrates at Uruk, after the layout of a barrage with its crevasse splay and herringbone
+    # of farm canals on the Euphrates (tools/data/canal_template.json, research/RIVER_NETWORK.md). Each place: the row
+    # (z, metres, +z south) of the river where the barrage stands, the bank (+1 east, -1 west) the canals leave it on and,
+    # with "flip": -1, the template turned over so that it spreads north instead of south along the river.
+    "uruk": [
+        {"z": -1750.0, "bank": 1},
+        {"z": 1600.0, "bank": 1},
+        {"z": -1500.0, "bank": -1, "flip": -1},
+    ],
+}
+CANAL_BANK_M = 14.0          # the canal's own bank: how far the bed eases up to the plain beyond the water
+CANAL_DEPTH_M = {True: 1.5, False: 0.9}   # trunk, farm canal
+CANAL_WATER_BELOW_PLAIN_M = 0.5
+
+
+def canal_polylines(site_name, river, ground_shape):
+    """The canals of a site as polylines [(width_m, [(x, z), ...])] in the local frame: the template turned so that its
+    north points away from the river (east of an east bank, west of a west bank), its barrage on the river's bank."""
+    template = json.loads((ROOT / "tools" / "data" / "canal_template.json").read_text(encoding="utf-8"))
+    out = []
+    for spec in CANALS.get(site_name, []):
+        # the river's centre line at that row; the barrage stands 60 m off it, on the bank
+        rows = [(x, z) for x, z in river]
+        x_river = float(np.interp(spec["z"], [z for _, z in rows], [x for x, _ in rows]))
+        origin = (x_river + spec["bank"] * 60.0, spec["z"])
+        for line in template["polylines"]:
+            points = []
+            for fx, fz in line["points"]:
+                # figure east -> local south; figure north (fz negative) -> away from the river
+                dx = -fz * spec["bank"]
+                dz = fx * spec.get("flip", 1)
+                points.append((origin[0] + dx, origin[1] + dz))
+            out.append((float(line["width_m"]), points))
+    if site_name == "uruk":
+        # The canals of the survey between Uruk and Larsa (tools/build_uruk_larsa_canals.py), in metres from the tell.
+        survey = json.loads((ROOT / "tools" / "data" / "uruk_larsa_canals.json").read_text(encoding="utf-8"))
+        for line in survey["polylines"]:
+            out.append((float(line["width_m"]), [tuple(p) for p in line["points"]]))
+    if site_name == "uruk":
+        # The channel network of the two published figures (tools/digitize_channel_network.py), in metres from the tell.
+        region = json.loads((ROOT / "tools" / "data" / "uruk_region_network.json").read_text(encoding="utf-8"))
+        for line in region["polylines"]:
+            out.append((min(float(line["class_width_m"]), 20.0), [tuple(p) for p in line["points"]]))
+    return out
+
+
+def add_canals(polylines, x, z, ground, plain, water, anchor_height, size, step, blocked=None):
+    """Carves the canals into `ground` (bed under the plain, easing to it on the banks) and puts their water into the mask
+    `water` (decimetres above the anchor, as the river's), where the river has none."""
+    X, Z = np.meshgrid(x, z)
+    count = 0
+    for width, points in polylines:
+        trunk = width >= 12.0
+        half = max(width / 2.0, step * 0.55)
+        depth = CANAL_DEPTH_M[trunk]
+        for (x1, z1), (x2, z2) in zip(points, points[1:]):
+            x_min, x_max = min(x1, x2) - half - CANAL_BANK_M, max(x1, x2) + half + CANAL_BANK_M
+            z_min, z_max = min(z1, z2) - half - CANAL_BANK_M, max(z1, z2) + half + CANAL_BANK_M
+            columns = np.nonzero((x >= x_min) & (x <= x_max))[0]
+            rows = np.nonzero((z >= z_min) & (z <= z_max))[0]
+            if not len(columns) or not len(rows):
+                continue
+            window = np.ix_(rows, columns)
+            px, pz = X[window] - x1, Z[window] - z1
+            dx, dz = x2 - x1, z2 - z1
+            length2 = dx * dx + dz * dz
+            t = np.clip((px * dx + pz * dz) / length2, 0.0, 1.0) if length2 > 0 else np.zeros_like(px)
+            distance = np.hypot(px - t * dx, pz - t * dz)
+            ease = np.clip((distance - half) / CANAL_BANK_M, 0.0, 1.0)
+            bed = plain[window] - depth * (1.0 - smoothstep(ease))
+            free = np.ones(bed.shape, bool) if blocked is None else ~blocked[window]
+            ground[window] = np.where(free, np.minimum(ground[window], bed), ground[window])
+            wet = (distance <= half + step * 0.4) & free
+            surface = np.round((plain[window] - CANAL_WATER_BELOW_PLAIN_M - anchor_height) * 10.0).astype(np.int32) + 32768
+            current = water[window]
+            lower = (ground[window] - anchor_height) * 10.0 + 32768 < surface
+            water[window] = np.where(wet & lower & (current == 0), surface, current)
+        count += 1
+    return count
+
+
 def osm_summary(site, anchor, extent):
     """Distance from the anchor to today's mapped waterways: how far the river has moved."""
     half_lat = extent / 2.0 / METRES_PER_DEGREE_LAT * 1.4
@@ -324,14 +408,31 @@ def build(site_name):
         plain - site["river_bed_m"] * (1.0 - smoothstep(np.clip((distance - half) / bank, 0.0, 1.0))),
     )
     ground = np.minimum(ground, carved)
+    canals = canal_polylines(site_name, river, ground.shape)
+    (ROOT / "tools" / "data" / f"{site_name}_canals_used.json").write_text(
+        json.dumps([{"width_m": w, "points": [[round(float(px_), 1), round(float(pz_), 1)] for px_, pz_ in pts]} for w, pts in canals], separators=(",", ":")),
+        encoding="utf-8")
     ground[size // 2, size // 2] = anchor_height
 
     heightmap = np.round((ground - anchor_height) * 10.0).astype(np.int32) + 32768
     surface = plain - site["river_bed_m"] + site["river_water_m"] - anchor_height
     water = np.zeros((size, size), dtype=np.int32)
-    riverbed = (distance <= half) & (surface > ground - anchor_height)
+    # Water stands wherever the ground lies below the surface, on the banks as well as in the channel: a bank that is
+    # dry on the mask but lower than the water drew sand three metres under a plane of water, with whatever stood on
+    # it (the landing) hanging above.
+    riverbed = (distance <= half + bank) & (surface > ground - anchor_height)
     water[riverbed] = np.round(surface * 10.0).astype(np.int32)[riverbed] + 32768
 
+    if canals:
+        # Irrigation canals leave the river by barrages, on both banks, away from the city's walls.
+        # No canal through the city: the wall and 40 m round it, and what lies inside, stay as the city plan has them.
+        inside = np.zeros(ground.shape, np.uint8)
+        outline = np.array([[(px_ + (size - 1) * step / 2.0) / step, (pz_ + (size - 1) * step / 2.0) / step] for px_, pz_, *_ in shapes["wall"]], np.int32)
+        cv2.fillPoly(inside, [outline], 1)
+        blocked = ndi.binary_dilation(inside > 0, iterations=int(round(40.0 / step)))
+        built = add_canals(canals, x, z, ground, plain, water, anchor_height, size, step, blocked)
+        heightmap = np.round((ground - anchor_height) * 10.0).astype(np.int32) + 32768
+        print(f"  canals: {built} lines, {int((water > 0).sum() * step * step / 10000)} ha of water in all")
     write_outlines(site_name, shapes, ground, anchor_height, step)
     write_png16(TERRAIN / f"{site_name}_height.png", heightmap)
     write_png16(TERRAIN / f"{site_name}_water.png", water)

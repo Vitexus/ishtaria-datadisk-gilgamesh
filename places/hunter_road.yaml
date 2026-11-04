@@ -24,13 +24,15 @@
     max_slope_deg: 15
 
 # The landing: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) on the west bank of the Euphrates 2.9 km north of Uruk, its
-# front turned east to the river (the water edge there is 435 m east of the city's anchor), and the fishing boat moored
-# 12 m out from the bank.
+# front turned east to the river, and the fishing boat moored 20 m out from it. The bank of the landscape patch drops from
+# the floodplain (-2.7 m) to the river bed (-6.4 m) in some 40 m and the water stands at -3.2 m: the dock stands on the
+# last dry ground, 379 m east of the city's anchor (the shore is 45 m east of the anchor's meridian line there), and the
+# boat 20 m out, where the river is 1.5 m deep (a vehicle needs 0.5 m).
 - id: hunter_ferry_landing
   kind: landmark
   name_key: place.hunter_ferry_landing
   radius_m: 14
-  locate: {from: uruk, bearing_deg: 8.52, distance_m: 2881.8, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 7.57, distance_m: 2875.1, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_dock.glb
     yaw_deg: 90.0
@@ -42,7 +44,7 @@
   kind: landmark
   name_key: place.hunter_ferry_boat
   radius_m: 8
-  locate: {from: uruk, bearing_deg: 8.91, distance_m: 2884.8, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 7.96, distance_m: 2880.8, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.7

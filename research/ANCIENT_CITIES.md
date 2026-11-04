@@ -57,6 +57,9 @@ Babylonian towers on Early Dynastic pins are deliberate anachronisms (same class
 | Kissik | Tell al-Lahm, 30.6100 N 46.3600 E | port of the ED lagoon (already carved dry in the rasters) | research/WORLD.md |
 | Adab | Tell Bismaya, 31.9473 N 45.6263 E | ED city of the King List's Adab dynasty | https://en.wikipedia.org/wiki/Adab_(city) |
 | Eshnunna | Tell Asmar, 33.8106 N 44.7667 E | Square Temple statues ED I-II (c. 2900-2550 BC) | https://en.wikipedia.org/wiki/Eshnunna |
+| Isin | Ishan al-Bahriyat, 31.8850 N 45.2686 E | two Early Dynastic I buildings south of the temple complex, ED tablets; occupied from the Uruk period | https://en.wikipedia.org/wiki/Isin |
+| Assur | Qal'at Sherqat, 35.4567 N 43.2625 E | radiocarbon 2896-2702 BC under the Ishtar temple, the earliest occupation level (ED I) | https://en.wikipedia.org/wiki/Assur |
+| Terqa | Tell Ashara, 34.9233 N 40.5694 E | inner wall c. 2900 BC, phases Terqa V-IV (EB I-II, 2800-2450 BC); a major town from its beginning | https://en.wikipedia.org/wiki/Terqa , https://www.terqa.org/ |
 | Nineveh | Kuyunjik, 36.3586 N 43.1539 E | Ninevite 5 period (3000/2900-2600/2500 BC) | https://en.wikipedia.org/wiki/Nineveh |
 | Tell Brak (Nagar) | 36.6700 N 41.0600 E | urban since the Uruk period, main city of the ED north | https://en.wikipedia.org/wiki/Tell_Brak |
 | Mari | Tell Hariri, 34.5494 N 40.8900 E | founded c. 2900 BC as a planned city | https://en.wikipedia.org/wiki/Mari,_Syria |

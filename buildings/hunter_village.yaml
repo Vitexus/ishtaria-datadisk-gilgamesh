@@ -2,24 +2,24 @@
 # do not edit). Format: ishtaria-protocol schemas/datadisk.schema.json, $defs/buildings.
 place: hunter_village
 items:
-  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 1.45, z: -36.75, yaw_deg: 176.4, scale: [0.833, 0.693, 0.798], footprint: [11.24, 10.81], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 22.86, z: -27.26, yaw_deg: 212.2, scale: [0.722, 0.621, 0.719], footprint: [9.74, 9.73], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 37.51, z: -6.67, yaw_deg: 265.0, scale: [0.728, 0.616, 0.721], footprint: [9.82, 9.76], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 35.23, z: 16.30, yaw_deg: 288.6, scale: [0.871, 0.678, 0.731], footprint: [11.75, 9.90], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 10.75, z: 39.10, yaw_deg: 337.0, scale: [0.753, 0.664, 0.810], footprint: [10.15, 10.97], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -15.91, z: 35.69, yaw_deg: 23.5, scale: [0.787, 0.664, 0.775], footprint: [10.65, 11.86], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -33.60, z: 20.30, yaw_deg: 62.0, scale: [0.825, 0.687, 0.791], footprint: [11.13, 10.71], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -39.25, z: -8.80, yaw_deg: 96.9, scale: [0.842, 0.640, 0.672], footprint: [11.40, 10.29], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -25.39, z: -24.79, yaw_deg: 134.4, scale: [0.803, 0.605, 0.630], footprint: [10.87, 9.65], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_b.glb, x: 24.86, z: -65.74, yaw_deg: 203.0, scale: [0.838, 0.723, 0.863], footprint: [12.96, 13.56], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 58.25, z: -27.36, yaw_deg: 245.7, scale: [0.899, 0.806, 1.000], footprint: [12.17, 15.30], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_a.glb, x: 59.75, z: 31.43, yaw_deg: 297.2, scale: [0.885, 0.743, 0.864], footprint: [14.68, 13.86], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_b.glb, x: 33.95, z: 53.37, yaw_deg: 328.8, scale: [0.916, 0.773, 0.902], footprint: [14.16, 14.18], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -17.59, z: 67.01, yaw_deg: 18.4, scale: [1.012, 0.830, 0.942], footprint: [13.70, 14.42], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -60.53, z: 29.68, yaw_deg: 64.8, scale: [0.987, 0.775, 0.842], footprint: [13.36, 12.88], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_b.glb, x: -58.83, z: -23.47, yaw_deg: 116.6, scale: [0.837, 0.712, 0.838], footprint: [12.94, 13.17], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_house_a.glb, x: -20.58, z: -59.56, yaw_deg: 162.9, scale: [0.869, 0.720, 0.826], footprint: [14.42, 13.25], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_workshop.glb, x: -56.00, z: 42.00, yaw_deg: 55.8, scale: [0.546, 0.412, 0.430], footprint: [15.00, 12.00], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: 58.00, z: 40.00, yaw_deg: 304.9, scale: [0.838, 0.764, 0.964], footprint: [10.00, 12.00], sink_m: 3}
-  - {model: media/models/architecture/zeroad/pers_farmstead.glb, x: 8.00, z: 92.00, yaw_deg: 353.5, scale: [0.875, 0.857, 1.162], footprint: [16.00, 16.00], sink_m: 3}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 1.74, z: -44.10, yaw_deg: 176.4, scale: [1.000, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 27.43, z: -32.72, yaw_deg: 212.2, scale: [0.866, 0.745, 0.862], footprint: [11.68, 11.68], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 45.02, z: -8.00, yaw_deg: 265.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 42.27, z: 19.56, yaw_deg: 288.6, scale: [1.045, 0.814, 0.878], footprint: [14.10, 11.88], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 12.90, z: 46.91, yaw_deg: 337.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -19.09, z: 42.83, yaw_deg: 23.5, scale: [0.944, 0.796, 0.930], footprint: [12.78, 14.23], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -40.32, z: 24.36, yaw_deg: 62.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -47.10, z: -10.56, yaw_deg: 96.9, scale: [1.011, 0.768, 0.807], footprint: [13.68, 12.35], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -30.46, z: -29.75, yaw_deg: 134.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_b.glb, x: 29.83, z: -78.88, yaw_deg: 203.0, scale: [1.006, 0.867, 1.035], footprint: [15.55, 16.27], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 69.89, z: -32.83, yaw_deg: 245.7, scale: [1.078, 0.967, 1.199], footprint: [14.60, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_a.glb, x: 71.69, z: 37.71, yaw_deg: 297.2, scale: [1.062, 0.892, 1.036], footprint: [17.62, 16.63], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_b.glb, x: 40.74, z: 64.04, yaw_deg: 328.8, scale: [1.099, 0.927, 1.083], footprint: [16.99, 17.02], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -21.11, z: 80.41, yaw_deg: 18.4, scale: [1.214, 0.996, 1.131], footprint: [16.44, 17.30], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -72.64, z: 35.62, yaw_deg: 64.8, scale: [1.184, 0.929, 1.010], footprint: [16.03, 15.45], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_b.glb, x: -70.59, z: -28.17, yaw_deg: 116.6, scale: [1.004, 0.854, 1.005], footprint: [15.52, 15.80], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_a.glb, x: -24.69, z: -71.47, yaw_deg: 162.9, scale: [1.043, 0.864, 0.991], footprint: [17.31, 15.90], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_workshop.glb, x: -67.20, z: 50.40, yaw_deg: 55.8, scale: [0.656, 0.494, 0.516], footprint: [18.00, 14.40], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: 69.60, z: 48.00, yaw_deg: 304.9, scale: [1.005, 0.917, 1.157], footprint: [12.00, 14.40], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_farmstead.glb, x: 9.60, z: 110.40, yaw_deg: 353.5, scale: [1.050, 1.029, 1.394], footprint: [19.20, 19.20], sink_m: 3.6}
   - {model: media/models/architecture/zeroad/pers_corral.glb, x: -80.00, z: -30.00, yaw_deg: 112.8, scale: [0.836, 0.679, 0.762], footprint: [15.00, 8.00], sink_m: 1}

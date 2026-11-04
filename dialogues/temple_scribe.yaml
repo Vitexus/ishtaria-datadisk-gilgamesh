@@ -11,7 +11,10 @@ nodes:
     choices:
       - {text_key: temple_scribe.ask_work, goto: explain_work}
       - {text_key: temple_scribe.ask_tablets, goto: explain_tablets}
+      - {text_key: temple_scribe.ask_ball, goto: explain_ball}
+      - {text_key: temple_scribe.ask_cult, goto: explain_cult}
       - {text_key: temple_scribe.ask_new_year, goto: say_new_year}
+      - {text_key: temple_scribe.ask_nephilim, goto: say_nephilim}
       - {text_key: temple_scribe.leave}
 
   explain_work:
@@ -24,7 +27,25 @@ nodes:
     choices:
       - {text_key: temple_scribe.leave}
 
+  explain_ball:
+    text_key: temple_scribe.ball
+    choices:
+      - {text_key: temple_scribe.ask_cult, goto: explain_cult}
+      - {text_key: temple_scribe.leave}
+
+  explain_cult:
+    text_key: temple_scribe.cult
+    choices:
+      - {text_key: temple_scribe.ask_ball, goto: explain_ball}
+      - {text_key: temple_scribe.leave}
+
   say_new_year:
     text_key: temple_scribe.new_year
+    choices:
+      - {text_key: temple_scribe.leave}
+
+  say_nephilim:
+    text_key: temple_scribe.nephilim
+    effects: [{sky_ship: disc}]
     choices:
       - {text_key: temple_scribe.leave}

@@ -1,0 +1,15 @@
+# Easter egg: the gods' ships cross the sky between the great cities about once an hour.
+# Scenery only: the server (src/story/sky.rs) derives one flight per slot from the clock and
+# announces it on GET /story/sky_flights; clients draw it. Nothing is stored.
+# Ancient-astronaut lore: the winged disc (Sham-a, Shamash / Ashur) and the heavenly
+# chariots MU / GIR (see the dialogues of anu, high_priest_anu, uruk_elder, utnapishtim, uruk_farmer).
+
+interval_s: 3600        # one flight per hour, at a seeded moment of it
+duration_s: 90          # from city to city: the cities lie 50 to 150 km apart, so these are fast
+altitude_m: 8000        # the schedule crosses the high sky, in silence; a flight a character tells of is low and near
+cities: [uruk, ur, eridu, nippur, kish, larsa]
+ships:
+  - {id: disc, model: media/models/sky_disc.glb, scale: 4, achievement: sham_a_witness}
+  - {id: gir, model: media/models/sky_gir.glb, scale: 4, achievement: mu_witness}
+# A character who hears of a ship from anu, uruk_farmer or temple_scribe (disc), or from high_priest_anu, utnapishtim or
+# uruk_elder (gir), sees it fly low over his head once (effect `sky_ship`) and earns the ship's achievement.

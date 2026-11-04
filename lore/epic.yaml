@@ -81,6 +81,37 @@
   text_key: lore.hanging_gardens
   category: place
 
+# Added from the academic sources in research/academia (see research/ACADEMIA.md)
+- id: gilgamesh_cult
+  title_key: lore.gilgamesh_cult.title
+  text_key: lore.gilgamesh_cult
+  category: god
+
+- id: descent_of_ishtar
+  title_key: lore.descent_of_ishtar.title
+  text_key: lore.descent_of_ishtar
+  category: god
+
+- id: ball_and_mallet
+  title_key: lore.ball_and_mallet.title
+  text_key: lore.ball_and_mallet
+  category: history
+
+- id: gilgamesh_parentage
+  title_key: lore.gilgamesh_parentage.title
+  text_key: lore.gilgamesh_parentage
+  category: history
+
+- id: why_the_rift
+  title_key: lore.why_the_rift.title
+  text_key: lore.why_the_rift
+  category: history
+
+- id: epic_far_away
+  title_key: lore.epic_far_away.title
+  text_key: lore.epic_far_away
+  category: history
+
 # The author's disclaimer (also a tablet in Eridu, places/author_disclaimer.yaml).
 - id: author_disclaimer
   title_key: lore.author_disclaimer.title

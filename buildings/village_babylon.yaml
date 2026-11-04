@@ -1,0 +1,10 @@
+# The houses of the village Babylon (written by tools/build_ancient_villages.py; do not edit).
+place: village_babylon
+items:
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 1.22, z: -30.87, yaw_deg: 176.4, scale: [1.0, 0.832, 0.958], footprint: [13.49, 12.97], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 31.51, z: -5.6, yaw_deg: 265.0, scale: [0.874, 0.739, 0.865], footprint: [11.79, 11.72], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: 9.03, z: 32.84, yaw_deg: 337.0, scale: [0.903, 0.796, 0.972], footprint: [12.18, 13.16], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_d.glb, x: -28.22, z: 17.05, yaw_deg: 62.0, scale: [0.991, 0.824, 0.949], footprint: [13.36, 12.85], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: -21.32, z: -20.82, yaw_deg: 134.4, scale: [0.964, 0.726, 0.756], footprint: [13.04, 11.58], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_house_c.glb, x: 48.92, z: -22.98, yaw_deg: 245.7, scale: [1.078, 0.967, 1.199], footprint: [14.6, 18.36], sink_m: 3.6}
+  - {model: media/models/architecture/zeroad/pers_storehouse.glb, x: 48.72, z: 33.6, yaw_deg: 304.9, scale: [1.005, 0.917, 1.157], footprint: [12.0, 14.4], sink_m: 3.6}

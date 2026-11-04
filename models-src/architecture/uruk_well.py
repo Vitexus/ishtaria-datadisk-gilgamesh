@@ -1,7 +1,7 @@
 """A well of the Early Dynastic kind, after the brick-lined well that still stands open at Uruk: a round shaft lined with
-pale bricks laid in rings, set on edge in the upper courses, finished with a low rim of flat bricks stepped out over the
-ground, a rope and a clay bucket (wells lined with brick are known from Ur and Abu Salabikh; a bucket on a rope is all
-they needed).
+pale bricks laid in rings, set on edge in the upper courses, finished with a parapet of brick almost a metre high (so
+that nobody falls in and it reads as a well from afar) over a stepped footing, and a timber frame of two posts, a
+crossbeam and a windlass with a rope and a clay bucket (wells lined with brick are known from Ur and Abu Salabikh).
 
     blender -b --factory-startup -P models-src/architecture/uruk_well.py -- media/models/architecture/uruk_well.glb
 
@@ -73,6 +73,26 @@ def ring(bm, r_out, r_in, z0, z1, n=16):
                     lp[uv].uv = (k / n * (tiles_out if kind == "out" else tiles_in), c.z / TILE_H)
 
 
+def cylinder(bm, a, b, radius, n=8):
+    """A closed prism of n sides from point a to point b."""
+    ax = [b[i] - a[i] for i in range(3)]
+    length = math.sqrt(sum(c * c for c in ax))
+    d = [c / length for c in ax]
+    ref = (1.0, 0.0, 0.0) if abs(d[0]) < 0.9 else (0.0, 1.0, 0.0)
+    u = [d[1] * ref[2] - d[2] * ref[1], d[2] * ref[0] - d[0] * ref[2], d[0] * ref[1] - d[1] * ref[0]]
+    ul = math.sqrt(sum(c * c for c in u))
+    u = [c / ul for c in u]
+    w = [d[1] * u[2] - d[2] * u[1], d[2] * u[0] - d[0] * u[2], d[0] * u[1] - d[1] * u[0]]
+    def circle(p):
+        return [bm.verts.new(tuple(p[k] + radius * (math.cos(2 * math.pi * i / n) * u[k] + math.sin(2 * math.pi * i / n) * w[k]) for k in range(3))) for i in range(n)]
+    c0, c1 = circle(a), circle(b)
+    for i in range(n):
+        j = (i + 1) % n
+        bm.faces.new((c0[i], c0[j], c1[j], c1[i]))
+    bm.faces.new(c0[::-1])
+    bm.faces.new(c1)
+
+
 def main():
     out = sys.argv[sys.argv.index("--") + 1]
     bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -80,19 +100,35 @@ def main():
     clay = material("well_clay", colour=(0.42, 0.26, 0.16, 1.0))
     rope_m = material("well_rope", colour=(0.55, 0.45, 0.28, 1.0))
     dark = material("well_water", colour=(0.02, 0.05, 0.06, 1.0), rough=0.2)
+    wood = material("well_wood", colour=(0.34, 0.21, 0.11, 1.0), rough=0.8)
     inner = 0.6                                   # the clear radius of the shaft; the lining is one brick (0.3 m) thick
     objs = [part("lining", lambda bm: ring(bm, inner + 0.3, inner, -3.0, 0.0), brick)]
-    # the rim: two courses of flat bricks stepped out over the ground, as the top of the excavated shaft is
-    objs.append(part("rim", lambda bm: (ring(bm, inner + 0.5, inner, 0.0, 0.1), ring(bm, inner + 0.3, inner, 0.1, 0.2)), brick))
+    # the footing stepped out over the ground, the parapet and its cap of flat bricks
+    objs.append(part("footing", lambda bm: ring(bm, inner + 0.55, inner, 0.0, 0.1), brick))
+    objs.append(part("parapet", lambda bm: (ring(bm, inner + 0.3, inner, 0.1, 0.85), ring(bm, inner + 0.42, inner - 0.05, 0.85, 0.95)), brick))
     def water(bm):
         vs = [bm.verts.new((math.cos(2 * math.pi * i / 16) * inner, math.sin(2 * math.pi * i / 16) * inner, -2.4)) for i in range(16)]
         bm.faces.new(vs)
     objs.append(part("water", water, dark))
+    # the frame: posts at either side, a crossbeam, and a windlass roll with a crank under it
+    post_x, beam_z = 1.05, 2.15
+    def frame(bm):
+        for sign in (-1, 1):
+            cylinder(bm, (sign * post_x, 0.0, 0.0), (sign * post_x, 0.0, beam_z + 0.12), 0.09)
+            cylinder(bm, (sign * post_x, 0.0, 0.0), (sign * (post_x - 0.55), 0.0, 0.7), 0.04)   # a brace
+        cylinder(bm, (-post_x - 0.15, 0.0, beam_z), (post_x + 0.15, 0.0, beam_z), 0.07)
+    objs.append(part("frame", frame, wood))
+    def windlass(bm):
+        cylinder(bm, (-0.8, 0.0, beam_z - 0.2), (0.8, 0.0, beam_z - 0.2), 0.1)
+        cylinder(bm, (post_x + 0.05, 0.0, beam_z - 0.2), (post_x + 0.4, 0.0, beam_z - 0.2), 0.03)
+        cylinder(bm, (post_x + 0.4, 0.0, beam_z - 0.2), (post_x + 0.4, 0.0, beam_z - 0.6), 0.03)   # the crank handle
+    objs.append(part("windlass", windlass, wood))
+    bucket_top = 1.55
     def bucket(bm):
-        ring(bm, 0.14, 0.11, 0.2, 0.46, n=8)
+        ring(bm, 0.14, 0.11, bucket_top - 0.26, bucket_top, n=8)
     objs.append(part("bucket", bucket, clay))
     def rope(bm):
-        ring(bm, 0.02, 0.0, 0.46, 0.50, n=4)
+        cylinder(bm, (0.0, 0.0, bucket_top), (0.0, 0.0, beam_z - 0.2), 0.02)
     objs.append(part("rope", rope, rope_m))
     # Blender is Z-up; the glTF exporter turns it to Y-up
     for o in bpy.context.scene.objects:

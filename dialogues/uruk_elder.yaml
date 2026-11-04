@@ -11,7 +11,9 @@ nodes:
     choices:
       - {text_key: uruk_elder.ask_a, goto: explain_a}
       - {text_key: uruk_elder.ask_b, goto: explain_b}
+      - {text_key: uruk_elder.ask_birth, goto: explain_birth}
       - {text_key: uruk_elder.ask_kingship, goto: say_kingship}
+      - {text_key: uruk_elder.ask_igigi, goto: say_igigi}
       - {text_key: uruk_elder.leave}
 
   explain_a:
@@ -26,7 +28,19 @@ nodes:
       - {text_key: uruk_elder.ask_a, goto: explain_a}
       - {text_key: uruk_elder.leave}
 
+  explain_birth:
+    text_key: uruk_elder.birth
+    choices:
+      - {text_key: uruk_elder.ask_b, goto: explain_b}
+      - {text_key: uruk_elder.leave}
+
   say_kingship:
     text_key: uruk_elder.kingship
+    choices:
+      - {text_key: uruk_elder.leave}
+
+  say_igigi:
+    text_key: uruk_elder.igigi
+    effects: [{sky_ship: gir}]
     choices:
       - {text_key: uruk_elder.leave}

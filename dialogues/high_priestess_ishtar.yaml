@@ -12,6 +12,7 @@ nodes:
       - {text_key: high_priestess_ishtar.ask_goddess, goto: explain_goddess}
       - {text_key: high_priestess_ishtar.ask_temple, goto: explain_temple}
       - {text_key: high_priestess_ishtar.ask_rituals, goto: explain_rituals}
+      - {text_key: high_priestess_ishtar.ask_descent, goto: explain_descent}
       - {text_key: high_priestess_ishtar.leave}
 
   explain_goddess:
@@ -26,5 +27,16 @@ nodes:
 
   explain_rituals:
     text_key: high_priestess_ishtar.rituals
+    choices:
+      - {text_key: high_priestess_ishtar.leave}
+
+  explain_descent:
+    text_key: high_priestess_ishtar.descent
+    choices:
+      - {text_key: high_priestess_ishtar.ask_gates, goto: explain_gates}
+      - {text_key: high_priestess_ishtar.leave}
+
+  explain_gates:
+    text_key: high_priestess_ishtar.gates
     choices:
       - {text_key: high_priestess_ishtar.leave}

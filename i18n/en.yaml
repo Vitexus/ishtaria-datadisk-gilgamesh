@@ -894,6 +894,10 @@ place.abu_tbeirah: Abu Tbeirah
 place.kissik: Kissik
 place.adab: Adab
 place.eshnunna: Eshnunna
+place.uruk_fields: Fields of Uruk
+place.isin: Isin
+place.assur: Assur
+place.terqa: Terqa
 place.nineveh: Nineveh
 place.tell_brak: Tell Brak
 place.mari: Mari
@@ -1209,6 +1213,7 @@ place.hunter_ferry_boat: Fishing boat
 place.uruk_fisher: Fishing boat
 place.hunter_village_trader: "Trader of the village"
 place.hunter_village_well: "Well of the village"
+place.hunter_village_stall: "Trader's stall"
 npc.village_trader: "Village trader"
 npc.village_trader.bio: "A trader who carries what a village needs from Uruk: waterskins, tools, seed and rope. He does business before his door, on the way to the square."
 village_trader.greet: "Peace on your road. Waterskins, rope, seed and tools: what the steppe needs, I have."
@@ -1242,6 +1247,131 @@ npc.road_wagoner: "Carter"
 npc.road_wagoner.bio: "A carter with a yoke of oxen, going between the villages and the river with his load."
 npc.road_camel_driver: "Camel driver"
 npc.road_camel_driver.bio: "A driver leading a laden camel along the long road to the Euphrates."
+
+# BEGIN ancient villages (tools/build_ancient_villages.py)
+place.village_babylon: "Babylon"
+npc.mayor_babylon: "Mayor of Babylon"
+npc.mayor_babylon.bio: "The mayor of the village of Babylon, which will one day be a city of that name."
+knowledge.village_babylon.title: "Babylon"
+knowledge.village_babylon.text: "A village on the Euphrates. Its name is first written around 2300 BCE; centuries later Hammurabi makes it the capital of an empire, and in the 6th century BCE the Ishtar Gate and the great ziggurat Etemenanki stand here."
+knowledge.village_babylon.credit: "Photo or picture: David Stanley, \"Ishtar Gate\", CC BY-SA 3.0, Wikimedia Commons."
+place.village_sippar: "Sippar"
+npc.mayor_sippar: "Mayor of Sippar"
+npc.mayor_sippar.bio: "The mayor of the village of Sippar, which will one day be a city of that name."
+knowledge.village_sippar.title: "Sippar"
+knowledge.village_sippar.text: "A village of the sun god's worshippers on the Euphrates. Later it is a city of Utu-Shamash with the Ebabbar temple; the Sun God Tablet and a clay map of the world were found here. Whether the site is the Sippar of the oldest kings is still debated."
+knowledge.village_sippar.credit: "Photo or picture: Osama Shukir Muhammed Amin FRCP(Glasg), \"Detail, Sun God Tablet from Sippar, Iraq, 9th century BCE. British Museum\", CC BY-SA 4.0, Wikimedia Commons."
+place.village_borsippa: "Borsippa"
+npc.mayor_borsippa: "Mayor of Borsippa"
+npc.mayor_borsippa.bio: "The mayor of the village of Borsippa, which will one day be a city of that name."
+knowledge.village_borsippa.title: "Borsippa"
+knowledge.village_borsippa.text: "A village by the Euphrates south-west of Babylon. Its god will be Nabu, the scribe of the gods, and the ruined ziggurat of his temple is often taken for the Tower of Babel. The oldest sure mention of the city is from the Ur III period."
+knowledge.village_borsippa.credit: "Photo or picture: Osama Shukir Muhammed Amin FRCP(Glasg), \"Ruins of the ziggurat and temple of god Nabu at Borsippa, Babel Governorate, Iraq\", CC BY-SA 4.0, Wikimedia Commons."
+place.village_dur_kurigalzu: "Dur-Kurigalzu"
+npc.mayor_dur_kurigalzu: "Mayor of Dur-Kurigalzu"
+npc.mayor_dur_kurigalzu.bio: "The mayor of the village of Dur-Kurigalzu, which will one day be a city of that name."
+knowledge.village_dur_kurigalzu.title: "Dur-Kurigalzu"
+knowledge.village_dur_kurigalzu.text: "A village in the plain west of the later Baghdad. Over a thousand years from now the Kassite king Kurigalzu I will found a fortress city here, with a royal palace and a high ziggurat; its ruin at Aqar Quf can be seen from afar."
+knowledge.village_dur_kurigalzu.credit: "Photo or picture: Osama Shukir Muhammed Amin FRCP(Glasg), \"1. The Kassite era ziggurat at Aqar-Quf (Dur-Kurigalzu), western Baghdad, Iraq. December 29, 2021\", CC BY-SA 4.0, Wikimedia Commons."
+place.village_dur_katlimmu: "Dur-Katlimmu"
+npc.mayor_dur_katlimmu: "Mayor of Dur-Katlimmu"
+npc.mayor_dur_katlimmu.bio: "The mayor of the village of Dur-Katlimmu, which will one day be a city of that name."
+knowledge.village_dur_katlimmu.title: "Dur-Katlimmu"
+knowledge.village_dur_katlimmu.text: "A farming hamlet on the lower Khabur, near its mouth. Much later, around the 13th century BCE, the Assyrian king Shalmaneser I will make it the capital of a province, and the Assyrians will build their Red House here; today the site is called Tell Sheikh Hamad."
+knowledge.village_dur_katlimmu.credit: "Photo or picture: Bertramz, \"SchechHamad,RedHouse2\", CC BY 3.0, Wikimedia Commons."
+place.village_arrapha: "Arrapha"
+npc.mayor_arrapha: "Mayor of Arrapha"
+npc.mayor_arrapha.bio: "The mayor of the village of Arrapha, which will one day be a city of that name."
+knowledge.village_arrapha.title: "Arrapha"
+knowledge.village_arrapha.text: "A village under the later citadel hill of Kirkuk, below the Zagros foothills. Its name is first written in the Neo-Sumerian age; later it is the capital of a kingdom and an Assyrian province. The old town has never been excavated, so little is known of it."
+knowledge.village_arrapha.credit: "Photo or picture: Chad.r.hill at English Wikipedia, \"Kirkuk citadel\", Public domain, Wikimedia Commons."
+place.village_nuzi: "Nuzi"
+npc.mayor_nuzi: "Mayor of Nuzi"
+npc.mayor_nuzi.bio: "The mayor of the village of Nuzi, which will one day be a city of that name."
+knowledge.village_nuzi.title: "Nuzi"
+knowledge.village_nuzi.text: "A hamlet on a mound the Arabs will call Yorghan Tepe, farmed since the Ubaid age. In the Akkadian age the settlement is called Gasur; in the 15th and 14th centuries BCE a Hurrian town here leaves thousands of clay tablets of legal and family documents."
+knowledge.village_nuzi.credit: "Photo or picture: Daderot, \"Large pottery jar, Nuzi, Yorghan Tepe, Iraq, Stratum IV, mid 2nd millenium BC - Harvard Semitic Museum - Cambridge, MA - DSC06410\", Public domain, Wikimedia Commons."
+place.village_qattara: "Qattara"
+npc.mayor_qattara: "Mayor of Qattara"
+npc.mayor_qattara.bio: "The mayor of the village of Qattara, which will one day be a city of that name."
+knowledge.village_qattara.title: "Qattara"
+knowledge.village_qattara.text: "A village in the dry-farming plain of Sinjar, on the mound now called Tell al-Rimah. Its ancient name is debated, Qattara or Karana; in the time of the letters of Mari a palace and a temple stand here, and an Assyrian king raises a stele of victory."
+knowledge.village_qattara.credit: "Photo or picture: Osama Shukir Muhammed Amin FRCP(Glasg), \"Stele of Adad-nirari III\", CC BY-SA 4.0, Wikimedia Commons."
+place.village_der: "Der"
+npc.mayor_der: "Mayor of Der"
+npc.mayor_der.bio: "The mayor of the village of Der, which will one day be a city of that name."
+knowledge.village_der.title: "Der"
+knowledge.village_der.text: "A frontier village between the plain of Sumer and the mountains of Elam. Later the city of the god Ishtaran will guard the road to Susa; a statue to the goddess Nin-shubur, dedicated here by the ruler Enzi and his son around 2400 BCE, is in the British Museum."
+knowledge.village_der.credit: "Photo or picture: Gary Todd, \"BM 22470 Statue dedicated to the goddess Nin-shubur of the city of Der by Enzi and his son Amar-kiku (2400 BCE)\", CC0, Wikimedia Commons."
+village_mayor.greet: "Peace to you, traveller. I am the mayor of this village; we have little, but the name of this place will be known far and wide one day."
+village_mayor.ask: "What will our name mean one day?"
+village_mayor.answer: "Ask me to tell you about myself: there is a picture, a short story and a place where you can read more."
+village_mayor.leave: "Farewell."
+# END ancient villages
+
+# BEGIN academic sources (research/ACADEMIA.md)
+temple_scribe.ask_ball: Ask about the ball and the mallet
+temple_scribe.ask_cult: Ask whether Gilgamesh will be honoured after death
+temple_scribe.ball: "Every scribe learns the song's first lines: the king has no equal, and his companions are kept on their feet by the ball. The pukku and the mallet are a game, yes, but also the rod and ring that a king holds. The song opens with them and ends with them, when they fall into the world below."
+temple_scribe.cult: "A king like this does not vanish. In the house of the dead the great kings are given work: they judge the shades, like the Sun. Kings yet to come will call Gilgamesh their brother, and in Larsa a man will raise a small shrine to him for his king's life. Leave him bread and water, and he is remembered."
+uruk_elder.ask_birth: Ask about the king's birth
+uruk_elder.birth: "Three tales are told. Most say Lugalbanda and the goddess Ninsun begot him, and so he is a king by blood. Some say his father was a spirit, a wind that came by night. And the singers add that he is two parts god and one part man. I say the one part is the heavier."
+high_priestess_ishtar.ask_descent: Ask about the goddess going down to the land of no return
+high_priestess_ishtar.ask_gates: Ask about the gates
+high_priestess_ishtar.descent: "She once went down to the house of darkness, where dust is food and clay is bread, where the dead wear feathers like birds. She threatened the gatekeeper that she would break the door and raise the dead to eat the living. Her sister Ereshkigal turned green as a cut tamarisk when she heard. Remember it: even Ishtar answers to the underworld's law."
+high_priestess_ishtar.gates: "Seven gates. At each the gatekeeper took one adornment: the crown, the earrings, the necklace, the breast ornaments, the girdle with its birth stones, the bands of arm and ankle, last the robe. Why do you take them? she cried. The rite of the house of the dead, he answered. Only when she was restored with the water of life did she pass the gates outward and receive her jewels back one by one."
+uruk_water_carrier.ask_river: Ask about the river
+uruk_water_carrier.river: "The Euphrates is no single road, traveler. It splits into many arms, they run together again, and one spring a new arm opens where there was dry ground. Villages stand on the raised banks, because the river built them high. When the water breaks through a bank, farmers cut a ditch and keep the flood for their fields."
+humbaba.ask_forest: Ask what he hears in the forest
+humbaba.forest: "Listen, little ones. The wood pigeon coos and the turtle dove answers. The stork clatters, the chukar cackles, and the cedar spreads its shade over all. This is the dwelling of the gods, and every voice in it belongs to me to guard."
+lore.gilgamesh_cult.title: Gilgamesh, Judge of the Dead
+lore.gilgamesh_cult: >
+  After his death Gilgamesh was honoured as a god of the underworld. Sumerian texts have him,
+  with Ur-Namma, deliver the judgements of the netherworld, and Ur III kings called him their
+  brother and friend. Offerings of food and drink kept the dead remembered. A clay cone from
+  Larsa records a small temple built for him for the life of King Abi-sare, about 1890 BCE.
+lore.descent_of_ishtar.title: Ishtar's Descent
+lore.descent_of_ishtar: >
+  Ishtar went down to the land of no return, ruled by her sister Ereshkigal. At each of seven
+  gates she gave up a piece of her regalia, until she stood bare before the judges of the dead.
+  She was brought back with the water of life and left through the same gates, receiving
+  her ornaments in the reverse order. Someone had to take her place below, and the song turns to Tammuz.
+lore.ball_and_mallet.title: The Ball and the Mallet
+lore.ball_and_mallet: >
+  The epic opens and ends with the ball game: the companions of Gilgamesh are kept on their feet
+  by the pukku, and in the last tablet the pukku and the mekku fall into the netherworld.
+  Scholars read the two instruments as the royal ring and rod, a symbol of mortal kingship.
+lore.gilgamesh_parentage.title: Who Was Gilgamesh's Father?
+lore.gilgamesh_parentage: >
+  The tradition is not uniform. Sumerian tales make him the son of Lugalbanda and the goddess Ninsun;
+  an older line calls his father a lillu, a spirit or wind; the Standard Babylonian epic adds
+  that he is two thirds god and one third man, and still a king by his descent from Lugalbanda.
+# END academic sources
+
+# BEGIN academic sources, part 2 (research/ACADEMIA.md)
+shamhat.ask_growth: Ask how Enkidu changed
+shamhat.growth: "Not in one night. We went to the water-hole, and later again on the road toward the city, and each time he grew more than he lost. The gazelles fled from him and he could no longer outrun them, but he gained understanding, and his heart grew wide. I taught him bread and beer and a garment. A man is not made by one act, shepherd."
+enkidu.ask_beasts: Ask whether he misses the beasts
+enkidu.beasts: "When I went back to the water-hole, the gazelles bolted from me. My legs were slower, but my mind had opened. I do not know which of the two I would trade. I only know I cannot go back, and the wild no longer knows me."
+enkidu.ask_rift: Ask about the fight with Humbaba
+enkidu.rift: "The ground tore under our heels. As we circled each other, Sirara and Lebanon trembled and the earth came apart. The singers will say the great valley in the west was cut by that fight. I only remember the roar, and being afraid."
+ishtar.ask_bird: Ask about the bird with the broken wing
+ishtar.bird: "The attattu? A pretty bird, I loved it once, and then I was tired of it and broke its wing. Now it sits in the grove and cries 'my wing, my wing.' Gilgamesh throws that at me, as if every lover I ever had were a grave. He is not wrong, and I will not forgive him."
+utnapishtim.ask_snake: Ask why the snake sheds its skin
+utnapishtim.snake: "Look at the snake: it crawls out of its old skin young again, while we only grow older. Ask yourself why only the snake, and not man. Some tale of a lost gift must lie behind it. Seek that gift, and guard it better than I guarded my sleep."
+uruk_noblewoman.ask_brides: Ask what the people held against the king
+uruk_noblewoman.brides: "That the king let no girl go free to her bridegroom. The warrior's daughter, the young man's bride, their cry reached heaven and the gods listened to it. Anu heard it, and that is why Enkidu was made. Say nothing of it in the market."
+lore.why_the_rift.title: Why the Earth Split
+lore.why_the_rift: >
+  A couplet of Tablet V describes the fight with Humbaba: under the heels of the two fighters the earth
+  came apart, and Sirara (Mount Hermon) and Lebanon trembled. The scholar A. R. George reads it as the
+  epic's explanation of the great rift valley of the Levant. The epic holds only a few such tales, among them the snake that sheds its skin and the attattu bird that cries "my wing".
+lore.epic_far_away.title: The Song Travels
+lore.epic_far_away: >
+  The Gilgamesh epic was copied far from Uruk. A pupil's exercise from Ugarit on the Mediterranean is full of errors,
+  and a fragment found at Megiddo turned out to be written locally in southern Israel. Gilgamesh's name outlived
+  cuneiform in Mandaic writings, and scholars compare the oral Assyrian epic of Qatine with the epic.
+# END academic sources, part 2
 
 # The three tablets of the Atra-Hasis epic (places/atrahasis_tablets.yaml). The texts retell the epic in our own words.
 place.atrahasis_tablet_1: Clay tablet of the Atra-Hasis epic (I)
@@ -1465,3 +1595,21 @@ uruk_elder.kingship: "Kingship came down from heaven, first to Eridu, and after 
 
 # The irrigation scheme (places/irrigation_works.yaml).
 place.irrigation_works: "Irrigation works with a settling reservoir (nagkud)"
+
+# Sky ships of the gods: winged discs, the Igigi revolt, the fallen (easter egg, sky_flyers.yaml).
+anu.ask_chariots: "Is it true that you cross the sky in a winged disc?"
+anu.chariots: "Do not ask what the scribes would carve and the priests would sell. The disc is a house and a road in one. Shamash keeps one that is brighter, I one that is quicker, and Enlil borrows storms because he has no taste for wings. If you wait beneath the sky for the turn of the hour, you may see a silver one go from city to city faster than any arrow. The heavens keep a timetable, mortal; they merely do not publish it."
+high_priest_anu.ask_sky_ships: "Do the gods really travel through the sky?"
+high_priest_anu.sky_ships: "The tablets call them Mu, the heavenly chariots: fire-arrows and things that rise to heaven, and the winged disc in which Anu and Shamash look down on the earth. The Anunnaki came down in them, the fifty great ones and the seven who decree fates. When one passes over the city we do not point at it. We bow low, and the kitchen is told to expect no guests."
+uruk_elder.ask_igigi: "Why did the lesser gods rebel?"
+uruk_elder.igigi: "The Igigi dug the rivers and the canals for the great Anunnaki, and for forty years they bore the basket. Then they burned their tools and surrounded the house of Enlil in Nippur by night. Enki found the answer: make mankind from clay and the blood of a slain god, and let man carry the basket. So when your back aches, remember what you were made for. And when the sky-ships pass, remember that the gods have long memories and still keep a lookout over their labour."
+temple_scribe.ask_nephilim: "Have you heard of the fallen ones who came down from heaven?"
+temple_scribe.nephilim: "Quietly. A trader from the western hills told it by my lamp: the sons of the gods saw that the daughters of men were fair and came down to take wives, and their children were giants, mighty men of old. His people call them the nephilim, the fallen. I wrote it down. My master told me to burn the tablet. It is behind the oil jars, third row, and I have never once mentioned it."
+utnapishtim.ask_sky_gods: "Did you see the gods' ships before the flood?"
+utnapishtim.sky_gods: "Before the flood the sky was busier than it is now. When the council had decided, discs and fire-arrows went between Eridu, Nippur and Shuruppak all night, and nobody told me why. Ea did not come in a ship. He spoke to my reed wall. And when the flood rose, the gods themselves fled up to the heaven of Anu and crouched there like dogs by a wall. I remember it better than the water."
+uruk_farmer.ask_lights: "Have you ever seen something strange in the sky?"
+uruk_farmer.lights: "About once an hour, a silver disc, quick as a thought, between Uruk and Ur. My ox never flinched. I did. The temple says it is Shamash inspecting the fields, my wife says the Anunnaki, and I say whoever it is, nobody has yet offered to pay for my barley."
+achievement.sham_a_witness.title: "Under the Winged Disc"
+achievement.sham_a_witness.description: "Ask around about the gods' winged discs, until one flies over your head."
+achievement.mu_witness.title: "Under the Heavenly Chariot"
+achievement.mu_witness.description: "Ask around about the heavenly chariots and fire-arrows of the gods, until one flies over your head."

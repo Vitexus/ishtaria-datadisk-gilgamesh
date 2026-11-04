@@ -43,16 +43,18 @@
       - {id: zeroad.willow_a, weight: 3}
       - {id: zeroad.fig_a, weight: 2}
       - {id: zeroad.fig_b, weight: 2}
-      - {id: nature.reed_clump, weight: 8, waterside: true}
-      - {id: zeroad.reed_pond_lush, weight: 5, waterside: true}
-      - {id: zeroad.reed_beach_a, weight: 4, waterside: true}
-      - {id: zeroad.cattails, weight: 3, waterside: true}
+      # Reeds and grass crowd the bank: their weights outweigh the trees several times over (the server already thickens
+      # the cover up to 3.5 times at the water's edge).
+      - {id: nature.reed_clump, weight: 24, waterside: true}
+      - {id: zeroad.reed_pond_lush, weight: 16, waterside: true}
+      - {id: zeroad.reed_beach_a, weight: 12, waterside: true}
+      - {id: zeroad.cattails, weight: 10, waterside: true}
       - {id: nature.plant_flatTall, weight: 5}
       - {id: nature.plant_flatShort, weight: 4}
       - {id: nature.plant_bushSmall, weight: 3}
-      - {id: nature.grass, weight: 10}
-      - {id: nature.grass_large, weight: 6}
-      - {id: nature.grass_leafs, weight: 4}
+      - {id: nature.grass, weight: 24}
+      - {id: nature.grass_large, weight: 16}
+      - {id: nature.grass_leafs, weight: 10}
       - {id: hyper3d.tamarisk, weight: 5}
       - {id: zeroad.tamarix_a, weight: 2}
       - {id: quaternius.bush_1, weight: 2}

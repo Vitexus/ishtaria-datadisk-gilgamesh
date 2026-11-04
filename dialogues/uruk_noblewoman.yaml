@@ -11,6 +11,7 @@ nodes:
     choices:
       - {text_key: uruk_noblewoman.ask_a, goto: explain_a}
       - {text_key: uruk_noblewoman.ask_b, goto: explain_b}
+      - {text_key: uruk_noblewoman.ask_brides, goto: explain_brides}
       - {text_key: uruk_noblewoman.leave}
 
   explain_a:
@@ -23,4 +24,9 @@ nodes:
     text_key: uruk_noblewoman.b
     choices:
       - {text_key: uruk_noblewoman.ask_a, goto: explain_a}
+      - {text_key: uruk_noblewoman.leave}
+
+  explain_brides:
+    text_key: uruk_noblewoman.brides
+    choices:
       - {text_key: uruk_noblewoman.leave}

@@ -22,6 +22,12 @@ nodes:
       - text_key: humbaba.ask_mercy
         if: {not: {flag: humbaba_defeated}}
         goto: offer_mercy
+      - {text_key: humbaba.ask_forest, goto: forest_voices}
+      - {text_key: humbaba.leave}
+
+  forest_voices:
+    text_key: humbaba.forest
+    choices:
       - {text_key: humbaba.leave}
 
   offer_mercy:
