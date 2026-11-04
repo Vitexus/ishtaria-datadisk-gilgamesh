@@ -52,3 +52,9 @@ research/**
 # Third-party source archives (the Burney Relief scan by danielpett, Sketchfab, CC BY 4.0): fetched by hand, not committed. The model
 # derived from it (media/models/architecture/burney_relief.glb) and its credit stay.
 models-src/*.zip
+
+# Too large for GitHub (limit 100 MB a file) or only a tool's own backup: kept on the machine, not in git.
+# gilgamesh_rodin_raw.glb is the raw Hyper3D Rodin export of Gilgameš (job ids in models-src/gilgamesh/README.md).
+models-src/gilgamesh/gilgamesh_rodin_raw.glb
+*.blend1
+
