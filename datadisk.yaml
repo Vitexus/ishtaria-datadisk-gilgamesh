@@ -1,5 +1,5 @@
 id: gilgamesh
-version: 0.3.1
+version: 0.4.0
 cover: media/cover/cover.jpg
 # The client's loading bar draws this at its current value (the engine's default is a plain colour difference).
 # Mirrored so that the figure faces the way the bar fills (left to right).

@@ -1,3 +1,20 @@
+ishtaria-datadisk-gilgamesh (0.4.0-1) unstable; urgency=medium
+
+  * Uruk is a living walled city: houses, streets, canals and a quay
+    drawn from a plan, a map of the city on the minimap and a loading
+    marker (Faravahar).
+  * Each elder tells one tale and gives one hint to a clay tablet; the
+    characters no longer know the story before the hunter has lived it.
+  * Samhat walks to the hunter and stays beside him; Ishtar and her
+    priests stand on top of the ziggurat; the Bull of Heaven grazes on a
+    pasture.
+  * The hunter who falls after the king's errand returns to the palace;
+    the king's palace and the market have their own characters.
+  * The road from the hunter's village leads to the nearest gate; the
+    quay lies where the Euphrates comes nearest to a gate.
+
+ -- Vítězslav Dvořák <cybervitexus@gmail.com>  Wed, 04 Nov 2026 05:44:40 +0100
+
 ishtaria-datadisk-gilgamesh (0.3.1-1) unstable; urgency=medium
 
   * Hunter and Gilgameš: shins no longer bend mid-length when walking
