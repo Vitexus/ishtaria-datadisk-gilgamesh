@@ -59,6 +59,16 @@ In `ishtaria-admin`, *World maps → Generate map* then shows a checkbox for thi
 
 ## Content Overview
 
+### At a glance
+
+- **1,362 houses**, modelled one by one: 1,278 in Uruk, 21 in the hunter's village and 63 in the villages of nine ancient cities
+- **11 quests** following the Epic, from the hunter's snares to the search for immortality
+- **189 NPCs**: **56 named characters** (heroes of the Epic, rulers, historical figures, craftsmen, village mayors) and the townspeople and villagers of the crowd
+- **12 achievements**
+- 71 dialogues, in English and Czech, with spoken lines
+
+The numbers are counted from the data of the disk: run `make stats` to refresh them after the game has grown.
+
 ### The Epic Storyline
 
 A **finite indie narrative** for players interested in ancient Iraq: live the Epic of
