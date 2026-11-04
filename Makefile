@@ -13,7 +13,7 @@ STAGE := $(BUILD)/datadisks
 DB_URL := postgresql:///$(DEV_DB)?host=/var/run/postgresql
 WORLDGEN := $(abspath $(SERVER_DIR)/../ishtaria-worldgen/target/debug/ishtaria-worldgen)
 
-.PHONY: check voices stage server start repin stop logs clean drop-db prompts models city world world-map
+.PHONY: check voices stage server start repin stop logs clean drop-db prompts models city world world-map sumer-map
 
 check:
 	python3 $(PROTOCOL_DIR)/tests/validate_datadisk.py .
@@ -21,6 +21,10 @@ check:
 # The real planet of the disk (media/world/): resample ETOPO 2022 once, then the ED reconstruction.
 world:
 	python3 tools/build_world_map.py
+
+# The map of Sumer as it is in the game (maps/sumer.<lang>.png): land, sea, rivers, cities and roads read from this disk.
+sumer-map:
+	python3 tools/build_sumer_map.py
 
 # The world heightmap strip worldgen renders from the disk's rasters (face size 256).
 world-map: media/world/height.pgm media/world/water.pgm

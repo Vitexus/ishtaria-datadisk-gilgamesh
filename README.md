@@ -168,7 +168,16 @@ make server    # start local server with this datadisk
 make stop      # stop the server
 make logs      # follow server logs
 make clean     # clean build artifacts
+make sumer-map # redraw maps/sumer.<lang>.png from the data of the disk
 ```
+
+### The map of Sumer
+
+`maps/sumer.en.png` and `maps/sumer.cs.png` show Sumer as it is in the game: the coast and relief of the world rasters,
+the Euphrates, the Tigris and their canals and tributaries, every city with its name and the roads. The picture is
+drawn from the data of the disk (`rivers/`, `places/`, `trails/`, `media/world/`, `i18n/`) by `tools/build_sumer_map.py`, so
+run `make sumer-map` after the game has grown (a new city, river or road) to bring it up to date. `--lang`, `--bbox` and
+`--pixels-per-degree` change the language, the region and the size.
 
 ## Requirements
 
