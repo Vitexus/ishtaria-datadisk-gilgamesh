@@ -37,8 +37,12 @@ nodes:
       - {text_key: enkidu.ask_gilgamesh, goto: tell_gilgamesh}
       - {text_key: enkidu.ask_civilization, goto: tell_civilization}
       - {text_key: enkidu.ask_shamhat, goto: tell_shamhat}
-      - {text_key: enkidu.ask_humbaba, goto: tell_humbaba}
-      - {text_key: enkidu.ask_death, goto: tell_death}
+      - text_key: enkidu.ask_humbaba
+        if: {quest_stage: {quest: the_cedar_forest_journey, stage: defeat_humbaba}}
+        goto: tell_humbaba
+      - text_key: enkidu.ask_death
+        if: {any: [{quest_stage: {quest: the_death_of_enkidu, stage: divine_punishment}}, {quest_stage: {quest: the_death_of_enkidu, stage: enkidu_sickens}}, {quest_stage: {quest: the_death_of_enkidu, stage: dream_of_underworld}}, {quest_stage: {quest: the_death_of_enkidu, stage: enkidu_dies}}, {quest_stage: {quest: the_death_of_enkidu, stage: gilgamesh_mourns}}]}
+        goto: tell_death
       - {text_key: enkidu.back, goto: greet}
       - {text_key: enkidu.leave}
 

@@ -30,12 +30,12 @@ stages:
     final: false
   return_to_uruk:
     text_key: quest.shamhat.return_to_uruk
-    guide: uruk_market
-    reach: {place: uruk_market, radius_m: 80, goto: present_enkidu}
+    guide: uruk_palace
+    reach: {place: uruk_palace, radius_m: 80, goto: present_enkidu}
     final: false
   present_enkidu:
     text_key: quest.shamhat.present_enkidu
-    guide: uruk_market
+    guide: uruk_palace
     final: false
   shamhat_done:
     text_key: quest.shamhat.done

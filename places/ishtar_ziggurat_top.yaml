@@ -1,0 +1,43 @@
+# The top platform of the stepped tower of Ishtar (the model of the place ishtar_temple: three stages, 16.5 m up its stairs, and the
+# red temple on the platform): where the goddess stands with her priests. The spots are on the strip of the platform east of the
+# temple, in the frame of the model (x east, z south of the temple point); the characters stand `lift_m` above the ground.
+
+- id: ishtar_top_0
+  kind: landmark
+  name_key: place.ishtar_ziggurat_top
+  radius_m: 2
+  locate: {from: ishtar_temple, bearing_deg: 251.40, distance_m: 53.3, tolerance_m: 0}
+  requires:
+    max_slope_deg: 45
+
+- id: ishtar_top_1
+  kind: landmark
+  name_key: place.ishtar_ziggurat_top
+  radius_m: 2
+  locate: {from: ishtar_temple, bearing_deg: 259.01, distance_m: 52.5, tolerance_m: 0}
+  requires:
+    max_slope_deg: 45
+
+- id: ishtar_top_2
+  kind: landmark
+  name_key: place.ishtar_ziggurat_top
+  radius_m: 2
+  locate: {from: ishtar_temple, bearing_deg: 245.01, distance_m: 56.8, tolerance_m: 0}
+  requires:
+    max_slope_deg: 45
+
+- id: ishtar_top_3
+  kind: landmark
+  name_key: place.ishtar_ziggurat_top
+  radius_m: 2
+  locate: {from: ishtar_temple, bearing_deg: 255.00, distance_m: 50.2, tolerance_m: 0}
+  requires:
+    max_slope_deg: 45
+
+- id: ishtar_top_4
+  kind: landmark
+  name_key: place.ishtar_ziggurat_top
+  radius_m: 2
+  locate: {from: ishtar_temple, bearing_deg: 246.59, distance_m: 52.9, tolerance_m: 0}
+  requires:
+    max_slope_deg: 45

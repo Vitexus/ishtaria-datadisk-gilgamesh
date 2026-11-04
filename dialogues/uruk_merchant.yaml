@@ -9,6 +9,9 @@ nodes:
   greet:
     text_key: uruk_merchant.greet
     choices:
+      - text_key: uruk_merchant.ask_king
+        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}
+        goto: tell_king
       - {text_key: uruk_merchant.ask_goods, goto: explain_goods}
       - {text_key: uruk_merchant.ask_trade, goto: explain_trade}
       - {text_key: uruk_merchant.leave}
@@ -20,5 +23,13 @@ nodes:
 
   explain_trade:
     text_key: uruk_merchant.trade
+    choices:
+      - {text_key: uruk_merchant.leave}
+
+  # Where the king is found: the hunter who asks learns the way, and the palace is marked for him (the stage's guide).
+  tell_king:
+    text_key: uruk_merchant.king
+    effects:
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: seek_king_palace}}
     choices:
       - {text_key: uruk_merchant.leave}

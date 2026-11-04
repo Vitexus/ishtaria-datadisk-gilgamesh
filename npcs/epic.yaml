@@ -4,13 +4,14 @@
 # Gilgamesh - King of Uruk (NPC until the player later becomes him)
 - id: gilgamesh
   name_key: npc.gilgamesh
-  place: uruk_market
+  place: uruk_palace
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/gilgamesh.glb}
   dialogue: gilgamesh
   portrait: media/portraits/gilgamesh.jpg
   bio_key: npc.gilgamesh.bio
   size: 1.5
-  movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 10}
+  # The king holds court in his palace, in its courtyard; whoever seeks him asks at the market where to find him.
+  movement: {kind: wander, radius_m: 12, speed_m_s: 1.0, pause_s: 10}
   tags: [king, demigod, hero]
 
 # Wild Enkidu at the hunter's water-hole (Tablet I); civilized Enkidu stays in the city later.
@@ -35,11 +36,15 @@
   bio_key: npc.enkidu_civilized.bio
   movement: {kind: wander, radius_m: 10, speed_m_s: 1.2, pause_s: 8}
   tags: [companion, hero, civilized]
+  # He stands in the market of Uruk only for a player whom Šamḫat has brought him to (the quest shamhat_and_the_wild_man at
+  # `present_enkidu` or done): before that he is the wild man at the water-hole and nobody in Uruk has seen him.
+  visible_if: {any: [{quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}, {quest_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}]}
 
 # Ishtar - Goddess of love and war
 - id: ishtar
   name_key: npc.ishtar
-  place: ishtar_temple
+  place: ishtar_top_0
+  lift_m: 16.6
   character: {pack: protagonists, skin: skaterFemaleA, model: media/models/ishtar.glb}
   dialogue: ishtar
   portrait: media/portraits/ishtar.jpg
@@ -138,16 +143,17 @@
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.7, pause_s: 14}
   tags: [god, sky, father]
 
-# Bull of Heaven - Divine beast (appears in the great market when Ištar sends it)
+# Bull of Heaven - Divine beast (grazes on the pasture of Uruk, where Ištar's anger leaves it)
 - id: bull_of_heaven
   name_key: npc.bull_of_heaven
-  place: uruk_market
+  # It grazes on the pasture outside the walls, where there is room for a beast of that size (not in the market).
+  place: uruk_pasture
   character: {pack: survivors, skin: zombieC, model: media/models/bull_of_heaven.glb}
   dialogue: bull_of_heaven
   portrait: media/portraits/bull_of_heaven.jpg
   bio_key: npc.bull_of_heaven.bio
   size: 1.8
-  movement: {kind: wander, radius_m: 22, speed_m_s: 1.1, pause_s: 8}
+  movement: {kind: wander, radius_m: 40, speed_m_s: 0.9, pause_s: 8}
   tags: [beast, divine, punishment]
 
 # Old father of the hunter (Tablet I) — friendly: cannot be struck.

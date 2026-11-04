@@ -1,0 +1,37 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells enuma_elish and says where enuma_elish_tablet_1 lies.
+id: elder_enuma_elish_1_w
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_story.enuma_elish_woman.greet
+    choices:
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu_gate}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  akitu_gate:
+    branch:
+      - {if: {flag: "festival:akitu"}, goto: akitu_now}
+      - {goto: akitu}
+
+  akitu:
+    text_key: elder_tales_woman.akitu
+    choices:
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  akitu_now:
+    text_key: elder_tales_woman.akitu_now
+    choices:
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  where:
+    text_key: elder_hint.enuma_elish_tablet_1
+    effects:
+      - {reveal_places: [enuma_elish_tablet_1]}
+    choices:
+      - {text_key: elder_tales_woman.ask_akitu, goto: akitu_gate}
+      - {text_key: elder_tales_woman.leave}

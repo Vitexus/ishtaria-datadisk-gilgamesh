@@ -5,7 +5,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 9.66, distance_m: 3038.1, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 13.31, distance_m: 3077.7, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -56,7 +56,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 10.83, distance_m: 2713.4, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 14.00, distance_m: 2746.6, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -107,7 +107,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 12.32, distance_m: 2390.0, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 13.51, distance_m: 2401.5, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -158,7 +158,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 14.27, distance_m: 2068.8, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 14.89, distance_m: 2074.7, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -209,7 +209,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 18.95, distance_m: 1770.9, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 20.14, distance_m: 1784.1, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -260,7 +260,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 28.82, distance_m: 1535.1, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 31.86, distance_m: 1583.5, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -311,7 +311,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 45.00, distance_m: 1435.4, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 44.87, distance_m: 1432.2, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -362,7 +362,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 59.97, distance_m: 1368.7, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 60.07, distance_m: 1373.1, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -413,7 +413,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 74.95, distance_m: 1366.9, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 75.24, distance_m: 1393.3, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -464,7 +464,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 88.97, distance_m: 1390.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 88.98, distance_m: 1410.9, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -566,7 +566,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 121.16, distance_m: 1227.1, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 115.21, distance_m: 1490.6, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -617,7 +617,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 138.46, distance_m: 1289.3, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 129.49, distance_m: 1517.6, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -668,7 +668,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 151.27, distance_m: 1476.9, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 142.28, distance_m: 1637.2, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -719,7 +719,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 159.12, distance_m: 1739.3, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 157.86, distance_m: 1754.3, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -770,7 +770,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 163.48, distance_m: 2039.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 158.93, distance_m: 2095.1, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -821,7 +821,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 165.76, distance_m: 2357.5, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 165.18, distance_m: 2363.7, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -872,7 +872,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 167.49, distance_m: 2678.5, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 170.33, distance_m: 2652.7, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -923,7 +923,7 @@
   kind: landmark
   name_key: place.uruk_riverbank
   radius_m: 20
-  locate: {from: uruk, bearing_deg: 168.86, distance_m: 3001.6, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 170.88, distance_m: 2982.7, tolerance_m: 0}
   wildlife:
     radius_m: 230
     density: 6.0
@@ -970,16 +970,16 @@
   requires:
     max_slope_deg: 45
 
-# The quay of Uruk on the Euphrates: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) on the bank nearest to the city,
-# 1151 m from the anchor, its front turned to the river.
+# The quay of Uruk on the Euphrates: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) at the river gate, where the river comes
+# nearest to the wall (11 m), 1246 m from the anchor, its front turned to the river.
 - id: uruk_harbour
   kind: landmark
   name_key: place.uruk_harbour
   radius_m: 14
-  locate: {from: uruk, bearing_deg: 120.74, distance_m: 1143.3, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 58.53, distance_m: 1238.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_dock.glb
-    yaw_deg: 60.6
+    yaw_deg: 134.3
     visible_m: 1400
   requires:
     max_slope_deg: 45
@@ -988,11 +988,11 @@
   kind: landmark
   name_key: place.uruk_boat
   radius_m: 8
-  locate: {from: uruk, bearing_deg: 120.17, distance_m: 1171.0, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 57.77, distance_m: 1268.4, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_merchant.glb
     scale_m: 0.75
-    yaw_deg: 336.0
+    yaw_deg: 22.7
     visible_m: 1200
     on_water: true
   requires:
@@ -1002,11 +1002,11 @@
   kind: landmark
   name_key: place.uruk_boat
   radius_m: 8
-  locate: {from: uruk, bearing_deg: 121.33, distance_m: 1175.6, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 58.78, distance_m: 1266.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_bireme.glb
     scale_m: 0.60
-    yaw_deg: 332.9
+    yaw_deg: 19.6
     visible_m: 1200
     on_water: true
   requires:
@@ -1016,13 +1016,15 @@
   kind: landmark
   name_key: place.uruk_boat
   radius_m: 8
-  locate: {from: uruk, bearing_deg: 119.43, distance_m: 1162.9, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 57.19, distance_m: 1264.5, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.70
-    yaw_deg: 326.7
+    yaw_deg: 13.4
     visible_m: 1200
     on_water: true
+    # The hunter boards it (E) and rows over the Euphrates at 2.5 m/s; the clip is the one the hunter's model plays aboard.
+    vehicle: {speed_m_s: 2.5, clip: Row}
   requires:
     max_slope_deg: 45
 
@@ -1030,11 +1032,11 @@
   kind: landmark
   name_key: place.uruk_boat
   radius_m: 8
-  locate: {from: uruk, bearing_deg: 122.05, distance_m: 1162.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 59.55, distance_m: 1249.4, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.70
-    yaw_deg: 328.8
+    yaw_deg: 15.5
     visible_m: 1200
     on_water: true
   requires:
@@ -1044,11 +1046,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 9.66, distance_m: 2936.7, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 13.54, distance_m: 2673.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 7.6
+    yaw_deg: 16.0
     visible_m: 1100
     on_water: true
   requires:
@@ -1058,11 +1060,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 11.46, distance_m: 2658.0, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 13.42, distance_m: 2381.0, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 348.6
+    yaw_deg: 329.2
     visible_m: 1100
     on_water: true
   requires:
@@ -1072,11 +1074,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 11.72, distance_m: 2364.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 12.65, distance_m: 2098.2, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 169.6
+    yaw_deg: 127.6
     visible_m: 1100
     on_water: true
   requires:
@@ -1086,11 +1088,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 14.75, distance_m: 2094.0, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 21.69, distance_m: 1850.8, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 352.9
+    yaw_deg: 48.7
     visible_m: 1100
     on_water: true
   requires:
@@ -1100,11 +1102,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 16.76, distance_m: 1808.9, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 29.16, distance_m: 1642.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 202.2
+    yaw_deg: 250.4
     visible_m: 1100
     on_water: true
   requires:
@@ -1114,11 +1116,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 24.31, distance_m: 1577.7, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 38.51, distance_m: 1463.2, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 38.6
+    yaw_deg: 52.6
     visible_m: 1100
     on_water: true
   requires:
@@ -1128,11 +1130,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 35.73, distance_m: 1440.3, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 52.28, distance_m: 1427.8, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 46.6
+    yaw_deg: 27.8
     visible_m: 1100
     on_water: true
   requires:
@@ -1142,11 +1144,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 52.96, distance_m: 1428.7, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 65.44, distance_m: 1348.5, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 20.6
+    yaw_deg: 78.2
     visible_m: 1100
     on_water: true
   requires:
@@ -1156,11 +1158,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 64.90, distance_m: 1346.3, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 78.29, distance_m: 1399.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 24.5
+    yaw_deg: 9.1
     visible_m: 1100
     on_water: true
   requires:
@@ -1170,11 +1172,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 78.02, distance_m: 1370.8, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 90.20, distance_m: 1406.7, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 207.2
+    yaw_deg: 189.3
     visible_m: 1100
     on_water: true
   requires:
@@ -1184,11 +1186,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 90.13, distance_m: 1390.4, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 103.72, distance_m: 1312.8, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 182.9
+    yaw_deg: 144.8
     visible_m: 1100
     on_water: true
   requires:
@@ -1198,11 +1200,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 103.26, distance_m: 1289.7, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 158.68, distance_m: 1582.6, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 332.4
+    yaw_deg: 78.6
     visible_m: 1100
     on_water: true
   requires:
@@ -1212,11 +1214,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 132.67, distance_m: 1270.8, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 153.09, distance_m: 1955.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 340.6
+    yaw_deg: 199.5
     visible_m: 1100
     on_water: true
   requires:
@@ -1226,11 +1228,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 145.74, distance_m: 1413.2, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 162.06, distance_m: 2139.4, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 165.1
+    yaw_deg: 213.1
     visible_m: 1100
     on_water: true
   requires:
@@ -1240,67 +1242,11 @@
   kind: landmark
   name_key: place.uruk_fisher
   radius_m: 6
-  locate: {from: uruk, bearing_deg: 156.62, distance_m: 1585.1, tolerance_m: 0}
+  locate: {from: uruk, bearing_deg: 165.11, distance_m: 2418.3, tolerance_m: 0}
   structure:
     model: media/models/architecture/zeroad/pers_fishship.glb
     scale_m: 0.62
-    yaw_deg: 161.8
-    visible_m: 1100
-    on_water: true
-  requires:
-    max_slope_deg: 45
-
-- id: uruk_fisher_16
-  kind: landmark
-  name_key: place.uruk_fisher
-  radius_m: 6
-  locate: {from: uruk, bearing_deg: 161.18, distance_m: 1838.5, tolerance_m: 0}
-  structure:
-    model: media/models/architecture/zeroad/pers_fishship.glb
-    scale_m: 0.62
-    yaw_deg: 161.0
-    visible_m: 1100
-    on_water: true
-  requires:
-    max_slope_deg: 45
-
-- id: uruk_fisher_17
-  kind: landmark
-  name_key: place.uruk_fisher
-  radius_m: 6
-  locate: {from: uruk, bearing_deg: 164.43, distance_m: 2112.5, tolerance_m: 0}
-  structure:
-    model: media/models/architecture/zeroad/pers_fishship.glb
-    scale_m: 0.62
-    yaw_deg: 181.1
-    visible_m: 1100
-    on_water: true
-  requires:
-    max_slope_deg: 45
-
-- id: uruk_fisher_18
-  kind: landmark
-  name_key: place.uruk_fisher
-  radius_m: 6
-  locate: {from: uruk, bearing_deg: 166.07, distance_m: 2395.4, tolerance_m: 0}
-  structure:
-    model: media/models/architecture/zeroad/pers_fishship.glb
-    scale_m: 0.62
-    yaw_deg: 350.1
-    visible_m: 1100
-    on_water: true
-  requires:
-    max_slope_deg: 45
-
-- id: uruk_fisher_19
-  kind: landmark
-  name_key: place.uruk_fisher
-  radius_m: 6
-  locate: {from: uruk, bearing_deg: 166.97, distance_m: 2684.1, tolerance_m: 0}
-  structure:
-    model: media/models/architecture/zeroad/pers_fishship.glb
-    scale_m: 0.62
-    yaw_deg: 186.0
+    yaw_deg: 199.5
     visible_m: 1100
     on_water: true
   requires:

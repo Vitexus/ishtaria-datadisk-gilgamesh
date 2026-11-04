@@ -26,7 +26,7 @@
   place: hunter_home_01
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_etana_1_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -36,7 +36,7 @@
   place: hunter_home_01
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_1_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -86,7 +86,7 @@
   place: hunter_home_02
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_adapa_1_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -96,7 +96,7 @@
   place: hunter_home_02
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_dilmun_1_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -146,7 +146,7 @@
   place: hunter_home_03
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_1_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -156,7 +156,7 @@
   place: hunter_home_03
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_nergal_1_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -206,7 +206,7 @@
   place: hunter_home_04
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_atrahasis_2_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -216,7 +216,7 @@
   place: hunter_home_04
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_ishtar_descent_2_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -266,7 +266,7 @@
   place: hunter_home_05
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_etana_2_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -276,7 +276,7 @@
   place: hunter_home_05
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_2_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -326,7 +326,7 @@
   place: hunter_home_06
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_adapa_2_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -336,7 +336,7 @@
   place: hunter_home_06
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_dilmun_2_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -386,7 +386,7 @@
   place: hunter_home_07
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_2_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -396,7 +396,7 @@
   place: hunter_home_07
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_nergal_2_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -446,7 +446,7 @@
   place: hunter_home_08
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_atrahasis_3_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -456,7 +456,7 @@
   place: hunter_home_08
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_ishtar_descent_3_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -506,7 +506,7 @@
   place: hunter_home_09
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_etana_3_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -516,7 +516,7 @@
   place: hunter_home_09
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_3_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -566,7 +566,7 @@
   place: hunter_home_10
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_3_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -576,7 +576,7 @@
   place: hunter_home_10
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_ishtar_descent_4_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -626,7 +626,7 @@
   place: hunter_home_11
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_4_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -636,7 +636,7 @@
   place: hunter_home_11
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_4_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -686,7 +686,7 @@
   place: hunter_home_12
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_5_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -696,7 +696,7 @@
   place: hunter_home_12
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_ishtar_descent_5_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -746,7 +746,7 @@
   place: hunter_home_13
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_6_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -756,7 +756,7 @@
   place: hunter_home_13
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_5_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -806,7 +806,7 @@
   place: hunter_home_14
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_enuma_elish_7_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -816,7 +816,7 @@
   place: hunter_home_14
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_ishtar_descent_6_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -866,7 +866,7 @@
   place: hunter_home_15
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_atrahasis_1_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -876,7 +876,7 @@
   place: hunter_home_15
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_6_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -926,7 +926,7 @@
   place: hunter_home_16
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_etana_1_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -936,7 +936,7 @@
   place: hunter_home_16
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_enuma_elish_7_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]
@@ -986,7 +986,7 @@
   place: hunter_home_17
   character: {pack: retro, skin: humanMaleA, model: media/models/crowd_old_man.glb}
   portrait: media/portraits/crowd_old_man.jpg
-  dialogue: elder_tales_man
+  dialogue: elder_adapa_1_m
   bio_key: npc.village_old_man.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.48, pause_s: 6}
   tags: [crowd, villager, elder]
@@ -996,7 +996,7 @@
   place: hunter_home_17
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_grandmother.glb}
   portrait: media/portraits/crowd_grandmother.jpg
-  dialogue: elder_tales_woman
+  dialogue: elder_ishtar_descent_1_w
   bio_key: npc.village_old_woman.bio
   movement: {kind: wander, radius_m: 8, speed_m_s: 0.42, pause_s: 8}
   tags: [crowd, villager, elder]

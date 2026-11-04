@@ -18,6 +18,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from building_sink import sink_field  # noqa: E402
+from build_elders import MAN as ELDER_MAN, WOMAN as ELDER_WOMAN, dialogue_id  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
@@ -140,10 +141,12 @@ with open(os.path.join(ROOT, "places", "hunter_village_homes.yaml"), "w") as pla
             bio = "village_" + role
             if role == "woman" and expecting:
                 glb, bio = "crowd_pregnant_woman", "village_pregnant_woman"
+            # The old ones are the elders of the world: each tells one tale and says where one tablet lies (tools/build_elders.py).
+            dialogue = {"old_man": dialogue_id(ELDER_MAN, number), "old_woman": dialogue_id(ELDER_WOMAN, number)}.get(role, "crowd_passersby")
             folk.write(
                 "- id: hv_h%02d_%s\n  name_key: npc.village_%s\n  place: %s\n"
                 "  character: {pack: %s, skin: %s, model: media/models/%s.glb}\n"
-                "  portrait: media/portraits/%s.jpg\n  dialogue: crowd_passersby\n  bio_key: npc.%s.bio\n"
+                "  portrait: media/portraits/%s.jpg\n  dialogue: %s\n  bio_key: npc.%s.bio\n"
                 "  movement: {kind: wander, radius_m: %g, speed_m_s: %g, pause_s: %g}\n  tags: %s\n\n"
-                % (number, role, role, home, pack, skin, glb, glb, bio, radius, speed, pause, tags))
+                % (number, role, role, home, pack, skin, glb, glb, dialogue, bio, radius, speed, pause, tags))
 print("%d homes, %d villagers" % (len(homes), len(homes) * len(FOLK)))

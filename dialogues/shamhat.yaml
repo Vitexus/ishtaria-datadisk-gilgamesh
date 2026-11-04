@@ -1,5 +1,9 @@
 # Shamhat Dialogue Tree
 # Temple priestess who civilized Enkidu
+#
+# She meets Enkidu only at the water-hole, so before she and Enkidu have come back to Uruk together (the quest
+# shamhat_and_the_wild_man at `present_enkidu`, or done) she knows nothing of him: the questions about Enkidu are not asked
+# yet, and the king is spoken of without him.
 
 id: shamhat
 status: reviewed
@@ -12,10 +16,19 @@ nodes:
       - text_key: shamhat.hunter_plan
         if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_shamhat}}
         goto: accept_journey
-      - {text_key: shamhat.ask_enkidu, goto: tell_enkidu}
-      - {text_key: shamhat.ask_gilgamesh, goto: tell_gilgamesh}
+      - text_key: shamhat.ask_enkidu
+        if: {any: [{quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}, {quest_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}]}
+        goto: tell_enkidu
+      - text_key: shamhat.ask_gilgamesh
+        if: {any: [{quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}, {quest_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}]}
+        goto: tell_gilgamesh
+      - text_key: shamhat.ask_gilgamesh
+        if: {not: {any: [{quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}, {quest_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}]}}
+        goto: tell_gilgamesh_early
       - {text_key: shamhat.ask_love, goto: tell_love}
-      - {text_key: shamhat.ask_growth, goto: tell_growth}
+      - text_key: shamhat.ask_growth
+        if: {any: [{quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}, {quest_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}]}
+        goto: tell_growth
       - {text_key: shamhat.ask_ishtar_below, goto: say_ishtar_below}
       - {text_key: shamhat.leave}
 
@@ -34,6 +47,11 @@ nodes:
 
   tell_gilgamesh:
     text_key: shamhat.gilgamesh
+    choices:
+      - {text_key: shamhat.leave}
+
+  tell_gilgamesh_early:
+    text_key: shamhat.gilgamesh_early
     choices:
       - {text_key: shamhat.leave}
 

@@ -1,0 +1,48 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells atrahasis and says where atrahasis_tablet_3 lies.
+id: elder_atrahasis_3_m
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_tales_man.greet
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  men:
+    text_key: elder_tales_man.men
+    choices:
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  death:
+    text_key: elder_tales_man.death
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  flood:
+    text_key: elder_tales_man.flood
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  where:
+    text_key: elder_hint.atrahasis_tablet_3
+    effects:
+      - {reveal_places: [atrahasis_tablet_3]}
+    choices:
+      - {text_key: elder_tales_man.ask_men, goto: men}
+      - {text_key: elder_tales_man.ask_death, goto: death}
+      - {text_key: elder_tales_man.ask_flood, goto: flood}
+      - {text_key: elder_tales_man.leave}

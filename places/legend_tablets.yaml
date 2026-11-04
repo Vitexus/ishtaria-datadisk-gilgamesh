@@ -7,9 +7,11 @@
 - id: gilgamesh_epic_tablet_1
   kind: landmark
   name_key: place.gilgamesh_epic_tablet_1
-  parent: hunter_waterhole
+  parent: ziggurat_of_uruk
   radius_m: 1
-  locate: {from: hunter_waterhole, bearing_deg: 70, distance_m: 15, tolerance_m: 0}
+  # In the court of the sacred precinct between the terrace of Anu and the stepped tower of Ishtar, where the epic begins: not on
+  # the ground by the water-hole.
+  locate: {from: ziggurat_of_uruk, bearing_deg: 90, distance_m: 14, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_epic_tablet_1.glb
     visible_m: 80
@@ -20,9 +22,10 @@
 - id: gilgamesh_epic_tablet_2
   kind: landmark
   name_key: place.gilgamesh_epic_tablet_2
-  parent: uruk_market
+  parent: ziggurat_of_uruk
   radius_m: 1
-  locate: {from: uruk_market, bearing_deg: 20, distance_m: 18, tolerance_m: 0}
+  # The same court, on its other side (the first tablets lie where the temples are, not on the pavement of the market).
+  locate: {from: ziggurat_of_uruk, bearing_deg: 270, distance_m: 14, tolerance_m: 0}
   structure:
     model: media/models/architecture/gilgamesh_epic_tablet_2.glb
     visible_m: 80

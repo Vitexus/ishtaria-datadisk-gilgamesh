@@ -23,7 +23,9 @@ nodes:
         goto: show_walls
       - {text_key: ninsun.ask_son, goto: speak_of_gilgamesh}
       - {text_key: ninsun.ask_dream, goto: interpret_dream}
-      - {text_key: ninsun.ask_enkidu, goto: speak_of_enkidu}
+      - text_key: ninsun.ask_enkidu
+        if: {any: [{quest_stage: {quest: enkidu_meets_gilgamesh, stage: become_brothers}}, {quest_stage: {quest: the_meeting_of_equals, stage: become_brothers}}]}
+        goto: speak_of_enkidu
       - {text_key: ninsun.leave}
 
   bless_cedar:
@@ -78,8 +80,19 @@ nodes:
       - {text_key: ninsun.ask_enkidu_dream, goto: interpret_enkidu_dream}
       - {text_key: ninsun.leave}
 
+  # Before the story has got there the answer leaves out what the player cannot know yet (no anachronism, no spoiler).
   interpret_enkidu_dream:
+    branch:
+      - {if: {any: [{quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}, {quest_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}]}, goto: interpret_enkidu_dream_known}
+      - {goto: interpret_enkidu_dream_early}
+
+  interpret_enkidu_dream_known:
     text_key: ninsun.enkidu_dream
+    choices:
+      - {text_key: ninsun.leave}
+
+  interpret_enkidu_dream_early:
+    text_key: ninsun.enkidu_dream_early
     choices:
       - {text_key: ninsun.leave}
 

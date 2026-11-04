@@ -13,6 +13,7 @@ gardens along the watercourses, and Uruk had its own quay (kar) on the Euphrates
   * fishing boats (0 A.D. fishing ship, scaled to a river boat) spread along the river.
 Positions are surveyed points from the anchor of Uruk (bearing and distance), exactly where this puts them. Deterministic.
 """
+import json
 import math
 import os
 import random
@@ -26,6 +27,7 @@ OUT = os.path.join(ROOT, "places", "uruk_river.yaml")
 STEP = 10.0            # metres per pixel of the patch (6000 m over 600 px)
 HALF = 300
 ZEROAD = "media/models/architecture/zeroad/"
+QUAY_SHIFT_M = 40.0    # the quay stands this far along the bank from the point of the river nearest to the gate
 
 water = np.array(Image.open(os.path.join(ROOT, "media", "terrain", "uruk_water.png"))).astype(int)
 wet = water > 0
@@ -124,24 +126,38 @@ for i in range(0, len(centre), 33):
         "    density: 6.0",
     ] + flora_block() + ["  requires:", "    max_slope_deg: 45", ""]
 
-# --- the harbour, on the river's bank nearest to the city
-nearest = min(range(len(centre)), key=lambda k: math.hypot(*centre[k]))
-cx, cz = centre[nearest]
+# --- the harbour: where the river comes nearest to one of the gates of the wall (not to the middle of the city). The gates are
+# those of the plan (tools/data/uruk_city.json); the water gate, where a canal runs under the wall, is no gate of the roads.
+with open(os.path.join(HERE, "data", "uruk_city.json")) as handle:
+    GATES = [g for g in json.load(handle)["gates"] if g["name"] != "water"]
+wet_rows, wet_cols = np.nonzero(wet)
+wet_x = (wet_cols + 0.5 - HALF) * STEP
+wet_z = (wet_rows + 0.5 - HALF) * STEP
+best = None
+for gate in GATES:
+    distance = np.hypot(wet_x - gate["pos"][0], wet_z - gate["pos"][1])
+    k = int(distance.argmin())
+    if best is None or distance[k] < best[0]:
+        best = (float(distance[k]), gate, (float(wet_x[k]), float(wet_z[k])))
+harbour_gate_distance, harbour_gate, water_point = best
+nearest = min(range(len(centre)), key=lambda k: math.hypot(centre[k][0] - water_point[0], centre[k][1] - water_point[1]))
 tangent = along(nearest)
-normal = (-tangent[1], tangent[0])
-if normal[0] * cx + normal[1] * cz > 0:
-    normal = (-normal[0], -normal[1])          # points from the river towards the city (the anchor is the origin)
-# the water edge on the city's side of the channel
+gx, gz = harbour_gate["pos"]
+length = math.hypot(gx - water_point[0], gz - water_point[1]) or 1.0
+normal = ((gx - water_point[0]) / length, (gz - water_point[1]) / length)    # from the river towards the gate
+# the water edge on the gate's side of the channel, then the quay a little along the bank so that it stands beside the gate
 edge = 0.0
-while is_wet(cx + normal[0] * edge, cz + normal[1] * edge):
+while is_wet(water_point[0] + normal[0] * edge, water_point[1] + normal[1] * edge):
     edge += 1.0
-bank = (cx + normal[0] * edge, cz + normal[1] * edge)
+bank = (water_point[0] + normal[0] * edge + tangent[0] * QUAY_SHIFT_M, water_point[1] + normal[1] * edge + tangent[1] * QUAY_SHIFT_M)
+while is_wet(*bank):
+    bank = (bank[0] + normal[0], bank[1] + normal[1])
 to_river = (-normal[0], -normal[1])
 quay_yaw = yaw_of(to_river)
 dock = (bank[0] + normal[0] * 8.0, bank[1] + normal[1] * 8.0)           # the dock's front reaches the water
 lines += [
-    "# The quay of Uruk on the Euphrates: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) on the bank nearest to the city,",
-    "# %.0f m from the anchor, its front turned to the river." % math.hypot(*bank),
+    "# The quay of Uruk on the Euphrates: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) at the %s gate, where the river comes" % harbour_gate["name"],
+    "# nearest to the wall (%.0f m), %.0f m from the anchor, its front turned to the river." % (harbour_gate_distance, math.hypot(*bank)),
     "- id: uruk_harbour",
     "  kind: landmark",
     "  name_key: place.uruk_harbour",
@@ -158,6 +174,7 @@ lines += [
 moored = [("pers_merchant", 0.75, -11.0, 20.0, "merchant ship"), ("pers_bireme", 0.6, 13.0, 24.0, "bireme"),
           ("pers_fishship", 0.7, -26.0, 12.0, "fishing boat"), ("pers_fishship", 0.7, 27.0, 10.0, "fishing boat")]
 boat = 0
+ferry = False       # the first fishing boat moored at the quay is the one the hunter can row
 for model, scale, lateral, out_m, label in moored:
     # lateral along the bank (the river's direction), out into the water from the water's edge
     x = bank[0] + tangent[0] * lateral + to_river[0] * out_m
@@ -177,10 +194,14 @@ for model, scale, lateral, out_m, label in moored:
         "    yaw_deg: %.1f" % (yaw_of(tangent) + rng.uniform(-6, 6)),
         "    visible_m: 1200",
         "    on_water: true",
+    ] + (["    # The hunter boards it (E) and rows over the Euphrates at 2.5 m/s; the clip is the one the hunter's model plays aboard.",
+          "    vehicle: {speed_m_s: 2.5, clip: Row}"] if model == "pers_fishship" and not ferry else []) + [
         "  requires:",
         "    max_slope_deg: 45",
         "",
     ]
+    if model == "pers_fishship":
+        ferry = True
 
 # --- fishing boats on the river, a few hundred metres apart
 fishers = 0

@@ -20,7 +20,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 sys.path.insert(0, HERE)
-from building_sink import sink_field  # noqa: E402
+from building_sink import sink_field, sink_for  # noqa: E402
 from city_kinds import kind_of  # noqa: E402
 
 PLAN = os.path.join(HERE, "data", "uruk_city.json")
@@ -79,7 +79,11 @@ def main():
             # footprint (the geometric mean of the two), the height only a little off it for a lower or taller house
             s_all = math.sqrt(sx * sz)
             wanted = max(h0, 3.0) * max(floors, 1) + 0.8
-            scale = [sx, min(max(wanted / dy, 0.85 * s_all), 1.15 * s_all), sz]
+            # `wanted` is the height above the ground: the model's lowest `sink_for(model)` metres of its own height (the
+            # stair below the floor) are buried, so the height shown is (dy - that) * the scale, and the buried part
+            # shrinks with the scale (`sink_field(..., factor)` below). A fixed 3 m buried the smaller houses almost whole.
+            buried = sink_for(name) or 0.0
+            scale = [sx, min(max(wanted / (dy - buried), 0.85 * s_all), 1.15 * s_all), sz]
         rows.append((x, z, model, yaw, scale, (w, d)))
     rows.sort(key=lambda r: (round(r[1]), r[0]))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -90,7 +94,7 @@ def main():
         for x, z, model, yaw, scale, (w, d) in rows:
             out.write(
                 f"  - {{model: {model}, x: {x:.2f}, z: {z:.2f}, yaw_deg: {yaw:.1f}, "
-                f"scale: [{scale[0]:.3f}, {scale[1]:.3f}, {scale[2]:.3f}], footprint: [{w:.2f}, {d:.2f}]{sink_field(model)}}}\n"
+                f"scale: [{scale[0]:.3f}, {scale[1]:.3f}, {scale[2]:.3f}], footprint: [{w:.2f}, {d:.2f}]{sink_field(model, scale[1] if '/zeroad/' in model else 1.0)}}}\n"
             )
     sites = sum(1 for r in rows if "uruk_site_" in r[2])
     print(f"{OUT}: {len(rows)} buildings ({len(rows) - sites} finished 0 A.D. houses, {sites} building sites)")

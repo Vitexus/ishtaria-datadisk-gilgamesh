@@ -1,0 +1,26 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells dilmun and says where dilmun_tablet_2 lies.
+id: elder_dilmun_2_w
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_story.dilmun_woman.greet
+    choices:
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  dilmun:
+    text_key: elder_tales_woman.dilmun
+    choices:
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  where:
+    text_key: elder_hint.dilmun_tablet_2
+    effects:
+      - {reveal_places: [dilmun_tablet_2]}
+    choices:
+      - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
+      - {text_key: elder_tales_woman.leave}

@@ -44,9 +44,18 @@ stages:
     text_key: quest.hunter.seek_gilgamesh
     guide: uruk_market
     final: false
+  # The king sits in his palace, not in the market: the hunter asks at the market where to find him (the merchant's answer).
+  seek_king_palace:
+    text_key: quest.hunter.seek_king_palace
+    guide: uruk_palace
+    fail_restart: {stage: seek_king_palace, place: uruk_market}
+    final: false
   seek_shamhat:
     text_key: quest.hunter.seek_shamhat
     guide: ishtar_temple
+    # The king has just sent the hunter for Šamḫat: whoever dies in Uruk now (the hunter who struck a priest) stands again in the
+    # palace beside Gilgameš to seek her out again, not at the water-hole twelve kilometres away.
+    fail_restart: {stage: seek_shamhat, place: uruk_palace}
     final: false
   journey_with_shamhat:
     text_key: quest.hunter.journey_with_shamhat

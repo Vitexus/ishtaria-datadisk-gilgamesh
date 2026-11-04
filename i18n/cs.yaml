@@ -205,6 +205,7 @@ shamhat.ask_love: Ptej se na moc lásky
 shamhat.leave: Musím se věnovat svým povinnostem.
 shamhat.enkidu: "Enkidu? Našla jsem ho u vodní díry, divokého a chlupatého jako zvíře. Po šest dní a sedm nocí jsem ho milovala, a když jsem skončila, stal se z něj muž."
 shamhat.gilgamesh: "Gilgameš vládne Uruku silou, ale jeho lid trpěl, dokud nepřišel Enkidu, aby ho vyzval."
+shamhat.gilgamesh_early: "Gilgameš vládne Uruku silou, ale jeho lid pod tou silou trpí: žádný syn není v bezpečí u otce, žádná dcera u matky. Víc o tom nesmějí říct ani kněžky Ištar."
 shamhat.love: "Láska je největší moc bohů. Dokáže zkrotit i to nejdivočejší srdce a udělat z bestie člověka."
 
 # Humbabovy dialogy
@@ -1190,8 +1191,6 @@ place.uruk_riverbank: Břeh Eufratu
 place.uruk_harbour: Přístav Uruku
 place.uruk_boat: Kotvící loď
 place.hunter_road: Cesta k Uruku
-place.hunter_ferry_landing: Přístaviště na Eufratu
-place.hunter_ferry_boat: Rybářská loďka
 place.uruk_fisher: Rybářský člun
 place.hunter_village_trader: "Obchodník ve vsi"
 place.hunter_village_well: "Studna ve vsi"
@@ -1596,3 +1595,56 @@ achievement.sham_a_witness.title: "Pod okřídleným diskem"
 achievement.sham_a_witness.description: "Vyptávej se na okřídlené disky bohů, dokud ti jeden nepřeletí nad hlavou."
 achievement.mu_witness.title: "Pod nebeským vozem"
 achievement.mu_witness.description: "Vyptávej se na nebeské vozy a ohnivé šípy bohů, dokud ti jeden nepřeletí nad hlavou."
+
+# BEGIN elders (written by tools/build_elders.py; do not edit)
+elder_hint.adapa_tablet_1: "Jdi do Eridu, města boha Enkiho, dítě. První hliněná tabulka, na níž je zapsán příběh o Adapovi, leží tam na cihlové lavici."
+elder_hint.adapa_tablet_2: "Jdi k zikkuratu boha Anua, dítě. Druhá hliněná tabulka, na níž je zapsán příběh o Adapovi, leží tam na cihlové lavici."
+elder_hint.ask: "Kde bych našel některý z těch příběhů zapsaný na hlíně?"
+elder_hint.atrahasis_tablet_1: "Jdi do Eridu, města boha Enkiho, dítě. První hliněná tabulka, na níž je zapsán příběh o Atrachasísovi, leží tam na cihlové lavici."
+elder_hint.atrahasis_tablet_2: "Jdi do Nippuru, města Enlilova, dítě. Druhá hliněná tabulka, na níž je zapsán příběh o Atrachasísovi, leží tam na cihlové lavici."
+elder_hint.atrahasis_tablet_3: "Jdi do Šuruppaku, města hrdiny potopy, dítě. Třetí hliněná tabulka, na níž je zapsán příběh o Atrachasísovi, leží tam na cihlové lavici."
+elder_hint.dilmun_tablet_1: "Jdi do Eridu, města boha Enkiho, dítě. První hliněná tabulka, na níž je zapsán příběh o Dilmunu, leží tam na cihlové lavici."
+elder_hint.dilmun_tablet_2: "Jdi do Adabu, dítě. Druhá hliněná tabulka, na níž je zapsán příběh o Dilmunu, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_1: "Jdi do Eridu, města boha Enkiho, dítě. První hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_2: "Jdi do Nippuru, města Enlilova, dítě. Druhá hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_3: "Jdi do Kiše, dítě. Třetí hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_4: "Jdi k Etemenanki, babylonské věži, dítě. Čtvrtá hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_5: "Jdi do Uruku, dítě. Pátá hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_6: "Jdi k Etemenanki, babylonské věži, dítě. Šestá hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.enuma_elish_tablet_7: "Jdi do Aššuru, dítě. Sedmá hliněná tabulka, na níž je zapsána novoroční píseň o Mardukovi a Tiamat, leží tam na cihlové lavici."
+elder_hint.etana_tablet_1: "Jdi do Kiše, dítě. První hliněná tabulka, na níž je zapsán příběh o Etanovi a orlu, leží tam na cihlové lavici."
+elder_hint.etana_tablet_2: "Jdi do Kiše, dítě. Druhá hliněná tabulka, na níž je zapsán příběh o Etanovi a orlu, leží tam na cihlové lavici."
+elder_hint.etana_tablet_3: "Jdi do Kiše, dítě. Třetí hliněná tabulka, na níž je zapsán příběh o Etanovi a orlu, leží tam na cihlové lavici."
+elder_hint.ishtar_descent_tablet_1: "Jdi do Chrámu Ištar, dítě. První hliněná tabulka, na níž je zapsána píseň o sestupu Ištar, leží tam na cihlové lavici."
+elder_hint.ishtar_descent_tablet_2: "Jdi do Chrámu Eanna, dítě. Druhá hliněná tabulka, na níž je zapsána píseň o sestupu Ištar, leží tam na cihlové lavici."
+elder_hint.ishtar_descent_tablet_3: "Jdi do Nippuru, města Enlilova, dítě. Třetí hliněná tabulka, na níž je zapsána píseň o sestupu Ištar, leží tam na cihlové lavici."
+elder_hint.ishtar_descent_tablet_4: "Jdi do Uru, dítě. Čtvrtá hliněná tabulka, na níž je zapsána píseň o sestupu Ištar, leží tam na cihlové lavici."
+elder_hint.ishtar_descent_tablet_5: "Jdi do Eridu, města boha Enkiho, dítě. Pátá hliněná tabulka, na níž je zapsána píseň o sestupu Ištar, leží tam na cihlové lavici."
+elder_hint.ishtar_descent_tablet_6: "Jdi na pastvinu za hradbami Uruku, dítě. Šestá hliněná tabulka, na níž je zapsána píseň o sestupu Ištar, leží tam na cihlové lavici."
+elder_hint.nergal_tablet_1: "Jdi do Nippuru, města Enlilova, dítě. První hliněná tabulka, na níž je zapsán příběh o Nergalovi a Ereškigal, leží tam na cihlové lavici."
+elder_hint.nergal_tablet_2: "Jdi do Larsy, dítě. Druhá hliněná tabulka, na níž je zapsán příběh o Nergalovi a Ereškigal, leží tam na cihlové lavici."
+elder_story.adapa_man.greet: "Posaď se, dítě. Znám příběh o Adapovi z Eridu, moudrém muži, který přišel o věčný život, tak jak mi ho vyprávěl otec. Ptej se, povím."
+elder_story.dilmun_woman.greet: "Pojď blíž k ohni, maličká. Znám příběh o Dilmunu, čisté zemi, a o Enkim a osmi rostlinách, tak jak ho zpívala moje matka. Ptej se, povím."
+elder_story.enuma_elish_man.greet: "Posaď se, dítě. Každý Nový rok slyším velkou píseň o Mardukovi a Tiamat a znám ji nazpaměť. Ptej se, povím."
+elder_story.enuma_elish_woman.greet: "Pojď blíž k ohni, maličká. Nosím lampu v novoročním průvodu a píseň o Mardukovi a Tiamat znám. Ptej se, zazpívám."
+elder_story.etana_man.greet: "Posaď se, dítě. Království sestoupilo z nebe do Kiše a já vím, jak se našlo: stará povídka o Etanovi a orlu, tak jak mi ji vyprávěl otec. Ptej se, povím."
+elder_story.nergal_woman.greet: "Pojď blíž k ohni, maličká. Vím, proč spolu bydlí mor a mrtví: příběh o Nergalovi a Ereškigal. Ptej se, povím."
+# END elders
+
+# BEGIN roads (written by tools/build_roads.py; do not edit)
+place.uruk_gate_northwest: "Severozápadní brána Uruku"
+place.uruk_gate_river: "Říční brána Uruku"
+# END roads
+
+# Early answers of characters: what they say before the story has got to the thing they would otherwise speak of.
+uruk_temple_courtesan.b_early: "Šamḫat je naše sestra, kněžka, které chrám svěřuje nejtěžší úkoly. Moudrá žena ví, co hýbe mužským srdcem."
+uruk_alewife.b_early: "Kolem mých dveří chodí každý. Vojáci říkají, že jim král nedá oddech. Kupci říkají, že na cestách je klid. A písaři pijí nejvíc a říkají nejméně."
+uruk_elder.b_early: "Je silný a neklidný. Král, který lid neunavuje, je dar bohů, ale král, který ho unavuje příliš, je břemeno."
+uruk_noblewoman.brides_early: "Že král nepustil žádnou dívku svobodně k jejímu ženichovi. Dcera válečníka, nevěsta mladíka, jejich nářek došel do nebe a bohové ho vyslyšeli. Anu ho slyšel, říkají, a bohové odpoví. Na trhu o tom nemluv."
+ninsun.enkidu_dream_early: "Zdá se ti o druhovi, silném a drsném jako hvězda spadlá z nebe, kterého jsi miloval jako ženu? Přijde ten, který se vyrovná mému synu a pokoří jeho hrdé srdce."
+gilgamesh.walls_early: "Hradby Uruku! Dvě vnější hradby a mezi nimi vnitřní. Postavené mýma rukama a prací mého lidu, svědčí o naší síle. Žádný nepřítel je nepřekoná!"
+gilgamesh.friendship_early: "Enkidu? Je to můj bratr, můj rovnocenný. S ním po boku se nebojím nikoho."
+place.ishtar_ziggurat_top: "Vrchol Ištařina stupňovitého chrámu"
+quest.hunter.seek_king_palace: "Král sídlí ve svém paláci: najdi velký palác Uruku, severovýchodně od posvátného okrsku, a pověz Gilgamešovi o divokém muži."
+uruk_merchant.ask_king: "Kde najdu krále?"
+uruk_merchant.king: "Gilgameš? Soudí a vládne ve svém paláci, severovýchodně od posvátného okrsku. Nemůžeš ho minout: největší střecha v Uruku a stráže u každých dveří. Dávej tam pozor na jazyk."

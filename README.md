@@ -98,6 +98,22 @@ Story beats:
 - **Anu**: Sky god, father of Ishtar
 - **Bull of Heaven**: Divine beast sent to punish Gilgamesh
 
+### Elders, roads and the harbour
+
+- **Elders** (`tools/build_elders.py`): every elder (an NPC tagged `elder`: one at the market of Uruk and two at each home of
+  the hunter's village) knows ONE tale (men: Atra-Hasis, Etana, Adapa, the New Year song; women: Ishtar's descent, the New Year
+  song, Dilmun, Nergal) and, as a separate choice of the dialogue, says where ONE clay tablet of it lies (`reveal_places` of that
+  tablet alone). To learn the other tales, or where the other tablets lie, the player asks other elders. The tool writes
+  `dialogues/elder_<story>_<n>_<m|w>.yaml`, the texts between `# BEGIN elders` and `# END elders` of `i18n/*.yaml` and points the
+  NPCs at their dialogue; `tools/build_village.py` uses the same assignment.
+- **Roads** (`tools/build_roads.py`): a road leaves the wall by a gate. The hunter's road ends at the gate nearest to the village
+  (north-west), a short road leads from the gate the Euphrates comes nearest to (the river gate, 11 m) to the quay
+  (`tools/build_river_life.py` puts the quay there; the hunter's boat lies at it). There is no distant landing any more. Roads
+  from the other gates to other cities are not laid: Larsa, the only city within 25 km, lies beyond the Euphrates (250 to
+  300 m wide) and the server bridges 36 m at most (`JOIN_CITIES` in the tool).
+- **Houses** (`tools/build_buildings.py`): the buried part of a 0 A.D. house is 3 m of its own height, so it is scaled with the
+  house (`sink_m` = 3 times the vertical scale); the height wanted is the height above the ground.
+
 ## Spoken Lines
 
 `dpkg-buildpackage` runs `tools/render_voices.py`: every NPC line is synthesized with Piper

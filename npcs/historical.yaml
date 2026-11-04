@@ -14,7 +14,8 @@
 # High Priestess of Ishtar
 - id: high_priestess_ishtar
   name_key: npc.high_priestess_ishtar
-  place: ishtar_temple
+  place: ishtar_top_1
+  lift_m: 16.6
   character: {pack: retro, skin: humanFemaleA, model: media/models/high_priestess_ishtar.glb}
   dialogue: high_priestess_ishtar
   portrait: media/portraits/high_priestess_ishtar.jpg

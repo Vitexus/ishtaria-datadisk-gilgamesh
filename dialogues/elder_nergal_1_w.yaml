@@ -1,0 +1,26 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells nergal and says where nergal_tablet_1 lies.
+id: elder_nergal_1_w
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_story.nergal_woman.greet
+    choices:
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  nergal:
+    text_key: elder_tales_woman.nergal
+    choices:
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  where:
+    text_key: elder_hint.nergal_tablet_1
+    effects:
+      - {reveal_places: [nergal_tablet_1]}
+    choices:
+      - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
+      - {text_key: elder_tales_woman.leave}

@@ -28,6 +28,8 @@
     # Where the city stands and the fields are tilled (streets, houses, squares, canals, the foot of the wall) no wild trees,
     # rocks, flowers or animals stand (tools/build_city.py writes it with the plan).
     clear: media/terrain/uruk_clear.png
+    # The map the minimap draws: the wall and its gates, streets, houses, canals and the river (tools/build_map.py).
+    map: media/terrain/uruk_map.png
     extent_m: [6000, 6000]
     feather_m: 120
     visible_m: 2000

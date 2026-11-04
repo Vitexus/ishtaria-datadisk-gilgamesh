@@ -1,0 +1,7 @@
+# The road from the gate nearest to the river to the quay of Uruk (written by tools/build_roads.py; do not edit), laid leg by leg by the server.
+id: uruk_harbour_road
+places: [uruk_gate_river, uruk_harbour]
+start_clearance_m: 5
+end_clearance_m: 6
+# A worn field track of ox carts (tools/build_cart_track.py), 4 m of it at every step, instead of stepping stones.
+model: media/models/architecture/cart_track.glb

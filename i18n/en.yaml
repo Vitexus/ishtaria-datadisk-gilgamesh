@@ -218,6 +218,7 @@ shamhat.ask_love: Ask about love's power
 shamhat.leave: I must attend to my duties.
 shamhat.enkidu: "Enkidu? I found him at the water-hole, wild and hairy as a beast. For six days and seven nights I loved him, and when I was done, he was a man."
 shamhat.gilgamesh: "Gilgamesh rules Uruk with strength, but his people suffered until Enkidu came to challenge him."
+shamhat.gilgamesh_early: "Gilgamesh rules Uruk with strength, but his people suffer under it: no son is safe from his father's side, no daughter from her mother's. Even the priestesses of Ishtar can say no more than that."
 shamhat.love: "Love is the greatest power of the gods. It can tame the wildest heart and make a man of a beast."
 
 # Humbaba Dialogues
@@ -1208,8 +1209,6 @@ place.uruk_riverbank: Euphrates bank
 place.uruk_harbour: Quay of Uruk
 place.uruk_boat: Moored boat
 place.hunter_road: Road to Uruk
-place.hunter_ferry_landing: Landing on the Euphrates
-place.hunter_ferry_boat: Fishing boat
 place.uruk_fisher: Fishing boat
 place.hunter_village_trader: "Trader of the village"
 place.hunter_village_well: "Well of the village"
@@ -1613,3 +1612,56 @@ achievement.sham_a_witness.title: "Under the Winged Disc"
 achievement.sham_a_witness.description: "Ask around about the gods' winged discs, until one flies over your head."
 achievement.mu_witness.title: "Under the Heavenly Chariot"
 achievement.mu_witness.description: "Ask around about the heavenly chariots and fire-arrows of the gods, until one flies over your head."
+
+# BEGIN elders (written by tools/build_elders.py; do not edit)
+elder_hint.adapa_tablet_1: "Go to Eridu, the city of Enki, child. The first tablet of the tale of Adapa lies there on a brick bench, written on clay."
+elder_hint.adapa_tablet_2: "Go to the Ziggurat of Anu, child. The second tablet of the tale of Adapa lies there on a brick bench, written on clay."
+elder_hint.ask: "Where could I find one of these tales written on clay?"
+elder_hint.atrahasis_tablet_1: "Go to Eridu, the city of Enki, child. The first tablet of the tale of Atra-Hasis lies there on a brick bench, written on clay."
+elder_hint.atrahasis_tablet_2: "Go to Nippur, the city of Enlil, child. The second tablet of the tale of Atra-Hasis lies there on a brick bench, written on clay."
+elder_hint.atrahasis_tablet_3: "Go to Shuruppak, the city of the flood hero, child. The third tablet of the tale of Atra-Hasis lies there on a brick bench, written on clay."
+elder_hint.dilmun_tablet_1: "Go to Eridu, the city of Enki, child. The first tablet of the tale of Dilmun lies there on a brick bench, written on clay."
+elder_hint.dilmun_tablet_2: "Go to Adab, child. The second tablet of the tale of Dilmun lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_1: "Go to Eridu, the city of Enki, child. The first tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_2: "Go to Nippur, the city of Enlil, child. The second tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_3: "Go to Kish, child. The third tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_4: "Go to Etemenanki, the tower of Babylon, child. The fourth tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_5: "Go to Uruk, child. The fifth tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_6: "Go to Etemenanki, the tower of Babylon, child. The sixth tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.enuma_elish_tablet_7: "Go to Assur, child. The seventh tablet of the New Year song of Marduk and Tiamat lies there on a brick bench, written on clay."
+elder_hint.etana_tablet_1: "Go to Kish, child. The first tablet of the tale of Etana and the eagle lies there on a brick bench, written on clay."
+elder_hint.etana_tablet_2: "Go to Kish, child. The second tablet of the tale of Etana and the eagle lies there on a brick bench, written on clay."
+elder_hint.etana_tablet_3: "Go to Kish, child. The third tablet of the tale of Etana and the eagle lies there on a brick bench, written on clay."
+elder_hint.ishtar_descent_tablet_1: "Go to the Temple of Ishtar, child. The first tablet of the song of Ishtar going down lies there on a brick bench, written on clay."
+elder_hint.ishtar_descent_tablet_2: "Go to the Temple of Eanna, child. The second tablet of the song of Ishtar going down lies there on a brick bench, written on clay."
+elder_hint.ishtar_descent_tablet_3: "Go to Nippur, the city of Enlil, child. The third tablet of the song of Ishtar going down lies there on a brick bench, written on clay."
+elder_hint.ishtar_descent_tablet_4: "Go to Ur, child. The fourth tablet of the song of Ishtar going down lies there on a brick bench, written on clay."
+elder_hint.ishtar_descent_tablet_5: "Go to Eridu, the city of Enki, child. The fifth tablet of the song of Ishtar going down lies there on a brick bench, written on clay."
+elder_hint.ishtar_descent_tablet_6: "Go to the pasture outside the walls of Uruk, child. The sixth tablet of the song of Ishtar going down lies there on a brick bench, written on clay."
+elder_hint.nergal_tablet_1: "Go to Nippur, the city of Enlil, child. The first tablet of the tale of Nergal and Ereshkigal lies there on a brick bench, written on clay."
+elder_hint.nergal_tablet_2: "Go to Larsa, child. The second tablet of the tale of Nergal and Ereshkigal lies there on a brick bench, written on clay."
+elder_story.adapa_man.greet: "Sit, child. I know the tale of Adapa of Eridu, the wise man who lost his chance of living for ever, as my father told it. Ask, and I will tell."
+elder_story.dilmun_woman.greet: "Come close to the fire, little one. I know the tale of Dilmun, the clean land, and of Enki and the eight plants, as my mother sang it. Ask, and I will tell."
+elder_story.enuma_elish_man.greet: "Sit, child. Every New Year I hear the great song of Marduk and Tiamat, and I know it by heart. Ask, and I will tell."
+elder_story.enuma_elish_woman.greet: "Come close to the fire, little one. I carry a lamp in the procession of the New Year and I know the song of Marduk and Tiamat. Ask, and I will sing."
+elder_story.etana_man.greet: "Sit, child. Kingship came down from heaven to Kish, and I know how it was found: the old tale of Etana and the eagle, as my father told it. Ask, and I will tell."
+elder_story.nergal_woman.greet: "Come close to the fire, little one. I know why plague and the dead keep house together: the tale of Nergal and Ereshkigal. Ask, and I will tell."
+# END elders
+
+# BEGIN roads (written by tools/build_roads.py; do not edit)
+place.uruk_gate_northwest: "North-west gate of Uruk"
+place.uruk_gate_river: "River gate of Uruk"
+# END roads
+
+# Early answers of characters: what they say before the story has got to the thing they would otherwise speak of.
+uruk_temple_courtesan.b_early: "Shamhat is our sister, the priestess the temple trusts with its hardest tasks. A wise woman knows what moves a man's heart."
+uruk_alewife.b_early: "Everyone passes my door. Soldiers say the king gives them no rest. Merchants say the roads are quiet. And the scribes drink most and say least."
+uruk_elder.b_early: "He is strong and he is restless. A king who does not tire his people is a gift of the gods, but a king who tires them too much is a burden."
+uruk_noblewoman.brides_early: "That the king let no girl go free to her bridegroom. The warrior's daughter, the young man's bride, their cry reached heaven and the gods listened to it. Anu heard it, they say, and the gods will answer. Say nothing of it in the market."
+ninsun.enkidu_dream_early: "You dream of a comrade, strong and rough as a star fallen from heaven, whom you loved like a wife? One is coming who is the equal of my son and who will temper his proud heart."
+gilgamesh.walls_early: "The walls of Uruk! Two outer walls with an inner wall between them. Built with my own hands and the labour of my people, they stand as a testament to our power. No enemy may breach them!"
+gilgamesh.friendship_early: "Enkidu? He is my brother, my equal. With him at my side I fear no one."
+place.ishtar_ziggurat_top: "Top of the stepped tower of Ishtar"
+quest.hunter.seek_king_palace: "The king sits in his palace: find the great palace of Uruk, north-east of the sacred precinct, and tell Gilgamesh of the wild man."
+uruk_merchant.ask_king: "Where can I find the king?"
+uruk_merchant.king: "Gilgamesh? He holds court in his palace, north-east of the sacred precinct. You cannot miss it: the greatest roof in Uruk, and guards at every door. Mind your words there."

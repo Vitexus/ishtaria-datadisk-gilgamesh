@@ -1,13 +1,14 @@
-# The road of the hunter's village to the Euphrates (trails/hunter_road.yaml lays its stepping stones): two waypoints on the
-# way to Uruk and the landing on the west bank of the river, north of the city, where a fishing boat waits for the hunter
-# to cross over. The legs are at most 3 km long (the server's limit of one trail); the waypoints lie on the straight line
-# from the village (110.6 degrees) and are moved to the nearest suitable ground.
+# The road of the hunter's village to Uruk (trails/hunter_road.yaml lays its stepping stones): two waypoints on the way to the
+# nearest gate of the city's wall, the north-west gate (places/uruk_roads.yaml). The legs are at most 3 km long (the server's
+# limit of one trail); the waypoints lie on the straight line from the village to the gate (tools/build_roads.py moves them
+# there) and are moved to the nearest suitable ground. The old landing on the river north of the city is gone: the boat the
+# hunter rows lies at the quay of Uruk (places/uruk_river.yaml), at the gate the river comes nearest to.
 
 - id: hunter_road_1
   kind: landmark
   name_key: place.hunter_road
   radius_m: 10
-  locate: {from: hunter_village, bearing_deg: 110.6, distance_m: 2470, tolerance_m: 250}
+  locate: {from: hunter_village, bearing_deg: 126.7, distance_m: 2427, tolerance_m: 250}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}
@@ -17,44 +18,11 @@
   kind: landmark
   name_key: place.hunter_road
   radius_m: 10
-  locate: {from: hunter_village, bearing_deg: 110.6, distance_m: 4940, tolerance_m: 250}
+  locate: {from: hunter_village, bearing_deg: 126.7, distance_m: 4855, tolerance_m: 250}
   requires:
     biome: [grassland, lowland]
     height_m: {min: -5, max: 250}
     max_slope_deg: 15
-
-# The landing: the 0 A.D. dock (Wildfire Games, CC BY-SA 3.0) on the west bank of the Euphrates 2.9 km north of Uruk, its
-# front turned east to the river, and the fishing boat moored 20 m out from it. The bank of the landscape patch drops from
-# the floodplain (-2.7 m) to the river bed (-6.4 m) in some 40 m and the water stands at -3.2 m: the dock stands on the
-# last dry ground, 379 m east of the city's anchor (the shore is 45 m east of the anchor's meridian line there), and the
-# boat 20 m out, where the river is 1.5 m deep (a vehicle needs 0.5 m).
-- id: hunter_ferry_landing
-  kind: landmark
-  name_key: place.hunter_ferry_landing
-  radius_m: 14
-  locate: {from: uruk, bearing_deg: 7.57, distance_m: 2875.1, tolerance_m: 0}
-  structure:
-    model: media/models/architecture/zeroad/pers_dock.glb
-    yaw_deg: 90.0
-    visible_m: 1400
-  requires:
-    max_slope_deg: 45
-
-- id: hunter_ferry_boat
-  kind: landmark
-  name_key: place.hunter_ferry_boat
-  radius_m: 8
-  locate: {from: uruk, bearing_deg: 7.96, distance_m: 2880.8, tolerance_m: 0}
-  structure:
-    model: media/models/architecture/zeroad/pers_fishship.glb
-    scale_m: 0.7
-    yaw_deg: 0.0
-    visible_m: 1200
-    on_water: true
-    # The hunter boards it (E) and rows over the Euphrates at 2.5 m/s; the clip is the one the hunter's model plays aboard.
-    vehicle: {speed_m_s: 2.5, clip: Row}
-  requires:
-    max_slope_deg: 45
 
 # The water sellers of the road: a carter with his jars waits beside the way where each leg of it ends (the hunter's
 # water runs out on the 7 km to the river). Each stands a few metres off the track so that it is no obstacle.

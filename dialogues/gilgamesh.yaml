@@ -9,7 +9,7 @@ nodes:
     text_key: gilgamesh.greet
     choices:
       - text_key: gilgamesh.hunter_plea
-        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}
+        if: {any: [{quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}, {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_king_palace}}]}
         goto: send_shamhat
       - text_key: gilgamesh.receive_shamhat
         if: {quest_stage: {quest: shamhat_and_the_wild_man, stage: present_enkidu}}
@@ -27,10 +27,16 @@ nodes:
     text_key: gilgamesh.greet
     choices:
       - {text_key: gilgamesh.ask_advice, goto: give_advice}
-      - {text_key: gilgamesh.ask_friendship, goto: speak_friendship}
-      - {text_key: gilgamesh.ask_quest, goto: speak_quest}
+      - text_key: gilgamesh.ask_friendship
+        if: {any: [{quest_stage: {quest: enkidu_meets_gilgamesh, stage: become_brothers}}, {quest_stage: {quest: the_meeting_of_equals, stage: become_brothers}}]}
+        goto: speak_friendship
+      - text_key: gilgamesh.ask_quest
+        if: {any: [{quest_stage: {quest: the_search_for_immortality, stage: eternal_life}}, {quest_stage: {quest: the_search_for_immortality, stage: lose_plant}}]}
+        goto: speak_quest
       - {text_key: gilgamesh.ask_city, goto: speak_of_uruk}
-      - {text_key: gilgamesh.ask_mortality, goto: speak_of_mortality}
+      - text_key: gilgamesh.ask_mortality
+        if: {any: [{quest_stage: {quest: the_search_for_immortality, stage: eternal_life}}, {quest_stage: {quest: the_search_for_immortality, stage: lose_plant}}]}
+        goto: speak_of_mortality
       - {text_key: gilgamesh.ask_ishtar_below, goto: say_ishtar_below}
       - {text_key: gilgamesh.back, goto: greet}
       - {text_key: gilgamesh.leave}
@@ -106,17 +112,44 @@ nodes:
       - {text_key: gilgamesh.ask_walls, goto: speak_of_walls}
       - {text_key: gilgamesh.leave}
 
+  # Before the story has got there the answer leaves out what the player cannot know yet (no anachronism, no spoiler).
   speak_of_walls:
+    branch:
+      - {if: {any: [{quest_stage: {quest: enkidu_meets_gilgamesh, stage: become_brothers}}, {quest_stage: {quest: the_meeting_of_equals, stage: become_brothers}}]}, goto: speak_of_walls_known}
+      - {goto: speak_of_walls_early}
+
+  speak_of_walls_known:
     text_key: gilgamesh.walls
     choices:
       - {text_key: gilgamesh.leave}
 
+  speak_of_walls_early:
+    text_key: gilgamesh.walls_early
+    choices:
+      - {text_key: gilgamesh.leave}
+
+  # Before the story has got there the answer leaves out what the player cannot know yet (no anachronism, no spoiler).
   speak_friendship:
+    branch:
+      - {if: {flag: enkidu_dead}, goto: speak_friendship_known}
+      - {goto: speak_friendship_early}
+
+  speak_friendship_known:
     text_key: gilgamesh.friendship
     effects:
       - {set_flag: heard_enkidu_story}
     choices:
-      - {text_key: gilgamesh.ask_enkidu_fate, goto: speak_enkidu_fate}
+      - text_key: gilgamesh.ask_enkidu_fate
+        if: {flag: enkidu_dead}
+        goto: speak_enkidu_fate
+      - {text_key: gilgamesh.leave}
+
+  speak_friendship_early:
+    text_key: gilgamesh.friendship_early
+    choices:
+      - text_key: gilgamesh.ask_enkidu_fate
+        if: {flag: enkidu_dead}
+        goto: speak_enkidu_fate
       - {text_key: gilgamesh.leave}
 
   speak_enkidu_fate:

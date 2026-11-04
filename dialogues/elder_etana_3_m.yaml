@@ -1,0 +1,26 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells etana and says where etana_tablet_3 lies.
+id: elder_etana_3_m
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_story.etana_man.greet
+    choices:
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  etana:
+    text_key: elder_tales_man.etana
+    choices:
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  where:
+    text_key: elder_hint.etana_tablet_3
+    effects:
+      - {reveal_places: [etana_tablet_3]}
+    choices:
+      - {text_key: elder_tales_man.ask_etana, goto: etana}
+      - {text_key: elder_tales_man.leave}

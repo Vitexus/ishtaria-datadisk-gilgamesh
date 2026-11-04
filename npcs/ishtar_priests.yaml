@@ -1,0 +1,31 @@
+# The priests of Ishtar on the top platform of her stepped tower, with the goddess and the high priestess (places/ishtar_ziggurat_top.yaml).
+
+- id: ishtar_priest_1
+  name_key: npc.crowd_priest_minor
+  place: ishtar_top_2
+  lift_m: 16.6
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_priest_minor.glb}
+  portrait: media/portraits/crowd_priest_minor.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_priest_minor.bio
+  tags: [crowd, priest, ishtar]
+
+- id: ishtar_priest_2
+  name_key: npc.crowd_priest_minor
+  place: ishtar_top_3
+  lift_m: 16.6
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_priest_minor.glb}
+  portrait: media/portraits/crowd_priest_minor.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_priest_minor.bio
+  tags: [crowd, priest, ishtar]
+
+- id: ishtar_priest_3
+  name_key: npc.crowd_priest_minor
+  place: ishtar_top_4
+  lift_m: 16.6
+  character: {pack: retro, skin: humanMaleA, model: media/models/crowd_priest_minor.glb}
+  portrait: media/portraits/crowd_priest_minor.jpg
+  dialogue: crowd_passersby
+  bio_key: npc.crowd_priest_minor.bio
+  tags: [crowd, priest, ishtar]

@@ -21,16 +21,16 @@ stages:
     final: false
   bull_sent:
     text_key: quest.ishtars_wrath.bull_sent
-    guide: uruk_market
+    guide: uruk_pasture
     final: false
   bull_round_1:
     text_key: quest.ishtars_wrath.bull_round_1
-    guide: uruk_market
+    guide: uruk_pasture
     fail_restart: {stage: bull_sent, place: uruk_market}
     final: false
   bull_round_2:
     text_key: quest.ishtars_wrath.bull_round_2
-    guide: uruk_market
+    guide: uruk_pasture
     fail_restart: {stage: bull_sent, place: uruk_market}
     final: false
   defeat_bull:

@@ -1,0 +1,48 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells ishtar_descent and says where ishtar_descent_tablet_5 lies.
+id: elder_ishtar_descent_5_w
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_tales_woman.greet
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  gates:
+    text_key: elder_tales_woman.gates
+    choices:
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  return:
+    text_key: elder_tales_woman.return
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  dumuzi:
+    text_key: elder_tales_woman.dumuzi
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_woman.leave}
+
+  where:
+    text_key: elder_hint.ishtar_descent_tablet_5
+    effects:
+      - {reveal_places: [ishtar_descent_tablet_5]}
+    choices:
+      - {text_key: elder_tales_woman.ask_gates, goto: gates}
+      - {text_key: elder_tales_woman.ask_return, goto: return}
+      - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
+      - {text_key: elder_tales_woman.leave}

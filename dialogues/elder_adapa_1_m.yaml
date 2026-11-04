@@ -1,0 +1,26 @@
+# One tale and one tablet (tools/build_elders.py; do not edit): the elder tells adapa and says where adapa_tablet_1 lies.
+id: elder_adapa_1_m
+status: reviewed
+start: greet
+
+nodes:
+  greet:
+    text_key: elder_story.adapa_man.greet
+    choices:
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  adapa:
+    text_key: elder_tales_man.adapa
+    choices:
+      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_tales_man.leave}
+
+  where:
+    text_key: elder_hint.adapa_tablet_1
+    effects:
+      - {reveal_places: [adapa_tablet_1]}
+    choices:
+      - {text_key: elder_tales_man.ask_adapa, goto: adapa}
+      - {text_key: elder_tales_man.leave}

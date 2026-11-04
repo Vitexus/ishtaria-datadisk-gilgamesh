@@ -22,8 +22,20 @@ nodes:
       - {text_key: uruk_elder.ask_b, goto: explain_b}
       - {text_key: uruk_elder.leave}
 
+  # Before the story has got there the answer leaves out what the player cannot know yet (no anachronism, no spoiler).
   explain_b:
+    branch:
+      - {if: {any: [{quest_stage: {quest: enkidu_meets_gilgamesh, stage: become_brothers}}, {quest_stage: {quest: the_meeting_of_equals, stage: become_brothers}}]}, goto: explain_b_known}
+      - {goto: explain_b_early}
+
+  explain_b_known:
     text_key: uruk_elder.b
+    choices:
+      - {text_key: uruk_elder.ask_a, goto: explain_a}
+      - {text_key: uruk_elder.leave}
+
+  explain_b_early:
+    text_key: uruk_elder.b_early
     choices:
       - {text_key: uruk_elder.ask_a, goto: explain_a}
       - {text_key: uruk_elder.leave}
