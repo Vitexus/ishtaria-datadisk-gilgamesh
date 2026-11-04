@@ -13,7 +13,11 @@ STAGE := $(BUILD)/datadisks
 DB_URL := postgresql:///$(DEV_DB)?host=/var/run/postgresql
 WORLDGEN := $(abspath $(SERVER_DIR)/../ishtaria-worldgen/target/debug/ishtaria-worldgen)
 
-.PHONY: check voices stage server start repin stop logs clean drop-db prompts models city world world-map sumer-map stats
+.PHONY: raw-models check voices stage server start repin stop logs clean drop-db prompts models city world world-map sumer-map stats
+
+# Unpacks the raw model exports that git keeps compressed (models-src/**/*_raw.glb.xz); an unpacked file is left alone.
+raw-models:
+	find models-src -name '*_raw.glb.xz' -exec sh -c 'for f; do [ -f "$${f%.xz}" ] || xz -dk "$$f"; done' sh {} +
 
 check:
 	python3 $(PROTOCOL_DIR)/tests/validate_datadisk.py .

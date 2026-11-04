@@ -54,7 +54,7 @@ research/**
 models-src/*.zip
 
 # Too large for GitHub (limit 100 MB a file) or only a tool's own backup: kept on the machine, not in git.
-# gilgamesh_rodin_raw.glb is the raw Hyper3D Rodin export of Gilgameš (job ids in models-src/gilgamesh/README.md).
+# gilgamesh_rodin_raw.glb (128 MB) is committed packed, as gilgamesh_rodin_raw.glb.xz: `make raw-models` unpacks it.
 models-src/gilgamesh/gilgamesh_rodin_raw.glb
 *.blend1
 

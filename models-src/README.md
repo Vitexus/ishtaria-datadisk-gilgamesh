@@ -83,10 +83,10 @@ from Mixamo; Hyper3D only names the bones of its auto-rig the Mixamo way (`LeftH
 After `rodin_rig.py`, `gilgamesh/retarget_clips.py` bakes Run, Jump, Sit and Die from the raw Hyper3D
 clips onto `media/models/gilgamesh.glb` for the client's pose contract.
 
-## Files kept out of git
+## Files kept compressed in git
 
 `models-src/gilgamesh/gilgamesh_rodin_raw.glb` (128 MB, the raw Hyper3D Rodin export of Gilgameš) is larger than GitHub accepts
-(100 MB a file) and is not committed; Blender's `*.blend1` backups are ignored. The Gilgameš model in `media/models/` is built from
-that export by `models-src/gilgamesh/retarget_clips.py`: to redo it, get the export again from the Hyper3D job named in
-`models-src/gilgamesh/README.md` (or generate a new one) and put it at that path.
-
+(100 MB a file), so git holds it as `gilgamesh_rodin_raw.glb.xz` (36 MB, `xz -9e`). Unpack it before use with `make raw-models`
+(or `xz -dk models-src/gilgamesh/gilgamesh_rodin_raw.glb.xz`); the unpacked file is git-ignored. The Gilgameš model in
+`media/models/` is built from it by `models-src/gilgamesh/retarget_clips.py`. If you change the export, pack it again with
+`xz -9e -k models-src/gilgamesh/gilgamesh_rodin_raw.glb`. Blender's `*.blend1` backups are ignored.
