@@ -17,14 +17,19 @@
   To decide: a stateless schedule on the server, like the shepherd's cycle, or visibility decided by the client.
 - **Women's dialogues:** some hint that they are spoken for, others offer marriage. Keep to the spoiler rules of the
   other dialogues (`visible_if`, quest stages) and see the `love` system of the server (Šamḫat).
-- **Children's dialogues:** allusions to the tales of their time: Huwawa (Sumerian), also written Chuvava, Chumbaba, Huvava,
-  Chuwawa, Humbaba (Akkadian; English and German), Kombabos (Greek), and beings such as Tiamat and Hundun. Cautions:
-  - Hundun is Chinese and has no contact with Sumer around 2700 BCE: keep it only as a conscious cross-cultural wink, or drop it.
-  - Tiamat is told in the Babylonian Enūma eliš, later than the Early Dynastic II of the disk (the Sumerian sea goddess is Nammu).
-  - Huwawa is the guardian of the Cedar Forest, a later part of the Epic: the children must speak of him as a bogeyman of
-    nursery tales and not reveal the story (gate by quest stage).
-  - In this setting prefer the Sumerian form (Huwawa) and let the other names go into the notes (`research/`) and the
-    knowledge cards.
+- **Children's dialogues:** allusions to the nursery tales of their time. Decided by the owner: **Hundun is left out**
+  (Chinese, no contact with Sumer); **Tiamat is called Nammu** (the Sumerian sea goddess, the Tiamat of the Babylonian
+  Enūma eliš is later than the disk's Early Dynastic II); **Huwawa** (also written Chuvava, Chumbaba, Huvava, Chuwawa,
+  Humbaba, Kombabos) **comes for naughty children**: a bogeyman of the nursery, so the children do not reveal the Epic (he is
+  the guardian of the Cedar Forest, a later part of the story; gate by quest stage). Prefer the Sumerian form Huwawa and let
+  the other names go into the notes (`research/`) and the knowledge cards.
+
+### The interface: statistics and achievements of the player
+
+- The interface shows no statistics of the player and no list of the achievements he has earned (owner, 2026-11-04). A window
+  of the character is missing: level and experience, score, days lived, gold and the reserves, and the achievements with
+  the ones still to earn (hidden ones as "?"). See `ishtaria-client/scripts/ui/` and the achievements of the server
+  (`GET /achievements`, `src/achievements.rs`).
 
 ## ✅ Completed Features
 
