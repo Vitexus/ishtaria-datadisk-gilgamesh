@@ -87,7 +87,8 @@ the Gulf head are not drawn; their Early Dynastic courses are even less agreed o
 
 ## What the base map can and cannot hold
 
-- The strip is 8-bit: one step is 62.7 m, the range is -8000..+7998 m, so Everest rounds
+- The strip is 16-bit since ADR 0020 (it was 8-bit when this was written): one step is 0.25 m,
+  the range is -8000..+8383 m. Under the old 8-bit strip a step was 62.7 m, so Everest rounded
   to 7998 and shallow depths to -31 m. The client's local relief, the landscape patches
   and the placement of places carry the real detail.
 - Face sizes larger than 256 pay off: the rasters support up to the server's 1024 face

@@ -1,5 +1,11 @@
 # Gilgamesh Datadisk - Status Update
 
+> **Stale (checked 7 November 2026).** The counts below are far behind the disk: it holds
+> 402 places, 189 characters, 71 dialogues with 809 player choices, and 11 quests in 69 stages,
+> and its portraits are rendered from the real character models rather than placeholders.
+> `README.md` and `debian/control` carry the current figures; treat this file as a historical
+> note, not as a description of the disk.
+
 ## Overview
 This document provides a comprehensive status update on the Gilgamesh datadisk creation for Ishtaria.
 
