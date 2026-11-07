@@ -48,7 +48,7 @@ voices:
 stage: voices
 	rm -rf $(STAGE)/gilgamesh
 	mkdir -p $(STAGE)/gilgamesh
-	cp -a datadisk.yaml places buildings trails rivers npcs dialogues quests lore knowledge.yaml achievements.yaml sky_flyers.yaml music media i18n $(STAGE)/gilgamesh/
+	cp -a datadisk.yaml places buildings trails rivers npcs dialogues quests lore knowledge.yaml achievements.yaml sky_flyers.yaml easter_eggs.yaml music media i18n $(STAGE)/gilgamesh/
 	cp -a $(BUILD)/voices/media/. $(STAGE)/gilgamesh/media/
 	@echo "staged: $$(find $(STAGE)/gilgamesh/media/voice -name '*.ogg' | wc -l) spoken lines"
 
