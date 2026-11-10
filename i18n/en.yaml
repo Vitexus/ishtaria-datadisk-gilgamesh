@@ -71,6 +71,19 @@ crowd.greet: Peace of the city to you.
 crowd.reply: What news of the market?
 crowd.busy: The day is short and the work is long. Walk in peace.
 crowd.leave: Farewell.
+crowd.ask_king: "Where can I find King Gilgamesh?"
+crowd.king_palace: "The king? In the royal palace, where else. But I could not show you the way: ask someone who goes there."
+crowd.king_child: "The king? I do not know. Mother says to keep away from the palace, there are guards."
+potter.ask_king: "Where does King Gilgamesh live?"
+potter.king: "In the palace, behind his guards, I suppose. My bricks go to the temple, not to the king; I never saw the road there. Ask a merchant who trades with the court."
+weaver.ask_king: "Do you know where King Gilgamesh lives?"
+weaver.king: "The king? Child, I weave the robes of priestesses, I do not follow the king. Where he lives I could not say."
+uruk_farmer.ask_king: "Where is King Gilgamesh to be found?"
+uruk_farmer.king: "The king? I come to the city with my barley and go home before dark. I know the canals, not the court. Ask in the market."
+uruk_alewife.ask_king: "Where can I find King Gilgamesh?"
+uruk_alewife.king: "In his palace, where else? Soldiers who drink here say he gives them no rest. The way there I leave to merchants, who walk everywhere."
+tablet_writer.ask_king: "Where is the king's palace?"
+tablet_writer.king: "The king sits in the royal palace, and the royal scribes write for him there. I only write what the market asks for; the way I do not know well."
 
 # NPC Names and Bios
 npc.gilgamesh: Gilgamesh
@@ -896,6 +909,7 @@ place.kissik: Kissik
 place.adab: Adab
 place.eshnunna: Eshnunna
 place.uruk_fields: Fields of Uruk
+place.outer_fields: "Fields and orchards"
 place.isin: Isin
 place.assur: Assur
 place.terqa: Terqa

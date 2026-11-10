@@ -10,7 +10,7 @@ nodes:
       - {text_key: elder_tales_woman.ask_gates, goto: gates}
       - {text_key: elder_tales_woman.ask_return, goto: return}
       - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: gates}, {visited: return}, {visited: dumuzi}]}}
       - {text_key: elder_tales_woman.leave}
 
   gates:
@@ -18,7 +18,7 @@ nodes:
     choices:
       - {text_key: elder_tales_woman.ask_return, goto: return}
       - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: gates}, {visited: return}, {visited: dumuzi}]}}
       - {text_key: elder_tales_woman.leave}
 
   return:
@@ -26,7 +26,7 @@ nodes:
     choices:
       - {text_key: elder_tales_woman.ask_gates, goto: gates}
       - {text_key: elder_tales_woman.ask_dumuzi, goto: dumuzi}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: gates}, {visited: return}, {visited: dumuzi}]}}
       - {text_key: elder_tales_woman.leave}
 
   dumuzi:
@@ -34,7 +34,7 @@ nodes:
     choices:
       - {text_key: elder_tales_woman.ask_gates, goto: gates}
       - {text_key: elder_tales_woman.ask_return, goto: return}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: gates}, {visited: return}, {visited: dumuzi}]}}
       - {text_key: elder_tales_woman.leave}
 
   where:

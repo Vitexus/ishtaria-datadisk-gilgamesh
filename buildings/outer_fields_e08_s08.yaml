@@ -1,0 +1,16 @@
+# Fields and orchards along the canals of one square of 6 km (written by tools/build_outer_fields.py; do not edit).
+place: outer_fields_e08_s08
+items:
+  - {model: media/models/architecture/field_barley_green.glb, x: -2467.44, z: 2822.68, yaw_deg: 259.8, scale: [3.448, 0.200, 4.064], footprint: [34.48, 40.64], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2507.14, z: 2837.46, yaw_deg: 259.8, scale: [4.960, 0.200, 3.637], footprint: [49.60, 36.37], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2522.47, z: 2752.53, yaw_deg: 79.8, scale: [3.898, 0.200, 3.637], footprint: [38.98, 36.37], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: -2549.58, z: 2840.01, yaw_deg: 259.8, scale: [3.970, 0.200, 4.166], footprint: [39.70, 41.66], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2633.74, z: 2874.72, yaw_deg: 244.8, scale: [4.695, 0.200, 3.895], footprint: [46.95, 38.95], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2670.14, z: 2890.83, yaw_deg: 244.8, scale: [4.530, 0.200, 3.432], footprint: [45.30, 34.32], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_c.glb, x: -2713.62, z: 2908.23, yaw_deg: 244.8, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2763.38, z: 2929.34, yaw_deg: 244.8, scale: [3.610, 0.200, 4.878], footprint: [36.10, 48.78], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: -2807.22, z: 2951.99, yaw_deg: 244.8, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2843.15, z: 2968.42, yaw_deg: 244.8, scale: [3.934, 0.200, 2.925], footprint: [39.34, 29.25], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_b.glb, x: -2875.76, z: 2984.03, yaw_deg: 244.8, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2961.59, z: 2424.72, yaw_deg: 227.5, scale: [3.555, 0.200, 3.169], footprint: [35.55, 31.69], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_b.glb, x: -2985.33, z: 2449.41, yaw_deg: 227.5, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}

@@ -75,6 +75,7 @@ nodes:
           - {actor: npc, clip: sweep}
           - {actor: player, clip: box}
       - {set_stage: {quest: the_cedar_forest_journey, stage: defeat_humbaba}}
+      - once: {key: humbaba_reward, effects: [{gold: 50}]}
       - {set_flag: humbaba_defeated}
       - {set_stage: {quest: ishtars_wrath, stage: bath_after_victory}}
       - {teleport_place: ishtar_temple}

@@ -80,10 +80,9 @@ poloha je ±0,3 km.
 `tools/data/uruk_canals_used.json`) leží každých 30 m pole 27 m podél kanálu a 26 m (u větších kanálů 34 m) do hloubky, 14 m od osy
 kanálu (cestička); **brázdy běží od kanálu pryč**, jako teče voda (brázdová závlaha, Liverani; `RTF_LOST_IN_TIME_URUK.md`,
 Jotheri a spol. 2018: samospádová závlaha od hráze). Pole se vynechá, kde by stálo ve vodě, do 120 m od hradby nebo na jiném poli.
-Je zelený ječmen (50 %), zralý (30 %) nebo úhor (20 %); 922 polí na 99,5 ha. Pole jsou `passable` budovy místa `uruk_fields`
+Je zelený ječmen (50 %), zralý (30 %) nebo úhor (20 %). Mezi poli stojí tu a tam **datlový sad** (`kiri`, 40 × 30 m, dvanáct palem 0 A.D. ve třech variantách `orchard_date_*.glb` z `tools/build_orchard_models.py`; asi každé třetí místo, nikdy dva za sebou na jedné straně kanálu; sumerský výkres ve `WATER_WORKS.md` i `FLORA.md` mají sady vedle polí): 580 ploch (415 polí, 165 sadů) na 109,6 ha. Pole jsou `passable` budovy místa `uruk_fields`
 (server: neblokují chůzi a leží na zemi; modely `media/models/architecture/field_*.glb` z `tools/build_field_models.py`) a zapisují
-se do masky `uruk_clear.png`, aby v nich nerostly divoké stromy. **Mimo výřez Uruku (kanály 3–20 km od města) pole zatím nejsou**:
-generátor jde po polylinii a výřez je jediné místo, kde terén i voda existují v 10m rastru.
+se do masky `uruk_clear.png`, aby v nich nerostly divoké stromy. **Mimo výřez Uruku** (kanály 3–64 km od města) je klade `tools/build_outer_fields.py` stejným způsobem, ale bez 10m rastru: voda je vzdálenost od čar řek (`rivers/*.yaml`) a maska vody světa (`media/world/water.pgm`), pole se vynechají u měst a v čtverci Uruku. Vzniká 15 021 ploch (3 830 sadů) kolem 369 kanálů (809 km: kanály oblasti Eridu, průzkumné kanály Uruk–Larsa a síť kanálů oblasti Uruku do 20 m vody) ve 91 čtvercích po 6 km, každý s vlastním místem `outer_fields_*` (místo pojme nejvýš 6000 budov do 4 km od kotvy; `places/outer_fields.yaml`, `buildings/outer_fields_*.yaml`). Server v polích a sadech nenechá růst divoké stromy, kameny ani rostliny (`movement::FieldPlot`), i když tam není záplata s maskou `clear`. Nezkontrolováno v klientu: viditelnost je jen 400 m (`BUILDING_VISIBLE_M`).
 
 ## Oblast Eridu (Jotheri a spol. 2025, Antiquity)
 

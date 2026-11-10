@@ -8,13 +8,13 @@ nodes:
     text_key: elder_story.dilmun_woman.greet
     choices:
       - {text_key: elder_tales_woman.ask_dilmun, goto: dilmun}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: dilmun}}
       - {text_key: elder_tales_woman.leave}
 
   dilmun:
     text_key: elder_tales_woman.dilmun
     choices:
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: dilmun}}
       - {text_key: elder_tales_woman.leave}
 
   where:

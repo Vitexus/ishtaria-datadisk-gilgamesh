@@ -8,13 +8,13 @@ nodes:
     text_key: elder_story.etana_man.greet
     choices:
       - {text_key: elder_tales_man.ask_etana, goto: etana}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: etana}}
       - {text_key: elder_tales_man.leave}
 
   etana:
     text_key: elder_tales_man.etana
     choices:
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: etana}}
       - {text_key: elder_tales_man.leave}
 
   where:

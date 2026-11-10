@@ -1,0 +1,9 @@
+# Fields and orchards along the canals of one square of 6 km (written by tools/build_outer_fields.py; do not edit).
+place: outer_fields_e04_n02
+items:
+  - {model: media/models/architecture/orchard_date_a.glb, x: -2992.58, z: 2806.81, yaw_deg: 158.3, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2982.29, z: 2845.22, yaw_deg: 158.3, scale: [3.076, 0.200, 4.219], footprint: [30.76, 42.19], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: -2970.68, z: 2880.26, yaw_deg: 158.3, scale: [2.648, 0.200, 2.552], footprint: [26.48, 25.52], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: -2953.50, z: 2905.22, yaw_deg: 158.3, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_fallow.glb, x: -2942.26, z: 2938.45, yaw_deg: 158.3, scale: [3.636, 0.200, 3.648], footprint: [36.36, 36.48], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_c.glb, x: -2924.85, z: 2977.36, yaw_deg: 158.3, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}

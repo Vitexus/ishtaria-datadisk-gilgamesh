@@ -26,9 +26,9 @@
   place: uruk_market
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_boy_8.glb}
   portrait: media/portraits/crowd_boy_8.jpg
-  dialogue: crowd_passersby
+  dialogue: crowd_child
   bio_key: npc.crowd_boy_8.bio
-  movement: {kind: wander, radius_m: 28, speed_m_s: 2.2, pause_s: 1.5}
+  movement: {kind: wander, radius_m: 28, speed_m_s: 2.2, pause_s: 1.5, sleeps: true}
   tags: [crowd, child, look_villager_boy]
 
 - id: crowd_girl_8
@@ -36,9 +36,9 @@
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_girl_8.glb}
   portrait: media/portraits/crowd_girl_8.jpg
-  dialogue: crowd_passersby
+  dialogue: crowd_child
   bio_key: npc.crowd_girl_8.bio
-  movement: {kind: wander, radius_m: 26, speed_m_s: 2.0, pause_s: 2}
+  movement: {kind: wander, radius_m: 26, speed_m_s: 2.0, pause_s: 2, sleeps: true}
   tags: [crowd, child, look_villager_girl]
 
 - id: crowd_toddler_boy
@@ -46,9 +46,9 @@
   place: uruk_market
   character: {pack: protagonists, skin: criminalMaleA, model: media/models/crowd_toddler_boy.glb}
   portrait: media/portraits/crowd_toddler_boy.jpg
-  dialogue: crowd_passersby
+  dialogue: crowd_child
   bio_key: npc.crowd_toddler_boy.bio
-  movement: {kind: wander, radius_m: 8, speed_m_s: 1.65, pause_s: 3}
+  movement: {kind: wander, radius_m: 8, speed_m_s: 1.65, pause_s: 3, sleeps: true}
   tags: [crowd, child]
 
 - id: crowd_teen_girl
@@ -56,9 +56,9 @@
   place: uruk_market
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_teen_girl.glb}
   portrait: media/portraits/crowd_teen_girl.jpg
-  dialogue: crowd_passersby
+  dialogue: crowd_child
   bio_key: npc.crowd_teen_girl.bio
-  movement: {kind: wander, radius_m: 22, speed_m_s: 1.9, pause_s: 2}
+  movement: {kind: wander, radius_m: 22, speed_m_s: 1.9, pause_s: 2, sleeps: true}
   tags: [crowd, child]
 
 - id: crowd_apprentice_boy
@@ -66,9 +66,9 @@
   place: uruk_quarter_02
   character: {pack: survivors, skin: survivorMaleB, model: media/models/crowd_apprentice_boy.glb}
   portrait: media/portraits/crowd_apprentice_boy.jpg
-  dialogue: crowd_passersby
+  dialogue: crowd_child
   bio_key: npc.crowd_apprentice_boy.bio
-  movement: {kind: wander, radius_m: 35, speed_m_s: 2.1, pause_s: 2}
+  movement: {kind: wander, radius_m: 35, speed_m_s: 2.1, pause_s: 2, sleeps: true}
   tags: [crowd, child]
 
 - id: crowd_fisherman
@@ -78,7 +78,7 @@
   portrait: media/portraits/crowd_fisherman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_fisherman.bio
-  movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 4}
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.0, pause_s: 4, sleeps: true}
   tags: [crowd, look_villager_man]
 
 - id: crowd_baker
@@ -88,7 +88,7 @@
   portrait: media/portraits/crowd_baker.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_baker.bio
-  movement: {kind: wander, radius_m: 16, speed_m_s: 0.95, pause_s: 5}
+  movement: {kind: wander, radius_m: 16, speed_m_s: 0.95, pause_s: 5, sleeps: true}
   tags: [crowd]
 
 - id: crowd_carpenter
@@ -98,7 +98,7 @@
   portrait: media/portraits/crowd_carpenter.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_carpenter.bio
-  movement: {kind: wander, radius_m: 30, speed_m_s: 1.05, pause_s: 4}
+  movement: {kind: wander, radius_m: 30, speed_m_s: 1.05, pause_s: 4, sleeps: true}
   tags: [crowd]
 
 - id: crowd_shepherd
@@ -108,7 +108,7 @@
   portrait: media/portraits/crowd_shepherd.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_shepherd.bio
-  movement: {kind: wander, radius_m: 50, speed_m_s: 0.9, pause_s: 5}
+  movement: {kind: wander, radius_m: 50, speed_m_s: 0.9, pause_s: 5, sleeps: true}
   # Lends his look to the shepherds the server generates for every town (they drive the flocks).
   tags: [crowd, look_shepherd]
 
@@ -119,7 +119,7 @@
   portrait: media/portraits/crowd_market_woman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_market_woman.bio
-  movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4}
+  movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4, sleeps: true}
   tags: [crowd]
 
 - id: crowd_washwoman
@@ -129,7 +129,7 @@
   portrait: media/portraits/crowd_washwoman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_washwoman.bio
-  movement: {kind: wander, radius_m: 25, speed_m_s: 1.05, pause_s: 3}
+  movement: {kind: wander, radius_m: 25, speed_m_s: 1.05, pause_s: 3, sleeps: true}
   tags: [crowd]
 
 - id: crowd_young_woman
@@ -139,7 +139,7 @@
   portrait: media/portraits/crowd_young_woman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_young_woman.bio
-  movement: {kind: wander, radius_m: 28, speed_m_s: 1.1, pause_s: 3}
+  movement: {kind: wander, radius_m: 28, speed_m_s: 1.1, pause_s: 3, sleeps: true}
   tags: [crowd, look_villager_woman]
 
 - id: crowd_pregnant_woman
@@ -149,7 +149,7 @@
   portrait: media/portraits/crowd_pregnant_woman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_pregnant_woman.bio
-  movement: {kind: wander, radius_m: 12, speed_m_s: 0.7, pause_s: 6}
+  movement: {kind: wander, radius_m: 12, speed_m_s: 0.7, pause_s: 6, sleeps: true}
   tags: [crowd, look_villager_pregnant_woman]
 
 # Soldiers walk the wall and other gates — never city_gate (player spawn).
@@ -160,7 +160,7 @@
   portrait: media/portraits/crowd_spearman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_spearman.bio
-  movement: {kind: wander, radius_m: 40, speed_m_s: 1.15, pause_s: 4}
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.15, pause_s: 4, sleeps: true}
   tags: [crowd, soldier]
 
 - id: crowd_archer
@@ -170,7 +170,7 @@
   portrait: media/portraits/crowd_archer.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_archer.bio
-  movement: {kind: wander, radius_m: 45, speed_m_s: 1.1, pause_s: 4}
+  movement: {kind: wander, radius_m: 45, speed_m_s: 1.1, pause_s: 4, sleeps: true}
   tags: [crowd, soldier]
 
 - id: crowd_axeman
@@ -180,7 +180,7 @@
   portrait: media/portraits/crowd_axeman.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_axeman.bio
-  movement: {kind: wander, radius_m: 35, speed_m_s: 1.05, pause_s: 5}
+  movement: {kind: wander, radius_m: 35, speed_m_s: 1.05, pause_s: 5, sleeps: true}
   tags: [crowd, soldier]
 
 - id: crowd_slinger
@@ -190,7 +190,7 @@
   portrait: media/portraits/crowd_slinger.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_slinger.bio
-  movement: {kind: wander, radius_m: 40, speed_m_s: 1.25, pause_s: 3}
+  movement: {kind: wander, radius_m: 40, speed_m_s: 1.25, pause_s: 3, sleeps: true}
   tags: [crowd, soldier]
 
 - id: crowd_textile_merchant
@@ -200,7 +200,7 @@
   portrait: media/portraits/crowd_textile_merchant.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_textile_merchant.bio
-  movement: {kind: wander, radius_m: 15, speed_m_s: 0.95, pause_s: 5}
+  movement: {kind: wander, radius_m: 15, speed_m_s: 0.95, pause_s: 5, sleeps: true}
   tags: [crowd, merchant]
 
 - id: crowd_copper_merchant
@@ -210,7 +210,7 @@
   portrait: media/portraits/crowd_copper_merchant.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_copper_merchant.bio
-  movement: {kind: wander, radius_m: 16, speed_m_s: 1.0, pause_s: 4}
+  movement: {kind: wander, radius_m: 16, speed_m_s: 1.0, pause_s: 4, sleeps: true}
   tags: [crowd, merchant]
 
 - id: crowd_caravaneer
@@ -220,7 +220,7 @@
   portrait: media/portraits/crowd_caravaneer.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_caravaneer.bio
-  movement: {kind: wander, radius_m: 50, speed_m_s: 0.95, pause_s: 5}
+  movement: {kind: wander, radius_m: 50, speed_m_s: 0.95, pause_s: 5, sleeps: true}
   tags: [crowd]
 
 - id: crowd_young_noble
@@ -230,7 +230,7 @@
   portrait: media/portraits/crowd_young_noble.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_young_noble.bio
-  movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4}
+  movement: {kind: wander, radius_m: 18, speed_m_s: 1.0, pause_s: 4, sleeps: true}
   tags: [crowd, noble]
 
 - id: crowd_noble_girl
@@ -238,9 +238,9 @@
   place: uruk_palace
   character: {pack: retro, skin: humanFemaleA, model: media/models/crowd_noble_girl.glb}
   portrait: media/portraits/crowd_noble_girl.jpg
-  dialogue: crowd_passersby
+  dialogue: crowd_child
   bio_key: npc.crowd_noble_girl.bio
-  movement: {kind: wander, radius_m: 16, speed_m_s: 1.7, pause_s: 2}
+  movement: {kind: wander, radius_m: 16, speed_m_s: 1.7, pause_s: 2, sleeps: true}
   tags: [crowd, noble, child]
 
 - id: crowd_court_official
@@ -250,7 +250,7 @@
   portrait: media/portraits/crowd_court_official.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_court_official.bio
-  movement: {kind: wander, radius_m: 14, speed_m_s: 0.9, pause_s: 5}
+  movement: {kind: wander, radius_m: 14, speed_m_s: 0.9, pause_s: 5, sleeps: true}
   tags: [crowd, noble]
 
 - id: crowd_priest_minor
@@ -260,5 +260,5 @@
   portrait: media/portraits/crowd_priest_minor.jpg
   dialogue: crowd_passersby
   bio_key: npc.crowd_priest_minor.bio
-  movement: {kind: wander, radius_m: 20, speed_m_s: 0.95, pause_s: 6}
+  movement: {kind: wander, radius_m: 20, speed_m_s: 0.95, pause_s: 6, sleeps: true}
   tags: [crowd, priest]

@@ -9,6 +9,7 @@ nodes:
   greet:
     text_key: potter.greet
     choices:
+      - {text_key: potter.ask_king, goto: say_king}
       - {text_key: potter.ask_craft, goto: explain_craft}
       - {text_key: potter.ask_tablets, goto: explain_tablets}
       - {text_key: potter.ask_ziggurat, goto: explain_ziggurat_tiles}
@@ -32,5 +33,11 @@ nodes:
 
   say_clay_man:
     text_key: potter.clay_man
+    choices:
+      - {text_key: potter.leave}
+
+  # Where the king is found (the market's answer: most know only that he is in the palace, the merchant shows the way).
+  say_king:
+    text_key: potter.king
     choices:
       - {text_key: potter.leave}

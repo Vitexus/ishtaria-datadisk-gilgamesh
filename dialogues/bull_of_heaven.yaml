@@ -68,6 +68,7 @@ nodes:
           - {actor: npc, clip: kick}
           - {actor: player, clip: sweep}
       - {set_stage: {quest: ishtars_wrath, stage: defeat_bull}}
+      - once: {key: bull_reward, effects: [{gold: 50}]}
       - {set_flag: bull_defeated}
       - {set_stage: {quest: the_death_of_enkidu, stage: divine_punishment}}
     choices:

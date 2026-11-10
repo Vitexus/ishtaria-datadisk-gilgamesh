@@ -10,7 +10,7 @@ nodes:
       - {text_key: elder_tales_man.ask_men, goto: men}
       - {text_key: elder_tales_man.ask_death, goto: death}
       - {text_key: elder_tales_man.ask_flood, goto: flood}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: men}, {visited: death}, {visited: flood}]}}
       - {text_key: elder_tales_man.leave}
 
   men:
@@ -18,7 +18,7 @@ nodes:
     choices:
       - {text_key: elder_tales_man.ask_death, goto: death}
       - {text_key: elder_tales_man.ask_flood, goto: flood}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: men}, {visited: death}, {visited: flood}]}}
       - {text_key: elder_tales_man.leave}
 
   death:
@@ -26,7 +26,7 @@ nodes:
     choices:
       - {text_key: elder_tales_man.ask_men, goto: men}
       - {text_key: elder_tales_man.ask_flood, goto: flood}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: men}, {visited: death}, {visited: flood}]}}
       - {text_key: elder_tales_man.leave}
 
   flood:
@@ -34,7 +34,7 @@ nodes:
     choices:
       - {text_key: elder_tales_man.ask_men, goto: men}
       - {text_key: elder_tales_man.ask_death, goto: death}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {any: [{visited: men}, {visited: death}, {visited: flood}]}}
       - {text_key: elder_tales_man.leave}
 
   where:

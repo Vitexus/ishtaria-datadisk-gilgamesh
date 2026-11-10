@@ -9,9 +9,7 @@ nodes:
   greet:
     text_key: uruk_merchant.greet
     choices:
-      - text_key: uruk_merchant.ask_king
-        if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}
-        goto: tell_king
+      - {text_key: uruk_merchant.ask_king, goto: king_gate}
       - {text_key: uruk_merchant.ask_goods, goto: explain_goods}
       - {text_key: uruk_merchant.ask_trade, goto: explain_trade}
       - {text_key: uruk_merchant.leave}
@@ -26,10 +24,24 @@ nodes:
     choices:
       - {text_key: uruk_merchant.leave}
 
-  # Where the king is found: the hunter who asks learns the way, and the palace is marked for him (the stage's guide).
+  # Where the king is found: of the market only the merchant knows the way. Whoever asks learns it and the palace stays on the
+  # map and compass; the hunter on his errand (the stage `seek_gilgamesh`) also moves on to the palace.
+  king_gate:
+    branch:
+      - {if: {quest_stage: {quest: the_hunter_and_the_wild_man, stage: seek_gilgamesh}}, goto: tell_king_errand}
+      - {goto: tell_king}
+
+  tell_king_errand:
+    text_key: uruk_merchant.king
+    effects:
+      - {reveal_places: [uruk_palace]}
+      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: seek_king_palace}}
+    choices:
+      - {text_key: uruk_merchant.leave}
+
   tell_king:
     text_key: uruk_merchant.king
     effects:
-      - {set_stage: {quest: the_hunter_and_the_wild_man, stage: seek_king_palace}}
+      - {reveal_places: [uruk_palace]}
     choices:
       - {text_key: uruk_merchant.leave}

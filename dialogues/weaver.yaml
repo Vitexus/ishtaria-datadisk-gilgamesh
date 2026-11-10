@@ -9,6 +9,7 @@ nodes:
   greet:
     text_key: weaver.greet
     choices:
+      - {text_key: weaver.ask_king, goto: say_king}
       - {text_key: weaver.ask_fabrics, goto: explain_fabrics}
       - {text_key: weaver.ask_priestly_robes, goto: explain_priestly_robes}
       - {text_key: weaver.ask_uttu, goto: say_uttu}
@@ -26,5 +27,11 @@ nodes:
 
   say_uttu:
     text_key: weaver.uttu
+    choices:
+      - {text_key: weaver.leave}
+
+  # Where the king is found (the market's answer: most know only that he is in the palace, the merchant shows the way).
+  say_king:
+    text_key: weaver.king
     choices:
       - {text_key: weaver.leave}

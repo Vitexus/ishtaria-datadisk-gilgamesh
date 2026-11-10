@@ -83,6 +83,7 @@ nodes:
     effects:
       - {set_flag: hunter_found_enkidu}
       - {set_stage: {quest: the_hunter_and_the_wild_man, stage: hunter_done}}
+      - once: {key: hunter_reward, effects: [{gold: 25}]}
       - {set_playable: {character: retro/humanFemaleA, model: media/models/shamhat.glb, hide_npc: shamhat}}
       - {set_stage: {quest: shamhat_and_the_wild_man, stage: see_the_savage}}
       - {set_flag: playing_as_shamhat}

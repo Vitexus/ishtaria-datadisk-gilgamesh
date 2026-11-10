@@ -7,10 +7,17 @@ nodes:
   greet:
     text_key: crowd.greet
     choices:
+      - {text_key: crowd.ask_king, goto: say_king}
       - {text_key: crowd.reply, goto: reply}
       - {text_key: crowd.leave}
 
   reply:
     text_key: crowd.busy
+    choices:
+      - {text_key: crowd.leave}
+
+  # Where the king is found (the market's answer: most know only that he is in the palace, the merchant shows the way).
+  say_king:
+    text_key: crowd.king_palace
     choices:
       - {text_key: crowd.leave}

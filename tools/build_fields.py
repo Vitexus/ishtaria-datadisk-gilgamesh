@@ -28,6 +28,11 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MODELS = {"green": "media/models/architecture/field_barley_green.glb", "ripe": "media/models/architecture/field_barley_ripe.glb",
           "fallow": "media/models/architecture/field_fallow.glb"}
 CHANCE = (("green", 0.5), ("ripe", 0.3), ("fallow", 0.2))
+# A date-palm orchard (kiri, research/WATER_WORKS.md) stands now and then between the fields, never two in a row on one side of a canal:
+# a model of tools/build_orchard_models.py of fixed size, x along the depth (the normal), z along the canal.
+ORCHARDS = ("media/models/architecture/orchard_date_a.glb", "media/models/architecture/orchard_date_b.glb", "media/models/architecture/orchard_date_c.glb")
+ORCHARD_CHANCE = 0.3
+ORCHARD_DEPTH_M, ORCHARD_LENGTH_M = 40.0, 30.0
 STATION_M, LENGTH_M, GAP_M = 30.0, 27.0, 14.0     # the default plot; each plot varies below
 LENGTH_RANGE_M, DEPTH_RANGE_M, BETWEEN_M = (24.0, 62.0), ((24.0, 40.0), (34.0, 52.0)), 3.0   # farms of 500-20 000 m2 (Jotheri et al. 2025)
 CITY_M = 120.0
@@ -60,6 +65,9 @@ def main():
     blocked = ndi.binary_dilation(city > 0, iterations=int(CITY_M / PIXEL_M)) | wet
     occupied = np.zeros((size, size), bool)
     rng = random.Random(2650)
+    orchard_rng = random.Random(2651)             # apart from `rng`, so the fields keep their sizes and kinds
+    after_orchard = {-1.0: False, 1.0: False}     # the last plot on this side of the canal was an orchard
+    orchards = 0
     placed, items = 0, []
     plots = []
     for canal in sorted(canals, key=lambda c: -c["width_m"]):          # the larger canals take their fields first
@@ -80,22 +88,33 @@ def main():
                 cx, cz = x1 + tx * (at + plot_length / 2.0), z1 + tz * (at + plot_length / 2.0)
                 for side in (-1.0, 1.0):
                     depth = rng.uniform(*depth_range)
+                    orchard = not after_orchard[side] and orchard_rng.random() < ORCHARD_CHANCE
+                    if orchard:
+                        depth = ORCHARD_DEPTH_M
                     offset = width / 2.0 + GAP_M + depth / 2.0
                     mx, mz = cx + side * nx * offset, cz + side * nz * offset
                     if abs(mx) > 2950 or abs(mz) > 2950:
                         continue
                     # the plot: depth along the normal (the furrows), LENGTH_M along the canal
-                    hd, hl = depth / 2.0, plot_length / 2.0
+                    hd, hl = depth / 2.0, (ORCHARD_LENGTH_M if orchard else plot_length) / 2.0
                     corners = [(mx + nx * a + tx * b, mz + nz * a + tz * b) for a, b in ((-hd, -hl), (hd, -hl), (hd, hl), (-hd, hl))]
                     mask = rasterize(corners, size)
                     area = int(mask.sum())
                     if area == 0 or (mask & blocked).any() or (mask & occupied).sum() > 0.1 * area:
+                        after_orchard[side] = False
                         continue
+                    after_orchard[side] = orchard
                     occupied |= mask
                     plots.append(mask)
                     placed += 1
                     # the model's x (width, the furrows) lies along the normal: bearing of the front (+Z) from b = atan2(-az, -ax)
                     bearing = math.degrees(math.atan2(-nz * side, -nx * side)) % 360.0
+                    if orchard:
+                        orchards += 1
+                        items.append({"model": ORCHARDS[orchard_rng.randrange(len(ORCHARDS))], "x": round(mx - ANCHOR_SHIFT[0], 2),
+                                      "z": round(mz + ANCHOR_SHIFT[1], 2), "yaw_deg": round(bearing, 1), "scale": [1.0, 1.0, 1.0],
+                                      "footprint": [ORCHARD_DEPTH_M, ORCHARD_LENGTH_M], "sink_m": 0.0, "passable": True})
+                        continue
                     roll = rng.random()
                     kind = "green"
                     total = 0.0
@@ -106,7 +125,7 @@ def main():
                             break
                     items.append({"model": MODELS[kind], "x": round(mx - ANCHOR_SHIFT[0], 2), "z": round(mz + ANCHOR_SHIFT[1], 2),
                                   "yaw_deg": round(bearing, 1), "scale": [round(depth / 10.0, 3), RELIEF_M, round(plot_length / 10.0, 3)],
-                                  "footprint": [round(depth, 2), round(plot_length, 2)], "passable": True})
+                                  "footprint": [round(depth, 2), round(plot_length, 2)], "sink_m": 0.05, "passable": True})
                     if placed >= MAX_FIELDS:
                         break
                 at += plot_length + BETWEEN_M
@@ -115,8 +134,8 @@ def main():
             carried = at - length
             if placed >= MAX_FIELDS:
                 break
-    rows = ["  - {model: %s, x: %.2f, z: %.2f, yaw_deg: %.1f, scale: [%.3f, %.3f, %.3f], footprint: [%.2f, %.2f], sink_m: 0.05, passable: true}\n"
-            % (i["model"], i["x"], i["z"], i["yaw_deg"], *i["scale"], *i["footprint"]) for i in items]
+    rows = ["  - {model: %s, x: %.2f, z: %.2f, yaw_deg: %.1f, scale: [%.3f, %.3f, %.3f], footprint: [%.2f, %.2f], sink_m: %.2f, passable: true}\n"
+            % (i["model"], i["x"], i["z"], i["yaw_deg"], *i["scale"], *i["footprint"], i["sink_m"]) for i in items]
     (ROOT / "buildings" / "uruk_fields.yaml").write_text(
         "# Tilled fields on both sides of the irrigation canals of Uruk (written by tools/build_fields.py; do not edit).\n"
         "# Format: ishtaria-protocol schemas/datadisk.schema.json, $defs/buildings (passable: a field blocks nothing).\n"
@@ -127,7 +146,7 @@ def main():
     for mask in plots:
         clear[mask] = 255
     Image.fromarray(clear).save(clear_path, optimize=True)
-    print("%d fields on %.1f ha, %d canals" % (placed, occupied.sum() * PIXEL_M * PIXEL_M / 10000.0, len(canals)))
+    print("%d plots (%d date orchards) on %.1f ha, %d canals" % (placed, orchards, occupied.sum() * PIXEL_M * PIXEL_M / 10000.0, len(canals)))
 
 
 if __name__ == "__main__":

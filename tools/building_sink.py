@@ -13,6 +13,9 @@ SINK_M = {
     # the shepherd's corral: a fence about 2.8 m tall in model units, so a sunken 2 m left 0.8 m of it above ground
     # and 3 m buried it; 1 m shows it whole.
     "pers_corral": 1.0,
+    # the wooden palisade of 0 A.D.: a clay skirt 3.4 m high under the stakes and rocks is meant to lie in the ground, so that the
+    # wall stands whole on a slope; the open gate's posts stand on rocks 2 m up
+    "palisade_long": 3.4, "palisade_medium": 3.4, "palisade_short": 3.4, "palisade_gate_open": 2.0,
     # the building sites are our own models, standing on the ground as they were made
     "uruk_site_a": 1.0, "uruk_site_b": 1.0, "uruk_site_c": 1.0, "uruk_site_d": 1.0,
 }

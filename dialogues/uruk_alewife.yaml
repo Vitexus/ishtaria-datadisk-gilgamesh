@@ -9,6 +9,7 @@ nodes:
   greet:
     text_key: uruk_alewife.greet
     choices:
+      - {text_key: uruk_alewife.ask_king, goto: say_king}
       - {text_key: uruk_alewife.ask_a, goto: explain_a}
       - {text_key: uruk_alewife.ask_b, goto: explain_b}
       - {text_key: uruk_alewife.ask_siduri, goto: say_siduri}
@@ -40,5 +41,11 @@ nodes:
 
   say_siduri:
     text_key: uruk_alewife.siduri
+    choices:
+      - {text_key: uruk_alewife.leave}
+
+  # Where the king is found (the market's answer: most know only that he is in the palace, the merchant shows the way).
+  say_king:
+    text_key: uruk_alewife.king
     choices:
       - {text_key: uruk_alewife.leave}

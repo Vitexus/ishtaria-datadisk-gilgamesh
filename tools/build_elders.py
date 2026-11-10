@@ -176,7 +176,10 @@ def dialogue_of(sex, story, tablet):
     def choices(skip=None, hint=True):
         rows = ["      - {text_key: %s, goto: %s}" % (ask, node) for ask, node in topics if node != skip]
         if hint and skip != "where":
-            rows.append("      - {text_key: %s, goto: where}" % ASK_HINT[0])
+            # Not before the elder has told the tale: the question about the tablet comes up once a chapter was heard.
+            heard = ["{visited: %s}" % node for _, node in topics]
+            condition = heard[0] if len(heard) == 1 else "{any: [%s]}" % ", ".join(heard)
+            rows.append("      - {text_key: %s, goto: where, if: %s}" % (ASK_HINT[0], condition))
         rows.append("      - {text_key: %s}" % LEAVE[sex])
         return "\n".join(rows)
 

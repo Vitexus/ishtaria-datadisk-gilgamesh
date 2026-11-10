@@ -1,0 +1,31 @@
+# Fields and orchards along the canals of one square of 6 km (written by tools/build_outer_fields.py; do not edit).
+place: outer_fields_w06_s01
+items:
+  - {model: media/models/architecture/orchard_date_b.glb, x: 659.18, z: 2824.33, yaw_deg: 315.1, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 721.56, z: 2762.31, yaw_deg: 135.1, scale: [3.984, 0.200, 3.462], footprint: [39.84, 34.62], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 621.49, z: 2789.98, yaw_deg: 315.1, scale: [4.494, 0.200, 6.119], footprint: [44.94, 61.19], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 688.22, z: 2723.64, yaw_deg: 135.1, scale: [4.717, 0.200, 6.119], footprint: [47.17, 61.19], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 580.56, z: 2743.93, yaw_deg: 315.1, scale: [3.794, 0.200, 5.578], footprint: [37.94, 55.78], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 642.06, z: 2682.79, yaw_deg: 135.1, scale: [3.942, 0.200, 5.578], footprint: [39.42, 55.78], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 539.09, z: 2700.98, yaw_deg: 315.1, scale: [3.610, 0.200, 5.756], footprint: [36.10, 57.56], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: 600.14, z: 2640.29, yaw_deg: 135.1, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: 494.44, z: 2658.91, yaw_deg: 315.1, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 559.16, z: 2594.58, yaw_deg: 135.1, scale: [4.642, 0.200, 5.901], footprint: [46.42, 59.01], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 456.27, z: 2618.97, yaw_deg: 315.1, scale: [3.773, 0.200, 4.543], footprint: [37.73, 45.43], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_fallow.glb, x: 517.08, z: 2558.51, yaw_deg: 135.1, scale: [3.770, 0.200, 4.543], footprint: [37.70, 45.43], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 426.07, z: 2588.42, yaw_deg: 315.1, scale: [3.741, 0.200, 3.445], footprint: [37.41, 34.45], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 489.60, z: 2525.27, yaw_deg: 135.1, scale: [4.566, 0.200, 3.445], footprint: [45.66, 34.45], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_fallow.glb, x: 389.85, z: 2553.49, yaw_deg: 315.1, scale: [3.944, 0.200, 6.012], footprint: [39.44, 60.12], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: 452.09, z: 2491.62, yaw_deg: 135.1, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 342.92, z: 2515.15, yaw_deg: 315.1, scale: [5.184, 0.200, 5.440], footprint: [51.84, 54.40], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 412.21, z: 2446.26, yaw_deg: 135.1, scale: [4.750, 0.200, 5.440], footprint: [47.50, 54.40], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 303.13, z: 2469.87, yaw_deg: 315.1, scale: [4.433, 0.200, 5.987], footprint: [44.33, 59.87], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 367.56, z: 2405.82, yaw_deg: 135.1, scale: [4.129, 0.200, 5.987], footprint: [41.29, 59.87], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 256.94, z: 2427.16, yaw_deg: 315.1, scale: [4.952, 0.200, 5.980], footprint: [49.52, 59.80], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: 322.75, z: 2361.74, yaw_deg: 135.1, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 214.56, z: 2381.90, yaw_deg: 315.1, scale: [4.569, 0.200, 5.812], footprint: [45.69, 58.12], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 280.58, z: 2316.26, yaw_deg: 135.1, scale: [4.442, 0.200, 5.812], footprint: [44.42, 58.12], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 245.86, z: 2277.57, yaw_deg: 135.1, scale: [4.983, 0.200, 3.968], footprint: [49.83, 39.68], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_a.glb, x: 206.60, z: 2245.11, yaw_deg: 135.1, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_ripe.glb, x: 170.03, z: 2201.48, yaw_deg: 135.1, scale: [4.973, 0.200, 5.172], footprint: [49.73, 51.72], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 836.83, z: 2894.81, yaw_deg: 164.1, scale: [3.429, 0.200, 5.956], footprint: [34.29, 59.56], sink_m: 0.05, passable: true}

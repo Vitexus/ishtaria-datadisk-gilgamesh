@@ -7,6 +7,7 @@ nodes:
   greet:
     text_key: tablet_writer.greet
     choices:
+      - {text_key: tablet_writer.ask_king, goto: say_king}
       - {text_key: tablet_writer.ask_write, goto: write}
       - {text_key: tablet_writer.ask_incipit, goto: say_incipit}
       - {text_key: tablet_writer.leave}
@@ -20,5 +21,11 @@ nodes:
     text_key: tablet_writer.incipit
     effects:
       - {reveal_places: [gilgamesh_epic_tablet_1, gilgamesh_epic_tablet_2, gilgamesh_epic_tablet_3, gilgamesh_epic_tablet_4, gilgamesh_epic_tablet_5, gilgamesh_epic_tablet_6, gilgamesh_epic_tablet_7, gilgamesh_epic_tablet_8, gilgamesh_epic_tablet_9, gilgamesh_epic_tablet_10, gilgamesh_epic_tablet_11, gilgamesh_epic_tablet_12]}
+    choices:
+      - {text_key: tablet_writer.leave}
+
+  # Where the king is found (the market's answer: most know only that he is in the palace, the merchant shows the way).
+  say_king:
+    text_key: tablet_writer.king
     choices:
       - {text_key: tablet_writer.leave}

@@ -53,6 +53,7 @@ nodes:
     text_key: gilgamesh.accept_enkidu
     effects:
       - {set_stage: {quest: shamhat_and_the_wild_man, stage: shamhat_done}}
+      - once: {key: shamhat_reward, effects: [{gold: 25}]}
       - {set_flag: shamhat_presented_enkidu}
     choices:
       # Šamḫat's work ends: the player becomes Enkidu and faces the king.

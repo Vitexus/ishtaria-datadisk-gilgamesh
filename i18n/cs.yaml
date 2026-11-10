@@ -70,6 +70,19 @@ crowd.greet: Mír města s tebou.
 crowd.reply: Co nového na trhu?
 crowd.busy: Den je krátký a práce dlouhá. Jdi v pokoji.
 crowd.leave: Sbohem.
+crowd.ask_king: "Kde najdu krále Gilgameše?"
+crowd.king_palace: "Král? V královském paláci, kde jinde. Cestu ti ale ukázat neumím, zeptej se někoho, kdo tam chodí."
+crowd.king_child: "Král? Já nevím. Maminka říká, ať se k paláci nepřibližuju, jsou tam stráže."
+potter.ask_king: "Kde bydlí král Gilgameš?"
+potter.king: "V paláci, za svými strážemi, myslím. Moje cihly jdou do chrámu, ne ke králi; cestu tam jsem nikdy neviděl. Zeptej se kupce, který obchoduje s dvorem."
+weaver.ask_king: "Víš, kde bydlí král Gilgameš?"
+weaver.king: "Král? Dítě, já tkám roucha pro kněžky, za králem nechodím. Kde bydlí, ti nepovím."
+uruk_farmer.ask_king: "Kde najdu krále Gilgameše?"
+uruk_farmer.king: "Král? Já chodím do města s ječmenem a před setměním jsem doma. Znám kanály, ne dvůr. Zeptej se na trhu."
+uruk_alewife.ask_king: "Kde najdu krále Gilgameše?"
+uruk_alewife.king: "V jeho paláci, kde jinde? Vojáci, kteří tu pijí, říkají, že jim nedá pokoj. Cestu tam nech kupcům, ti chodí všude."
+tablet_writer.ask_king: "Kde je králův palác?"
+tablet_writer.king: "Král sedí v královském paláci a píšou mu tam královští písaři. Já píšu jen to, co si žádá trh; cestu tam dobře neznám."
 
 # Jména NPC a jejich popisy
 npc.gilgamesh: Gilgameš
@@ -879,6 +892,7 @@ place.kissik: Kissik
 place.adab: Adab
 place.eshnunna: Ešnunna
 place.uruk_fields: Pole Uruku
+place.outer_fields: "Pole a sady"
 place.isin: Isin
 place.assur: Aššur
 place.terqa: Terqa

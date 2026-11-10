@@ -8,7 +8,7 @@ nodes:
     text_key: elder_story.enuma_elish_woman.greet
     choices:
       - {text_key: elder_tales_woman.ask_akitu, goto: akitu_gate}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: akitu_gate}}
       - {text_key: elder_tales_woman.leave}
 
   akitu_gate:
@@ -19,13 +19,13 @@ nodes:
   akitu:
     text_key: elder_tales_woman.akitu
     choices:
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: akitu_gate}}
       - {text_key: elder_tales_woman.leave}
 
   akitu_now:
     text_key: elder_tales_woman.akitu_now
     choices:
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: akitu_gate}}
       - {text_key: elder_tales_woman.leave}
 
   where:

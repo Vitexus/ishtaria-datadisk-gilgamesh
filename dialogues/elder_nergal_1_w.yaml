@@ -8,13 +8,13 @@ nodes:
     text_key: elder_story.nergal_woman.greet
     choices:
       - {text_key: elder_tales_woman.ask_nergal, goto: nergal}
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: nergal}}
       - {text_key: elder_tales_woman.leave}
 
   nergal:
     text_key: elder_tales_woman.nergal
     choices:
-      - {text_key: elder_hint.ask, goto: where}
+      - {text_key: elder_hint.ask, goto: where, if: {visited: nergal}}
       - {text_key: elder_tales_woman.leave}
 
   where:

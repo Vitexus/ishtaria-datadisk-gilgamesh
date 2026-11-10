@@ -73,6 +73,42 @@ put("pers_storehouse", 58.0, 40.0, (10.0, 12.0), 7.0, 3.0)
 put("pers_farmstead", 8.0, 92.0, (16.0, 16.0), 8.0, 3.0)
 put("pers_corral", -80.0, -30.0, (15.0, 8.0), 3.5, 3.0)
 
+# --- the palisade round the village: the wooden wall of 0 A.D. (props/palisade_rocks_*, CC BY-SA 3.0), with a gate where the road
+# to Uruk leaves the village. The pieces are half the size of the original (a stake wall of about three metres) and stand
+# round the farthest building; the gate (open: tools/build_palisade_gate.py) lies on the bearing of the first waypoint of the
+# road (places/hunter_road.yaml, hunter_road_1). Walls block walking by round colliders of the footprint's depth.
+FENCE_SCALE = 0.5
+FENCE_THICKNESS_M = 2.6               # footprint depth: round colliders of 1.3 m touching one another
+GATE_BEARING = 126.7                  # towards hunter_road_1, the way to Uruk
+PIECES = (("palisade_long", 15.57), ("palisade_long", 15.57), ("palisade_medium", 11.14), ("palisade_short", 6.22))
+GATE_MODEL, GATE_WIDTH = "palisade_gate_open", 16.93
+# Each piece is sunk by the clay skirt of the 0 A.D. model (tools/building_sink.py), at the size it is drawn in.
+reach = max(math.hypot(x, z) + max(fw, fd) / 2.0 for x, z, _, _, _, (fw, fd) in rows)
+fence_radius = reach + 14.0
+fence = []                            # x, z, model, bearing, scale, footprint, passable
+gate_width = GATE_WIDTH * FENCE_SCALE
+fence_rng = random.Random(2652)
+arc = 2.0 * math.pi * fence_radius - gate_width
+lengths, total = [], 0.0
+while total < arc:
+    name, size = fence_rng.choice(PIECES)
+    lengths.append((name, size * FENCE_SCALE))
+    total += size * FENCE_SCALE
+# the last piece is dropped when the ring is shorter than it needs, and every piece is stretched along the wall to fit exactly
+while total - lengths[-1][1] >= arc:
+    total -= lengths.pop()[1]
+stretch = arc / total
+bearing = GATE_BEARING + math.degrees((gate_width / 2.0) / fence_radius)
+fence.append((fence_radius * math.sin(math.radians(GATE_BEARING)), -fence_radius * math.cos(math.radians(GATE_BEARING)),
+              GATE_MODEL, GATE_BEARING, [FENCE_SCALE] * 3, (gate_width, FENCE_THICKNESS_M), True))
+for name, length in lengths:
+    span = math.degrees(length * stretch / fence_radius)
+    middle = math.radians(bearing + span / 2.0)
+    full = dict(PIECES)[name]
+    fence.append((fence_radius * math.sin(middle), -fence_radius * math.cos(middle), name, math.degrees(middle) % 360.0,
+                  [FENCE_SCALE * stretch, FENCE_SCALE, FENCE_SCALE], (length * stretch, FENCE_THICKNESS_M), False))
+    bearing += span
+
 # the trader stands in front of one of the inner-ring houses, between it and the square; the well is on the square
 trader_house = rows[2]
 tx, tz = trader_house[0], trader_house[1]
@@ -110,7 +146,11 @@ with open(OUT, "w") as out:
     for x, z, model, bearing, scale, (w, d) in rows:
         out.write(f"  - {{model: {model}, x: {x:.2f}, z: {z:.2f}, yaw_deg: {bearing:.1f}, "
                   f"scale: [{scale[0]:.3f}, {scale[1]:.3f}, {scale[2]:.3f}], footprint: [{w:.2f}, {d:.2f}]{sink_field(model, 1.0 if model.endswith("pers_corral.glb") else HOUSE_SCALE)}}}\n")
-print(f"{OUT}: {len(rows)} buildings")
+    for x, z, name, bearing, scale, (w, d), passable in fence:
+        out.write(f"  - {{model: {ZEROAD}{name}.glb, x: {x:.2f}, z: {z:.2f}, yaw_deg: {bearing:.1f}, "
+                  f"scale: [{scale[0]:.3f}, {scale[1]:.3f}, {scale[2]:.3f}], footprint: [{w:.2f}, {d:.2f}]{sink_field(name, FENCE_SCALE)}"
+                  f"{', passable: true' if passable else ''}}}\n")
+print(f"{OUT}: {len(rows)} buildings and {len(fence)} pieces of the palisade (radius {fence_radius:.0f} m)")
 
 # --- the families of the houses: a man, a woman, an old man, an old woman and two children at each of the homes
 # (the houses a-d; the smithy, storehouse, farmstead and corral are not homes). Each home is a landmark in front of the
@@ -142,11 +182,15 @@ with open(os.path.join(ROOT, "places", "hunter_village_homes.yaml"), "w") as pla
             if role == "woman" and expecting:
                 glb, bio = "crowd_pregnant_woman", "village_pregnant_woman"
             # The old ones are the elders of the world: each tells one tale and says where one tablet lies (tools/build_elders.py).
-            dialogue = {"old_man": dialogue_id(ELDER_MAN, number), "old_woman": dialogue_id(ELDER_WOMAN, number)}.get(role, "crowd_passersby")
+            dialogue = {"old_man": dialogue_id(ELDER_MAN, number), "old_woman": dialogue_id(ELDER_WOMAN, number),
+                        "boy": "crowd_child", "girl": "crowd_child"}.get(role, "crowd_passersby")
+            # The families sleep at their doorstep at night; the elders (who tell where a tablet lies) stay up until they can be knocked up.
+            sleeps = dialogue in ("crowd_passersby", "crowd_child")
             folk.write(
                 "- id: hv_h%02d_%s\n  name_key: npc.village_%s\n  place: %s\n"
                 "  character: {pack: %s, skin: %s, model: media/models/%s.glb}\n"
                 "  portrait: media/portraits/%s.jpg\n  dialogue: %s\n  bio_key: npc.%s.bio\n"
-                "  movement: {kind: wander, radius_m: %g, speed_m_s: %g, pause_s: %g}\n  tags: %s\n\n"
-                % (number, role, role, home, pack, skin, glb, glb, dialogue, bio, radius, speed, pause, tags))
+                "  movement: {kind: wander, radius_m: %g, speed_m_s: %g, pause_s: %g%s}\n  tags: %s\n\n"
+                % (number, role, role, home, pack, skin, glb, glb, dialogue, bio, radius, speed, pause,
+                   ", sleeps: true" if sleeps else "", tags.replace("]", ", doorstep]") if sleeps else tags))
 print("%d homes, %d villagers" % (len(homes), len(homes) * len(FOLK)))

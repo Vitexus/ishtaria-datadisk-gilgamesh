@@ -1,0 +1,8 @@
+# Fields and orchards along the canals of one square of 6 km (written by tools/build_outer_fields.py; do not edit).
+place: outer_fields_e05_s04
+items:
+  - {model: media/models/architecture/orchard_date_a.glb, x: 2954.06, z: 1356.22, yaw_deg: 146.4, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 2969.22, z: 1393.12, yaw_deg: 146.4, scale: [2.440, 0.200, 2.484], footprint: [24.40, 24.84], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_fallow.glb, x: 2913.26, z: 1430.14, yaw_deg: 326.4, scale: [3.355, 0.200, 2.484], footprint: [33.55, 24.84], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/field_barley_green.glb, x: 2997.11, z: 1422.57, yaw_deg: 146.4, scale: [3.821, 0.200, 4.901], footprint: [38.21, 49.01], sink_m: 0.05, passable: true}
+  - {model: media/models/architecture/orchard_date_b.glb, x: 2976.93, z: 2524.07, yaw_deg: 5.7, scale: [1.000, 1.000, 1.000], footprint: [40.00, 30.00], sink_m: 0.00, passable: true}
