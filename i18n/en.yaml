@@ -95,7 +95,7 @@ npc.enkidu_civilized.bio: Once wild, now civilized. Short-cropped hair, clean-sh
 npc.ishtar: Ishtar
 npc.ishtar.bio: Goddess of love and war, patron of Uruk. Proud and tempestuous, she demands respect and offers both passion and destruction. Wears a multi-tiered horned headdress with star symbols, red and gold ceremonial robes with lapis lazuli and carnelian jewelry, carrying a bow as symbol of her warrior aspect.
 npc.shamhat: Shamhat
-npc.shamhat.bio: Temple priestess of Ishtar. The one who civilized Enkidu through love and wisdom, teaching him the ways of humanity. Wears a gold headdress with lappets, white ceremonial linen robes with embroidered symbols of Ishtar, lapis lazuli and gold jewelry, carrying a ritual staff, perfumed with temple incense.
+npc.shamhat.bio: Professional nymphomaniac. Still horny temple priestess of Ishtar. Whichever man she points to, she gets.
 npc.humbaba: Humbaba
 npc.humbaba.bio: "Guardian of the Cedar Forest. A monstrous ogre with terrifying power. His roar is like the storm, his breath like fire, and his jaws are death itself. Appears with sevenfold terrors - face with exaggerated features, body covered in scales, arms ending in claws, wearing a garment of animal hides, crowned with a terror-inducing headdress."
 npc.utnapishtim: Utnapishtim
@@ -105,16 +105,13 @@ npc.ur_shanabi.bio: Ferryman who transports travelers across the Waters of Death
 npc.scorpion_man: Scorpion Man
 npc.scorpion_man.bio: Guardian of the gate to the tunnel through Mount Mashu. A terrifying creature with the body of a scorpion and a man. Half-man half-scorpion hybrid with scorpion tail and claws, wearing ceremonial guard armor with scorpion-themed headdress.
 npc.ninsun: Ninsun
-npc.ninsun.bio: Mother of Gilgamesh, a wise goddess. She interprets her son's dreams and offers guidance and protection. Wears divine mother's white robes with gold and lapis lazuli jewelry, simple headband with mother-of-pearl inlays, carrying a sacred scepter.
+npc.ninsun.bio.appearance: Mother of Gilgamesh, a wise goddess. She interprets her son's dreams and offers guidance and protection. Wears divine mother's white robes with gold and lapis lazuli jewelry, simple headband with mother-of-pearl inlays, carrying a sacred scepter.
 npc.anu: Anu
-npc.anu.bio: Sky god and father of Ishtar. Ruler of the heavens, his word carries the weight of the cosmos. Wears a tall horned crown symbolizing heavenly authority, long flowing beard, blue robes representing the sky, gold and lapis lazuli adornments, carrying the tablet of destinies.
+npc.anu.bio.appearance: Sky god and father of Ishtar. Ruler of the heavens, his word carries the weight of the cosmos. Wears a tall horned crown symbolizing heavenly authority, long flowing beard, blue robes representing the sky, gold and lapis lazuli adornments, carrying the tablet of destinies.
 npc.bull_of_heaven: Bull of Heaven
-npc.bull_of_heaven.bio: Divine beast sent by Ishtar to punish Gilgamesh. A monstrous bull that brings destruction in its wake. Appears as a divine beast form with golden hide, massive horns, hooves that shake the earth, celestial aura, embodying the wrath of Ishtar.
-npc.ninsun: Ninsun
+npc.bull_of_heaven.bio.appearance: Divine beast sent by Ishtar to punish Gilgamesh. A monstrous bull that brings destruction in its wake. Appears as a divine beast form with golden hide, massive horns, hooves that shake the earth, celestial aura, embodying the wrath of Ishtar.
 npc.ninsun.bio: Mother of Gilgamesh, a wise goddess. She interprets her son's dreams and offers guidance and protection.
-npc.anu: Anu
 npc.anu.bio: Sky god and father of Ishtar. Ruler of the heavens, his word carries the weight of the cosmos.
-npc.bull_of_heaven: Bull of Heaven
 npc.bull_of_heaven.bio: Divine beast sent by Ishtar to punish Gilgamesh. A monstrous bull that brings destruction in its wake.
 
 # Historical Mesopotamian NPCs
@@ -136,13 +133,6 @@ npc.weaver: Weaver
 npc.weaver.bio: Skilled textile worker who creates fine garments from wool and flax. Wears a simple linen dress with a weaving shuttle in her belt, hair tied back with a cloth band, expert in creating patterns and dyes.
 
 # Gilgamesh Dialogues
-gilgamesh.greet: "I am Gilgamesh, king of Uruk, two-thirds god and one-third man. What brings you before me?"
-gilgamesh.ask_advice: Ask the king for wisdom
-gilgamesh.ask_friendship: Speak of Enkidu
-gilgamesh.ask_quest: Ask about his adventures
-gilgamesh.leave: I must go, my king.
-gilgamesh.advice: "The gods have given me strength and wisdom. I rule this city with justice and build its walls to stand forever."
-gilgamesh.friendship: "Enkidu? He is my brother, my equal. Together we faced Humbaba and the Bull of Heaven. His death weighs heavy on my heart."
 gilgamesh.greet: "I am Gilgamesh, king of Uruk, two-thirds god and one-third man. What brings you before me?"
 gilgamesh.ask_advice: Ask the king for wisdom
 gilgamesh.ask_friendship: Speak of Enkidu
@@ -178,23 +168,23 @@ gilgamesh_temple.prayer: "Let us pray to Anu and the great gods for their blessi
 enkidu.greet: "I am Enkidu. The hills made me; Šamḫat led me to bread and beer. Now I stand with Gilgamesh — equal strength, one heart."
 enkidu.ask_wild_days: Ask about his wild days
 enkidu.ask_gilgamesh: Ask about Gilgamesh
-enkidu.ask_civilization: Ask about civilization
+enkidu.ask_civilization.recollection: Ask about civilization
 enkidu.ask_shamhat: Ask about Shamhat
 enkidu.ask_humbaba: Ask about Humbaba
 enkidu.ask_death: Ask about his death
 enkidu.challenge_duel: Challenge him to a friendly wrestle
 enkidu.duel_done: "Ha! Blow for blow — you are my equal. From this day we are brothers in arms."
-enkidu.leave: I must go.
-enkidu.wild_days: "Once I ran with the gazelles and drank with the wild beasts at the watering hole. I knew nothing of men or cities. I was one with nature, strong and free."
+enkidu.leave.farewell: I must go.
+enkidu.wild_days.recollection: "Once I ran with the gazelles and drank with the wild beasts at the watering hole. I knew nothing of men or cities. I was one with nature, strong and free."
 enkidu.animals: "The gazelles would eat from my hand, and the wolves would sleep beside me. Even the lions respected my strength. We were all creatures of the wild together."
 
 # Enkidu choice keys
 enkidu.ask_animals: Ask about the animals
 enkidu.ask_equality: Ask about equality with Gilgamesh
 enkidu.ask_changes: Ask how he changed
-enkidu.gilgamesh: "Gilgamesh! A king proud and strong, but cruel to his people. The gods sent me to match him, to temper his pride with my strength."
+enkidu.gilgamesh.challenge: "Gilgamesh! A king proud and strong, but cruel to his people. The gods sent me to match him, to temper his pride with my strength."
 enkidu.equality: "We wrestled, Gilgamesh and I, and I matched him blow for blow. In that moment, he found his equal, his brother. From that day, no man could stand against us."
-enkidu.civilization: "Shamhat changed me. Six days and seven nights she stayed with me, teaching me the ways of men. The beasts fled from me, for I had become civilized."
+enkidu.civilization.estrangement: "Shamhat changed me. Six days and seven nights she stayed with me, teaching me the ways of men. The beasts fled from me, for I had become civilized."
 enkidu.changes: "Now I wear the clothes of men and eat their bread. I drink their wine and understand their words. But in my heart, I still remember the wild."
 enkidu.shamhat: "Shamhat... she was the first to see the man within me. Without her, I would still be running with the beasts, and Gilgamesh would have no equal."
 enkidu.humbaba: "Humbaba! The guardian of the Cedar Forest was a terror to behold. His roar shook the earth, and his breath was fire. But together with Gilgamesh, we faced him and we won."
@@ -286,27 +276,27 @@ scorpion_man.passage: "You are tall in stature, and your face is like the face o
 scorpion_man.danger: "The tunnel through Mount Mashu stretches for twelve double-hours. None may pass who does not have the courage of the gods themselves."
 
 # Ninsun Dialogues
-ninsun.greet: "I am Ninsun, mother of Gilgamesh. The wisdom of the gods flows through my veins."
+ninsun.greet.divine: "I am Ninsun, mother of Gilgamesh. The wisdom of the gods flows through my veins."
 ninsun.ask_gilgamesh: Ask about her son
 ninsun.ask_dreams: Ask about dreams and omens
 ninsun.ask_blessing: Ask for a blessing
-ninsun.leave: I will leave you in peace, wise mother.
+ninsun.leave.peace: I will leave you in peace, wise mother.
 ninsun.gilgamesh: "My son is a king among men, strong as a wild bull. But his heart is restless, and he seeks that which cannot be found."
 ninsun.dreams: "The gods speak through dreams. Gilgamesh's dreams foretold the coming of Enkidu, his equal and brother."
 ninsun.blessing: "May the gods protect you on your journey. May Shamash guide your steps, and may you return safely to Uruk."
 
 # Anu Dialogues
-anu.greet: "I am Anu, father of the gods, ruler of the heavens. What brings you before me?"
-anu.ask_ishtar: Ask about Ishtar's request
+anu.greet.ruler: "I am Anu, father of the gods, ruler of the heavens. What brings you before me?"
+anu.ask_ishtar.request: Ask about Ishtar's request
 anu.ask_justice: Ask about justice for the people
-anu.leave: I must not trouble the sky god.
-anu.ishtar: "Ishtar? She is my daughter, proud and passionate. She requested the Bull of Heaven to punish Gilgamesh for his refusal."
+anu.leave.respectful: I must not trouble the sky god.
+anu.ishtar.bull_request: "Ishtar? She is my daughter, proud and passionate. She requested the Bull of Heaven to punish Gilgamesh for his refusal."
 anu.justice: "Justice flows from the heavens. The gods see all, and their judgments are true. But mortal affairs are often beyond our understanding."
 
 # Bull of Heaven Dialogues
 bull_of_heaven.greet: "ROOOOAR! The Bull of Heaven comes! None may stand before the wrath of Ishtar!"
 bull_of_heaven.attack: "You dare challenge the divine beast? You will be trampled beneath my hooves!"
-bull_of_heaven.defeated: "Ghhh... the gods... betray..."
+bull_of_heaven.defeated.dying_words: "Ghhh... the gods... betray..."
 
 # High Priest of Anu Dialogues
 high_priest_anu.greet: "I am the High Priest of Anu, keeper of the heavenly rites. Welcome to the ziggurat of the sky god."

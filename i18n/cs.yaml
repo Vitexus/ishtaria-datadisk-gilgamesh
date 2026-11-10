@@ -92,9 +92,9 @@ npc.enkidu.bio: Divoký muž stvořený bohy z hlíny. Pokrytý zcuchanými chlu
 npc.enkidu_civilized: Enkidu (Civilizovaný)
 npc.enkidu_civilized.bio: Kdysi divoký, nyní civilizovaný. Krátce ostříhané vlasy, hladce oholený vous, lněná tunika s koženou zbrojí, bronzová sekera u opasku, sandály. Dokonalý rovnocenný a bratr Gilgamešův.
 npc.ishtar: Ištar
-npc.ishtar.bio: Bohyně lásky a války, patronka Uruku. Pyšná a vášnivá, žádá úctu a přináší jak extázi, tak zkázu.
+npc.ishtar.bio: Bohyně lásky a války, patronka Uruku, ale děsná mrcha. Pyšná a vášnivá, žádá úctu a přináší jak extázi, tak zkázu.
 npc.shamhat: Šamchat
-npc.shamhat.bio: Chrámová kněžka Ištar. Ta, která zkrotila Enkidu pomocí lásky a moudrosti a naučila ho způsobům lidskosti.
+npc.shamhat.bio: Profesionální nymfomanka. Věčně nadržená chrámová kněžka Ištar. Na kterýho chlapa ukáže, toho dostane.
 npc.humbaba: Humbaba
 npc.humbaba.bio: Strážce Cedrového lesa. Hrozný obr s děsivou mocí. Jeho řev je jako bouře, jeho dech jako oheň a jeho tlama je sama smrt.
 npc.utnapishtim: Utnapištim
@@ -104,10 +104,13 @@ npc.ur_shanabi.bio: Převězce, který přepravuje cestovatelé přes Vody smrti
 npc.scorpion_man: Štírí muž
 npc.scorpion_man.bio: Strážce brány k tunelu skrz Horu Mašu. Hrozná bytost s tělem štíra a člověka.
 npc.ninsun: Ninsun
+npc.ninsun.bio.appearance: Matka Gilgameše, moudrá bohyně. Vykládá synovy sny a nabízí vedení a ochranu. Nosí bílé roucho božské matky, zlaté šperky s lapisem lazuli a jednoduchou čelenku s perleťovými vsadkami, v ruce drží posvátné žezlo.
 npc.ninsun.bio: Matka Gilgameše, moudrá bohyně. Mluví jazykem bohů a nabízí vedení a ochranu.
 npc.anu: Anu
+npc.anu.bio.appearance: Nebeský bůh a otec Ištar. Pán nebes, jehož slovo nese váhu vesmíru. Nosí vysokou rohatou korunu jako symbol nebeské moci, dlouhý splývající vous, modré roucho představující oblohu a ozdoby ze zlata a lapisu lazuli. Nese tabulku osudů.
 npc.anu.bio: Nebeský bůh a otec Ištar. Pán nebes, jehož slovo nese váhu vesmíru.
 npc.bull_of_heaven: Nebeský býk
+npc.bull_of_heaven.bio.appearance: Božské zvíře vyslané Ištar, aby potrestalo Gilgameše. Obrovský býk přinášející zkázu. Má zlatou srst, mohutné rohy a kopyta otřásající zemí. Obklopuje ho nebeská záře a ztělesňuje Ištarin hněv.
 npc.bull_of_heaven.bio: Božské zvíře vyslané Ištar, aby potrestalo Gilgameše. Obrovský býk přinášející zkázu.
 
 # Historické mezopotamské NPC
@@ -164,18 +167,13 @@ gilgamesh_temple.prayer: "Modleme se k Anovi a velkým bohům za jejich požehn�
 enkidu.greet: "Já jsem Enkidu. Hory mě zrodily; Šamḫat mě přivedla k chlebu a pivu. Teď stojím s Gilgamešem — stejná síla, jedno srdce."
 enkidu.ask_wild_days: Ptej se na jeho divoké dny
 enkidu.ask_gilgamesh: Ptej se na Gilgameše
-enkidu.ask_civilization: Ptej se na civilizaci
 enkidu.ask_shamhat: Ptej se na Šamchat
 enkidu.ask_humbaba: Ptej se na Humbabu
 enkidu.ask_death: Ptej se na jeho smrt
 enkidu.challenge_duel: Vyzvi ho k přátelskému zápasu
 enkidu.duel_done: "Ha! Úder za úder — jsi můj rovný. Od tohoto dne jsme bratři ve zbrani."
-enkidu.leave: Musím jít.
-enkidu.wild_days: "Kdysi jsem běhal s gazelami a pil s divokými zvířaty u vodního zdroje. Nic jsem nevěděl o lidech či městech. Byl jsem jedno se přírodou, silný a svobodný."
 enkidu.animals: "Gazely jedly z mé ruky a vlci spali vedle mě. Dokonce i lvi respektovali moji sílu. Byli jsme všichni divokou přírodou spojeni."
-enkidu.gilgamesh: "Gilgameš! Král pyšný a silný, ale krutý ke svému lidu. Bohové mě poslali, abych se mu vyrovnal, abych jeho pýchu zmírnil svou silou."
 enkidu.equality: "Zápasili jsme, Gilgameš a já, a já mu vyrovnal úder za úderem. V ten okamžik nalezl svého rovného, svého bratra. Od toho dne nás nikdo nemohl porazit."
-enkidu.civilization: "Šamchat mě změnila. Šest dní a sedm nocí se mnou zdržela, učila mě způsobům lidí. Zvířata ode měla prchala, neboť jsem se stal civilizovaným."
 enkidu.changes: "Nyní nosím šaty lidí a jím jejich chléb. Piju jejich víno a rozumím jejich slovům. Ale ve svém srdci si stále pamatuji na divočin."
 enkidu.shamhat: "Šamchat... ona byla první, kdo ve mně uviděla muže. Bez ní bych stále běhal se zvířaty a Gilgameš by neměl svého rovného."
 
@@ -185,7 +183,6 @@ enkidu.ask_equality: Ptej se na rovnost s Gilgamešem
 enkidu.ask_changes: Ptej se, jak se změnil
 enkidu.humbaba: "Humbaba! Strážce Cedrového lesa byl hrozný na pohled. Jeho řev otřásal zemí a jeho dech byl oheň. Ale spolu s Gilgamešem jsme ho čelili a vyhráli."
 enkidu.death: "Já... cítím ruku bohů na sobě. Trestají mě za zabití Humbaby, za to, že jsem se vzepřel vůli nebes. Ale nelituji toho. Žil jsem jako muž, bojoval jsem jako válečník, zemřu jako Gilgamešův bratr."
-enkidu.ask_gilgamesh: Ptej se na Gilgameše
 enkidu.ask_civilization: Ptej se na to, jak se stal člověkem
 enkidu.leave: Musím pokračovat v cestě.
 enkidu.wild_days: "Běhal jsem s gazelami, pil jsem s divokými zvířaty u vodních děr. Moje tělo bylo pokryté chlupy a já jsem nic nevěděl o městech či lidech."
@@ -273,27 +270,20 @@ scorpion_man.passage: "Jsi vysoký postavením a tvá tvář je jako tvář toho
 scorpion_man.danger: "Tunel skrz Horu Mašu se táhne po dvanáct dvojitých hodinách. Nikdo nesmí projít, kdo nemá odvahu samotných bohů."
 
 # Ninsuniny dialogy
-ninsun.greet: "Já jsem Ninsun, matka Gilgameše. Moudrost bohů proudí mými žilami."
 ninsun.ask_gilgamesh: Ptej se na jejího syna
 ninsun.ask_dreams: Ptej se na sny a znamení
 ninsun.ask_blessing: Požádej o požehnání
-ninsun.leave: Nechám tě v klidu, moudrá matko.
 ninsun.gilgamesh: "Můj syn je králem mezi muži, silný jako divoký býk. Ale jeho srdce je neklidné a hledá to, co nalezeno být nemůže."
 ninsun.dreams: "Bohové mluví prostřednictvím snů. Gilgamešovy sny předpověděly příchod Enkidu, jeho rovného a bratra."
 ninsun.blessing: "Nechť tě bohové chrání na tvé cestě. Nechť Šamaš vede tvé kroky a nechť se vrátíš zpět v bezpečí do Uruku."
 
 # Anův dialog
-anu.greet: "Já jsem Anu, otec bohů, vládce nebes. Co tě přivádí přede mne?"
-anu.ask_ishtar: Ptej se na Ištarinou žádost
 anu.ask_justice: Ptej se na spravedlnost pro lid
-anu.leave: Nesmím obtěžovat nebeského boha.
-anu.ishtar: "Ištar? Ta je moje dcera, pyšná a vášnivá. Požádala o Nebeského býka, aby potrestala Gilgameše za jeho odmítnutí."
 anu.justice: "Spravedlnost proudí z nebes. Bohové vidí vše a jejich soud je pravdivý. Ale smrtelné záležitosti jsou často mimo naše chápání."
 
 # Nebeský býk dialogy
 bull_of_heaven.greet: "ŘÍÍÍÍÍÍ! Přichází Nebeský býk! Nikdo nestojí před hněvem Ištar!"
 bull_of_heaven.attack: "Odvažuješ se vyzvat božské zvíře? Budeš ušlapán pod mými kopyty!"
-bull_of_heaven.defeated: "Hrrr... bohové... zrada..."
 
 # Vysoký kněz Anu dialogy
 high_priest_anu.greet: "Já jsem Vysoký kněz Anu, strážce nebeských rituálů. Vítejte na zikkuratu boha nebes."
@@ -673,6 +663,20 @@ anu.leave: Musím jít, velký pane.
 anu.heavens: "Nebesa jsou nekonečná a věčná, kde hvězdy zapisují osudy lidí. Z mého trůnu výše vidím vše, co bylo, je a bude."
 anu.judgment: "Můj soud je konečný, neboť jsem otcem bohů. Rovnováha spravedlnosti je udržována mou vůlí samotnou."
 anu.ishtar: "Ištar... moje dcera. Pyšná a prudká, je zároveň přinositelkou lásky i mzdou války. Hodná dědička mého království."
+
+# Alternativní texty; dialogové uzly je zatím nevybírají.
+enkidu.ask_civilization.recollection: Ptej se na civilizaci
+enkidu.leave.farewell: Musím jít.
+enkidu.wild_days.recollection: "Kdysi jsem běhal s gazelami a pil s divokými zvířaty u vodního zdroje. Nic jsem nevěděl o lidech či městech. Byl jsem jedno se přírodou, silný a svobodný."
+enkidu.gilgamesh.challenge: "Gilgameš! Král pyšný a silný, ale krutý ke svému lidu. Bohové mě poslali, abych se mu vyrovnal, abych jeho pýchu zmírnil svou silou."
+enkidu.civilization.estrangement: "Šamchat mě změnila. Šest dní a sedm nocí se mnou zdržela, učila mě způsobům lidí. Zvířata ode měla prchala, neboť jsem se stal civilizovaným."
+ninsun.greet.divine: "Já jsem Ninsun, matka Gilgameše. Moudrost bohů proudí mými žilami."
+ninsun.leave.peace: Nechám tě v klidu, moudrá matko.
+anu.greet.ruler: "Já jsem Anu, otec bohů, vládce nebes. Co tě přivádí přede mne?"
+anu.ask_ishtar.request: Ptej se na Ištarinou žádost
+anu.leave.respectful: Nesmím obtěžovat nebeského boha.
+anu.ishtar.bull_request: "Ištar? Ta je moje dcera, pyšná a vášnivá. Požádala o Nebeského býka, aby potrestala Gilgameše za jeho odmítnutí."
+bull_of_heaven.defeated.dying_words: "Hrrr... bohové... zrada..."
 
 # Obyvatelé Uruku
 npc.uruk_farmer: Pěstitel ječmene
